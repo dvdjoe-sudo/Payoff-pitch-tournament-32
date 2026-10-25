@@ -21,7 +21,7 @@ RESULTS = ROOT / "tournament_results.json"
 GAMES_DIR = ROOT / "games"
 
 # Series whose games have a known calendar date. The date is not a stat.
-DATED_SERIES = {"R1-02": "2026-10-24", "R1-03": "2026-10-24"}
+DATED_SERIES = {"R1-02": "2026-10-24", "R1-03": "2026-10-24", "R1-04": "2026-10-25"}
 SCHEMA_VERSION = 1
 
 

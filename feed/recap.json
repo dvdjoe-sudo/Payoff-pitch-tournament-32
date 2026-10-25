@@ -87,6 +87,78 @@
    "home_runs": 3,
    "winner": "BOS",
    "recap": "The Boston Red Sox beat the Tampa Bay Rays 3-1. The go-ahead run scored in the 6th inning. David Ortiz led the Boston Red Sox offense with 2 hits and 0 RBI in 4 at-bats. Roger Clemens earned the win, allowing 1 earned run in 7.1 innings."
+  },
+  {
+   "id": "R1-04-G1",
+   "date": "2026-10-25",
+   "away": "ARI",
+   "home": "DET",
+   "away_name": "Arizona Diamondbacks",
+   "home_name": "Detroit Tigers",
+   "away_runs": 2,
+   "home_runs": 0,
+   "winner": "ARI",
+   "recap": "The Arizona Diamondbacks beat the Detroit Tigers 2-0. The go-ahead run scored in the 4th inning. Ketel Marte led the Arizona Diamondbacks offense with 1 hits and 1 RBI in 4 at-bats. Randy Johnson earned the win, allowing 0 earned runs in 8.0 innings."
+  },
+  {
+   "id": "R1-04-G2",
+   "date": "2026-10-25",
+   "away": "ARI",
+   "home": "DET",
+   "away_name": "Arizona Diamondbacks",
+   "home_name": "Detroit Tigers",
+   "away_runs": 7,
+   "home_runs": 5,
+   "winner": "ARI",
+   "recap": "The Arizona Diamondbacks beat the Detroit Tigers 7-5. Steve Finley led the Arizona Diamondbacks offense with 4 hits and 2 RBI in 7 at-bats. Juan Cruz earned the win, allowing 1 earned run in 6.2 innings."
+  },
+  {
+   "id": "R1-04-G3",
+   "date": "2026-10-25",
+   "away": "DET",
+   "home": "ARI",
+   "away_name": "Detroit Tigers",
+   "home_name": "Arizona Diamondbacks",
+   "away_runs": 4,
+   "home_runs": 1,
+   "winner": "DET",
+   "recap": "The Detroit Tigers beat the Arizona Diamondbacks 4-1. The go-ahead run scored in the 1st inning. Charlie Gehringer led the Detroit Tigers offense with 2 hits and 1 RBI in 4 at-bats. Mickey Lolich earned the win, allowing 1 earned run in 7.0 innings."
+  },
+  {
+   "id": "R1-04-G4",
+   "date": "2026-10-25",
+   "away": "DET",
+   "home": "ARI",
+   "away_name": "Detroit Tigers",
+   "home_name": "Arizona Diamondbacks",
+   "away_runs": 3,
+   "home_runs": 0,
+   "winner": "DET",
+   "recap": "The Detroit Tigers beat the Arizona Diamondbacks 3-0. The go-ahead run scored in the 5th inning. Bill Freehan led the Detroit Tigers offense with 2 hits and 1 RBI in 4 at-bats. Tommy Bridges earned the win, allowing 0 earned runs in 7.2 innings."
+  },
+  {
+   "id": "R1-04-G5",
+   "date": "2026-10-25",
+   "away": "ARI",
+   "home": "DET",
+   "away_name": "Arizona Diamondbacks",
+   "home_name": "Detroit Tigers",
+   "away_runs": 1,
+   "home_runs": 3,
+   "winner": "DET",
+   "recap": "The Detroit Tigers beat the Arizona Diamondbacks 3-1. The go-ahead run scored in the 2nd inning. George Kell led the Detroit Tigers offense with 1 hits and 2 RBI in 2 at-bats. Jack Morris earned the win, allowing 0 earned runs in 7.2 innings."
+  },
+  {
+   "id": "R1-04-G6",
+   "date": "2026-10-25",
+   "away": "DET",
+   "home": "ARI",
+   "away_name": "Detroit Tigers",
+   "home_name": "Arizona Diamondbacks",
+   "away_runs": 10,
+   "home_runs": 3,
+   "winner": "DET",
+   "recap": "The Detroit Tigers beat the Arizona Diamondbacks 10-3. The go-ahead run scored in the 3rd inning. Harry Heilmann led the Detroit Tigers offense with 3 hits and 6 RBI in 5 at-bats. Hal Newhouser earned the win, allowing 2 earned runs in 5.0 innings."
   }
  ],
  "undated": [
@@ -148,6 +220,13 @@
     "ip": "9.0"
    },
    {
+    "game": "R1-04-G4",
+    "name": "Tommy Bridges",
+    "team": "DET",
+    "k": 13,
+    "ip": "7.2"
+   },
+   {
     "game": "R1-03-G1",
     "name": "Pedro Martinez",
     "team": "BOS",
@@ -194,6 +273,12 @@
     "team": "NYY",
     "runs": 17,
     "opponent": "MIA"
+   },
+   {
+    "game": "R1-04-G6",
+    "team": "DET",
+    "runs": 10,
+    "opponent": "ARI"
    }
   ]
  }

@@ -17,12 +17,12 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
+| Charlie Gehringer | Detroit Tigers | 24.0 | 14 | 3 | 3 | 1 |
 | Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
 | Jason Bartlett | Tampa Bay Rays | 24.0 | 14 | 4 | 4 | 1 |
 | David Ortiz | Boston Red Sox | 23.5 | 14 | 4 | 4 | 2 |
+| Ketel Marte | Arizona Diamondbacks | 22.5 | 16 | 3 | 4 | 2 |
 | Yogi Berra | New York Yankees | 20.5 | 11 | 4 | 4 | 2 |
-| Nomar Garciaparra | Boston Red Sox | 19.5 | 10 | 3 | 6 | 1 |
-| Mel Ott | San Francisco Giants | 19.0 | 12 | 2 | 4 | 1 |
 
 ## Cy Young
 
@@ -33,18 +33,18 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
+| Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
 | Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
+| Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
+| Mickey Lolich | Detroit Tigers | 13.4 | 7.0 | 1 | 8 | 1 |
 | David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
 | Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
+| Hal Newhouser | Detroit Tigers | 12.2 | 10.0 | 1 | 11 | 4 |
 | Shane McClanahan | Tampa Bay Rays | 11.7 | 8.2 | 1 | 7 | 3 |
 | Jordan Zimmermann | Washington Nationals | 10.6 | 8.0 | 1 | 6 | 3 |
 | Lefty Gomez | New York Yankees | 10.5 | 9.0 | 1 | 13 | 5 |
-| Cy Young | Boston Red Sox | 10.4 | 8.1 | 0 | 9 | 1 |
-| Gaylord Perry | San Francisco Giants | 10.1 | 8.0 | 1 | 7 | 3 |
-| Stephen Strasburg | Washington Nationals | 7.1 | 8.0 | 0 | 9 | 3 |
-| Ron Guidry | New York Yankees | 5.6 | 8.0 | 1 | 10 | 7 |
 
 ## Reliever
 
@@ -52,18 +52,18 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
+| Willie Hernandez | Detroit Tigers | 32.0 | 2 | 10.1 | 7 | 1 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
+| Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
+| Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
+| Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
+| Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
 | Chad Cordero | Washington Nationals | 7.4 | 1 | 1.0 | 1 | 0 |
 | Mariano Rivera | New York Yankees | 7.4 | 1 | 1.0 | 1 | 0 |
 | Pete Fairbanks | Tampa Bay Rays | 7.1 | 1 | 2.1 | 1 | 2 |
 | Jake McGee | Tampa Bay Rays | 6.9 | 0 | 2.2 | 4 | 0 |
 | J.P. Howell | Tampa Bay Rays | 6.3 | 0 | 5.1 | 4 | 4 |
-| David Robertson | New York Yankees | 5.1 | 0 | 4.0 | 4 | 3 |
-| Mike Stanton | New York Yankees | 4.8 | 0 | 2.1 | 4 | 1 |
-| Bob Stanley | Boston Red Sox | 3.7 | 0 | 2.0 | 3 | 1 |
-| Antonio Alfonseca | Miami Marlins | 2.2 | 0 | 5.1 | 5 | 7 |
-| A.J. Burnett | Miami Marlins | 1.8 | 0 | 2.0 | 2 | 2 |
-| Dick Radatz | Boston Red Sox | 1.7 | 0 | 0.2 | 1 | 0 |
+| Aurelio Lopez | Detroit Tigers | 5.9 | 0 | 3.2 | 4 | 2 |

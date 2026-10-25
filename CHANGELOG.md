@@ -2,6 +2,14 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — R1-04 complete, Detroit 4-2
+
+Opening Round Series 4 was played in Payoff Pitch on 2026-10-25 and recorded from the series' saved state files in the master archive. The six games sum to the series totals in the series summary: Detroit 25 runs and 49 hits, Arizona 14 runs and 42 hits. Arizona took the first two games in Detroit, Game 2 in thirteen innings. Detroit won the last four after Joe's lineup ruling started Harry Heilmann in left field in Bobby Veach's slot for Games 3 through 6. Detroit is 1-0 on the winners side. Arizona is 0-1 on the losers side and is not eliminated. Series MVP is Harry Heilmann. Runner-up is George Kell.
+
+Game 5 was played twice. The first playing, an 8-5 Arizona win, was set aside by Joe's ruling after he had the game played fresh from scratch; the fresh re-play, a 3-1 Detroit win, is the official Game 5 here. The superseded playing is preserved in the series' own files outside this repo and is not in this archive.
+
+Unlike R1-03 Games 3-7, these games come with their full record. Each detail file stores the complete FAC roll log and manager log from the state files, and each summary carries the fatigue end states, caps, and scoring plays. All six games are dated 2026-10-25, the day they were played; `scripts/split_game_detail.py` gained R1-04 in its dated-series map so the date survives a re-split. Detroit home games were played on the 1986 Tiger Stadium park card under Joe's ruling; Arizona home games on the standard composite park he accepted. No locked game, series, or line was changed: R1-01, R1-02, and R1-03 stay exactly as stored, and the validator's locked fingerprint, frozen-series hash, and counting totals are unchanged because they cover the locked games only.
+
 ## 2026-10-25 — Win probability, daily highlight, scorecards
 
 Each game page charts a home win-probability estimate from the inning line. The formula is in [MODELS.md](MODELS.md). The chart says it is a model estimate. A game with no inning line has no chart. Stored scoring plays are used for the finer steps when they add up to the final score. The home page shows one recorded moment for the calendar date: a no-hitter, a 10-strikeout game, a walk-off, a 10-run game, or a finished series. The same date always shows the same moment. `scripts/build_leaders.py` writes a PDF scorecard for every game. That step needs the packages in `requirements.txt` (`fpdf2`). The Actions workflows install them. Each game page has a Print / Save as PDF button. No score, line, or series result was changed.

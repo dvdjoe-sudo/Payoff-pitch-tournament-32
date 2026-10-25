@@ -1,0 +1,1004 @@
+{
+ "id": "R1-04-G1",
+ "series_id": "R1-04",
+ "game_in_series": 1,
+ "rolls": [
+  [
+   65,
+   "2d6"
+  ],
+  [
+   61,
+   "%"
+  ],
+  [
+   201,
+   "2d6"
+  ],
+  [
+   51,
+   "%"
+  ],
+  [
+   110,
+   "2d6"
+  ],
+  [
+   200,
+   "%"
+  ],
+  [
+   170,
+   "2d6"
+  ],
+  [
+   100,
+   "%"
+  ],
+  [
+   71,
+   "%"
+  ],
+  [
+   107,
+   "2d6"
+  ],
+  [
+   219,
+   "%"
+  ],
+  [
+   27,
+   "2d6"
+  ],
+  [
+   155,
+   "2d6"
+  ],
+  [
+   250,
+   "%"
+  ],
+  [
+   39,
+   "2d6"
+  ],
+  [
+   254,
+   "%"
+  ],
+  [
+   234,
+   "2d6"
+  ],
+  [
+   67,
+   "%"
+  ],
+  [
+   187,
+   "%"
+  ],
+  [
+   78,
+   "2d6"
+  ],
+  [
+   240,
+   "%"
+  ],
+  [
+   34,
+   "2d6"
+  ],
+  [
+   198,
+   "%"
+  ],
+  [
+   163,
+   "2d6"
+  ],
+  [
+   17,
+   "%"
+  ],
+  [
+   172,
+   "2d6"
+  ],
+  [
+   242,
+   "%"
+  ],
+  [
+   213,
+   "2d6"
+  ],
+  [
+   7,
+   "%"
+  ],
+  [
+   50,
+   "2d6"
+  ],
+  [
+   181,
+   "1d6"
+  ],
+  [
+   204,
+   "%"
+  ],
+  [
+   122,
+   "2d6"
+  ],
+  [
+   91,
+   "%"
+  ],
+  [
+   90,
+   "2d6"
+  ],
+  [
+   116,
+   "%"
+  ],
+  [
+   191,
+   "2d6"
+  ],
+  [
+   54,
+   "%"
+  ],
+  [
+   76,
+   "2d6"
+  ],
+  [
+   143,
+   "%"
+  ],
+  [
+   222,
+   "2d6"
+  ],
+  [
+   42,
+   "1d6"
+  ],
+  [
+   98,
+   "%"
+  ],
+  [
+   142,
+   "2d6"
+  ],
+  [
+   135,
+   "1d6"
+  ],
+  [
+   239,
+   "%"
+  ],
+  [
+   137,
+   "2d6"
+  ],
+  [
+   131,
+   "%"
+  ],
+  [
+   253,
+   "2d6"
+  ],
+  [
+   251,
+   "%"
+  ],
+  [
+   146,
+   "2d6"
+  ],
+  [
+   80,
+   "%"
+  ],
+  [
+   217,
+   "2d6"
+  ],
+  [
+   11,
+   "%"
+  ],
+  [
+   165,
+   "2d6"
+  ],
+  [
+   233,
+   "2d6"
+  ],
+  [
+   160,
+   "%"
+  ],
+  [
+   140,
+   "2d6"
+  ],
+  [
+   120,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 3 full innings (printed protocol)"
+  ],
+  [
+   192,
+   "2d6"
+  ],
+  [
+   104,
+   "%"
+  ],
+  [
+   89,
+   "%"
+  ],
+  [
+   5,
+   "2d6"
+  ],
+  [
+   130,
+   "%"
+  ],
+  [
+   134,
+   "2d6"
+  ],
+  [
+   197,
+   "%"
+  ],
+  [
+   46,
+   "2d6"
+  ],
+  [
+   228,
+   "%"
+  ],
+  [
+   117,
+   "%"
+  ],
+  [
+   186,
+   "2d6"
+  ],
+  [
+   167,
+   "2d6"
+  ],
+  [
+   183,
+   "%"
+  ],
+  [
+   172,
+   "2d6"
+  ],
+  [
+   169,
+   "%"
+  ],
+  [
+   143,
+   "2d6"
+  ],
+  [
+   79,
+   "%"
+  ],
+  [
+   165,
+   "2d6"
+  ],
+  [
+   127,
+   "%"
+  ],
+  [
+   9,
+   "2d6"
+  ],
+  [
+   21,
+   "%"
+  ],
+  [
+   249,
+   "2d6"
+  ],
+  [
+   114,
+   "1d6"
+  ],
+  [
+   29,
+   "%"
+  ],
+  [
+   226,
+   "2d6"
+  ],
+  [
+   244,
+   "1d6"
+  ],
+  [
+   26,
+   "%"
+  ],
+  [
+   118,
+   "2d6"
+  ],
+  [
+   198,
+   "%"
+  ],
+  [
+   128,
+   "%"
+  ],
+  [
+   121,
+   "2d6"
+  ],
+  [
+   62,
+   "%"
+  ],
+  [
+   201,
+   "2d6"
+  ],
+  [
+   95,
+   "%"
+  ],
+  [
+   181,
+   "2d6"
+  ],
+  [
+   56,
+   "%"
+  ],
+  [
+   234,
+   "2d6"
+  ],
+  [
+   77,
+   "%"
+  ],
+  [
+   51,
+   "2d6"
+  ],
+  [
+   59,
+   "%"
+  ],
+  [
+   35,
+   "2d6"
+  ],
+  [
+   200,
+   "2d6"
+  ],
+  [
+   125,
+   "%"
+  ],
+  [
+   225,
+   "2d6"
+  ],
+  [
+   159,
+   "%"
+  ],
+  [
+   252,
+   "2d6"
+  ],
+  [
+   84,
+   "%"
+  ],
+  [
+   148,
+   "2d6"
+  ],
+  [
+   57,
+   "%"
+  ],
+  [
+   92,
+   "2d6"
+  ],
+  [
+   87,
+   "%"
+  ],
+  [
+   45,
+   "2d6"
+  ],
+  [
+   36,
+   "%"
+  ],
+  [
+   248,
+   "2d6"
+  ],
+  [
+   166,
+   "%"
+  ],
+  [
+   73,
+   "2d6"
+  ],
+  [
+   18,
+   "%"
+  ],
+  [
+   162,
+   "%"
+  ],
+  [
+   3,
+   "2d6"
+  ],
+  [
+   205,
+   "%"
+  ],
+  [
+   182,
+   "%"
+  ],
+  [
+   170,
+   "2d6"
+  ],
+  [
+   105,
+   "%"
+  ],
+  [
+   119,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 6 full innings (printed protocol)"
+  ],
+  [
+   33,
+   "2d6"
+  ],
+  [
+   22,
+   "%"
+  ],
+  [
+   34,
+   "2d6"
+  ],
+  [
+   140,
+   "1d6"
+  ],
+  [
+   84,
+   "%"
+  ],
+  [
+   64,
+   "2d6"
+  ],
+  [
+   2,
+   "%"
+  ],
+  [
+   94,
+   "2d6"
+  ],
+  [
+   93,
+   "%"
+  ],
+  [
+   160,
+   "2d6"
+  ],
+  [
+   155,
+   "%"
+  ],
+  [
+   14,
+   "2d6"
+  ],
+  [
+   187,
+   "%"
+  ],
+  [
+   162,
+   "%"
+  ],
+  [
+   251,
+   "2d6"
+  ],
+  [
+   138,
+   "%"
+  ],
+  [
+   20,
+   "2d6"
+  ],
+  [
+   143,
+   "%"
+  ],
+  [
+   239,
+   "2d6"
+  ],
+  [
+   235,
+   "%"
+  ],
+  [
+   168,
+   "2d6"
+  ],
+  [
+   110,
+   "%"
+  ],
+  [
+   229,
+   "2d6"
+  ],
+  [
+   218,
+   "%"
+  ],
+  [
+   172,
+   "%"
+  ],
+  [
+   177,
+   "2d6"
+  ],
+  [
+   228,
+   "%"
+  ],
+  [
+   137,
+   "2d6"
+  ],
+  [
+   214,
+   "%"
+  ],
+  [
+   196,
+   "2d6"
+  ],
+  [
+   87,
+   "%"
+  ],
+  [
+   154,
+   "2d6"
+  ],
+  [
+   49,
+   "%"
+  ],
+  [
+   183,
+   "2d6"
+  ],
+  [
+   242,
+   "%"
+  ],
+  [
+   102,
+   "2d6"
+  ],
+  [
+   56,
+   "%"
+  ],
+  [
+   201,
+   "2d6"
+  ],
+  [
+   48,
+   "%"
+  ],
+  [
+   97,
+   "2d6"
+  ],
+  [
+   39,
+   "1d6"
+  ],
+  [
+   145,
+   "%"
+  ],
+  [
+   144,
+   "2d6"
+  ],
+  [
+   165,
+   "%"
+  ]
+ ],
+ "manager_log": [
+  "SETUP ASSERTION BLOCK: all checks PASS (v2 engine + v2 cards bound for BOTH clubs, the park in force verified as the 1986 Tiger Stadium card against the app source entry, FAC deck stream installed, FAC-chart absent, addendum live and merging for BOTH clubs, traits ON with Sparky Anderson governing Detroit from the home slot and Bob Brenly governing Arizona from the guest slot, the official bunt-grade overlay loaded (Finley B), McGraw's and Williams's packages managing NEITHER club and no other stray manager package live, fatigue fix layer installed under the trait layers with both starters' stamina lines served, elimination gating CLOSED for both clubs). Printed in full in the game record.",
+  "PAYOFF PITCH TOP 32 TOURNAMENT, SERIES R1-04, GAME 1 (OFFICIAL): Arizona Diamondbacks at Detroit Tigers, Tiger Stadium (the 1986 Tiger Stadium park card, Joe's ruling), DH on. Best of 7, home pattern 2-2-1-1-1, Detroit home for Games 1, 2, 5 and 7, Arizona home for Games 3, 4 and 6 (on the accepted standard composite park). Detroit is the #4 seed, Arizona the #29 seed. Detroit leads nothing yet: this game opens the series.",
+  "Venue and slot note: Arizona plays in the host engine's guest slot ('OPP') and Detroit in the 'DET' slot: Arizona bats in the top half as the visitor and Detroit in the bottom half as the home club, and the park card in force is the 1986 Tiger Stadium card itself, loaded by name from the tracker app's ballparks.json and verified field-for-field against that source entry in the assertion block. John McGraw's package is present only as an import of Sparky's layer; its active gate was re-pointed to False at module level in this process, and Dick Williams's decision entry points in the traits2 substrate were re-pointed to no-ops the same way, so neither package manages either club in this game. McGraw manages San Francisco and Williams manages Montreal in this project (Joe's graphics rulings). No engine or traits file was edited.",
+  "Starters: Hal Newhouser (DET) vs Randy Johnson (ARI), each club's rotation top as posted in its set's graphic order (DET rotation: Hal Newhouser, Justin Verlander, Mickey Lolich, Tommy Bridges, Jack Morris; ARI rotation: Randy Johnson, Curt Schilling, Brandon Webb, Zac Gallen, Merrill Kelly); FAC deck seed 20261208 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Arizona's ratings merged into the layer for the guest slot from the Diamondbacks' own pitcher_addendum.json). Stamina lines as served are printed in the assertion block.",
+  "Availability in (Game 1): every pitcher on both clubs is available; there is no previous game and no carry of any kind. The starters go by the rotations' tops. Brenly's Co-Ace relief clause is gated on facing elimination and the gate is closed tonight, so Randy Johnson and Curt Schilling pitch only as starters in this series until a game Arizona faces elimination in, exactly as the hard rule provides for every starter on both clubs.",
+  "FATIGUE FIX LIVE (Joe's commission, FATIGUE_FIX.md): the fatigue_fix layer is installed over the substrate stack, so all four book fatigue triggers are in force: the engine's 6-run universal rule, the starter-stamina trigger (Start inning reached at 3+ runs, evaluated before the inning's first plate appearance as well as after every one), the Short/Long reliever triggers (appearance innings and runs), and the save-symbol exemption machinery (no converted card carries a symbol, so the exemption correctly cannot fire; no symbol was invented). The layer records the Section 1.6 fatigue standard in the game state.",
+  "Managers: Detroit is managed by SPARKY ANDERSON (the library layer, traits_sparky.py: Captain Hook, The Multi-Inning Stopper, Set It and Forget It, The Sparky Proclamation), governing from the 'DET' slot, his designated closer Willie Hernandez. Arizona is managed by BOB BRENLY (traits_brenly.py: The Co-Ace Workhorses, Veteran Autonomy, The Unshaken Closer, National League Small Ball), governing from the guest slot as Arizona. Small Ball reads the official bunt-grade overlay (Joe's ruling, 2026-10-25): Steve Finley's printed B on his official Legends & Busts card is Arizona's only real grade in the source; every other Arizona hitter falls back to his converted card's printed F.",
+  "Sparky's driver-called hook: his layer's pre_pa is a driver hook by design (the Stopper entry and hold, the Captain Hook window, substitution detection, the momentum flag); this driver calls it before every plate appearance, after the substrate's bookkeeping, and calls both layers' settle() when the game ends.",
+  "Hierarchy in force: book mechanics (fatigue, Rest Chart); the one hard rule (no starting pitcher relieves except for a club facing elimination, with a one-day rotation setback); manager traits where they speak; the hook policy and Joe's closer branch as the DEFAULT policy everywhere else.",
+  "Elimination mark: Game 1 of a best-of-7; this is an elimination game for NEITHER club. The hard rule's exception is CLOSED for both: no starting pitcher may relieve tonight for either club, and the game's traits elimination list is empty. Brenly's Co-Ace relief clause reads the same gate in its encoding and is closed with it.",
+  "[1T 0 out, bases ---] Corbin Carroll vs Hal Newhouser",
+  "  dice 2d6=9 (4+2) %=98 -> TOUGH",
+  "  TOUGH %=98 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[1T 1 out, bases ---] Paul Goldschmidt vs Hal Newhouser",
+  "  dice 2d6=8 (1+4) %=25 -> TOUGH",
+  "  TOUGH %=25 -> SO",
+  "  Paul Goldschmidt strikes out",
+  "[1T 2 out, bases ---] Ketel Marte vs Hal Newhouser",
+  "  dice 2d6=9 (4+4) %=40 -> TOUGH",
+  "  TOUGH %=40 -> SO",
+  "  Ketel Marte strikes out",
+  "[1B 0 out, bases ---] Ty Cobb vs Randy Johnson",
+  "  dice 2d6=9 (3+1) %=63 -> BALLPARK",
+  "  BALLPARK (Tiger Stadium, LHB): WHEELHOUSE, re-roll %=42",
+  "  WHEELHOUSE %=42 -> 1B",
+  "  Ty Cobb singles (LF fields it)",
+  "[1B 0 out, bases 1--] Charlie Gehringer vs Randy Johnson",
+  "  dice 2d6=7 (4+3) %=87 -> PATIENT",
+  "  PATIENT %=87 above the ranges -> OUT G4",
+  "  fielder's choice: runner out at 2nd, batter safe",
+  "  fielder's choice 2B",
+  "[1B 1 out, bases 1--] Al Kaline vs Randy Johnson",
+  "  dice 2d6=3 (3+2) %=02 -> TOUGH",
+  "  TOUGH %=02 -> SO",
+  "  Al Kaline strikes out",
+  "[1B 2 out, bases 1--] Hank Greenberg vs Randy Johnson",
+  "  dice 2d6=7 (2+1) %=08 -> PATIENT",
+  "  PATIENT %=08 -> BB",
+  "  Hank Greenberg walks",
+  "[1B 2 out, bases 11-] Miguel Cabrera vs Randy Johnson",
+  "  dice 2d6=3 (pair 3+6) %=00 -> TOUGH: RARE PLAY (initial percentile 00)",
+  "  Rare Plays, Runners On, TOUGH: percentile 72 (same FAC stream) -> 70-74: resolve the at-bat using the TOUGH section; the entry's lingering clause is outcome-conditional (strikeout: next three batters vs this pitcher on TOUGH; hit: next three on WHEELHOUSE; out: next three on IN-PLAY)",
+  "  dice 2d6=5 (2+1) %=09 -> TOUGH",
+  "  TOUGH %=09 -> SO",
+  "  Miguel Cabrera strikes out",
+  "GOVERNANCE STOP AND RULING (Runners On TOUGH 70-74): play stopped after Cabrera's re-resolved strikeout because the clause's strikeout arm ('next three batters this pitcher faces roll on their TOUGH sections') could not be carried across the inning break: the installed lingering wrapper carried a count-based flag only for the clause's hit arm (force_wheelhouse), its TOUGH flag was bound to the current inning and half, and it carried no IN-PLAY flag at all. Joe ruled on 2026-10-25: the count-based carry is APPROVED. The lingering wrapper family was extended with count-based flags symmetric to force_wheelhouse (force_tough_count and force_inplay_count, each {pitcher, count}, decrementing per batter faced by that pitcher and expiring at zero), in this series' setup and in the canonical copy in the SF/MON trial_fac_setup; completed series' setup copies were left as played, and the inning/half-keyed force_tough stands as it was for its own cases.",
+  "CLAUSE INSTALLED under the ruling: force_tough_count {'pitcher': 'Randy Johnson', 'count': 3}: the next three batters Randy Johnson faces (Bobby Veach, Bill Freehan and George Kell, opening the bottom of the 2nd) roll on their TOUGH sections. The stop entry in the state flags is marked RESOLVED with the date; the original stop record stands inside it.",
+  "GAME RESUMED from the saved stop state (canonical sha256 cf1ba70d3a3ee83fadaca86728276a4266214bc9707c44d17a5afc13c0636b49) under the original Game 1 commission: the same stack, the same seed 20261208 FAC stream, Sparky Anderson and Bob Brenly governing with the bunt-grade overlay, Joe's closer branch as default policy, and the elimination exception closed for both clubs.",
+  "[2T 0 out, bases ---] Luis Gonzalez vs Hal Newhouser",
+  "  dice 2d6=8 (1+5) %=55 -> TOUGH",
+  "  TOUGH %=53 -> SO",
+  "  Luis Gonzalez strikes out",
+  "[2T 1 out, bases ---] Christian Walker vs Hal Newhouser",
+  "  dice 2d6=10 (1+4) %=03 -> TOUGH",
+  "  TOUGH %=03 -> SO",
+  "  Christian Walker strikes out",
+  "[2T 2 out, bases ---] Steve Finley vs Hal Newhouser",
+  "  dice 2d6=6 (1+5) %=41 -> IN-PLAY",
+  "  IN-PLAY %=41 above the ranges -> OUT G1",
+  "  ground out P",
+  "[2B 0 out, bases ---] Bobby Veach vs Randy Johnson",
+  "  Rare-play lingering clause (Runners On TOUGH 70-74) is live: Bobby Veach rolls on his TOUGH section against Randy Johnson (2 forced PA(s) left after this one)",
+  "  dice 2d6=6 (1+1) %=45 -> TOUGH",
+  "  TOUGH %=45 -> 1B",
+  "  Bobby Veach singles (RF fields it)",
+  "[2B 0 out, bases 1--] Bill Freehan vs Randy Johnson",
+  "  bunt: fielder 3B, %=34 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[2B 1 out, bases -1-] George Kell vs Randy Johnson",
+  "  Rare-play lingering clause (Runners On TOUGH 70-74) is live: George Kell rolls on his TOUGH section against Randy Johnson (1 forced PA(s) left after this one)",
+  "  dice 2d6=9 (3+5) %=53 -> TOUGH",
+  "  TOUGH %=53 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[2B 2 out, bases --1] Alan Trammell vs Randy Johnson",
+  "  Rare-play lingering clause (Runners On TOUGH 70-74) is live: Alan Trammell rolls on his TOUGH section against Randy Johnson (0 forced PA(s) left after this one)",
+  "  dice 2d6=9 (4+2) %=54 -> TOUGH",
+  "  TOUGH %=54 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[3T 0 out, bases ---] Matt Williams vs Hal Newhouser",
+  "  dice 2d6=2 (1+3) %=15 -> TOUGH",
+  "  TOUGH %=15 -> SO",
+  "  Matt Williams strikes out",
+  "[3T 1 out, bases ---] Gabriel Moreno vs Hal Newhouser",
+  "  dice 2d6=8 (2+4) %=60 -> TOUGH",
+  "  TOUGH %=60 -> 1B",
+  "  Gabriel Moreno singles (RF fields it)",
+  "[3T 1 out, bases 1--] Geraldo Perdomo vs Hal Newhouser",
+  "  bunt: fielder C, %=93 -> MISS",
+  "  MISS: batter misses the pitch, bunt stays on",
+  "  bunt: fielder C, %=94 -> MISS",
+  "  second MISS: batter strikes out",
+  "[3T 2 out, bases 1--] Corbin Carroll vs Hal Newhouser",
+  "  dice 2d6=10 (2+4) %=66 -> TOUGH",
+  "  TOUGH %=66 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[3B 0 out, bases ---] Ty Cobb vs Randy Johnson",
+  "  dice 2d6=7 (4+3) %=23 -> PATIENT",
+  "  PATIENT %=23 -> BB",
+  "  Ty Cobb walks",
+  "[3B 0 out, bases 1--] Charlie Gehringer vs Randy Johnson",
+  "  dice 2d6=4 (5+4) %=82 -> IN-PLAY",
+  "  IN-PLAY %=82 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[3B 1 out, bases 1--] Al Kaline vs Randy Johnson",
+  "  dice 2d6=8 (5+1) %=49 -> TOUGH",
+  "  TOUGH %=49 above the ranges -> OUT G3",
+  "  fielder's only play is to 1st; batter out, runners advance",
+  "  ground out 1B",
+  "[3B 2 out, bases -1-] Hank Greenberg vs Randy Johnson",
+  "  dice 2d6=7 (6+5) %=27 -> PATIENT",
+  "  PATIENT %=27 -> BB",
+  "  Hank Greenberg walks",
+  "[3B 2 out, bases 11-] Miguel Cabrera vs Randy Johnson",
+  "  dice 2d6=3 (3+2) %=08 -> TOUGH",
+  "  TOUGH %=08 -> SO",
+  "  Miguel Cabrera strikes out",
+  "  FAC deck reshuffled after 3 full innings (printed protocol)",
+  "[4T 0 out, bases ---] Paul Goldschmidt vs Hal Newhouser",
+  "  dice 2d6=5 (1+4) %=12 -> PATIENT",
+  "  PATIENT %=12 -> BB",
+  "  Paul Goldschmidt walks",
+  "  Paul Goldschmidt steals 2 safely",
+  "[4T 0 out, bases -1-] Ketel Marte vs Hal Newhouser",
+  "  dice 2d6=6 (3+3) %=33 -> IN-PLAY",
+  "  IN-PLAY %=33 -> 1B",
+  "  Ketel Marte singles (CF fields it)",
+  "[4T 0 out, bases 1--] Luis Gonzalez vs Hal Newhouser",
+  "  dice 2d6=6 (5+6) %=66 -> IN-PLAY",
+  "  IN-PLAY %=66 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[4T 1 out, bases 1--] Christian Walker vs Hal Newhouser",
+  "  dice 2d6=4 (4+5) %=79 -> BALLPARK",
+  "  BALLPARK (Tiger Stadium, RHB): IN-PLAY, re-roll %=45",
+  "  IN-PLAY %=45 above the ranges -> OUT G3",
+  "  double play turned",
+  "  GIDP 1B",
+  "[4B 0 out, bases ---] Bobby Veach vs Randy Johnson",
+  "  dice 2d6=10 (1+4) %=22 -> TOUGH",
+  "  TOUGH %=22 -> SO",
+  "  Bobby Veach strikes out",
+  "[4B 1 out, bases ---] Bill Freehan vs Randy Johnson",
+  "  dice 2d6=6 (1+6) %=08 -> TOUGH",
+  "  TOUGH %=08 -> SO",
+  "  Bill Freehan strikes out",
+  "[4B 2 out, bases ---] George Kell vs Randy Johnson",
+  "  dice 2d6=7 (4+1) %=37 -> PATIENT",
+  "  PATIENT %=37 -> BB",
+  "  George Kell walks",
+  "[4B 2 out, bases 1--] Alan Trammell vs Randy Johnson",
+  "  dice 2d6=11 (4+4) %=18 -> TOUGH-OUT",
+  "  Alan Trammell strikes out",
+  "[5T 0 out, bases ---] Steve Finley vs Hal Newhouser",
+  "  dice 2d6=7 (5+3) %=09 -> IN-PLAY",
+  "  IN-PLAY %=09 -> 1B",
+  "  Steve Finley singles (CF fields it)",
+  "[5T 0 out, bases 1--] Matt Williams vs Hal Newhouser",
+  "  bunt: fielder P, %=16 -> LEAD",
+  "  bunt: lead runner thrown out, batter safe",
+  "[5T 1 out, bases 1--] Gabriel Moreno vs Hal Newhouser",
+  "  bunt: fielder 3B, %=84 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[5T 2 out, bases -1-] Geraldo Perdomo vs Hal Newhouser",
+  "  dice 2d6=5 (1+5) %=55 -> PATIENT",
+  "  PATIENT %=55 -> 1B",
+  "  Geraldo Perdomo singles (LF fields it)",
+  "  Geraldo Perdomo steals 2 safely",
+  "[5T 2 out, bases -1-] Corbin Carroll vs Hal Newhouser",
+  "  dice 2d6=7 (5+1) %=93 -> IN-PLAY",
+  "  IN-PLAY %=93 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[5B 0 out, bases ---] Ty Cobb vs Randy Johnson",
+  "  dice 2d6=8 (1+5) %=77 -> TOUGH",
+  "  TOUGH %=77 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[5B 1 out, bases ---] Charlie Gehringer vs Randy Johnson",
+  "  dice 2d6=8 (5+4) %=14 -> TOUGH",
+  "  TOUGH %=14 -> 1B",
+  "  Charlie Gehringer singles (CF fields it)",
+  "[5B 1 out, bases 1--] Al Kaline vs Randy Johnson",
+  "  dice 2d6=3 (3+5) %=29 -> TOUGH",
+  "  TOUGH %=29 -> 1B",
+  "  Al Kaline singles (CF fields it)",
+  "[5B 1 out, bases 11-] Hank Greenberg vs Randy Johnson",
+  "  dice 2d6=11 (4+2) %=56 -> TOUGH-OUT",
+  "  TOUGH-OUT: OUT section -> G5",
+  "  fielder's choice: runner out at 2nd, batter safe",
+  "  fielder's choice 3B",
+  "  auto-steal: Hank Greenberg has the jump but is held (2 outs, runner on 3rd)",
+  "[5B 2 out, bases 1-1] Miguel Cabrera vs Randy Johnson",
+  "  dice 2d6=4 (4+3) %=83 -> IN-PLAY",
+  "  IN-PLAY %=83 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[6T 0 out, bases ---] Paul Goldschmidt vs Hal Newhouser",
+  "  dice 2d6=11 (5+1) %=19 -> PATIENT",
+  "  PATIENT %=19 -> BB",
+  "  Paul Goldschmidt walks",
+  "  CAPTAIN HOOK (Anderson): Hal Newhouser lifted at 2 runs (4 on his line); Denny McLain in",
+  "Pitching change (Detroit): Denny McLain replaces Hal Newhouser",
+  "[6T 0 out, bases 1--] Ketel Marte vs Denny McLain",
+  "  dice 2d6=7 (6+1) %=43 -> TOUGH-OUT",
+  "  Ketel Marte strikes out",
+  "[6T 1 out, bases 1--] Luis Gonzalez vs Denny McLain",
+  "  dice 2d6=4 (5+4) %=98 -> PATIENT",
+  "  PATIENT %=98 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[6T 2 out, bases 1--] Christian Walker vs Denny McLain",
+  "  dice 2d6=8 (5+1) %=25 -> IN-PLAY",
+  "  IN-PLAY %=25 -> 1B",
+  "  Christian Walker singles (LF fields it)",
+  "  auto-steal: Christian Walker has the jump but is held (2 outs, runner on 3rd)",
+  "[6T 2 out, bases 1-1] Steve Finley vs Denny McLain",
+  "  dice 2d6=6 (5+6) %=78 -> TOUGH",
+  "  TOUGH %=78 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[6B 0 out, bases ---] Bobby Veach vs Randy Johnson",
+  "  dice 2d6=7 (1+6) %=90 -> PATIENT",
+  "  PATIENT %=90 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[6B 1 out, bases ---] Bill Freehan vs Randy Johnson",
+  "  dice 2d6=9 (6+2) %=10 -> BALLPARK",
+  "  BALLPARK (Tiger Stadium, RHB): WHEELHOUSE, re-roll %=68",
+  "  WHEELHOUSE %=68 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[6B 2 out, bases ---] George Kell vs Randy Johnson",
+  "  dice 2d6=10 (pair 3+4) %=00 -> TOUGH: RARE PLAY (initial percentile 00)",
+  "  Rare Plays, Bases Empty, TOUGH: percentile 44 (same FAC stream) -> 35-44: the ump calls an obvious strike a ball; Kell walks. The strike zone squeezes: all TOUGH results read as PATIENT for the remainder of the inning while Johnson is in the game",
+  "  George Kell walks",
+  "  Lingering clause live: TOUGH reads against Randy Johnson read as PATIENT for the remainder of the 6th inning (bottom half) while he remains in the game",
+  "[6B 2 out, bases 1--] Alan Trammell vs Randy Johnson",
+  "  dice 2d6=9 (3+5) %=47 -> BALLPARK",
+  "  BALLPARK (Tiger Stadium, RHB): WHEELHOUSE, re-roll %=81",
+  "  WHEELHOUSE %=81 above the ranges -> OUT F8",
+  "  fly out CF",
+  "  FAC deck reshuffled after 6 full innings (printed protocol)",
+  "[7T 0 out, bases ---] Matt Williams vs Denny McLain",
+  "  dice 2d6=10 (2+1) %=31 -> IN-PLAY",
+  "  IN-PLAY %=31 -> 1B",
+  "  Matt Williams singles (LF fields it)",
+  "  THE MULTI-INNING STOPPER (Anderson): Willie Hernandez enters in the 7th with runners on",
+  "Pitching change (Detroit): Willie Hernandez replaces Denny McLain",
+  "[7T 0 out, bases 1--] Gabriel Moreno vs Willie Hernandez",
+  "  bunt: fielder 1B, %=43 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[7T 1 out, bases -1-] Geraldo Perdomo vs Willie Hernandez",
+  "  dice 2d6=9 (6+3) %=57 -> TOUGH",
+  "  TOUGH %=57 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[7T 2 out, bases -1-] Corbin Carroll vs Willie Hernandez",
+  "  dice 2d6=9 (6+1) %=97 -> TOUGH",
+  "  TOUGH %=97 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[7B 0 out, bases ---] Ty Cobb vs Randy Johnson",
+  "  dice 2d6=11 (5+3) %=39 -> TOUGH-OUT",
+  "  TOUGH-OUT: OUT section -> P4",
+  "  pop out 2B, runners hold",
+  "[7B 1 out, bases ---] Charlie Gehringer vs Randy Johnson",
+  "  dice 2d6=9 (5+6) %=72 -> BALLPARK",
+  "  BALLPARK (Tiger Stadium, LHB): IN-PLAY, re-roll %=68",
+  "  IN-PLAY %=68 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[7B 2 out, bases ---] Al Kaline vs Randy Johnson",
+  "  dice 2d6=10 (3+1) %=55 -> TOUGH",
+  "  TOUGH %=55 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[8T 0 out, bases ---] Paul Goldschmidt vs Willie Hernandez",
+  "  dice 2d6=5 (1+4) %=60 -> TOUGH",
+  "  TOUGH %=60 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[8T 1 out, bases ---] Ketel Marte vs Willie Hernandez",
+  "  dice 2d6=8 (4+6) %=38 -> IN-PLAY",
+  "  IN-PLAY %=38 above the ranges -> OUT P3",
+  "  pop out 1B, runners hold",
+  "[8T 2 out, bases ---] Luis Gonzalez vs Willie Hernandez",
+  "  dice 2d6=6 (2+4) %=64 -> IN-PLAY",
+  "  IN-PLAY %=64 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[8B 0 out, bases ---] Hank Greenberg vs Randy Johnson",
+  "  dice 2d6=9 (3+1) %=79 -> BALLPARK",
+  "  BALLPARK (Tiger Stadium, RHB): IN-PLAY, re-roll %=85",
+  "  IN-PLAY %=85 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[8B 1 out, bases ---] Miguel Cabrera vs Randy Johnson",
+  "  dice 2d6=6 (3+5) %=79 -> TOUGH",
+  "  TOUGH %=79 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[8B 2 out, bases ---] Bobby Veach vs Randy Johnson",
+  "  dice 2d6=10 (2+4) %=70 -> TOUGH",
+  "  TOUGH %=70 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[9T 0 out, bases ---] Christian Walker vs Willie Hernandez",
+  "  dice 2d6=9 (6+1) %=25 -> TOUGH",
+  "  TOUGH %=25 -> SO",
+  "  Christian Walker strikes out",
+  "[9T 1 out, bases ---] Steve Finley vs Willie Hernandez",
+  "  dice 2d6=9 (5+3) %=78 -> TOUGH",
+  "  TOUGH %=78 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[9T 2 out, bases ---] Matt Williams vs Willie Hernandez",
+  "  dice 2d6=8 (4+5) %=41 -> IN-PLAY",
+  "  IN-PLAY %=41 above the ranges -> OUT P5",
+  "  pop out 3B, runners hold",
+  "  JOE'S RULING, closer branch applied as written: 9th inning, Arizona leads by 2, starter Randy Johnson has 24 outs (>= 21); closer summoned (the engine's own branch is inert: it reads a per-pitcher outs counter the engine never increments)",
+  "Pitching change (Arizona): Jose Valverde replaces Randy Johnson",
+  "[9B 0 out, bases ---] Bill Freehan vs Jose Valverde",
+  "  dice 2d6=6 (5+4) %=14 -> TOUGH",
+  "  TOUGH %=14 -> SO",
+  "  Bill Freehan strikes out",
+  "[9B 1 out, bases ---] George Kell vs Jose Valverde",
+  "  dice 2d6=8 (1+3) %=12 -> PATIENT",
+  "  PATIENT %=12 -> BB",
+  "  George Kell walks",
+  "[9B 1 out, bases 1--] Alan Trammell vs Jose Valverde",
+  "  bunt: fielder C, %=01 -> PO",
+  "  bunt popped out, runners hold",
+  "[9B 2 out, bases 1--] Ty Cobb vs Jose Valverde",
+  "  dice 2d6=6 (2+4) %=42 -> TOUGH",
+  "  TOUGH %=42 above the ranges -> OUT P6",
+  "  pop out SS, runners hold"
+ ]
+}

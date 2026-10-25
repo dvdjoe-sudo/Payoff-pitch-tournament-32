@@ -2,17 +2,18 @@
 
 Payoff Pitch is the baseball simulator this tournament is played in. Thirty-two all-time franchise clubs play a double-elimination bracket. Every matchup is a best-of-7 series. A club is eliminated on its second series loss. There are no byes. After the opening round, each stage is reseeded by original seed, highest survivor against lowest.
 
-A game is simulated, then written into [`tournament_results.json`](tournament_results.json). That file is the bracket, the series, and the box score of every completed game. The dice or deck record for each game, and the manager log, live in [`games/`](games/) and are linked from the summary. R1-01 was simulated in APBA and adopted into the tournament; it is not replayed. On 2026-10-24 Joe closed APBA. R1-02 and R1-03 were simulated in Payoff Pitch that day and adopted the same way. Later series are simulated in Payoff Pitch as each club's set is ready.
+A game is simulated, then written into [`tournament_results.json`](tournament_results.json). That file is the bracket, the series, and the box score of every completed game. The dice or deck record for each game, and the manager log, live in [`games/`](games/) and are linked from the summary. R1-01 was simulated in APBA and adopted into the tournament; it is not replayed. On 2026-10-24 Joe closed APBA. R1-02 and R1-03 were simulated in Payoff Pitch that day and adopted the same way. R1-04 was simulated in Payoff Pitch on 2026-10-25. Later series are simulated in Payoff Pitch as each club's set is ready.
 
 Walkthrough: [Payoff Pitch top 32 tournament](https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs).
 
 The bracket viewer is [`index.html`](index.html). It reads the results file and draws the bracket, standings, game pages, team pages, the awards race, the milestone list, derived stats, and a history timeline. The home page rotates a recorded moment by the calendar date. Each game page charts a labeled win-probability estimate from the line score and can print a scorecard. Static scorecard PDFs are in [`scorecards/`](scorecards/). Share links for a game or a series are static pages in [`share/`](share/), because the in-site routes are hashes. Club marks and colors are [`data/teams.json`](data/teams.json): a 1986 logo file where that franchise is in the sheet, and a monogram in team colors otherwise. [`ADDING_GAMES.md`](ADDING_GAMES.md) is the way to add the next game, including a markdown box score dropped in [`inbox/`](inbox/). [`PWA.md`](PWA.md) covers install.
 
-Current standing (16 games played):
+Current standing (22 games played):
 
 - R1-01: New York Yankees 4-0 over the Miami Marlins. Complete. Played under APBA before the switch; adopted into this tournament by Joe's ruling; never to be replayed.
 - R1-02: San Francisco Giants 4-1 over the Washington Nationals. Complete. Played in Payoff Pitch on 2026-10-24.
 - R1-03: Boston Red Sox 4-3 over the Tampa Bay Rays. Complete. Played in Payoff Pitch. Game 1 was a Pedro Martinez no-hitter at Fenway. Boston advances on the winners side at 1-0. Tampa Bay drops to the losers side at 0-1 and is not eliminated. Series MVP: Roger Clemens. Runner-up: Jimmie Foxx.
+- R1-04: Detroit Tigers 4-2 over the Arizona Diamondbacks. Complete. Played in Payoff Pitch on 2026-10-25. Arizona took the first two games in Detroit, Game 2 in thirteen innings; Detroit won the last four after Joe's lineup ruling started Harry Heilmann in left field. Game 5 was played twice; the fresh re-play is the official game, and the superseded first playing is not in this archive. Detroit advances on the winners side at 1-0. Arizona drops to the losers side at 0-1 and is not eliminated. Series MVP: Harry Heilmann. Runner-up: George Kell.
 
 ## Seeds
 
@@ -25,7 +26,7 @@ Six seeds are Joe's pins. They are pins, and they are not filled by walking down
 | R1-01 | #1 New York Yankees vs #32 Miami Marlins | Yankees 4-0 |
 | R1-02 | #2 San Francisco Giants vs #31 Washington Nationals | Giants 4-1 |
 | R1-03 | #3 Boston Red Sox vs #30 Tampa Bay Rays | Complete. Boston won 4-3 |
-| R1-04 | #4 Detroit Tigers vs #29 Arizona Diamondbacks | Not played |
+| R1-04 | #4 Detroit Tigers vs #29 Arizona Diamondbacks | Complete. Detroit won 4-2 |
 | R1-05 | #5 St. Louis Cardinals vs #28 Colorado Rockies | Not played |
 | R1-06 | #6 Chicago Cubs vs #27 Montreal Expos | Not played |
 | R1-07 | #7 Atlanta Braves vs #26 San Diego Padres | Not played |
@@ -43,14 +44,14 @@ Winners Round 2 and Losers Round 1 form when all 16 opening series are complete.
 
 ## Standings
 
-Series is series wins and series losses. Games is game wins and game losses. Bracket is `winners` with no series loss, `losers` with one, and `eliminated` with two. Nobody is eliminated. Boston's series win puts Tampa Bay on the losers side with one series loss.
+Series is series wins and series losses. Games is game wins and game losses. Bracket is `winners` with no series loss, `losers` with one, and `eliminated` with two. Nobody is eliminated. Boston's series win puts Tampa Bay on the losers side with one series loss, and Detroit's puts Arizona there.
 
 | Seed | Team | Bracket | Series | Games |
 |---:|---|---|---:|---:|
 | 1 | New York Yankees | Winners | 1-0 | 4-0 |
 | 2 | San Francisco Giants | Winners | 1-0 | 4-1 |
 | 3 | Boston Red Sox | Winners | 1-0 | 4-3 |
-| 4 | Detroit Tigers | Winners | 0-0 | 0-0 |
+| 4 | Detroit Tigers | Winners | 1-0 | 4-2 |
 | 5 | St. Louis Cardinals | Winners | 0-0 | 0-0 |
 | 6 | Chicago Cubs | Winners | 0-0 | 0-0 |
 | 7 | Atlanta Braves | Winners | 0-0 | 0-0 |
@@ -75,7 +76,7 @@ Series is series wins and series losses. Games is game wins and game losses. Bra
 | 26 | San Diego Padres | Winners | 0-0 | 0-0 |
 | 27 | Montreal Expos | Winners | 0-0 | 0-0 |
 | 28 | Colorado Rockies | Winners | 0-0 | 0-0 |
-| 29 | Arizona Diamondbacks | Winners | 0-0 | 0-0 |
+| 29 | Arizona Diamondbacks | Losers | 0-1 | 2-4 |
 | 30 | Tampa Bay Rays | Losers | 0-1 | 3-4 |
 | 31 | Washington Nationals | Losers | 0-1 | 1-4 |
 | 32 | Miami Marlins | Losers | 0-1 | 0-4 |

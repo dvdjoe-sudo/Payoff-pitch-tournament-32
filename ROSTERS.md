@@ -18,7 +18,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 1 | NYY | New York Yankees | Roster text on file, plus game appearances |
 | 2 | SF | San Francisco Giants | Appearances only |
 | 3 | BOS | Boston Red Sox | Appearances only |
-| 4 | DET | Detroit Tigers | Unrecorded |
+| 4 | DET | Detroit Tigers | Appearances only |
 | 5 | STL | St. Louis Cardinals | Unrecorded |
 | 6 | CHC | Chicago Cubs | Unrecorded |
 | 7 | ATL | Atlanta Braves | Unrecorded |
@@ -43,7 +43,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 26 | SD | San Diego Padres | Unrecorded |
 | 27 | MON | Montreal Expos | Unrecorded |
 | 28 | COL | Colorado Rockies | Unrecorded |
-| 29 | ARI | Arizona Diamondbacks | Unrecorded |
+| 29 | ARI | Arizona Diamondbacks | Appearances only |
 | 30 | TB | Tampa Bay Rays | Appearances only |
 | 31 | WSH | Washington Nationals | Appearances only |
 | 32 | MIA | Miami Marlins | Roster text on file, plus game appearances |
@@ -223,7 +223,41 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 Bracket: winners. Series losses: 0. Full 26 Index: 922.1.
 
-TODO for Joe: no roster in `tournament_results.json`. Lineup, bench, rotation, and bullpen are unrecorded until this club plays or the graphic is added.
+### Players in the results file
+
+Positions are not in the results file. TODO for Joe: positions, manager, and anyone who has not appeared.
+
+### Lineup slots that have batted
+
+- Slot 1: Ty Cobb (`cobbty01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 2: Charlie Gehringer (`gehrich01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 3: Al Kaline (`kalinal01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 4: Hank Greenberg (`greenha01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 5: Miguel Cabrera (`cabremi01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Harry Heilmann (`heilmha01`) in R1-04-G6
+- Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 4 later games)
+- Slot 8: George Kell (`kellge01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 9: Alan Trammell (`trammal01`) in R1-04-G1 (same starter in 5 later games)
+
+### Substitutes who have batted
+
+- Lance Parrish (`parrila02`), slot 7
+
+### Starts, in the order the games were played
+
+- Hal Newhouser (`newhoha01`) started R1-04-G1
+- Justin Verlander (`verlaju01`) started R1-04-G2
+- Mickey Lolich (`lolicmi01`) started R1-04-G3
+- Tommy Bridges (`bridgto01`) started R1-04-G4
+- Jack Morris (`morrija02`) started R1-04-G5
+- Hal Newhouser (`newhoha01`) started R1-04-G6
+
+### Relievers who have appeared
+
+- Denny McLain (`mclaide01`), first seen in R1-04-G1
+- Willie Hernandez (`hernawi01`), first seen in R1-04-G1
+- Aurelio Lopez (`lopezau01`), first seen in R1-04-G2
+- Dizzy Trout (`troutdi01`), first seen in R1-04-G4
 
 ## 5. St. Louis Cardinals (STL)
 
@@ -375,9 +409,39 @@ TODO for Joe: no roster in `tournament_results.json`. Lineup, bench, rotation, a
 
 ## 29. Arizona Diamondbacks (ARI)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 442.8.
+Bracket: losers. Series losses: 1. Full 26 Index: 442.8.
 
-TODO for Joe: no roster in `tournament_results.json`. Lineup, bench, rotation, and bullpen are unrecorded until this club plays or the graphic is added.
+### Players in the results file
+
+Positions are not in the results file. TODO for Joe: positions, manager, and anyone who has not appeared.
+
+### Lineup slots that have batted
+
+- Slot 1: Corbin Carroll (`carroco02`) in R1-04-G1 (same starter in 5 later games)
+- Slot 2: Paul Goldschmidt (`goldspa01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 3: Ketel Marte (`marteke01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 4: Luis Gonzalez (`gonzalu01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 5: Christian Walker (`walkech02`) in R1-04-G1 (same starter in 5 later games)
+- Slot 6: Steve Finley (`finlest01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 7: Matt Williams (`willima04`) in R1-04-G1 (same starter in 5 later games)
+- Slot 8: Gabriel Moreno (`morenga01`) in R1-04-G1 (same starter in 5 later games)
+- Slot 9: Geraldo Perdomo (`perdoge01`) in R1-04-G1 (same starter in 5 later games)
+
+### Starts, in the order the games were played
+
+- Randy Johnson (`johnsra05`) started R1-04-G1
+- Curt Schilling (`schilcu01`) started R1-04-G2
+- Brandon Webb (`webbbr01`) started R1-04-G3
+- Zac Gallen (`galleza01`) started R1-04-G4
+- Merrill Kelly (`kellyme01`) started R1-04-G5
+- Randy Johnson (`johnsra05`) started R1-04-G6
+
+### Relievers who have appeared
+
+- Jose Valverde (`valvejo01`), first seen in R1-04-G1
+- Juan Cruz (`cruzju02`), first seen in R1-04-G2
+- Byung-Hyun Kim (`kimby01`), first seen in R1-04-G2
+- Andrew Chafin (`chafian01`), first seen in R1-04-G2
 
 ## 30. Tampa Bay Rays (TB)
 
