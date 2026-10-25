@@ -36,7 +36,10 @@
   var HIGHER_SEED_P = 0.55;
   var WP_SCALE = 1.35;
 
-  var state = { data: null, byCode: {}, games: {}, players: {}, highlight: "" };
+  var state = {
+    data: null, byCode: {}, games: {}, players: {}, highlight: "",
+    colors: {}, bios: {}, videos: { games: {}, series: {} }, odds: null, recap: null
+  };
   var detailCache = {};
   var renderToken = 0;
 
@@ -48,6 +51,9 @@
   var searchForm = document.getElementById("search-form");
   var searchInput = document.getElementById("search");
   var themeButton = document.getElementById("theme-toggle");
+  var menuButton = document.getElementById("menu-toggle");
+  var siteHeader = document.getElementById("site-header");
+  var banner = document.getElementById("milestone-banner");
 
   function el(tag, attrs) {
     var node = document.createElement(tag);
@@ -113,16 +119,26 @@
     return "hsl(" + hue + ", 46%, 36%)";
   }
 
+  function teamColors(code) {
+    return (state.colors && code && state.colors[code]) || null;
+  }
+
   function logo(team, label) {
-    var color = placeholderColor(team.seed);
+    var colors = team ? teamColors(team.code) : null;
+    var alt = label || (team && team.name ? team.name + " mark" : "Club mark");
+    if (colors && colors.logo) {
+      return el("img", { class: "logo", src: colors.logo, alt: alt, width: "64", height: "64" });
+    }
+    var color = colors && colors.primary ? colors.primary : placeholderColor(team ? team.seed : 1);
+    var ink = colors && colors.font ? colors.font : "#f6f1e6";
     var node = svg("svg", { class: "logo", viewBox: "0 0 64 64", role: "img" });
-    node.appendChild(svg("title")).textContent = label || (team.code + " placeholder");
+    node.appendChild(svg("title")).textContent = alt;
     node.appendChild(svg("rect", { width: "64", height: "64", rx: "8", fill: color }));
     var text = svg("text", {
       x: "32", y: "40", "text-anchor": "middle",
-      "font-family": "Georgia, serif", "font-size": "18", fill: "#f6f1e6"
+      "font-family": "Georgia, serif", "font-size": "18", fill: ink
     });
-    text.textContent = team.code;
+    text.textContent = team ? team.code : "";
     node.appendChild(text);
     return node;
   }
@@ -143,9 +159,16 @@
 
   function route() {
     var raw = (location.hash || "#/bracket").replace(/^#/, "");
+    var query = "";
+    var qIndex = raw.indexOf("?");
+    if (qIndex !== -1) {
+      var params = new URLSearchParams(raw.slice(qIndex + 1));
+      query = params.get("q") || "";
+      raw = raw.slice(0, qIndex);
+    }
     var parts = raw.split("/").filter(Boolean);
     if (!parts.length) parts = ["bracket"];
-    return { name: parts[0], rest: parts.slice(1).map(decodeURIComponent) };
+    return { name: parts[0], rest: parts.slice(1).map(decodeURIComponent), query: query };
   }
 
   function markNav(name) {
@@ -216,7 +239,22 @@
     return series.seed_a <= series.seed_b ? series.team_a : series.team_b;
   }
 
+  function mcOdds(series) {
+    var table = state.odds && state.odds.series && state.odds.series[series.id];
+    if (!table || !series.team_a || !series.team_b) return null;
+    if (table[series.team_a] == null || table[series.team_b] == null) return null;
+    return {
+      a: series.team_a,
+      b: series.team_b,
+      pA: Number(table[series.team_a]),
+      pB: Number(table[series.team_b]),
+      source: "monte-carlo"
+    };
+  }
+
   function oddsFor(series) {
+    var mc = mcOdds(series);
+    if (mc) return mc;
     if (!series.team_a || !series.team_b) return null;
     var high = higherSeed(series);
     if (!high) return null;
@@ -228,26 +266,37 @@
     } else {
       pHigh = seriesWinProb(nz(wins[high]), nz(wins[low]));
     }
-    return { high: high, low: low, pHigh: pHigh };
+    return { a: high, b: low, pA: pHigh, pB: 1 - pHigh, source: "seed" };
+  }
+
+  function percent(value) {
+    return (Math.round(Number(value) * 1000) / 10).toFixed(1);
   }
 
   function oddsBar(series) {
     var odds = oddsFor(series);
     if (!odds) return null;
-    var left = Math.round(odds.pHigh * 1000) / 10;
-    var right = Math.round((1 - odds.pHigh) * 1000) / 10;
+    var left = percent(odds.pA);
+    var right = percent(odds.pB);
     var track = el("div", { class: "odds-track" });
-    var a = el("span", { text: left.toFixed(1) + "%" });
-    var b = el("span", { text: right.toFixed(1) + "%" });
+    var a = el("span", { text: left + "%" });
+    var b = el("span", { text: right + "%" });
     a.style.width = left + "%";
     b.style.width = right + "%";
-    a.style.background = placeholderColor(state.byCode[odds.high] ? state.byCode[odds.high].seed : 1);
-    b.style.background = placeholderColor(state.byCode[odds.low] ? state.byCode[odds.low].seed : 2);
+    var colorA = teamColors(odds.a);
+    var colorB = teamColors(odds.b);
+    a.style.background = colorA && colorA.primary ? colorA.primary : placeholderColor(state.byCode[odds.a] ? state.byCode[odds.a].seed : 1);
+    b.style.background = colorB && colorB.primary ? colorB.primary : placeholderColor(state.byCode[odds.b] ? state.byCode[odds.b].seed : 2);
+    if (colorA && colorA.font) a.style.color = colorA.font;
+    if (colorB && colorB.font) b.style.color = colorB.font;
     track.appendChild(a);
     track.appendChild(b);
+    var note = odds.source === "monte-carlo"
+      ? "Series odds from the Monte Carlo in MODELS.md. A finished series is the recorded result. A shown 0.0% means that side won none of the 4,000 draws."
+      : "Series odds, higher seed " + HIGHER_SEED_P + " each remaining game. A finished series shows the winner at 100%.";
     return el("div", { class: "odds" },
-      el("p", { class: "muted", text: "Series odds, higher seed " + HIGHER_SEED_P + " each remaining game. A finished series shows the winner at 100%." }),
-      el("p", null, linkTeam(odds.high), " " + left.toFixed(1) + "% · ", linkTeam(odds.low), " " + right.toFixed(1) + "%"),
+      el("p", { class: "muted", text: note }),
+      el("p", null, linkTeam(odds.a), " " + left + "% · ", linkTeam(odds.b), " " + right + "%"),
       track
     );
   }
@@ -376,19 +425,28 @@
     clear(nextUp);
     var upcoming = nextGame();
     if (!upcoming) {
-      nextUp.appendChild(el("p", { text: "No series is in progress." }));
+      nextUp.appendChild(el("p", { class: "next-line", text: "No series is in progress." }));
       return;
     }
     var homeStarter = upcoming.starters[upcoming.home] || "starter not named";
     var awayStarter = upcoming.starters[upcoming.away] || "starter not named";
-    nextUp.appendChild(el("p", { class: "eyebrow", text: "Next up" }));
-    var p = el("p");
-    p.appendChild(el("a", {
+    var line = el("div", { class: "next-line" });
+    line.appendChild(el("span", { class: "eyebrow", text: "Next" }));
+    line.appendChild(el("a", {
       href: "#/series/" + upcoming.series.id,
       text: upcoming.series.id + " Game " + upcoming.number + " at " + clubName(upcoming.home)
     }));
-    nextUp.appendChild(p);
-    nextUp.appendChild(el("p", { text: awayStarter + " (" + upcoming.away + ") at " + homeStarter + " (" + upcoming.home + ")." }));
+    var toggle = el("button", { type: "button", class: "next-toggle", "aria-expanded": "false", text: "Starters" });
+    line.appendChild(toggle);
+    nextUp.appendChild(line);
+    nextUp.appendChild(el("p", {
+      class: "next-detail",
+      text: awayStarter + " (" + upcoming.away + ") at " + homeStarter + " (" + upcoming.home + ")."
+    }));
+    toggle.addEventListener("click", function () {
+      var open = nextUp.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
   }
 
   function paOf(stats) {
@@ -529,6 +587,13 @@
         el("span", { class: "runs", text: wins })
       ));
     });
+    var mc = mcOdds(series);
+    if (mc) {
+      card.appendChild(el("p", {
+        class: "card-odds",
+        text: series.team_a + " " + percent(mc.pA) + "% · " + series.team_b + " " + percent(mc.pB) + "%"
+      }));
+    }
     return card;
   }
 
@@ -552,6 +617,8 @@
       select
     ));
     root.appendChild(el("p", { class: "note", text: "Swipe the rounds sideways. A series score is the games each club has won. Click a series for its games." }));
+    var strip = titleStrip();
+    if (strip) root.appendChild(strip);
     GROUPS.forEach(function (group) {
       var block = el("section", { class: "group " + group.id });
       block.appendChild(el("h2", { text: group.title }));
@@ -605,8 +672,18 @@
       var img = el("img", { class: "share-card", src: graphic, alt: series.id + " series score graphic" });
       page.appendChild(el("h4", { text: "Share" }));
       page.appendChild(el("p", null, img));
-      page.appendChild(el("p", null, el("a", { href: graphic, text: "SVG" }), " · ", el("a", { href: "graphics/series/" + series.id + ".png", text: "PNG" })));
+      page.appendChild(el("p", null,
+        el("a", { href: graphic, text: "SVG" }),
+        " · ",
+        el("a", { href: "graphics/series/" + series.id + ".png", text: "PNG" }),
+        " · ",
+        el("a", { href: "share/" + series.id + ".html", text: "Share page" })
+      ));
+    } else if (series.team_a && series.team_b) {
+      page.appendChild(el("p", null, el("a", { href: "share/" + series.id + ".html", text: "Share page" })));
     }
+    page.appendChild(el("h4", { text: "Video" }));
+    page.appendChild(videoBlock(videoFor("series", series.id)));
     view.appendChild(page);
   }
 
@@ -710,8 +787,12 @@
       " · ",
       el("a", { href: "graphics/games/" + game.id + ".png", text: "PNG" }),
       " · ",
+      el("a", { href: "share/" + game.id + ".html", text: "Share page" }),
+      " · ",
       el("a", { href: "box_scores/" + game.id + ".md", text: "Box score markdown" })
     ));
+    page.appendChild(el("h4", { text: "Video" }));
+    page.appendChild(videoBlock(videoFor("games", game.id)));
     view.appendChild(page);
     var token = ++renderToken;
     var detailUrl = game.detail || ("games/" + game.id + ".json");
@@ -757,13 +838,13 @@
     var diff = runDiff()[code];
     var page = el("article", { class: "panel" });
     var hero = el("div", { class: "team-hero" });
-    hero.appendChild(logo(team, team.name + " placeholder monogram"));
+    hero.appendChild(logo(team, team.name + " mark"));
     hero.appendChild(el("div", null,
       el("h2", { text: "#" + team.seed + " " + team.name }),
       el("p", { class: "meta", text: team.code + " · " + (team.bracket || "winners") + " bracket · series " + team.series_wins + "-" + team.series_losses + " · games " + team.game_wins + "-" + team.game_losses })
     ));
     page.appendChild(hero);
-    page.appendChild(el("p", { class: "muted", text: "Placeholder monogram and color. Not a club mark." }));
+    page.appendChild(el("p", { class: "muted", text: markNote(team.code) }));
     page.appendChild(el("p", { text: "Run differential " + (diff.rs - diff.ra) + " (" + diff.rs + " scored, " + diff.ra + " allowed)." }));
     page.appendChild(el("h3", { text: "Results" }));
     var any = false;
@@ -804,7 +885,7 @@
       }
     });
     page.appendChild(el("h3", { text: "Roster stats" }));
-    if (!batRows.length && !pitRows.length) page.appendChild(el("p", { text: "No appearances yet. Positions stay unrecorded until the club plays." }));
+    if (!batRows.length && !pitRows.length) page.appendChild(el("p", { text: "Roster not announced yet." }));
     if (batRows.length) {
       page.appendChild(el("h4", { text: "Batting" }));
       page.appendChild(table(["Player", "PA", "AB", "H", "HR", "RBI", "AVG"], batRows));
@@ -833,6 +914,12 @@
       el("p", { class: "meta" }, linkTeam(code), " · " + player.id)
     ));
     page.appendChild(hero);
+    var bio = state.bios && state.bios[code + "|" + id];
+    if (bio && bio.bio) {
+      page.appendChild(el("h3", { text: "Bio" }));
+      page.appendChild(el("p", { text: bio.bio }));
+      if (bio.career) page.appendChild(el("p", { class: "muted", text: bio.career }));
+    }
     if (paOf(player.bat) > 0) {
       page.appendChild(el("h3", { text: "Batting" }));
       page.appendChild(table(
@@ -987,6 +1074,543 @@
     view.appendChild(page);
   }
 
+  function markNote(code) {
+    var colors = teamColors(code);
+    if (colors && colors.mark === "monogram") {
+      return "Monogram in team colors. " + (colors.color_source || "") + " Swap the file in data/teams.json.";
+    }
+    if (colors) return "Logo file (" + colors.mark + "). Swap the file in data/teams.json.";
+    return "Swap the file in data/teams.json.";
+  }
+
+  function titleStrip() {
+    if (!state.odds || !state.odds.title) return null;
+    var rows = Object.keys(state.odds.title).map(function (code) {
+      return { code: code, p: Number(state.odds.title[code]) };
+    }).filter(function (row) { return row.p > 0; }).sort(function (a, b) {
+      return b.p - a.p || a.code.localeCompare(b.code);
+    });
+    if (!rows.length) return null;
+    var line = el("p");
+    rows.forEach(function (row, index) {
+      if (index) line.appendChild(document.createTextNode(" · "));
+      line.appendChild(linkTeam(row.code));
+      line.appendChild(document.createTextNode(" " + percent(row.p) + "%"));
+    });
+    return el("section", { class: "title-odds" },
+      el("h2", { text: "Title odds" }),
+      el("p", { class: "note", text: "Monte Carlo, 4,000 draws, from each club's index. Clubs at 0.0% won none of those draws. The model is in MODELS.md and does not change a result." }),
+      line
+    );
+  }
+
+  function videoFor(kind, id) {
+    var bag = state.videos && state.videos[kind];
+    return bag && bag[id] ? String(bag[id]) : "";
+  }
+
+  function embedUrl(raw) {
+    if (!raw) return "";
+    var url = String(raw).trim();
+    var watch = /^https:\/\/(?:www\.)?youtube\.com\/watch\?v=([\w-]{6,})/.exec(url);
+    if (watch) return "https://www.youtube-nocookie.com/embed/" + watch[1];
+    var short = /^https:\/\/youtu\.be\/([\w-]{6,})/.exec(url);
+    if (short) return "https://www.youtube-nocookie.com/embed/" + short[1];
+    if (/^https:\/\/(?:www\.)?youtube\.com\/embed\/[\w-]{6,}/.test(url)) return url.split("&")[0];
+    if (/^https:\/\/(?:www\.)?youtube-nocookie\.com\/embed\/[\w-]{6,}/.test(url)) return url.split("&")[0];
+    if (/^https:\/\/muse\.ai\/embed\//.test(url)) return url;
+    return "";
+  }
+
+  function videoBlock(url) {
+    if (!url) return el("p", { text: "No video is linked for this page yet." });
+    var src = embedUrl(url);
+    if (!src) return el("p", null, "Linked video: ", el("a", { href: url, text: url }));
+    return el("iframe", {
+      class: "video-frame",
+      src: src,
+      title: "Video",
+      allow: "fullscreen; picture-in-picture",
+      allowfullscreen: "true",
+      loading: "lazy"
+    });
+  }
+
+  function renderBanner() {
+    clear(banner);
+    if (!state.data) {
+      banner.hidden = true;
+      return;
+    }
+    var found = milestones();
+    if (!found.nohitters.length) {
+      banner.hidden = true;
+      return;
+    }
+    banner.hidden = false;
+    var item = found.nohitters[0];
+    banner.appendChild(document.createTextNode(item.line.name + " no-hitter · "));
+    banner.appendChild(linkGame(item.game.id, item.game.id));
+    if (found.nohitters.length > 1) {
+      banner.appendChild(document.createTextNode(" · " + found.nohitters.length + " on the book"));
+    }
+  }
+
+  function renderPreviews() {
+    markNav("previews");
+    var page = el("article", { class: "stack" });
+    page.appendChild(el("h2", { text: "Matchup previews" }));
+    page.appendChild(el("p", { class: "note", text: "Starters are taken from a series carry file when one is stored. Key players are taken from box scores already played. Nothing here is a proposed roster." }));
+    var shown = 0;
+    state.data.series.forEach(function (series) {
+      if (!series.team_a || !series.team_b) return;
+      if (series.status !== "in-progress" && series.status !== "scheduled") return;
+      shown += 1;
+      page.appendChild(previewCard(series));
+    });
+    if (!shown) page.appendChild(el("p", { text: "No series is scheduled or in progress." }));
+    clear(view);
+    view.appendChild(page);
+  }
+
+  function previewCard(series) {
+    var card = el("section", { class: "panel preview-card" });
+    card.appendChild(el("h3", { text: series.label || series.id }));
+    card.appendChild(el("p", { class: "meta", text: series.id + " · " + (STATUS[series.status] || series.status) }));
+    card.appendChild(el("p", null, linkTeam(series.team_a), " vs ", linkTeam(series.team_b)));
+    card.appendChild(oddsBar(series));
+    var number = (series.games || []).length + 1;
+    var home = (series.home_by_game || {})[String(number)];
+    if (home && series.status === "in-progress") {
+      var away = home === series.team_a ? series.team_b : series.team_a;
+      var starters = (series.carry && series.carry.rotation_next_start) || {};
+      var awayStarter = starters[away] || "not named in the carry file";
+      var homeStarter = starters[home] || "not named in the carry file";
+      card.appendChild(el("p", { text: "Game " + number + " at " + clubName(home) + ": " + awayStarter + " (" + away + ") at " + homeStarter + " (" + home + ")." }));
+      if (series.carry && series.carry.rotation_note) {
+        card.appendChild(el("p", { class: "muted", text: series.carry.rotation_note }));
+      }
+    } else if (series.status === "scheduled") {
+      var firstHome = (series.home_by_game || {})["1"];
+      card.appendChild(el("p", { text: firstHome ? "Game 1 is at " + clubName(firstHome) + ". No probable starter is stored." : "No probable starter is stored." }));
+    }
+    card.appendChild(el("h4", { text: "Strength" }));
+    [series.team_a, series.team_b].forEach(function (code) {
+      var team = state.byCode[code];
+      var title = state.odds && state.odds.title ? state.odds.title[code] : null;
+      var text = clubName(code) + " index " + (team ? team.index : "—");
+      if (title != null) text += ", title " + percent(title) + "%";
+      card.appendChild(el("p", { text: text }));
+    });
+    var played = (series.games || []).map(function (id) { return state.games[id]; }).filter(Boolean);
+    card.appendChild(el("h4", { text: "Head to head" }));
+    if (!played.length) {
+      card.appendChild(el("p", { text: "These clubs have not played in this tournament." }));
+    } else {
+      played.forEach(function (game) {
+        card.appendChild(el("p", null,
+          linkGame(game.id, "Game " + game.game_in_series),
+          " ",
+          clubName(game.away) + " " + game.score[game.away] + ", " + clubName(game.home) + " " + game.score[game.home]
+        ));
+      });
+    }
+    card.appendChild(el("h4", { text: "Key players" }));
+    var keys = [];
+    played.forEach(function (game) {
+      game.pitching.forEach(function (line) {
+        if (line.appearance_order === 1 || nz(line.k) >= 10 || (line.appearance_order === 1 && nz(line.h) === 0 && nz(line.outs) >= 27)) {
+          keys.push(linkPlayer(line.team, line.player_id, line.name) );
+          keys.push(document.createTextNode(" " + ipLabel(nz(line.outs)) + " IP, " + nz(line.h) + " H, " + nz(line.k) + " K in " + game.id));
+          keys.push(el("br"));
+        }
+      });
+      game.batting.forEach(function (line) {
+        if (nz(line.hr) > 0 || nz(line.h) >= 3) {
+          keys.push(linkPlayer(line.team, line.player_id, line.name));
+          keys.push(document.createTextNode(" " + nz(line.h) + " H, " + nz(line.hr) + " HR in " + game.id));
+          keys.push(el("br"));
+        }
+      });
+    });
+    if (!keys.length) card.appendChild(el("p", { text: "No box score yet, so no key players are listed." }));
+    else {
+      var block = el("p");
+      keys.forEach(function (node) { block.appendChild(node); });
+      card.appendChild(block);
+    }
+    card.appendChild(el("p", null, el("a", { href: "#/series/" + series.id, text: "Open " + series.id })));
+    return card;
+  }
+
+  function renderVideos() {
+    markNav("videos");
+    var page = el("article", { class: "panel video-list" });
+    page.appendChild(el("h2", { text: "Videos" }));
+    var games = (state.videos && state.videos.games) || {};
+    var seriesMap = (state.videos && state.videos.series) || {};
+    var gameIds = Object.keys(games).filter(function (id) { return games[id]; });
+    var seriesIds = Object.keys(seriesMap).filter(function (id) { return seriesMap[id]; });
+    if (!gameIds.length && !seriesIds.length) {
+      page.appendChild(el("p", { text: "No video is linked yet. Add a muse.ai or YouTube embed URL in videos.json. The walkthrough stays in the header." }));
+    }
+    seriesIds.forEach(function (id) {
+      page.appendChild(el("h3", { text: id }));
+      page.appendChild(videoBlock(seriesMap[id]));
+    });
+    gameIds.forEach(function (id) {
+      page.appendChild(el("h3", null, linkGame(id)));
+      page.appendChild(videoBlock(games[id]));
+    });
+    clear(view);
+    view.appendChild(page);
+  }
+
+  function renderRecap() {
+    markNav("recap");
+    var page = el("article", { class: "panel" });
+    var doc = state.recap;
+    if (!doc) {
+      page.appendChild(el("h2", { text: "Weekly recap" }));
+      page.appendChild(el("p", { text: "The recap feed has not been generated yet." }));
+      clear(view);
+      view.appendChild(page);
+      return;
+    }
+    page.appendChild(el("h2", { text: doc.title || "Weekly recap" }));
+    page.appendChild(el("p", { class: "meta", text: (doc.start || "") + " through " + (doc.end || "") }));
+    page.appendChild(el("p", null, el("a", { href: "recap/" + doc.id + ".html", text: "Standalone recap page" })));
+    if (!doc.games || !doc.games.length) page.appendChild(el("p", { text: "No dated games fall in this week." }));
+    (doc.games || []).forEach(function (game) {
+      page.appendChild(el("h3", null, linkGame(game.id)));
+      page.appendChild(el("p", { text: game.away_name + " " + game.away_runs + ", " + game.home_name + " " + game.home_runs + "." }));
+      if (game.recap) page.appendChild(el("p", { text: game.recap }));
+    });
+    if (doc.undated && doc.undated.length) {
+      page.appendChild(el("h3", { text: "Undated games" }));
+      page.appendChild(el("p", { text: "These games are on the book and have no calendar date, so they are not counted in the week: " + doc.undated.join(", ") + "." }));
+    }
+    var notes = [];
+    var marks = doc.milestones || {};
+    (marks.nohitters || []).forEach(function (item) { notes.push(item.name + " no-hitter in " + item.game); });
+    (marks.high_k || []).forEach(function (item) { notes.push(item.name + " " + item.k + " strikeouts in " + item.game); });
+    if (notes.length) {
+      page.appendChild(el("h3", { text: "Milestones on the book" }));
+      var list = el("ul");
+      notes.forEach(function (note) { list.appendChild(el("li", { text: note })); });
+      page.appendChild(list);
+    }
+    clear(view);
+    view.appendChild(page);
+  }
+
+  function parseInnings(text, label, problems) {
+    if (!String(text || "").trim()) {
+      problems.push(label + " line score is empty.");
+      return [];
+    }
+    var parts = String(text).split(",");
+    var innings = [];
+    parts.forEach(function (part, index) {
+      var piece = part.trim();
+      if (piece === "") return;
+      if (!/^\d+$/.test(piece)) problems.push(label + " inning " + (index + 1) + " is not a whole number.");
+      innings.push(parseInt(piece, 10) || 0);
+    });
+    return innings;
+  }
+
+  function parseIpOuts(text) {
+    var value = String(text || "").trim();
+    if (!value) return 0;
+    if (value.indexOf(".") !== -1) {
+      var bits = value.split(".");
+      return (parseInt(bits[0], 10) || 0) * 3 + (parseInt((bits[1] || "0").slice(0, 1), 10) || 0);
+    }
+    return Math.round(parseFloat(value) * 3) || 0;
+  }
+
+  function slugId(name) {
+    var letters = String(name || "").toLowerCase().replace(/[^a-z]/g, "");
+    return (letters.slice(0, 8) || "player") + "01";
+  }
+
+  function splitCsv(line) {
+    return String(line).split(",").map(function (part) { return part.trim(); });
+  }
+
+  function buildGameDraft(fields) {
+    var problems = [];
+    var series = fields.series.trim();
+    var gameNo = parseInt(fields.game, 10);
+    if (!/^[A-Za-z0-9]+-\d+$/.test(series)) problems.push("Series id should look like R1-04.");
+    if (!gameNo || gameNo < 1) problems.push("Game number must be 1 or more.");
+    var away = fields.away.trim().toUpperCase();
+    var home = fields.home.trim().toUpperCase();
+    if (!/^[A-Z]{2,3}$/.test(away) || !/^[A-Z]{2,3}$/.test(home) || away === home) {
+      problems.push("Away and home need distinct club codes.");
+    }
+    if (fields.date && !/^\d{4}-\d{2}-\d{2}$/.test(fields.date.trim())) problems.push("Date must be YYYY-MM-DD or blank.");
+    var id = series + "-G" + (gameNo || 0);
+    var awayLine = parseInnings(fields.awayLine, away || "Away", problems);
+    var homeLine = parseInnings(fields.homeLine, home || "Home", problems);
+    var score = {};
+    score[away] = awayLine.reduce(function (sum, runs) { return sum + runs; }, 0);
+    score[home] = homeLine.reduce(function (sum, runs) { return sum + runs; }, 0);
+    if (awayLine.length && homeLine.length && score[away] === score[home]) problems.push("The score is tied. A tournament game needs a winner.");
+    var batting = [];
+    var batByTeam = {};
+    String(fields.batting || "").split("\n").forEach(function (raw) {
+      if (!raw.trim()) return;
+      var cols = splitCsv(raw);
+      if (cols.length < 9) {
+        problems.push("Batting row needs TEAM, Name, AB, R, H, HR, RBI, BB, SO: " + raw.trim());
+        return;
+      }
+      var team = cols[0].toUpperCase();
+      if (team !== away && team !== home) problems.push("Batting team " + team + " is not in this game.");
+      batByTeam[team] = (batByTeam[team] || 0) + 1;
+      batting.push({
+        team: team,
+        player_id: slugId(cols[1]),
+        name: cols[1],
+        lineup_slot: batByTeam[team],
+        entry_order: 1,
+        is_substitute: false,
+        ab: numField(cols[2]),
+        r: numField(cols[3]),
+        h: numField(cols[4]),
+        hr: numField(cols[5]),
+        rbi: numField(cols[6]),
+        bb: numField(cols[7]),
+        k: numField(cols[8]),
+        hbp: 0, sb: 0, cs: 0, sac: 0, sf: null, gidp: 0, ibb: null, doubles: 0, triples: 0
+      });
+    });
+    var pitching = [];
+    var pitByTeam = {};
+    String(fields.pitching || "").split("\n").forEach(function (raw) {
+      if (!raw.trim()) return;
+      var cols = splitCsv(raw);
+      if (cols.length < 8) {
+        problems.push("Pitching row needs TEAM, Name, IP, H, R, ER, BB, SO: " + raw.trim());
+        return;
+      }
+      var team = cols[0].toUpperCase();
+      if (team !== away && team !== home) problems.push("Pitching team " + team + " is not in this game.");
+      pitByTeam[team] = (pitByTeam[team] || 0) + 1;
+      pitching.push({
+        team: team,
+        player_id: slugId(cols[1]),
+        name: cols[1],
+        appearance_order: pitByTeam[team],
+        outs: parseIpOuts(cols[2]),
+        h: numField(cols[3]),
+        r: numField(cols[4]),
+        er: numField(cols[5]),
+        bb: numField(cols[6]),
+        k: numField(cols[7]),
+        bf: 0,
+        hb: null,
+        hr: null
+      });
+    });
+    if (!batting.length) problems.push("Add at least one batting row.");
+    [away, home].forEach(function (code) {
+      if (!code) return;
+      var runs = batting.filter(function (line) { return line.team === code; }).reduce(function (sum, line) { return sum + line.r; }, 0);
+      if (batting.some(function (line) { return line.team === code; }) && runs !== score[code]) {
+        problems.push(code + " batting runs " + runs + " do not match the line score " + score[code] + ".");
+      }
+      if (batting.length && !batting.some(function (line) { return line.team === code; })) problems.push("No batting line for " + code + ".");
+    });
+    if (pitching.length) {
+      [away, home].forEach(function (code) {
+        var other = code === away ? home : away;
+        var allowed = pitching.filter(function (line) { return line.team === code; }).reduce(function (sum, line) { return sum + line.r; }, 0);
+        if (pitching.some(function (line) { return line.team === code; }) && allowed !== score[other]) {
+          problems.push(code + " pitching runs " + allowed + " do not match " + other + "'s score " + score[other] + ".");
+        }
+      });
+    }
+    var winner = score[away] > score[home] ? away : home;
+    var loser = winner === away ? home : away;
+    var names = {};
+    names[away] = fields.awayName.trim() || away;
+    names[home] = fields.homeName.trim() || home;
+    var game = {
+      id: id,
+      series_id: series,
+      game_in_series: gameNo || 0,
+      date: fields.date.trim() || null,
+      away: away,
+      home: home,
+      teams: names,
+      score: score,
+      line: {},
+      winner: winner,
+      wls: {
+        W: { team: winner, player_id: "winner01", name: fields.winnerName.trim() || "Winner" },
+        L: { team: loser, player_id: "loser01", name: fields.loserName.trim() || "Loser" },
+        S: null
+      },
+      batting: batting,
+      pitching: pitching,
+      errors_by: [],
+      team_errors: {},
+      final_grades: {},
+      game_recap: fields.recap.trim(),
+      series_recap: "",
+      rng_seed: parseInt(fields.rng, 10) || 0,
+      detail: "games/" + id + ".json",
+      scoring_plays: []
+    };
+    game.line[away] = awayLine;
+    game.line[home] = homeLine;
+    game.team_errors[away] = 0;
+    game.team_errors[home] = 0;
+    var detail = {
+      id: id,
+      series_id: series,
+      game_in_series: gameNo || 0,
+      rolls: [],
+      manager_log: null
+    };
+    if (!Array.isArray(detail.rolls)) problems.push("Detail file needs a rolls array.");
+    return { problems: problems, game: game, detail: detail };
+  }
+
+  function numField(value) {
+    var text = String(value || "").trim();
+    if (!text) return 0;
+    var number = Number(text);
+    return isFinite(number) ? number : 0;
+  }
+
+  function downloadJson(filename, obj) {
+    var blob = new Blob([JSON.stringify(obj, null, 1) + "\n"], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var link = el("a", { href: url, download: filename });
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function copyText(text, button) {
+    var done = function () { button.textContent = "Copied"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function () { done(); });
+      return;
+    }
+    var area = el("textarea", { text: text });
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand("copy"); } catch (err) { /* the textarea is still on the page */ }
+    area.remove();
+    done();
+  }
+
+  function renderAdd() {
+    markNav("add");
+    var page = el("article", { class: "panel" });
+    page.appendChild(el("h2", { text: "Add a game" }));
+    page.appendChild(el("p", { class: "note", text: "This form checks a game summary and a detail file in the browser, then downloads them. It does not write the archive. Review the JSON before any hand merge. See ADDING_GAMES.md." }));
+    page.appendChild(el("p", null, el("a", { href: "ADDING_GAMES.md", text: "How to add a game" })));
+    var form = el("form", { class: "add-form", id: "add-game-form" });
+    function field(name, label, value, kind) {
+      var input = el("input", { name: name, id: "add-" + name, value: value || "" });
+      if (kind) input.setAttribute("inputmode", kind);
+      return el("label", { text: label }, input);
+    }
+    var top = el("div", { class: "form-row" });
+    top.appendChild(field("series", "Series id", "R1-04"));
+    top.appendChild(field("game", "Game number", "1", "numeric"));
+    top.appendChild(field("date", "Date", ""));
+    top.appendChild(field("rng", "RNG seed", "0", "numeric"));
+    form.appendChild(top);
+    var clubs = el("div", { class: "form-row" });
+    clubs.appendChild(field("away", "Away code", ""));
+    clubs.appendChild(field("awayName", "Away name", ""));
+    clubs.appendChild(field("home", "Home code", ""));
+    clubs.appendChild(field("homeName", "Home name", ""));
+    form.appendChild(clubs);
+    var lines = el("div", { class: "form-row" });
+    lines.appendChild(field("awayLine", "Away line score", "0,0,0,0,0,0,0,0,0"));
+    lines.appendChild(field("homeLine", "Home line score", "0,0,0,0,0,0,0,0,0"));
+    form.appendChild(lines);
+    var decisions = el("div", { class: "form-row" });
+    decisions.appendChild(field("winnerName", "Winning pitcher", ""));
+    decisions.appendChild(field("loserName", "Losing pitcher", ""));
+    form.appendChild(decisions);
+    form.appendChild(el("label", { text: "Batting, one player per line: TEAM, Name, AB, R, H, HR, RBI, BB, SO" },
+      el("textarea", { name: "batting", id: "add-batting" })));
+    form.appendChild(el("label", { text: "Pitching, one pitcher per line: TEAM, Name, IP, H, R, ER, BB, SO" },
+      el("textarea", { name: "pitching", id: "add-pitching" })));
+    form.appendChild(el("label", { text: "Recap" }, el("textarea", { name: "recap", id: "add-recap" })));
+    var actions = el("div", { class: "form-actions" });
+    actions.appendChild(el("button", { type: "submit", text: "Check" }));
+    var downloadGame = el("button", { type: "button", text: "Download summary", disabled: "disabled" });
+    var downloadDetail = el("button", { type: "button", text: "Download detail", disabled: "disabled" });
+    var copyGame = el("button", { type: "button", class: "copy-button", text: "Copy summary", disabled: "disabled" });
+    var copyDetail = el("button", { type: "button", class: "copy-button", text: "Copy detail", disabled: "disabled" });
+    actions.appendChild(downloadGame);
+    actions.appendChild(downloadDetail);
+    actions.appendChild(copyGame);
+    actions.appendChild(copyDetail);
+    form.appendChild(actions);
+    var report = el("div");
+    form.appendChild(report);
+    var draft = null;
+    function readFields() {
+      var data = {};
+      ["series", "game", "date", "rng", "away", "awayName", "home", "homeName", "awayLine", "homeLine", "winnerName", "loserName", "batting", "pitching", "recap"].forEach(function (name) {
+        data[name] = (form.elements[name] && form.elements[name].value) || "";
+      });
+      return data;
+    }
+    function showDraft(next) {
+      draft = next;
+      clear(report);
+      var list = el("ul", { class: "problems" });
+      next.problems.forEach(function (problem) { list.appendChild(el("li", { text: problem })); });
+      if (next.problems.length) {
+        report.appendChild(el("p", { text: "Fix these before downloading." }));
+        report.appendChild(list);
+      } else {
+        report.appendChild(el("p", { text: "Shape check passed for " + next.game.id + ". The files are not in the archive until you merge them by hand." }));
+      }
+      var ready = next.problems.length ? "disabled" : null;
+      [downloadGame, downloadDetail, copyGame, copyDetail].forEach(function (button) {
+        if (ready) button.setAttribute("disabled", "disabled");
+        else button.removeAttribute("disabled");
+      });
+      report.appendChild(el("h3", { text: "Summary JSON" }));
+      report.appendChild(el("textarea", { readonly: "readonly", text: JSON.stringify(next.game, null, 1) }));
+      report.appendChild(el("h3", { text: "Detail JSON" }));
+      report.appendChild(el("textarea", { readonly: "readonly", text: JSON.stringify(next.detail, null, 1) }));
+    }
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      showDraft(buildGameDraft(readFields()));
+    });
+    downloadGame.addEventListener("click", function () {
+      if (draft && !draft.problems.length) downloadJson(draft.game.id + ".json", draft.game);
+    });
+    downloadDetail.addEventListener("click", function () {
+      if (draft && !draft.problems.length) downloadJson(draft.game.id + ".detail.json", draft.detail);
+    });
+    copyGame.addEventListener("click", function () {
+      if (draft && !draft.problems.length) copyText(JSON.stringify(draft.game, null, 1) + "\n", copyGame);
+    });
+    copyDetail.addEventListener("click", function () {
+      if (draft && !draft.problems.length) copyText(JSON.stringify(draft.detail, null, 1) + "\n", copyDetail);
+    });
+    page.appendChild(form);
+    clear(view);
+    view.appendChild(page);
+  }
+
   function render() {
     if (!state.data) return;
     var where = route();
@@ -998,8 +1622,13 @@
     else if (where.name === "game") renderGame(where.rest[0]);
     else if (where.name === "team") renderTeam(where.rest[0]);
     else if (where.name === "player") renderPlayer(where.rest[0], where.rest[1]);
-    else if (where.name === "search") renderSearch(where.rest.join("/"));
+    else if (where.name === "search") renderSearch(where.query || where.rest.join("/"));
+    else if (where.name === "previews") renderPreviews();
+    else if (where.name === "videos") renderVideos();
+    else if (where.name === "recap") renderRecap();
+    else if (where.name === "add") renderAdd();
     else renderBracket(activeSeries);
+    renderBanner();
     if (where.name === "bracket" && activeSeries) {
       /* bracket already showing */
     }
@@ -1019,18 +1648,56 @@
   });
   applyTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
 
-  searchForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    location.hash = "#/search/" + encodeURIComponent(searchInput.value.trim());
+  function setMenu(open) {
+    if (open) siteHeader.classList.add("menu-open");
+    else siteHeader.classList.remove("menu-open");
+    menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+    menuButton.textContent = open ? "Close" : "Menu";
+  }
+
+  menuButton.addEventListener("click", function () {
+    setMenu(!siteHeader.classList.contains("menu-open"));
   });
 
-  window.addEventListener("hashchange", render);
+  searchForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    location.hash = "#/search?q=" + encodeURIComponent(searchInput.value.trim());
+  });
+
+  window.addEventListener("hashchange", function () {
+    if (window.matchMedia("(max-width: 720px)").matches) setMenu(false);
+    var where = route();
+    if (where.name === "search") searchInput.value = where.query || where.rest.join("/");
+    render();
+  });
+
+  function loadOptional(url) {
+    return fetch(url).then(function (response) {
+      if (!response.ok) throw new Error(url);
+      return response.json();
+    }).catch(function () { return null; });
+  }
 
   fetch("tournament_results.json").then(function (response) {
     if (!response.ok) throw new Error("tournament_results.json");
     return response.json();
   }).then(function (data) {
+    return Promise.all([
+      data,
+      loadOptional("data/teams.json"),
+      loadOptional("data/bios.json"),
+      loadOptional("videos.json"),
+      loadOptional("feed/odds.json"),
+      loadOptional("feed/recap.json")
+    ]);
+  }).then(function (parts) {
+    var data = parts[0];
     state.data = data;
+    state.colors = parts[1] || {};
+    state.bios = parts[2] || {};
+    state.videos = parts[3] || { games: {}, series: {} };
+    state.odds = parts[4];
+    state.recap = parts[5];
     state.highlight = storageGet("pp-path");
     data.teams.forEach(function (team) { state.byCode[team.code] = team; });
     data.games.forEach(function (game) { state.games[game.id] = game; });
@@ -1038,8 +1705,10 @@
     renderNext();
     var complete = data.series.filter(function (series) { return series.status === "complete"; }).length;
     var progress = data.series.filter(function (series) { return series.status === "in-progress"; }).length;
-    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Formulas are in MODELS.md. Placeholder colors are not club marks.";
+    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Formulas are in MODELS.md. Logo files live in data/teams.json: a 1986 file where the franchise matches, a monogram otherwise.";
     if (!location.hash) location.hash = "#/bracket";
+    var where = route();
+    if (where.name === "search") searchInput.value = where.query || where.rest.join("/");
     render();
   }).catch(function () {
     showError("The results file did not load. Serve this folder over HTTP. Opening the file directly cannot fetch JSON.");

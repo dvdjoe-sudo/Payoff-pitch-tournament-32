@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — Sharing, logos, and the installable site
+
+The viewer gained a compact phone header, static share pages under `share/`, Open Graph images, Monte Carlo series and title odds in `feed/odds.json`, matchup previews, a videos hub, a weekly recap, an in-site game form, and a service worker. Club marks come from `data/teams.json`. A 1986 logo file is used where the franchise matches that sheet. Marlins, Rays, Diamondbacks, Rockies, Nationals, and Philadelphia Athletics use a monogram because they are not in that sheet. Bios in `data/bios.json` cover only players who appear in the recorded games. Clubs that have not played still have an empty roster stub. The site says "Roster not announced yet." No score, line, or series result was changed.
+
 ## 2026-10-25 — Records and documents
 
 The results file was split. Each game's rolls and manager log moved to `games/<id>.json`. The summary kept the box scores and gained `schema_version`, a per-game `date`, and `rng_seed` (the old per-game `seed`). Teams gained `bracket` and `losses`. No score, line, batting line, pitching line, or series result was changed. `scripts/validate_results.py` checks that reconciliation.

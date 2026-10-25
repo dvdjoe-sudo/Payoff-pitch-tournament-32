@@ -1004,6 +1004,15 @@ def write_all() -> None:
         for path in folder.iterdir():
             if path.stem not in keep_ids:
                 path.unlink()
+    import importlib.util
+    for name in ("odds", "sharekit"):
+        spec = importlib.util.spec_from_file_location(name + "_build", Path(__file__).with_name(name + ".py"))
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        if name == "odds":
+            (ROOT / "feed" / "odds.json").write_text(module.text(data), encoding="utf-8")
+        else:
+            module.write_share(data)
     print(f"wrote leaders, team stats, {len(data['games'])} box scores, awards, records, feeds, graphics")
 
 

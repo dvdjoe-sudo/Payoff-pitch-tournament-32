@@ -1,0 +1,174 @@
+{
+ "id": "2026-10-19",
+ "title": "Week of October 19, 2026",
+ "start": "2026-10-19",
+ "end": "2026-10-25",
+ "games": [
+  {
+   "id": "R1-02-G1",
+   "date": "2026-10-24",
+   "away": "WSH",
+   "home": "SF",
+   "away_name": "Washington Nationals",
+   "home_name": "San Francisco Giants",
+   "away_runs": 2,
+   "home_runs": 4,
+   "winner": "SF",
+   "recap": "The San Francisco Giants beat the Washington Nationals 4-2. The go-ahead run scored in the 7th inning. Will Clark led the San Francisco Giants offense with 2 hits and 0 RBI in 4 at-bats. Christy Mathewson earned the win, allowing 2 earned runs in 8.0 innings."
+  },
+  {
+   "id": "R1-02-G2",
+   "date": "2026-10-24",
+   "away": "WSH",
+   "home": "SF",
+   "away_name": "Washington Nationals",
+   "home_name": "San Francisco Giants",
+   "away_runs": 1,
+   "home_runs": 3,
+   "winner": "SF",
+   "recap": "The San Francisco Giants beat the Washington Nationals 3-1. The go-ahead run scored in the 6th inning. Willie Mays led the San Francisco Giants offense with 3 hits and 1 RBI in 4 at-bats. Carl Hubbell earned the win, allowing 1 earned run in 8.0 innings."
+  },
+  {
+   "id": "R1-02-G3",
+   "date": "2026-10-24",
+   "away": "SF",
+   "home": "WSH",
+   "away_name": "San Francisco Giants",
+   "home_name": "Washington Nationals",
+   "away_runs": 3,
+   "home_runs": 5,
+   "winner": "WSH",
+   "recap": "The Washington Nationals beat the San Francisco Giants 5-3. The go-ahead run scored in the 8th inning. Denard Span led the Washington Nationals offense with 3 hits and 0 RBI in 4 at-bats. Jordan Zimmermann earned the win, allowing 3 earned runs in 8.0 innings."
+  },
+  {
+   "id": "R1-02-G4",
+   "date": "2026-10-24",
+   "away": "SF",
+   "home": "WSH",
+   "away_name": "San Francisco Giants",
+   "home_name": "Washington Nationals",
+   "away_runs": 4,
+   "home_runs": 3,
+   "winner": "SF",
+   "recap": "The San Francisco Giants beat the Washington Nationals 4-3. The go-ahead run scored in the 8th inning. Mel Ott led the San Francisco Giants offense with 4 hits and 1 RBI in 4 at-bats. Gaylord Perry earned the win, allowing 3 earned runs in 8.0 innings."
+  },
+  {
+   "id": "R1-02-G5",
+   "date": "2026-10-24",
+   "away": "WSH",
+   "home": "SF",
+   "away_name": "Washington Nationals",
+   "home_name": "San Francisco Giants",
+   "away_runs": 0,
+   "home_runs": 4,
+   "winner": "SF",
+   "recap": "The San Francisco Giants beat the Washington Nationals 4-0. The go-ahead run scored in the 2nd inning. Willie McCovey led the San Francisco Giants offense with 2 hits and 1 RBI in 4 at-bats. Tim Lincecum earned the win, allowing 0 earned runs in 9.0 innings."
+  },
+  {
+   "id": "R1-03-G1",
+   "date": "2026-10-24",
+   "away": "TB",
+   "home": "BOS",
+   "away_name": "Tampa Bay Rays",
+   "home_name": "Boston Red Sox",
+   "away_runs": 0,
+   "home_runs": 6,
+   "winner": "BOS",
+   "recap": "The Boston Red Sox beat the Tampa Bay Rays 6-0. The go-ahead run scored in the 1st inning. Jimmie Foxx led the Boston Red Sox offense with 2 hits and 3 RBI in 4 at-bats. Pedro Martinez earned the win, allowing 0 earned runs in 9.0 innings."
+  },
+  {
+   "id": "R1-03-G2",
+   "date": "2026-10-24",
+   "away": "TB",
+   "home": "BOS",
+   "away_name": "Tampa Bay Rays",
+   "home_name": "Boston Red Sox",
+   "away_runs": 1,
+   "home_runs": 3,
+   "winner": "BOS",
+   "recap": "The Boston Red Sox beat the Tampa Bay Rays 3-1. The go-ahead run scored in the 6th inning. David Ortiz led the Boston Red Sox offense with 2 hits and 0 RBI in 4 at-bats. Roger Clemens earned the win, allowing 1 earned run in 7.1 innings."
+  }
+ ],
+ "undated": [
+  "R1-01-G1",
+  "R1-01-G2",
+  "R1-01-G3",
+  "R1-01-G4"
+ ],
+ "milestones": {
+  "nohitters": [
+   {
+    "game": "R1-03-G1",
+    "name": "Pedro Martinez",
+    "team": "BOS",
+    "ip": "9.0",
+    "k": 11,
+    "bb": 2
+   }
+  ],
+  "high_k": [
+   {
+    "game": "R1-02-G5",
+    "name": "Tim Lincecum",
+    "team": "SF",
+    "k": 16,
+    "ip": "9.0"
+   },
+   {
+    "game": "R1-02-G1",
+    "name": "Christy Mathewson",
+    "team": "SF",
+    "k": 14,
+    "ip": "8.0"
+   },
+   {
+    "game": "R1-03-G2",
+    "name": "Roger Clemens",
+    "team": "BOS",
+    "k": 14,
+    "ip": "7.1"
+   },
+   {
+    "game": "R1-01-G3",
+    "name": "Lefty Gomez",
+    "team": "NYY",
+    "k": 13,
+    "ip": "9.0"
+   },
+   {
+    "game": "R1-03-G1",
+    "name": "Pedro Martinez",
+    "team": "BOS",
+    "k": 11,
+    "ip": "9.0"
+   },
+   {
+    "game": "R1-01-G4",
+    "name": "Ron Guidry",
+    "team": "NYY",
+    "k": 10,
+    "ip": "8.0"
+   }
+  ],
+  "big_games": [
+   {
+    "game": "R1-01-G2",
+    "team": "NYY",
+    "runs": 11,
+    "opponent": "MIA"
+   },
+   {
+    "game": "R1-01-G3",
+    "team": "NYY",
+    "runs": 22,
+    "opponent": "MIA"
+   },
+   {
+    "game": "R1-01-G4",
+    "team": "NYY",
+    "runs": 17,
+    "opponent": "MIA"
+   }
+  ]
+ }
+}

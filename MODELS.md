@@ -34,6 +34,12 @@ Taken only from recorded lines:
 - High-strikeout game: a pitching line with at least 10 strikeouts.
 - Big scoring game: a club score of at least 10 runs.
 
+## Monte Carlo series and title odds
+
+`feed/odds.json` is a second display model, rebuilt by `scripts/build_leaders.py`. The bracket and the series pages use it when the file is present. The 0.55 higher-seed model above stays in the page for a fallback and is still the closed form in [MODELS.md](MODELS.md).
+
+A club's chance to win one game against another is 1 / (1 + exp(−(index A − index B) / 80)). There is no home-field edge. Each series is played out to 4 wins from the games already on the book. The bracket then reseeds the way [BRACKET.md](BRACKET.md) describes, including a fresh F-02 when the one-loss finalist wins F-01. Four thousand draws use a fixed seed, so the file does not change between rebuilds. A finished series is recorded as 1 for the winner and 0 for the loser, not resimulated. A shown 0.0 means that side won none of the 4,000 draws. It is not a mathematical zero. Joe can change the scale in `scripts/odds.py` if the gaps should produce more upsets. The simulation does not edit a score or a seed.
+
 ## Share graphics
 
 `graphics/games/` and `graphics/series/` are drawn from the final score and the series wins. They are for sharing. They are not a second box score.

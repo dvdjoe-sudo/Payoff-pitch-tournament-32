@@ -1,0 +1,21 @@
+# series R1-04
+# game 1
+# date 2026-10-26
+# away ARI
+# home DET
+# away_name Arizona Diamondbacks
+# home_name Detroit Tigers
+# rng_seed 1
+# line_ARI 0,0,0,1,0,0,0,0,0
+# line_DET 1,0,0,0,2,0,0,0
+# winner_name Hal Newhouser
+# loser_name Randy Johnson
+# recap Fictional importer sample. Do not merge this into the archive.
+Player,Team,Role,AB,R,H,HR,RBI,BB,SO,IP,RA,ER,H_allowed,BB_allowed,SO_allowed
+Luis Gonzalez,ARI,B,4,1,1,1,1,0,1,,,,,,
+Randy Johnson,ARI,B,2,0,0,0,0,0,1,,,,,,
+Ty Cobb,DET,B,3,1,2,0,0,1,0,,,,,,
+Hank Greenberg,DET,B,4,1,1,1,2,0,1,,,,,,
+Hal Newhouser,DET,B,3,1,1,0,1,0,0,,,,,,
+Randy Johnson,ARI,P,,,,,,,,8.0,3,3,5,1,8
+Hal Newhouser,DET,P,,,,,,,,9.0,1,1,4,1,7

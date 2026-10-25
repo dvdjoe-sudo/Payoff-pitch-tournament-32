@@ -6,7 +6,19 @@
   <title>Payoff Pitch Tournament 32</title>
   <meta name="description" content="Double-elimination bracket, box scores, awards, and standings for the Payoff Pitch 32-team tournament.">
   <meta name="theme-color" content="#12263f">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Payoff Pitch Tournament 32">
+  <meta property="og:description" content="Double-elimination bracket, box scores, awards, and standings for the Payoff Pitch 32-team tournament.">
+  <meta property="og:image" content="https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/graphics/og/site.png">
+  <meta property="og:url" content="https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Payoff Pitch Tournament 32">
+  <meta name="twitter:description" content="Double-elimination bracket, box scores, awards, and standings for the Payoff Pitch 32-team tournament.">
+  <meta name="twitter:image" content="https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/graphics/og/site.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2312263f'/%3E%3Crect y='54' width='64' height='6' fill='%23c6a15a'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='%23f6f1e6'%3EPP%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="alternate" type="application/rss+xml" title="Payoff Pitch games" href="feed/games.xml">
   <script>
@@ -21,37 +33,45 @@
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="header-bar">
-      <div>
+      <div class="brand">
         <p class="eyebrow">All-time franchise field</p>
-        <h1>Payoff Pitch Tournament 32</h1>
-        <p class="lede" id="lede">Loading the bracket…</p>
+        <h1><a href="#/bracket">Payoff Pitch Tournament 32</a></h1>
       </div>
-      <div class="header-tools">
-        <div id="next-up" class="next-up"></div>
+      <div class="header-actions">
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button>
         <button type="button" id="theme-toggle" class="theme-toggle">Dark mode</button>
       </div>
     </div>
-    <form id="search-form" class="search-form" role="search">
-      <label for="search">Search players</label>
-      <input id="search" name="q" type="search" placeholder="Name, club, or id" autocomplete="off">
-      <button type="submit">Search</button>
-    </form>
-    <p class="header-links">
-      <a href="https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs">Walkthrough video</a>
-      <a href="README.md">About this tournament</a>
-      <a href="MODELS.md">Formulas</a>
-      <a href="feed/tournament.json">JSON feed</a>
-      <a href="feed/games.xml">RSS</a>
-    </p>
+    <div id="next-up" class="next-up"></div>
+    <div id="site-menu" class="site-menu">
+      <p class="lede" id="lede">Loading the bracket…</p>
+      <form id="search-form" class="search-form" role="search">
+        <label for="search">Search players</label>
+        <input id="search" name="q" type="search" placeholder="Name, club, or id" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+      <p class="header-links">
+        <a href="https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs">Walkthrough video</a>
+        <a href="README.md">About this tournament</a>
+        <a href="MODELS.md">Formulas</a>
+        <a href="feed/tournament.json">JSON feed</a>
+        <a href="feed/games.xml">RSS</a>
+      </p>
+      <nav class="views" aria-label="Sections">
+        <a href="#/bracket" data-view="bracket">Bracket</a>
+        <a href="#/standings" data-view="standings">Standings</a>
+        <a href="#/awards" data-view="awards">Awards</a>
+        <a href="#/records" data-view="records">Records</a>
+        <a href="#/previews" data-view="previews">Previews</a>
+        <a href="#/videos" data-view="videos">Videos</a>
+        <a href="#/recap" data-view="recap">Recap</a>
+        <a href="#/add" data-view="add">Add game</a>
+      </nav>
+    </div>
   </header>
-  <nav class="views" aria-label="Sections">
-    <a href="#/bracket" data-view="bracket">Bracket</a>
-    <a href="#/standings" data-view="standings">Standings</a>
-    <a href="#/awards" data-view="awards">Awards</a>
-    <a href="#/records" data-view="records">Records</a>
-  </nav>
+  <p id="milestone-banner" class="milestone-banner" hidden></p>
   <main id="content">
     <p id="load-error" class="load-error" hidden></p>
     <div id="view"></div>
@@ -60,5 +80,10 @@
     <p id="footer-note"></p>
   </footer>
   <script src="js/bracket.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(function () { /* offline install can wait until the next visit */ });
+    }
+  </script>
 </body>
 </html>
