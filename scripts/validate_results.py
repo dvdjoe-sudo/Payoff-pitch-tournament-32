@@ -19,11 +19,10 @@ RESULTS = ROOT / "tournament_results.json"
 GAMES = ROOT / "games"
 
 # Fingerprint of scores, lines, batting, pitching, decisions, rolls, and
-# manager logs, taken from tournament_results.json before rolls were split
-# out and before the per-game RNG field was renamed.
-# Locked from the 11-game inline archive on main (082f623) before the split.
-FINGERPRINT = "1184a16a5c49cdd0c52dbefa3c01d5d47c006b514c13db6e524ad9d37197594d"
-SERIES_HASH = "379f4e5b6ddff90bcd5a54f5b8eec876237cf897f91d64a7007a8509559769d7"
+# manager logs. Reset when R1-03 Games 3-7 were added from Joe's box scores.
+# Games 1-2 of that series were checked against those box scores and left as stored.
+FINGERPRINT = "7ab032794ae6f1b3c47184df4bf99ab8827c76ea50d9734bc8b10c118da41cf4"
+SERIES_HASH = "ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
 
 BATTING_FIELDS = (
@@ -40,7 +39,7 @@ TEAM_FIELDS = (
     "series_losses", "eliminated", "champion",
 )
 
-EXPECTED_TOTALS = {"H": 178, "HR": 40, "RBI": 115, "K": 205, "ER": 114, "OUTS": 570}
+EXPECTED_TOTALS = {"H": 246, "HR": 49, "RBI": 148, "K": 301, "ER": 148, "OUTS": 832}
 ROLL_COUNTS = {"R1-01-G1": 72, "R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135}
 DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-24"}
 THREE_INNINGS = (
@@ -132,7 +131,7 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
     check.expect(data.get("version") == 1, "archive version left at 1")
     check.expect(len(data["teams"]) == 32, "32 teams")
     check.expect(len(data["series"]) == 63, "63 series slots")
-    check.expect(len(data["games"]) == 11, "11 games")
+    check.expect(len(data["games"]) == 16, "16 games")
     check.expect(digest(data["series"]) == SERIES_HASH, "series objects unchanged")
     check.expect(digest(data["format"]) == FORMAT_HASH, "format object unchanged")
     check.expect(fingerprint(data, details) == FINGERPRINT, "pre-split stat fingerprint")
@@ -146,7 +145,11 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         detail = details[game["id"]]
         check.expect(detail["id"] == game["id"] and detail["series_id"] == game["series_id"], f"{game['id']} detail identity")
         check.expect(detail["game_in_series"] == game["game_in_series"], f"{game['id']} detail game number")
-        if game["series_id"] in DATED:
+        if game["id"] in {"R1-03-G1", "R1-03-G2"}:
+            check.expect(game.get("date") == "2026-10-24", f"{game['id']} date")
+        elif game["series_id"] == "R1-03":
+            check.expect(game.get("date") is None, f"{game['id']} has no per-game date in the box scores")
+        elif game["series_id"] in DATED:
             check.expect(game.get("date") == DATED[game["series_id"]], f"{game['id']} date")
         else:
             check.expect(game.get("date") is None, f"{game['id']} date should be null")
@@ -236,8 +239,8 @@ def documents(check: Check) -> None:
     check.expect("Giants 4-1" in bracket and "R1-02" in bracket, "bracket records R1-02")
     check.expect("only R1-01" not in bracket and "Only R1-01" not in bracket, "bracket no longer says only R1-01")
     check.expect("Yankees 4-0" in readme and "Giants 4-1" in readme, "readme results")
-    check.expect("2-0" in readme and "Pedro" in readme and "In progress" in readme, "readme records R1-03")
-    check.expect("2-0" in bracket and "In progress" in bracket, "bracket records R1-03")
+    check.expect("4-3" in readme and "Pedro" in readme and "Complete" in readme, "readme records R1-03")
+    check.expect("4-3" in bracket and "Complete" in bracket, "bracket records R1-03")
     check.expect("MODELS.md" in readme and "feed/games.xml" in readme, "readme links the models and the feed")
     check.expect("in-progress" in (ROOT / "SCHEMA.md").read_text(encoding="utf-8"), "schema names in-progress")
     check.expect(VIDEO in readme, "readme video")

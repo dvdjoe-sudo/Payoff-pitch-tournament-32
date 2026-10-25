@@ -193,28 +193,31 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Tris Speaker (`speaktr01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 2: Dustin Pedroia (`pedrodu01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 3: Ted Williams (`willite01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 4: David Ortiz (`ortizda01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 5: Jimmie Foxx (`foxxji01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 6: Dwight Evans (`evansdw01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 7: Wade Boggs (`boggswa01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 8: Nomar Garciaparra (`garcino01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 9: Carlton Fisk (`fiskca01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 1: Tris Speaker (`speaktr01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 2: Dustin Pedroia (`pedrodu01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 3: Ted Williams (`willite01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 4: David Ortiz (`ortizda01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 5: Jimmie Foxx (`foxxji01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 6: Dwight Evans (`evansdw01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 7: Wade Boggs (`boggswa01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 8: Nomar Garciaparra (`garcino01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-03-G1 (same starter in 6 later games)
 
 ### Starts, in the order the games were played
 
 - Pedro Martinez (`martipe02`) started R1-03-G1
 - Roger Clemens (`clemero02`) started R1-03-G2
+- Cy Young (`youngcy01`) started R1-03-G3
+- Smoky Joe Wood (`woodjo02`) started R1-03-G4
+- Lefty Grove (`grovele01`) started R1-03-G5
+- Pedro Martinez (`martipe02`) started R1-03-G6
+- Roger Clemens (`clemero02`) started R1-03-G7
 
 ### Relievers who have appeared
 
 - Jonathan Papelbon (`papeljo01`), first seen in R1-03-G2
-
-### Rotation carry recorded on the series
-
-- R1-03: next start Cy Young
+- Dick Radatz (`radatdi01`), first seen in R1-03-G4
+- Bob Stanley (`stanlbo01`), first seen in R1-03-G5
 
 ## 4. Detroit Tigers (DET)
 
@@ -378,7 +381,7 @@ TODO for Joe: no roster in `tournament_results.json`. Lineup, bench, rotation, a
 
 ## 30. Tampa Bay Rays (TB)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 387.0.
+Bracket: losers. Series losses: 1. Full 26 Index: 387.0.
 
 ### Players in the results file
 
@@ -386,32 +389,39 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Carl Crawford (`crawfca02`) in R1-03-G1 (same starter in 1 later game)
-- Slot 3: Evan Longoria (`longoev01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 4: Carlos Pena (`penaca01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 5: Ben Zobrist (`zobribe01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 6: Brandon Lowe (`lowebr01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 7: Jason Bartlett (`bartlja01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 8: Kevin Kiermaier (`kiermke01`) in R1-03-G1 (same starter in 1 later game)
-- Slot 9: Toby Hall (`hallto02`) in R1-03-G1 (same starter in 1 later game)
+- Slot 1: Carl Crawford (`crawfca02`) in R1-03-G1 (same starter in 5 later games)
+- Slot 2: Yandy Diaz (`diazya01`) in R1-03-G5
+- Slot 3: Evan Longoria (`longoev01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 4: Carlos Pena (`penaca01`) in R1-03-G1 (same starter in 5 later games)
+- Slot 5: Ben Zobrist (`zobribe01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 6: Brandon Lowe (`lowebr01`) in R1-03-G1 (same starter in 5 later games)
+- Slot 7: Jason Bartlett (`bartlja01`) in R1-03-G1 (same starter in 6 later games)
+- Slot 8: Kevin Kiermaier (`kiermke01`) in R1-03-G1 (same starter in 5 later games)
+- Slot 9: Toby Hall (`hallto02`) in R1-03-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
 
 - Joey Wendle (`wendljo01`), slot 2
+- Mike Zunino (`zuninmi01`), slot 1
+- B.J. Upton (`uptonbj01`), slot 4
+- Randy Arozarena (`arozara01`), slot 6
+- Junior Caminero (`caminju01`), slot 8
 
 ### Starts, in the order the games were played
 
 - David Price (`priceda01`) started R1-03-G1
 - James Shields (`shielja02`) started R1-03-G2
+- Blake Snell (`snellbl01`) started R1-03-G3
+- Shane McClanahan (`mcclasha01`) started R1-03-G4
+- Scott Kazmir (`kazmisc01`) started R1-03-G5
+- David Price (`priceda01`) started R1-03-G6
+- James Shields (`shielja02`) started R1-03-G7
 
 ### Relievers who have appeared
 
 - J.P. Howell (`howeljp01`), first seen in R1-03-G1
 - Jake McGee (`mcgeeja01`), first seen in R1-03-G2
-
-### Rotation carry recorded on the series
-
-- R1-03: next start Blake Snell
+- Pete Fairbanks (`fairbpe01`), first seen in R1-03-G4
 
 ## 31. Washington Nationals (WSH)
 

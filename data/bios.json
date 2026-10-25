@@ -1,0 +1,698 @@
+{
+ "BOS|boggswa01": {
+  "bio": "Wade Boggs was a Red Sox third baseman and a Hall of Famer.",
+  "career": "3,010 hits",
+  "name": "Wade Boggs",
+  "team": "BOS"
+ },
+ "BOS|clemero02": {
+  "bio": "Roger Clemens pitched for the Red Sox, won seven Cy Young Awards, and won 354 games.",
+  "career": "354 wins, 4,672 strikeouts",
+  "name": "Roger Clemens",
+  "team": "BOS"
+ },
+ "BOS|evansdw01": {
+  "bio": "Dwight Evans was a Red Sox right fielder and an eight-time Gold Glove winner.",
+  "career": "Red Sox right fielder",
+  "name": "Dwight Evans",
+  "team": "BOS"
+ },
+ "BOS|fiskca01": {
+  "bio": "Carlton Fisk was a Red Sox catcher and a Hall of Famer.",
+  "career": "376 home runs",
+  "name": "Carlton Fisk",
+  "team": "BOS"
+ },
+ "BOS|foxxji01": {
+  "bio": "Jimmie Foxx was a Red Sox first baseman, a three-time MVP, and a Hall of Famer.",
+  "career": "534 home runs",
+  "name": "Jimmie Foxx",
+  "team": "BOS"
+ },
+ "BOS|garcino01": {
+  "bio": "Nomar Garciaparra was a Red Sox shortstop and a two-time batting champion.",
+  "career": "Red Sox shortstop",
+  "name": "Nomar Garciaparra",
+  "team": "BOS"
+ },
+ "BOS|grovele01": {
+  "bio": "Lefty Grove was a Red Sox pitcher and a Hall of Famer.",
+  "career": "300 wins",
+  "name": "Lefty Grove",
+  "team": "BOS"
+ },
+ "BOS|martipe02": {
+  "bio": "Pedro Martinez was a Red Sox starter, a three-time Cy Young winner, and a Hall of Famer.",
+  "career": "219 wins, three Cy Young Awards",
+  "name": "Pedro Martinez",
+  "team": "BOS"
+ },
+ "BOS|ortizda01": {
+  "bio": "David Ortiz was the Red Sox' designated hitter, a 10-time All-Star, and a three-time World Series champion.",
+  "career": "541 home runs",
+  "name": "David Ortiz",
+  "team": "BOS"
+ },
+ "BOS|papeljo01": {
+  "bio": "Jonathan Papelbon was the Red Sox' closer and a 2007 World Series champion.",
+  "career": "Red Sox closer",
+  "name": "Jonathan Papelbon",
+  "team": "BOS"
+ },
+ "BOS|pedrodu01": {
+  "bio": "Dustin Pedroia was the Red Sox' second baseman, the 2007 Rookie of the Year and 2008 MVP.",
+  "career": "2008 AL MVP",
+  "name": "Dustin Pedroia",
+  "team": "BOS"
+ },
+ "BOS|radatdi01": {
+  "bio": "Dick Radatz was a Red Sox reliever.",
+  "career": "Red Sox reliever",
+  "name": "Dick Radatz",
+  "team": "BOS"
+ },
+ "BOS|speaktr01": {
+  "bio": "Tris Speaker was a Red Sox center fielder and a Hall of Famer.",
+  "career": ".345 career average, 792 doubles",
+  "name": "Tris Speaker",
+  "team": "BOS"
+ },
+ "BOS|stanlbo01": {
+  "bio": "Bob Stanley was a Red Sox reliever.",
+  "career": "Red Sox reliever",
+  "name": "Bob Stanley",
+  "team": "BOS"
+ },
+ "BOS|willite01": {
+  "bio": "Ted Williams was the Red Sox' left fielder and a Hall of Famer. He hit .406 in 1941.",
+  "career": "521 home runs, .344 career average",
+  "name": "Ted Williams",
+  "team": "BOS"
+ },
+ "BOS|woodjo02": {
+  "bio": "Smoky Joe Wood was a Red Sox pitcher.",
+  "career": "Red Sox pitcher",
+  "name": "Smoky Joe Wood",
+  "team": "BOS"
+ },
+ "BOS|youngcy01": {
+  "bio": "Cy Young was a Red Sox pitcher. The pitching award is named for him.",
+  "career": "511 wins",
+  "name": "Cy Young",
+  "team": "BOS"
+ },
+ "MIA|alcansa01": {
+  "bio": "Sandy Alcantara was a Marlins starter and the 2022 National League Cy Young winner.",
+  "career": "2022 NL Cy Young",
+  "name": "Sandy Alcantara",
+  "team": "MIA"
+ },
+ "MIA|alfonan01": {
+  "bio": "Antonio Alfonseca was a Marlins reliever and the 2000 National League saves leader.",
+  "career": "45 saves in 2000",
+  "name": "Antonio Alfonseca",
+  "team": "MIA"
+ },
+ "MIA|beckejo02": {
+  "bio": "Josh Beckett was a Marlins starter, the 2003 World Series MVP.",
+  "career": "2003 World Series MVP",
+  "name": "Josh Beckett",
+  "team": "MIA"
+ },
+ "MIA|bendean01": {
+  "bio": "Anthony Bender has pitched in relief for the Marlins.",
+  "career": "Marlins reliever",
+  "name": "Anthony Bender",
+  "team": "MIA"
+ },
+ "MIA|burneaj01": {
+  "bio": "A.J. Burnett was a Marlins starter and a 2003 World Series champion.",
+  "career": "2003 World Series",
+  "name": "A.J. Burnett",
+  "team": "MIA"
+ },
+ "MIA|cabremi01": {
+  "bio": "Miguel Cabrera played for the Marlins and won the 2003 World Series. He later won a Triple Crown with Detroit.",
+  "career": "3,174 hits, 511 home runs",
+  "name": "Miguel Cabrera",
+  "team": "MIA"
+ },
+ "MIA|castilu01": {
+  "bio": "Luis Castillo was the Marlins' second baseman and a three-time All-Star in Florida.",
+  "career": "Marlins second baseman",
+  "name": "Luis Castillo",
+  "team": "MIA"
+ },
+ "MIA|cishest01": {
+  "bio": "Steve Cishek was a Marlins closer.",
+  "career": "Marlins reliever",
+  "name": "Steve Cishek",
+  "team": "MIA"
+ },
+ "MIA|coninje01": {
+  "bio": "Jeff Conine was a Marlins first baseman on the 1997 and 2003 World Series clubs.",
+  "career": "Two World Series with Florida",
+  "name": "Jeff Conine",
+  "team": "MIA"
+ },
+ "MIA|floydcl01": {
+  "bio": "Cliff Floyd was a Marlins outfielder and a 1997 World Series champion.",
+  "career": "1997 World Series",
+  "name": "Cliff Floyd",
+  "team": "MIA"
+ },
+ "MIA|johnsch04": {
+  "bio": "Charles Johnson was the Marlins' catcher and a 1997 World Series champion.",
+  "career": "1997 World Series",
+  "name": "Charles Johnson",
+  "team": "MIA"
+ },
+ "MIA|johnsjo09": {
+  "bio": "Josh Johnson was a Marlins starter and a 2010 National League ERA champion.",
+  "career": "2010 NL ERA title",
+  "name": "Josh Johnson",
+  "team": "MIA"
+ },
+ "MIA|nenro01": {
+  "bio": "Robb Nen was a closer for the Marlins and later the Giants, and a 1997 World Series champion.",
+  "career": "314 career saves",
+  "name": "Robb Nen",
+  "team": "MIA"
+ },
+ "MIA|ramirha01": {
+  "bio": "Hanley Ramirez was the Marlins' shortstop, the 2006 National League Rookie of the Year and 2009 batting champion.",
+  "career": "2009 NL batting title",
+  "name": "Hanley Ramirez",
+  "team": "MIA"
+ },
+ "MIA|ramosaj01": {
+  "bio": "A.J. Ramos was a Marlins reliever and a 2016 All-Star.",
+  "career": "Marlins reliever",
+  "name": "A.J. Ramos",
+  "team": "MIA"
+ },
+ "MIA|realmjt01": {
+  "bio": "J.T. Realmuto was the Marlins' catcher before he was traded to Philadelphia.",
+  "career": "Marlins catcher",
+  "name": "J.T. Realmuto",
+  "team": "MIA"
+ },
+ "MIA|scottta01": {
+  "bio": "Tanner Scott has pitched in relief for the Marlins.",
+  "career": "Marlins reliever",
+  "name": "Tanner Scott",
+  "team": "MIA"
+ },
+ "MIA|sheffga01": {
+  "bio": "Gary Sheffield was a Marlins outfielder and a 1997 World Series champion.",
+  "career": "509 home runs",
+  "name": "Gary Sheffield",
+  "team": "MIA"
+ },
+ "MIA|stantmi03": {
+  "bio": "Giancarlo Stanton was the Marlins' right fielder, the 2017 National League MVP.",
+  "career": "59 home runs in 2017",
+  "name": "Giancarlo Stanton",
+  "team": "MIA"
+ },
+ "MIA|ugglada01": {
+  "bio": "Dan Uggla was the Marlins' second baseman and a three-time All-Star.",
+  "career": "Marlins second baseman",
+  "name": "Dan Uggla",
+  "team": "MIA"
+ },
+ "MIA|willido03": {
+  "bio": "Dontrelle Willis was a Marlins starter, the 2003 National League Rookie of the Year, and a World Series champion.",
+  "career": "2003 NL Rookie of the Year",
+  "name": "Dontrelle Willis",
+  "team": "MIA"
+ },
+ "MIA|yelicch01": {
+  "bio": "Christian Yelich was the Marlins' center fielder and the 2018 National League MVP.",
+  "career": "2018 NL MVP",
+  "name": "Christian Yelich",
+  "team": "MIA"
+ },
+ "NYY|berrayo01": {
+  "bio": "Yogi Berra was the Yankees' catcher, a three-time MVP, and a Hall of Famer.",
+  "career": "10 World Series as a player",
+  "name": "Yogi Berra",
+  "team": "NYY"
+ },
+ "NYY|dimagjo01": {
+  "bio": "Joe DiMaggio was the Yankees' center fielder and a Hall of Famer, owner of the 56-game hitting streak.",
+  "career": "361 home runs, 56-game hitting streak",
+  "name": "Joe DiMaggio",
+  "team": "NYY"
+ },
+ "NYY|fordwh01": {
+  "bio": "Whitey Ford was the Yankees' left-handed ace and a Hall of Famer.",
+  "career": "236 wins, 1961 Cy Young",
+  "name": "Whitey Ford",
+  "team": "NYY"
+ },
+ "NYY|gehrilo01": {
+  "bio": "Lou Gehrig was the Yankees' first baseman, the Iron Horse, and a Hall of Famer.",
+  "career": "493 home runs, 2,130 consecutive games",
+  "name": "Lou Gehrig",
+  "team": "NYY"
+ },
+ "NYY|gomezle01": {
+  "bio": "Lefty Gomez was a Yankees starter, a two-time Triple Crown pitcher, and a Hall of Famer.",
+  "career": "189 wins",
+  "name": "Lefty Gomez",
+  "team": "NYY"
+ },
+ "NYY|gossari01": {
+  "bio": "Goose Gossage was a Yankees relief ace and a Hall of Famer.",
+  "career": "310 career saves",
+  "name": "Goose Gossage",
+  "team": "NYY"
+ },
+ "NYY|guidrro01": {
+  "bio": "Ron Guidry was the Yankees' left-handed ace. He went 25-3 and won the Cy Young Award in 1978.",
+  "career": "1978 Cy Young, 25-3",
+  "name": "Ron Guidry",
+  "team": "NYY"
+ },
+ "NYY|jeterde01": {
+  "bio": "Derek Jeter was the Yankees' shortstop and captain, a Hall of Famer elected in 2020.",
+  "career": "3,465 hits, five World Series",
+  "name": "Derek Jeter",
+  "team": "NYY"
+ },
+ "NYY|judgeaa01": {
+  "bio": "Aaron Judge is the Yankees' right fielder. He was the 2017 American League Rookie of the Year and MVP, and he hit 62 home runs in 2022.",
+  "career": "2017 AL MVP, 62 HR in 2022",
+  "name": "Aaron Judge",
+  "team": "NYY"
+ },
+ "NYY|mantlmi01": {
+  "bio": "Mickey Mantle was the Yankees' center fielder, a three-time MVP, and a Hall of Famer.",
+  "career": "536 home runs",
+  "name": "Mickey Mantle",
+  "team": "NYY"
+ },
+ "NYY|munsoth01": {
+  "bio": "Thurman Munson was the Yankees' catcher and captain, the 1970 Rookie of the Year and 1976 MVP.",
+  "career": "1976 AL MVP",
+  "name": "Thurman Munson",
+  "team": "NYY"
+ },
+ "NYY|randowi01": {
+  "bio": "Willie Randolph was the Yankees' second baseman for 13 seasons and a longtime leadoff man.",
+  "career": "Yankees second baseman, 1976-1988",
+  "name": "Willie Randolph",
+  "team": "NYY"
+ },
+ "NYY|righeda01": {
+  "bio": "Dave Righetti pitched for the Yankees as a starter and later as the closer. He threw a no-hitter on July 4, 1983.",
+  "career": "1981 AL Rookie of the Year",
+  "name": "Dave Righetti",
+  "team": "NYY"
+ },
+ "NYY|riverma01": {
+  "bio": "Mariano Rivera was the Yankees' closer and a unanimous Hall of Famer.",
+  "career": "652 saves",
+  "name": "Mariano Rivera",
+  "team": "NYY"
+ },
+ "NYY|roberda08": {
+  "bio": "David Robertson was a Yankees relief pitcher and a 2009 World Series champion.",
+  "career": "Yankees reliever",
+  "name": "David Robertson",
+  "team": "NYY"
+ },
+ "NYY|rodrial01": {
+  "bio": "Alex Rodriguez was a Yankees infielder and a three-time MVP.",
+  "career": "696 home runs",
+  "name": "Alex Rodriguez",
+  "team": "NYY"
+ },
+ "NYY|ruffire01": {
+  "bio": "Red Ruffing was a Yankees right-hander and a Hall of Famer.",
+  "career": "273 career wins",
+  "name": "Red Ruffing",
+  "team": "NYY"
+ },
+ "NYY|ruthba01": {
+  "bio": "Babe Ruth was a Yankees outfielder and a Hall of Famer.",
+  "career": "714 home runs, .342 career average",
+  "name": "Babe Ruth",
+  "team": "NYY"
+ },
+ "NYY|stantmi02": {
+  "bio": "Mike Stanton was a left-handed reliever for the Yankees, not the Marlins' outfielder of the same surname.",
+  "career": "Left-handed reliever",
+  "name": "Mike Stanton",
+  "team": "NYY"
+ },
+ "NYY|willibe02": {
+  "bio": "Bernie Williams was the Yankees' center fielder on four World Series clubs and the 1998 American League batting champion.",
+  "career": "1998 AL batting title",
+  "name": "Bernie Williams",
+  "team": "NYY"
+ },
+ "SF|bondsba01": {
+  "bio": "Barry Bonds was the Giants' left fielder, a seven-time MVP.",
+  "career": "762 home runs",
+  "name": "Barry Bonds",
+  "team": "SF"
+ },
+ "SF|bondsbo01": {
+  "bio": "Bobby Bonds was a Giants outfielder and a three-time Gold Glove winner.",
+  "career": "Giants outfielder",
+  "name": "Bobby Bonds",
+  "team": "SF"
+ },
+ "SF|brenlbo01": {
+  "bio": "Bob Brenly was a Giants catcher and later a manager.",
+  "career": "Giants catcher",
+  "name": "Bob Brenly",
+  "team": "SF"
+ },
+ "SF|clarkwi02": {
+  "bio": "Will Clark was the Giants' first baseman and a six-time All-Star.",
+  "career": "Giants first baseman",
+  "name": "Will Clark",
+  "team": "SF"
+ },
+ "SF|fletcar01": {
+  "bio": "Art Fletcher was a New York Giants shortstop and later a coach.",
+  "career": "Giants shortstop",
+  "name": "Art Fletcher",
+  "team": "SF"
+ },
+ "SF|friscfr01": {
+  "bio": "Frankie Frisch was a Giants second baseman, the 1924 MVP, and a Hall of Famer.",
+  "career": "Hall of Fame second baseman",
+  "name": "Frankie Frisch",
+  "team": "SF"
+ },
+ "SF|hubbeca01": {
+  "bio": "Carl Hubbell was a Giants left-hander, a two-time MVP, and a Hall of Famer.",
+  "career": "253 wins",
+  "name": "Carl Hubbell",
+  "team": "SF"
+ },
+ "SF|kentje01": {
+  "bio": "Jeff Kent was the Giants' second baseman and the 2000 National League MVP.",
+  "career": "2000 NL MVP",
+  "name": "Jeff Kent",
+  "team": "SF"
+ },
+ "SF|linceti01": {
+  "bio": "Tim Lincecum was a Giants starter, a two-time Cy Young winner, and a three-time World Series champion.",
+  "career": "Cy Young in 2008 and 2009",
+  "name": "Tim Lincecum",
+  "team": "SF"
+ },
+ "SF|maricju01": {
+  "bio": "Juan Marichal was a Giants starter and a Hall of Famer.",
+  "career": "243 wins",
+  "name": "Juan Marichal",
+  "team": "SF"
+ },
+ "SF|mathech01": {
+  "bio": "Christy Mathewson was a New York Giants pitcher and a Hall of Famer.",
+  "career": "373 wins",
+  "name": "Christy Mathewson",
+  "team": "SF"
+ },
+ "SF|mayswi01": {
+  "bio": "Willie Mays was the Giants' center fielder and a Hall of Famer.",
+  "career": "660 home runs, 3,293 hits",
+  "name": "Willie Mays",
+  "team": "SF"
+ },
+ "SF|mccovwi01": {
+  "bio": "Willie McCovey was the Giants' first baseman, the 1969 MVP, and a Hall of Famer.",
+  "career": "521 home runs",
+  "name": "Willie McCovey",
+  "team": "SF"
+ },
+ "SF|nenro01": {
+  "bio": "Robb Nen closed for the Giants after his years with the Marlins. This line is the Giants' Nen, kept separate from the Marlins' line.",
+  "career": "Giants closer",
+  "name": "Robb Nen",
+  "team": "SF"
+ },
+ "SF|ottme01": {
+  "bio": "Mel Ott was a New York Giants outfielder and a Hall of Famer.",
+  "career": "511 home runs",
+  "name": "Mel Ott",
+  "team": "SF"
+ },
+ "SF|perryga01": {
+  "bio": "Gaylord Perry pitched for the Giants, won two Cy Young Awards, and is in the Hall of Fame.",
+  "career": "314 wins",
+  "name": "Gaylord Perry",
+  "team": "SF"
+ },
+ "SF|poseybu01": {
+  "bio": "Buster Posey was the Giants' catcher, the 2012 MVP, and a three-time World Series champion.",
+  "career": "2012 NL MVP",
+  "name": "Buster Posey",
+  "team": "SF"
+ },
+ "SF|romose01": {
+  "bio": "Sergio Romo was a Giants reliever and a 2012 World Series champion.",
+  "career": "Giants reliever",
+  "name": "Sergio Romo",
+  "team": "SF"
+ },
+ "SF|willima04": {
+  "bio": "Matt Williams was the Giants' third baseman and a 1994 home-run champion.",
+  "career": "1994 NL home-run title",
+  "name": "Matt Williams",
+  "team": "SF"
+ },
+ "TB|arozara01": {
+  "bio": "Randy Arozarena was a Rays outfielder.",
+  "career": "Rays outfielder",
+  "name": "Randy Arozarena",
+  "team": "TB"
+ },
+ "TB|bartlja01": {
+  "bio": "Jason Bartlett was a Rays shortstop and a 2009 All-Star.",
+  "career": "Rays shortstop",
+  "name": "Jason Bartlett",
+  "team": "TB"
+ },
+ "TB|caminju01": {
+  "bio": "Junior Caminero is a Rays infielder.",
+  "career": "Rays infielder",
+  "name": "Junior Caminero",
+  "team": "TB"
+ },
+ "TB|crawfca02": {
+  "bio": "Carl Crawford was a Rays left fielder, a stolen-base champion, and a 2010 All-Star.",
+  "career": "Rays outfielder",
+  "name": "Carl Crawford",
+  "team": "TB"
+ },
+ "TB|diazya01": {
+  "bio": "Yandy Diaz is a Rays infielder.",
+  "career": "Rays infielder",
+  "name": "Yandy Diaz",
+  "team": "TB"
+ },
+ "TB|fairbpe01": {
+  "bio": "Pete Fairbanks is a Rays reliever.",
+  "career": "Rays reliever",
+  "name": "Pete Fairbanks",
+  "team": "TB"
+ },
+ "TB|hallto02": {
+  "bio": "Toby Hall was a Rays catcher.",
+  "career": "Rays catcher",
+  "name": "Toby Hall",
+  "team": "TB"
+ },
+ "TB|howeljp01": {
+  "bio": "J.P. Howell was a Rays left-handed reliever.",
+  "career": "Rays reliever",
+  "name": "J.P. Howell",
+  "team": "TB"
+ },
+ "TB|kazmisc01": {
+  "bio": "Scott Kazmir was a Rays pitcher.",
+  "career": "Rays pitcher",
+  "name": "Scott Kazmir",
+  "team": "TB"
+ },
+ "TB|kiermke01": {
+  "bio": "Kevin Kiermaier was a Rays center fielder and a three-time Gold Glove winner.",
+  "career": "Rays center fielder",
+  "name": "Kevin Kiermaier",
+  "team": "TB"
+ },
+ "TB|longoev01": {
+  "bio": "Evan Longoria was the Rays' third baseman and the 2008 American League Rookie of the Year.",
+  "career": "2008 AL Rookie of the Year",
+  "name": "Evan Longoria",
+  "team": "TB"
+ },
+ "TB|lowebr01": {
+  "bio": "Brandon Lowe is a Rays infielder and a 2020 All-Star.",
+  "career": "Rays infielder",
+  "name": "Brandon Lowe",
+  "team": "TB"
+ },
+ "TB|mcclasha01": {
+  "bio": "Shane McClanahan is a Rays pitcher.",
+  "career": "Rays pitcher",
+  "name": "Shane McClanahan",
+  "team": "TB"
+ },
+ "TB|mcgeeja01": {
+  "bio": "Jake McGee was a Rays left-handed reliever.",
+  "career": "Rays reliever",
+  "name": "Jake McGee",
+  "team": "TB"
+ },
+ "TB|penaca01": {
+  "bio": "Carlos Pena was a Rays first baseman and a home-run champion.",
+  "career": "Rays first baseman",
+  "name": "Carlos Pena",
+  "team": "TB"
+ },
+ "TB|priceda01": {
+  "bio": "David Price was a Rays starter and the 2012 American League Cy Young winner.",
+  "career": "2012 AL Cy Young",
+  "name": "David Price",
+  "team": "TB"
+ },
+ "TB|shielja02": {
+  "bio": "James Shields was a Rays starter and a 2011 All-Star.",
+  "career": "Rays starter",
+  "name": "James Shields",
+  "team": "TB"
+ },
+ "TB|snellbl01": {
+  "bio": "Blake Snell is a Rays pitcher and a Cy Young Award winner.",
+  "career": "2018 AL Cy Young",
+  "name": "Blake Snell",
+  "team": "TB"
+ },
+ "TB|uptonbj01": {
+  "bio": "B.J. Upton was a Rays outfielder.",
+  "career": "Rays outfielder",
+  "name": "B.J. Upton",
+  "team": "TB"
+ },
+ "TB|wendljo01": {
+  "bio": "Joey Wendle was a Rays infielder.",
+  "career": "Rays infielder",
+  "name": "Joey Wendle",
+  "team": "TB"
+ },
+ "TB|zobribe01": {
+  "bio": "Ben Zobrist was a Rays utility player and a 2009 All-Star.",
+  "career": "Rays infielder and outfielder",
+  "name": "Ben Zobrist",
+  "team": "TB"
+ },
+ "TB|zuninmi01": {
+  "bio": "Mike Zunino was a Rays catcher.",
+  "career": "Rays catcher",
+  "name": "Mike Zunino",
+  "team": "TB"
+ },
+ "WSH|cordech01": {
+  "bio": "Chad Cordero was a Nationals closer and a 2005 All-Star.",
+  "career": "Nationals closer",
+  "name": "Chad Cordero",
+  "team": "WSH"
+ },
+ "WSH|gonzagi01": {
+  "bio": "Gio Gonzalez was a Nationals starter and a 2012 All-Star.",
+  "career": "Nationals starter",
+  "name": "Gio Gonzalez",
+  "team": "WSH"
+ },
+ "WSH|harpebr03": {
+  "bio": "Bryce Harper was a Nationals outfielder, the 2015 National League MVP, and later the 2021 MVP.",
+  "career": "2015 and 2021 NL MVP",
+  "name": "Bryce Harper",
+  "team": "WSH"
+ },
+ "WSH|hernali01": {
+  "bio": "Livan Hernandez was a Nationals and Marlins pitcher and the 1997 World Series MVP.",
+  "career": "1997 World Series MVP",
+  "name": "Livan Hernandez",
+  "team": "WSH"
+ },
+ "WSH|johnsni01": {
+  "bio": "Nick Johnson was a Nationals and Expos first baseman.",
+  "career": "First baseman",
+  "name": "Nick Johnson",
+  "team": "WSH"
+ },
+ "WSH|murphda08": {
+  "bio": "Daniel Murphy was a Nationals infielder and a 2016 All-Star.",
+  "career": "Nationals infielder",
+  "name": "Daniel Murphy",
+  "team": "WSH"
+ },
+ "WSH|ramoswi01": {
+  "bio": "Wilson Ramos was a Nationals catcher and a 2016 All-Star.",
+  "career": "Nationals catcher",
+  "name": "Wilson Ramos",
+  "team": "WSH"
+ },
+ "WSH|rendoan01": {
+  "bio": "Anthony Rendon was the Nationals' third baseman and a 2019 World Series champion.",
+  "career": "2019 World Series",
+  "name": "Anthony Rendon",
+  "team": "WSH"
+ },
+ "WSH|scherma01": {
+  "bio": "Max Scherzer was a Nationals starter and a three-time Cy Young winner.",
+  "career": "Cy Young in 2013, 2016, and 2017",
+  "name": "Max Scherzer",
+  "team": "WSH"
+ },
+ "WSH|sotoju01": {
+  "bio": "Juan Soto was a Nationals outfielder and a 2019 World Series champion.",
+  "career": "2019 World Series",
+  "name": "Juan Soto",
+  "team": "WSH"
+ },
+ "WSH|spande01": {
+  "bio": "Denard Span was a Nationals center fielder.",
+  "career": "Nationals outfielder",
+  "name": "Denard Span",
+  "team": "WSH"
+ },
+ "WSH|storedr01": {
+  "bio": "Drew Storen was a Nationals reliever.",
+  "career": "Nationals reliever",
+  "name": "Drew Storen",
+  "team": "WSH"
+ },
+ "WSH|strasst01": {
+  "bio": "Stephen Strasburg was a Nationals starter and the 2019 World Series MVP.",
+  "career": "2019 World Series MVP",
+  "name": "Stephen Strasburg",
+  "team": "WSH"
+ },
+ "WSH|turnetr01": {
+  "bio": "Trea Turner was the Nationals' shortstop and a 2019 World Series champion.",
+  "career": "2019 World Series",
+  "name": "Trea Turner",
+  "team": "WSH"
+ },
+ "WSH|zimmejo02": {
+  "bio": "Jordan Zimmermann was a Nationals starter and a 2013 no-hit pitcher.",
+  "career": "Nationals starter",
+  "name": "Jordan Zimmermann",
+  "team": "WSH"
+ },
+ "WSH|zimmery01": {
+  "bio": "Ryan Zimmerman was the Nationals' first baseman, the franchise's original star, and a 2019 World Series champion.",
+  "career": "Nationals first baseman",
+  "name": "Ryan Zimmerman",
+  "team": "WSH"
+ }
+}
