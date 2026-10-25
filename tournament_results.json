@@ -42,7 +42,7 @@
    "code": "BOS",
    "name": "Boston Red Sox",
    "index": 942.9,
-   "game_wins": 0,
+   "game_wins": 2,
    "game_losses": 0,
    "series_wins": 0,
    "series_losses": 0,
@@ -367,7 +367,7 @@
    "name": "Tampa Bay Rays",
    "index": 387.0,
    "game_wins": 0,
-   "game_losses": 0,
+   "game_losses": 2,
    "series_wins": 0,
    "series_losses": 0,
    "eliminated": false,
@@ -500,13 +500,26 @@
     "7": "BOS"
    },
    "wins": {
-    "BOS": 0,
+    "BOS": 2,
     "TB": 0
    },
-   "games": [],
-   "status": "scheduled",
+   "games": [
+    "R1-03-G1",
+    "R1-03-G2"
+   ],
+   "status": "in-progress",
    "winner": null,
-   "loser": null
+   "loser": null,
+   "round": 1,
+   "provenance": "Played in Payoff Pitch as tournament series R1-03 on 2026-10-24 (FAC deck mode, version 2 pitcher cards, the pitcher addendum, manager traits for both clubs: Francona for Boston, Cash for Tampa Bay in tournament mode with the Opener refused under Joe's ruling that relievers do not start tournament games; the fatigue fix layer in both games) under Joe's ruling that the tournament is a Payoff Pitch tournament and APBA is closed. Games 1-2 are recorded here from the series' saved state files (payoff-pitch-rays/state_series_bos_tb_g1..g2.json) by record_r1_03_pp.py, following the R1-02 script's mechanism; the series is in progress, Boston leading 2-0, and later games append the same way. Tampa Bay plays in the host engine's 'PHA' guest slot, so the state files key the Rays as 'PHA'; those keys map to TB in the records. Field mapping: rolls holds the FAC flip history (card number and draw purpose), the Payoff Pitch equivalent of the dice record; final_grades is empty because Payoff Pitch has no letter grades, and pitcher fatigue end states are in fatigue_end_states, from the fix layer stored in both states; resolutions and n41 are null because those APBA counters do not exist in Payoff Pitch; batting sac is the states' single SH category, with sf and ibb null because the states do not split them; pitching lines carry hr allowed, which the states record, and hb null, which they do not record by pitcher. Availability ran under the house outs convention: caps_in and caps_out carry it in the archive's encoding (player_id: max outs next game, 0 would mean unavailable).",
+   "carry": {
+    "rotation_next_start": {
+     "BOS": "Cy Young",
+     "TB": "Blake Snell"
+    },
+    "rotation_note": "Each club has used its first two starters in posted order (BOS: Pedro Martinez, Roger Clemens; TB: David Price, James Shields). Game 3 is at Tampa Bay: Cy Young vs Blake Snell. Full posted orders: BOS Martinez, Clemens, Young, Smoky Joe Wood, Lefty Grove; TB Price, Shields, Snell, Shane McClanahan, Scott Kazmir.",
+    "arms": "Availability inside the series runs under the house outs convention. J.P. Howell's Game 2 cap (3 outs, after 8 outs in Game 1) was honored exactly. Into Game 3 no pitcher is capped or unavailable: the Game 2 relief outs were Papelbon 5, McGee 4, Howell 3. Bullpen availability resets between rounds."
+   }
   },
   {
    "id": "R1-04",
@@ -19331,6 +19344,2925 @@
    "caps_out": {
     "SF": {},
     "WSH": {}
+   }
+  },
+  {
+   "id": "R1-03-G1",
+   "series_id": "R1-03",
+   "game_in_series": 1,
+   "away": "TB",
+   "home": "BOS",
+   "teams": {
+    "BOS": "Boston Red Sox",
+    "TB": "Tampa Bay Rays"
+   },
+   "score": {
+    "BOS": 6,
+    "TB": 0
+   },
+   "line": {
+    "BOS": [
+     2,
+     0,
+     0,
+     1,
+     0,
+     2,
+     1,
+     0
+    ],
+    "TB": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "winner": "BOS",
+   "wls": {
+    "W": {
+     "team": "BOS",
+     "player_id": "martipe02",
+     "name": "Pedro Martinez"
+    },
+    "L": {
+     "team": "TB",
+     "player_id": "priceda01",
+     "name": "David Price"
+    },
+    "S": null
+   },
+   "resolutions": null,
+   "batting": [
+    {
+     "team": "TB",
+     "player_id": "crawfca02",
+     "name": "Carl Crawford",
+     "lineup_slot": 1,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "wendljo01",
+     "name": "Joey Wendle",
+     "lineup_slot": 2,
+     "entry_order": 2,
+     "is_substitute": true,
+     "ab": 1,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 2,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "longoev01",
+     "name": "Evan Longoria",
+     "lineup_slot": 3,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 1,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "penaca01",
+     "name": "Carlos Pena",
+     "lineup_slot": 4,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 3,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "zobribe01",
+     "name": "Ben Zobrist",
+     "lineup_slot": 5,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "lowebr01",
+     "name": "Brandon Lowe",
+     "lineup_slot": 6,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "bartlja01",
+     "name": "Jason Bartlett",
+     "lineup_slot": 7,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "kiermke01",
+     "name": "Kevin Kiermaier",
+     "lineup_slot": 8,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "hallto02",
+     "name": "Toby Hall",
+     "lineup_slot": 9,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "speaktr01",
+     "name": "Tris Speaker",
+     "lineup_slot": 1,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 5,
+     "r": 0,
+     "h": 1,
+     "rbi": 0,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 1,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "pedrodu01",
+     "name": "Dustin Pedroia",
+     "lineup_slot": 2,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "willite01",
+     "name": "Ted Williams",
+     "lineup_slot": 3,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 2,
+     "r": 2,
+     "h": 1,
+     "rbi": 0,
+     "bb": 2,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "ortizda01",
+     "name": "David Ortiz",
+     "lineup_slot": 4,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 1,
+     "h": 1,
+     "rbi": 2,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 1
+    },
+    {
+     "team": "BOS",
+     "player_id": "foxxji01",
+     "name": "Jimmie Foxx",
+     "lineup_slot": 5,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 2,
+     "h": 2,
+     "rbi": 3,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 2
+    },
+    {
+     "team": "BOS",
+     "player_id": "evansdw01",
+     "name": "Dwight Evans",
+     "lineup_slot": 6,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 1,
+     "rbi": 0,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 1,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "boggswa01",
+     "name": "Wade Boggs",
+     "lineup_slot": 7,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 2,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 2,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "garcino01",
+     "name": "Nomar Garciaparra",
+     "lineup_slot": 8,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 2,
+     "r": 0,
+     "h": 1,
+     "rbi": 0,
+     "bb": 1,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 1,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "fiskca01",
+     "name": "Carlton Fisk",
+     "lineup_slot": 9,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 2,
+     "r": 1,
+     "h": 1,
+     "rbi": 1,
+     "bb": 1,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 1,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 1
+    }
+   ],
+   "pitching": [
+    {
+     "team": "TB",
+     "player_id": "priceda01",
+     "name": "David Price",
+     "appearance_order": 1,
+     "outs": 16,
+     "h": 5,
+     "r": 5,
+     "er": 5,
+     "bb": 2,
+     "k": 4,
+     "bf": 23,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 1,
+     "hr": 3
+    },
+    {
+     "team": "TB",
+     "player_id": "howeljp01",
+     "name": "J.P. Howell",
+     "appearance_order": 2,
+     "outs": 8,
+     "h": 3,
+     "r": 1,
+     "er": 1,
+     "bb": 4,
+     "k": 1,
+     "bf": 14,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 6,
+     "hr": 1
+    },
+    {
+     "team": "BOS",
+     "player_id": "martipe02",
+     "name": "Pedro Martinez",
+     "appearance_order": 1,
+     "outs": 27,
+     "h": 0,
+     "r": 0,
+     "er": 0,
+     "bb": 2,
+     "k": 11,
+     "bf": 28,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 1,
+     "hr": 0
+    }
+   ],
+   "errors_by": [],
+   "team_errors": {
+    "BOS": 0,
+    "TB": 0
+   },
+   "rolls": [
+    [
+     41,
+     "2d6"
+    ],
+    [
+     16,
+     "%"
+    ],
+    [
+     184,
+     "2d6"
+    ],
+    [
+     108,
+     "%"
+    ],
+    [
+     225,
+     "2d6"
+    ],
+    [
+     2,
+     "%"
+    ],
+    [
+     199,
+     "2d6"
+    ],
+    [
+     245,
+     "2d6"
+    ],
+    [
+     206,
+     "%"
+    ],
+    [
+     89,
+     "2d6"
+    ],
+    [
+     155,
+     "%"
+    ],
+    [
+     49,
+     "2d6"
+    ],
+    [
+     208,
+     "%"
+    ],
+    [
+     7,
+     "2d6"
+    ],
+    [
+     240,
+     "%"
+    ],
+    [
+     15,
+     "%"
+    ],
+    [
+     183,
+     "2d6"
+    ],
+    [
+     210,
+     "%"
+    ],
+    [
+     133,
+     "2d6"
+    ],
+    [
+     163,
+     "%"
+    ],
+    [
+     4,
+     "2d6"
+    ],
+    [
+     181,
+     "%"
+    ],
+    [
+     111,
+     "2d6"
+    ],
+    [
+     52,
+     "%"
+    ],
+    [
+     243,
+     "2d6"
+    ],
+    [
+     118,
+     "%"
+    ],
+    [
+     223,
+     "2d6"
+    ],
+    [
+     180,
+     "%"
+    ],
+    [
+     75,
+     "2d6"
+    ],
+    [
+     179,
+     "%"
+    ],
+    [
+     98,
+     "2d6"
+    ],
+    [
+     76,
+     "%"
+    ],
+    [
+     105,
+     "2d6"
+    ],
+    [
+     246,
+     "%"
+    ],
+    [
+     226,
+     "2d6"
+    ],
+    [
+     222,
+     "%"
+    ],
+    [
+     161,
+     "2d6"
+    ],
+    [
+     134,
+     "%"
+    ],
+    [
+     92,
+     "2d6"
+    ],
+    [
+     132,
+     "%"
+    ],
+    [
+     127,
+     "2d6"
+    ],
+    [
+     72,
+     "%"
+    ],
+    [
+     71,
+     "2d6"
+    ],
+    [
+     1,
+     "%"
+    ],
+    [
+     0,
+     "RESHUFFLE: after 3 full innings (printed protocol)"
+    ],
+    [
+     169,
+     "2d6"
+    ],
+    [
+     209,
+     "%"
+    ],
+    [
+     44,
+     "2d6"
+    ],
+    [
+     4,
+     "%"
+    ],
+    [
+     62,
+     "2d6"
+    ],
+    [
+     228,
+     "%"
+    ],
+    [
+     20,
+     "2d6"
+    ],
+    [
+     99,
+     "%"
+    ],
+    [
+     42,
+     "2d6"
+    ],
+    [
+     48,
+     "%"
+    ],
+    [
+     122,
+     "%"
+    ],
+    [
+     220,
+     "2d6"
+    ],
+    [
+     93,
+     "%"
+    ],
+    [
+     189,
+     "2d6"
+    ],
+    [
+     66,
+     "%"
+    ],
+    [
+     113,
+     "2d6"
+    ],
+    [
+     178,
+     "%"
+    ],
+    [
+     142,
+     "2d6"
+    ],
+    [
+     120,
+     "%"
+    ],
+    [
+     40,
+     "2d6"
+    ],
+    [
+     30,
+     "%"
+    ],
+    [
+     27,
+     "2d6"
+    ],
+    [
+     53,
+     "%"
+    ],
+    [
+     60,
+     "2d6"
+    ],
+    [
+     10,
+     "1d6"
+    ],
+    [
+     173,
+     "%"
+    ],
+    [
+     123,
+     "2d6"
+    ],
+    [
+     8,
+     "1d6"
+    ],
+    [
+     192,
+     "%"
+    ],
+    [
+     224,
+     "2d6"
+    ],
+    [
+     110,
+     "%"
+    ],
+    [
+     243,
+     "2d6"
+    ],
+    [
+     191,
+     "2d6"
+    ],
+    [
+     9,
+     "2d6"
+    ],
+    [
+     107,
+     "%"
+    ],
+    [
+     138,
+     "2d6"
+    ],
+    [
+     22,
+     "%"
+    ],
+    [
+     146,
+     "2d6"
+    ],
+    [
+     234,
+     "%"
+    ],
+    [
+     51,
+     "2d6"
+    ],
+    [
+     174,
+     "%"
+    ],
+    [
+     195,
+     "2d6"
+    ],
+    [
+     242,
+     "%"
+    ],
+    [
+     130,
+     "2d6"
+    ],
+    [
+     144,
+     "%"
+    ],
+    [
+     255,
+     "2d6"
+    ],
+    [
+     76,
+     "%"
+    ],
+    [
+     6,
+     "2d6"
+    ],
+    [
+     247,
+     "%"
+    ],
+    [
+     98,
+     "%"
+    ],
+    [
+     49,
+     "2d6"
+    ],
+    [
+     210,
+     "%"
+    ],
+    [
+     241,
+     "2d6"
+    ],
+    [
+     126,
+     "%"
+    ],
+    [
+     0,
+     "RESHUFFLE: after 6 full innings (printed protocol)"
+    ],
+    [
+     245,
+     "2d6"
+    ],
+    [
+     190,
+     "%"
+    ],
+    [
+     94,
+     "2d6"
+    ],
+    [
+     101,
+     "%"
+    ],
+    [
+     59,
+     "2d6"
+    ],
+    [
+     141,
+     "%"
+    ],
+    [
+     119,
+     "2d6"
+    ],
+    [
+     27,
+     "%"
+    ],
+    [
+     67,
+     "2d6"
+    ],
+    [
+     179,
+     "%"
+    ],
+    [
+     39,
+     "%"
+    ],
+    [
+     195,
+     "2d6"
+    ],
+    [
+     234,
+     "%"
+    ],
+    [
+     161,
+     "%"
+    ],
+    [
+     139,
+     "2d6"
+    ],
+    [
+     51,
+     "%"
+    ],
+    [
+     75,
+     "2d6"
+    ],
+    [
+     138,
+     "%"
+    ],
+    [
+     254,
+     "2d6"
+    ],
+    [
+     25,
+     "%"
+    ],
+    [
+     18,
+     "2d6"
+    ],
+    [
+     72,
+     "%"
+    ],
+    [
+     83,
+     "2d6"
+    ],
+    [
+     146,
+     "%"
+    ],
+    [
+     35,
+     "2d6"
+    ],
+    [
+     40,
+     "%"
+    ],
+    [
+     15,
+     "2d6"
+    ],
+    [
+     218,
+     "%"
+    ],
+    [
+     152,
+     "2d6"
+    ],
+    [
+     46,
+     "%"
+    ],
+    [
+     84,
+     "2d6"
+    ],
+    [
+     205,
+     "%"
+    ],
+    [
+     247,
+     "%"
+    ],
+    [
+     134,
+     "2d6"
+    ],
+    [
+     232,
+     "%"
+    ],
+    [
+     12,
+     "2d6"
+    ],
+    [
+     124,
+     "1d6"
+    ],
+    [
+     140,
+     "%"
+    ],
+    [
+     237,
+     "2d6"
+    ],
+    [
+     60,
+     "%"
+    ],
+    [
+     175,
+     "2d6"
+    ],
+    [
+     197,
+     "%"
+    ],
+    [
+     177,
+     "2d6"
+    ],
+    [
+     43,
+     "%"
+    ],
+    [
+     181,
+     "2d6"
+    ],
+    [
+     208,
+     "%"
+    ],
+    [
+     248,
+     "2d6"
+    ],
+    [
+     37,
+     "%"
+    ]
+   ],
+   "final_grades": {},
+   "fatigue_end_states": {
+    "BOS|martipe02": {
+     "engine_fatigued": false,
+     "book_fatigued": false,
+     "trigger": null
+    },
+    "TB|priceda01": {
+     "engine_fatigued": true,
+     "book_fatigued": true,
+     "trigger": "cash_third_time"
+    },
+    "TB|howeljp01": {
+     "engine_fatigued": true,
+     "book_fatigued": true,
+     "trigger": "relief_appearances"
+    }
+   },
+   "game_recap": "The Boston Red Sox beat the Tampa Bay Rays 6-0. The go-ahead run scored in the 1st inning. Jimmie Foxx led the Boston Red Sox offense with 2 hits and 3 RBI in 4 at-bats. Pedro Martinez earned the win, allowing 0 earned runs in 9.0 innings.",
+   "series_recap": "After 1 game, the Boston Red Sox lead the series 1-0 over the Tampa Bay Rays.",
+   "seed": 20261201,
+   "scoring_plays": [
+    "Inning 1: Boston Red Sox scores; BOS 1, TB 0; charged to David Price",
+    "Inning 1: Boston Red Sox scores; BOS 2, TB 0; charged to David Price",
+    "Inning 4: Boston Red Sox scores; BOS 3, TB 0; charged to David Price",
+    "Inning 6: Boston Red Sox scores; BOS 4, TB 0; charged to David Price",
+    "Inning 6: Boston Red Sox scores; BOS 5, TB 0; charged to David Price",
+    "Inning 7: Boston Red Sox scores; BOS 6, TB 0; charged to J.P. Howell"
+   ],
+   "manager_log": [
+    "SETUP ASSERTION BLOCK: all checks PASS (v2 engine + v2 cards bound for BOTH clubs, FAC deck stream installed, FAC-chart absent, addendum live and merging for BOTH clubs, traits ON with Francona governing Boston from the BOS slot and Cash governing Tampa Bay from the guest slot in TOURNAMENT mode (the Opener refused by Joe's ruling; Price the announced starter), Williams's package managing NEITHER club and no other stray manager package live, Fenway Park in force, fatigue fix layer installed outermost on its seams with both starters' stamina lines served, elimination gating CLOSED for both clubs). Printed in full in the game record.",
+    "PAYOFF PITCH TOP 32 TOURNAMENT, SERIES R1-03, GAME 1 (OFFICIAL): Tampa Bay Rays at Boston Red Sox, Fenway Park (Boston's printed ballpark chart), DH on. Best of 7, home pattern 2-2-1-1-1, Boston home for Games 1, 2, 5 and 7. Boston is the #3 seed, Tampa Bay the #30 seed.",
+    "Venue and slot note: Tampa Bay plays in the host engine's guest slot ('PHA') and Boston in the 'BOS' slot: Tampa Bay bats in the top half as the visitor and Boston in the bottom half as the home club, and the park card in force is Fenway Park itself. Dick Williams's traits2 package is present only as Kevin Cash's machinery substrate; his decision entry points were re-pointed to no-ops at module level in this process and his Fireman candidate function returns None, so the package manages NEITHER club in this game. Dick Williams manages Montreal in this project (Joe's graphics ruling). No engine file was edited.",
+    "Starters: David Price (TB) vs Pedro Martinez (BOS), the posted Game 1 rotation pairing (BOS rotation: Pedro Martinez, Roger Clemens, Cy Young, Smoky Joe Wood, Lefty Grove; TB rotation: David Price, James Shields, Blake Snell, Shane McClanahan, Scott Kazmir); FAC deck seed 20261201 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Tampa Bay's ratings merged into the layer for the guest slot from the Rays' own pitcher_addendum.json). Stamina lines as served: Pedro Martinez Start 6 (book line: 3+ runs from the 6th inning), David Price Start 6 (book line: 3+ runs from the 6th inning).",
+    "FATIGUE FIX LIVE (Joe's commission, FATIGUE_FIX.md): the fatigue_fix layer is installed over the stack, so all four book fatigue triggers are in force: the engine's 6-run universal rule, the starter-stamina trigger (Start inning reached at 3+ runs, evaluated before the inning's first plate appearance as well as after every one), the Short/Long reliever triggers (appearance innings and runs), and the save-symbol exemption machinery (no converted card carries a symbol, so the exemption correctly cannot fire; no symbol was invented). The layer records the Section 1.6 fatigue standard in the game state.",
+    "Managers: Boston is managed by TERRY FRANCONA (the library layer, traits_francona.py: the Idiots Shield, Grinding the Starter, the Multi-Inning Fireman, the Situational Specialist), governing from the 'BOS' slot in his first official game. Tampa Bay is managed by KEVIN CASH (traits_cash.py: the Third-Time-Through Rule, The Stable, Extreme Roster Modularity), governing from the guest slot as Tampa Bay.",
+    "Cash and the Opener: Cash governs in TOURNAMENT mode. Under Joe's ruling (2026-10-24, 'Since tournament no relievers to start'), The Opener is not available in tournament-governed play: no designation was made for this game, David Price starts as Tampa Bay's announced starter, and the layer's tournament rule would refuse any designation and ledger the refusal (cash_opener_refused), as proven in the Cash liveness battery.",
+    "Francona's driver-called decision: the pinch-run entry and the Situational Specialist steal are driver calls at PA starts under the layer's design; this driver makes them only inside the trait's own state shape (Boston batting in the 8th or 9th, trailing or tied, a runner on 1st or 2nd who is not RUN 10 with the next base open and an unused RUN-10 bench player), and the layer referees the once-per-series ledger created for this series ('R1-03 BOS vs TB'), which lives in this game's traits state and carries to Game 2.",
+    "Hierarchy in force: book mechanics (fatigue, Rest Chart); the one hard rule (no starting pitcher relieves except for a club facing elimination, with a one-day rotation setback); manager traits where they speak; the hook policy and Joe's closer branch as the DEFAULT policy everywhere else.",
+    "Elimination mark: Game 1 of a best-of-7; this is an elimination game for NEITHER club. The hard rule's exception is CLOSED for both: no Boston or Tampa Bay starting pitcher may relieve tonight, and no setback question can arise.",
+    "[1T 0 out, bases ---] Carl Crawford vs Pedro Martinez",
+    "  dice 2d6=7 (2+1) %=99 -> TOUGH",
+    "  TOUGH %=99 above the ranges -> OUT F7",
+    "  fly out LF",
+    "  pinch hit (Tampa Bay): Joey Wendle bats for Yandy Diaz (Cash Extreme Roster Modularity: strict platoon advantage)",
+    "[1T 1 out, bases ---] Joey Wendle vs Pedro Martinez",
+    "  dice 2d6=9 (3+1) %=13 -> PATIENT",
+    "  PATIENT %=13 -> BB",
+    "  Joey Wendle walks",
+    "[1T 1 out, bases 1--] Evan Longoria vs Pedro Martinez",
+    "  dice 2d6=11 (5+3) %=57 -> IN-PLAY",
+    "  IN-PLAY %=57 above the ranges -> OUT G5",
+    "  double play turned",
+    "  GIDP 3B",
+    "[1B 0 out, bases ---] Tris Speaker vs David Price",
+    "  dice 2d6=11 (5+1) %=91 -> PATIENT-OUT",
+    "  PATIENT-OUT: not a walk, OUT section -> G4",
+    "  ground out 2B",
+    "[1B 1 out, bases ---] Dustin Pedroia vs David Price",
+    "  dice 2d6=6 (3+3) %=39 -> IN-PLAY",
+    "  IN-PLAY %=39 above the ranges -> OUT P4",
+    "  pop out 2B, runners hold",
+    "[1B 2 out, bases ---] Ted Williams vs David Price",
+    "  dice 2d6=9 (3+4) %=54 -> PATIENT",
+    "  PATIENT %=54 -> BB",
+    "  Ted Williams walks",
+    "  Grinding the Starter: Ted Williams's PATIENT walk banks a grind point on David Price (1)",
+    "[1B 2 out, bases 1--] David Ortiz vs David Price",
+    "  dice 2d6=2 (1+1) %=09 -> BALLPARK",
+    "  BALLPARK (Fenway, LHB): WHEELHOUSE, re-roll %=46",
+    "  WHEELHOUSE %=46 -> HR",
+    "  David Ortiz homers",
+    "[1B 2 out, bases ---] Jimmie Foxx vs David Price",
+    "  dice 2d6=8 (4+4) %=47 -> TOUGH",
+    "  TOUGH %=46 -> SO",
+    "  Jimmie Foxx strikes out",
+    "[2T 0 out, bases ---] Carlos Pena vs Pedro Martinez",
+    "  dice 2d6=7 (2+1) %=67 -> TOUGH",
+    "  TOUGH %=67 -> SO",
+    "  Carlos Pena strikes out",
+    "[2T 1 out, bases ---] Ben Zobrist vs Pedro Martinez",
+    "  dice 2d6=9 (5+5) %=70 -> PATIENT",
+    "  PATIENT %=70 above the ranges -> OUT G4",
+    "  ground out 2B",
+    "[2T 2 out, bases ---] Brandon Lowe vs Pedro Martinez",
+    "  dice 2d6=8 (4+5) %=91 -> IN-PLAY",
+    "  IN-PLAY %=91 above the ranges -> OUT G6",
+    "  ground out SS",
+    "[2B 0 out, bases ---] Dwight Evans vs David Price",
+    "  dice 2d6=7 (5+1) %=87 -> IN-PLAY",
+    "  IN-PLAY %=87 above the ranges -> OUT G6",
+    "  ground out SS",
+    "[2B 1 out, bases ---] Wade Boggs vs David Price",
+    "  dice 2d6=6 (6+6) %=96 -> IN-PLAY",
+    "  IN-PLAY %=96 above the ranges -> OUT F9",
+    "  fly out RF",
+    "[2B 2 out, bases ---] Nomar Garciaparra vs David Price",
+    "  dice 2d6=9 (5+6) %=20 -> PATIENT",
+    "  PATIENT %=20 -> BB",
+    "  Nomar Garciaparra walks",
+    "  Grinding the Starter: Nomar Garciaparra's PATIENT walk banks a grind point on David Price (2)",
+    "[2B 2 out, bases 1--] Carlton Fisk vs David Price",
+    "  dice 2d6=7 (3+2) %=70 -> IN-PLAY",
+    "  IN-PLAY %=70 above the ranges -> OUT G4",
+    "  ground out 2B",
+    "[3T 0 out, bases ---] Jason Bartlett vs Pedro Martinez",
+    "  dice 2d6=6 (5+2) %=04 -> TOUGH",
+    "  TOUGH %=04 -> SO",
+    "  Jason Bartlett strikes out",
+    "[3T 1 out, bases ---] Kevin Kiermaier vs Pedro Martinez",
+    "  dice 2d6=8 (1+2) %=43 -> IN-PLAY",
+    "  IN-PLAY %=43 above the ranges -> OUT G3",
+    "  ground out 1B",
+    "[3T 2 out, bases ---] Toby Hall vs Pedro Martinez",
+    "  dice 2d6=8 (5+5) %=49 -> IN-PLAY",
+    "  IN-PLAY %=49 above the ranges -> OUT G1",
+    "  ground out P",
+    "[3B 0 out, bases ---] Tris Speaker vs David Price",
+    "  dice 2d6=8 (5+6) %=62 -> TOUGH",
+    "  TOUGH %=62 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[3B 1 out, bases ---] Dustin Pedroia vs David Price",
+    "  dice 2d6=5 (4+6) %=06 -> TOUGH",
+    "  TOUGH %=06 -> SO",
+    "  Dustin Pedroia strikes out",
+    "[3B 2 out, bases ---] Ted Williams vs David Price",
+    "  dice 2d6=4 (6+2) %=76 -> IN-PLAY",
+    "  IN-PLAY %=76 above the ranges -> OUT F8",
+    "  fly out CF",
+    "  FAC deck reshuffled after 3 full innings (printed protocol)",
+    "[4T 0 out, bases ---] Carl Crawford vs Pedro Martinez",
+    "  dice 2d6=12 (6+4) %=96 -> IN-PLAY",
+    "  IN-PLAY %=96 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[4T 1 out, bases ---] Joey Wendle vs Pedro Martinez",
+    "  dice 2d6=8 (6+5) %=65 -> IN-PLAY",
+    "  IN-PLAY %=65 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[4T 2 out, bases ---] Evan Longoria vs Pedro Martinez",
+    "  dice 2d6=6 (1+5) %=79 -> TOUGH",
+    "  TOUGH %=79 above the ranges -> OUT F8",
+    "  fly out CF",
+    "[4B 0 out, bases ---] David Ortiz vs David Price",
+    "  dice 2d6=5 (1+4) %=24 -> TOUGH",
+    "  TOUGH %=24 -> SO",
+    "  David Ortiz strikes out",
+    "[4B 1 out, bases ---] Jimmie Foxx vs David Price",
+    "  dice 2d6=3 (2+3) %=12 -> BALLPARK",
+    "  BALLPARK (Fenway, RHB): WHEELHOUSE, re-roll %=71",
+    "  WHEELHOUSE %=71 -> HR",
+    "  Jimmie Foxx homers",
+    "[4B 1 out, bases ---] Dwight Evans vs David Price",
+    "  dice 2d6=11 (4+1) %=97 -> PATIENT-OUT",
+    "  PATIENT-OUT: not a walk, OUT section -> F7",
+    "  fly out LF",
+    "[4B 2 out, bases ---] Wade Boggs vs David Price",
+    "  dice 2d6=6 (6+2) %=92 -> IN-PLAY",
+    "  IN-PLAY %=92 above the ranges -> OUT F9",
+    "  fly out RF",
+    "[5T 0 out, bases ---] Carlos Pena vs Pedro Martinez",
+    "  dice 2d6=4 (5+3) %=03 -> TOUGH",
+    "  TOUGH %=03 -> SO",
+    "  Carlos Pena strikes out",
+    "[5T 1 out, bases ---] Ben Zobrist vs Pedro Martinez",
+    "  dice 2d6=7 (5+2) %=08 -> TOUGH",
+    "  TOUGH %=08 -> SO",
+    "  Ben Zobrist strikes out",
+    "[5T 2 out, bases ---] Brandon Lowe vs Pedro Martinez",
+    "  dice 2d6=7 (6+3) %=67 -> TOUGH",
+    "  TOUGH %=67 -> SO",
+    "  Brandon Lowe strikes out",
+    "[5B 0 out, bases ---] Nomar Garciaparra vs David Price",
+    "  dice 2d6=7 (3+6) %=36 -> IN-PLAY",
+    "  IN-PLAY %=36 -> 1B",
+    "  Nomar Garciaparra singles (CF fields it)",
+    "[5B 0 out, bases 1--] Carlton Fisk vs David Price",
+    "  bunt: fielder C, %=89 -> MISS",
+    "  MISS: batter misses the pitch, bunt stays on",
+    "  bunt: fielder P, %=41 -> SH",
+    "  sacrifice works: batter out at 1st, runners advance",
+    "  THIRD TIME THROUGH (Cash): David Price is fatigued from his 19th batter (book fatigue attached through the fatigue-fix layer)",
+    "[5B 1 out, bases -1-] Tris Speaker vs David Price",
+    "  dice 2d6=9 (4+4) %=64 -> PATIENT",
+    "  PATIENT %=64 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[5B 2 out, bases --1] Dustin Pedroia vs David Price",
+    "  dice 2d6=7 (5+4) %=58 -> IN-PLAY",
+    "  IN-PLAY %=58 above the ranges -> OUT G5",
+    "  ground out 3B",
+    "[6T 0 out, bases ---] Jason Bartlett vs Pedro Martinez",
+    "  dice 2d6=7 (1+1) %=31 -> TOUGH",
+    "  TOUGH %=31 -> SO",
+    "  Jason Bartlett strikes out",
+    "[6T 1 out, bases ---] Kevin Kiermaier vs Pedro Martinez",
+    "  dice 2d6=4 (5+3) %=11 -> TOUGH",
+    "  TOUGH %=11 -> SO",
+    "  Kevin Kiermaier strikes out",
+    "[6T 2 out, bases ---] Toby Hall vs Pedro Martinez",
+    "  dice 2d6=11 (4+5) %=95 -> IN-PLAY",
+    "  IN-PLAY %=95 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[6B 0 out, bases ---] Ted Williams vs David Price",
+    "  dice 2d6=4 (6+5) %=41 -> IN-PLAY",
+    "  IN-PLAY %=41 -> 1B",
+    "  Ted Williams singles (LF fields it)",
+    "[6B 0 out, bases 1--] David Ortiz vs David Price",
+    "  dice 2d6=10 (3+2) %=14 -> TOUGH",
+    "  TOUGH %=14 -> SO",
+    "  David Ortiz strikes out",
+    "[6B 1 out, bases 1--] Jimmie Foxx vs David Price",
+    "  dice 2d6=8 (3+2) %=70 -> TOUGH",
+    "  WHEELHOUSE %=70 -> HR",
+    "  Jimmie Foxx homers",
+    "Pitching change (Tampa Bay): J.P. Howell replaces David Price",
+    "[6B 1 out, bases ---] Dwight Evans vs J.P. Howell",
+    "  dice 2d6=12 (6+6) %=86 -> BALLPARK",
+    "  BALLPARK (Fenway, RHB): IN-PLAY, re-roll %=93",
+    "  IN-PLAY %=93 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[6B 2 out, bases ---] Wade Boggs vs J.P. Howell",
+    "  dice 2d6=9 (3+4) %=47 -> PATIENT",
+    "  PATIENT %=47 -> BB",
+    "  Wade Boggs walks",
+    "[6B 2 out, bases 1--] Nomar Garciaparra vs J.P. Howell",
+    "  dice 2d6=5 (3+5) %=83 -> IN-PLAY",
+    "  IN-PLAY %=83 above the ranges -> OUT F8",
+    "  fly out CF",
+    "  FAC deck reshuffled after 6 full innings (printed protocol)",
+    "[7T 0 out, bases ---] Carl Crawford vs Pedro Martinez",
+    "  dice 2d6=11 (5+4) %=58 -> IN-PLAY",
+    "  IN-PLAY %=58 above the ranges -> OUT G5",
+    "  ground out 3B",
+    "[7T 1 out, bases ---] Joey Wendle vs Pedro Martinez",
+    "  dice 2d6=9 (6+3) %=21 -> PATIENT",
+    "  PATIENT %=21 -> BB",
+    "  Joey Wendle walks",
+    "[7T 1 out, bases 1--] Evan Longoria vs Pedro Martinez",
+    "  dice 2d6=7 (2+2) %=32 -> TOUGH",
+    "  TOUGH %=32 -> SO",
+    "  Evan Longoria strikes out",
+    "[7T 2 out, bases 1--] Carlos Pena vs Pedro Martinez",
+    "  dice 2d6=5 (3+3) %=29 -> TOUGH",
+    "  TOUGH %=29 -> SO",
+    "  Carlos Pena strikes out",
+    "[7B 0 out, bases ---] Carlton Fisk vs J.P. Howell",
+    "  dice 2d6=12 (6+6) %=20 -> BALLPARK",
+    "  BALLPARK (Fenway, RHB): WHEELHOUSE, re-roll %=20",
+    "  WHEELHOUSE %=20 -> HR",
+    "  Carlton Fisk homers",
+    "[7B 0 out, bases ---] Tris Speaker vs J.P. Howell",
+    "  dice 2d6=4 (6+3) %=11 -> IN-PLAY",
+    "  IN-PLAY %=11 -> 1B",
+    "  Tris Speaker singles (LF fields it)",
+    "  caught stealing: Tris Speaker out at 2",
+    "[7B 1 out, bases ---] Dustin Pedroia vs J.P. Howell",
+    "  dice 2d6=7 (2+4) %=25 -> TOUGH",
+    "  TOUGH %=25 -> SO",
+    "  Dustin Pedroia strikes out",
+    "[7B 2 out, bases ---] Ted Williams vs J.P. Howell",
+    "  dice 2d6=9 (5+1) %=55 -> PATIENT",
+    "  PATIENT %=55 -> BB",
+    "  Ted Williams walks",
+    "[7B 2 out, bases 1--] David Ortiz vs J.P. Howell",
+    "  dice 2d6=6 (1+2) %=82 -> PATIENT",
+    "  PATIENT %=82 above the ranges -> OUT F8",
+    "  fly out CF",
+    "[8T 0 out, bases ---] Ben Zobrist vs Pedro Martinez",
+    "  dice 2d6=3 (2+6) %=06 -> TOUGH",
+    "  TOUGH %=06 -> SO",
+    "  Ben Zobrist strikes out",
+    "[8T 1 out, bases ---] Brandon Lowe vs Pedro Martinez",
+    "  dice 2d6=8 (2+5) %=49 -> IN-PLAY",
+    "  IN-PLAY %=49 above the ranges -> OUT G3",
+    "  ground out 1B",
+    "[8T 2 out, bases ---] Jason Bartlett vs Pedro Martinez",
+    "  dice 2d6=8 (5+6) %=54 -> IN-PLAY",
+    "  IN-PLAY %=54 above the ranges -> OUT G5",
+    "  ground out 3B",
+    "  FATIGUE (book): J.P. Howell is fatigued under the book's relief rule: a Short reliever whose appeared innings are [6, 7, 8]; 2 of them have ended, reaching the 2-inning limit as the last of them ended (2024 rulebook p11)",
+    "[8B 0 out, bases ---] Jimmie Foxx vs J.P. Howell",
+    "  dice 2d6=3 (2+1) %=79 -> DEFENSE",
+    "  DEFENSE: SS converts it: GB-fc",
+    "  GB-fc with no force: batter out at 1st",
+    "[8B 1 out, bases ---] Dwight Evans vs J.P. Howell",
+    "  dice 2d6=5 (pair 1+4) %=00 -> IN-PLAY: RARE PLAY (initial percentile 00)",
+    "  Rare Plays, Bases Empty, IN-PLAY: percentile 86 (same FAC stream) -> 85-89: hard ground ball down the line bounces off the base into foul territory, the fielder assumes foul, the umpire calls it fair",
+    "  Evans bats right, so the ball is down the 3B line (the chart's 1B-line triple option does not arise); his RUN rating is 10, at or above the chart's 7, so he coasts into 2nd with a double",
+    "[8B 1 out, bases -1-] Wade Boggs vs J.P. Howell",
+    "  dice 2d6=6 (5+2) %=16 -> PATIENT",
+    "  PATIENT %=16 -> BB",
+    "  Wade Boggs walks",
+    "[8B 1 out, bases 11-] Nomar Garciaparra vs J.P. Howell",
+    "  bunt: fielder 1B, %=34 -> SH",
+    "  sacrifice works: batter out at 1st, runners advance",
+    "[8B 2 out, bases -11] Carlton Fisk vs J.P. Howell",
+    "  dice 2d6=9 (6+2) %=10 -> PATIENT",
+    "  PATIENT %=10 -> BB",
+    "  Carlton Fisk walks",
+    "[8B 2 out, bases 111] Tris Speaker vs J.P. Howell",
+    "  dice 2d6=10 (2+6) %=66 -> TOUGH-OUT",
+    "  IN-PLAY %=66 above the ranges -> OUT G6",
+    "  ground out SS",
+    "[9T 0 out, bases ---] Kevin Kiermaier vs Pedro Martinez",
+    "  dice 2d6=6 (3+4) %=84 -> TOUGH",
+    "  TOUGH %=84 above the ranges -> OUT G6",
+    "  ground out SS",
+    "[9T 1 out, bases ---] Toby Hall vs Pedro Martinez",
+    "  dice 2d6=8 (5+4) %=54 -> IN-PLAY",
+    "  IN-PLAY %=54 above the ranges -> OUT G3",
+    "  ground out 1B",
+    "[9T 2 out, bases ---] Carl Crawford vs Pedro Martinez",
+    "  dice 2d6=7 (1+1) %=21 -> TOUGH",
+    "  TOUGH %=21 -> SO",
+    "  Carl Crawford strikes out"
+   ],
+   "injuries": [],
+   "n41": null,
+   "caps_in": {
+    "BOS": {},
+    "TB": {}
+   },
+   "caps_out": {
+    "BOS": {},
+    "TB": {
+     "howeljp01": 3
+    }
+   }
+  },
+  {
+   "id": "R1-03-G2",
+   "series_id": "R1-03",
+   "game_in_series": 2,
+   "away": "TB",
+   "home": "BOS",
+   "teams": {
+    "BOS": "Boston Red Sox",
+    "TB": "Tampa Bay Rays"
+   },
+   "score": {
+    "BOS": 3,
+    "TB": 1
+   },
+   "line": {
+    "BOS": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     0,
+     0
+    ],
+    "TB": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "winner": "BOS",
+   "wls": {
+    "W": {
+     "team": "BOS",
+     "player_id": "clemero02",
+     "name": "Roger Clemens"
+    },
+    "L": {
+     "team": "TB",
+     "player_id": "shielja02",
+     "name": "James Shields"
+    },
+    "S": {
+     "team": "BOS",
+     "player_id": "papeljo01",
+     "name": "Jonathan Papelbon"
+    }
+   },
+   "resolutions": null,
+   "batting": [
+    {
+     "team": "TB",
+     "player_id": "crawfca02",
+     "name": "Carl Crawford",
+     "lineup_slot": 1,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 3,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "wendljo01",
+     "name": "Joey Wendle",
+     "lineup_slot": 2,
+     "entry_order": 2,
+     "is_substitute": true,
+     "ab": 4,
+     "r": 0,
+     "h": 1,
+     "rbi": 0,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 1,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "longoev01",
+     "name": "Evan Longoria",
+     "lineup_slot": 3,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 3,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "penaca01",
+     "name": "Carlos Pena",
+     "lineup_slot": 4,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 1,
+     "rbi": 0,
+     "bb": 0,
+     "k": 3,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "zobribe01",
+     "name": "Ben Zobrist",
+     "lineup_slot": 5,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 1,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "lowebr01",
+     "name": "Brandon Lowe",
+     "lineup_slot": 6,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "bartlja01",
+     "name": "Jason Bartlett",
+     "lineup_slot": 7,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 1,
+     "rbi": 0,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "kiermke01",
+     "name": "Kevin Kiermaier",
+     "lineup_slot": 8,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 2,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 1,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "hallto02",
+     "name": "Toby Hall",
+     "lineup_slot": 9,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 1,
+     "h": 2,
+     "rbi": 1,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 1
+    },
+    {
+     "team": "BOS",
+     "player_id": "speaktr01",
+     "name": "Tris Speaker",
+     "lineup_slot": 1,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 2,
+     "rbi": 0,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 1,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "pedrodu01",
+     "name": "Dustin Pedroia",
+     "lineup_slot": 2,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "willite01",
+     "name": "Ted Williams",
+     "lineup_slot": 3,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 1,
+     "h": 1,
+     "rbi": 0,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "ortizda01",
+     "name": "David Ortiz",
+     "lineup_slot": 4,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 1,
+     "h": 2,
+     "rbi": 0,
+     "bb": 0,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 2,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "foxxji01",
+     "name": "Jimmie Foxx",
+     "lineup_slot": 5,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 4,
+     "r": 0,
+     "h": 1,
+     "rbi": 1,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "evansdw01",
+     "name": "Dwight Evans",
+     "lineup_slot": 6,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 1,
+     "h": 0,
+     "rbi": 0,
+     "bb": 1,
+     "k": 2,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "boggswa01",
+     "name": "Wade Boggs",
+     "lineup_slot": 7,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 1,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 1,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 1,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "garcino01",
+     "name": "Nomar Garciaparra",
+     "lineup_slot": 8,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 2,
+     "r": 0,
+     "h": 1,
+     "rbi": 2,
+     "bb": 0,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 1,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "fiskca01",
+     "name": "Carlton Fisk",
+     "lineup_slot": 9,
+     "entry_order": 1,
+     "is_substitute": false,
+     "ab": 3,
+     "r": 0,
+     "h": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": null,
+     "gidp": 0,
+     "ibb": null,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0
+    }
+   ],
+   "pitching": [
+    {
+     "team": "TB",
+     "player_id": "shielja02",
+     "name": "James Shields",
+     "appearance_order": 1,
+     "outs": 17,
+     "h": 7,
+     "r": 3,
+     "er": 3,
+     "bb": 2,
+     "k": 3,
+     "bf": 26,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 1,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "howeljp01",
+     "name": "J.P. Howell",
+     "appearance_order": 2,
+     "outs": 3,
+     "h": 0,
+     "r": 0,
+     "er": 0,
+     "bb": 0,
+     "k": 2,
+     "bf": 3,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 6,
+     "hr": 0
+    },
+    {
+     "team": "TB",
+     "player_id": "mcgeeja01",
+     "name": "Jake McGee",
+     "appearance_order": 3,
+     "outs": 4,
+     "h": 0,
+     "r": 0,
+     "er": 0,
+     "bb": 0,
+     "k": 3,
+     "bf": 4,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 7,
+     "hr": 0
+    },
+    {
+     "team": "BOS",
+     "player_id": "clemero02",
+     "name": "Roger Clemens",
+     "appearance_order": 1,
+     "outs": 22,
+     "h": 4,
+     "r": 1,
+     "er": 1,
+     "bb": 0,
+     "k": 14,
+     "bf": 25,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 1,
+     "hr": 1
+    },
+    {
+     "team": "BOS",
+     "player_id": "papeljo01",
+     "name": "Jonathan Papelbon",
+     "appearance_order": 2,
+     "outs": 5,
+     "h": 1,
+     "r": 0,
+     "er": 0,
+     "bb": 0,
+     "k": 2,
+     "bf": 6,
+     "hb": null,
+     "entry_diff": null,
+     "entry_inning": 8,
+     "hr": 0
+    }
+   ],
+   "errors_by": [],
+   "team_errors": {
+    "BOS": 0,
+    "TB": 0
+   },
+   "rolls": [
+    [
+     148,
+     "2d6"
+    ],
+    [
+     48,
+     "%"
+    ],
+    [
+     60,
+     "2d6"
+    ],
+    [
+     24,
+     "%"
+    ],
+    [
+     132,
+     "2d6"
+    ],
+    [
+     127,
+     "%"
+    ],
+    [
+     37,
+     "2d6"
+    ],
+    [
+     141,
+     "%"
+    ],
+    [
+     15,
+     "2d6"
+    ],
+    [
+     149,
+     "%"
+    ],
+    [
+     231,
+     "2d6"
+    ],
+    [
+     245,
+     "%"
+    ],
+    [
+     220,
+     "2d6"
+    ],
+    [
+     2,
+     "%"
+    ],
+    [
+     70,
+     "2d6"
+    ],
+    [
+     230,
+     "%"
+    ],
+    [
+     11,
+     "2d6"
+    ],
+    [
+     156,
+     "%"
+    ],
+    [
+     95,
+     "2d6"
+    ],
+    [
+     154,
+     "2d6"
+    ],
+    [
+     228,
+     "%"
+    ],
+    [
+     243,
+     "2d6"
+    ],
+    [
+     9,
+     "%"
+    ],
+    [
+     145,
+     "2d6"
+    ],
+    [
+     151,
+     "%"
+    ],
+    [
+     63,
+     "2d6"
+    ],
+    [
+     49,
+     "2d6"
+    ],
+    [
+     233,
+     "%"
+    ],
+    [
+     164,
+     "2d6"
+    ],
+    [
+     172,
+     "1d6"
+    ],
+    [
+     25,
+     "%"
+    ],
+    [
+     152,
+     "2d6"
+    ],
+    [
+     126,
+     "%"
+    ],
+    [
+     43,
+     "2d6"
+    ],
+    [
+     241,
+     "%"
+    ],
+    [
+     193,
+     "2d6"
+    ],
+    [
+     32,
+     "%"
+    ],
+    [
+     105,
+     "2d6"
+    ],
+    [
+     150,
+     "%"
+    ],
+    [
+     244,
+     "2d6"
+    ],
+    [
+     65,
+     "%"
+    ],
+    [
+     158,
+     "2d6"
+    ],
+    [
+     170,
+     "%"
+    ],
+    [
+     129,
+     "2d6"
+    ],
+    [
+     62,
+     "%"
+    ],
+    [
+     175,
+     "2d6"
+    ],
+    [
+     16,
+     "%"
+    ],
+    [
+     0,
+     "RESHUFFLE: after 3 full innings (printed protocol)"
+    ],
+    [
+     30,
+     "2d6"
+    ],
+    [
+     246,
+     "%"
+    ],
+    [
+     1,
+     "2d6"
+    ],
+    [
+     160,
+     "%"
+    ],
+    [
+     206,
+     "2d6"
+    ],
+    [
+     140,
+     "%"
+    ],
+    [
+     170,
+     "2d6"
+    ],
+    [
+     107,
+     "%"
+    ],
+    [
+     76,
+     "2d6"
+    ],
+    [
+     201,
+     "%"
+    ],
+    [
+     219,
+     "2d6"
+    ],
+    [
+     108,
+     "%"
+    ],
+    [
+     179,
+     "2d6"
+    ],
+    [
+     174,
+     "%"
+    ],
+    [
+     226,
+     "2d6"
+    ],
+    [
+     211,
+     "%"
+    ],
+    [
+     163,
+     "2d6"
+    ],
+    [
+     58,
+     "%"
+    ],
+    [
+     92,
+     "2d6"
+    ],
+    [
+     166,
+     "%"
+    ],
+    [
+     86,
+     "2d6"
+    ],
+    [
+     150,
+     "%"
+    ],
+    [
+     252,
+     "2d6"
+    ],
+    [
+     66,
+     "%"
+    ],
+    [
+     47,
+     "2d6"
+    ],
+    [
+     19,
+     "%"
+    ],
+    [
+     224,
+     "2d6"
+    ],
+    [
+     119,
+     "%"
+    ],
+    [
+     128,
+     "2d6"
+    ],
+    [
+     97,
+     "%"
+    ],
+    [
+     79,
+     "2d6"
+    ],
+    [
+     178,
+     "%"
+    ],
+    [
+     81,
+     "2d6"
+    ],
+    [
+     190,
+     "%"
+    ],
+    [
+     56,
+     "2d6"
+    ],
+    [
+     152,
+     "%"
+    ],
+    [
+     44,
+     "2d6"
+    ],
+    [
+     243,
+     "%"
+    ],
+    [
+     35,
+     "2d6"
+    ],
+    [
+     240,
+     "%"
+    ],
+    [
+     168,
+     "2d6"
+    ],
+    [
+     156,
+     "%"
+    ],
+    [
+     149,
+     "2d6"
+    ],
+    [
+     33,
+     "%"
+    ],
+    [
+     191,
+     "2d6"
+    ],
+    [
+     147,
+     "1d6"
+    ],
+    [
+     125,
+     "%"
+    ],
+    [
+     251,
+     "2d6"
+    ],
+    [
+     25,
+     "%"
+    ],
+    [
+     126,
+     "2d6"
+    ],
+    [
+     57,
+     "%"
+    ],
+    [
+     0,
+     "RESHUFFLE: after 6 full innings (printed protocol)"
+    ],
+    [
+     255,
+     "2d6"
+    ],
+    [
+     220,
+     "%"
+    ],
+    [
+     22,
+     "2d6"
+    ],
+    [
+     63,
+     "%"
+    ],
+    [
+     26,
+     "2d6"
+    ],
+    [
+     253,
+     "%"
+    ],
+    [
+     150,
+     "2d6"
+    ],
+    [
+     104,
+     "%"
+    ],
+    [
+     143,
+     "2d6"
+    ],
+    [
+     53,
+     "%"
+    ],
+    [
+     212,
+     "2d6"
+    ],
+    [
+     136,
+     "%"
+    ],
+    [
+     232,
+     "2d6"
+    ],
+    [
+     146,
+     "%"
+    ],
+    [
+     203,
+     "2d6"
+    ],
+    [
+     190,
+     "%"
+    ],
+    [
+     236,
+     "2d6"
+    ],
+    [
+     245,
+     "1d6"
+    ],
+    [
+     137,
+     "%"
+    ],
+    [
+     82,
+     "2d6"
+    ],
+    [
+     116,
+     "%"
+    ],
+    [
+     87,
+     "2d6"
+    ],
+    [
+     211,
+     "%"
+    ],
+    [
+     226,
+     "2d6"
+    ],
+    [
+     44,
+     "%"
+    ],
+    [
+     207,
+     "2d6"
+    ],
+    [
+     246,
+     "%"
+    ],
+    [
+     76,
+     "2d6"
+    ],
+    [
+     250,
+     "%"
+    ],
+    [
+     233,
+     "2d6"
+    ],
+    [
+     70,
+     "%"
+    ],
+    [
+     244,
+     "2d6"
+    ],
+    [
+     128,
+     "%"
+    ],
+    [
+     145,
+     "2d6"
+    ],
+    [
+     133,
+     "%"
+    ]
+   ],
+   "final_grades": {},
+   "fatigue_end_states": {
+    "BOS|clemero02": {
+     "engine_fatigued": false,
+     "book_fatigued": false,
+     "trigger": null
+    },
+    "BOS|papeljo01": {
+     "engine_fatigued": false,
+     "book_fatigued": false,
+     "trigger": null
+    },
+    "TB|shielja02": {
+     "engine_fatigued": true,
+     "book_fatigued": true,
+     "trigger": "cash_third_time"
+    },
+    "TB|howeljp01": {
+     "engine_fatigued": false,
+     "book_fatigued": false,
+     "trigger": null
+    },
+    "TB|mcgeeja01": {
+     "engine_fatigued": false,
+     "book_fatigued": false,
+     "trigger": null
+    }
+   },
+   "game_recap": "The Boston Red Sox beat the Tampa Bay Rays 3-1. The go-ahead run scored in the 6th inning. David Ortiz led the Boston Red Sox offense with 2 hits and 0 RBI in 4 at-bats. Roger Clemens earned the win, allowing 1 earned run in 7.1 innings.",
+   "series_recap": "After 2 games, the Boston Red Sox lead the series 2-0 over the Tampa Bay Rays.",
+   "seed": 20261202,
+   "scoring_plays": [
+    "Inning 6: Tampa Bay Rays scores; BOS 0, TB 1; charged to Roger Clemens",
+    "Inning 6: Boston Red Sox scores; BOS 1, TB 1; charged to James Shields",
+    "Inning 6: Boston Red Sox scores; BOS 2, TB 1; charged to James Shields",
+    "Inning 6: Boston Red Sox scores; BOS 3, TB 1; charged to James Shields"
+   ],
+   "manager_log": [
+    "SETUP ASSERTION BLOCK: all checks PASS (v2 engine + v2 cards bound for BOTH clubs, FAC deck stream installed, FAC-chart absent, addendum live and merging for BOTH clubs, traits ON with Francona governing Boston from the BOS slot and Cash governing Tampa Bay from the guest slot in TOURNAMENT mode (the Opener refused by Joe's ruling; Shields the announced starter), Williams's package managing NEITHER club and no other stray manager package live, Fenway Park in force, fatigue fix layer installed outermost on its seams with both starters' stamina lines served, elimination gating CLOSED for both clubs, and the Game 1 carry proved against Game 1's saved state: Howell capped at 3 outs, every other reliever free, the Francona series ledger carried with the Specialist unused, Cash's per-game budgets reset). Printed in full in the game record.",
+    "PAYOFF PITCH TOP 32 TOURNAMENT, SERIES R1-03, GAME 2 (OFFICIAL): Tampa Bay Rays at Boston Red Sox, Fenway Park (Boston's printed ballpark chart), DH on. Best of 7, home pattern 2-2-1-1-1, Boston home for Games 1, 2, 5 and 7. Boston is the #3 seed, Tampa Bay the #30 seed. Boston leads the series 1-0: Game 1 was Boston 6, Tampa Bay 0, Pedro Martinez's no-hitter.",
+    "Venue and slot note: Tampa Bay plays in the host engine's guest slot ('PHA') and Boston in the 'BOS' slot: Tampa Bay bats in the top half as the visitor and Boston in the bottom half as the home club, and the park card in force is Fenway Park itself. Dick Williams's traits2 package is present only as Kevin Cash's machinery substrate; his decision entry points were re-pointed to no-ops at module level in this process and his Fireman candidate function returns None, so the package manages NEITHER club in this game. Dick Williams manages Montreal in this project (Joe's graphics ruling). No engine file was edited.",
+    "Starters: James Shields (TB) vs Roger Clemens (BOS), the posted Game 2 rotation pairing (BOS rotation: Pedro Martinez, Roger Clemens, Cy Young, Smoky Joe Wood, Lefty Grove; TB rotation: David Price, James Shields, Blake Snell, Shane McClanahan, Scott Kazmir); FAC deck seed 20261202 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Tampa Bay's ratings merged into the layer for the guest slot from the Rays' own pitcher_addendum.json). Stamina lines as served: Roger Clemens Start 8 (book line: 3+ runs from the 8th inning), James Shields Start 6 (book line: 3+ runs from the 6th inning).",
+    "Availability in (Game 2), carried from Game 1 under the house outs convention and proved in the assertion block against Game 1's saved state: J.P. Howell (TB) recorded 8 outs in Game 1 and is CAPPED AT 3 OUTS tonight, enforced by this driver at the first legal decision point after the cap is reached (he finishes the plate appearance in which he reaches it). Every other reliever on both clubs is free: Boston's entire pen went unused behind the no-hitter, and Tampa Bay's other six arms went unused behind Price and Howell. The Francona series ledger was loaded from Game 1's saved state; the Situational Specialist is still unused in this series. Cash's per-game budgets (Modularity 4) reset for Game 2, as his text specifies per game.",
+    "FATIGUE FIX LIVE (Joe's commission, FATIGUE_FIX.md): the fatigue_fix layer is installed over the stack, so all four book fatigue triggers are in force: the engine's 6-run universal rule, the starter-stamina trigger (Start inning reached at 3+ runs, evaluated before the inning's first plate appearance as well as after every one), the Short/Long reliever triggers (appearance innings and runs), and the save-symbol exemption machinery (no converted card carries a symbol, so the exemption correctly cannot fire; no symbol was invented). The layer records the Section 1.6 fatigue standard in the game state.",
+    "Managers: Boston is managed by TERRY FRANCONA (the library layer, traits_francona.py: the Idiots Shield, Grinding the Starter, the Multi-Inning Fireman, the Situational Specialist), governing from the 'BOS' slot in his first official game. Tampa Bay is managed by KEVIN CASH (traits_cash.py: the Third-Time-Through Rule, The Stable, Extreme Roster Modularity), governing from the guest slot as Tampa Bay.",
+    "Cash and the Opener: Cash governs in TOURNAMENT mode. Under Joe's ruling (2026-10-24, 'Since tournament no relievers to start'), The Opener is not available in tournament-governed play: no designation was made for this game, James Shields starts as Tampa Bay's announced starter, and the layer's tournament rule would refuse any designation and ledger the refusal (cash_opener_refused), as proven in the Cash liveness battery.",
+    "Francona's driver-called decision: the pinch-run entry and the Situational Specialist steal are driver calls at PA starts under the layer's design; this driver makes them only inside the trait's own state shape (Boston batting in the 8th or 9th, trailing or tied, a runner on 1st or 2nd who is not RUN 10 with the next base open and an unused RUN-10 bench player), and the layer referees the once-per-series ledger created for this series ('R1-03 BOS vs TB'), which was created in Game 1, lives in Game 1's saved state, and was loaded from that file into this game's traits state with the Specialist still unused.",
+    "Hierarchy in force: book mechanics (fatigue, Rest Chart); the one hard rule (no starting pitcher relieves except for a club facing elimination, with a one-day rotation setback); manager traits where they speak; the hook policy and Joe's closer branch as the DEFAULT policy everywhere else.",
+    "Elimination mark: Game 2 of a best-of-7, Boston leading 1-0; this is an elimination game for NEITHER club. The hard rule's exception is CLOSED for both: no Boston or Tampa Bay starting pitcher may relieve tonight, and no setback question can arise.",
+    "[1T 0 out, bases ---] Carl Crawford vs Roger Clemens",
+    "  dice 2d6=4 (5+3) %=12 -> TOUGH",
+    "  TOUGH %=12 -> SO",
+    "  Carl Crawford strikes out",
+    "  pinch hit (Tampa Bay): Joey Wendle bats for Yandy Diaz (Cash Extreme Roster Modularity: strict platoon advantage)",
+    "[1T 1 out, bases ---] Joey Wendle vs Roger Clemens",
+    "  dice 2d6=8 (2+4) %=10 -> TOUGH",
+    "  TOUGH %=10 -> SO",
+    "  Joey Wendle strikes out",
+    "[1T 2 out, bases ---] Evan Longoria vs Roger Clemens",
+    "  dice 2d6=7 (6+4) %=18 -> TOUGH",
+    "  TOUGH %=18 -> SO",
+    "  Evan Longoria strikes out",
+    "[1B 0 out, bases ---] Tris Speaker vs James Shields",
+    "  dice 2d6=6 (1+2) %=32 -> TOUGH",
+    "  TOUGH %=32 -> 1B",
+    "  Tris Speaker singles (LF fields it)",
+    "[1B 0 out, bases 1--] Dustin Pedroia vs James Shields",
+    "  dice 2d6=3 (2+6) %=80 -> TOUGH",
+    "  TOUGH %=80 above the ranges -> OUT F8",
+    "  fly out CF",
+    "[1B 1 out, bases 1--] Ted Williams vs James Shields",
+    "  dice 2d6=3 (2+5) %=43 -> TOUGH",
+    "  TOUGH %=43 above the ranges -> OUT P5",
+    "  pop out 3B, runners hold",
+    "[1B 2 out, bases 1--] David Ortiz vs James Shields",
+    "  dice 2d6=11 (4+3) %=57 -> TOUGH-OUT",
+    "  David Ortiz strikes out",
+    "[2T 0 out, bases ---] Carlos Pena vs Roger Clemens",
+    "  dice 2d6=7 (4+5) %=85 -> TOUGH",
+    "  TOUGH %=85 -> 1B",
+    "  Carlos Pena singles (RF fields it)",
+    "[2T 0 out, bases 1--] Ben Zobrist vs Roger Clemens",
+    "  dice 2d6=6 (1+5) %=83 -> TOUGH",
+    "  TOUGH %=83 above the ranges -> OUT G6",
+    "  double play turned",
+    "  GIDP SS",
+    "[2T 2 out, bases ---] Brandon Lowe vs Roger Clemens",
+    "  dice 2d6=9 (5+5) %=79 -> PATIENT",
+    "  PATIENT %=79 above the ranges -> OUT F8",
+    "  fly out CF",
+    "[2B 0 out, bases ---] Jimmie Foxx vs James Shields",
+    "  dice 2d6=7 (5+5) %=17 -> IN-PLAY",
+    "  IN-PLAY %=17 -> 1B",
+    "  Jimmie Foxx singles (LF fields it)",
+    "[2B 0 out, bases 1--] Dwight Evans vs James Shields",
+    "  hit and run is on",
+    "  dice 2d6=2 (1+3) %=59 -> IN-PLAY",
+    "  IN-PLAY %=59 above the ranges -> OUT G5",
+    "  hit and run: batter out at 1st, runners advance",
+    "[2B 1 out, bases -1-] Wade Boggs vs James Shields",
+    "  dice 2d6=9 (3+6) %=18 -> PATIENT",
+    "  PATIENT %=18 -> BB",
+    "  Wade Boggs walks",
+    "  Grinding the Starter: Wade Boggs's PATIENT walk banks a grind point on James Shields (1)",
+    "[2B 1 out, bases 11-] Nomar Garciaparra vs James Shields",
+    "  bunt: fielder P, %=82 -> SH",
+    "  sacrifice works: batter out at 1st, runners advance",
+    "[2B 2 out, bases -11] Carlton Fisk vs James Shields",
+    "  dice 2d6=7 (2+5) %=83 -> IN-PLAY",
+    "  IN-PLAY %=83 above the ranges -> OUT G6",
+    "  ground out SS",
+    "[3T 0 out, bases ---] Jason Bartlett vs Roger Clemens",
+    "  dice 2d6=4 (4+3) %=89 -> TOUGH",
+    "  TOUGH %=89 above the ranges -> OUT G4",
+    "  ground out 2B",
+    "[3T 1 out, bases ---] Kevin Kiermaier vs Roger Clemens",
+    "  dice 2d6=8 (1+4) %=36 -> TOUGH",
+    "  TOUGH %=36 -> SO",
+    "  Kevin Kiermaier strikes out",
+    "[3T 2 out, bases ---] Toby Hall vs Roger Clemens",
+    "  dice 2d6=6 (5+6) %=26 -> TOUGH",
+    "  TOUGH %=26 -> 1B",
+    "  Toby Hall singles (CF fields it)",
+    "[3T 2 out, bases 1--] Carl Crawford vs Roger Clemens",
+    "  dice 2d6=11 (5+4) %=28 -> TOUGH",
+    "  TOUGH %=28 -> SO",
+    "  Carl Crawford strikes out",
+    "[3B 0 out, bases ---] Tris Speaker vs James Shields",
+    "  dice 2d6=6 (6+3) %=63 -> TOUGH",
+    "  TOUGH %=63 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[3B 1 out, bases ---] Dustin Pedroia vs James Shields",
+    "  dice 2d6=3 (3+1) %=93 -> TOUGH",
+    "  TOUGH %=93 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[3B 2 out, bases ---] Ted Williams vs James Shields",
+    "  dice 2d6=10 (2+1) %=99 -> TOUGH-OUT",
+    "  TOUGH-OUT: OUT section -> F7",
+    "  fly out LF",
+    "  FAC deck reshuffled after 3 full innings (printed protocol)",
+    "[4T 0 out, bases ---] Joey Wendle vs Roger Clemens",
+    "  dice 2d6=7 (3+2) %=04 -> TOUGH",
+    "  TOUGH %=04 -> SO",
+    "  Joey Wendle strikes out",
+    "[4T 1 out, bases ---] Evan Longoria vs Roger Clemens",
+    "  dice 2d6=8 (2+5) %=27 -> TOUGH",
+    "  TOUGH %=27 -> SO",
+    "  Evan Longoria strikes out",
+    "[4T 2 out, bases ---] Carlos Pena vs Roger Clemens",
+    "  dice 2d6=7 (1+3) %=34 -> TOUGH",
+    "  TOUGH %=34 -> SO",
+    "  Carlos Pena strikes out",
+    "[4B 0 out, bases ---] David Ortiz vs James Shields",
+    "  dice 2d6=9 (3+4) %=58 -> PATIENT",
+    "  PATIENT %=58 -> 2B",
+    "  David Ortiz doubles (CF fields it)",
+    "[4B 0 out, bases -1-] Jimmie Foxx vs James Shields",
+    "  dice 2d6=8 (2+1) %=33 -> IN-PLAY",
+    "  IN-PLAY %=33 above the ranges -> OUT P4",
+    "  pop out 2B, runners hold",
+    "[4B 1 out, bases -1-] Dwight Evans vs James Shields",
+    "  dice 2d6=6 (3+1) %=13 -> TOUGH",
+    "  TOUGH %=13 -> SO",
+    "  Dwight Evans strikes out",
+    "[4B 2 out, bases -1-] Wade Boggs vs James Shields",
+    "  dice 2d6=6 (6+5) %=95 -> TOUGH",
+    "  TOUGH %=95 above the ranges -> OUT F9",
+    "  fly out RF",
+    "[5T 0 out, bases ---] Ben Zobrist vs Roger Clemens",
+    "  dice 2d6=8 (1+1) %=15 -> TOUGH",
+    "  TOUGH %=15 -> SO",
+    "  Ben Zobrist strikes out",
+    "[5T 1 out, bases ---] Brandon Lowe vs Roger Clemens",
+    "  dice 2d6=10 (1+3) %=41 -> TOUGH",
+    "  TOUGH %=41 -> SO",
+    "  Brandon Lowe strikes out",
+    "[5T 2 out, bases ---] Jason Bartlett vs Roger Clemens",
+    "  dice 2d6=8 (5+6) %=90 -> TOUGH",
+    "  TOUGH %=90 above the ranges -> OUT G4",
+    "  ground out 2B",
+    "[5B 0 out, bases ---] Nomar Garciaparra vs James Shields",
+    "  dice 2d6=11 (5+6) %=26 -> TOUGH-OUT",
+    "  Nomar Garciaparra strikes out",
+    "[5B 1 out, bases ---] Carlton Fisk vs James Shields",
+    "  dice 2d6=7 (6+2) %=92 -> IN-PLAY",
+    "  IN-PLAY %=92 above the ranges -> OUT F7",
+    "  fly out LF",
+    "  THIRD TIME THROUGH (Cash): James Shields is fatigued from his 19th batter (book fatigue attached through the fatigue-fix layer)",
+    "[5B 2 out, bases ---] Tris Speaker vs James Shields",
+    "  dice 2d6=6 (6+1) %=20 -> TOUGH",
+    "  TOUGH %=20 -> 2B",
+    "  Tris Speaker doubles (RF fields it)",
+    "[5B 2 out, bases -1-] Dustin Pedroia vs James Shields",
+    "  dice 2d6=9 (4+3) %=81 -> PATIENT",
+    "  WHEELHOUSE %=81 above the ranges -> OUT F8",
+    "  fly out CF",
+    "[6T 0 out, bases ---] Kevin Kiermaier vs Roger Clemens",
+    "  dice 2d6=5 (4+2) %=94 -> TOUGH",
+    "  TOUGH %=94 above the ranges -> OUT F7",
+    "  fly out LF",
+    "[6T 1 out, bases ---] Toby Hall vs Roger Clemens",
+    "  dice 2d6=2 (1+3) %=03 -> WHEELHOUSE",
+    "  WHEELHOUSE %=03 -> HR",
+    "  Toby Hall homers",
+    "[6T 1 out, bases ---] Carl Crawford vs Roger Clemens",
+    "  dice 2d6=10 (3+4) %=58 -> TOUGH",
+    "  TOUGH %=58 above the ranges -> OUT G5",
+    "  ground out 3B",
+    "[6T 2 out, bases ---] Joey Wendle vs Roger Clemens",
+    "  dice 2d6=9 (4+2) %=92 -> PATIENT",
+    "  PATIENT %=92 above the ranges -> OUT G4",
+    "  ground out 2B",
+    "[6B 0 out, bases ---] Ted Williams vs James Shields",
+    "  dice 2d6=8 (6+5) %=25 -> IN-PLAY",
+    "  IN-PLAY %=25 -> 1B",
+    "  Ted Williams singles (RF fields it)",
+    "[6B 0 out, bases 1--] David Ortiz vs James Shields",
+    "  dice 2d6=8 (5+1) %=09 -> IN-PLAY",
+    "  IN-PLAY %=09 -> 2B",
+    "  David Ortiz doubles (LF fields it)",
+    "[6B 0 out, bases -11] Jimmie Foxx vs James Shields",
+    "  dice 2d6=6 (2+5) %=83 -> TOUGH",
+    "  WHEELHOUSE %=83 above the ranges -> OUT F8",
+    "  fly out CF, run tags and scores",
+    "[6B 1 out, bases -1-] Dwight Evans vs James Shields",
+    "  dice 2d6=12 (6+2) %=40 -> PATIENT",
+    "  PATIENT %=40 -> BB",
+    "  Dwight Evans walks",
+    "  Grinding the Starter: Dwight Evans's PATIENT walk banks a grind point on James Shields (2)",
+    "[6B 1 out, bases 11-] Wade Boggs vs James Shields",
+    "  bunt: fielder 3B, %=83 -> SH",
+    "  sacrifice works: batter out at 1st, runners advance",
+    "[6B 2 out, bases -11] Nomar Garciaparra vs James Shields",
+    "  dice 2d6=10 (3+2) %=82 -> TOUGH-OUT",
+    "  WHEELHOUSE %=82 -> 1B",
+    "  Nomar Garciaparra singles (LF fields it)",
+    "Pitching change (Tampa Bay): J.P. Howell replaces James Shields",
+    "[6B 2 out, bases 1--] Carlton Fisk vs J.P. Howell",
+    "  dice 2d6=9 (5+4) %=98 -> PATIENT",
+    "  PATIENT %=98 above the ranges -> OUT F7",
+    "  fly out LF",
+    "  FAC deck reshuffled after 6 full innings (printed protocol)",
+    "[7T 0 out, bases ---] Evan Longoria vs Roger Clemens",
+    "  dice 2d6=8 (3+4) %=34 -> TOUGH",
+    "  TOUGH %=34 -> SO",
+    "  Evan Longoria strikes out",
+    "[7T 1 out, bases ---] Carlos Pena vs Roger Clemens",
+    "  dice 2d6=10 (1+3) %=01 -> TOUGH",
+    "  TOUGH %=01 -> SO",
+    "  Carlos Pena strikes out",
+    "[7T 2 out, bases ---] Ben Zobrist vs Roger Clemens",
+    "  dice 2d6=6 (6+4) %=31 -> TOUGH",
+    "  TOUGH %=31 -> SO",
+    "  Ben Zobrist strikes out",
+    "[7B 0 out, bases ---] Tris Speaker vs J.P. Howell",
+    "  dice 2d6=7 (6+4) %=12 -> TOUGH",
+    "  TOUGH %=12 -> SO",
+    "  Tris Speaker strikes out",
+    "[7B 1 out, bases ---] Dustin Pedroia vs J.P. Howell",
+    "  dice 2d6=7 (4+6) %=36 -> TOUGH",
+    "  TOUGH %=36 -> SO",
+    "  Dustin Pedroia strikes out",
+    "  HOUSE OUTS CAP (carried from Game 1): J.P. Howell has recorded 3 outs in this game, reaching his Game 2 cap of 3 outs (8 outs in Game 1); lifted at the first legal decision point for Jake McGee",
+    "Pitching change (Tampa Bay): Jake McGee replaces J.P. Howell",
+    "  THE STABLE (Cash): Jake McGee enters with the platoon edge on Ted Williams; a first IN-PLAY roll converts to TOUGH",
+    "[7B 2 out, bases ---] Ted Williams vs Jake McGee",
+    "  THE STABLE (Cash): IN-PLAY converted to TOUGH for Jake McGee vs Ted Williams",
+    "  dice 2d6=7 (6+2) %=44 -> TOUGH",
+    "  TOUGH %=44 above the ranges -> OUT G1",
+    "  ground out P",
+    "[8T 0 out, bases ---] Brandon Lowe vs Roger Clemens",
+    "  dice 2d6=5 (2+5) %=49 -> TOUGH",
+    "  TOUGH %=49 -> SO",
+    "  Brandon Lowe strikes out",
+    "[8T 1 out, bases ---] Jason Bartlett vs Roger Clemens",
+    "  dice 2d6=10 (3+4) %=58 -> TOUGH",
+    "  TOUGH %=58 -> 1B",
+    "  Jason Bartlett singles (RF fields it)",
+    "  The Multi-Inning Fireman: Jonathan Papelbon comes in for the 8th with runners aboard",
+    "Pitching change (Boston): Jonathan Papelbon replaces Roger Clemens",
+    "[8T 1 out, bases 1--] Kevin Kiermaier vs Jonathan Papelbon",
+    "  bunt: fielder 3B, %=76 -> SH",
+    "  sacrifice works: batter out at 1st, runners advance",
+    "[8T 2 out, bases -1-] Toby Hall vs Jonathan Papelbon",
+    "  dice 2d6=3 (3+2) %=54 -> TOUGH",
+    "  TOUGH %=54 above the ranges -> OUT G3",
+    "  ground out 1B",
+    "[8B 0 out, bases ---] David Ortiz vs Jake McGee",
+    "  dice 2d6=8 (1+1) %=15 -> TOUGH",
+    "  TOUGH %=15 -> SO",
+    "  David Ortiz strikes out",
+    "[8B 1 out, bases ---] Jimmie Foxx vs Jake McGee",
+    "  dice 2d6=8 (1+6) %=07 -> TOUGH",
+    "  TOUGH %=07 -> SO",
+    "  Jimmie Foxx strikes out",
+    "[8B 2 out, bases ---] Dwight Evans vs Jake McGee",
+    "  dice 2d6=5 (3+2) %=04 -> TOUGH",
+    "  TOUGH %=04 -> SO",
+    "  Dwight Evans strikes out",
+    "[9T 0 out, bases ---] Carl Crawford vs Jonathan Papelbon",
+    "  dice 2d6=8 (2+2) %=02 -> TOUGH",
+    "  TOUGH %=02 -> SO",
+    "  Carl Crawford strikes out",
+    "[9T 1 out, bases ---] Joey Wendle vs Jonathan Papelbon",
+    "  dice 2d6=7 (6+4) %=52 -> TOUGH",
+    "  TOUGH %=52 -> 2B",
+    "  Joey Wendle doubles (LF fields it)",
+    "[9T 1 out, bases -1-] Evan Longoria vs Jonathan Papelbon",
+    "  dice 2d6=11 (5+4) %=90 -> TOUGH",
+    "  TOUGH %=90 above the ranges -> OUT G6",
+    "  ground out SS",
+    "[9T 2 out, bases --1] Carlos Pena vs Jonathan Papelbon",
+    "  dice 2d6=2 (1+2) %=28 -> TOUGH",
+    "  TOUGH %=28 -> SO",
+    "  Carlos Pena strikes out"
+   ],
+   "injuries": [],
+   "n41": null,
+   "caps_in": {
+    "BOS": {},
+    "TB": {
+     "howeljp01": 3
+    }
+   },
+   "caps_out": {
+    "BOS": {},
+    "TB": {}
    }
   }
  ]
