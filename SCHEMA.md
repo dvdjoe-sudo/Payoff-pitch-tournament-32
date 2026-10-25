@@ -138,3 +138,21 @@ Both are stored as they were recorded.
 ## What schema 1 does not change
 
 Series winners, series scores, game scores, inning lines, batting lines, pitching lines, decisions, and the numeric RNG seeds. Renames and added fields are the ones in this document.
+
+## Roster and card data
+
+Two generated files sit beside the results file. They are not part of schema 1 and no locked check covers them. `scripts/build_cards.py` writes both from the converted set files and the master archive; rerunning it with unchanged inputs rewrites byte-identical files.
+
+`data/rosters.json` is keyed by club code: `code`, `name`, `seed`, `played` (whether the club has a game in the archive), and `players`, the roster spots in set order. Each spot is `id`, `name`, `group` (`lineup`, `bench`, `rotation`, or `bullpen`), `slot` within the group, `pos` as the set carries it, and `kind` (`hitter` or `pitcher`). A two-way player holds two spots; Babe Ruth is Boston's bench spot 6 and bullpen spot 7.
+
+`data/cards.json` is keyed `CODE|player_id`, the way `data/bios.json` is keyed. Each entry carries `id`, `name`, `team`, the player's `spots`, and four blocks, any of which can be null:
+
+| Block | Contents |
+|---|---|
+| `peak_bat` | The prime-window batting line from the hitter card's own stat line, counting fields as recorded, plus `window_years` and the line's `team_line`. |
+| `peak_pit` | The prime-window pitching line: W and L, IP, H, HR, BB, SO, HBP, and BF from the v2 card's input row, plus G, GS, SV, R, and ER from the set inputs, and `window_years`. |
+| `card_bat` | The converted hitter card: bats, throws, `positions` (pos, range, e, arm), `sections` (the four sections, each hand, each result a percentile band or null), `out_table`, `dp`, `steal` (jump and rating), `run`, `sac_bunt`, the stat line's fielding and arm labels, and the set's QA status. |
+| `card_pit` | The converted v2 pitcher card: throws, `card_type`, the `table_2d6` section map, `so_modifier`, `special` ratings, the addendum `stamina` (start number, relief class), the addendum ratings (wp, dp, hold, pickoff, inj), and the card's QA classification. |
+| `tournament` | The player's line aggregated from the master archive only: `batting` and `pitching` counting lines (pitching carries outs, not innings) and the `games` he appears in, in archive order. Null when he has no appearance; Philadelphia and Montreal players are all null today. |
+
+Player ids are the Lahman ids from the set inputs, unless the published results file already carries the same player under a different id; the published id wins so links keep working, and the generator prints each such case as a reconciliation. McClanahan is the one case today: `mcclash01` in the inputs and the master archive, `mcclasha01` here.

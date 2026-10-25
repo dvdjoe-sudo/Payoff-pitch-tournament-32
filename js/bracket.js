@@ -38,7 +38,8 @@
 
   var state = {
     data: null, byCode: {}, games: {}, players: {}, highlight: "",
-    colors: {}, bios: {}, odds: null, recap: null, plays: null
+    colors: {}, bios: {}, odds: null, recap: null, plays: null,
+    cards: {}, rosters: {}
   };
   var detailCache = {};
   var renderToken = 0;
@@ -554,7 +555,7 @@
         players[key] = {
           key: key, team: code, id: id, name: name,
           bat: { ab: 0, r: 0, h: 0, rbi: 0, bb: 0, k: 0, hbp: 0, sb: 0, cs: 0, sac: 0, sf: 0, doubles: 0, triples: 0, hr: 0 },
-          pit: { outs: 0, h: 0, r: 0, er: 0, bb: 0, k: 0, gs: 0, w: 0, l: 0, sv: 0 },
+          pit: { outs: 0, h: 0, r: 0, er: 0, bb: 0, k: 0, hr: 0, gs: 0, w: 0, l: 0, sv: 0 },
           log: [], grades: []
         };
       }
@@ -571,7 +572,7 @@
       });
       game.pitching.forEach(function (line) {
         var player = bucket(line.team, line.player_id, line.name);
-        ["outs", "h", "r", "er", "bb", "k"].forEach(function (field) {
+        ["outs", "h", "r", "er", "bb", "k", "hr"].forEach(function (field) {
           player.pit[field] += nz(line[field]);
         });
         if (line.appearance_order === 1) player.pit.gs += 1;
@@ -1075,6 +1076,176 @@
     });
   }
 
+  var GROUP_TITLES = { lineup: "Lineup", bench: "Bench", rotation: "Rotation", bullpen: "Bullpen" };
+
+  function cardFor(code, id) {
+    return (state.cards && state.cards[code + "|" + id]) || null;
+  }
+
+  function rate3(value) {
+    if (value == null || isNaN(value)) return "—";
+    var text = value.toFixed(3);
+    return value < 1 ? text.replace(/^0/, "") : text;
+  }
+
+  function bandText(band) {
+    return band ? band[0] + "-" + band[1] : "—";
+  }
+
+  function spotsText(card) {
+    return (card.spots || []).map(function (spot) {
+      return (GROUP_TITLES[spot.group] || spot.group) + " " + spot.slot + " · " + spot.pos;
+    }).join("; ");
+  }
+
+  function peakSections(page, card) {
+    if (!card.peak_bat && !card.peak_pit) return;
+    page.appendChild(el("h3", { text: "Peak (prime window)" }));
+    page.appendChild(el("p", { class: "note", text: "The prime-window line the converted card was built from, as the set records it." }));
+    if (card.peak_bat) {
+      var bat = card.peak_bat;
+      page.appendChild(el("h4", { text: "Peak batting" }));
+      if (bat.window_years && bat.window_years.length) {
+        page.appendChild(el("p", { class: "note", text: "Window: " + bat.window_years.join(", ") + (bat.team_line ? " · " + bat.team_line : "") + "." }));
+      }
+      var tb = nz(bat.H) + nz(bat["2B"]) + 2 * nz(bat["3B"]) + 3 * nz(bat.HR);
+      var obpDen = nz(bat.AB) + nz(bat.BB) + nz(bat.HBP) + nz(bat.SF);
+      page.appendChild(table(
+        ["G", "PA", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB", "SO", "HBP", "SB", "CS", "AVG", "OBP", "SLG"],
+        [[bat.G, bat.PA, bat.AB, bat.R, bat.H, bat["2B"], bat["3B"], bat.HR, bat.RBI, bat.BB, bat.SO, bat.HBP, bat.SB, bat.CS,
+          rateLabel(bat.H, bat.AB), rate3(obpDen ? (nz(bat.H) + nz(bat.BB) + nz(bat.HBP)) / obpDen : null), rate3(bat.AB ? tb / bat.AB : null)]]));
+    }
+    if (card.peak_pit) {
+      var pit = card.peak_pit;
+      page.appendChild(el("h4", { text: "Peak pitching" }));
+      if (pit.window_years && pit.window_years.length) {
+        page.appendChild(el("p", { class: "note", text: "Window: " + pit.window_years.join(", ") + "." }));
+      }
+      page.appendChild(table(
+        ["W", "L", "G", "GS", "SV", "IP", "H", "R", "ER", "HR", "BB", "SO", "BF", "ERA"],
+        [[pit.w, pit.l, pit.g, pit.gs, pit.sv, pit.ip == null ? null : q1(Number(pit.ip)), pit.h, pit.r, pit.er, pit.hr, pit.bb, pit.so, pit.bf,
+          eraLabel(nz(pit.er), Math.round(Number(pit.ip || 0) * 3))]]));
+    }
+  }
+
+  function cardSections(page, card) {
+    if (!card.card_bat && !card.card_pit) return;
+    page.appendChild(el("h3", { text: "Payoff Pitch card" }));
+    if (card.card_bat) {
+      var bat = card.card_bat;
+      page.appendChild(el("h4", { text: "Hitter card" }));
+      var bits = [];
+      if (bat.bats) bits.push("Bats " + bat.bats);
+      if (bat.throws) bits.push("Throws " + bat.throws);
+      if (bat.run != null) bits.push("Run " + bat.run);
+      if (bat.steal) bits.push("Steal " + bat.steal.rating + (bat.steal.jump != null ? " (jump " + bat.steal.jump + ")" : ""));
+      if (bat.sac_bunt) bits.push("Sac bunt " + bat.sac_bunt);
+      if (bat.dp != null) bits.push("DP " + bat.dp);
+      if (bat.fielding) bits.push("Fielding " + bat.fielding);
+      if (bat.arm) bits.push("Arm " + bat.arm);
+      if (bits.length) page.appendChild(el("p", { class: "meta", text: bits.join(" · ") }));
+      if (bat.positions && bat.positions.length) {
+        page.appendChild(el("p", { text: bat.positions.map(function (spot) {
+          return spot.pos + " (range " + spot.range + ", E" + spot.e + ", arm " + spot.arm + ")";
+        }).join(" · ") }));
+      }
+      ["WHEELHOUSE", "PATIENT", "TOUGH", "IN-PLAY"].forEach(function (name) {
+        var section = bat.sections && bat.sections[name];
+        if (!section) return;
+        page.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
+        var rows = ["HR", "3B", "2B", "1B", "BB", "HBP", "SO"].filter(function (result) {
+          return (section.vsLHP && section.vsLHP[result]) || (section.vsRHP && section.vsRHP[result]);
+        }).map(function (result) {
+          return [result, bandText(section.vsLHP && section.vsLHP[result]), bandText(section.vsRHP && section.vsRHP[result])];
+        });
+        if (rows.length) page.appendChild(table(["Result", "vs LHP", "vs RHP"], rows));
+      });
+      if (bat.out_table && bat.out_table.length) {
+        page.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
+          return row.range[0] + "-" + row.range[1] + " " + row.result;
+        }).join(" · ") }));
+      }
+      if (bat.qa_status) page.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
+    }
+    if (card.card_pit) {
+      var pit = card.card_pit;
+      page.appendChild(el("h4", { text: "Pitcher card (v2)" }));
+      var pbits = [];
+      if (pit.throws) pbits.push("Throws " + pit.throws);
+      if (pit.card_type) pbits.push(pit.card_type);
+      if (pit.so_modifier) pbits.push("Strikeout modifier " + pit.so_modifier);
+      if (pit.special && pit.special.length) pbits.push("Special ratings: " + pit.special.join(", "));
+      if (pbits.length) page.appendChild(el("p", { class: "meta", text: pbits.join(" · ") }));
+      var stam = [];
+      if (pit.stamina) {
+        if (pit.stamina.start != null) stam.push("start " + pit.stamina.start);
+        if (pit.stamina.relief) stam.push("relief " + pit.stamina.relief);
+      }
+      if (stam.length) page.appendChild(el("p", { text: "Stamina: " + stam.join(" · ") }));
+      if (pit.addendum) {
+        var abits = [];
+        [["wp", "WP"], ["dp", "DP"], ["hold", "Hold"], ["pickoff", "Pickoff"], ["inj", "Inj"]].forEach(function (pair) {
+          var value = pit.addendum[pair[0]];
+          if (value != null && value !== "") abits.push(pair[1] + " " + value);
+        });
+        if (abits.length) page.appendChild(el("p", { class: "note", text: "Addendum ratings: " + abits.join(" · ") + "." }));
+      }
+      if (pit.table_2d6) {
+        var totals = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+        page.appendChild(table(
+          ["2d6"].concat(totals),
+          [["Section"].concat(totals.map(function (total) { return pit.table_2d6[total] || "—"; }))]));
+      }
+      if (pit.qa_status) page.appendChild(el("p", { class: "note", text: "Card QA: " + pit.qa_status + "." }));
+    }
+  }
+
+  function rosterSection(page, code) {
+    var roster = state.rosters && state.rosters[code];
+    if (!roster) return;
+    page.appendChild(el("h3", { text: "Roster and player cards" }));
+    page.appendChild(el("p", { class: "note", text: "The converted Payoff Pitch set, in set order. Open a player for his peak line, his card, and his tournament line." }));
+    ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
+      var rows = roster.players.filter(function (spot) { return spot.group === group; });
+      if (!rows.length) return;
+      page.appendChild(el("h4", { text: GROUP_TITLES[group] }));
+      page.appendChild(table(["Slot", "Player", "Position"], rows.map(function (spot) {
+        return [spot.slot, linkPlayer(code, spot.id, spot.name), spot.pos];
+      })));
+    });
+  }
+
+  function renderRosters() {
+    markNav("rosters");
+    clear(view);
+    var page = el("section");
+    page.appendChild(el("h2", { text: "Rosters and player cards" }));
+    page.appendChild(el("p", { class: "note", text: "Eight clubs have converted Payoff Pitch sets on file. Each club page lists its roster spots in set order; each player page shows his peak prime-window line, his converted card, and his tournament line. The other 24 clubs join this page as their sets are converted." }));
+    var clubs = Object.keys(state.rosters || {}).map(function (code) { return state.rosters[code]; })
+      .sort(function (a, b) { return a.seed - b.seed; });
+    if (!clubs.length) page.appendChild(el("p", { text: "No converted sets are on file yet." }));
+    clubs.forEach(function (roster) {
+      var ids = {};
+      var withLines = 0;
+      Object.keys(state.cards || {}).forEach(function (key) {
+        var card = state.cards[key];
+        if (card.team !== roster.code) return;
+        ids[card.id] = true;
+        if (card.tournament) withLines += 1;
+      });
+      var team = state.byCode[roster.code];
+      var panel = el("section", { class: "panel" });
+      panel.appendChild(el("h3", null, linkTeam(roster.code, roster.name)));
+      panel.appendChild(el("p", { class: "meta", text:
+        "Seed " + roster.seed +
+        (team ? " · series " + team.series_wins + "-" + team.series_losses + " · games " + team.game_wins + "-" + team.game_losses : "") +
+        " · " + Object.keys(ids).length + " players · " + withLines + " with tournament lines" +
+        (roster.played ? "" : " · no tournament games yet") }));
+      page.appendChild(panel);
+    });
+    view.appendChild(page);
+  }
+
   function renderTeam(code) {
     markNav("standings");
     var team = state.byCode[code];
@@ -1116,6 +1287,7 @@
       page.appendChild(block);
     });
     if (!any) page.appendChild(el("p", { text: "No series played yet." }));
+    rosterSection(page, code);
     var batRows = [];
     var pitRows = [];
     Object.keys(state.players).forEach(function (key) {
@@ -1137,7 +1309,7 @@
       }
     });
     page.appendChild(el("h3", { text: "Roster stats" }));
-    if (!batRows.length && !pitRows.length) page.appendChild(el("p", { text: "Roster not announced yet." }));
+    if (!batRows.length && !pitRows.length && !(state.rosters && state.rosters[code])) page.appendChild(el("p", { text: "Roster not announced yet." }));
     if (batRows.length) {
       page.appendChild(el("h4", { text: "Batting" }));
       page.appendChild(table(["Player", "PA", "AB", "H", "HR", "RBI", "AVG"], batRows));
@@ -1152,7 +1324,29 @@
   function renderPlayer(code, id) {
     markNav("standings");
     var player = state.players[code + "|" + id];
+    var card = cardFor(code, id);
     clear(view);
+    if (!player && card) {
+      var onlyPage = el("article", { class: "panel" });
+      var onlyTeam = state.byCode[code];
+      var onlyHero = el("div", { class: "player-hero" });
+      if (onlyTeam) onlyHero.appendChild(logo(onlyTeam));
+      onlyHero.appendChild(el("div", null,
+        el("h2", { text: card.name }),
+        el("p", { class: "meta" }, linkTeam(code), " · " + id)
+      ));
+      onlyPage.appendChild(onlyHero);
+      if (spotsText(card)) onlyPage.appendChild(el("p", { class: "meta", text: spotsText(card) }));
+      onlyPage.appendChild(el("h3", { text: "Tournament" }));
+      var roster = state.rosters && state.rosters[code];
+      onlyPage.appendChild(el("p", { text: roster && !roster.played
+        ? clubName(code) + " has not played a tournament game yet. The peak line and the card are below."
+        : "No appearances in the tournament yet. The peak line and the card are below." }));
+      peakSections(onlyPage, card);
+      cardSections(onlyPage, card);
+      view.appendChild(onlyPage);
+      return;
+    }
     if (!player) {
       view.appendChild(el("p", { text: "That player has no line in the archive." }));
       return;
@@ -1172,24 +1366,36 @@
       page.appendChild(el("p", { text: bio.bio }));
       if (bio.career) page.appendChild(el("p", { class: "muted", text: bio.career }));
     }
+    if (card) {
+      peakSections(page, card);
+      cardSections(page, card);
+    }
     if (paOf(player.bat) > 0) {
-      page.appendChild(el("h3", { text: "Batting" }));
+      page.appendChild(el("h3", { text: "Tournament batting" }));
+      var batGames = {};
+      player.log.forEach(function (item) { if (item.side === "bat") batGames[item.game] = true; });
+      var obpDen = player.bat.ab + player.bat.bb + player.bat.hbp + player.bat.sf;
       page.appendChild(table(
-        ["PA", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB", "SO", "SB", "AVG"],
+        ["G", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB", "SO", "SB", "AVG", "OBP", "SLG"],
         [[
-          paOf(player.bat), player.bat.ab, player.bat.r, player.bat.h, player.bat.doubles, player.bat.triples,
+          Object.keys(batGames).length,
+          player.bat.ab, player.bat.r, player.bat.h, player.bat.doubles, player.bat.triples,
           player.bat.hr, player.bat.rbi, player.bat.bb, player.bat.k, player.bat.sb,
-          rateLabel(player.bat.h, player.bat.ab)
+          rateLabel(player.bat.h, player.bat.ab),
+          rate3(obpDen ? (player.bat.h + player.bat.bb + player.bat.hbp) / obpDen : null),
+          rate3(player.bat.ab ? totalBases(player.bat) / player.bat.ab : null)
         ]]
       ));
       var streak = hitStreak(player);
       page.appendChild(el("p", { text: "Hit streak " + streak.currentHit + " (longest " + streak.longestHit + "). Cold streak " + streak.currentCold + " (longest " + streak.longestCold + ")." }));
     }
     if (player.pit.outs + player.pit.w + player.pit.l + player.pit.sv > 0) {
-      page.appendChild(el("h3", { text: "Pitching" }));
+      page.appendChild(el("h3", { text: "Tournament pitching" }));
+      var pitGames = {};
+      player.log.forEach(function (item) { if (item.side === "pit") pitGames[item.game] = true; });
       page.appendChild(table(
-        ["GS", "W", "L", "SV", "IP", "H", "ER", "BB", "SO", "ERA"],
-        [[player.pit.gs, player.pit.w, player.pit.l, player.pit.sv, ipLabel(player.pit.outs), player.pit.h, player.pit.er, player.pit.bb, player.pit.k, eraLabel(player.pit.er, player.pit.outs)]]
+        ["G", "GS", "W", "L", "SV", "IP", "H", "R", "ER", "BB", "SO", "HR", "ERA"],
+        [[Object.keys(pitGames).length, player.pit.gs, player.pit.w, player.pit.l, player.pit.sv, ipLabel(player.pit.outs), player.pit.h, player.pit.r, player.pit.er, player.pit.bb, player.pit.k, player.pit.hr, eraLabel(player.pit.er, player.pit.outs)]]
       ));
       var last = null;
       workloadRows().forEach(function (item) {
@@ -1327,7 +1533,15 @@
     }
     var hits = Object.keys(state.players).map(function (key) { return state.players[key]; }).filter(function (player) {
       return player.name.toLowerCase().indexOf(needle) !== -1 || player.team.toLowerCase().indexOf(needle) !== -1 || player.id.toLowerCase().indexOf(needle) !== -1;
-    }).sort(function (a, b) { return a.name.localeCompare(b.name) || a.team.localeCompare(b.team); });
+    });
+    Object.keys(state.cards || {}).forEach(function (key) {
+      if (state.players[key]) return;
+      var card = state.cards[key];
+      if (card.name.toLowerCase().indexOf(needle) !== -1 || card.team.toLowerCase().indexOf(needle) !== -1 || card.id.toLowerCase().indexOf(needle) !== -1) {
+        hits.push({ name: card.name, team: card.team, id: card.id });
+      }
+    });
+    hits.sort(function (a, b) { return a.name.localeCompare(b.name) || a.team.localeCompare(b.team); });
     if (!hits.length) page.appendChild(el("p", { text: "No matching player line." }));
     hits.forEach(function (player) {
       page.appendChild(el("p", null, linkPlayer(player.team, player.id, player.name), " · ", linkTeam(player.team)));
@@ -2266,6 +2480,7 @@
     var where = route();
     var activeSeries = where.name === "series" ? where.rest[0] : (where.name === "game" && state.games[where.rest[0]] ? state.games[where.rest[0]].series_id : "");
     if (where.name === "standings") renderStandings();
+    else if (where.name === "rosters") renderRosters();
     else if (where.name === "awards") renderAwards();
     else if (where.name === "records") renderRecords();
     else if (where.name === "series") renderSeries(where.rest[0]);
@@ -2339,6 +2554,8 @@
       data,
       loadOptional("data/teams.json"),
       loadOptional("data/bios.json"),
+      loadOptional("data/cards.json"),
+      loadOptional("data/rosters.json"),
       loadOptional("feed/odds.json"),
       loadOptional("feed/recap.json")
     ]);
@@ -2347,8 +2564,10 @@
     state.data = data;
     state.colors = parts[1] || {};
     state.bios = parts[2] || {};
-    state.odds = parts[3];
-    state.recap = parts[4];
+    state.cards = parts[3] || {};
+    state.rosters = parts[4] || {};
+    state.odds = parts[5];
+    state.recap = parts[6];
     state.highlight = storageGet("pp-path");
     data.teams.forEach(function (team) { state.byCode[team.code] = team; });
     data.games.forEach(function (game) { state.games[game.id] = game; });

@@ -118,8 +118,15 @@ The first deploy needs the Pages source set to GitHub Actions. A branch deploy a
 - [Adding games](ADDING_GAMES.md) covers the in-site form and `scripts/import_game.py`.
 - [Install](PWA.md) covers the manifest and the service worker.
 - [Team marks](data/teams.json) are the logo and color swap file.
+- [Rosters and cards](data/rosters.json) list the converted clubs' roster spots, and [player cards](data/cards.json) carry each rostered player's peak line, converted card, and tournament line. Rebuild with `python3 scripts/build_cards.py`.
 - [Odds](feed/odds.json) are the Monte Carlo series and title chances from [MODELS.md](MODELS.md).
 - [JSON feed](feed/tournament.json) and [RSS](feed/games.xml) list the games played.
 - [LEADERBOARDS.md](LEADERBOARDS.md) points at the one leaderboard. It is not a second board.
 
 `python3 scripts/validate_results.py` checks that the box scores, series, and team records still reconcile, and that the split did not change a stat line. `python3 scripts/build_leaders.py` rewrites leaders, team stats, box scores, awards, records, feeds, and share graphics.
+
+## Rosters and player cards
+
+The Rosters view lists the clubs whose Payoff Pitch sets have been converted: Boston, Philadelphia, San Francisco, Montreal, Washington, Tampa Bay, Detroit, and Arizona. Each club page lists its roster spots in set order (lineup, bench, rotation, bullpen). Each player page shows his peak prime-window line, his converted card, and his tournament line under "Tournament batting" and "Tournament pitching". A player whose club has not played yet, Philadelphia and Montreal today, shows his peak line and card with the tournament state stated plainly.
+
+`scripts/build_cards.py` writes `data/rosters.json` and `data/cards.json` from the converted set files and the master archive in the workspace; it is run by hand when a new set is converted, and its header documents the inputs. Adding a club is one row in its SETS table plus a rerun. No game, series, or locked line is read for writing, and the validator's locked checks do not cover these two files.
