@@ -1,0 +1,939 @@
+{
+ "id": "R1-02-G5",
+ "series_id": "R1-02",
+ "game_in_series": 5,
+ "rolls": [
+  [
+   197,
+   "2d6"
+  ],
+  [
+   187,
+   "%"
+  ],
+  [
+   124,
+   "2d6"
+  ],
+  [
+   251,
+   "%"
+  ],
+  [
+   2,
+   "2d6"
+  ],
+  [
+   75,
+   "%"
+  ],
+  [
+   49,
+   "2d6"
+  ],
+  [
+   116,
+   "%"
+  ],
+  [
+   176,
+   "2d6"
+  ],
+  [
+   235,
+   "%"
+  ],
+  [
+   46,
+   "2d6"
+  ],
+  [
+   162,
+   "%"
+  ],
+  [
+   119,
+   "%"
+  ],
+  [
+   10,
+   "2d6"
+  ],
+  [
+   57,
+   "%"
+  ],
+  [
+   61,
+   "%"
+  ],
+  [
+   225,
+   "2d6"
+  ],
+  [
+   198,
+   "%"
+  ],
+  [
+   193,
+   "2d6"
+  ],
+  [
+   31,
+   "%"
+  ],
+  [
+   50,
+   "2d6"
+  ],
+  [
+   183,
+   "%"
+  ],
+  [
+   72,
+   "%"
+  ],
+  [
+   199,
+   "1d6"
+  ],
+  [
+   152,
+   "2d6"
+  ],
+  [
+   151,
+   "2d6"
+  ],
+  [
+   231,
+   "%"
+  ],
+  [
+   139,
+   "%"
+  ],
+  [
+   247,
+   "2d6"
+  ],
+  [
+   56,
+   "%"
+  ],
+  [
+   118,
+   "%"
+  ],
+  [
+   200,
+   "2d6"
+  ],
+  [
+   96,
+   "%"
+  ],
+  [
+   134,
+   "%"
+  ],
+  [
+   41,
+   "2d6"
+  ],
+  [
+   108,
+   "%"
+  ],
+  [
+   147,
+   "2d6"
+  ],
+  [
+   100,
+   "%"
+  ],
+  [
+   38,
+   "%"
+  ],
+  [
+   78,
+   "2d6"
+  ],
+  [
+   9,
+   "%"
+  ],
+  [
+   99,
+   "2d6"
+  ],
+  [
+   114,
+   "%"
+  ],
+  [
+   135,
+   "2d6"
+  ],
+  [
+   213,
+   "%"
+  ],
+  [
+   204,
+   "%"
+  ],
+  [
+   215,
+   "2d6"
+  ],
+  [
+   126,
+   "%"
+  ],
+  [
+   71,
+   "2d6"
+  ],
+  [
+   132,
+   "%"
+  ],
+  [
+   224,
+   "2d6"
+  ],
+  [
+   64,
+   "%"
+  ],
+  [
+   110,
+   "2d6"
+  ],
+  [
+   150,
+   "%"
+  ],
+  [
+   98,
+   "2d6"
+  ],
+  [
+   236,
+   "%"
+  ],
+  [
+   166,
+   "2d6"
+  ],
+  [
+   107,
+   "%"
+  ],
+  [
+   148,
+   "2d6"
+  ],
+  [
+   227,
+   "%"
+  ],
+  [
+   25,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 3 full innings (printed protocol)"
+  ],
+  [
+   109,
+   "2d6"
+  ],
+  [
+   21,
+   "%"
+  ],
+  [
+   150,
+   "2d6"
+  ],
+  [
+   81,
+   "%"
+  ],
+  [
+   70,
+   "2d6"
+  ],
+  [
+   195,
+   "%"
+  ],
+  [
+   164,
+   "2d6"
+  ],
+  [
+   256,
+   "%"
+  ],
+  [
+   208,
+   "%"
+  ],
+  [
+   200,
+   "2d6"
+  ],
+  [
+   74,
+   "%"
+  ],
+  [
+   135,
+   "%"
+  ],
+  [
+   252,
+   "%"
+  ],
+  [
+   243,
+   "2d6"
+  ],
+  [
+   180,
+   "%"
+  ],
+  [
+   106,
+   "2d6"
+  ],
+  [
+   212,
+   "%"
+  ],
+  [
+   34,
+   "2d6"
+  ],
+  [
+   64,
+   "%"
+  ],
+  [
+   92,
+   "2d6"
+  ],
+  [
+   123,
+   "%"
+  ],
+  [
+   238,
+   "2d6"
+  ],
+  [
+   89,
+   "%"
+  ],
+  [
+   229,
+   "2d6"
+  ],
+  [
+   133,
+   "1d6"
+  ],
+  [
+   149,
+   "%"
+  ],
+  [
+   157,
+   "2d6"
+  ],
+  [
+   225,
+   "%"
+  ],
+  [
+   119,
+   "2d6"
+  ],
+  [
+   83,
+   "%"
+  ],
+  [
+   249,
+   "2d6"
+  ],
+  [
+   71,
+   "%"
+  ],
+  [
+   26,
+   "%"
+  ],
+  [
+   95,
+   "2d6"
+  ],
+  [
+   3,
+   "%"
+  ],
+  [
+   1,
+   "2d6"
+  ],
+  [
+   124,
+   "%"
+  ],
+  [
+   183,
+   "2d6"
+  ],
+  [
+   177,
+   "%"
+  ],
+  [
+   23,
+   "2d6"
+  ],
+  [
+   156,
+   "%"
+  ],
+  [
+   181,
+   "2d6"
+  ],
+  [
+   138,
+   "%"
+  ],
+  [
+   169,
+   "2d6"
+  ],
+  [
+   118,
+   "%"
+  ],
+  [
+   77,
+   "2d6"
+  ],
+  [
+   130,
+   "%"
+  ],
+  [
+   42,
+   "2d6"
+  ],
+  [
+   35,
+   "%"
+  ],
+  [
+   73,
+   "%"
+  ],
+  [
+   166,
+   "2d6"
+  ],
+  [
+   247,
+   "%"
+  ],
+  [
+   46,
+   "2d6"
+  ],
+  [
+   239,
+   "%"
+  ],
+  [
+   161,
+   "2d6"
+  ],
+  [
+   2,
+   "1d6"
+  ],
+  [
+   250,
+   "%"
+  ],
+  [
+   41,
+   "2d6"
+  ],
+  [
+   155,
+   "1d6"
+  ],
+  [
+   96,
+   "%"
+  ],
+  [
+   98,
+   "2d6"
+  ],
+  [
+   245,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 6 full innings (printed protocol)"
+  ],
+  [
+   114,
+   "2d6"
+  ],
+  [
+   23,
+   "%"
+  ],
+  [
+   224,
+   "2d6"
+  ],
+  [
+   205,
+   "%"
+  ],
+  [
+   92,
+   "%"
+  ],
+  [
+   256,
+   "2d6"
+  ],
+  [
+   29,
+   "%"
+  ],
+  [
+   40,
+   "2d6"
+  ],
+  [
+   48,
+   "%"
+  ],
+  [
+   247,
+   "2d6"
+  ],
+  [
+   69,
+   "%"
+  ],
+  [
+   202,
+   "2d6"
+  ],
+  [
+   227,
+   "%"
+  ],
+  [
+   182,
+   "2d6"
+  ],
+  [
+   213,
+   "%"
+  ],
+  [
+   76,
+   "2d6"
+  ],
+  [
+   238,
+   "%"
+  ],
+  [
+   54,
+   "2d6"
+  ],
+  [
+   226,
+   "%"
+  ],
+  [
+   38,
+   "2d6"
+  ],
+  [
+   110,
+   "%"
+  ],
+  [
+   186,
+   "2d6"
+  ],
+  [
+   153,
+   "%"
+  ],
+  [
+   81,
+   "2d6"
+  ],
+  [
+   78,
+   "%"
+  ],
+  [
+   252,
+   "2d6"
+  ],
+  [
+   7,
+   "%"
+  ],
+  [
+   253,
+   "2d6"
+  ],
+  [
+   240,
+   "%"
+  ],
+  [
+   177,
+   "2d6"
+  ],
+  [
+   141,
+   "%"
+  ],
+  [
+   179,
+   "2d6"
+  ],
+  [
+   140,
+   "%"
+  ],
+  [
+   39,
+   "2d6"
+  ],
+  [
+   217,
+   "%"
+  ],
+  [
+   101,
+   "2d6"
+  ],
+  [
+   188,
+   "%"
+  ],
+  [
+   248,
+   "2d6"
+  ],
+  [
+   118,
+   "%"
+  ]
+ ],
+ "manager_log": [
+  "SETUP ASSERTION BLOCK: all checks PASS (v2 engine + v2 cards bound for BOTH clubs, FAC deck stream installed, FAC-chart absent, addendum live and merging for BOTH clubs, traits ON with McGraw governing San Francisco from the SF slot and Martinez governing Washington from the MON slot, Williams's package managing NEITHER club, Candlestick Park in force, fatigue fix layer installed outermost with both starters' stamina lines served, elimination gating ASYMMETRIC: the hard-rule exception OPEN for Washington and CLOSED for San Francisco, the Rotation Hack ARMED for Washington). Printed in full in the game record.",
+  "PAYOFF PITCH SERIES GAME 5 (OFFICIAL): Washington Nationals at San Francisco Giants, Candlestick Park (ballpark card from the tracker app data), DH on. Best of 7, home pattern 2-2-1-1-1, San Francisco home for Games 1, 2, 5 and 7. San Francisco leads the series 3-1; this is an elimination game for Washington.",
+  "Venue and slot note: Washington plays in the host engine's 'MON' slot and San Francisco in the 'SF' slot, the Games 1-2 configuration: the series is back at Candlestick Park, Washington bats in the top half as the visitor and San Francisco in the bottom half as the home club, and the park card in force is Candlestick Park itself. Dick Williams's package is hard-keyed to that guest slot; it is disabled in this process (note below) and manages neither club. No engine file was edited.",
+  "Starters: Livan Hernandez (WSH) vs Tim Lincecum (SF), the recorded Game 5 rotation carry (SF rotation: Mathewson, Hubbell, Marichal, Perry, Lincecum; WSH rotation: Scherzer, Strasburg, Zimmermann, Gio Gonzalez, Livan Hernandez); FAC deck seed 20261105 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Washington's ratings merged into the layer for the guest slot from the Nationals' own pitcher_addendum.json). Stamina lines as served: Lincecum Start 6 (book line: 3+ runs from the 6th inning), Livan Hernandez Start 5 (book line: 3+ runs from the 5th inning).",
+  "FATIGUE FIX LIVE (Joe's commission, FATIGUE_FIX.md): the fatigue_fix layer is installed outermost over the stack, so all four book fatigue triggers are in force: the engine's 6-run universal rule, the starter-stamina trigger (Start inning reached at 3+ runs, evaluated before the inning's first plate appearance as well as after every one), the Short/Long reliever triggers (appearance innings and runs), and the save-symbol exemption machinery (no converted card carries a symbol, so the exemption correctly cannot fire; no symbol was invented). The layer records the Section 1.6 fatigue standard in the game state.",
+  "Managers: San Francisco is managed by JOHN McGRAW (v1 decision traits + the v2 late-game package, play selection governed by his traits under the v4 settlement), governing from the 'SF' slot. Washington is managed by DAVE MARTINEZ (v5 library layer, traits5.py: Go 1-0 Today resilience, the Postseason Rotation Hack, Loyal to a Fault, Maddon's Disciple), governing from the 'MON' slot as the guest club, recorded as the Nationals' manager in their SET_REPORT.md.",
+  "Williams note: Dick Williams's traits2 package is hard-keyed to the host engine's 'MON' slot and has no state-level off switch; his decision entry points were re-pointed to no-ops at module level in this process and his Fireman candidate function returns None, so the package manages NEITHER club in this game: not Washington from the MON slot and not San Francisco from the SF slot. Dick Williams manages Montreal in this project (Joe's graphics ruling). No traits file was edited.",
+  "Hierarchy in force: book mechanics (fatigue, Rest Chart); the one hard rule (no starting pitcher relieves except for a club facing elimination, with a one-day rotation setback); manager traits where they speak; the hook policy and Joe's closer branch as the DEFAULT policy everywhere else.",
+  "Elimination mark: Game 5 of a best-of-7 (SF leads 3-1); this IS an elimination game for Washington: if Washington loses tonight, its season ends. The gating is ASYMMETRIC, asserted in the setup block from the elimination list both layers read (S['traits']['elimination'] = ['MON'], the guest slot): the hard rule's exception is OPEN for Washington, so a Washington starting pitcher may relieve tonight (and would take the hard rule's one-day rotation setback, charged on entry), and CLOSED for San Francisco, whose starters may not relieve. Martinez's Postseason Rotation Hack is ARMED for Washington: at every qualifying Washington relief change (8th inning or later, the policy bringing in a bullpen arm, game within 0 to +3 for Washington, a pure closer-branch change not redirected) the layer evaluates it and ledgers the outcome, firing or not. McGraw's Ace in Relief reads the same list and stays gated for San Francisco.",
+  "Trait draw (seeded, documented): McGraw survives the game; no ejection (5% pre-game draw).",
+  "[1T 0 out, bases ---] Denard Span vs Tim Lincecum",
+  "  dice 2d6=9 (6+6) %=72 -> TOUGH",
+  "  TOUGH %=72 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[1T 1 out, bases ---] Trea Turner vs Tim Lincecum",
+  "  dice 2d6=10 (3+3) %=23 -> TOUGH",
+  "  TOUGH %=23 -> SO",
+  "  Trea Turner strikes out",
+  "[1T 2 out, bases ---] Juan Soto vs Tim Lincecum",
+  "  dice 2d6=7 (3+5) %=37 -> TOUGH",
+  "  TOUGH %=37 -> SO",
+  "  Juan Soto strikes out",
+  "[1B 0 out, bases ---] Willie Mays vs Livan Hernandez",
+  "  dice 2d6=9 (3+2) %=54 -> TOUGH",
+  "  TOUGH %=54 -> 1B",
+  "  Willie Mays singles (CF fields it)",
+  "[1B 0 out, bases 1--] Will Clark vs Livan Hernandez",
+  "  hit and run is on",
+  "  dice 2d6=8 (6+6) %=38 -> IN-PLAY",
+  "  IN-PLAY %=38 above the ranges -> OUT P4",
+  "  pop out 2B, runners hold",
+  "[1B 1 out, bases 1--] Mel Ott vs Livan Hernandez",
+  "  hit and run is on",
+  "  dice 2d6=4 (4+2) %=68 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, LHB): IN-PLAY, re-roll %=81",
+  "  IN-PLAY %=81 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[1B 2 out, bases 1--] Barry Bonds vs Livan Hernandez",
+  "  dice 2d6=4 (6+4) %=98 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, LHB): IN-PLAY, re-roll %=98",
+  "  IN-PLAY %=98 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[2T 0 out, bases ---] Bryce Harper vs Tim Lincecum",
+  "  dice 2d6=11 (5+5) %=55 -> TOUGH",
+  "  TOUGH %=55 -> SO",
+  "  Bryce Harper strikes out",
+  "[2T 1 out, bases ---] Anthony Rendon vs Tim Lincecum",
+  "  dice 2d6=8 (1+4) %=78 -> TOUGH",
+  "  TOUGH %=78 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[2T 2 out, bases ---] Ryan Zimmerman vs Tim Lincecum",
+  "  dice 2d6=12 (6+4) %=22 -> PATIENT",
+  "  PATIENT %=22 -> BB",
+  "  Ryan Zimmerman walks",
+  "  PICK OFF WILD?: throw gets away (error, 1B); all runners advance 1 base(s)",
+  "[2T 2 out, bases -1-] Daniel Murphy vs Tim Lincecum",
+  "  WILD PITCH by Tim Lincecum (book p10, addendum WP rating): all runners advance one base",
+  "  dice 2d6=6 (3+2) %=64 -> PATIENT",
+  "  PATIENT %=64 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[2B 0 out, bases ---] Willie McCovey vs Livan Hernandez",
+  "  dice 2d6=4 (6+4) %=14 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, LHB): WHEELHOUSE, re-roll %=87",
+  "  WHEELHOUSE %=87 -> HR",
+  "  Willie McCovey homers",
+  "[2B 0 out, bases ---] Jeff Kent vs Livan Hernandez",
+  "  dice 2d6=4 (4+1) %=81 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, RHB): IN-PLAY, re-roll %=49",
+  "  IN-PLAY %=49 above the ranges -> OUT L4",
+  "  line out 2B, runners hold",
+  "[2B 1 out, bases ---] Buster Posey vs Livan Hernandez",
+  "  dice 2d6=7 (2+1) %=13 -> PATIENT",
+  "  PATIENT %=13 -> BB",
+  "  Buster Posey walks",
+  "[2B 1 out, bases 1--] Matt Williams vs Livan Hernandez",
+  "  hit and run is on",
+  "  dice 2d6=7 (5+1) %=63 -> PATIENT",
+  "  hit and run: PATIENT is a foul ball, re-roll %=75 on IN-PLAY",
+  "  IN-PLAY %=75 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[2B 2 out, bases 1--] Art Fletcher vs Livan Hernandez",
+  "  dice 2d6=5 (2+5) %=17 -> DEFENSE",
+  "  DEFENSE: SS converts it: GB-fc",
+  "  GB-fc: lead runner forced out, batter safe",
+  "[3T 0 out, bases ---] Nick Johnson vs Tim Lincecum",
+  "  dice 2d6=3 (2+1) %=52 -> TOUGH",
+  "  TOUGH %=52 -> 1B",
+  "  Nick Johnson singles (LF fields it)",
+  "  caught stealing: Nick Johnson out at 2",
+  "[3T 1 out, bases ---] Wilson Ramos vs Tim Lincecum",
+  "  dice 2d6=6 (2+5) %=83 -> PATIENT",
+  "  PATIENT %=83 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[3T 2 out, bases ---] Denard Span vs Tim Lincecum",
+  "  dice 2d6=4 (6+6) %=62 -> TOUGH",
+  "  TOUGH %=62 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[3B 0 out, bases ---] Willie Mays vs Livan Hernandez",
+  "  dice 2d6=9 (4+6) %=86 -> TOUGH",
+  "  TOUGH %=86 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[3B 1 out, bases ---] Will Clark vs Livan Hernandez",
+  "  dice 2d6=9 (4+6) %=26 -> TOUGH",
+  "  TOUGH %=26 -> SO",
+  "  Will Clark strikes out",
+  "[3B 2 out, bases ---] Mel Ott vs Livan Hernandez",
+  "  dice 2d6=7 (3+6) %=14 -> PATIENT",
+  "  PATIENT %=14 -> BB",
+  "  Mel Ott walks",
+  "[3B 2 out, bases 1--] Barry Bonds vs Livan Hernandez",
+  "  dice 2d6=7 (6+4) %=58 -> PATIENT",
+  "  PATIENT %=58 -> BB",
+  "  Barry Bonds walks",
+  "[3B 2 out, bases 11-] Willie McCovey vs Livan Hernandez",
+  "  dice 2d6=4 (5+6) %=56 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, LHB): IN-PLAY, re-roll %=82",
+  "  IN-PLAY %=82 above the ranges -> OUT F8",
+  "  fly out CF",
+  "  FAC deck reshuffled after 3 full innings (printed protocol)",
+  "[4T 0 out, bases ---] Trea Turner vs Tim Lincecum",
+  "  dice 2d6=5 (3+3) %=09 -> TOUGH",
+  "  TOUGH %=09 -> SO",
+  "  Trea Turner strikes out",
+  "[4T 1 out, bases ---] Juan Soto vs Tim Lincecum",
+  "  dice 2d6=7 (6+3) %=05 -> TOUGH",
+  "  TOUGH %=05 -> SO",
+  "  Juan Soto strikes out",
+  "[4T 2 out, bases ---] Bryce Harper vs Tim Lincecum",
+  "  dice 2d6=7 (4+6) %=50 -> TOUGH",
+  "  TOUGH %=50 -> SO",
+  "  Bryce Harper strikes out",
+  "[4B 0 out, bases ---] Jeff Kent vs Livan Hernandez",
+  "  dice 2d6=4 (4+5) %=83 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, RHB): IN-PLAY, re-roll %=54",
+  "  IN-PLAY %=54 above the ranges -> OUT L6",
+  "  line out SS, runners hold",
+  "[4B 1 out, bases ---] Buster Posey vs Livan Hernandez",
+  "  dice 2d6=4 (4+5) %=99 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, RHB): IN-PLAY, re-roll %=38",
+  "  IN-PLAY %=38 -> 1B",
+  "  Buster Posey singles (RF fields it)",
+  "  Buster Posey steals 2 safely",
+  "[4B 1 out, bases -1-] Matt Williams vs Livan Hernandez",
+  "  Buster Posey steals 3 safely",
+  "  dice 2d6=7 (3+6) %=61 -> PATIENT",
+  "  PATIENT %=61 above the ranges -> OUT F9",
+  "  fly out RF, run tags and scores",
+  "[4B 2 out, bases ---] Art Fletcher vs Livan Hernandez",
+  "  dice 2d6=8 (1+6) %=86 -> IN-PLAY",
+  "  IN-PLAY %=86 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[5T 0 out, bases ---] Anthony Rendon vs Tim Lincecum",
+  "  dice 2d6=8 (5+6) %=68 -> TOUGH",
+  "  TOUGH %=68 -> 1B",
+  "  Anthony Rendon singles (RF fields it)",
+  "[5T 0 out, bases 1--] Ryan Zimmerman vs Tim Lincecum",
+  "  dice 2d6=7 (4+3) %=95 -> TOUGH",
+  "  TOUGH %=95 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[5T 1 out, bases 1--] Daniel Murphy vs Tim Lincecum",
+  "  bunt: fielder C, %=80 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[5T 2 out, bases -1-] Nick Johnson vs Tim Lincecum",
+  "  dice 2d6=7 (2+5) %=35 -> TOUGH",
+  "  TOUGH %=35 -> SO",
+  "  Nick Johnson strikes out",
+  "[5B 0 out, bases ---] Willie Mays vs Livan Hernandez",
+  "  dice 2d6=5 (3+2) %=26 -> DEFENSE",
+  "  DEFENSE: ball gets by/through LF: Willie Mays with a 1B, runners advance 2",
+  "  Willie Mays steals 2 safely",
+  "[5B 0 out, bases -1-] Will Clark vs Livan Hernandez",
+  "  Willie Mays steals 3 safely",
+  "  dice 2d6=8 (2+3) %=69 -> IN-PLAY",
+  "  IN-PLAY %=69 above the ranges -> OUT G4",
+  "  batter out at 1st, runner on 3rd scores on the throw",
+  "  ground out 2B, run scores",
+  "  FATIGUE (book): Livan Hernandez is fatigued under the book's starter-stamina rule: Start 5 reached (inning 5) with 3 runs allowed, 3 or more (2024 rulebook p10)",
+  "[5B 1 out, bases ---] Mel Ott vs Livan Hernandez",
+  "  dice 2d6=8 (4+3) %=56 -> IN-PLAY",
+  "  IN-PLAY %=56 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[5B 2 out, bases ---] Barry Bonds vs Livan Hernandez",
+  "  dice 2d6=5 (3+5) %=83 -> DEFENSE",
+  "  DEFENSE: SS converts it: GB+adv",
+  "[6T 0 out, bases ---] Wilson Ramos vs Tim Lincecum",
+  "  dice 2d6=12 (6+1) %=87 -> PATIENT",
+  "  PATIENT %=87 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[6T 1 out, bases ---] Denard Span vs Tim Lincecum",
+  "  dice 2d6=9 (5+3) %=33 -> TOUGH",
+  "  TOUGH %=33 -> SO",
+  "  Denard Span strikes out",
+  "[6T 2 out, bases ---] Trea Turner vs Tim Lincecum",
+  "  dice 2d6=3 (2+5) %=59 -> TOUGH",
+  "  TOUGH %=59 -> 1B",
+  "  Trea Turner singles (CF fields it)",
+  "  Trea Turner steals 2 safely",
+  "[6T 2 out, bases -1-] Juan Soto vs Tim Lincecum",
+  "  dice 2d6=7 (6+6) %=86 -> TOUGH",
+  "  TOUGH %=86 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[6B 0 out, bases ---] Willie McCovey vs Livan Hernandez",
+  "  dice 2d6=4 (4+4) %=94 -> BALLPARK",
+  "  WHEELHOUSE %=94 -> 2B",
+  "  Willie McCovey doubles (CF fields it)",
+  "[6B 0 out, bases -1-] Jeff Kent vs Livan Hernandez",
+  "  McGraw tier upgrade: Jeff Kent's bunt reads letter D (printed F)",
+  "  bunt: fielder 1B, %=02 -> PO",
+  "  bunt popped out, runners hold",
+  "[6B 1 out, bases -1-] Buster Posey vs Livan Hernandez",
+  "  McGraw tier upgrade: Buster Posey's bunt reads letter D (printed F)",
+  "  bunt: fielder 1B, %=81 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[6B 2 out, bases --1] Matt Williams vs Livan Hernandez",
+  "  dice 2d6=7 (3+5) %=43 -> PATIENT",
+  "  PATIENT %=43 above the ranges -> OUT G3",
+  "  ground out 1B",
+  "  FAC deck reshuffled after 6 full innings (printed protocol)",
+  "[7T 0 out, bases ---] Bryce Harper vs Tim Lincecum",
+  "  dice 2d6=6 (1+3) %=17 -> PATIENT",
+  "  PATIENT %=17 -> BB",
+  "  Bryce Harper walks",
+  "[7T 0 out, bases 1--] Anthony Rendon vs Tim Lincecum",
+  "  dice 2d6=9 (pair 4+4) %=00 -> TOUGH: RARE PLAY (initial percentile 00)",
+  "  Rare Plays, Runners On, TOUGH: percentile 05 (same FAC stream) -> 00-12: 7th inning or later, the strike zone has become increasingly larger each inning; all TOUGH results for both teams are automatic strikeouts for the remainder of the game",
+  "  Rendon's TOUGH read converts at once to an automatic strikeout (the Series 1 Game 7 precedent, same entry family); Harper holds at 1st, one out, and the clause stays live for both teams for the rest of the game",
+  "  Machinery note: the rest-of-game clause is carried by the flag 'tough_so_rest_game', set by this resolution and read by the flag-gated wrap installed in this game's setup variant (series_sf_wsh_setup_g5_fix.py), which converts every later TOUGH or TOUGH-OUT pitcher result for either club to an automatic strikeout with the shared lingering wrapper's bookkeeping. The wrap is inert unless the flag is set; the flag did not exist for any earlier plate appearance, so nothing already played is affected. No engine or stack file was edited.",
+  "[7T 1 out, bases 1--] Ryan Zimmerman vs Tim Lincecum",
+  "  Ryan Zimmerman strikes out (00-12 lingering clause: TOUGH read vs Tim Lincecum is an automatic SO, remainder of the game, both teams)",
+  "[7T 2 out, bases 1--] Daniel Murphy vs Tim Lincecum",
+  "  Daniel Murphy strikes out (00-12 lingering clause: TOUGH read vs Tim Lincecum is an automatic SO, remainder of the game, both teams)",
+  "[7B 0 out, bases ---] Art Fletcher vs Livan Hernandez",
+  "  dice 2d6=4 (6+2) %=86 -> BALLPARK",
+  "  WHEELHOUSE %=86 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[7B 1 out, bases ---] Willie Mays vs Livan Hernandez",
+  "  dice 2d6=8 (4+6) %=56 -> IN-PLAY",
+  "  IN-PLAY %=56 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[7B 2 out, bases ---] Will Clark vs Livan Hernandez",
+  "  Will Clark strikes out (00-12 lingering clause: TOUGH read vs Livan Hernandez is an automatic SO, remainder of the game, both teams)",
+  "[8T 0 out, bases ---] Nick Johnson vs Tim Lincecum",
+  "  Nick Johnson strikes out (00-12 lingering clause: TOUGH read vs Tim Lincecum is an automatic SO, remainder of the game, both teams)",
+  "[8T 1 out, bases ---] Wilson Ramos vs Tim Lincecum",
+  "  dice 2d6=6 (3+1) %=61 -> PATIENT",
+  "  PATIENT %=61 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[8T 2 out, bases ---] Denard Span vs Tim Lincecum",
+  "  Denard Span strikes out (00-12 lingering clause: TOUGH read vs Tim Lincecum is an automatic SO, remainder of the game, both teams)",
+  "[8B 0 out, bases ---] Mel Ott vs Livan Hernandez",
+  "  dice 2d6=4 (4+6) %=32 -> BALLPARK",
+  "  WHEELHOUSE %=32 -> HR",
+  "  Mel Ott homers",
+  "Pitching change (Washington): Drew Storen replaces Livan Hernandez",
+  "[8B 0 out, bases ---] Barry Bonds vs Drew Storen",
+  "  Barry Bonds strikes out (00-12 lingering clause: TOUGH read vs Drew Storen is an automatic SO, remainder of the game, both teams)",
+  "[8B 1 out, bases ---] Willie McCovey vs Drew Storen",
+  "  Willie McCovey strikes out (00-12 lingering clause: TOUGH read vs Drew Storen is an automatic SO, remainder of the game, both teams)",
+  "[8B 2 out, bases ---] Jeff Kent vs Drew Storen",
+  "  Jeff Kent strikes out (00-12 lingering clause: TOUGH read vs Drew Storen is an automatic SO, remainder of the game, both teams)",
+  "[9T 0 out, bases ---] Trea Turner vs Tim Lincecum",
+  "  dice 2d6=6 (3+2) %=32 -> PATIENT",
+  "  PATIENT %=32 -> BB",
+  "  Trea Turner walks",
+  "[9T 0 out, bases 1--] Juan Soto vs Tim Lincecum",
+  "  dice 2d6=6 (6+3) %=34 -> PATIENT",
+  "  PATIENT %=34 -> BB",
+  "  Juan Soto walks",
+  "[9T 0 out, bases 11-] Bryce Harper vs Tim Lincecum",
+  "  Bryce Harper strikes out (00-12 lingering clause: TOUGH read vs Tim Lincecum is an automatic SO, remainder of the game, both teams)",
+  "[9T 1 out, bases 11-] Anthony Rendon vs Tim Lincecum",
+  "  Anthony Rendon strikes out (00-12 lingering clause: TOUGH read vs Tim Lincecum is an automatic SO, remainder of the game, both teams)",
+  "[9T 2 out, bases 11-] Ryan Zimmerman vs Tim Lincecum",
+  "  Ryan Zimmerman strikes out (00-12 lingering clause: TOUGH read vs Tim Lincecum is an automatic SO, remainder of the game, both teams)"
+ ]
+}
