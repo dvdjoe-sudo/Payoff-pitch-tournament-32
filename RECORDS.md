@@ -11,11 +11,14 @@ A start of at least 9 innings (27 outs) with 0 hits.
 ## Ten or more strikeouts
 
 - Tim Lincecum (San Francisco Giants), R1-02-G5: 16 K in 9.0 IP.
+- Roger Clemens (Boston Red Sox), R1-03-G7: 16 K in 8.2 IP.
 - Christy Mathewson (San Francisco Giants), R1-02-G1: 14 K in 8.0 IP.
 - Roger Clemens (Boston Red Sox), R1-03-G2: 14 K in 7.1 IP.
 - Lefty Gomez (New York Yankees), R1-01-G3: 13 K in 9.0 IP.
 - Pedro Martinez (Boston Red Sox), R1-03-G1: 11 K in 9.0 IP.
+- Pedro Martinez (Boston Red Sox), R1-03-G6: 11 K in 8.0 IP.
 - Ron Guidry (New York Yankees), R1-01-G4: 10 K in 8.0 IP.
+- Smoky Joe Wood (Boston Red Sox), R1-03-G4: 10 K in 6.2 IP.
 
 ## Games with 10 or more runs
 

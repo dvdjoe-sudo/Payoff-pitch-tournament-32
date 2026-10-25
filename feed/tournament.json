@@ -1,19 +1,8 @@
 {
  "title": "Payoff Pitch Tournament 32",
  "site": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/",
- "games_played": 11,
- "next_up": {
-  "series_id": "R1-03",
-  "game_in_series": 3,
-  "home": "TB",
-  "away": "BOS",
-  "home_name": "Tampa Bay Rays",
-  "away_name": "Boston Red Sox",
-  "starters": {
-   "BOS": "Cy Young",
-   "TB": "Blake Snell"
-  }
- },
+ "games_played": 16,
+ "next_up": null,
  "games": [
   {
    "id": "R1-01-G1",
@@ -190,6 +179,86 @@
    "recap": "The Boston Red Sox beat the Tampa Bay Rays 3-1. The go-ahead run scored in the 6th inning. David Ortiz led the Boston Red Sox offense with 2 hits and 0 RBI in 4 at-bats. Roger Clemens earned the win, allowing 1 earned run in 7.1 innings.",
    "rng_seed": 20261202,
    "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-03-G2"
+  },
+  {
+   "id": "R1-03-G3",
+   "series_id": "R1-03",
+   "game_in_series": 3,
+   "date": null,
+   "away": "BOS",
+   "home": "TB",
+   "away_name": "Boston Red Sox",
+   "home_name": "Tampa Bay Rays",
+   "away_runs": 0,
+   "home_runs": 1,
+   "winner": "TB",
+   "recap": "The Tampa Bay Rays beat the Boston Red Sox 1-0. The go-ahead run scored in the 9th inning. Carl Crawford led the Tampa Bay Rays offense with 2 hits and 0 RBI in 4 at-bats. Blake Snell earned the win, allowing 0 earned runs in 9.0 innings.",
+   "rng_seed": 20261203,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-03-G3"
+  },
+  {
+   "id": "R1-03-G4",
+   "series_id": "R1-03",
+   "game_in_series": 4,
+   "date": null,
+   "away": "BOS",
+   "home": "TB",
+   "away_name": "Boston Red Sox",
+   "home_name": "Tampa Bay Rays",
+   "away_runs": 3,
+   "home_runs": 6,
+   "winner": "TB",
+   "recap": "The Tampa Bay Rays beat the Boston Red Sox 6-3. The go-ahead run scored in the 4th inning. Jason Bartlett led the Tampa Bay Rays offense with 3 hits and 3 RBI in 3 at-bats. Shane McClanahan earned the win, allowing 3 earned runs in 8.2 innings.",
+   "rng_seed": 20261204,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-03-G4"
+  },
+  {
+   "id": "R1-03-G5",
+   "series_id": "R1-03",
+   "game_in_series": 5,
+   "date": null,
+   "away": "TB",
+   "home": "BOS",
+   "away_name": "Tampa Bay Rays",
+   "home_name": "Boston Red Sox",
+   "away_runs": 5,
+   "home_runs": 6,
+   "winner": "BOS",
+   "recap": "The Boston Red Sox beat the Tampa Bay Rays 6-5. Dustin Pedroia led the Boston Red Sox offense with 3 hits and 1 RBI in 5 at-bats. Jonathan Papelbon earned the win, allowing 0 earned runs in 2.2 innings.",
+   "rng_seed": 20261205,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-03-G5"
+  },
+  {
+   "id": "R1-03-G6",
+   "series_id": "R1-03",
+   "game_in_series": 6,
+   "date": null,
+   "away": "BOS",
+   "home": "TB",
+   "away_name": "Boston Red Sox",
+   "home_name": "Tampa Bay Rays",
+   "away_runs": 1,
+   "home_runs": 3,
+   "winner": "TB",
+   "recap": "The Tampa Bay Rays beat the Boston Red Sox 3-1. The go-ahead run scored in the 3rd inning. Joey Wendle led the Tampa Bay Rays offense with 1 hits and 2 RBI in 4 at-bats. David Price earned the win, allowing 1 earned run in 8.0 innings.",
+   "rng_seed": 20261206,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-03-G6"
+  },
+  {
+   "id": "R1-03-G7",
+   "series_id": "R1-03",
+   "game_in_series": 7,
+   "date": null,
+   "away": "TB",
+   "home": "BOS",
+   "away_name": "Tampa Bay Rays",
+   "home_name": "Boston Red Sox",
+   "away_runs": 1,
+   "home_runs": 8,
+   "winner": "BOS",
+   "recap": "The Boston Red Sox beat the Tampa Bay Rays 8-1. The go-ahead run scored in the 3rd inning. Wade Boggs led the Boston Red Sox offense with 3 hits and 2 RBI in 4 at-bats. Roger Clemens earned the win, allowing 1 earned run in 8.2 innings.",
+   "rng_seed": 20261207,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-03-G7"
   }
  ]
 }

@@ -9,6 +9,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
 | Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
+| Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 | Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
@@ -17,12 +18,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
 | Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
+| Jason Bartlett | Tampa Bay Rays | 24.0 | 14 | 4 | 4 | 1 |
+| David Ortiz | Boston Red Sox | 23.5 | 14 | 4 | 4 | 2 |
 | Yogi Berra | New York Yankees | 20.5 | 11 | 4 | 4 | 2 |
+| Nomar Garciaparra | Boston Red Sox | 19.5 | 10 | 3 | 6 | 1 |
 | Mel Ott | San Francisco Giants | 19.0 | 12 | 2 | 4 | 1 |
-| Willie Mays | San Francisco Giants | 19.0 | 9 | 4 | 1 | 0 |
-| Barry Bonds | San Francisco Giants | 18.0 | 10 | 3 | 3 | 2 |
-| Jimmie Foxx | Boston Red Sox | 15.0 | 9 | 2 | 4 | 2 |
-| Willie Randolph | New York Yankees | 15.0 | 8 | 5 | 1 | 1 |
 
 ## Cy Young
 
@@ -30,21 +30,21 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
+| Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
+| Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
-| Pedro Martinez | Boston Red Sox | 17.8 | 9.0 | 1 | 11 | 0 |
-| Roger Clemens | Boston Red Sox | 16.4 | 7.1 | 1 | 14 | 1 |
+| Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
+| David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
 | Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
+| Shane McClanahan | Tampa Bay Rays | 11.7 | 8.2 | 1 | 7 | 3 |
 | Jordan Zimmermann | Washington Nationals | 10.6 | 8.0 | 1 | 6 | 3 |
 | Lefty Gomez | New York Yankees | 10.5 | 9.0 | 1 | 13 | 5 |
+| Cy Young | Boston Red Sox | 10.4 | 8.1 | 0 | 9 | 1 |
 | Gaylord Perry | San Francisco Giants | 10.1 | 8.0 | 1 | 7 | 3 |
 | Stephen Strasburg | Washington Nationals | 7.1 | 8.0 | 0 | 9 | 3 |
 | Ron Guidry | New York Yankees | 5.6 | 8.0 | 1 | 10 | 7 |
-| Max Scherzer | Washington Nationals | 3.9 | 6.2 | 0 | 5 | 3 |
-| Juan Marichal | San Francisco Giants | 3.2 | 7.2 | 0 | 9 | 5 |
-| Josh Johnson | Miami Marlins | 3.0 | 6.0 | 0 | 6 | 3 |
-| Gio Gonzalez | Washington Nationals | 2.1 | 7.1 | 0 | 5 | 4 |
 
 ## Reliever
 
@@ -53,17 +53,17 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
+| Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
-| Jonathan Papelbon | Boston Red Sox | 9.1 | 1 | 1.2 | 2 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
 | Chad Cordero | Washington Nationals | 7.4 | 1 | 1.0 | 1 | 0 |
 | Mariano Rivera | New York Yankees | 7.4 | 1 | 1.0 | 1 | 0 |
-| J.P. Howell | Tampa Bay Rays | 7.0 | 0 | 3.2 | 3 | 1 |
+| Pete Fairbanks | Tampa Bay Rays | 7.1 | 1 | 2.1 | 1 | 2 |
+| Jake McGee | Tampa Bay Rays | 6.9 | 0 | 2.2 | 4 | 0 |
+| J.P. Howell | Tampa Bay Rays | 6.3 | 0 | 5.1 | 4 | 4 |
 | David Robertson | New York Yankees | 5.1 | 0 | 4.0 | 4 | 3 |
 | Mike Stanton | New York Yankees | 4.8 | 0 | 2.1 | 4 | 1 |
-| Jake McGee | Tampa Bay Rays | 3.9 | 0 | 1.1 | 3 | 0 |
+| Bob Stanley | Boston Red Sox | 3.7 | 0 | 2.0 | 3 | 1 |
 | Antonio Alfonseca | Miami Marlins | 2.2 | 0 | 5.1 | 5 | 7 |
 | A.J. Burnett | Miami Marlins | 1.8 | 0 | 2.0 | 2 | 2 |
-| Anthony Bender | Miami Marlins | 1.7 | 0 | 4.0 | 3 | 5 |
-| Dave Righetti | New York Yankees | 1.4 | 0 | 2.0 | 1 | 2 |
-| Robb Nen | Miami Marlins | 1.4 | 0 | 2.0 | 1 | 2 |
+| Dick Radatz | Boston Red Sox | 1.7 | 0 | 0.2 | 1 | 0 |

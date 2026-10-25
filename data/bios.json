@@ -35,6 +35,12 @@
   "name": "Nomar Garciaparra",
   "team": "BOS"
  },
+ "BOS|grovele01": {
+  "bio": "Lefty Grove was a Red Sox pitcher and a Hall of Famer.",
+  "career": "300 wins",
+  "name": "Lefty Grove",
+  "team": "BOS"
+ },
  "BOS|martipe02": {
   "bio": "Pedro Martinez was a Red Sox starter, a three-time Cy Young winner, and a Hall of Famer.",
   "career": "219 wins, three Cy Young Awards",
@@ -59,16 +65,40 @@
   "name": "Dustin Pedroia",
   "team": "BOS"
  },
+ "BOS|radatdi01": {
+  "bio": "Dick Radatz was a Red Sox reliever.",
+  "career": "Red Sox reliever",
+  "name": "Dick Radatz",
+  "team": "BOS"
+ },
  "BOS|speaktr01": {
   "bio": "Tris Speaker was a Red Sox center fielder and a Hall of Famer.",
   "career": ".345 career average, 792 doubles",
   "name": "Tris Speaker",
   "team": "BOS"
  },
+ "BOS|stanlbo01": {
+  "bio": "Bob Stanley was a Red Sox reliever.",
+  "career": "Red Sox reliever",
+  "name": "Bob Stanley",
+  "team": "BOS"
+ },
  "BOS|willite01": {
   "bio": "Ted Williams was the Red Sox' left fielder and a Hall of Famer. He hit .406 in 1941.",
   "career": "521 home runs, .344 career average",
   "name": "Ted Williams",
+  "team": "BOS"
+ },
+ "BOS|woodjo02": {
+  "bio": "Smoky Joe Wood was a Red Sox pitcher.",
+  "career": "Red Sox pitcher",
+  "name": "Smoky Joe Wood",
+  "team": "BOS"
+ },
+ "BOS|youngcy01": {
+  "bio": "Cy Young was a Red Sox pitcher. The pitching award is named for him.",
+  "career": "511 wins",
+  "name": "Cy Young",
   "team": "BOS"
  },
  "MIA|alcansa01": {
@@ -437,16 +467,40 @@
   "name": "Matt Williams",
   "team": "SF"
  },
+ "TB|arozara01": {
+  "bio": "Randy Arozarena was a Rays outfielder.",
+  "career": "Rays outfielder",
+  "name": "Randy Arozarena",
+  "team": "TB"
+ },
  "TB|bartlja01": {
   "bio": "Jason Bartlett was a Rays shortstop and a 2009 All-Star.",
   "career": "Rays shortstop",
   "name": "Jason Bartlett",
   "team": "TB"
  },
+ "TB|caminju01": {
+  "bio": "Junior Caminero is a Rays infielder.",
+  "career": "Rays infielder",
+  "name": "Junior Caminero",
+  "team": "TB"
+ },
  "TB|crawfca02": {
   "bio": "Carl Crawford was a Rays left fielder, a stolen-base champion, and a 2010 All-Star.",
   "career": "Rays outfielder",
   "name": "Carl Crawford",
+  "team": "TB"
+ },
+ "TB|diazya01": {
+  "bio": "Yandy Diaz is a Rays infielder.",
+  "career": "Rays infielder",
+  "name": "Yandy Diaz",
+  "team": "TB"
+ },
+ "TB|fairbpe01": {
+  "bio": "Pete Fairbanks is a Rays reliever.",
+  "career": "Rays reliever",
+  "name": "Pete Fairbanks",
   "team": "TB"
  },
  "TB|hallto02": {
@@ -459,6 +513,12 @@
   "bio": "J.P. Howell was a Rays left-handed reliever.",
   "career": "Rays reliever",
   "name": "J.P. Howell",
+  "team": "TB"
+ },
+ "TB|kazmisc01": {
+  "bio": "Scott Kazmir was a Rays pitcher.",
+  "career": "Rays pitcher",
+  "name": "Scott Kazmir",
   "team": "TB"
  },
  "TB|kiermke01": {
@@ -477,6 +537,12 @@
   "bio": "Brandon Lowe is a Rays infielder and a 2020 All-Star.",
   "career": "Rays infielder",
   "name": "Brandon Lowe",
+  "team": "TB"
+ },
+ "TB|mcclasha01": {
+  "bio": "Shane McClanahan is a Rays pitcher.",
+  "career": "Rays pitcher",
+  "name": "Shane McClanahan",
   "team": "TB"
  },
  "TB|mcgeeja01": {
@@ -503,6 +569,18 @@
   "name": "James Shields",
   "team": "TB"
  },
+ "TB|snellbl01": {
+  "bio": "Blake Snell is a Rays pitcher and a Cy Young Award winner.",
+  "career": "2018 AL Cy Young",
+  "name": "Blake Snell",
+  "team": "TB"
+ },
+ "TB|uptonbj01": {
+  "bio": "B.J. Upton was a Rays outfielder.",
+  "career": "Rays outfielder",
+  "name": "B.J. Upton",
+  "team": "TB"
+ },
  "TB|wendljo01": {
   "bio": "Joey Wendle was a Rays infielder.",
   "career": "Rays infielder",
@@ -513,6 +591,12 @@
   "bio": "Ben Zobrist was a Rays utility player and a 2009 All-Star.",
   "career": "Rays infielder and outfielder",
   "name": "Ben Zobrist",
+  "team": "TB"
+ },
+ "TB|zuninmi01": {
+  "bio": "Mike Zunino was a Rays catcher.",
+  "career": "Rays catcher",
+  "name": "Mike Zunino",
   "team": "TB"
  },
  "WSH|cordech01": {

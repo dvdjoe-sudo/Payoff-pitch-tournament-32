@@ -2,6 +2,12 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — R1-03 complete, Boston 4-3
+
+Joe's official box scores closed Opening Round Series 3. Games 1 and 2 already in the archive match those box scores on the site, the linescore, the decisions, and every batting and pitching line. Games 3 through 7 were added in the same shape. The seven games sum to the series totals in the series summary: Boston 27 runs and 53 hits, Tampa Bay 17 runs and 35 hits, and the player batting and pitching tables. Boston is 1-0 on the winners side. Tampa Bay is 0-1 on the losers side and is not eliminated. Series MVP is Roger Clemens. Runner-up is Jimmie Foxx.
+
+Games 3-7 have no per-game calendar date in the box scores, so the date is null. Games 1-2 stay 2026-10-24. The series summary dates the series to October 24 and 25, 2026, without assigning the later games to a day. The box scores also do not include the roll log, so those five detail files store an empty `rolls` array. The win-probability chart for those games steps through the linescore. Tampa Bay's plate appearances are one short of Boston's batters faced, which the series summary already notes: Toby Hall's Game 5 catcher's interference is a plate appearance the batting line does not carry. The published batting table and the box scores agree with each other. That one-plate gap was not filled in. The series summary prints Clemens's ERA as 1.12. Sixteen innings and two earned runs are 1.125, and this archive rounds that half up to 1.13, the same rule already used for Hubbell. The 16.0 innings and two earned runs were not changed.
+
 ## 2026-10-25 — Sharing, logos, and the installable site
 
 The viewer gained a compact phone header, static share pages under `share/`, Open Graph images, Monte Carlo series and title odds in `feed/odds.json`, matchup previews, a videos hub, a weekly recap, an in-site game form, and a service worker. Club marks come from `data/teams.json`. A 1986 logo file is used where the franchise matches that sheet. Marlins, Rays, Diamondbacks, Rockies, Nationals, and Philadelphia Athletics use a monogram because they are not in that sheet. Bios in `data/bios.json` cover only players who appear in the recorded games. Clubs that have not played still have an empty roster stub. The site says "Roster not announced yet." No score, line, or series result was changed.

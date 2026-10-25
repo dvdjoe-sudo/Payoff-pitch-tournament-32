@@ -93,7 +93,12 @@
   "R1-01-G1",
   "R1-01-G2",
   "R1-01-G3",
-  "R1-01-G4"
+  "R1-01-G4",
+  "R1-03-G3",
+  "R1-03-G4",
+  "R1-03-G5",
+  "R1-03-G6",
+  "R1-03-G7"
  ],
  "milestones": {
   "nohitters": [
@@ -113,6 +118,13 @@
     "team": "SF",
     "k": 16,
     "ip": "9.0"
+   },
+   {
+    "game": "R1-03-G7",
+    "name": "Roger Clemens",
+    "team": "BOS",
+    "k": 16,
+    "ip": "8.2"
    },
    {
     "game": "R1-02-G1",
@@ -143,11 +155,25 @@
     "ip": "9.0"
    },
    {
+    "game": "R1-03-G6",
+    "name": "Pedro Martinez",
+    "team": "BOS",
+    "k": 11,
+    "ip": "8.0"
+   },
+   {
     "game": "R1-01-G4",
     "name": "Ron Guidry",
     "team": "NYY",
     "k": 10,
     "ip": "8.0"
+   },
+   {
+    "game": "R1-03-G4",
+    "name": "Smoky Joe Wood",
+    "team": "BOS",
+    "k": 10,
+    "ip": "6.2"
    }
   ],
   "big_games": [

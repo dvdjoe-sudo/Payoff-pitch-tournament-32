@@ -418,6 +418,14 @@
       var starters = (series.carry && series.carry.rotation_next_start) || {};
       found = { series: series, number: number, home: home, away: away, starters: starters };
     });
+    if (found) return found;
+    state.data.series.forEach(function (series) {
+      if (found || series.status !== "scheduled" || !series.team_a || !series.team_b) return;
+      var home = (series.home_by_game || {})["1"];
+      if (!home) return;
+      var away = home === series.team_a ? series.team_b : series.team_a;
+      found = { series: series, number: 1, home: home, away: away, starters: {} };
+    });
     return found;
   }
 
@@ -639,6 +647,42 @@
     view.appendChild(root);
   }
 
+  function narrativeFor(gameId) {
+    var text = "";
+    state.data.series.forEach(function (series) {
+      (series.narratives || []).forEach(function (item) {
+        if (item.game === gameId) text = item.text;
+      });
+    });
+    return text;
+  }
+
+  function seriesCounting(series) {
+    if (!series.team_a || !series.team_b || !(series.games || []).length) return null;
+    var totals = {};
+    totals[series.team_a] = { r: 0, h: 0, hr: 0 };
+    totals[series.team_b] = { r: 0, h: 0, hr: 0 };
+    var any = false;
+    (series.games || []).forEach(function (id) {
+      var game = state.games[id];
+      if (!game) return;
+      any = true;
+      [game.away, game.home].forEach(function (code) {
+        if (!totals[code]) return;
+        totals[code].r += game.score[code];
+        game.batting.forEach(function (line) {
+          if (line.team !== code) return;
+          totals[code].h += nz(line.h);
+          totals[code].hr += nz(line.hr);
+        });
+      });
+    });
+    if (!any) return null;
+    return el("p", {
+      text: clubName(series.team_a) + " " + totals[series.team_a].r + " runs, " + totals[series.team_a].h + " hits, " + totals[series.team_a].hr + " home runs. " + clubName(series.team_b) + " " + totals[series.team_b].r + " runs, " + totals[series.team_b].h + " hits, " + totals[series.team_b].hr + " home runs."
+    });
+  }
+
   function renderSeries(id) {
     markNav("bracket");
     var series = state.data.series.filter(function (item) { return item.id === id; })[0];
@@ -655,6 +699,22 @@
       page.appendChild(el("p", null, linkTeam(series.team_a), " vs ", linkTeam(series.team_b)));
     }
     page.appendChild(oddsBar(series));
+    if (series.mvp) {
+      page.appendChild(el("h3", { text: "Series MVP" }));
+      page.appendChild(el("p", null,
+        linkPlayer(series.mvp.team, series.mvp.player_id, series.mvp.name),
+        " · " + series.mvp.line
+      ));
+      if (series.mvp_runner_up) {
+        page.appendChild(el("p", null,
+          "Runner-up: ",
+          linkPlayer(series.mvp_runner_up.team, series.mvp_runner_up.player_id, series.mvp_runner_up.name),
+          " · " + series.mvp_runner_up.line
+        ));
+      }
+    }
+    var counted = seriesCounting(series);
+    if (counted) page.appendChild(counted);
     var games = el("div", { class: "stack" });
     (series.games || []).forEach(function (gameId) {
       var game = state.games[gameId];
@@ -667,6 +727,12 @@
     });
     if (!(series.games || []).length) page.appendChild(el("p", { text: "No games have been played in this series." }));
     page.appendChild(games);
+    if (series.narratives && series.narratives.length) {
+      page.appendChild(el("h3", { text: "How the series turned" }));
+      series.narratives.forEach(function (item) {
+        page.appendChild(el("p", null, linkGame(item.game, item.game), " ", item.text));
+      });
+    }
     var graphic = "graphics/series/" + series.id + ".svg";
     if (series.status === "complete" || series.status === "in-progress") {
       var img = el("img", { class: "share-card", src: graphic, alt: series.id + " series score graphic" });
@@ -772,6 +838,8 @@
     page.appendChild(wpChart(game));
     page.appendChild(el("h4", { text: "Recap" }));
     page.appendChild(el("p", { class: "recap", text: game.game_recap || "No recap was stored." }));
+    var turning = narrativeFor(game.id);
+    if (turning) page.appendChild(el("p", { class: "recap", text: turning }));
     if (game.series_recap) page.appendChild(el("p", { class: "recap", text: game.series_recap }));
     var logHost = el("div");
     page.appendChild(el("h4", { text: "Manager log" }));
@@ -1633,7 +1701,9 @@
       /* bracket already showing */
     }
     var played = state.data.games.length;
-    lede.textContent = played + " games on record. R1-03 is in progress. Open a series, a game, or a club.";
+    var r103 = state.data.series.filter(function (series) { return series.id === "R1-03"; })[0];
+    var r103Text = r103 && r103.status === "complete" ? "R1-03 is complete, Boston 4-3." : "R1-03 is in progress.";
+    lede.textContent = played + " games on record. " + r103Text + " Open a series, a game, or a club.";
   }
 
   function applyTheme(theme) {
