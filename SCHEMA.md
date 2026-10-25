@@ -73,7 +73,7 @@ TODO for Joe: R1-04 through R1-16 do not carry `round`. R1-01, R1-02, and R1-03 
 | `id` | string | `R1-01-G1`, `R1-02-G3`, and so on. |
 | `series_id` | string | Series id. |
 | `game_in_series` | number | 1-based game number inside the series. |
-| `date` | string or null | Calendar date, `YYYY-MM-DD`, when known. Every R1-02 and R1-03 game is `2026-10-24`. R1-01 games are null. |
+| `date` | string or null | Calendar date, `YYYY-MM-DD`, when known. Every R1-02 game, and R1-03 Games 1 and 2, are `2026-10-24`. R1-03 Games 3-7 have no per-game date. R1-01 games are null. |
 | `away`, `home` | string | Club codes. |
 | `teams` | object | Code to display name, for the two clubs. |
 | `score` | object | Code to runs. |

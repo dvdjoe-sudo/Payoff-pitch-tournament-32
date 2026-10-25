@@ -38,7 +38,7 @@
 
   var state = {
     data: null, byCode: {}, games: {}, players: {}, highlight: "",
-    colors: {}, bios: {}, videos: { games: {}, series: {} }, odds: null, recap: null
+    colors: {}, bios: {}, odds: null, recap: null, plays: null
   };
   var detailCache = {};
   var renderToken = 0;
@@ -748,8 +748,6 @@
     } else if (series.team_a && series.team_b) {
       page.appendChild(el("p", null, el("a", { href: "share/" + series.id + ".html", text: "Share page" })));
     }
-    page.appendChild(el("h4", { text: "Video" }));
-    page.appendChild(videoBlock(videoFor("series", series.id)));
     view.appendChild(page);
   }
 
@@ -859,8 +857,6 @@
       " · ",
       el("a", { href: "box_scores/" + game.id + ".md", text: "Box score markdown" })
     ));
-    page.appendChild(el("h4", { text: "Video" }));
-    page.appendChild(videoBlock(videoFor("games", game.id)));
     view.appendChild(page);
     var token = ++renderToken;
     var detailUrl = game.detail || ("games/" + game.id + ".json");
@@ -914,6 +910,10 @@
     page.appendChild(hero);
     page.appendChild(el("p", { class: "muted", text: markNote(team.code) }));
     page.appendChild(el("p", { text: "Run differential " + (diff.rs - diff.ra) + " (" + diff.rs + " scored, " + diff.ra + " allowed)." }));
+    if (team.game_wins + team.game_losses > 0) {
+      var split = teamSplits()[code] || { home: [0, 0], away: [0, 0], extra: [0, 0], one: [0, 0] };
+      page.appendChild(el("p", { text: "Home " + recordPair(split.home) + ", away " + recordPair(split.away) + ", extra innings " + recordPair(split.extra) + ", one-run " + recordPair(split.one) + "." }));
+    }
     page.appendChild(el("h3", { text: "Results" }));
     var any = false;
     state.data.series.forEach(function (series) {
@@ -998,6 +998,8 @@
           rateLabel(player.bat.h, player.bat.ab)
         ]]
       ));
+      var streak = hitStreak(player);
+      page.appendChild(el("p", { text: "Hit streak " + streak.currentHit + " (longest " + streak.longestHit + "). Cold streak " + streak.currentCold + " (longest " + streak.longestCold + ")." }));
     }
     if (player.pit.outs + player.pit.w + player.pit.l + player.pit.sv > 0) {
       page.appendChild(el("h3", { text: "Pitching" }));
@@ -1005,6 +1007,13 @@
         ["GS", "W", "L", "SV", "IP", "H", "ER", "BB", "SO", "ERA"],
         [[player.pit.gs, player.pit.w, player.pit.l, player.pit.sv, ipLabel(player.pit.outs), player.pit.h, player.pit.er, player.pit.bb, player.pit.k, eraLabel(player.pit.er, player.pit.outs)]]
       ));
+      var last = null;
+      workloadRows().forEach(function (item) {
+        if (item.line.team === code && item.line.player_id === id) last = item;
+      });
+      if (last) {
+        page.appendChild(el("p", { text: "Last outing " + last.game.id + ": " + ipLabel(nz(last.line.outs)) + " IP, " + (last.line.bf == null ? "batters faced not stored" : last.line.bf + " BF") + ", pitches " + last.pitches + ". Rest before that outing: " + last.rest + ". Fatigue: " + last.fatigue + "." }));
+      }
     }
     page.appendChild(el("h3", { text: "Grades" }));
     if (!player.grades.length) {
@@ -1172,38 +1181,6 @@
     );
   }
 
-  function videoFor(kind, id) {
-    var bag = state.videos && state.videos[kind];
-    return bag && bag[id] ? String(bag[id]) : "";
-  }
-
-  function embedUrl(raw) {
-    if (!raw) return "";
-    var url = String(raw).trim();
-    var watch = /^https:\/\/(?:www\.)?youtube\.com\/watch\?v=([\w-]{6,})/.exec(url);
-    if (watch) return "https://www.youtube-nocookie.com/embed/" + watch[1];
-    var short = /^https:\/\/youtu\.be\/([\w-]{6,})/.exec(url);
-    if (short) return "https://www.youtube-nocookie.com/embed/" + short[1];
-    if (/^https:\/\/(?:www\.)?youtube\.com\/embed\/[\w-]{6,}/.test(url)) return url.split("&")[0];
-    if (/^https:\/\/(?:www\.)?youtube-nocookie\.com\/embed\/[\w-]{6,}/.test(url)) return url.split("&")[0];
-    if (/^https:\/\/muse\.ai\/embed\//.test(url)) return url;
-    return "";
-  }
-
-  function videoBlock(url) {
-    if (!url) return el("p", { text: "No video is linked for this page yet." });
-    var src = embedUrl(url);
-    if (!src) return el("p", null, "Linked video: ", el("a", { href: url, text: url }));
-    return el("iframe", {
-      class: "video-frame",
-      src: src,
-      title: "Video",
-      allow: "fullscreen; picture-in-picture",
-      allowfullscreen: "true",
-      loading: "lazy"
-    });
-  }
-
   function renderBanner() {
     clear(banner);
     if (!state.data) {
@@ -1311,27 +1288,448 @@
     return card;
   }
 
-  function renderVideos() {
-    markNav("videos");
-    var page = el("article", { class: "panel video-list" });
-    page.appendChild(el("h2", { text: "Videos" }));
-    var games = (state.videos && state.videos.games) || {};
-    var seriesMap = (state.videos && state.videos.series) || {};
-    var gameIds = Object.keys(games).filter(function (id) { return games[id]; });
-    var seriesIds = Object.keys(seriesMap).filter(function (id) { return seriesMap[id]; });
-    if (!gameIds.length && !seriesIds.length) {
-      page.appendChild(el("p", { text: "No video is linked yet. Add a muse.ai or YouTube embed URL in videos.json. The walkthrough stays in the header." }));
+  function hitStreak(player) {
+    var games = player.log.filter(function (item) { return item.side === "bat"; });
+    var run = 0;
+    var cold = 0;
+    var longestHit = 0;
+    var longestCold = 0;
+    games.forEach(function (item, index) {
+      if (nz(item.line.h) > 0) {
+        run += 1;
+        cold = 0;
+        if (run > longestHit) longestHit = run;
+      } else {
+        run = 0;
+        cold += 1;
+        if (cold > longestCold) longestCold = cold;
+      }
+      if (index === games.length - 1) {
+        player._hit = run;
+        player._cold = cold;
+      }
+    });
+    if (!games.length) {
+      player._hit = 0;
+      player._cold = 0;
     }
-    seriesIds.forEach(function (id) {
-      page.appendChild(el("h3", { text: id }));
-      page.appendChild(videoBlock(seriesMap[id]));
+    return { games: games.length, currentHit: player._hit || 0, longestHit: longestHit, currentCold: player._cold || 0, longestCold: longestCold };
+  }
+
+  function ownedInnings(arms) {
+    var total = arms.reduce(function (sum, arm) { return sum + nz(arm.outs); }, 0);
+    if (!total) return {};
+    var last = total % 3 === 0 ? 3 : total % 3;
+    var count = Math.floor(total / 3) + (total % 3 ? 1 : 0);
+    function lengthOf(inning) { return inning === count ? last : 3; }
+    var buckets = {};
+    var inning = 1;
+    var used = 0;
+    arms.forEach(function (arm) {
+      var left = nz(arm.outs);
+      while (left > 0) {
+        var take = Math.min(left, lengthOf(inning) - used);
+        if (!buckets[inning]) buckets[inning] = [];
+        buckets[inning].push(arm);
+        used += take;
+        left -= take;
+        if (used >= lengthOf(inning)) {
+          inning += 1;
+          used = 0;
+        }
+      }
     });
-    gameIds.forEach(function (id) {
-      page.appendChild(el("h3", null, linkGame(id)));
-      page.appendChild(videoBlock(games[id]));
+    var owned = {};
+    Object.keys(buckets).forEach(function (key) {
+      var ids = {};
+      buckets[key].forEach(function (arm) { ids[arm.player_id] = arm; });
+      var names = Object.keys(ids);
+      owned[key] = names.length === 1 ? ids[names[0]] : null;
     });
+    return owned;
+  }
+
+  var PLATE = { K: 1, OUT: 1, HIT: 1, BB: 1, HBP: 1, ERR: 1, DP: 1, FC: 1 };
+
+  function matchupRows() {
+    var rows = {};
+    var skipped = 0;
+    var named = 0;
+    state.data.games.forEach(function (game) {
+      var detail = detailCache[game.id];
+      var rolls = detail && detail.rolls;
+      if (!rolls || !rolls.length || !rolls[0] || !rolls[0].player_id) return;
+      named += 1;
+      var byTeam = {};
+      [game.home, game.away].forEach(function (code) {
+        var arms = game.pitching.filter(function (line) { return line.team === code; })
+          .sort(function (a, b) { return a.appearance_order - b.appearance_order; });
+        byTeam[code] = ownedInnings(arms);
+      });
+      rolls.forEach(function (roll) {
+        if (!PLATE[roll.kind]) return;
+        var defense = roll.half === "top" ? game.home : game.away;
+        var arm = byTeam[defense][String(roll.inning)];
+        if (!arm) {
+          skipped += 1;
+          return;
+        }
+        var key = roll.team + "|" + roll.player_id + "|" + arm.team + "|" + arm.player_id;
+        if (!rows[key]) {
+          rows[key] = {
+            batterTeam: roll.team, batterId: roll.player_id, batter: roll.batter,
+            pitcherTeam: arm.team, pitcherId: arm.player_id, pitcher: arm.name,
+            pa: 0, ab: 0, h: 0, hr: 0, bb: 0, k: 0
+          };
+        }
+        var row = rows[key];
+        row.pa += 1;
+        if (roll.kind === "HIT") {
+          row.h += 1;
+          row.ab += 1;
+          if (/HOME RUN/i.test(roll.result_text || "")) row.hr += 1;
+        } else if (roll.kind === "K") {
+          row.k += 1;
+          row.ab += 1;
+        } else if (roll.kind === "BB") {
+          row.bb += 1;
+        } else if (roll.kind === "HBP") {
+          /* plate appearance, not an at-bat */
+        } else if (roll.kind === "ERR") {
+          /* reached without an at-bat in this count */
+        } else {
+          row.ab += 1;
+        }
+      });
+    });
+    return {
+      rows: Object.keys(rows).map(function (key) { return rows[key]; }).sort(function (a, b) {
+        return b.pa - a.pa || a.batter.localeCompare(b.batter);
+      }),
+      skipped: skipped,
+      named: named
+    };
+  }
+
+  function workloadRows() {
+    var previous = {};
+    var rows = [];
+    state.data.games.forEach(function (game, index) {
+      game.pitching.forEach(function (line) {
+        var key = line.team + "|" + line.player_id;
+        var prior = previous[key];
+        var rest = "first appearance";
+        if (prior) {
+          if (!prior.game.date || !game.date) rest = "date not recorded";
+          else rest = String(Math.round((Date.parse(game.date + "T00:00:00Z") - Date.parse(prior.game.date + "T00:00:00Z")) / 86400000));
+        }
+        var fatigue = (game.fatigue_end_states || {})[key];
+        var fatigueText = "not recorded";
+        if (fatigue) {
+          fatigueText = fatigue.book_fatigued ? "book fatigued" : "not fatigued";
+          if (fatigue.trigger) fatigueText += " (" + fatigue.trigger + ")";
+        }
+        var pitches = line.pitches != null ? line.pitches : (line.pc != null ? line.pc : null);
+        rows.push({
+          game: game, line: line, index: index, rest: rest, fatigue: fatigueText,
+          pitches: pitches == null ? "—" : String(pitches)
+        });
+        previous[key] = { game: game };
+      });
+    });
+    return rows;
+  }
+
+  function teamSplits() {
+    var table = {};
+    function row(code) {
+      if (!table[code]) table[code] = { home: [0, 0], away: [0, 0], extra: [0, 0], one: [0, 0] };
+      return table[code];
+    }
+    function mark(pair, won) { pair[won ? 0 : 1] += 1; }
+    state.data.games.forEach(function (game) {
+      var innings = Math.max((game.line[game.away] || []).length, (game.line[game.home] || []).length);
+      var one = Math.abs(game.score[game.home] - game.score[game.away]) === 1;
+      [game.home, game.away].forEach(function (code) {
+        var bucket = row(code);
+        var won = game.winner === code;
+        mark(code === game.home ? bucket.home : bucket.away, won);
+        if (innings > 9) mark(bucket.extra, won);
+        if (one) mark(bucket.one, won);
+      });
+    });
+    return table;
+  }
+
+  function recordPair(pair) {
+    if (!pair || (pair[0] === 0 && pair[1] === 0)) return "—";
+    return pair[0] + "-" + pair[1];
+  }
+
+  function headToHead() {
+    var map = {};
+    state.data.games.forEach(function (game) {
+      var codes = [game.home, game.away].slice().sort();
+      var id = codes[0] + "|" + codes[1];
+      if (!map[id]) map[id] = { a: codes[0], b: codes[1], wins: {} };
+      map[id].wins[game.winner] = (map[id].wins[game.winner] || 0) + 1;
+    });
+    state.data.series.forEach(function (series) {
+      if (!series.team_a || !series.team_b || series.status !== "complete") return;
+      var codes = [series.team_a, series.team_b].slice().sort();
+      var id = codes[0] + "|" + codes[1];
+      if (!map[id]) map[id] = { a: codes[0], b: codes[1], wins: {} };
+      map[id].series = series;
+    });
+    return Object.keys(map).map(function (id) { return map[id]; }).sort(function (a, b) {
+      return a.a.localeCompare(b.a) || a.b.localeCompare(b.b);
+    });
+  }
+
+  function isWalkOff(game) {
+    if (game.winner !== game.home) return false;
+    var home = game.line[game.home] || [];
+    var away = game.line[game.away] || [];
+    if (!home.length || home[home.length - 1] <= 0) return false;
+    var before = home.slice(0, -1).reduce(function (sum, runs) { return sum + runs; }, 0);
+    var awayTotal = away.reduce(function (sum, runs) { return sum + runs; }, 0);
+    return before <= awayTotal;
+  }
+
+  function renderStats() {
+    markNav("stats");
+    var page = el("article", { class: "stack" });
+    page.appendChild(el("h2", { text: "Stats" }));
+    page.appendChild(el("p", { class: "note", text: "Counted from the stored games, in archive order. A hit streak is consecutive games with a hit. A cold streak is consecutive games with none. Rest is the number of calendar days since that pitcher's previous appearance. Pitch counts appear only when a box score carries them; otherwise the line is innings and batters faced." }));
+    var streakRows = [];
+    Object.keys(state.players).forEach(function (key) {
+      var player = state.players[key];
+      var streak = hitStreak(player);
+      if (streak.longestHit < 2 && streak.currentCold < 2) return;
+      streakRows.push([
+        linkPlayer(player.team, player.id, player.name),
+        clubName(player.team),
+        String(streak.currentHit),
+        String(streak.longestHit),
+        String(streak.currentCold),
+        String(streak.longestCold)
+      ]);
+    });
+    streakRows.sort(function (a, b) { return Number(b[3]) - Number(a[3]) || a[0].textContent.localeCompare(b[0].textContent); });
+    page.appendChild(el("h3", { text: "Hot and cold" }));
+    if (!streakRows.length) page.appendChild(el("p", { text: "No streak of two games yet." }));
+    else page.appendChild(table(["Player", "Team", "Hit streak", "Longest", "Cold", "Longest cold"], streakRows));
+    var loads = workloadRows();
+    page.appendChild(el("h3", { text: "Pitcher workload" }));
+    page.appendChild(table(
+      ["Player", "Game", "IP", "BF", "Pitches", "Rest", "Fatigue"],
+      loads.map(function (item) {
+        return [
+          linkPlayer(item.line.team, item.line.player_id, item.line.name),
+          linkGame(item.game.id),
+          ipLabel(nz(item.line.outs)),
+          item.line.bf == null ? "—" : String(item.line.bf),
+          item.pitches,
+          item.rest,
+          item.fatigue
+        ];
+      })
+    ));
+    page.appendChild(el("h3", { text: "Head to head" }));
+    var pairs = headToHead();
+    if (!pairs.length) page.appendChild(el("p", { text: "No two clubs have played." }));
+    else {
+      page.appendChild(table(["Clubs", "Games", "Series"], pairs.map(function (pair) {
+        var clubs = el("span");
+        clubs.appendChild(linkTeam(pair.a));
+        clubs.appendChild(document.createTextNode(" and "));
+        clubs.appendChild(linkTeam(pair.b));
+        var seriesText = "—";
+        if (pair.series) {
+          var series = pair.series;
+          seriesText = clubName(series.winner) + " " + series.wins[series.winner] + "-" + series.wins[series.loser];
+        }
+        return [clubs, (pair.wins[pair.a] || 0) + "-" + (pair.wins[pair.b] || 0), seriesText];
+      })));
+    }
+    page.appendChild(el("h3", { text: "Team splits" }));
+    var splits = teamSplits();
+    var splitRows = state.data.teams.filter(function (team) { return team.game_wins + team.game_losses > 0; }).map(function (team) {
+      var row = splits[team.code] || { home: [0, 0], away: [0, 0], extra: [0, 0], one: [0, 0] };
+      return [linkTeam(team.code, team.name), recordPair(row.home), recordPair(row.away), recordPair(row.extra), recordPair(row.one)];
+    });
+    page.appendChild(table(["Team", "Home", "Away", "Extra innings", "One-run"], splitRows));
+    page.appendChild(el("h3", { text: "Batter vs pitcher" }));
+    var host = el("div");
+    host.appendChild(el("p", { class: "muted", text: "Loading play logs…" }));
+    page.appendChild(host);
     clear(view);
     view.appendChild(page);
+    ensureDetails(function () {
+      clear(host);
+      var found = matchupRows();
+      host.appendChild(el("p", { class: "note", text: "A plate appearance is matched only when the roll log names the batter and one pitcher recorded every out in that inning. " + found.named + " game logs name the batter. " + found.skipped + " plate appearances were in a shared inning and are not in the table. Roll logs that do not name the batter are omitted." }));
+      if (!found.rows.length) {
+        host.appendChild(el("p", { text: "No batter-pitcher plate appearance could be matched." }));
+        return;
+      }
+      host.appendChild(table(
+        ["Batter", "Pitcher", "PA", "AB", "H", "HR", "BB", "SO"],
+        found.rows.slice(0, 40).map(function (row) {
+          return [
+            linkPlayer(row.batterTeam, row.batterId, row.batter),
+            linkPlayer(row.pitcherTeam, row.pitcherId, row.pitcher),
+            row.pa, row.ab, row.h, row.hr, row.bb, row.k
+          ];
+        })
+      ));
+    });
+  }
+
+  function changelogEvents(text) {
+    return text.split(/\n(?=## )/).filter(function (block) { return block.indexOf("## ") === 0; }).map(function (block) {
+      var lines = block.split("\n");
+      var title = lines[0].replace(/^##\s+/, "");
+      var body = lines.slice(1).join("\n").trim();
+      var prose = "";
+      body.split(/\n\n+/).some(function (part) {
+        var trimmed = part.trim();
+        if (!trimmed || trimmed.charAt(0) === "#") return false;
+        prose = trimmed.replace(/\s+/g, " ");
+        return true;
+      });
+      var dated = /^(\d{4}-\d{2}-\d{2})/.exec(title);
+      return { date: dated ? dated[1] : "", title: title, text: prose };
+    });
+  }
+
+  function fieldEvents() {
+    var events = [];
+    state.data.series.forEach(function (series) {
+      if (series.status !== "complete" || !series.winner) return;
+      var games = (series.games || []).map(function (id) { return state.games[id]; }).filter(Boolean);
+      var dates = games.map(function (game) { return game.date; }).filter(Boolean).sort();
+      events.push({
+        date: dates.length ? dates[dates.length - 1] : "",
+        order: series.id,
+        kind: "Series",
+        title: series.id + " final",
+        text: clubName(series.winner) + " beat " + clubName(series.loser) + " " + series.wins[series.winner] + "-" + series.wins[series.loser] + (series.mvp ? ". MVP " + series.mvp.name + "." : "."),
+        href: "#/series/" + series.id,
+        label: series.id
+      });
+    });
+    var found = milestones();
+    found.nohitters.forEach(function (item) {
+      events.push({
+        date: item.game.date || "",
+        order: item.game.id + "-nh",
+        kind: "Milestone",
+        title: item.line.name + " no-hitter",
+        text: ipLabel(nz(item.line.outs)) + " IP, 0 H, " + nz(item.line.k) + " K in " + item.game.id + ".",
+        href: "#/game/" + item.game.id,
+        label: item.game.id
+      });
+    });
+    found.highK.forEach(function (item) {
+      events.push({
+        date: item.game.date || "",
+        order: item.game.id + "-k" + item.line.player_id,
+        kind: "Milestone",
+        title: item.line.name + " " + nz(item.line.k) + " strikeouts",
+        text: nz(item.line.k) + " K in " + ipLabel(nz(item.line.outs)) + " IP, " + item.game.id + ".",
+        href: "#/game/" + item.game.id,
+        label: item.game.id
+      });
+    });
+    state.data.games.forEach(function (game) {
+      if (!isWalkOff(game)) return;
+      var series = state.data.series.filter(function (item) { return item.id === game.series_id; })[0];
+      var narrative = "";
+      if (series && series.narratives) {
+        series.narratives.forEach(function (item) {
+          if (item.game === game.id && /walk-off/i.test(item.text || "")) narrative = item.text;
+        });
+      }
+      events.push({
+        date: game.date || "",
+        order: game.id + "-wo",
+        kind: "Milestone",
+        title: clubName(game.home) + " walk-off",
+        text: narrative || (clubName(game.home) + " won " + game.score[game.home] + "-" + game.score[game.away] + " on a walk-off in " + game.id + "."),
+        href: "#/game/" + game.id,
+        label: game.id
+      });
+    });
+    return events;
+  }
+
+  function renderHistory() {
+    markNav("history");
+    var page = el("article", { class: "stack" });
+    page.appendChild(el("h2", { text: "Tournament history" }));
+    page.appendChild(el("p", { class: "note", text: "Series results and milestones are counted from the box scores. Rulings are the dated sections of CHANGELOG.md. A game with no stored date is listed after the dated items." }));
+    var list = el("ol", { class: "timeline" });
+    fieldEvents().sort(function (a, b) {
+      if (!!a.date !== !!b.date) return a.date ? -1 : 1;
+      if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+      return a.order < b.order ? -1 : 1;
+    }).forEach(function (item) {
+      list.appendChild(el("li", null,
+        el("p", { class: "meta", text: (item.date || "Date not stored") + " · " + item.kind }),
+        el("p", null, el("a", { href: item.href, text: item.title })),
+        el("p", { text: item.text })
+      ));
+    });
+    page.appendChild(el("h3", { text: "On the field" }));
+    page.appendChild(list);
+    page.appendChild(el("h3", { text: "Rulings" }));
+    var rulings = el("div", { class: "stack" });
+    rulings.appendChild(el("p", { class: "muted", text: "Loading the changelog…" }));
+    page.appendChild(rulings);
+    clear(view);
+    view.appendChild(page);
+    fetch("CHANGELOG.md").then(function (response) {
+      if (!response.ok) throw new Error("changelog");
+      return response.text();
+    }).then(function (text) {
+      clear(rulings);
+      var items = el("ol", { class: "timeline" });
+      changelogEvents(text).forEach(function (item) {
+        items.appendChild(el("li", null,
+          el("p", { class: "meta", text: item.date || "Undated" }),
+          el("p", null, el("strong", { text: item.title })),
+          item.text ? el("p", { text: item.text }) : el("p", { class: "muted", text: "See CHANGELOG.md." })
+        ));
+      });
+      rulings.appendChild(items);
+      rulings.appendChild(el("p", null, el("a", { href: "CHANGELOG.md", text: "Open the changelog" })));
+    }).catch(function () {
+      clear(rulings);
+      rulings.appendChild(el("p", { text: "The changelog did not load." }));
+    });
+  }
+
+  function ensureDetails(done) {
+    var pending = state.data.games.filter(function (game) { return !detailCache[game.id]; });
+    if (!pending.length) {
+      done();
+      return;
+    }
+    var left = pending.length;
+    pending.forEach(function (game) {
+      fetch(game.detail || ("games/" + game.id + ".json")).then(function (response) {
+        if (!response.ok) throw new Error(game.id);
+        return response.json();
+      }).then(function (detail) {
+        detailCache[game.id] = detail;
+      }).catch(function () {
+        detailCache[game.id] = { rolls: [] };
+      }).then(function () {
+        left -= 1;
+        if (!left) done();
+      });
+    });
   }
 
   function renderRecap() {
@@ -1692,7 +2090,8 @@
     else if (where.name === "player") renderPlayer(where.rest[0], where.rest[1]);
     else if (where.name === "search") renderSearch(where.query || where.rest.join("/"));
     else if (where.name === "previews") renderPreviews();
-    else if (where.name === "videos") renderVideos();
+    else if (where.name === "stats") renderStats();
+    else if (where.name === "history") renderHistory();
     else if (where.name === "recap") renderRecap();
     else if (where.name === "add") renderAdd();
     else renderBracket(activeSeries);
@@ -1756,7 +2155,6 @@
       data,
       loadOptional("data/teams.json"),
       loadOptional("data/bios.json"),
-      loadOptional("videos.json"),
       loadOptional("feed/odds.json"),
       loadOptional("feed/recap.json")
     ]);
@@ -1765,9 +2163,8 @@
     state.data = data;
     state.colors = parts[1] || {};
     state.bios = parts[2] || {};
-    state.videos = parts[3] || { games: {}, series: {} };
-    state.odds = parts[4];
-    state.recap = parts[5];
+    state.odds = parts[3];
+    state.recap = parts[4];
     state.highlight = storageGet("pp-path");
     data.teams.forEach(function (team) { state.byCode[team.code] = team; });
     data.games.forEach(function (game) { state.games[game.id] = game; });
