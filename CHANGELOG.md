@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — Win probability, daily highlight, scorecards
+
+Each game page charts a home win-probability estimate from the inning line. The formula is in [MODELS.md](MODELS.md). The chart says it is a model estimate. A game with no inning line has no chart. Stored scoring plays are used for the finer steps when they add up to the final score. The home page shows one recorded moment for the calendar date: a no-hitter, a 10-strikeout game, a walk-off, a 10-run game, or a finished series. The same date always shows the same moment. `scripts/build_leaders.py` writes a PDF scorecard for every game. That step needs the packages in `requirements.txt` (`fpdf2`). The Actions workflows install them. Each game page has a Print / Save as PDF button. No score, line, or series result was changed.
+
 ## 2026-10-25 — Inbox import, derived stats, history
 
 The videos hub, its nav link, `videos.json`, and the video blocks on game and series pages were removed. The walkthrough link in the header stays. The install notes no longer describe an Android wrapper. The installable page is unchanged.

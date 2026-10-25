@@ -307,103 +307,184 @@
     return 1 / (1 + Math.exp(-scale * margin));
   }
 
-  function wpEvents(game) {
-    var events = [];
-    var fallback = false;
+  function halfText(game, inning, bottom, runs, home, away) {
+    var word = runs === 1 ? "run" : "runs";
+    return (bottom ? "Bottom " : "Top ") + inning + ": " + runs + " " + word + " on the line score. " +
+      clubName(game.away) + " " + away + ", " + clubName(game.home) + " " + home + ".";
+  }
+
+  function lineHalves(game) {
+    var awayLine = game.line && game.line[game.away];
+    var homeLine = game.line && game.line[game.home];
+    if (!Array.isArray(awayLine) || !Array.isArray(homeLine)) return null;
+    if (!awayLine.length && !homeLine.length) return null;
+    var n = Math.max(awayLine.length, homeLine.length);
     var home = 0;
     var away = 0;
-    var plays = game.scoring_plays || [];
-    if (plays.length) {
-      plays.forEach(function (text) {
-        var inningMatch = /Inning\s+(\d+)/.exec(text);
-        var inning = inningMatch ? parseInt(inningMatch[1], 10) : 1;
-        var pair = /([A-Z]{2,3})\s+(\d+),\s*([A-Z]{2,3})\s+(\d+)/.exec(text);
-        var nextHome = home;
-        var nextAway = away;
-        if (pair) {
-          var map = {};
-          map[pair[1]] = Number(pair[2]);
-          map[pair[3]] = Number(pair[4]);
-          if (map[game.home] == null || map[game.away] == null) return;
-          nextHome = map[game.home];
-          nextAway = map[game.away];
-        } else {
-          var tail = /(\d+)\s*-\s*(\d+)\s*$/.exec(text);
-          if (!tail) return;
-          nextHome = Number(tail[1]);
-          nextAway = Number(tail[2]);
-        }
-        var bottom = nextHome > home;
-        home = nextHome;
-        away = nextAway;
-        events.push({ inning: inning, bottom: bottom, home: home, away: away, text: text });
-      });
-    }
-    if (!events.length) {
-      fallback = true;
-      var awayLine = game.line[game.away] || [];
-      var homeLine = game.line[game.home] || [];
-      var n = Math.max(awayLine.length, homeLine.length);
-      home = 0;
-      away = 0;
-      for (var i = 0; i < n; i++) {
-        var ar = awayLine[i] || 0;
-        var r;
-        for (r = 0; r < ar; r++) {
-          away += 1;
-          events.push({ inning: i + 1, bottom: false, home: home, away: away, text: "Line score, inning " + (i + 1) + " top" });
-        }
-        var hr = homeLine[i] || 0;
-        for (r = 0; r < hr; r++) {
-          home += 1;
-          events.push({ inning: i + 1, bottom: true, home: home, away: away, text: "Line score, inning " + (i + 1) + " bottom" });
-        }
+    var events = [];
+    var i;
+    for (i = 0; i < n; i++) {
+      if (i < awayLine.length) {
+        if (typeof awayLine[i] !== "number") return null;
+        away += awayLine[i];
+        events.push({
+          inning: i + 1, bottom: false, home: home, away: away, runs: awayLine[i],
+          text: halfText(game, i + 1, false, awayLine[i], home, away)
+        });
+      }
+      if (i < homeLine.length) {
+        if (typeof homeLine[i] !== "number") return null;
+        home += homeLine[i];
+        events.push({
+          inning: i + 1, bottom: true, home: home, away: away, runs: homeLine[i],
+          text: halfText(game, i + 1, true, homeLine[i], home, away)
+        });
       }
     }
-    return { events: events, fallback: fallback };
+    if (home !== game.score[game.home] || away !== game.score[game.away]) return null;
+    return events;
+  }
+
+  function acceptPlays(game, events) {
+    var home = 0;
+    var away = 0;
+    var out = [];
+    var i;
+    for (i = 0; i < events.length; i++) {
+      var item = events[i];
+      if (item.home < home || item.away < away) return null;
+      if (item.home === home && item.away === away) return null;
+      if (item.home > home && item.away > away) return null;
+      out.push({
+        inning: item.inning,
+        bottom: item.home > home,
+        home: item.home,
+        away: item.away,
+        text: item.text
+      });
+      home = item.home;
+      away = item.away;
+    }
+    if (home !== game.score[game.home] || away !== game.score[game.away]) return null;
+    return out;
+  }
+
+  function scoringEvents(game) {
+    var plays = game.scoring_plays || [];
+    if (!plays.length) return null;
+    var coded = [];
+    var tails = [];
+    var i;
+    for (i = 0; i < plays.length; i++) {
+      var text = String(plays[i] || "");
+      var inningMatch = /Inning\s+(\d+)/.exec(text);
+      if (!inningMatch) return null;
+      var inning = parseInt(inningMatch[1], 10);
+      var pair = /([A-Z]{2,3})\s+(\d+),\s*([A-Z]{2,3})\s+(\d+)/.exec(text);
+      if (pair) {
+        var map = {};
+        map[pair[1]] = Number(pair[2]);
+        map[pair[3]] = Number(pair[4]);
+        if (map[game.home] == null || map[game.away] == null) return null;
+        coded.push({ inning: inning, home: map[game.home], away: map[game.away], text: text });
+      } else {
+        var tail = /(\d+)\s*-\s*(\d+)\s*$/.exec(text);
+        if (!tail) return null;
+        tails.push({ inning: inning, a: Number(tail[1]), b: Number(tail[2]), text: text });
+      }
+    }
+    if (coded.length && tails.length) return null;
+    if (coded.length) return acceptPlays(game, coded);
+    var asHome = tails.map(function (item) {
+      return { inning: item.inning, home: item.a, away: item.b, text: item.text };
+    });
+    var asAway = tails.map(function (item) {
+      return { inning: item.inning, home: item.b, away: item.a, text: item.text };
+    });
+    return acceptPlays(game, asHome) || acceptPlays(game, asAway);
+  }
+
+  function chartEvents(game) {
+    var halves = lineHalves(game);
+    if (!halves) return null;
+    var plays = scoringEvents(game);
+    if (!plays) return { events: halves, source: "line" };
+    var merged = [];
+    var index = 0;
+    var h;
+    for (h = 0; h < halves.length; h++) {
+      var half = halves[h];
+      var batch = [];
+      while (index < plays.length && plays[index].inning === half.inning && plays[index].bottom === half.bottom) {
+        batch.push(plays[index]);
+        index += 1;
+      }
+      if (half.runs > 0) {
+        var last = batch[batch.length - 1];
+        if (!last || last.home !== half.home || last.away !== half.away) return { events: halves, source: "line" };
+        batch.forEach(function (play) { merged.push(play); });
+      } else if (batch.length) {
+        return { events: halves, source: "line" };
+      } else {
+        merged.push(half);
+      }
+    }
+    if (index !== plays.length) return { events: halves, source: "line" };
+    return { events: merged, source: "plays" };
   }
 
   function wpChart(game) {
-    var parsed = wpEvents(game);
-    var points = [{ label: "Start", p: 0.5, text: "Before the first run" }];
-    parsed.events.forEach(function (event) {
+    var built = chartEvents(game);
+    if (!built) return null;
+    var points = [{ label: "Start", p: 0.5, text: "Before the first pitch. The model starts the home club at 50%." }];
+    built.events.forEach(function (event) {
       points.push({
-        label: event.inning + (event.bottom ? " bottom" : " top"),
+        label: (event.bottom ? "Bot " : "Top ") + event.inning,
         p: homeWp(event.home - event.away, event.inning, event.bottom),
         text: event.text
       });
     });
     var width = 640;
     var height = 220;
-    var pad = 28;
+    var padL = 44;
+    var padR = 16;
+    var padY = 22;
     var chart = svg("svg", { class: "chart", viewBox: "0 0 " + width + " " + height, role: "img" });
-    chart.appendChild(svg("title")).textContent = "Home win probability";
-    chart.appendChild(svg("line", { x1: pad, y1: pad, x2: pad, y2: height - pad, stroke: "#8a8175" }));
-    chart.appendChild(svg("line", { x1: pad, y1: height - pad, x2: width - pad, y2: height - pad, stroke: "#8a8175" }));
-    var mid = svg("line", {
-      x1: pad, y1: pad + (height - 2 * pad) / 2,
-      x2: width - pad, y2: pad + (height - 2 * pad) / 2,
+    chart.appendChild(svg("title")).textContent = "Model estimate of " + clubName(game.home) + " win probability";
+    function axisLabel(x, y, text, anchor) {
+      var node = svg("text", { x: String(x), y: String(y), fill: "currentColor", "text-anchor": anchor || "end", "font-size": "12" });
+      node.textContent = text;
+      chart.appendChild(node);
+    }
+    axisLabel(padL - 6, padY + 4, "100%");
+    axisLabel(padL - 6, padY + (height - 2 * padY) / 2 + 4, "50%");
+    axisLabel(padL - 6, height - padY + 4, "0%");
+    chart.appendChild(svg("line", { x1: padL, y1: padY, x2: padL, y2: height - padY, stroke: "#8a8175" }));
+    chart.appendChild(svg("line", { x1: padL, y1: height - padY, x2: width - padR, y2: height - padY, stroke: "#8a8175" }));
+    chart.appendChild(svg("line", {
+      x1: padL, y1: padY + (height - 2 * padY) / 2,
+      x2: width - padR, y2: padY + (height - 2 * padY) / 2,
       stroke: "#c6a15a", "stroke-dasharray": "4 4"
-    });
-    chart.appendChild(mid);
+    }));
     var coords = points.map(function (point, index) {
-      var x = pad + (points.length === 1 ? 0 : (index / (points.length - 1)) * (width - 2 * pad));
-      var y = pad + (1 - point.p) * (height - 2 * pad);
+      var x = padL + (points.length === 1 ? 0 : (index / (points.length - 1)) * (width - padL - padR));
+      var y = padY + (1 - point.p) * (height - 2 * padY);
       return x.toFixed(1) + "," + y.toFixed(1);
     }).join(" ");
     chart.appendChild(svg("polyline", { points: coords, fill: "none", stroke: "#1d5c3d", "stroke-width": "2" }));
-    var caption = parsed.fallback
-      ? "Line-score fallback. This game has no scoring plays, so the curve steps through the line score."
-      : "Each point is a scoring play. Home win probability uses the model in MODELS.md.";
+    var how = built.source === "plays"
+      ? "Steps are the stored scoring plays. A half-inning with no runs stays one line-score step."
+      : "Each step is one half-inning from the line score. A multi-run half stays one step, because the file does not say which run scored first.";
+    var caption = "Model estimate for the home club, " + clubName(game.home) + ". The formula in MODELS.md uses the inning, the half, and the run margin. " + how + " This is not a recorded win probability.";
     var list = el("ol", { class: "muted" });
     points.forEach(function (point) {
       list.appendChild(el("li", { text: point.label + ": home " + Math.round(point.p * 100) + "%. " + point.text }));
     });
-    return el("div", null,
-      el("h4", { text: "Win probability" }),
+    return el("div", { class: "wp-chart no-print" },
+      el("h4", { text: "Win probability (model estimate)" }),
       chart,
       el("p", { class: "muted", text: caption }),
-      el("details", null, el("summary", { text: "Probability after each run" }), list)
+      el("details", null, el("summary", { text: "Model estimate after each step" }), list)
     );
   }
 
@@ -605,9 +686,99 @@
     return card;
   }
 
+  function twoDigits(value) {
+    return (value < 10 ? "0" : "") + value;
+  }
+
+  function recordedMoments() {
+    var moments = [];
+    var found = milestones();
+    found.nohitters.forEach(function (item) {
+      moments.push({
+        key: item.game.id + "\t0\t" + item.line.name,
+        title: item.line.name + " no-hitter",
+        text: ipLabel(nz(item.line.outs)) + " IP, 0 H, " + nz(item.line.k) + " K in " + item.game.id + ".",
+        href: "#/game/" + item.game.id,
+        when: item.game.date || ""
+      });
+    });
+    found.highK.forEach(function (item) {
+      moments.push({
+        key: item.game.id + "\t1\t" + item.line.player_id,
+        title: item.line.name + ", " + nz(item.line.k) + " strikeouts",
+        text: nz(item.line.k) + " K in " + ipLabel(nz(item.line.outs)) + " IP, " + item.game.id + ".",
+        href: "#/game/" + item.game.id,
+        when: item.game.date || ""
+      });
+    });
+    state.data.games.forEach(function (game) {
+      if (!isWalkOff(game)) return;
+      var series = state.data.series.filter(function (item) { return item.id === game.series_id; })[0];
+      var narrative = "";
+      if (series && series.narratives) {
+        series.narratives.forEach(function (item) {
+          if (item.game === game.id && /walk-off/i.test(item.text || "")) narrative = item.text;
+        });
+      }
+      moments.push({
+        key: game.id + "\t2\twalk-off",
+        title: clubName(game.home) + " walk-off",
+        text: narrative || (clubName(game.home) + " won " + game.score[game.home] + "-" + game.score[game.away] + " on a walk-off in " + game.id + "."),
+        href: "#/game/" + game.id,
+        when: game.date || ""
+      });
+    });
+    found.big.forEach(function (item) {
+      var opponent = item.game.home === item.code ? item.game.away : item.game.home;
+      moments.push({
+        key: item.game.id + "\t3\t" + item.code,
+        title: clubName(item.code) + " scored " + item.game.score[item.code],
+        text: clubName(item.code) + " scored " + item.game.score[item.code] + " against " + clubName(opponent) + " in " + item.game.id + ".",
+        href: "#/game/" + item.game.id,
+        when: item.game.date || ""
+      });
+    });
+    state.data.series.forEach(function (series) {
+      if (series.status !== "complete" || !series.winner || !series.loser) return;
+      var dates = (series.games || []).map(function (id) { return state.games[id] && state.games[id].date; }).filter(Boolean).sort();
+      moments.push({
+        key: series.id + "\t4\tfinal",
+        title: series.id + " final",
+        text: clubName(series.winner) + " beat " + clubName(series.loser) + " " + series.wins[series.winner] + "-" + series.wins[series.loser] + (series.mvp && series.mvp.name ? ". MVP " + series.mvp.name + "." : "."),
+        href: "#/series/" + series.id,
+        when: dates.length ? dates[dates.length - 1] : ""
+      });
+    });
+    moments.sort(function (a, b) {
+      if (a.key < b.key) return -1;
+      if (a.key > b.key) return 1;
+      return 0;
+    });
+    return moments;
+  }
+
+  function onThisDayCard() {
+    var moments = recordedMoments();
+    if (!moments.length) return null;
+    var now = new Date();
+    var day = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
+    var index = ((day % moments.length) + moments.length) % moments.length;
+    var item = moments[index];
+    var iso = now.getFullYear() + "-" + twoDigits(now.getMonth() + 1) + "-" + twoDigits(now.getDate());
+    return el("section", { class: "on-this-day" },
+      el("h2", { text: "On this day" }),
+      el("p", { class: "meta", text: iso + " · recorded moment " + (index + 1) + " of " + moments.length }),
+      el("p", null, el("a", { href: item.href, text: item.title })),
+      el("p", { text: item.text }),
+      el("p", { class: "muted", text: "Game date " + (item.when || "not stored") + ". The same calendar date always shows this recorded moment. The card does not add a result." })
+    );
+  }
+
   function renderBracket(activeId) {
     markNav("bracket");
     var root = el("div");
+    var today = onThisDayCard();
+    if (today) root.appendChild(today);
     var select = el("select", { id: "path-select" });
     select.appendChild(el("option", { value: "", text: "All clubs" }));
     state.data.teams.slice().sort(function (a, b) { return a.seed - b.seed; }).forEach(function (team) {
@@ -820,43 +991,56 @@
       return;
     }
     var page = el("article", { class: "panel" });
-    page.appendChild(el("p", null, el("a", { href: "#/series/" + game.series_id, text: game.series_id })));
-    page.appendChild(el("h2", { text: clubName(game.away) + " " + game.score[game.away] + " at " + clubName(game.home) + " " + game.score[game.home] }));
-    page.appendChild(el("p", { class: "meta", text: game.id + (game.date ? " · " + game.date : "") + " · " + decisionText(game) }));
-    page.appendChild(linescore(game));
-    page.appendChild(boxTables(game));
-    page.appendChild(el("h4", { text: "Scoring plays" }));
+    var card = el("div", { class: "scorecard" });
+    card.appendChild(el("p", null, el("a", { href: "#/series/" + game.series_id, text: game.series_id })));
+    card.appendChild(el("h2", { text: clubName(game.away) + " " + game.score[game.away] + " at " + clubName(game.home) + " " + game.score[game.home] }));
+    card.appendChild(el("p", { class: "meta", text: game.id + (game.date ? " · " + game.date : "") + " · " + decisionText(game) }));
+    card.appendChild(linescore(game));
+    card.appendChild(boxTables(game));
+    card.appendChild(el("h4", { text: "Scoring plays" }));
     if (game.scoring_plays && game.scoring_plays.length) {
       var list = el("ol");
       game.scoring_plays.forEach(function (play) { list.appendChild(el("li", { text: play })); });
-      page.appendChild(list);
+      card.appendChild(list);
     } else {
-      page.appendChild(el("p", { text: "No scoring plays were recorded." }));
+      card.appendChild(el("p", { text: "No scoring plays were recorded." }));
     }
-    page.appendChild(wpChart(game));
-    page.appendChild(el("h4", { text: "Recap" }));
-    page.appendChild(el("p", { class: "recap", text: game.game_recap || "No recap was stored." }));
+    page.appendChild(card);
+    var printButton = el("button", { type: "button", class: "copy-button", text: "Print / Save as PDF" });
+    printButton.addEventListener("click", function () { window.print(); });
+    var tools = el("div", { class: "no-print" });
+    tools.appendChild(el("p", { class: "scorecard-actions" },
+      printButton,
+      el("a", { href: "scorecards/" + game.id + ".pdf", text: "Scorecard PDF" })
+    ));
+    var chart = wpChart(game);
+    if (chart) tools.appendChild(chart);
+    tools.appendChild(el("h4", { text: "Recap" }));
+    tools.appendChild(el("p", { class: "recap", text: game.game_recap || "No recap was stored." }));
     var turning = narrativeFor(game.id);
-    if (turning) page.appendChild(el("p", { class: "recap", text: turning }));
-    if (game.series_recap) page.appendChild(el("p", { class: "recap", text: game.series_recap }));
+    if (turning) tools.appendChild(el("p", { class: "recap", text: turning }));
+    if (game.series_recap) tools.appendChild(el("p", { class: "recap", text: game.series_recap }));
     var logHost = el("div");
-    page.appendChild(el("h4", { text: "Manager log" }));
-    page.appendChild(logHost);
+    tools.appendChild(el("h4", { text: "Manager log" }));
+    tools.appendChild(logHost);
     logHost.appendChild(el("p", { class: "muted", text: "Loading the game file…" }));
     var share = el("p", null,
       el("img", { class: "share-card", src: "graphics/games/" + game.id + ".svg", alt: game.id + " final score graphic" })
     );
-    page.appendChild(el("h4", { text: "Share" }));
-    page.appendChild(share);
-    page.appendChild(el("p", null,
+    tools.appendChild(el("h4", { text: "Share" }));
+    tools.appendChild(share);
+    tools.appendChild(el("p", null,
       el("a", { href: "graphics/games/" + game.id + ".svg", text: "SVG" }),
       " · ",
       el("a", { href: "graphics/games/" + game.id + ".png", text: "PNG" }),
       " · ",
       el("a", { href: "share/" + game.id + ".html", text: "Share page" }),
       " · ",
-      el("a", { href: "box_scores/" + game.id + ".md", text: "Box score markdown" })
+      el("a", { href: "box_scores/" + game.id + ".md", text: "Box score markdown" }),
+      " · ",
+      el("a", { href: "scorecards/" + game.id + ".pdf", text: "Scorecard PDF" })
     ));
+    page.appendChild(tools);
     view.appendChild(page);
     var token = ++renderToken;
     var detailUrl = game.detail || ("games/" + game.id + ".json");
