@@ -20,8 +20,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "tournament_results.json"
 GAMES_DIR = ROOT / "games"
 
-# The only completed series with a known calendar date.
-DATED_SERIES = {"R1-02": "2026-10-24"}
+# Series whose games have a known calendar date. The date is not a stat.
+DATED_SERIES = {"R1-02": "2026-10-24", "R1-03": "2026-10-24"}
 SCHEMA_VERSION = 1
 
 

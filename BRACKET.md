@@ -12,13 +12,13 @@ Every series is a best of 7. A club is eliminated on its second series loss. The
 
 ## Status
 
-R1-01 and R1-02 are complete. The other 14 opening series are scheduled and unplayed. Every later stage is waiting on its feeders.
+R1-01 and R1-02 are complete. R1-03 is in progress: Boston leads Tampa Bay 2-0. The other 13 opening series are scheduled and unplayed. Every later stage is waiting on its feeders.
 
 | Slot | Pairing | Status |
 |---|---|---|
 | R1-01 | #1 New York Yankees vs #32 Miami Marlins | Played. Yankees 4-0. |
 | R1-02 | #2 San Francisco Giants vs #31 Washington Nationals | Played. Giants 4-1. |
-| R1-03 | #3 Boston Red Sox vs #30 Tampa Bay Rays | Not played |
+| R1-03 | #3 Boston Red Sox vs #30 Tampa Bay Rays | In progress. Boston leads 2-0. |
 | R1-04 | #4 Detroit Tigers vs #29 Arizona Diamondbacks | Not played |
 | R1-05 | #5 St. Louis Cardinals vs #28 Colorado Rockies | Not played |
 | R1-06 | #6 Chicago Cubs vs #27 Montreal Expos | Not played |

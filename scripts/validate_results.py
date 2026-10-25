@@ -21,8 +21,9 @@ GAMES = ROOT / "games"
 # Fingerprint of scores, lines, batting, pitching, decisions, rolls, and
 # manager logs, taken from tournament_results.json before rolls were split
 # out and before the per-game RNG field was renamed.
-FINGERPRINT = "7c5c6ca912ef46b1c734e09381aad73db9271a2023b5eb9601f8705281aab189"
-SERIES_HASH = "a6d65b8759e4ec89a76c3a9079d726ddb88a3e59c212dd3cfd2b731c44babf45"
+# Locked from the 11-game inline archive on main (082f623) before the split.
+FINGERPRINT = "1184a16a5c49cdd0c52dbefa3c01d5d47c006b514c13db6e524ad9d37197594d"
+SERIES_HASH = "379f4e5b6ddff90bcd5a54f5b8eec876237cf897f91d64a7007a8509559769d7"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
 
 BATTING_FIELDS = (
@@ -39,8 +40,9 @@ TEAM_FIELDS = (
     "series_losses", "eliminated", "champion",
 )
 
-EXPECTED_TOTALS = {"H": 158, "HR": 35, "RBI": 105, "K": 165, "ER": 104, "OUTS": 468}
-ROLL_COUNTS = {"R1-01-G1": 72, "R1-02-G1": 161}
+EXPECTED_TOTALS = {"H": 178, "HR": 40, "RBI": 115, "K": 205, "ER": 114, "OUTS": 570}
+ROLL_COUNTS = {"R1-01-G1": 72, "R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135}
+DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-24"}
 THREE_INNINGS = (
     "A reliever is lifted when he reaches 3 innings pitched in one appearance, "
     "unless he is the last available arm. The last available arm stays in and "
@@ -106,7 +108,7 @@ def fingerprint(data: dict, details: dict[str, dict]) -> str:
             "winner": game["winner"],
             "home": game["home"],
             "away": game["away"],
-            "seed": game["rng_seed"],
+            "seed": game["rng_seed"] if "rng_seed" in game else game.get("seed"),
             "line": game["line"],
             "batting": [{key: line[key] for key in BATTING_FIELDS} for line in game["batting"]],
             "pitching": [{key: line.get(key) for key in PITCHING_FIELDS} for line in game["pitching"]],
@@ -130,7 +132,7 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
     check.expect(data.get("version") == 1, "archive version left at 1")
     check.expect(len(data["teams"]) == 32, "32 teams")
     check.expect(len(data["series"]) == 63, "63 series slots")
-    check.expect(len(data["games"]) == 9, "9 games")
+    check.expect(len(data["games"]) == 11, "11 games")
     check.expect(digest(data["series"]) == SERIES_HASH, "series objects unchanged")
     check.expect(digest(data["format"]) == FORMAT_HASH, "format object unchanged")
     check.expect(fingerprint(data, details) == FINGERPRINT, "pre-split stat fingerprint")
@@ -144,10 +146,10 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         detail = details[game["id"]]
         check.expect(detail["id"] == game["id"] and detail["series_id"] == game["series_id"], f"{game['id']} detail identity")
         check.expect(detail["game_in_series"] == game["game_in_series"], f"{game['id']} detail game number")
-        if game["series_id"] == "R1-02":
-            check.expect(game["date"] == "2026-10-24", f"{game['id']} date")
+        if game["series_id"] in DATED:
+            check.expect(game.get("date") == DATED[game["series_id"]], f"{game['id']} date")
         else:
-            check.expect(game["date"] is None, f"{game['id']} date should be null")
+            check.expect(game.get("date") is None, f"{game['id']} date should be null")
         for code in (game["home"], game["away"]):
             batting_runs = sum(line["r"] or 0 for line in game["batting"] if line["team"] == code)
             check.expect(batting_runs == game["score"][code], f"{game['id']} {code} batting runs")
@@ -178,19 +180,24 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
     for game_id, count in ROLL_COUNTS.items():
         check.expect(len(details[game_id]["rolls"]) == count, f"{game_id} roll count")
     check.expect(details["R1-01-G2"]["manager_log"] is None, "R1-01-G2 manager log stays null")
-    check.expect(data["games"][0]["rng_seed"] == 1101, "R1-01-G1 rng seed")
-    check.expect(data["games"][4]["rng_seed"] == 20261101, "R1-02-G1 rng seed")
+    check.expect(data["games"][0].get("rng_seed", data["games"][0].get("seed")) == 1101, "R1-01-G1 rng seed")
+    check.expect(data["games"][4].get("rng_seed", data["games"][4].get("seed")) == 20261101, "R1-02-G1 rng seed")
+    check.expect(data["games"][9].get("rng_seed", data["games"][9].get("seed")) == 20261201, "R1-03-G1 rng seed")
 
     series_wins: dict[str, int] = {}
     series_losses: dict[str, int] = {}
     by_id = {game["id"]: game for game in data["games"]}
     for series in data["series"]:
-        if series["status"] != "complete":
-            continue
         from collections import Counter
+        if series["status"] not in {"complete", "in-progress"}:
+            continue
         won = Counter(by_id[game_id]["winner"] for game_id in series["games"])
         recorded = {code: won.get(code, 0) for code in series["wins"]}
         check.expect(recorded == series["wins"], f"{series['id']} wins {recorded} vs {series['wins']}")
+        if series["status"] == "in-progress":
+            check.expect(series["winner"] is None and series["loser"] is None, f"{series['id']} stays undecided")
+            check.expect(all(value < 4 for value in series["wins"].values()), f"{series['id']} has not reached 4")
+            continue
         check.expect(series["wins"][series["winner"]] == 4, f"{series['id']} winner reached 4")
         series_wins[series["winner"]] = series_wins.get(series["winner"], 0) + 1
         series_losses[series["loser"]] = series_losses.get(series["loser"], 0) + 1
@@ -201,15 +208,22 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         check.expect(team["game_losses"] == game_losses.get(code, 0), f"{code} game losses")
         check.expect(team["series_wins"] == series_wins.get(code, 0), f"{code} series wins")
         check.expect(team["series_losses"] == series_losses.get(code, 0), f"{code} series losses")
-        check.expect(team["losses"] == team["series_losses"], f"{code} losses field")
+        check.expect(team.get("losses") == team["series_losses"], f"{code} losses field")
         if team["eliminated"] or team["series_losses"] >= 2:
             expected = "eliminated"
         elif team["series_losses"] == 1:
             expected = "losers"
         else:
             expected = "winners"
-        check.expect(team["bracket"] == expected, f"{code} bracket")
+        check.expect(team.get("bracket") == expected, f"{code} bracket")
         check.expect("seed" in team, f"{code} still has its tournament seed")
+
+
+def data_game_svg(publish) -> tuple[str, str]:
+    data = json.loads(RESULTS.read_text(encoding="utf-8"))
+    game = next(item for item in data["games"] if item["id"] == "R1-03-G1")
+    written = (ROOT / "graphics" / "games" / "R1-03-G1.svg").read_text(encoding="utf-8")
+    return written, publish.game_svg(game)
 
 
 def documents(check: Check) -> None:
@@ -222,6 +236,10 @@ def documents(check: Check) -> None:
     check.expect("Giants 4-1" in bracket and "R1-02" in bracket, "bracket records R1-02")
     check.expect("only R1-01" not in bracket and "Only R1-01" not in bracket, "bracket no longer says only R1-01")
     check.expect("Yankees 4-0" in readme and "Giants 4-1" in readme, "readme results")
+    check.expect("2-0" in readme and "Pedro" in readme and "In progress" in readme, "readme records R1-03")
+    check.expect("2-0" in bracket and "In progress" in bracket, "bracket records R1-03")
+    check.expect("MODELS.md" in readme and "feed/games.xml" in readme, "readme links the models and the feed")
+    check.expect("in-progress" in (ROOT / "SCHEMA.md").read_text(encoding="utf-8"), "schema names in-progress")
     check.expect(VIDEO in readme, "readme video")
     for name in (
         "BRACKET.md", "TOURNAMENT_RULES.md", "TOURNAMENT_SEEDS.md", "ROSTERS.md",
@@ -241,14 +259,34 @@ def documents(check: Check) -> None:
     rosters = load_mod(ROOT / "scripts" / "build_rosters.py", "build_rosters")
     check.expect((ROOT / "LEADERS.md").read_text(encoding="utf-8") == leaders.build(), "LEADERS.md matches the script")
     check.expect((ROOT / "ROSTERS.md").read_text(encoding="utf-8") == rosters.build(), "ROSTERS.md matches the script")
+    publish = load_mod(ROOT / "scripts" / "publish.py", "publish_docs")
+    check.expect((ROOT / "TEAM_STATS.md").read_text(encoding="utf-8") == publish.team_stats_markdown(), "TEAM_STATS.md matches the script")
+    check.expect((ROOT / "box_scores" / "R1-03-G1.md").read_text(encoding="utf-8") == publish.box_markdown("R1-03-G1"), "R1-03-G1 box score matches the script")
+    check.expect((ROOT / "AWARDS.md").read_text(encoding="utf-8") == publish.awards_markdown(), "AWARDS.md matches the script")
+    check.expect((ROOT / "RECORDS.md").read_text(encoding="utf-8") == publish.records_markdown(), "RECORDS.md matches the script")
+    check.expect("Pedro Martinez" in (ROOT / "RECORDS.md").read_text(encoding="utf-8"), "records include the no-hitter")
+    check.expect((ROOT / "feed" / "tournament.json").read_text(encoding="utf-8") == publish.feed_json_text(), "JSON feed matches the script")
+    check.expect((ROOT / "feed" / "games.xml").read_text(encoding="utf-8") == publish.rss_text(), "RSS feed matches the script")
+    sample = data_game_svg(publish)
+    check.expect(sample[0] == sample[1], "score graphic matches the script")
+    check.expect("LEADERS.md" in (ROOT / "LEADERBOARDS.md").read_text(encoding="utf-8"), "old leaderboard file points at the one board")
     check.expect("1.13" in (ROOT / "LEADERS.md").read_text(encoding="utf-8"), "Hubbell ERA rounding")
     check.expect("TODO for Joe" in (ROOT / "ROSTERS.md").read_text(encoding="utf-8"), "roster stubs")
     html = (ROOT / "index.html").read_text(encoding="utf-8")
     script = (ROOT / "js" / "bracket.js").read_text(encoding="utf-8")
     check.expect("css/styles.css" in html and "js/bracket.js" in html, "viewer assets")
-    check.expect("tournament_results.json" in script and "games/" not in script or "detail" in script, "viewer reads the JSON")
+    check.expect("tournament_results.json" in script, "viewer reads the results file")
+    check.expect("detail" in script, "viewer follows detail links")
+    css = (ROOT / "css" / "styles.css").read_text(encoding="utf-8")
     check.expect((ROOT / "css" / "styles.css").exists() and (ROOT / ".nojekyll").exists(), "pages files exist")
-    check.expect("@media (max-width: 720px)" in (ROOT / "css" / "styles.css").read_text(encoding="utf-8"), "mobile layout")
+    check.expect("@media (max-width: 720px)" in css, "mobile layout")
+    check.expect('data-theme="dark"' in css, "dark theme")
+    check.expect("theme-toggle" in html and "next-up" in html and "feed/games.xml" in html, "viewer chrome")
+    check.expect("0.55" in script and "1.35" in script, "viewer carries the display-model constants")
+    workflow = (ROOT / ".github" / "workflows" / "pages.yml").read_text(encoding="utf-8")
+    check.expect("validate_results.py" in workflow and "deploy-pages" in workflow, "pages workflow validates and deploys")
+    models = (ROOT / "MODELS.md").read_text(encoding="utf-8")
+    check.expect("0.55" in models and "1.35" in models and "5×SV" in models, "models document the formulas")
 
     skip = {ROOT / "scripts" / "validate_results.py"}
     for path in ROOT.rglob("*"):
@@ -262,15 +300,34 @@ def documents(check: Check) -> None:
                 check.failures.append(f"{path.relative_to(ROOT)} still mentions {token}")
 
 
+def detail_for(game: dict, check: Check):
+    """Load rolls from games/<id>.json, or from the game object when it is still inline."""
+    if game.get("detail"):
+        path = ROOT / game["detail"]
+        check.expect(path.is_file(), f"missing {game['detail']}")
+        if not path.is_file():
+            return None
+        return json.loads(path.read_text(encoding="utf-8"))
+    if "rolls" not in game:
+        check.expect(False, f"{game.get('id')} has neither detail nor rolls")
+        return None
+    return {
+        "id": game["id"],
+        "series_id": game["series_id"],
+        "game_in_series": game["game_in_series"],
+        "rolls": game["rolls"],
+        "manager_log": game.get("manager_log"),
+    }
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
     details = {}
     for game in data["games"]:
-        path = ROOT / game["detail"]
-        check.expect(path.is_file(), f"missing {game['detail']}")
-        if path.is_file():
-            details[game["id"]] = json.loads(path.read_text(encoding="utf-8"))
+        detail = detail_for(game, check)
+        if detail is not None:
+            details[game["id"]] = detail
     if len(details) == len(data["games"]):
         reconcile(data, details, check)
     documents(check)

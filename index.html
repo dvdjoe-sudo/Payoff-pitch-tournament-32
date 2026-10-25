@@ -4,30 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Payoff Pitch Tournament 32</title>
-  <meta name="description" content="Double-elimination bracket, standings, and box scores for the Payoff Pitch 32-team tournament.">
+  <meta name="description" content="Double-elimination bracket, box scores, awards, and standings for the Payoff Pitch 32-team tournament.">
   <meta name="theme-color" content="#12263f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2312263f'/%3E%3Crect y='54' width='64' height='6' fill='%23c6a15a'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='%23f6f1e6'%3EPP%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate" type="application/rss+xml" title="Payoff Pitch games" href="feed/games.xml">
+  <script>
+    try {
+      var savedTheme = localStorage.getItem("pp-theme");
+      if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
+      else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (err) { /* storage can be blocked; the light theme still reads */ }
+  </script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
   <header class="site-header">
-    <p class="eyebrow">All-time franchise field</p>
-    <h1>Payoff Pitch Tournament 32</h1>
-    <p class="lede" id="lede">Loading the bracket…</p>
+    <div class="header-bar">
+      <div>
+        <p class="eyebrow">All-time franchise field</p>
+        <h1>Payoff Pitch Tournament 32</h1>
+        <p class="lede" id="lede">Loading the bracket…</p>
+      </div>
+      <div class="header-tools">
+        <div id="next-up" class="next-up"></div>
+        <button type="button" id="theme-toggle" class="theme-toggle">Dark mode</button>
+      </div>
+    </div>
+    <form id="search-form" class="search-form" role="search">
+      <label for="search">Search players</label>
+      <input id="search" name="q" type="search" placeholder="Name, club, or id" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
     <p class="header-links">
       <a href="https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs">Walkthrough video</a>
       <a href="README.md">About this tournament</a>
-      <a href="SCHEMA.md">Results schema</a>
+      <a href="MODELS.md">Formulas</a>
+      <a href="feed/tournament.json">JSON feed</a>
+      <a href="feed/games.xml">RSS</a>
     </p>
   </header>
   <nav class="views" aria-label="Sections">
-    <button type="button" id="tab-bracket" aria-selected="true">Bracket</button>
-    <button type="button" id="tab-standings" aria-selected="false">Standings</button>
+    <a href="#/bracket" data-view="bracket">Bracket</a>
+    <a href="#/standings" data-view="standings">Standings</a>
+    <a href="#/awards" data-view="awards">Awards</a>
+    <a href="#/records" data-view="records">Records</a>
   </nav>
   <main id="content">
     <p id="load-error" class="load-error" hidden></p>
-    <section id="bracket-view" aria-label="Bracket"></section>
-    <section id="standings-view" aria-label="Standings" hidden></section>
+    <div id="view"></div>
   </main>
   <footer class="site-footer">
     <p id="footer-note"></p>

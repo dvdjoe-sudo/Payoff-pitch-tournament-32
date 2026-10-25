@@ -50,7 +50,7 @@ Every slot has `id`, `side`, `label`, `team_a`, `team_b`, `seed_a`, `seed_b`, `t
 
 `games` is a list of game ids. The box score is the matching object in the top-level `games` array.
 
-`status` is `complete`, `scheduled`, or `awaiting-feeders`.
+`status` is `complete`, `in-progress`, `scheduled`, or `awaiting-feeders`. `in-progress` means games are on the series and neither club has 4 wins yet. `winner` and `loser` stay null until the series is complete.
 
 Opening-round ids are `R1-01` through `R1-16`. Later ids are `W2`–`W5`, `L1`–`L8`, `F-01`, and `F-02`.
 
@@ -60,9 +60,9 @@ Optional fields, present only where the archive had them:
 |---|---|
 | `round` | Completed opening series, and every shell after the opening round. |
 | `stage`, `formation`, `feeders`, `feeder_labels` | Shells after the opening round. `formation.pool` and `formation.gate` say what the slot is waiting on. |
-| `provenance`, `carry` | R1-02. `carry.rotation_next_start` is the next starter named for each club. |
+| `provenance`, `carry` | R1-02 and R1-03. `carry.rotation_next_start` is the next starter named for each club. |
 
-TODO for Joe: R1-03 through R1-16 do not carry `round`. R1-01 and R1-02 set `round` to 1. Confirm whether the unplayed opening shells should say 1. They were left as stored.
+TODO for Joe: R1-04 through R1-16 do not carry `round`. R1-01, R1-02, and R1-03 set `round` to 1. Confirm whether the unplayed opening shells should say 1. They were left as stored.
 
 `home_by_game` is filled for a paired series. Keys are game numbers `"1"` through `"7"`. An unfilled shell has an empty object.
 
@@ -73,7 +73,7 @@ TODO for Joe: R1-03 through R1-16 do not carry `round`. R1-01 and R1-02 set `rou
 | `id` | string | `R1-01-G1`, `R1-02-G3`, and so on. |
 | `series_id` | string | Series id. |
 | `game_in_series` | number | 1-based game number inside the series. |
-| `date` | string or null | Calendar date, `YYYY-MM-DD`, when known. Every R1-02 game is `2026-10-24`. Every other game is null. |
+| `date` | string or null | Calendar date, `YYYY-MM-DD`, when known. Every R1-02 and R1-03 game is `2026-10-24`. R1-01 games are null. |
 | `away`, `home` | string | Club codes. |
 | `teams` | object | Code to display name, for the two clubs. |
 | `score` | object | Code to runs. |
@@ -126,14 +126,14 @@ The results file does not record a defensive position.
 Both are stored as they were recorded.
 
 - APBA games (R1-01) store an object per plate appearance: `seq`, `inning`, `half`, `team`, `batter`, `player_id`, `roll`, `card_first`, `prn`, `second_column`, `column`, `kind`, `result_text`, `source`, plus any extra key that appearance had.
-- Payoff Pitch games (R1-02) store a two-item array, `[number, purpose]`. The series provenance says this is the FAC flip history, card number and draw purpose.
+- Payoff Pitch games (R1-02 and R1-03) store a two-item array, `[number, purpose]`. The series provenance says this is the FAC flip history, card number and draw purpose.
 
 ## Dates
 
 | Series | `date` |
 |---|---|
-| R1-02, every game | `2026-10-24` |
-| Any other game | `null` until a date is known |
+| R1-02 and R1-03, every game | `2026-10-24` |
+| R1-01, and any game whose date is unknown | `null` |
 
 ## What schema 1 does not change
 

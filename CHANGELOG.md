@@ -6,6 +6,10 @@ Dated rulings and repo history. The rules, seeds, and bracket in force are [TOUR
 
 The results file was split. Each game's rolls and manager log moved to `games/<id>.json`. The summary kept the box scores and gained `schema_version`, a per-game `date`, and `rng_seed` (the old per-game `seed`). Teams gained `bracket` and `losses`. No score, line, batting line, pitching line, or series result was changed. `scripts/validate_results.py` checks that reconciliation.
 
+R1-03 Games 1 and 2, Boston leading Tampa Bay 2-0, were recorded on `main` and brought into this split. The series stays `in-progress`. Those games are dated 2026-10-24, the day the provenance says they were played. The date is not a stat. Pedro Martinez's Game 1 no-hitter is the recorded line: 9 innings, 0 hits.
+
+One generator, `scripts/build_leaders.py`, writes [LEADERS.md](LEADERS.md), [TEAM_STATS.md](TEAM_STATS.md), the files in `box_scores/`, [AWARDS.md](AWARDS.md), [RECORDS.md](RECORDS.md), the JSON and RSS feeds, and the share graphics. [LEADERBOARDS.md](LEADERBOARDS.md) only points at that leaderboard. Award points, win probability, and series odds are display models in [MODELS.md](MODELS.md). They do not change a result.
+
 The main documents now state the current tournament only. This file holds the dated rulings. [index.html](index.html) draws the bracket from the JSON. [LEADERS.md](LEADERS.md) and [ROSTERS.md](ROSTERS.md) are generated from the results file.
 
 ## 2026-10-24 — Payoff Pitch, the seed reset, and the amendment

@@ -2,15 +2,21 @@
 
 Payoff Pitch is the baseball simulator this tournament is played in. Thirty-two all-time franchise clubs play a double-elimination bracket. Every matchup is a best-of-7 series. A club is eliminated on its second series loss. There are no byes. After the opening round, each stage is reseeded by original seed, highest survivor against lowest.
 
-A game is simulated, then written into [`tournament_results.json`](tournament_results.json). That file is the bracket, the series, and the box score of every completed game. The dice or deck record for each game, and the manager log, live in [`games/`](games/) and are linked from the summary. R1-01 was simulated in APBA and adopted into the tournament; it is not replayed. On 2026-10-24 Joe closed APBA. R1-02 was simulated in Payoff Pitch that day and adopted the same way. Later series are simulated in Payoff Pitch as each club's set is ready.
+A game is simulated, then written into [`tournament_results.json`](tournament_results.json). That file is the bracket, the series, and the box score of every completed game. The dice or deck record for each game, and the manager log, live in [`games/`](games/) and are linked from the summary. R1-01 was simulated in APBA and adopted into the tournament; it is not replayed. On 2026-10-24 Joe closed APBA. R1-02 and R1-03 were simulated in Payoff Pitch that day and adopted the same way. Later series are simulated in Payoff Pitch as each club's set is ready.
 
 Walkthrough: [Payoff Pitch top 32 tournament](https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs).
 
-The bracket viewer is [`index.html`](index.html). It reads the results file and redraws the bracket, the standings, and the box scores. The tables below are the snapshot with R1-01 and R1-02 complete.
+The bracket viewer is [`index.html`](index.html). It reads the results file and draws the bracket, standings, game pages, team pages, the awards race, and the milestone list.
+
+Current standing (11 games played):
+
+- R1-01: New York Yankees 4-0 over the Miami Marlins. Complete. Played under APBA before the switch; adopted into this tournament by Joe's ruling; never to be replayed.
+- R1-02: San Francisco Giants 4-1 over the Washington Nationals. Complete. Played in Payoff Pitch on 2026-10-24.
+- R1-03: Boston Red Sox lead the Tampa Bay Rays 2-0. In progress, played in Payoff Pitch. Game 1 was a Pedro Martinez no-hitter at Fenway.
 
 ## Seeds
 
-Six seeds are Joe's picks. They are pins, and they are not filled by walking down the Full 26 Index: New York Yankees 1, Philadelphia Athletics 17, Oakland Athletics 22, Montreal Expos 27, Washington Nationals 31, Miami Marlins 32. The Yankees pin is also the top of the index, and the Marlins pin is also last on the index. Oakland, Philadelphia, Montreal, and Washington are pinned off the index rank. The other 26 clubs fill the remaining slots by the index. The table is [`TOURNAMENT_SEEDS.md`](TOURNAMENT_SEEDS.md).
+Six seeds are Joe's pins. They are pins, and they are not filled by walking down the Full 26 Index: New York Yankees 1, Philadelphia Athletics 17, Oakland Athletics 22, Montreal Expos 27, Washington Nationals 31, Miami Marlins 32. The Yankees pin is also the top of the index, and the Marlins pin is also last on the index. Oakland, Philadelphia, Montreal, and Washington are pinned off the index rank. The other 26 clubs fill the remaining slots by the index. The table is [`TOURNAMENT_SEEDS.md`](TOURNAMENT_SEEDS.md).
 
 ## Bracket
 
@@ -18,7 +24,7 @@ Six seeds are Joe's picks. They are pins, and they are not filled by walking dow
 |---|---|---|
 | R1-01 | #1 New York Yankees vs #32 Miami Marlins | Yankees 4-0 |
 | R1-02 | #2 San Francisco Giants vs #31 Washington Nationals | Giants 4-1 |
-| R1-03 | #3 Boston Red Sox vs #30 Tampa Bay Rays | Not played |
+| R1-03 | #3 Boston Red Sox vs #30 Tampa Bay Rays | In progress, Boston leads 2-0 |
 | R1-04 | #4 Detroit Tigers vs #29 Arizona Diamondbacks | Not played |
 | R1-05 | #5 St. Louis Cardinals vs #28 Colorado Rockies | Not played |
 | R1-06 | #6 Chicago Cubs vs #27 Montreal Expos | Not played |
@@ -37,13 +43,13 @@ Winners Round 2 and Losers Round 1 form when all 16 opening series are complete.
 
 ## Standings
 
-Series is series wins and series losses. Games is game wins and game losses. Bracket is `winners` with no series loss, `losers` with one, and `eliminated` with two. Nobody is eliminated.
+Series is series wins and series losses. Games is game wins and game losses. Bracket is `winners` with no series loss, `losers` with one, and `eliminated` with two. Nobody is eliminated. R1-03 has not awarded a series win.
 
 | Seed | Team | Bracket | Series | Games |
 |---:|---|---|---:|---:|
 | 1 | New York Yankees | Winners | 1-0 | 4-0 |
 | 2 | San Francisco Giants | Winners | 1-0 | 4-1 |
-| 3 | Boston Red Sox | Winners | 0-0 | 0-0 |
+| 3 | Boston Red Sox | Winners | 0-0 | 2-0 |
 | 4 | Detroit Tigers | Winners | 0-0 | 0-0 |
 | 5 | St. Louis Cardinals | Winners | 0-0 | 0-0 |
 | 6 | Chicago Cubs | Winners | 0-0 | 0-0 |
@@ -70,7 +76,7 @@ Series is series wins and series losses. Games is game wins and game losses. Bra
 | 27 | Montreal Expos | Winners | 0-0 | 0-0 |
 | 28 | Colorado Rockies | Winners | 0-0 | 0-0 |
 | 29 | Arizona Diamondbacks | Winners | 0-0 | 0-0 |
-| 30 | Tampa Bay Rays | Winners | 0-0 | 0-0 |
+| 30 | Tampa Bay Rays | Winners | 0-0 | 0-2 |
 | 31 | Washington Nationals | Losers | 0-1 | 1-4 |
 | 32 | Miami Marlins | Losers | 0-1 | 0-4 |
 
@@ -84,7 +90,15 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000/`. The page fetches `tournament_results.json` and the files in `games/`. Opening `index.html` as a `file://` page will not load them.
 
-GitHub Pages needs no build. In the repository: Settings, Pages, Build and deployment, Deploy from a branch. Choose branch `main` and folder `/ (root)`, then save. `.nojekyll` is in the repo so Pages serves the JSON and the scripts as static files. After this work is on `main`, the site is [https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/](https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/). The Pages screen shows the URL GitHub assigned.
+The site is static. GitHub Pages serves it from the repository root. `.nojekyll` is in the repo so Pages does not pass the JSON through Jekyll. After this work is on `main`, the site is [https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/](https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/).
+
+Pages setup, once:
+
+1. Repository Settings, Pages, Build and deployment.
+2. Source: GitHub Actions.
+3. The workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) validates the archive, rebuilds the generated pages, and deploys on every push to `main`.
+
+The first deploy needs the Pages source set to GitHub Actions. A branch deploy and an Actions deploy should not both be selected.
 
 ## Documents
 
@@ -93,9 +107,14 @@ GitHub Pages needs no build. In the repository: Settings, Pages, Build and deplo
 - [Seeds](TOURNAMENT_SEEDS.md) are the only seed table.
 - [Rosters](ROSTERS.md) are the 32 clubs. Rebuild with `python3 scripts/build_rosters.py`.
 - [Leaders](LEADERS.md) are the batting and pitching boards. Rebuild with `python3 scripts/build_leaders.py`.
+- [Team stats](TEAM_STATS.md) are the club lines from that same script.
+- [Box scores](box_scores/) are one markdown file per game, generated from the JSON.
+- [Awards](AWARDS.md) and [records](RECORDS.md) use the formulas in [MODELS.md](MODELS.md).
 - [Changelog](CHANGELOG.md) holds the dated rulings.
 - [Schema](SCHEMA.md) describes the results file and the per-game files.
 - [License](LICENSE) covers the code and these documents.
 - [Viewer](index.html) draws the bracket from the JSON.
+- [JSON feed](feed/tournament.json) and [RSS](feed/games.xml) list the games played.
+- [LEADERBOARDS.md](LEADERBOARDS.md) points at the one leaderboard. It is not a second board.
 
-`python3 scripts/validate_results.py` checks that the box scores, series, and team records still reconcile, and that the split did not change a stat line.
+`python3 scripts/validate_results.py` checks that the box scores, series, and team records still reconcile, and that the split did not change a stat line. `python3 scripts/build_leaders.py` rewrites leaders, team stats, box scores, awards, records, feeds, and share graphics.

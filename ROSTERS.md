@@ -17,7 +17,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 |---:|---|---|---|
 | 1 | NYY | New York Yankees | Roster text on file, plus game appearances |
 | 2 | SF | San Francisco Giants | Appearances only |
-| 3 | BOS | Boston Red Sox | Unrecorded |
+| 3 | BOS | Boston Red Sox | Appearances only |
 | 4 | DET | Detroit Tigers | Unrecorded |
 | 5 | STL | St. Louis Cardinals | Unrecorded |
 | 6 | CHC | Chicago Cubs | Unrecorded |
@@ -44,7 +44,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 27 | MON | Montreal Expos | Unrecorded |
 | 28 | COL | Colorado Rockies | Unrecorded |
 | 29 | ARI | Arizona Diamondbacks | Unrecorded |
-| 30 | TB | Tampa Bay Rays | Unrecorded |
+| 30 | TB | Tampa Bay Rays | Appearances only |
 | 31 | WSH | Washington Nationals | Appearances only |
 | 32 | MIA | Miami Marlins | Roster text on file, plus game appearances |
 
@@ -187,7 +187,34 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 Bracket: winners. Series losses: 0. Full 26 Index: 942.9.
 
-TODO for Joe: no roster in `tournament_results.json`. Lineup, bench, rotation, and bullpen are unrecorded until this club plays or the graphic is added.
+### Players in the results file
+
+Positions are not in the results file. TODO for Joe: positions, manager, and anyone who has not appeared.
+
+### Lineup slots that have batted
+
+- Slot 1: Tris Speaker (`speaktr01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 2: Dustin Pedroia (`pedrodu01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 3: Ted Williams (`willite01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 4: David Ortiz (`ortizda01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 5: Jimmie Foxx (`foxxji01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 6: Dwight Evans (`evansdw01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 7: Wade Boggs (`boggswa01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 8: Nomar Garciaparra (`garcino01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-03-G1 (same starter in 1 later game)
+
+### Starts, in the order the games were played
+
+- Pedro Martinez (`martipe02`) started R1-03-G1
+- Roger Clemens (`clemero02`) started R1-03-G2
+
+### Relievers who have appeared
+
+- Jonathan Papelbon (`papeljo01`), first seen in R1-03-G2
+
+### Rotation carry recorded on the series
+
+- R1-03: next start Cy Young
 
 ## 4. Detroit Tigers (DET)
 
@@ -353,7 +380,38 @@ TODO for Joe: no roster in `tournament_results.json`. Lineup, bench, rotation, a
 
 Bracket: winners. Series losses: 0. Full 26 Index: 387.0.
 
-TODO for Joe: no roster in `tournament_results.json`. Lineup, bench, rotation, and bullpen are unrecorded until this club plays or the graphic is added.
+### Players in the results file
+
+Positions are not in the results file. TODO for Joe: positions, manager, and anyone who has not appeared.
+
+### Lineup slots that have batted
+
+- Slot 1: Carl Crawford (`crawfca02`) in R1-03-G1 (same starter in 1 later game)
+- Slot 3: Evan Longoria (`longoev01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 4: Carlos Pena (`penaca01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 5: Ben Zobrist (`zobribe01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 6: Brandon Lowe (`lowebr01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 7: Jason Bartlett (`bartlja01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 8: Kevin Kiermaier (`kiermke01`) in R1-03-G1 (same starter in 1 later game)
+- Slot 9: Toby Hall (`hallto02`) in R1-03-G1 (same starter in 1 later game)
+
+### Substitutes who have batted
+
+- Joey Wendle (`wendljo01`), slot 2
+
+### Starts, in the order the games were played
+
+- David Price (`priceda01`) started R1-03-G1
+- James Shields (`shielja02`) started R1-03-G2
+
+### Relievers who have appeared
+
+- J.P. Howell (`howeljp01`), first seen in R1-03-G1
+- Jake McGee (`mcgeeja01`), first seen in R1-03-G2
+
+### Rotation carry recorded on the series
+
+- R1-03: next start Blake Snell
 
 ## 31. Washington Nationals (WSH)
 
