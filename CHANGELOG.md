@@ -2,6 +2,16 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — Inbox import, derived stats, history
+
+The videos hub, its nav link, `videos.json`, and the video blocks on game and series pages were removed. The walkthrough link in the header stays. The install notes no longer describe an Android wrapper. The installable page is unchanged.
+
+`scripts/import_game.py` reads a CSV or a markdown box score, including a whole series file in the R1-03 layout. `inbox/` is the drop folder. The Inbox import workflow applies new games, runs the validator, regenerates the pages, commits, and deploys. A bad file stays in `inbox/` and the reason is written to `inbox/errors/`. Games already on the book are not rewritten. R1-01, R1-02, and R1-03 stay locked.
+
+After a deploy, the site workflow can post a new final to Discord and to X. It does that only when `DISCORD_WEBHOOK_URL` or the `X_*` secrets are set. No secret is stored in the repo. Setup is in [ADDING_GAMES.md](ADDING_GAMES.md).
+
+The stats page counts hit streaks, pitcher workload, club splits, head-to-head results, and batter-versus-pitcher plate appearances where a roll log names the batter. The history page lists series results and milestones from the box scores, then the rulings in this file. No score, line, or series result was changed.
+
 ## 2026-10-25 — R1-03 complete, Boston 4-3
 
 Joe's official box scores closed Opening Round Series 3. Games 1 and 2 already in the archive match those box scores on the site, the linescore, the decisions, and every batting and pitching line. Games 3 through 7 were added in the same shape. The seven games sum to the series totals in the series summary: Boston 27 runs and 53 hits, Tampa Bay 17 runs and 35 hits, and the player batting and pitching tables. Boston is 1-0 on the winners side. Tampa Bay is 0-1 on the losers side and is not eliminated. Series MVP is Roger Clemens. Runner-up is Jimmie Foxx.
@@ -10,7 +20,7 @@ Games 3-7 have no per-game calendar date in the box scores, so the date is null.
 
 ## 2026-10-25 — Sharing, logos, and the installable site
 
-The viewer gained a compact phone header, static share pages under `share/`, Open Graph images, Monte Carlo series and title odds in `feed/odds.json`, matchup previews, a videos hub, a weekly recap, an in-site game form, and a service worker. Club marks come from `data/teams.json`. A 1986 logo file is used where the franchise matches that sheet. Marlins, Rays, Diamondbacks, Rockies, Nationals, and Philadelphia Athletics use a monogram because they are not in that sheet. Bios in `data/bios.json` cover only players who appear in the recorded games. Clubs that have not played still have an empty roster stub. The site says "Roster not announced yet." No score, line, or series result was changed.
+The viewer gained a compact phone header, static share pages under `share/`, Open Graph images, Monte Carlo series and title odds in `feed/odds.json`, matchup previews, a weekly recap, an in-site game form, and a service worker. Club marks come from `data/teams.json`. A 1986 logo file is used where the franchise matches that sheet. Marlins, Rays, Diamondbacks, Rockies, Nationals, and Philadelphia Athletics use a monogram because they are not in that sheet. Bios in `data/bios.json` cover only players who appear in the recorded games. Clubs that have not played still have an empty roster stub. The site says "Roster not announced yet." No score, line, or series result was changed.
 
 ## 2026-10-25 — Records and documents
 

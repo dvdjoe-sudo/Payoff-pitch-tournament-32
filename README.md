@@ -6,7 +6,7 @@ A game is simulated, then written into [`tournament_results.json`](tournament_re
 
 Walkthrough: [Payoff Pitch top 32 tournament](https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs).
 
-The bracket viewer is [`index.html`](index.html). It reads the results file and draws the bracket, standings, game pages, team pages, the awards race, and the milestone list. Share links for a game or a series are static pages in [`share/`](share/), because the in-site routes are hashes. Club marks and colors are [`data/teams.json`](data/teams.json): a 1986 logo file where that franchise is in the sheet, and a monogram in team colors otherwise. [`videos.json`](videos.json) is where a muse.ai or YouTube embed URL is attached to a game or a series. [`ADDING_GAMES.md`](ADDING_GAMES.md) is the way to draft the next game. [`PWA.md`](PWA.md) covers install and a future Android wrapper.
+The bracket viewer is [`index.html`](index.html). It reads the results file and draws the bracket, standings, game pages, team pages, the awards race, the milestone list, derived stats, and a history timeline. Share links for a game or a series are static pages in [`share/`](share/), because the in-site routes are hashes. Club marks and colors are [`data/teams.json`](data/teams.json): a 1986 logo file where that franchise is in the sheet, and a monogram in team colors otherwise. [`ADDING_GAMES.md`](ADDING_GAMES.md) is the way to add the next game, including a markdown box score dropped in [`inbox/`](inbox/). [`PWA.md`](PWA.md) covers install.
 
 Current standing (16 games played):
 
@@ -115,7 +115,7 @@ The first deploy needs the Pages source set to GitHub Actions. A branch deploy a
 - [License](LICENSE) covers the code and these documents.
 - [Viewer](index.html) draws the bracket from the JSON.
 - [Adding games](ADDING_GAMES.md) covers the in-site form and `scripts/import_game.py`.
-- [Install](PWA.md) covers the manifest, the service worker, and a future Android wrapper.
+- [Install](PWA.md) covers the manifest and the service worker.
 - [Team marks](data/teams.json) are the logo and color swap file.
 - [Odds](feed/odds.json) are the Monte Carlo series and title chances from [MODELS.md](MODELS.md).
 - [JSON feed](feed/tournament.json) and [RSS](feed/games.xml) list the games played.

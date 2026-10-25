@@ -11,6 +11,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -21,9 +22,21 @@ GAMES = ROOT / "games"
 # Fingerprint of scores, lines, batting, pitching, decisions, rolls, and
 # manager logs. Reset when R1-03 Games 3-7 were added from Joe's box scores.
 # Games 1-2 of that series were checked against those box scores and left as stored.
-FINGERPRINT = "7ab032794ae6f1b3c47184df4bf99ab8827c76ea50d9734bc8b10c118da41cf4"
-SERIES_HASH = "ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613"
+# Locked games only (box score, decisions, rolls). The previous fingerprint also
+# covered every series slot and the team won-lost lines; those move when a new
+# game is imported. Team lines are still reconciled below. The old value was
+# 7ab032794ae6f1b3c47184df4bf99ab8827c76ea50d9734bc8b10c118da41cf4.
+FINGERPRINT = "d2b7b66dfb53fd57e5593a4207278a76cf8860fc662b9655d661ba6eca7aef45"
+# Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
+# The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
+FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
+FROZEN_SERIES_HASH = "7839af494aa7882786c7d5b9268e8f9826bdd8903b49c7d27f1d151ca2eb4df2"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
+LOCKED_GAME_IDS = (
+    "R1-01-G1", "R1-01-G2", "R1-01-G3", "R1-01-G4",
+    "R1-02-G1", "R1-02-G2", "R1-02-G3", "R1-02-G4", "R1-02-G5",
+    "R1-03-G1", "R1-03-G2", "R1-03-G3", "R1-03-G4", "R1-03-G5", "R1-03-G6", "R1-03-G7",
+)
 
 BATTING_FIELDS = (
     "team", "player_id", "name", "lineup_slot", "entry_order", "is_substitute",
@@ -98,8 +111,12 @@ class Check:
 
 
 def fingerprint(data: dict, details: dict[str, dict]) -> str:
+    by_id = {game["id"]: game for game in data["games"]}
     games = []
-    for game in data["games"]:
+    for game_id in LOCKED_GAME_IDS:
+        game = by_id.get(game_id)
+        if game is None:
+            continue
         detail = details[game["id"]]
         games.append({
             "id": game["id"],
@@ -117,13 +134,7 @@ def fingerprint(data: dict, details: dict[str, dict]) -> str:
             "manager_log": detail.get("manager_log", None),
             "team_errors": game["team_errors"],
         })
-    teams = [{key: team[key] for key in TEAM_FIELDS} for team in data["teams"]]
-    series = [{
-        key: item[key] for key in (
-            "id", "status", "winner", "loser", "wins", "games", "team_a", "team_b", "seed_a", "seed_b",
-        )
-    } for item in data["series"]]
-    return digest({"games": games, "teams": teams, "series": series})
+    return digest({"games": games})
 
 
 def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
@@ -131,10 +142,14 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
     check.expect(data.get("version") == 1, "archive version left at 1")
     check.expect(len(data["teams"]) == 32, "32 teams")
     check.expect(len(data["series"]) == 63, "63 series slots")
-    check.expect(len(data["games"]) == 16, "16 games")
-    check.expect(digest(data["series"]) == SERIES_HASH, "series objects unchanged")
+    ids = [game["id"] for game in data["games"]]
+    check.expect(ids[:len(LOCKED_GAME_IDS)] == list(LOCKED_GAME_IDS), "locked games stay first, in order")
+    check.expect(len(ids) == len(set(ids)), "game ids are unique")
+    frozen = [item for item in data["series"] if item["id"] in FROZEN_SERIES]
+    check.expect([item["id"] for item in frozen] == list(FROZEN_SERIES), "frozen series stay in order")
+    check.expect(digest(frozen) == FROZEN_SERIES_HASH, "frozen series objects unchanged")
     check.expect(digest(data["format"]) == FORMAT_HASH, "format object unchanged")
-    check.expect(fingerprint(data, details) == FINGERPRINT, "pre-split stat fingerprint")
+    check.expect(fingerprint(data, details) == FINGERPRINT, "locked game stat fingerprint")
 
     totals = {key: 0 for key in EXPECTED_TOTALS}
     game_wins: dict[str, int] = {}
@@ -145,14 +160,18 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         detail = details[game["id"]]
         check.expect(detail["id"] == game["id"] and detail["series_id"] == game["series_id"], f"{game['id']} detail identity")
         check.expect(detail["game_in_series"] == game["game_in_series"], f"{game['id']} detail game number")
-        if game["id"] in {"R1-03-G1", "R1-03-G2"}:
-            check.expect(game.get("date") == "2026-10-24", f"{game['id']} date")
-        elif game["series_id"] == "R1-03":
-            check.expect(game.get("date") is None, f"{game['id']} has no per-game date in the box scores")
-        elif game["series_id"] in DATED:
-            check.expect(game.get("date") == DATED[game["series_id"]], f"{game['id']} date")
+        if game["id"] in set(LOCKED_GAME_IDS):
+            if game["id"] in {"R1-03-G1", "R1-03-G2"}:
+                check.expect(game.get("date") == "2026-10-24", f"{game['id']} date")
+            elif game["series_id"] == "R1-03":
+                check.expect(game.get("date") is None, f"{game['id']} has no per-game date in the box scores")
+            elif game["series_id"] in DATED:
+                check.expect(game.get("date") == DATED[game["series_id"]], f"{game['id']} date")
+            else:
+                check.expect(game.get("date") is None, f"{game['id']} date should be null")
         else:
-            check.expect(game.get("date") is None, f"{game['id']} date should be null")
+            dated = game.get("date")
+            check.expect(dated is None or bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", dated or "")), f"{game['id']} date")
         for code in (game["home"], game["away"]):
             batting_runs = sum(line["r"] or 0 for line in game["batting"] if line["team"] == code)
             check.expect(batting_runs == game["score"][code], f"{game['id']} {code} batting runs")
@@ -166,14 +185,15 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         strike_p = sum(line["k"] or 0 for line in game["pitching"])
         check.expect(hits_b == hits_p, f"{game['id']} hits")
         check.expect(strike_b == strike_p, f"{game['id']} strikeouts")
-        for line in game["batting"]:
-            totals["H"] += line["h"] or 0
-            totals["HR"] += line["hr"] or 0
-            totals["RBI"] += line["rbi"] or 0
-            totals["K"] += line["k"] or 0
-        for line in game["pitching"]:
-            totals["ER"] += line["er"] or 0
-            totals["OUTS"] += line["outs"] or 0
+        if game["id"] in set(LOCKED_GAME_IDS):
+            for line in game["batting"]:
+                totals["H"] += line["h"] or 0
+                totals["HR"] += line["hr"] or 0
+                totals["RBI"] += line["rbi"] or 0
+                totals["K"] += line["k"] or 0
+            for line in game["pitching"]:
+                totals["ER"] += line["er"] or 0
+                totals["OUTS"] += line["outs"] or 0
         winner = game["winner"]
         loser = game["away"] if winner == game["home"] else game["home"]
         game_wins[winner] = game_wins.get(winner, 0) + 1

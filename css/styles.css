@@ -530,16 +530,20 @@ a.player-link, a.team-link { color: inherit; }
 
 .title-odds h2 { font-size: 1.15rem; margin-bottom: 0.25rem; }
 
-.preview-card, .add-form, .video-list {
+.preview-card, .add-form {
   max-width: 46rem;
 }
 
-.video-frame {
-  width: 100%;
-  max-width: 40rem;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  background: #000;
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline li {
+  margin: 0;
+  padding: 0.15rem 0 0.85rem 0.85rem;
+  border-left: 3px solid var(--gold);
 }
 
 .add-form {

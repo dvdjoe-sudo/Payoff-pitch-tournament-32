@@ -1,0 +1,83 @@
+name: Inbox import
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "inbox/*.md"
+      - "inbox/*.csv"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    outputs:
+      pushed: ${{ steps.commit.outputs.pushed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Import box scores
+        id: run
+        run: |
+          set +e
+          python3 scripts/import_inbox.py
+          code=$?
+          set -e
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then
+            exit "$code"
+          fi
+      - name: Commit the import or the error report
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          code="${{ steps.run.outputs.code }}"
+          if [ "$code" = "2" ]; then
+            git add inbox/errors
+            if git diff --cached --quiet; then
+              echo "The import failed and no error report was produced."
+              exit 1
+            fi
+            git commit -m "Record an inbox import error."
+            git push
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            echo "Import failed. The box score is still in inbox/ and the report is in inbox/errors/."
+            exit 1
+          fi
+          git add -A
+          if git diff --cached --quiet; then
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            echo "Nothing new to commit."
+            exit 0
+          fi
+          git commit -m "Import box scores from inbox."
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: import
+    if: needs.import.outputs.pushed == 'true'
+    concurrency:
+      group: pages-inbox
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deployment
