@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payoff Pitch Tournament 32</title>
+  <meta name="description" content="Double-elimination bracket, standings, and box scores for the Payoff Pitch 32-team tournament.">
+  <meta name="theme-color" content="#12263f">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <p class="eyebrow">All-time franchise field</p>
+    <h1>Payoff Pitch Tournament 32</h1>
+    <p class="lede" id="lede">Loading the bracket…</p>
+    <p class="header-links">
+      <a href="https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs">Walkthrough video</a>
+      <a href="README.md">About this tournament</a>
+      <a href="SCHEMA.md">Results schema</a>
+    </p>
+  </header>
+  <nav class="views" aria-label="Sections">
+    <button type="button" id="tab-bracket" aria-selected="true">Bracket</button>
+    <button type="button" id="tab-standings" aria-selected="false">Standings</button>
+  </nav>
+  <main id="content">
+    <p id="load-error" class="load-error" hidden></p>
+    <section id="bracket-view" aria-label="Bracket"></section>
+    <section id="standings-view" aria-label="Standings" hidden></section>
+  </main>
+  <footer class="site-footer">
+    <p id="footer-note"></p>
+  </footer>
+  <script src="js/bracket.js"></script>
+</body>
+</html>

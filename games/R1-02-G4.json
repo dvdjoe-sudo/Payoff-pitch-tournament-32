@@ -1,0 +1,991 @@
+{
+ "id": "R1-02-G4",
+ "series_id": "R1-02",
+ "game_in_series": 4,
+ "rolls": [
+  [
+   33,
+   "2d6"
+  ],
+  [
+   20,
+   "%"
+  ],
+  [
+   15,
+   "2d6"
+  ],
+  [
+   124,
+   "%"
+  ],
+  [
+   7,
+   "2d6"
+  ],
+  [
+   103,
+   "2d6"
+  ],
+  [
+   44,
+   "%"
+  ],
+  [
+   249,
+   "%"
+  ],
+  [
+   85,
+   "2d6"
+  ],
+  [
+   94,
+   "%"
+  ],
+  [
+   56,
+   "2d6"
+  ],
+  [
+   132,
+   "%"
+  ],
+  [
+   187,
+   "2d6"
+  ],
+  [
+   123,
+   "%"
+  ],
+  [
+   213,
+   "2d6"
+  ],
+  [
+   126,
+   "%"
+  ],
+  [
+   49,
+   "2d6"
+  ],
+  [
+   120,
+   "%"
+  ],
+  [
+   76,
+   "2d6"
+  ],
+  [
+   193,
+   "%"
+  ],
+  [
+   160,
+   "2d6"
+  ],
+  [
+   153,
+   "%"
+  ],
+  [
+   210,
+   "2d6"
+  ],
+  [
+   84,
+   "%"
+  ],
+  [
+   201,
+   "2d6"
+  ],
+  [
+   219,
+   "%"
+  ],
+  [
+   66,
+   "2d6"
+  ],
+  [
+   211,
+   "2d6"
+  ],
+  [
+   228,
+   "%"
+  ],
+  [
+   171,
+   "2d6"
+  ],
+  [
+   89,
+   "%"
+  ],
+  [
+   245,
+   "2d6"
+  ],
+  [
+   255,
+   "2d6"
+  ],
+  [
+   48,
+   "%"
+  ],
+  [
+   77,
+   "2d6"
+  ],
+  [
+   150,
+   "%"
+  ],
+  [
+   69,
+   "2d6"
+  ],
+  [
+   197,
+   "%"
+  ],
+  [
+   37,
+   "2d6"
+  ],
+  [
+   199,
+   "1d6"
+  ],
+  [
+   162,
+   "%"
+  ],
+  [
+   140,
+   "2d6"
+  ],
+  [
+   110,
+   "%"
+  ],
+  [
+   149,
+   "2d6"
+  ],
+  [
+   143,
+   "%"
+  ],
+  [
+   165,
+   "%"
+  ],
+  [
+   251,
+   "2d6"
+  ],
+  [
+   146,
+   "%"
+  ],
+  [
+   145,
+   "%"
+  ],
+  [
+   156,
+   "2d6"
+  ],
+  [
+   180,
+   "%"
+  ],
+  [
+   87,
+   "2d6"
+  ],
+  [
+   247,
+   "%"
+  ],
+  [
+   31,
+   "2d6"
+  ],
+  [
+   122,
+   "%"
+  ],
+  [
+   14,
+   "2d6"
+  ],
+  [
+   68,
+   "%"
+  ],
+  [
+   114,
+   "2d6"
+  ],
+  [
+   236,
+   "%"
+  ],
+  [
+   215,
+   "2d6"
+  ],
+  [
+   195,
+   "%"
+  ],
+  [
+   218,
+   "2d6"
+  ],
+  [
+   179,
+   "%"
+  ],
+  [
+   92,
+   "%"
+  ],
+  [
+   144,
+   "2d6"
+  ],
+  [
+   148,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 3 full innings (printed protocol)"
+  ],
+  [
+   142,
+   "2d6"
+  ],
+  [
+   141,
+   "%"
+  ],
+  [
+   133,
+   "2d6"
+  ],
+  [
+   116,
+   "%"
+  ],
+  [
+   101,
+   "2d6"
+  ],
+  [
+   43,
+   "%"
+  ],
+  [
+   188,
+   "2d6"
+  ],
+  [
+   49,
+   "%"
+  ],
+  [
+   205,
+   "2d6"
+  ],
+  [
+   220,
+   "%"
+  ],
+  [
+   77,
+   "2d6"
+  ],
+  [
+   7,
+   "1d6"
+  ],
+  [
+   137,
+   "%"
+  ],
+  [
+   8,
+   "2d6"
+  ],
+  [
+   234,
+   "%"
+  ],
+  [
+   223,
+   "%"
+  ],
+  [
+   204,
+   "2d6"
+  ],
+  [
+   53,
+   "%"
+  ],
+  [
+   129,
+   "2d6"
+  ],
+  [
+   145,
+   "%"
+  ],
+  [
+   237,
+   "2d6"
+  ],
+  [
+   186,
+   "%"
+  ],
+  [
+   37,
+   "2d6"
+  ],
+  [
+   189,
+   "%"
+  ],
+  [
+   78,
+   "2d6"
+  ],
+  [
+   180,
+   "%"
+  ],
+  [
+   154,
+   "2d6"
+  ],
+  [
+   66,
+   "%"
+  ],
+  [
+   228,
+   "2d6"
+  ],
+  [
+   62,
+   "%"
+  ],
+  [
+   22,
+   "2d6"
+  ],
+  [
+   99,
+   "%"
+  ],
+  [
+   128,
+   "2d6"
+  ],
+  [
+   30,
+   "%"
+  ],
+  [
+   182,
+   "2d6"
+  ],
+  [
+   39,
+   "%"
+  ],
+  [
+   105,
+   "%"
+  ],
+  [
+   208,
+   "2d6"
+  ],
+  [
+   147,
+   "%"
+  ],
+  [
+   41,
+   "2d6"
+  ],
+  [
+   100,
+   "%"
+  ],
+  [
+   238,
+   "2d6"
+  ],
+  [
+   85,
+   "%"
+  ],
+  [
+   107,
+   "2d6"
+  ],
+  [
+   16,
+   "%"
+  ],
+  [
+   187,
+   "2d6"
+  ],
+  [
+   200,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 6 full innings (printed protocol)"
+  ],
+  [
+   235,
+   "2d6"
+  ],
+  [
+   1,
+   "%"
+  ],
+  [
+   212,
+   "2d6"
+  ],
+  [
+   144,
+   "%"
+  ],
+  [
+   191,
+   "2d6"
+  ],
+  [
+   83,
+   "%"
+  ],
+  [
+   110,
+   "%"
+  ],
+  [
+   199,
+   "2d6"
+  ],
+  [
+   87,
+   "%"
+  ],
+  [
+   206,
+   "2d6"
+  ],
+  [
+   251,
+   "%"
+  ],
+  [
+   224,
+   "2d6"
+  ],
+  [
+   12,
+   "1d6"
+  ],
+  [
+   34,
+   "%"
+  ],
+  [
+   231,
+   "2d6"
+  ],
+  [
+   229,
+   "%"
+  ],
+  [
+   112,
+   "2d6"
+  ],
+  [
+   168,
+   "%"
+  ],
+  [
+   237,
+   "%"
+  ],
+  [
+   164,
+   "2d6"
+  ],
+  [
+   183,
+   "%"
+  ],
+  [
+   189,
+   "2d6"
+  ],
+  [
+   85,
+   "%"
+  ],
+  [
+   208,
+   "2d6"
+  ],
+  [
+   178,
+   "%"
+  ],
+  [
+   201,
+   "2d6"
+  ],
+  [
+   225,
+   "%"
+  ],
+  [
+   196,
+   "2d6"
+  ],
+  [
+   233,
+   "%"
+  ],
+  [
+   40,
+   "2d6"
+  ],
+  [
+   58,
+   "%"
+  ],
+  [
+   48,
+   "2d6"
+  ],
+  [
+   218,
+   "2d6"
+  ],
+  [
+   186,
+   "%"
+  ],
+  [
+   188,
+   "2d6"
+  ],
+  [
+   59,
+   "%"
+  ],
+  [
+   64,
+   "2d6"
+  ],
+  [
+   100,
+   "%"
+  ],
+  [
+   174,
+   "2d6"
+  ],
+  [
+   210,
+   "%"
+  ],
+  [
+   29,
+   "2d6"
+  ],
+  [
+   180,
+   "%"
+  ],
+  [
+   240,
+   "2d6"
+  ],
+  [
+   70,
+   "%"
+  ],
+  [
+   66,
+   "2d6"
+  ],
+  [
+   45,
+   "%"
+  ],
+  [
+   10,
+   "2d6"
+  ],
+  [
+   205,
+   "1d6"
+  ],
+  [
+   182,
+   "%"
+  ],
+  [
+   108,
+   "2d6"
+  ],
+  [
+   105,
+   "%"
+  ]
+ ],
+ "manager_log": [
+  "SETUP ASSERTION BLOCK: all checks PASS (v2 engine + v2 cards bound for BOTH clubs, FAC deck stream installed, FAC-chart absent, addendum live and merging for BOTH clubs, traits ON with McGraw governing San Francisco from the SF slot and Martinez governing Washington from the MON slot, Williams's package managing NEITHER club, home flip applied, Nationals Park composite in force, fatigue fix layer installed outermost with both starters' stamina lines served, hard-rule exception closed). Printed in full in the game record.",
+  "PAYOFF PITCH SERIES GAME 4 (OFFICIAL): San Francisco Giants at Washington Nationals, Washington (Nationals Park, league-average composite stand-in), DH on. Best of 7, home pattern 2-2-1-1-1, Washington home for Games 3-4. San Francisco leads the series 2-1.",
+  "Venue and slot note: Washington plays in the host engine's 'MON' slot and San Francisco in the 'SF' slot, as in Games 1-3, but the home role swaps for Games 3-4: the setup re-points the engine's bat/field mapping (the Series 4 flip pattern from the Stade Olympique games), so San Francisco bats in the top half as the visitor and Washington in the bottom half as the home club, and the park card in force is the Nationals Park league-average composite stand-in (median band edges of the 26 held park cards; no printed Nationals Park chart exists in the held data; Joe accepted the composite as the set's standard park). The host engine's BALLPARK log lines print its Candlestick label; the chart in force for those reads is the composite card. No engine file was edited.",
+  "Starters: Gaylord Perry (SF) vs Gio Gonzalez (WSH), the recorded Game 4 rotation carry (SF rotation: Mathewson, Hubbell, Marichal, Perry, Lincecum; WSH rotation: Scherzer, Strasburg, Zimmermann, Gio Gonzalez, Livan Hernandez); FAC deck seed 20261104 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Washington's ratings merged into the layer for the guest slot from the Nationals' own pitcher_addendum.json). Stamina lines as served: Perry Start 8 (book line: 3+ runs from the 8th inning), Gio Gonzalez Start 5 (book line: 3+ runs from the 5th inning).",
+  "FATIGUE FIX LIVE (Joe's commission, FATIGUE_FIX.md): the fatigue_fix layer is installed outermost over the stack, so all four book fatigue triggers are in force: the engine's 6-run universal rule, the starter-stamina trigger (Start inning reached at 3+ runs, evaluated before the inning's first plate appearance as well as after every one), the Short/Long reliever triggers (appearance innings and runs), and the save-symbol exemption machinery (no converted card carries a symbol, so the exemption correctly cannot fire; no symbol was invented). The layer records the Section 1.6 fatigue standard in the game state.",
+  "Managers: San Francisco is managed by JOHN McGRAW (v1 decision traits + the v2 late-game package, play selection governed by his traits under the v4 settlement), governing from the 'SF' slot. Washington is managed by DAVE MARTINEZ (v5 library layer, traits5.py: Go 1-0 Today resilience, the Postseason Rotation Hack, Loyal to a Fault, Maddon's Disciple), governing from the 'MON' slot, recorded as the Nationals' manager in their SET_REPORT.md.",
+  "Williams note: Dick Williams's traits2 package is hard-keyed to the host engine's 'MON' slot and has no state-level off switch; his decision entry points were re-pointed to no-ops at module level in this process and his Fireman candidate function returns None, so the package manages NEITHER club in this game: not Washington from the MON slot and not San Francisco from the SF slot. Dick Williams manages Montreal in this project (Joe's graphics ruling). No traits file was edited.",
+  "Hierarchy in force: book mechanics (fatigue, Rest Chart); the one hard rule (no starting pitcher relieves except for a club facing elimination, with a one-day rotation setback); manager traits where they speak; the hook policy and Joe's closer branch as the DEFAULT policy everywhere else.",
+  "Elimination mark: Game 4 of a best-of-7 (SF leads 2-1); this is an elimination game for NEITHER club: if Washington loses tonight, Game 5 becomes its first elimination game, and San Francisco cannot face elimination in Game 4. The hard rule's exception is CLOSED: no starting pitcher may relieve in this game, and Martinez's Postseason Rotation Hack (elimination games only) is gated shut with it. Both gates are asserted in the setup block and their state is carried in the governance log all game.",
+  "Trait draw (seeded, documented): McGraw survives the game; no ejection (5% pre-game draw).",
+  "[1T 0 out, bases ---] Willie Mays vs Gio Gonzalez",
+  "  dice 2d6=10 (2+1) %=07 -> PATIENT-OUT",
+  "  Willie Mays walks",
+  "[1T 0 out, bases 1--] Will Clark vs Gio Gonzalez",
+  "  hit and run is on",
+  "  dice 2d6=3 (2+3) %=69 -> TOUGH",
+  "  TOUGH %=69 above the ranges -> OUT G4",
+  "  hit and run ground ball: DOUBLE PLAY",
+  "[1T 2 out, bases ---] Mel Ott vs Gio Gonzalez",
+  "  dice 2d6=5 (2+6) %=07 -> IN-PLAY",
+  "  IN-PLAY %=07 -> 1B",
+  "  Mel Ott singles (RF fields it)",
+  "  Mel Ott steals 2 safely",
+  "[1T 2 out, bases -1-] Barry Bonds vs Gio Gonzalez",
+  "  dice 2d6=10 (1+6) %=74 -> PATIENT-OUT",
+  "  Barry Bonds walks",
+  "[1T 2 out, bases 11-] Willie McCovey vs Gio Gonzalez",
+  "  dice 2d6=9 (4+6) %=62 -> IN-PLAY",
+  "  IN-PLAY %=62 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[1B 0 out, bases ---] Denard Span vs Gaylord Perry",
+  "  dice 2d6=8 (6+6) %=68 -> IN-PLAY",
+  "  IN-PLAY %=68 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[1B 1 out, bases ---] Trea Turner vs Gaylord Perry",
+  "  dice 2d6=6 (1+5) %=83 -> TOUGH",
+  "  TOUGH %=83 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[1B 2 out, bases ---] Juan Soto vs Gaylord Perry",
+  "  dice 2d6=9 (3+2) %=08 -> PATIENT",
+  "  PATIENT %=08 -> BB",
+  "  Juan Soto walks",
+  "[1B 2 out, bases 1--] Bryce Harper vs Gaylord Perry",
+  "  dice 2d6=8 (2+1) %=74 -> IN-PLAY",
+  "  IN-PLAY %=74 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[2T 0 out, bases ---] Jeff Kent vs Gio Gonzalez",
+  "  dice 2d6=11 (5+6) %=32 -> PATIENT",
+  "  PATIENT %=32 -> 3B",
+  "  Jeff Kent triples, 0 run(s) score",
+  "[2T 0 out, bases --1] Buster Posey vs Gio Gonzalez",
+  "  dice 2d6=5 (4+1) %=43 -> IN-PLAY",
+  "  IN-PLAY %=43 -> 1B",
+  "  Buster Posey singles (CF fields it)",
+  "[2T 0 out, bases 1--] Matt Williams vs Gio Gonzalez",
+  "  hit and run is on",
+  "  dice 2d6=8 (1+3) %=87 -> TOUGH",
+  "  TOUGH %=87 above the ranges -> OUT G6",
+  "  hit and run: batter out at 1st, runners advance",
+  "[2T 1 out, bases -1-] Art Fletcher vs Gio Gonzalez",
+  "  Buster Posey steals 3 safely",
+  "  dice 2d6=6 (3+3) %=95 -> TOUGH",
+  "  TOUGH %=95 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[2T 2 out, bases --1] Willie Mays vs Gio Gonzalez",
+  "  dice 2d6=8 (3+3) %=12 -> TOUGH",
+  "  TOUGH %=12 -> SO",
+  "  Willie Mays strikes out",
+  "[2B 0 out, bases ---] Anthony Rendon vs Gaylord Perry",
+  "  dice 2d6=9 (5+6) %=26 -> PATIENT",
+  "  PATIENT %=26 -> BB",
+  "  Anthony Rendon walks",
+  "[2B 0 out, bases 1--] Ryan Zimmerman vs Gaylord Perry",
+  "  dice 2d6=6 (2+6) %=66 -> TOUGH",
+  "  TOUGH %=57 -> SO",
+  "  Ryan Zimmerman strikes out",
+  "[2B 1 out, bases 1--] Daniel Murphy vs Gaylord Perry",
+  "  bunt: fielder 3B, %=68 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[2B 2 out, bases -1-] Nick Johnson vs Gaylord Perry",
+  "  dice 2d6=3 (3+4) %=64 -> TOUGH",
+  "  TOUGH %=64 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[3T 0 out, bases ---] Will Clark vs Gio Gonzalez",
+  "  dice 2d6=12 (6+4) %=60 -> PATIENT",
+  "  PATIENT %=60 -> HBP",
+  "  Will Clark is hit by a pitch",
+  "  pickoff move on Will Clark: he gets back safely (book p18)",
+  "[3T 0 out, bases 1--] Mel Ott vs Gio Gonzalez",
+  "  hit and run is on",
+  "  dice 2d6=10 (3+5) %=49 -> PATIENT-OUT",
+  "  hit and run: PATIENT is a foul ball, re-roll %=01 on IN-PLAY",
+  "  IN-PLAY %=01 -> 3B",
+  "  hit and run: Mel Ott with a 3B, runners take the extra base",
+  "[3T 0 out, bases --1] Barry Bonds vs Gio Gonzalez",
+  "  dice 2d6=6 (5+6) %=96 -> TOUGH",
+  "  TOUGH %=96 above the ranges -> OUT F7",
+  "  fly out LF, run tags and scores",
+  "[3T 1 out, bases ---] Willie McCovey vs Gio Gonzalez",
+  "  dice 2d6=8 (1+6) %=86 -> TOUGH",
+  "  TOUGH %=86 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[3T 2 out, bases ---] Jeff Kent vs Gio Gonzalez",
+  "  dice 2d6=11 (4+3) %=71 -> PATIENT",
+  "  PATIENT %=71 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[3B 0 out, bases ---] Wilson Ramos vs Gaylord Perry",
+  "  dice 2d6=9 (5+5) %=31 -> PATIENT",
+  "  PATIENT %=31 -> 1B",
+  "  Wilson Ramos singles (LF fields it)",
+  "[3B 0 out, bases 1--] Denard Span vs Gaylord Perry",
+  "  dice 2d6=6 (1+6) %=14 -> TOUGH",
+  "  TOUGH %=14 -> SO",
+  "  Denard Span strikes out",
+  "[3B 1 out, bases 1--] Trea Turner vs Gaylord Perry",
+  "  dice 2d6=6 (2+6) %=50 -> TOUGH",
+  "  TOUGH %=45 -> SO",
+  "  Trea Turner strikes out",
+  "[3B 2 out, bases 1--] Juan Soto vs Gaylord Perry",
+  "  dice 2d6=5 (1+6) %=20 -> BALLPARK",
+  "  BALLPARK (Candlestick Park, LHB): WHEELHOUSE, re-roll %=05",
+  "  WHEELHOUSE %=05 -> HR",
+  "  Juan Soto homers",
+  "[3B 2 out, bases ---] Bryce Harper vs Gaylord Perry",
+  "  dice 2d6=6 (2+5) %=13 -> TOUGH",
+  "  TOUGH %=13 -> SO",
+  "  Bryce Harper strikes out",
+  "  FAC deck reshuffled after 3 full innings (printed protocol)",
+  "[4T 0 out, bases ---] Buster Posey vs Gio Gonzalez",
+  "  dice 2d6=7 (5+2) %=32 -> TOUGH",
+  "  TOUGH %=32 -> SO",
+  "  Buster Posey strikes out",
+  "[4T 1 out, bases ---] Matt Williams vs Gio Gonzalez",
+  "  dice 2d6=7 (2+2) %=54 -> TOUGH",
+  "  TOUGH %=54 -> SO",
+  "  Matt Williams strikes out",
+  "[4T 2 out, bases ---] Art Fletcher vs Gio Gonzalez",
+  "  dice 2d6=7 (3+4) %=84 -> TOUGH",
+  "  TOUGH %=84 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[4B 0 out, bases ---] Anthony Rendon vs Gaylord Perry",
+  "  dice 2d6=7 (4+3) %=78 -> IN-PLAY",
+  "  IN-PLAY %=78 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[4B 1 out, bases ---] Ryan Zimmerman vs Gaylord Perry",
+  "  dice 2d6=9 (4+4) %=34 -> PATIENT",
+  "  PATIENT %=34 -> BB",
+  "  Ryan Zimmerman walks",
+  "[4B 1 out, bases 1--] Daniel Murphy vs Gaylord Perry",
+  "  bunt: fielder P, %=76 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[4B 2 out, bases -1-] Nick Johnson vs Gaylord Perry",
+  "  dice 2d6=2 (1+3) %=11 -> IN-PLAY",
+  "  IN-PLAY %=11 -> 1B",
+  "  Nick Johnson singles (LF fields it)",
+  "  Nick Johnson steals 2 safely",
+  "[4B 2 out, bases -1-] Wilson Ramos vs Gaylord Perry",
+  "  dice 2d6=8 (2+6) %=36 -> IN-PLAY",
+  "  IN-PLAY %=36 above the ranges -> OUT P6",
+  "  pop out SS, runners hold",
+  "  FATIGUE (book): Gio Gonzalez is fatigued under the book's starter-stamina rule: Start 5 reached (inning 5) with 3 runs allowed, 3 or more (2024 rulebook p10)",
+  "[5T 0 out, bases ---] Willie Mays vs Gio Gonzalez",
+  "  dice 2d6=3 (3+1) %=01 -> TOUGH",
+  "  TOUGH %=01 -> SO",
+  "  Willie Mays strikes out",
+  "[5T 1 out, bases ---] Will Clark vs Gio Gonzalez",
+  "  dice 2d6=9 (6+4) %=48 -> IN-PLAY",
+  "  IN-PLAY %=48 above the ranges -> OUT G1",
+  "  ground out P",
+  "[5T 2 out, bases ---] Mel Ott vs Gio Gonzalez",
+  "  dice 2d6=6 (1+6) %=50 -> TOUGH",
+  "  TOUGH %=50 -> 1B",
+  "  Mel Ott singles (RF fields it)",
+  "[5T 2 out, bases 1--] Barry Bonds vs Gio Gonzalez",
+  "  dice 2d6=5 (2+6) %=96 -> IN-PLAY",
+  "  IN-PLAY %=96 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[5B 0 out, bases ---] Denard Span vs Gaylord Perry",
+  "  dice 2d6=9 (5+2) %=92 -> PATIENT",
+  "  PATIENT %=92 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[5B 1 out, bases ---] Trea Turner vs Gaylord Perry",
+  "  dice 2d6=11 (5+1) %=93 -> TOUGH",
+  "  TOUGH %=93 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[5B 2 out, bases ---] Juan Soto vs Gaylord Perry",
+  "  dice 2d6=10 (1+4) %=24 -> TOUGH",
+  "  TOUGH %=24 -> SO",
+  "  Juan Soto strikes out",
+  "[6T 0 out, bases ---] Willie McCovey vs Gio Gonzalez",
+  "  dice 2d6=5 (4+3) %=67 -> IN-PLAY",
+  "  IN-PLAY %=67 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[6T 1 out, bases ---] Jeff Kent vs Gio Gonzalez",
+  "  dice 2d6=12 (6+2) %=20 -> PATIENT",
+  "  PATIENT %=20 -> BB",
+  "  Jeff Kent walks",
+  "  pickoff move on Jeff Kent: he gets back safely (book p18)",
+  "[6T 1 out, bases 1--] Buster Posey vs Gio Gonzalez",
+  "  hit and run is on",
+  "  dice 2d6=5 (4+5) %=97 -> IN-PLAY",
+  "  IN-PLAY %=97 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[6T 2 out, bases 1--] Matt Williams vs Gio Gonzalez",
+  "  dice 2d6=7 (2+1) %=63 -> TOUGH",
+  "  IN-PLAY %=63 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[6B 0 out, bases ---] Bryce Harper vs Gaylord Perry",
+  "  dice 2d6=7 (4+1) %=39 -> IN-PLAY",
+  "  IN-PLAY %=39 above the ranges -> OUT G1",
+  "  ground out P",
+  "[6B 1 out, bases ---] Anthony Rendon vs Gaylord Perry",
+  "  dice 2d6=7 (4+1) %=99 -> IN-PLAY",
+  "  IN-PLAY %=99 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[6B 2 out, bases ---] Ryan Zimmerman vs Gaylord Perry",
+  "  dice 2d6=8 (6+4) %=40 -> IN-PLAY",
+  "  IN-PLAY %=40 above the ranges -> OUT P5",
+  "  pop out 3B, runners hold",
+  "  FAC deck reshuffled after 6 full innings (printed protocol)",
+  "[7T 0 out, bases ---] Art Fletcher vs Gio Gonzalez",
+  "  dice 2d6=9 (6+2) %=76 -> IN-PLAY",
+  "  IN-PLAY %=76 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[7T 1 out, bases ---] Willie Mays vs Gio Gonzalez",
+  "  dice 2d6=7 (6+2) %=14 -> TOUGH",
+  "  TOUGH %=14 -> SO",
+  "  Willie Mays strikes out",
+  "[7T 2 out, bases ---] Will Clark vs Gio Gonzalez",
+  "  dice 2d6=2 (1+2) %=26 -> PATIENT-OUT",
+  "  PATIENT %=26 -> BB",
+  "  Will Clark walks",
+  "  caught stealing: Will Clark out at 2",
+  "[7B 0 out, bases ---] Daniel Murphy vs Gaylord Perry",
+  "  dice 2d6=4 (5+1) %=25 -> TOUGH",
+  "  TOUGH %=25 -> SO",
+  "  Daniel Murphy strikes out",
+  "[7B 1 out, bases ---] Nick Johnson vs Gaylord Perry",
+  "  dice 2d6=7 (1+3) %=23 -> IN-PLAY",
+  "  IN-PLAY %=23 -> 1B",
+  "  Nick Johnson singles (CF fields it)",
+  "[7B 1 out, bases 1--] Wilson Ramos vs Gaylord Perry",
+  "  bunt: fielder C, %=69 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[7B 2 out, bases -1-] Denard Span vs Gaylord Perry",
+  "  dice 2d6=3 (2+3) %=27 -> TOUGH",
+  "  TOUGH %=27 -> SO",
+  "  Denard Span strikes out",
+  "[8T 0 out, bases ---] Mel Ott vs Gio Gonzalez",
+  "  dice 2d6=5 (2+2) %=22 -> IN-PLAY",
+  "  IN-PLAY %=22 -> 1B",
+  "  Mel Ott singles (LF fields it)",
+  "  caught stealing: Mel Ott out at 2",
+  "[8T 1 out, bases ---] Barry Bonds vs Gio Gonzalez",
+  "  dice 2d6=4 (4+4) %=22 -> BALLPARK",
+  "  WHEELHOUSE %=22 -> HR",
+  "  Barry Bonds homers",
+  "Pitching change (Washington): Drew Storen replaces Gio Gonzalez",
+  "[8T 1 out, bases ---] Willie McCovey vs Drew Storen",
+  "  dice 2d6=6 (6+1) %=39 -> IN-PLAY",
+  "  IN-PLAY %=39 above the ranges -> OUT P2",
+  "  pop out C, runners hold",
+  "[8T 2 out, bases ---] Jeff Kent vs Drew Storen",
+  "  dice 2d6=5 (4+3) %=03 -> TOUGH",
+  "  TOUGH %=03 -> SO",
+  "  Jeff Kent strikes out",
+  "  FATIGUE (book): Gaylord Perry is fatigued under the book's starter-stamina rule: Start 8 reached (inning 8) with 3 runs allowed, 3 or more (2024 rulebook p10)",
+  "[8B 0 out, bases ---] Trea Turner vs Gaylord Perry",
+  "  dice 2d6=8 (1+5) %=35 -> IN-PLAY",
+  "  IN-PLAY %=35 above the ranges -> OUT P6",
+  "  pop out SS, runners hold",
+  "[8B 1 out, bases ---] Juan Soto vs Gaylord Perry",
+  "  dice 2d6=9 (6+6) %=18 -> PATIENT",
+  "  PATIENT %=18 -> BB",
+  "  Juan Soto walks",
+  "[8B 1 out, bases 1--] Bryce Harper vs Gaylord Perry",
+  "  dice 2d6=7 (6+3) %=41 -> IN-PLAY",
+  "  IN-PLAY %=41 above the ranges -> OUT G1",
+  "  fielder's choice: runner out at 2nd, batter safe",
+  "  fielder's choice P",
+  "[8B 2 out, bases 1--] Anthony Rendon vs Gaylord Perry",
+  "  dice 2d6=5 (1+4) %=48 -> BALLPARK",
+  "  WHEELHOUSE %=48 -> 1B",
+  "  Anthony Rendon singles (RF fields it)",
+  "  auto-steal: Anthony Rendon has the jump but is held (2 outs, runner on 3rd)",
+  "[8B 2 out, bases 1-1] Ryan Zimmerman vs Gaylord Perry",
+  "  dice 2d6=7 (4+2) %=56 -> IN-PLAY",
+  "  IN-PLAY %=56 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[9T 0 out, bases ---] Buster Posey vs Drew Storen",
+  "  dice 2d6=9 (6+1) %=63 -> TOUGH",
+  "  TOUGH %=63 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[9T 1 out, bases ---] Matt Williams vs Drew Storen",
+  "  dice 2d6=8 (5+4) %=47 -> PATIENT-OUT",
+  "  PATIENT-OUT: not a walk, OUT section -> G3",
+  "  ground out 1B",
+  "[9T 2 out, bases ---] Art Fletcher vs Drew Storen",
+  "  dice 2d6=9 (5+6) %=96 -> TOUGH",
+  "  TOUGH %=96 above the ranges -> OUT F7",
+  "  fly out LF",
+  "  JOE'S RULING, closer branch applied as written: 9th inning, San Francisco leads by 1, starter Gaylord Perry has 24 outs (>= 21); closer summoned (the engine's own branch is inert: it reads a per-pitcher outs counter the engine never increments)",
+  "Pitching change (San Francisco): Robb Nen replaces Gaylord Perry",
+  "[9B 0 out, bases ---] Daniel Murphy vs Robb Nen",
+  "  dice 2d6=8 (1+4) %=52 -> TOUGH",
+  "  TOUGH %=52 above the ranges -> OUT G3",
+  "  ground out 1B",
+  "[9B 1 out, bases ---] Nick Johnson vs Robb Nen",
+  "  dice 2d6=10 (2+5) %=11 -> IN-PLAY",
+  "  IN-PLAY %=11 -> 1B",
+  "  Nick Johnson singles (LF fields it)",
+  "[9B 1 out, bases 1--] Wilson Ramos vs Robb Nen",
+  "  bunt: fielder P, %=44 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[9B 2 out, bases -1-] Denard Span vs Robb Nen",
+  "  dice 2d6=6 (1+5) %=47 -> TOUGH",
+  "  TOUGH %=33 -> SO",
+  "  Denard Span strikes out"
+ ]
+}
