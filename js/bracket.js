@@ -38,7 +38,7 @@
 
   var state = {
     data: null, byCode: {}, games: {}, players: {}, highlight: "",
-    colors: {}, bios: {}, odds: null, recap: null, plays: null
+    colors: {}, bios: {}, odds: null, recap: null, plays: null, rosters: {}
   };
   var detailCache = {};
   var renderToken = 0;
@@ -1136,8 +1136,13 @@
         ]);
       }
     });
-    page.appendChild(el("h3", { text: "Roster stats" }));
-    if (!batRows.length && !pitRows.length) page.appendChild(el("p", { text: "Roster not announced yet." }));
+    var announced = state.rosters && state.rosters[code];
+    if (announced) page.appendChild(announcedRoster(announced));
+    else if (!batRows.length && !pitRows.length) {
+      page.appendChild(el("h3", { text: "Roster" }));
+      page.appendChild(el("p", { text: "Roster not announced yet." }));
+    }
+    if (batRows.length || pitRows.length) page.appendChild(el("h3", { text: "Roster stats" }));
     if (batRows.length) {
       page.appendChild(el("h4", { text: "Batting" }));
       page.appendChild(table(["Player", "PA", "AB", "H", "HR", "RBI", "AVG"], batRows));
@@ -1147,6 +1152,20 @@
       page.appendChild(table(["Player", "IP", "W", "L", "SV", "K", "ERA"], pitRows));
     }
     view.appendChild(page);
+  }
+
+  function announcedRoster(roster) {
+    var block = el("div", { class: "roster" });
+    block.appendChild(el("h3", { text: "Roster" }));
+    block.appendChild(el("p", { class: "note", text: "Official roster from the tournament owner. The lines are copied from that roster. No stats or bios were added." }));
+    block.appendChild(el("p", { text: "Manager: " + roster.manager }));
+    [["Lineup", roster.lineup], ["Bench", roster.bench], ["Rotation", roster.rotation], ["Bullpen", roster.bullpen]].forEach(function (pair) {
+      block.appendChild(el("h4", { text: pair[0] }));
+      var list = el("ul", { class: "roster-list" });
+      (pair[1] || []).forEach(function (line) { list.appendChild(el("li", { text: line })); });
+      block.appendChild(list);
+    });
+    return block;
   }
 
   function renderPlayer(code, id) {
@@ -2340,7 +2359,8 @@
       loadOptional("data/teams.json"),
       loadOptional("data/bios.json"),
       loadOptional("feed/odds.json"),
-      loadOptional("feed/recap.json")
+      loadOptional("feed/recap.json"),
+      loadOptional("data/announced_rosters.json")
     ]);
   }).then(function (parts) {
     var data = parts[0];
@@ -2349,6 +2369,7 @@
     state.bios = parts[2] || {};
     state.odds = parts[3];
     state.recap = parts[4];
+    state.rosters = parts[5] || {};
     state.highlight = storageGet("pp-path");
     data.teams.forEach(function (team) { state.byCode[team.code] = team; });
     data.games.forEach(function (game) { state.games[game.id] = game; });

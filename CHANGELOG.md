@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — Official rosters for nine clubs
+
+The tournament owner supplied rosters for the Rockies, Dodgers, Padres, Angels, Astros, Athletics, Mariners, Rangers, and Braves. They are stored in `data/announced_rosters.json` and shown on those team pages and in `ROSTERS.md`. The Rockies manager is Bud Black. Names and accents are copied as given. No graphic cards, bios, or counting stats were added. The other clubs that have not played still say "Roster not announced yet." No game result was changed.
+
 ## 2026-10-25 — R1-04 complete, Detroit 4-2
 
 Opening Round Series 4 was played in Payoff Pitch on 2026-10-25 and recorded from the series' saved state files in the master archive. The six games sum to the series totals in the series summary: Detroit 25 runs and 49 hits, Arizona 14 runs and 42 hits. Arizona took the first two games in Detroit, Game 2 in thirteen innings. Detroit won the last four after Joe's lineup ruling started Harry Heilmann in left field in Bobby Veach's slot for Games 3 through 6. Detroit is 1-0 on the winners side. Arizona is 0-1 on the losers side and is not eliminated. Series MVP is Harry Heilmann. Runner-up is George Kell.

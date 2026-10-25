@@ -1,0 +1,334 @@
+{
+ "COL": {
+  "manager": "Bud Black",
+  "lineup": [
+   "1 Charlie Blackmon CF L 14",
+   "2 DJ LeMahieu 2B R 10",
+   "3 Todd Helton 1B L 17",
+   "4 Nolan Arenado 3B R 8",
+   "5 Larry Walker RF L 9",
+   "6 Troy Tulowitzki SS R 7",
+   "7 Matt Holliday LF R 7",
+   "8 Elias Díaz C R 6",
+   "9 Andres Galarraga DH R 5"
+  ],
+  "bench": [
+   "C2 Yorvit Torrealba C R 10",
+   "UTIL Garrett Hampson IF/OF R 5",
+   "OF4 Trevor Story SS/OF R 6",
+   "IF2 Mark Reynolds 1B/3B R 5",
+   "BAT Ian Desmond OF R 5"
+  ],
+  "rotation": [
+   "SP1 Ubaldo Jiménez 8",
+   "SP2 Kyle Freeland 9",
+   "SP3 Aaron Cook 10",
+   "SP4 Germán Márquez 7",
+   "SP5 Jhoulys Chacín 8"
+  ],
+  "bullpen": [
+   "CL Brian Fuentes 10",
+   "SU Huston Street 5",
+   "SU Rafael Betancourt 7",
+   "MR Jerry DiPoto 7",
+   "MR Matt Belisle 7",
+   "LHP Boone Logan 6",
+   "LR Mike DeJean 6"
+  ]
+ },
+ "LAD": {
+  "manager": "Tommy Lasorda",
+  "lineup": [
+   "1 Jackie Robinson 2B R 10",
+   "2 Zack Wheat LF L 18",
+   "3 Mookie Betts RF R 6",
+   "4 Shohei Ohtani DH L 2",
+   "5 Duke Snider CF L 16",
+   "6 Gil Hodges 1B R 16",
+   "7 Roy Campanella C R 10",
+   "8 Ron Cey 3B R 12",
+   "9 Pee Wee Reese SS R 16"
+  ],
+  "bench": [
+   "C/DH Mike Piazza 7",
+   "4TH OF Willie Davis 14",
+   "RH UTIL Pedro Guerrero 11",
+   "LH INF Max Muncy 8",
+   "MI/PR Maury Wills 12"
+  ],
+  "rotation": [
+   "SP1 Sandy Koufax 12",
+   "SP2 Clayton Kershaw 18",
+   "SP3 Dazzy Vance 12",
+   "SP4 Don Drysdale 14",
+   "SP5 Orel Hershiser 13"
+  ],
+  "bullpen": [
+   "CL 1A Kenley Jansen 12",
+   "CL 1B Éric Gagné 8",
+   "LH SET Ron Perranoski 8",
+   "LH STOP Jim Brewer 12",
+   "RH BRG Clem Labine 11",
+   "LR Mike Marshall 3"
+  ]
+ },
+ "SD": {
+  "manager": "Bruce Bochy",
+  "lineup": [
+   "1 Fernando Tatis Jr. SS R 6",
+   "2 Tony Gwynn RF L 20",
+   "3 Dave Winfield LF R 8",
+   "4 Ken Caminiti DH S 4",
+   "5 Adrian Gonzalez 1B L 5",
+   "6 Manny Machado 3B R 7",
+   "7 Gene Tenace C R 4",
+   "8 Steve Finley CF L 4",
+   "9 Mark Loretta 2B R 3"
+  ],
+  "bench": [
+   "C2 Benito Santiago 7",
+   "UTIL Ha-Seong Kim 4",
+   "OF2 Jackson Merrill 2",
+   "IF2 Garry Templeton 10",
+   "BAT Gary Sheffield 2"
+  ],
+  "rotation": [
+   "SP1 Jake Peavy 8",
+   "SP2 Randy Jones 8",
+   "SP3 Ed Whitson 8",
+   "SP4 Andy Ashby 8",
+   "SP5 Eric Show 10"
+  ],
+  "bullpen": [
+   "CL Trevor Hoffman 16",
+   "SU Heath Bell 5",
+   "SU Mike Adams 4",
+   "LH SET Mark Davis 5",
+   "FR/LR Rollie Fingers 4",
+   "MR Luke Gregerson 5",
+   "LH SPEC Craig Lefferts 7"
+  ]
+ },
+ "LAA": {
+  "manager": "Mike Scioscia",
+  "lineup": [
+   "1 Shohei Ohtani DH L 6",
+   "2 Mike Trout CF R 15",
+   "3 Vladimir Guerrero RF R 6",
+   "4 Troy Glaus 3B R 7",
+   "5 Wally Joyner 1B L 12",
+   "6 Garret Anderson LF L 15",
+   "7 Bobby Grich 2B R 10",
+   "8 Jim Fregosi SS R 11",
+   "9 Bob Boone C R 11"
+  ],
+  "bench": [
+   "C2 Mike Napoli 5",
+   "UTIL Chone Figgins 8",
+   "4TH OF Jim Edmonds 7",
+   "DEF IF Andrelton Simmons 5",
+   "BAT/OF Tim Salmon 15"
+  ],
+  "rotation": [
+   "SP1 Chuck Finley 14",
+   "SP2 Nolan Ryan 8",
+   "SP3 Frank Tanana 8",
+   "SP4 Jered Weaver 11",
+   "SP5 Mark Langston 8"
+  ],
+  "bullpen": [
+   "CL Troy Percival 10",
+   "RH SET Francisco Rodríguez 7",
+   "FIRE Scot Shields 10",
+   "MR Bryan Harvey 6",
+   "MR Doug Corbett 3",
+   "LH Scott Downs 4",
+   "LR Darren Oliver 3"
+  ]
+ },
+ "HOU": {
+  "manager": "A.J. Hinch",
+  "lineup": [
+   "1 Craig Biggio C R 20",
+   "2 Yordan Alvarez DH L 8",
+   "3 Jeff Bagwell 1B R 15",
+   "4 José Altuve 2B R 16",
+   "5 Lance Berkman RF S 12",
+   "6 Alex Bregman 3B R 9",
+   "7 Carlos Correa SS R 9",
+   "8 José Cruz LF L 13",
+   "9 César Cedeño CF R 12"
+  ],
+  "bench": [
+   "C2 Brad Ausmus 10",
+   "UTIL Marwin González 8",
+   "OF2 George Springer 7",
+   "IF2 Jeremy Peña 5",
+   "BAT Jim Wynn 11"
+  ],
+  "rotation": [
+   "SP1 Justin Verlander 7",
+   "SP2 Roy Oswalt 10",
+   "SP3 Mike Scott 9",
+   "SP4 Nolan Ryan 9",
+   "SP5 J.R. Richard 10"
+  ],
+  "bullpen": [
+   "CL Billy Wagner 9",
+   "SU Brad Lidge 6",
+   "SU Josh Hader 3",
+   "MID Ryan Pressly 7",
+   "FIRE Octavio Dotel 5",
+   "LH Joe Sambito 8",
+   "LATE Dave Smith 11"
+  ]
+ },
+ "OAK": {
+  "manager": "Dick Williams",
+  "lineup": [
+   "1 Rickey Henderson LF R",
+   "2 Sal Bando 3B R",
+   "3 Reggie Jackson RF L",
+   "4 Mark McGwire 1B R",
+   "5 José Canseco DH R",
+   "6 Miguel Tejada SS R",
+   "7 Dwayne Murphy CF L",
+   "8 Terry Steinbach C R",
+   "9 Mark Ellis 2B R"
+  ],
+  "bench": [
+   "C2 Gene Tenace",
+   "UTIL Tony Phillips",
+   "OF2 Joe Rudi",
+   "IF2/PR Bert Campaneris",
+   "BAT Matt Olson"
+  ],
+  "rotation": [
+   "SP1 Catfish Hunter",
+   "SP2 Vida Blue",
+   "SP3 Dave Stewart",
+   "SP4 Tim Hudson",
+   "SP5 Barry Zito"
+  ],
+  "bullpen": [
+   "CL Dennis Eckersley",
+   "FIRE Rollie Fingers",
+   "SU Andrew Bailey",
+   "SU/LH Sean Doolittle",
+   "PWR Liam Hendriks",
+   "MID Gene Nelson",
+   "LH Rick Honeycutt"
+  ]
+ },
+ "SEA": {
+  "manager": "Lou Piniella",
+  "lineup": [
+   "1 Ichiro Suzuki RF L 14",
+   "2 Alex Rodriguez SS R 7",
+   "3 Ken Griffey Jr. CF L 13",
+   "4 Edgar Martínez DH R 18",
+   "5 Raúl Ibañez LF L 11",
+   "6 Cal Raleigh C S 6",
+   "7 John Olerud 1B L 5",
+   "8 Bret Boone 2B R 7",
+   "9 Kyle Seager 3B L 11"
+  ],
+  "bench": [
+   "C2 Dan Wilson 12",
+   "MIF/PR/DEF Harold Reynolds 10",
+   "1B/DH Alvin Davis 8",
+   "OF4 Julio Rodríguez 5",
+   "OF/Power PH Jay Buhner 15"
+  ],
+  "rotation": [
+   "SP1 Randy Johnson 10",
+   "SP2 Félix Hernández 15",
+   "SP3 Jamie Moyer 11",
+   "SP4 Mark Langston 6",
+   "SP5 Freddy García 6"
+  ],
+  "bullpen": [
+   "LR Mike Moore 7",
+   "MR J.J. Putz 6",
+   "FIRE Andrés Muñoz 6",
+   "SET Edwin Díaz 3",
+   "RH SET Jeff Nelson 8",
+   "LH SET Arthur Rhodes 4",
+   "CL Kazuhiro Sasaki 4"
+  ]
+ },
+ "TEX": {
+  "manager": "Ron Washington",
+  "lineup": [
+   "1 Ian Kinsler 2B R 8",
+   "2 Iván Rodríguez C R 13",
+   "3 Alex Rodriguez SS R 3",
+   "4 Frank Howard LF R 8",
+   "5 Josh Hamilton CF L 6",
+   "6 Juan González RF R 13",
+   "7 Rafael Palmeiro 1B L 10",
+   "8 Adrián Beltré 3B R 8",
+   "9 Corey Seager DH L 5"
+  ],
+  "bench": [
+   "C2 Jim Sundberg 12",
+   "UTIL Michael Young 13",
+   "OF4 Rusty Greer 9",
+   "CI/3B Buddy Bell 8",
+   "BAT/1B Mark Teixeira 5"
+  ],
+  "rotation": [
+   "SP1 Nolan Ryan 5",
+   "SP2 Yu Darvish 6",
+   "SP3 Fergie Jenkins 6",
+   "SP4 Gaylord Perry 4",
+   "SP5 Charlie Hough 11"
+  ],
+  "bullpen": [
+   "CL John Wetteland 4",
+   "SU1 Neftalí Feliz 7",
+   "SU2 Jeff Zimmerman 3",
+   "FIRE Jim Kern 4",
+   "MID/LATE Jeff Russell 10",
+   "LONG/SWING Kenny Rogers 13",
+   "LH FIRE Darold Knowles 5"
+  ]
+ },
+ "ATL": {
+  "manager": "Bobby Cox",
+  "lineup": [
+   "1 Herman Long SS R",
+   "2 Chipper Jones DH S",
+   "3 Hank Aaron LF R",
+   "4 Eddie Mathews 3B L",
+   "5 Joe Torre C R",
+   "6 Freddie Freeman 1B L",
+   "7 Dale Murphy RF R",
+   "8 Andruw Jones CF R",
+   "9 Ozzie Albies 2B S"
+  ],
+  "bench": [
+   "C2 Del Crandall (Defense)",
+   "UTIL Martín Prado (Multi-Position)",
+   "OF4 Ronald Acuña Jr. (Speed/Power)",
+   "BAT David Justice (LH Power)",
+   "DEF Andrelton Simmons (Elite Defense)"
+  ],
+  "rotation": [
+   "SP1 Greg Maddux R",
+   "SP2 Kid Nichols R",
+   "SP3 Warren Spahn L",
+   "SP4 John Smoltz R",
+   "SP5 Tom Glavine L"
+  ],
+  "bullpen": [
+   "CL Craig Kimbrel R",
+   "SU Raisel Iglesias R",
+   "SU/LH Mike Remlinger L",
+   "MID Gene Garber R",
+   "PWR Mark Wohlers R",
+   "LH Jonny Venters L",
+   "LR/SP Phil Niekro R"
+  ]
+ }
+}
