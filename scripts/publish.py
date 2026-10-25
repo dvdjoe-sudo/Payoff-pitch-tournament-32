@@ -3,7 +3,7 @@
 
 Reads tournament_results.json. Writes LEADERS.md, TEAM_STATS.md,
 box_scores/*.md, AWARDS.md, RECORDS.md, feed/tournament.json,
-feed/games.xml, and the share graphics. Does not change a stat line.
+feed/games.xml, scorecards/*.pdf, and the share graphics. Does not change a stat line.
 """
 
 from __future__ import annotations
@@ -1013,7 +1013,11 @@ def write_all() -> None:
             (ROOT / "feed" / "odds.json").write_text(module.text(data), encoding="utf-8")
         else:
             module.write_share(data)
-    print(f"wrote leaders, team stats, {len(data['games'])} box scores, awards, records, feeds, graphics")
+    cards = importlib.util.spec_from_file_location("scorecards_build", Path(__file__).with_name("scorecards.py"))
+    scorecards = importlib.util.module_from_spec(cards)
+    cards.loader.exec_module(scorecards)
+    scorecards.write_scorecards(data)
+    print(f"wrote leaders, team stats, {len(data['games'])} box scores, awards, records, feeds, graphics, scorecards")
 
 
 if __name__ == "__main__":

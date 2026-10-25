@@ -14,9 +14,15 @@ A pitcher who has started is only on the Cy Young list. Saves on that pitcher's 
 
 ## Win probability
 
-Win probability is a display model, not a simulation. Before the first run the home club is 0.50. After each scoring event the home win probability is 1 / (1 + exp(−1.35 × margin / sqrt(innings left))), where margin is home runs minus away runs and innings left is max(0.5, 9.5 − inning − 0.5 when the half is the bottom).
+Win probability is a display model, not a simulation, and the game page labels the chart as a model estimate. It is not a recorded probability and it does not change the final score. Before the first pitch the home club is 0.50. After each step the home win probability is 1 / (1 + exp(−1.35 × margin / sqrt(innings left))), where margin is home runs minus away runs and innings left is max(0.5, 9.5 − inning − 0.5 when the half is the bottom). An extra inning uses that 0.5 floor. The chart is omitted when the game has no inning arrays, or when those arrays do not add up to the stored score.
 
-Scoring plays are read from the archive. A Payoff Pitch play carries both club codes and the score. An APBA play's trailing pair is home-away. When a game has no scoring plays, the same curve is stepped through the line score, top then bottom, one run at a time, and the chart is labeled as a line-score fallback.
+The steps come from the line score: one point per half-inning that is actually in the array, including a zero. A half the home club did not bat is absent, not drawn as a zero. A multi-run half is one step. The file does not say the order of those runs, so the chart does not split them.
+
+When `scoring_plays` is stored and every play names its inning and a score that advances one club at a time to the final score, those plays replace the scoring halves. A Payoff Pitch play carries both club codes. An APBA play ends in a pair of numbers; the chart uses that pair only in the club order that lands on the stored final score. A half with no runs stays a line-score step. If the plays do not match the line, the chart uses the line score alone.
+
+## Daily highlight
+
+The home page card "On this day" is not a model. It walks a fixed list of recorded moments: no-hitters, games of 10 or more strikeouts, walk-offs, games of 10 or more runs, and completed series, the same bars as the records and history pages. The calendar date picks the index `day number mod list length`. The same date always shows the same moment. The card states the stored game date when one exists. It does not invent a moment or a date.
 
 ## Series odds
 
