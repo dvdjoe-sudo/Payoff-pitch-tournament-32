@@ -93,6 +93,7 @@ SETS = [
     ("TOR", "payoff-pitch-bluejays", "tor"),
     ("CIN", "payoff-pitch-reds", "cin"),
     ("TEX", "payoff-pitch-rangers", "tex"),
+    ("LAD", "payoff-pitch-dodgers", "lad"),
 ]
 
 # Window years for a card whose input line the APBA files do not carry.
@@ -132,6 +133,7 @@ TEAM_IDS = {
     "TOR": ["TOR"],
     "CIN": ["CIN"],
     "TEX": ["TEX", "WS2"],
+    "LAD": ["BRO", "LAN"],
 }
 
 BAT_COUNTING = ["G", "PA", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB",

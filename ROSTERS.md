@@ -590,7 +590,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - RH UTIL Pedro Guerrero 11
 - LH INF Max Muncy 8
 - MI/PR Maury Wills 12
-- RH BAT/OF Matt Kemp 10
+- INF Steve Garvey 14
 
 ### Rotation
 

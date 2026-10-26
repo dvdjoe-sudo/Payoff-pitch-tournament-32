@@ -3932,6 +3932,18 @@
      2004
     ]
    },
+   "INF Steve Garvey 14": {
+    "lahman_id": "garvest01",
+    "status": "ok",
+    "text": "Peak 162 with Los Angeles Dodgers (1975–1979): 162 G, 698 PA, 646 AB, 89 R, 202 H, 34 2B, 5 3B, 23 HR, 103 RBI, 10 SB, 40 BB, 71 SO, .313/.351/.484/.835",
+    "years": [
+     1975,
+     1976,
+     1977,
+     1978,
+     1979
+    ]
+   },
    "LH INF Max Muncy 8": {
     "lahman_id": "muncyma01",
     "status": "ok",
@@ -3988,18 +4000,6 @@
      1963,
      1964,
      1965
-    ]
-   },
-   "RH BAT/OF Matt Kemp 10": {
-    "lahman_id": "kempma01",
-    "status": "ok",
-    "text": "Peak 162 with Los Angeles Dodgers (2011–2018). Years away from the franchise inside this span are not in the totals. 162 G, 645 PA, 578 AB, 92 R, 172 H, 34 2B, 2 3B, 29 HR, 102 RBI, 17 SB, 57 BB, 152 SO, .298/.360/.515/.875",
-    "years": [
-     2011,
-     2012,
-     2013,
-     2014,
-     2018
     ]
    },
    "RH BRG Clem Labine 11": {
