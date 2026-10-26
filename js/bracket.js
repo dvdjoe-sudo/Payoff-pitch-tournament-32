@@ -1250,7 +1250,7 @@
     clear(view);
     var page = el("section");
     page.appendChild(el("h2", { text: "Rosters and player cards" }));
-    page.appendChild(el("p", { class: "note", text: "Converted Payoff Pitch cards exist for 9 clubs (ARI, BOS, CHC, DET, MON, PHA, SF, TB, WSH). Every club's roster is on its team page." }));
+    page.appendChild(el("p", { class: "note", text: "Converted Payoff Pitch cards exist for 11 clubs (ARI, BOS, CHC, COL, DET, MON, PHA, SF, STL, TB, WSH). Every club's roster is on its team page." }));
     var clubs = Object.keys(state.rosters || {}).map(function (code) { return state.rosters[code]; })
       .sort(function (a, b) { return a.seed - b.seed; });
     if (!clubs.length) page.appendChild(el("p", { text: "No converted sets are on file yet." }));
@@ -2596,7 +2596,7 @@
     page.appendChild(el("p", { text: "Thirty-two all-time franchise clubs play a double-elimination bracket. Every series is a best of 7. A club is eliminated on its second series loss. There are no byes. After the opening round, each stage is reseeded by original seed, highest survivor against lowest." }));
     page.appendChild(el("p", { text: "Six seeds are Joe's pins: New York Yankees 1, Philadelphia Athletics 17, Oakland Athletics 22, Montreal Expos 27, Washington Nationals 31, and Miami Marlins 32. The other clubs fill the remaining slots by Full 26 Index." }));
     page.appendChild(el("p", { text: "On the book: the Yankees beat the Marlins 4-0, the Giants beat the Nationals 4-1, Boston beat Tampa Bay 4-3, and Detroit beat Arizona 4-2. R1-01 was played in APBA and adopted. Later series are played in Payoff Pitch. A stored line is the result. This page does not change one." }));
-    page.appendChild(el("p", { text: "Every club's roster is on its team page. Twenty-five clubs have an owner card. Converted Payoff Pitch cards exist for nine clubs: ARI, BOS, CHC, DET, MON, PHA, SF, TB, and WSH. Where both exist, the owner card is the list and the converted set is under Payoff Pitch cards." }));
+    page.appendChild(el("p", { text: "Every club's roster is on its team page. Twenty-five clubs have an owner card. Converted Payoff Pitch cards exist for eleven clubs: ARI, BOS, CHC, COL, DET, MON, PHA, SF, STL, TB, and WSH. Where both exist, the owner card is the list and the converted set is under Payoff Pitch cards." }));
     page.appendChild(el("p", { class: "note", text: PEAK_NOTE }));
     view.appendChild(page);
   }
