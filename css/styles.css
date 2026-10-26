@@ -499,6 +499,31 @@ table {
 
 .leader-table tr.leader-colored td:first-child { box-shadow: inset 3px 0 0 var(--leader-color, var(--gold)); }
 
+.award-board { min-width: 0; }
+.award-list { list-style: none; margin: 0.2rem 0 0.8rem; padding: 0; }
+.award-row {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+  grid-template-areas:
+    "rank who pts"
+    "rank detail detail";
+  column-gap: 0.4rem;
+  row-gap: 0.05rem;
+  align-items: center;
+  padding: 0.45rem 0.15rem 0.45rem 0.55rem;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+.award-row.leader-colored { box-shadow: inset 3px 0 0 var(--leader-color, var(--gold)); }
+.award-rank { grid-area: rank; color: var(--muted); font-variant-numeric: tabular-nums; }
+.award-who { grid-area: who; display: flex; align-items: center; gap: 0.35rem; min-width: 0; }
+.award-who .logo { flex: 0 0 auto; }
+.award-name { min-width: 0; }
+.award-name a { display: block; overflow-wrap: anywhere; }
+.award-club { display: block; color: var(--muted); font-size: 0.78rem; overflow-wrap: anywhere; }
+.award-pts { grid-area: pts; font-weight: 700; font-variant-numeric: tabular-nums; }
+.award-detail { grid-area: detail; margin: 0; color: var(--muted); font-size: 0.78rem; overflow-wrap: anywhere; }
+
 .table-wrap.record-fit { overflow-x: visible; max-width: 100%; }
 .table-wrap.record-fit table.record-table {
   min-width: 0;

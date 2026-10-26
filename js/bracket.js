@@ -760,6 +760,21 @@
     return table;
   }
 
+  function divHalfUp(numer, denom) {
+    var sign = numer < 0 ? -1 : 1;
+    var n = Math.abs(numer);
+    var q = Math.floor(n / denom);
+    var r = n % denom;
+    if (r * 2 >= denom) q += 1;
+    return sign * q;
+  }
+
+  function pointsLabel(tenths) {
+    var sign = tenths < 0 ? "-" : "";
+    var n = Math.abs(tenths);
+    return sign + Math.floor(n / 10) + "." + (n % 10);
+  }
+
   function awards() {
     var mvp = [];
     var cy = [];
@@ -768,19 +783,36 @@
       var player = state.players[key];
       var bat = player.bat;
       if (paOf(bat) > 0) {
-        var points = totalBases(bat) + bat.r + bat.rbi + bat.sb - bat.cs + (0.5 * bat.bb) + (0.5 * bat.hbp);
-        mvp.push({ player: player, points: points });
+        var tb = totalBases(bat);
+        var tenths = (tb + bat.r + bat.rbi + bat.sb - bat.cs) * 10 + (5 * bat.bb) + (5 * bat.hbp);
+        mvp.push({
+          player: player,
+          primary: tenths,
+          name: player.name,
+          detail: tb + " TB · " + bat.r + " R · " + bat.rbi + " RBI · " + bat.hr + " HR"
+        });
       }
       var pit = player.pit;
       if (pit.outs + pit.w + pit.sv === 0) return;
-      var ip = pit.outs / 3;
       if (pit.gs >= 1) {
-        cy.push({ player: player, points: ip + (0.4 * pit.k) + (5 * pit.w) - (1.5 * pit.er) - (0.3 * pit.bb) });
+        var cyTenths = divHalfUp((pit.outs * 10) + (12 * pit.k) + (150 * pit.w) - (45 * pit.er) - (9 * pit.bb), 3);
+        cy.push({
+          player: player,
+          primary: cyTenths,
+          name: player.name,
+          detail: ipLabel(pit.outs) + " IP · " + pit.w + " W · " + pit.k + " K · " + pit.er + " ER"
+        });
       } else {
-        rel.push({ player: player, points: (5 * pit.sv) + (2 * ip) + (0.4 * pit.k) - (1.5 * pit.er) });
+        var relTenths = divHalfUp((20 * pit.outs) + (150 * pit.sv) + (12 * pit.k) - (45 * pit.er), 3);
+        rel.push({
+          player: player,
+          primary: relTenths,
+          name: player.name,
+          detail: ipLabel(pit.outs) + " IP · " + pit.sv + " SV · " + pit.k + " K · " + pit.er + " ER"
+        });
       }
     });
-    function byPoints(a, b) { return b.points - a.points || a.player.name.localeCompare(b.player.name); }
+    function byPoints(a, b) { return b.primary - a.primary || a.name.localeCompare(b.name); }
     mvp.sort(byPoints);
     cy.sort(byPoints);
     rel.sort(byPoints);
@@ -2019,39 +2051,62 @@
     view.appendChild(page);
   }
 
-  function awardTable(title, note, rows, cells) {
-    return el("section", null,
-      el("h3", { text: title }),
-      el("p", { class: "note", text: note }),
-      table(["Player", "Team", "Pts"].concat(cells.headers), rows.slice(0, 15).map(function (row) {
-        return [linkPlayer(row.player.team, row.player.id, row.player.name), clubName(row.player.team), q1(row.points)].concat(cells.values(row));
-      }))
-    );
+  function awardList(title, note, rows) {
+    var shown = topTies(rows, 15);
+    var section = el("section", { class: "award-board" });
+    section.appendChild(el("h3", { text: title }));
+    section.appendChild(el("p", { class: "note", text: note }));
+    if (!shown.length) {
+      section.appendChild(el("p", { text: "No one has qualified." }));
+      return section;
+    }
+    var list = el("ol", { class: "award-list" });
+    shown.forEach(function (row, index) {
+      var item = el("li", { class: "award-row" });
+      var palette = clubPalette(row.player.team);
+      if (palette) {
+        item.classList.add("leader-colored");
+        item.style.setProperty("--leader-color", palette.primary);
+      }
+      item.appendChild(el("span", { class: "award-rank", text: String(index + 1) }));
+      var who = el("div", { class: "award-who" });
+      var team = state.byCode[row.player.team];
+      if (team) who.appendChild(logo(team, team.name + " mark", true));
+      var name = el("div", { class: "award-name" });
+      var link = linkPlayer(row.player.team, row.player.id, row.player.name);
+      link.classList.add("leader-name");
+      name.appendChild(link);
+      name.appendChild(el("span", { class: "award-club", text: clubName(row.player.team) }));
+      who.appendChild(name);
+      item.appendChild(who);
+      item.appendChild(el("span", { class: "award-pts", text: pointsLabel(row.primary) }));
+      item.appendChild(el("p", { class: "award-detail", text: row.detail }));
+      list.appendChild(item);
+    });
+    section.appendChild(list);
+    return section;
   }
 
   function renderAwards() {
     markNav("awards");
     var board = awards();
-    var page = el("article");
+    var page = el("article", { class: "stack" });
     page.appendChild(el("h2", { text: "Awards race" }));
-    page.appendChild(el("p", { class: "note", text: "Display points from MODELS.md. Not an official vote." }));
-    page.appendChild(awardTable(
+    page.appendChild(el("p", { class: "note", text: "Points are summed from the box scores already stored. A game moves the race when it is in the archive. The formula is on the Formulas page. This is not an official vote. The list is the top 15, and a tie at the fifteenth line stays." }));
+    page.appendChild(awardList(
       "Most valuable player",
-      "Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS.",
-      board.mvp,
-      { headers: ["HR", "RBI"], values: function (row) { return [row.player.bat.hr, row.player.bat.rbi]; } }
+      "Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS.",
+      board.mvp
     ));
-    page.appendChild(awardTable(
+    page.appendChild(awardList(
       "Cy Young",
       "Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB.",
-      board.cy,
-      { headers: ["IP", "W", "K"], values: function (row) { return [ipLabel(row.player.pit.outs), row.player.pit.w, row.player.pit.k]; } }
+      board.cy
     ));
-    page.appendChild(awardTable(
+    page.appendChild(awardList(
       "Reliever",
       "Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.",
-      board.rel,
-      { headers: ["SV", "IP", "K"], values: function (row) { return [row.player.pit.sv, ipLabel(row.player.pit.outs), row.player.pit.k]; } }
+      board.rel
     ));
     clear(view);
     view.appendChild(page);
@@ -3737,6 +3792,7 @@
     page.appendChild(el("p", { text: "MVP, hitters: total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H + 2B + 2×3B + 3×HR." }));
     page.appendChild(el("p", { text: "Cy Young, pitchers with at least one start: IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP is outs / 3." }));
     page.appendChild(el("p", { text: "Reliever, pitchers with zero starts: 5×SV + 2×IP + 0.4×K − 1.5×ER. A pitcher who has started stays on the Cy Young list." }));
+    page.appendChild(el("p", { text: "The Awards page ranks those points from the batting and pitching lines already stored. A printed point is one decimal, and a half tenth rounds up. The list is the top 15, and a tie at the fifteenth line stays. A new game moves the race when that game is in the archive. The points are a display. They are not an official vote and they do not change a box score." }));
     page.appendChild(el("h3", { text: "Series MVP" }));
     page.appendChild(el("p", { text: "A finished series scores every player from the box scores in that series only. A hitter uses the MVP line above. A pitcher uses IP + 0.4×K + 5×W + 3×SV − 1.5×ER − 0.3×BB. IP is outs / 3. Wins and saves are the stored decisions. A player who both hit and pitched keeps the higher score. The higher score is the series MVP. A tie goes to the name that sorts first. The pick does not change a game or a series score." }));
     page.appendChild(el("h3", { text: "Win probability" }));
