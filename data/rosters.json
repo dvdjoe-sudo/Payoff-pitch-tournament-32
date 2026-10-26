@@ -3031,6 +3031,222 @@
   ],
   "seed": 30
  },
+ "TEX": {
+  "code": "TEX",
+  "name": "Texas Rangers",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "kinslia01",
+    "kind": "hitter",
+    "name": "Ian Kinsler",
+    "pos": "2B",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "rodriiv01",
+    "kind": "hitter",
+    "name": "Ivan Rodriguez",
+    "pos": "C",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "rodrial01",
+    "kind": "hitter",
+    "name": "Alex Rodriguez",
+    "pos": "SS",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "howarfr01",
+    "kind": "hitter",
+    "name": "Frank Howard",
+    "pos": "LF",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "hamiljo03",
+    "kind": "hitter",
+    "name": "Josh Hamilton",
+    "pos": "CF",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "gonzaju03",
+    "kind": "hitter",
+    "name": "Juan Gonzalez",
+    "pos": "RF",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "palmera01",
+    "kind": "hitter",
+    "name": "Rafael Palmeiro",
+    "pos": "1B",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "beltrad01",
+    "kind": "hitter",
+    "name": "Adrian Beltre",
+    "pos": "3B",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "seageco01",
+    "kind": "hitter",
+    "name": "Corey Seager",
+    "pos": "SS",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "sundbji01",
+    "kind": "hitter",
+    "name": "Jim Sundberg",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "youngmi02",
+    "kind": "hitter",
+    "name": "Michael Young",
+    "pos": "SS",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "greerru01",
+    "kind": "hitter",
+    "name": "Rusty Greer",
+    "pos": "LF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "bellbu01",
+    "kind": "hitter",
+    "name": "Buddy Bell",
+    "pos": "3B",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "teixema01",
+    "kind": "hitter",
+    "name": "Mark Teixeira",
+    "pos": "1B",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "ryanno01",
+    "kind": "pitcher",
+    "name": "Nolan Ryan",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "darviyu01",
+    "kind": "pitcher",
+    "name": "Yu Darvish",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "jenkife01",
+    "kind": "pitcher",
+    "name": "Fergie Jenkins",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "perryga01",
+    "kind": "pitcher",
+    "name": "Gaylord Perry",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "houghch01",
+    "kind": "pitcher",
+    "name": "Charlie Hough",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "wettejo01",
+    "kind": "pitcher",
+    "name": "John Wetteland",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "felizne01",
+    "kind": "pitcher",
+    "name": "Neftali Feliz",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "zimmeje02",
+    "kind": "pitcher",
+    "name": "Jeff Zimmerman",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "kernji01",
+    "kind": "pitcher",
+    "name": "Jim Kern",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "russeje01",
+    "kind": "pitcher",
+    "name": "Jeff Russell",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "rogerke01",
+    "kind": "pitcher",
+    "name": "Kenny Rogers",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "knowlda01",
+    "kind": "pitcher",
+    "name": "Darold Knowles",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 24
+ },
  "TOR": {
   "code": "TOR",
   "name": "Toronto Blue Jays",
