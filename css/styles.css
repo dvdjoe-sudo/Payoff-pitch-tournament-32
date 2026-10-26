@@ -845,6 +845,8 @@ a.player-link, a.team-link { color: inherit; }
   font-size: 0.75rem;
 }
 
+.projection-line { overflow-wrap: anywhere; }
+
 .title-odds h2 { font-size: 1.15rem; margin-bottom: 0.25rem; }
 
 .preview-card, .add-form {

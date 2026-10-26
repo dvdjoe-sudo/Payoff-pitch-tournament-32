@@ -37,6 +37,16 @@ The home page card "On this day" is not a model. It walks a fixed list of record
 
 Series odds are a display model. Each remaining game is an independent 0.55 win for the higher seed. The bar is the probability that club reaches 4 wins before the other club does. A completed series shows the winner at 1.
 
+## Peak 162 series projection
+
+An upcoming series, scheduled or in progress, can show a projection on the bracket and on the series preview. The projection is a display model. It does not change a game, a series score, or a seed. It describes the series as the clubs are paired now. After a round is re-seeded, the next pairing is projected again from the clubs in that pairing.
+
+The source is the owner card and the stored Peak 162 line. A club with no announced roster is not rated. Offense is the mean OPS on the lineup spots whose stored peak text has an OPS. Pitching is the mean ERA on the rotation spots whose stored peak text has an ERA. A spot with no stored line is left out of the mean. It is not a zero. If either mean is missing, that club is not rated, and the series says Odds TBD.
+
+Among the announced clubs that have both means, the league OPS is the mean of those offense means and the league ERA is the mean of those pitching means. A club's win percentage against a league-average roster is o² / (o² + e²), where o is the club OPS divided by the league OPS and e is the club ERA divided by the league ERA.
+
+One game is the log5 of the two win percentages. If those percentages are a and b, the first club's chance is (a × (1 − b)) / (a × (1 − b) + b × (1 − a)). The series chance is the probability that club reaches 4 wins before the other one does. Wins already stored on the series count. Each remaining game is an independent trial at the log5 probability. The page labels the figure Projection.
+
 ## Run differential
 
 Run differential is runs scored minus runs allowed, summed from the game scores. It is not a model.

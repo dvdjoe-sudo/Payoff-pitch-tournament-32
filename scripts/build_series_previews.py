@@ -68,6 +68,79 @@ def club_name(teams: dict, code: str) -> str:
     return team.get("name") or code
 
 
+def club_means(roster: dict | None, peak_clubs: dict, code: str) -> tuple[float, float] | None:
+    if not roster:
+        return None
+    book = peak_clubs.get(code) or {}
+    ops_values = []
+    era_values = []
+    for line in roster.get("lineup") or []:
+        row = book.get(line) or {}
+        bits = peak_bits(row.get("text") or "") if row.get("status") == "ok" else None
+        if bits and bits["ops"] is not None:
+            ops_values.append(bits["ops"])
+    for line in roster.get("rotation") or []:
+        row = book.get(line) or {}
+        bits = peak_bits(row.get("text") or "") if row.get("status") == "ok" else None
+        if bits and bits["era"] is not None:
+            era_values.append(bits["era"])
+    if not ops_values or not era_values:
+        return None
+    return sum(ops_values) / len(ops_values), sum(era_values) / len(era_values)
+
+
+def projection_label(series: dict, rosters: dict, peak_clubs: dict) -> str:
+    """Same display model as peakProjection in js/bracket.js."""
+    rated = {}
+    for code, roster in rosters.items():
+        means = club_means(roster, peak_clubs, code)
+        if means:
+            rated[code] = means
+    a = series.get("team_a")
+    b = series.get("team_b")
+    if not a or not b or a not in rated or b not in rated or not rated:
+        return "Projection: Odds TBD"
+    league_ops = sum(item[0] for item in rated.values()) / len(rated)
+    league_era = sum(item[1] for item in rated.values()) / len(rated)
+    if not league_ops or not league_era:
+        return "Projection: Odds TBD"
+
+    def win_pct(means: tuple[float, float]) -> float:
+        offense = means[0] / league_ops
+        pitching = means[1] / league_era
+        return (offense * offense) / (offense * offense + pitching * pitching)
+
+    wa = win_pct(rated[a])
+    wb = win_pct(rated[b])
+    left = wa * (1 - wb)
+    right = wb * (1 - wa)
+    game_p = 0.5 if left + right == 0 else left / (left + right)
+    wins = series.get("wins") or {}
+    memo: dict[tuple[int, int], float] = {}
+
+    def walk(need_a: int, need_b: int) -> float:
+        key = (need_a, need_b)
+        if key in memo:
+            return memo[key]
+        if need_a <= 0:
+            value = 1.0
+        elif need_b <= 0:
+            value = 0.0
+        else:
+            value = game_p * walk(need_a - 1, need_b) + (1 - game_p) * walk(need_a, need_b - 1)
+        memo[key] = value
+        return value
+
+    series_p = walk(4 - int(wins.get(a) or 0), 4 - int(wins.get(b) or 0))
+    return "Projection " + a + " " + one_decimal(series_p) + "% · " + b + " " + one_decimal(1 - series_p) + "%"
+
+
+def one_decimal(value: float) -> str:
+    """Match percent() in js/bracket.js: Math.round(value * 1000) / 10."""
+    tenths = int(value * 1000 + 0.5)
+    return f"{tenths / 10:.1f}"
+
+
 def leaders(roster: dict | None, peak_clubs: dict, code: str) -> tuple[str, str]:
     if not roster:
         return ("Roster not announced yet", "")
@@ -160,6 +233,7 @@ def render(series: dict, teams: dict, rosters: dict, peak_clubs: dict) -> Image.
     title = series.get("label") or series["id"]
     draw.text((48, 78), title, font=font(40, True), fill=NAVY)
     sub = series["id"] + "  ·  " + series.get("status", "").replace("-", " ")
+    sub += "  ·  " + projection_label(series, rosters, peak_clubs)
     draw.text((48, 132), sub, font=font(22), fill=MUTED)
     draw.rectangle((48, 176, WIDTH - 48, 182), fill=GOLD)
     col_w = 528

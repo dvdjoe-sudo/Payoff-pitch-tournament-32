@@ -364,6 +364,10 @@
   }
 
   function seriesWinProb(winsFor, winsAgainst) {
+    return seriesWinProbAt(HIGHER_SEED_P, winsFor, winsAgainst);
+  }
+
+  function seriesWinProbAt(gameP, winsFor, winsAgainst) {
     var memo = {};
     function walk(left, opp) {
       var key = left + "," + opp;
@@ -371,7 +375,7 @@
       var value;
       if (left <= 0) value = 1;
       else if (opp <= 0) value = 0;
-      else value = HIGHER_SEED_P * walk(left - 1, opp) + (1 - HIGHER_SEED_P) * walk(left, opp - 1);
+      else value = gameP * walk(left - 1, opp) + (1 - gameP) * walk(left, opp - 1);
       memo[key] = value;
       return value;
     }
@@ -889,6 +893,8 @@
     });
     var picked = seriesMvp(series);
     if (picked) card.appendChild(el("p", { class: "card-odds", text: "MVP " + picked.mvp.name }));
+    var projection = peakProjection(series);
+    if (projection) card.appendChild(el("p", { class: "card-odds projection-line", text: projection.text }));
     var mc = mcOdds(series);
     if (mc) {
       card.appendChild(el("p", {
@@ -988,6 +994,10 @@
   }
 
   function renderBracket(activeId) {
+    if (!state.peakLoaded) {
+      loadOnDemand("peak", function () { renderBracket(activeId); });
+      return;
+    }
     markNav("bracket");
     var root = el("div");
     var today = onThisDayCard();
@@ -1008,7 +1018,7 @@
       el("label", { for: "path-select", text: "Highlight a club's path" }),
       select
     ));
-    root.appendChild(el("p", { class: "note", text: "Swipe the rounds sideways. A series score is the games each club has won. Click a series for its games." }));
+    root.appendChild(el("p", { class: "note", text: "Swipe the rounds sideways. A series score is the games each club has won. Click a series for its games. A projection is a Peak 162 estimate for the series as paired now. It is not a result, and the next round is projected again after the re-seed." }));
     root.appendChild(el("p", null, el("a", { href: "graphics/bracket.png", download: "payoff-pitch-bracket.png", text: "Download bracket image" })));
     var strip = titleStrip();
     if (strip) root.appendChild(strip);
@@ -1071,6 +1081,10 @@
   function renderSeries(id) {
     markNav("bracket");
     var series = state.data.series.filter(function (item) { return item.id === id; })[0];
+    if (series && series.team_a && series.team_b && (series.status === "scheduled" || series.status === "in-progress") && !state.peakLoaded) {
+      loadOnDemand("peak", function () { renderSeries(id); });
+      return;
+    }
     clear(view);
     if (!series) {
       view.appendChild(el("p", { text: "That series is not in the archive." }));
@@ -1084,6 +1098,11 @@
       page.appendChild(el("p", null, linkTeam(series.team_a), " vs ", linkTeam(series.team_b)));
       if ((series.status === "scheduled" || series.status === "in-progress") && series.team_b) {
         page.appendChild(el("p", null, el("a", { href: "#/preview/" + series.id, text: "Lineup preview" })));
+        var seriesProjection = peakProjection(series);
+        if (seriesProjection) {
+          page.appendChild(el("p", { class: "projection-line", text: seriesProjection.text }));
+          page.appendChild(projectionNote());
+        }
       }
     }
     page.appendChild(oddsBar(series));
@@ -2157,6 +2176,84 @@
     view.appendChild(page);
   }
 
+  function clubPeakMeans(code) {
+    var roster = state.announced && state.announced[code];
+    if (!roster) return null;
+    var book = (state.peak && state.peak.clubs && state.peak.clubs[code]) || {};
+    var ops = [];
+    var eras = [];
+    (roster.lineup || []).forEach(function (line) {
+      var row = book[line];
+      var bits = peakBits(row && row.status === "ok" ? row.text : "");
+      if (bits && bits.ops != null && !isNaN(bits.ops)) ops.push(bits.ops);
+    });
+    (roster.rotation || []).forEach(function (line) {
+      var row = book[line];
+      var bits = peakBits(row && row.status === "ok" ? row.text : "");
+      if (bits && bits.era != null && !isNaN(bits.era)) eras.push(bits.era);
+    });
+    if (!ops.length || !eras.length) return null;
+    var opsSum = 0;
+    var eraSum = 0;
+    ops.forEach(function (value) { opsSum += value; });
+    eras.forEach(function (value) { eraSum += value; });
+    return { ops: opsSum / ops.length, era: eraSum / eras.length };
+  }
+
+  function peakLeague() {
+    var ops = [];
+    var eras = [];
+    Object.keys(state.announced || {}).forEach(function (code) {
+      var means = clubPeakMeans(code);
+      if (!means) return;
+      ops.push(means.ops);
+      eras.push(means.era);
+    });
+    if (!ops.length) return null;
+    var opsSum = 0;
+    var eraSum = 0;
+    ops.forEach(function (value) { opsSum += value; });
+    eras.forEach(function (value) { eraSum += value; });
+    return { ops: opsSum / ops.length, era: eraSum / eras.length };
+  }
+
+  function log5(a, b) {
+    var left = a * (1 - b);
+    var right = b * (1 - a);
+    if (left + right === 0) return 0.5;
+    return left / (left + right);
+  }
+
+  function peakProjection(series) {
+    if (!series || !series.team_a || !series.team_b) return null;
+    if (series.status !== "scheduled" && series.status !== "in-progress") return null;
+    if (!state.peakLoaded || !state.announced) return null;
+    var aMeans = clubPeakMeans(series.team_a);
+    var bMeans = clubPeakMeans(series.team_b);
+    if (!aMeans || !bMeans) return { tbd: true, text: "Projection: Odds TBD" };
+    var league = peakLeague();
+    if (!league || !league.ops || !league.era) return { tbd: true, text: "Projection: Odds TBD" };
+    function winPct(means) {
+      var offense = means.ops / league.ops;
+      var pitching = means.era / league.era;
+      var o2 = offense * offense;
+      var e2 = pitching * pitching;
+      return o2 / (o2 + e2);
+    }
+    var gameP = log5(winPct(aMeans), winPct(bMeans));
+    var wins = series.wins || {};
+    var seriesP = seriesWinProbAt(gameP, nz(wins[series.team_a]), nz(wins[series.team_b]));
+    return {
+      tbd: false,
+      pA: seriesP,
+      text: "Projection " + series.team_a + " " + percent(seriesP) + "% · " + series.team_b + " " + percent(1 - seriesP) + "%"
+    };
+  }
+
+  function projectionNote() {
+    return el("p", { class: "note projection-line", text: "Peak 162 projection. Lineup OPS against rotation ERA, as a log5 game chance, then the best-of-7 from the wins already stored. It is not a result. After this round is re-seeded, the next pairing is projected again. A club without an announced roster is Odds TBD." });
+  }
+
   function peakBits(text) {
     if (!text || text.indexOf("Peak 162") !== 0) return null;
     var years = text.match(/\((\d{4})(?:[–-](\d{4}))?\)/);
@@ -2238,6 +2335,11 @@
     }
     page.appendChild(el("h2", { text: series.label || series.id }));
     page.appendChild(el("p", { class: "meta", text: series.id + " · " + (STATUS[series.status] || series.status) }));
+    var previewProjection = peakProjection(series);
+    if (previewProjection) {
+      page.appendChild(el("p", { class: "projection-line", text: previewProjection.text }));
+      page.appendChild(projectionNote());
+    }
     page.appendChild(el("p", { class: "note", text: "The Peak 162 leader is the lineup hitter with the highest OPS on his stored peak line. The starter is the rotation arm with the lowest ERA on his. " + PEAK_NOTE }));
     var pair = el("div", { class: "lineup-pair" });
     pair.appendChild(lineupColumn(series.team_a));
@@ -2254,6 +2356,10 @@
   }
 
   function renderPreviews() {
+    if (!state.peakLoaded) {
+      loadOnDemand("peak", function () { renderPreviews(); });
+      return;
+    }
     markNav("previews");
     var page = el("article", { class: "stack" });
     page.appendChild(el("h2", { text: "Matchup previews" }));
@@ -2275,6 +2381,8 @@
     card.appendChild(el("h3", { text: series.label || series.id }));
     card.appendChild(el("p", { class: "meta", text: series.id + " · " + (STATUS[series.status] || series.status) }));
     card.appendChild(el("p", null, linkTeam(series.team_a), " vs ", linkTeam(series.team_b)));
+    var listed = peakProjection(series);
+    if (listed) card.appendChild(el("p", { class: "projection-line", text: listed.text }));
     card.appendChild(el("p", null,
       el("a", { href: "#/preview/" + series.id, text: "Lineups" }),
       " · ",
@@ -3341,6 +3449,9 @@
     page.appendChild(el("p", { text: "Before the first pitch the home club is 0.50. After each step the home win probability is 1 / (1 + exp(−1.35 × margin / sqrt(innings left))). Margin is home runs minus away runs. Innings left is at least 0.5. The chart uses the stored line, and scoring plays only when they land on the final score. It is omitted when the innings do not add up to that score." }));
     page.appendChild(el("h3", { text: "Series odds" }));
     page.appendChild(el("p", { text: "Each remaining game is an independent 0.55 win for the higher seed. The bar is the chance that club reaches 4 wins first. A completed series shows the winner at 1." }));
+    page.appendChild(el("h3", { text: "Peak 162 projection" }));
+    page.appendChild(el("p", { text: "An upcoming or in-progress series shows a projection. It is not a result and it does not change a score. Offense is the mean Peak 162 OPS on the owner lineup. Pitching is the mean Peak 162 ERA on the owner rotation. A club with no announced roster, or no stored line for either side of that pair, is Odds TBD." }));
+    page.appendChild(el("p", { text: "Among clubs that have both means, the league is their average OPS and average ERA. A club win percentage is o² / (o² + e²), where o is the club OPS divided by the league OPS and e is the club ERA divided by the league ERA. One game is the log5 of those two win percentages: (a × (1 − b)) / (a × (1 − b) + b × (1 − a)). The series chance is the probability of reaching 4 wins first from the wins already stored, with each remaining game independent at that game probability. After a round is re-seeded, the next pairing is a new projection." }));
     page.appendChild(el("p", { text: "The bracket also shows a Monte Carlo from the club indexes: one game is 1 / (1 + exp(−(index A − index B) / 80)), with no home-field edge. Four thousand draws use a fixed seed. A finished series is recorded as 1 and 0, not resimulated. A shown 0.0 means that side won none of the draws." }));
     page.appendChild(el("h3", { text: "Leaders" }));
     page.appendChild(el("p", { text: "The Leaders page counts the played games. Batting average and OPS need 10 plate appearances. OPS is on-base percentage plus slugging. ERA and WHIP need 5 innings. ERA is 27 × ER / outs. WHIP is (H + BB) / IP. Counting lists are the top 10, and a tie at tenth place stays. A new game is on the board when it is in the archive." }));
