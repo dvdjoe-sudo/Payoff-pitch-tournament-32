@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Series lineup previews
+
+Each scheduled series with both clubs named has a lineup preview. The two owner lineups sit side by side, with the stored Peak 162 line under each name. The leader is the lineup hitter with the highest OPS on that line. The starter is the rotation arm with the lowest ERA on his. A club without an owner card says "Roster not announced yet." The build writes a 1200 by 1500 PNG for each of those series, and the page has a Download image link. The service worker cache is payoff-pitch-v21. No game result was changed.
+
 ## 2026-10-26 — Classic cap logos
 
 Every club on the team page and the bracket shows a real cap logo. The marks already in the repo stay for the clubs that had a 1986 file, except Cleveland: the field club is the Guardians, so the Indians cap is replaced by the Guardians cap. Miami, Tampa Bay, Arizona, Colorado, Washington, and the Philadelphia Athletics had monograms. Those are now real cap logos. Sources are in [CREDITS.md](CREDITS.md). The service worker cache is payoff-pitch-v20. No game result was changed.

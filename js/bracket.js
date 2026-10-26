@@ -1019,6 +1019,9 @@
     page.appendChild(el("p", { class: "meta", text: (STATUS[series.status] || series.status) + " · " + series.id }));
     if (series.team_a) {
       page.appendChild(el("p", null, linkTeam(series.team_a), " vs ", linkTeam(series.team_b)));
+      if ((series.status === "scheduled" || series.status === "in-progress") && series.team_b) {
+        page.appendChild(el("p", null, el("a", { href: "#/preview/" + series.id, text: "Lineup preview" })));
+      }
     }
     page.appendChild(oddsBar(series));
     if (series.mvp) {
@@ -1974,6 +1977,102 @@
     }
   }
 
+  function peakBits(text) {
+    if (!text || text.indexOf("Peak 162") !== 0) return null;
+    var years = text.match(/\((\d{4})(?:[–-](\d{4}))?\)/);
+    var bat = text.match(/(\.\d{3}\/\.\d{3}\/\.\d{3}\/(?:\d+\.\d+|\.\d+))\s*$/);
+    var era = text.match(/(\d+\.\d+) ERA/);
+    if (!bat && !era) return null;
+    return {
+      years: years ? (years[2] ? years[1] + "–" + years[2] : years[1]) : "",
+      rate: bat ? bat[1] : era[1] + " ERA",
+      ops: bat ? parseFloat(bat[1].split("/").pop()) : null,
+      era: era ? parseFloat(era[1]) : null
+    };
+  }
+
+  function peakLeaders(code, roster) {
+    if (!roster) return { hit: "Roster not announced yet", arm: "" };
+    var book = (state.peak && state.peak.clubs && state.peak.clubs[code]) || {};
+    var bestHit = null;
+    (roster.lineup || []).forEach(function (line) {
+      var row = book[line];
+      var bits = peakBits(row && row.status === "ok" ? row.text : "");
+      if (!bits || bits.ops == null || isNaN(bits.ops)) return;
+      if (!bestHit || bits.ops > bestHit.ops) bestHit = { ops: bits.ops, line: line, rate: bits.rate };
+    });
+    var bestArm = null;
+    (roster.rotation || []).forEach(function (line) {
+      var row = book[line];
+      var bits = peakBits(row && row.status === "ok" ? row.text : "");
+      if (!bits || bits.era == null || isNaN(bits.era)) return;
+      if (!bestArm || bits.era < bestArm.era) bestArm = { era: bits.era, line: line, rate: bits.rate };
+    });
+    return {
+      hit: bestHit ? "Peak 162 leader: " + bestHit.line + ", " + bestHit.rate : "No Peak 162 batting line is stored.",
+      arm: bestArm ? "Peak 162 starter: " + bestArm.line + ", " + bestArm.rate : "No Peak 162 pitching line is stored."
+    };
+  }
+
+  function lineupColumn(code) {
+    var col = el("div", { class: "lineup-col" });
+    col.appendChild(el("h3", null, linkTeam(code)));
+    var roster = state.announced && state.announced[code];
+    var picked = peakLeaders(code, roster);
+    col.appendChild(el("p", { class: "peak-leader", text: picked.hit }));
+    if (picked.arm) col.appendChild(el("p", { class: "peak-leader", text: picked.arm }));
+    if (!roster) {
+      col.appendChild(el("p", { text: "Roster not announced yet" }));
+      return col;
+    }
+    var book = (state.peak && state.peak.clubs && state.peak.clubs[code]) || {};
+    (roster.lineup || []).forEach(function (line) {
+      var parts = splitRosterLine(line);
+      var row = book[line];
+      var bits = peakBits(row && row.status === "ok" ? row.text : "");
+      var who = (parts.slot ? parts.slot + " " : "") + (parts.name || line);
+      if (parts.pos) who += " " + parts.pos;
+      var spot = el("p", { class: "lineup-spot" });
+      spot.appendChild(el("strong", { text: who }));
+      spot.appendChild(el("span", { class: "peak-rate", text: bits ? bits.rate : "Peak stats unavailable" }));
+      if (bits && bits.years) spot.appendChild(el("span", { class: "peak-rate", text: "Peak 162 (" + bits.years + ")" }));
+      col.appendChild(spot);
+    });
+    return col;
+  }
+
+  function renderSeriesPreview(id) {
+    if (!state.peakLoaded) {
+      loadOnDemand("peak", function () { renderSeriesPreview(id); });
+      return;
+    }
+    markNav("previews");
+    var series = state.data.series.filter(function (item) { return item.id === id; })[0];
+    clear(view);
+    var page = el("article", { class: "panel" });
+    page.appendChild(el("p", null, el("a", { href: "#/previews", text: "All previews" })));
+    if (!series || !series.team_a || !series.team_b) {
+      page.appendChild(el("p", { text: "That series does not have two clubs yet." }));
+      view.appendChild(page);
+      return;
+    }
+    page.appendChild(el("h2", { text: series.label || series.id }));
+    page.appendChild(el("p", { class: "meta", text: series.id + " · " + (STATUS[series.status] || series.status) }));
+    page.appendChild(el("p", { class: "note", text: "The Peak 162 leader is the lineup hitter with the highest OPS on his stored peak line. The starter is the rotation arm with the lowest ERA on his. " + PEAK_NOTE }));
+    var pair = el("div", { class: "lineup-pair" });
+    pair.appendChild(lineupColumn(series.team_a));
+    pair.appendChild(lineupColumn(series.team_b));
+    page.appendChild(pair);
+    if (series.status === "scheduled" || series.status === "in-progress") {
+      var file = "graphics/previews/" + series.id + ".png";
+      page.appendChild(el("p", { class: "scorecard-actions" },
+        el("a", { href: file, download: series.id + ".png", text: "Download image" })
+      ));
+      page.appendChild(el("p", { class: "muted", text: "The image is 1200 by 1500." }));
+    }
+    view.appendChild(page);
+  }
+
   function renderPreviews() {
     markNav("previews");
     var page = el("article", { class: "stack" });
@@ -1996,6 +2095,11 @@
     card.appendChild(el("h3", { text: series.label || series.id }));
     card.appendChild(el("p", { class: "meta", text: series.id + " · " + (STATUS[series.status] || series.status) }));
     card.appendChild(el("p", null, linkTeam(series.team_a), " vs ", linkTeam(series.team_b)));
+    card.appendChild(el("p", null,
+      el("a", { href: "#/preview/" + series.id, text: "Lineups" }),
+      " · ",
+      el("a", { href: "graphics/previews/" + series.id + ".png", download: series.id + ".png", text: "Download image" })
+    ));
     card.appendChild(oddsBar(series));
     var number = (series.games || []).length + 1;
     var home = (series.home_by_game || {})[String(number)];
@@ -2917,6 +3021,7 @@
     else if (where.name === "team") renderTeam(where.rest[0]);
     else if (where.name === "player") renderPlayer(where.rest[0], where.rest[1]);
     else if (where.name === "search") renderSearch(where.query || where.rest.join("/"));
+    else if (where.name === "preview") renderSeriesPreview(where.rest[0]);
     else if (where.name === "previews") renderPreviews();
     else if (where.name === "stats") renderStats();
     else if (where.name === "history") renderHistory();

@@ -797,6 +797,25 @@ a.player-link, a.team-link { color: inherit; }
   max-width: 46rem;
 }
 
+.lineup-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.lineup-col { min-width: 0; }
+.lineup-col h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.peak-leader { margin: 0 0 0.35rem; color: var(--muted); font-size: 0.82rem; }
+.lineup-spot { margin: 0 0 0.55rem; }
+.lineup-spot strong { display: block; font-size: 0.92rem; }
+.peak-rate {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
 .timeline {
   list-style: none;
   margin: 0;
