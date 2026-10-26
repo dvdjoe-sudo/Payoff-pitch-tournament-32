@@ -8637,7 +8637,7 @@
    "id": "R1-03-G1",
    "series_id": "R1-03",
    "game_in_series": 1,
-   "date": "2026-10-24",
+   "date": "2026-10-23",
    "away": "TB",
    "home": "BOS",
    "teams": {
@@ -9225,7 +9225,7 @@
    "id": "R1-03-G2",
    "series_id": "R1-03",
    "game_in_series": 2,
-   "date": "2026-10-24",
+   "date": "2026-10-23",
    "away": "TB",
    "home": "BOS",
    "teams": {
@@ -9859,7 +9859,7 @@
    "id": "R1-03-G3",
    "series_id": "R1-03",
    "game_in_series": 3,
-   "date": null,
+   "date": "2026-10-23",
    "away": "BOS",
    "home": "TB",
    "teams": {
@@ -10423,7 +10423,7 @@
    "id": "R1-03-G4",
    "series_id": "R1-03",
    "game_in_series": 4,
-   "date": null,
+   "date": "2026-10-23",
    "away": "BOS",
    "home": "TB",
    "teams": {
@@ -11020,7 +11020,7 @@
    "id": "R1-03-G5",
    "series_id": "R1-03",
    "game_in_series": 5,
-   "date": null,
+   "date": "2026-10-23",
    "away": "TB",
    "home": "BOS",
    "teams": {
@@ -11627,7 +11627,7 @@
    "id": "R1-03-G6",
    "series_id": "R1-03",
    "game_in_series": 6,
-   "date": null,
+   "date": "2026-10-23",
    "away": "BOS",
    "home": "TB",
    "teams": {
@@ -12194,7 +12194,7 @@
    "id": "R1-03-G7",
    "series_id": "R1-03",
    "game_in_series": 7,
-   "date": null,
+   "date": "2026-10-23",
    "away": "TB",
    "home": "BOS",
    "teams": {

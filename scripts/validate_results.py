@@ -61,7 +61,7 @@ TEAM_FIELDS = (
 
 EXPECTED_TOTALS = {"H": 246, "HR": 49, "RBI": 148, "K": 301, "ER": 148, "OUTS": 832}
 ROLL_COUNTS = {"R1-01-G1": 72, "R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135}
-DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-24"}
+DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-23"}
 THREE_INNINGS = (
     "A reliever is lifted when he reaches 3 innings pitched in one appearance, "
     "unless he is the last available arm. The last available arm stays in and "
@@ -165,11 +165,7 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         check.expect(detail["id"] == game["id"] and detail["series_id"] == game["series_id"], f"{game['id']} detail identity")
         check.expect(detail["game_in_series"] == game["game_in_series"], f"{game['id']} detail game number")
         if game["id"] in set(LOCKED_GAME_IDS):
-            if game["id"] in {"R1-03-G1", "R1-03-G2"}:
-                check.expect(game.get("date") == "2026-10-24", f"{game['id']} date")
-            elif game["series_id"] == "R1-03":
-                check.expect(game.get("date") is None, f"{game['id']} has no per-game date in the box scores")
-            elif game["series_id"] in DATED:
+            if game["series_id"] in DATED:
                 check.expect(game.get("date") == DATED[game["series_id"]], f"{game['id']} date")
             else:
                 check.expect(game.get("date") is None, f"{game['id']} date should be null")
