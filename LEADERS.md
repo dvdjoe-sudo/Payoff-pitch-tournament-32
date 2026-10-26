@@ -29,21 +29,21 @@ At least 10 plate appearances.
 | Mel Ott | San Francisco Giants | .412 | 7 | 17 | 19 |
 | Willie Mays | San Francisco Giants | .389 | 7 | 18 | 20 |
 | Jimmie Foxx | Boston Red Sox | .375 | 9 | 24 | 27 |
+| Nomar Garciaparra | Boston Red Sox | .368 | 7 | 19 | 25 |
 | Wade Boggs | Boston Red Sox | .368 | 7 | 19 | 25 |
 | Aaron Judge | New York Yankees | .353 | 6 | 17 | 20 |
 | Jason Bartlett | Tampa Bay Rays | .350 | 7 | 20 | 23 |
 | Charlie Gehringer | Detroit Tigers | .346 | 9 | 26 | 28 |
 | Ketel Marte | Arizona Diamondbacks | .333 | 8 | 24 | 27 |
-| Nomar Garciaparra | Boston Red Sox | .333 | 7 | 21 | 25 |
+| Matt Williams | Arizona Diamondbacks | .333 | 7 | 21 | 24 |
+| Gabriel Moreno | Arizona Diamondbacks | .333 | 5 | 15 | 22 |
 | Gary Sheffield | Miami Marlins | .333 | 5 | 15 | 18 |
 | Hanley Ramirez | Miami Marlins | .333 | 5 | 15 | 16 |
 | Miguel Cabrera | Miami Marlins | .333 | 5 | 15 | 17 |
-| Matt Williams | Arizona Diamondbacks | .318 | 7 | 22 | 24 |
+| Nick Johnson | Washington Nationals | .333 | 5 | 15 | 17 |
 | Ted Williams | Boston Red Sox | .318 | 7 | 22 | 30 |
 | Toby Hall | Tampa Bay Rays | .318 | 7 | 22 | 22 |
 | Christian Yelich | Miami Marlins | .313 | 5 | 16 | 19 |
-| Gabriel Moreno | Arizona Diamondbacks | .313 | 5 | 16 | 22 |
-| Nick Johnson | Washington Nationals | .313 | 5 | 16 | 17 |
 | Ty Cobb | Detroit Tigers | .308 | 8 | 26 | 29 |
 | Juan Soto | Washington Nationals | .294 | 5 | 17 | 20 |
 | Willie Randolph | New York Yankees | .294 | 5 | 17 | 20 |
@@ -70,16 +70,16 @@ At least 10 plate appearances.
 | Bobby Veach | Detroit Tigers | .200 | 2 | 10 | 10 |
 | Denard Span | Washington Nationals | .190 | 4 | 21 | 21 |
 | Alex Rodriguez | New York Yankees | .188 | 3 | 16 | 21 |
+| Jeff Kent | San Francisco Giants | .188 | 3 | 16 | 18 |
 | Anthony Rendon | Washington Nationals | .176 | 3 | 17 | 19 |
 | Barry Bonds | San Francisco Giants | .176 | 3 | 17 | 19 |
-| Jeff Kent | San Francisco Giants | .176 | 3 | 17 | 18 |
 | Dustin Pedroia | Boston Red Sox | .167 | 5 | 30 | 30 |
 | Miguel Cabrera | Detroit Tigers | .167 | 4 | 24 | 26 |
 | Corbin Carroll | Arizona Diamondbacks | .154 | 4 | 26 | 28 |
+| Alan Trammell | Detroit Tigers | .150 | 3 | 20 | 24 |
 | Ben Zobrist | Tampa Bay Rays | .150 | 3 | 20 | 24 |
 | Geraldo Perdomo | Arizona Diamondbacks | .143 | 3 | 21 | 22 |
 | Art Fletcher | San Francisco Giants | .133 | 2 | 15 | 15 |
-| Alan Trammell | Detroit Tigers | .130 | 3 | 23 | 24 |
 | Christian Walker | Arizona Diamondbacks | .125 | 3 | 24 | 26 |
 | Luis Gonzalez | Arizona Diamondbacks | .125 | 3 | 24 | 27 |
 | Evan Longoria | Tampa Bay Rays | .120 | 3 | 25 | 27 |
@@ -91,7 +91,7 @@ At least 10 plate appearances.
 | Dwight Evans | Boston Red Sox | .091 | 2 | 22 | 26 |
 | Carl Crawford | Tampa Bay Rays | .083 | 2 | 24 | 24 |
 | Paul Goldschmidt | Arizona Diamondbacks | .083 | 2 | 24 | 28 |
-| Daniel Murphy | Washington Nationals | .071 | 1 | 14 | 18 |
+| Daniel Murphy | Washington Nationals | .083 | 1 | 12 | 18 |
 | Wilson Ramos | Washington Nationals | .071 | 1 | 14 | 16 |
 | Matt Williams | San Francisco Giants | .067 | 1 | 15 | 15 |
 | J.T. Realmuto | Miami Marlins | .000 | 0 | 10 | 10 |
@@ -115,21 +115,21 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Christian Yelich | Miami Marlins | .421 | 19 |
 | Jason Bartlett | Tampa Bay Rays | .409 | 23 |
 | Ketel Marte | Arizona Diamondbacks | .407 | 27 |
+| Nomar Garciaparra | Boston Red Sox | .400 | 25 |
 | Aaron Judge | New York Yankees | .400 | 20 |
 | George Kell | Detroit Tigers | .400 | 26 |
 | Juan Soto | Washington Nationals | .400 | 20 |
 | Charlie Gehringer | Detroit Tigers | .393 | 28 |
+| Matt Williams | Arizona Diamondbacks | .391 | 24 |
 | Luis Castillo | Miami Marlins | .389 | 18 |
 | Mickey Mantle | New York Yankees | .381 | 21 |
 | Alex Rodriguez | New York Yankees | .381 | 21 |
 | Ty Cobb | Detroit Tigers | .379 | 29 |
-| Matt Williams | Arizona Diamondbacks | .375 | 24 |
+| Gabriel Moreno | Arizona Diamondbacks | .375 | 22 |
+| Nick Johnson | Washington Nationals | .375 | 17 |
 | Cliff Floyd | Miami Marlins | .375 | 16 |
 | Willie Randolph | New York Yankees | .368 | 20 |
-| Nomar Garciaparra | Boston Red Sox | .364 | 25 |
-| Gabriel Moreno | Arizona Diamondbacks | .353 | 22 |
 | Miguel Cabrera | Miami Marlins | .353 | 17 |
-| Nick Johnson | Washington Nationals | .353 | 17 |
 | Ryan Zimmerman | Washington Nationals | .350 | 20 |
 | Joey Wendle | Tampa Bay Rays | .348 | 23 |
 | Al Kaline | Detroit Tigers | .333 | 27 |
@@ -151,10 +151,10 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Harry Heilmann | Detroit Tigers | .250 | 16 |
 | Trea Turner | Washington Nationals | .250 | 20 |
 | Jeff Conine | Miami Marlins | .250 | 16 |
+| Jeff Kent | San Francisco Giants | .235 | 18 |
 | Miguel Cabrera | Detroit Tigers | .231 | 26 |
 | Dwight Evans | Boston Red Sox | .231 | 26 |
 | Willie McCovey | San Francisco Giants | .222 | 19 |
-| Jeff Kent | San Francisco Giants | .222 | 18 |
 | Luis Gonzalez | Arizona Diamondbacks | .222 | 27 |
 | Corbin Carroll | Arizona Diamondbacks | .214 | 28 |
 | Paul Goldschmidt | Arizona Diamondbacks | .214 | 28 |
@@ -166,12 +166,12 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Dustin Pedroia | Boston Red Sox | .167 | 30 |
 | Giancarlo Stanton | Miami Marlins | .167 | 18 |
 | Carlton Fisk | Boston Red Sox | .158 | 24 |
+| Alan Trammell | Detroit Tigers | .150 | 24 |
 | Brandon Lowe | Tampa Bay Rays | .150 | 20 |
 | Art Fletcher | San Francisco Giants | .133 | 15 |
-| Alan Trammell | Detroit Tigers | .130 | 24 |
 | Carlos Pena | Tampa Bay Rays | .095 | 21 |
 | Carl Crawford | Tampa Bay Rays | .083 | 24 |
-| Daniel Murphy | Washington Nationals | .071 | 18 |
+| Daniel Murphy | Washington Nationals | .083 | 18 |
 | Wilson Ramos | Washington Nationals | .071 | 16 |
 | Matt Williams | San Francisco Giants | .067 | 15 |
 | J.T. Realmuto | Miami Marlins | .000 | 10 |
@@ -202,11 +202,11 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | George Kell | Detroit Tigers | .571 | 12 | 21 |
 | Harry Heilmann | Detroit Tigers | .563 | 9 | 16 |
 | Charlie Gehringer | Detroit Tigers | .538 | 14 | 26 |
+| Nomar Garciaparra | Boston Red Sox | .526 | 10 | 19 |
 | David Ortiz | Boston Red Sox | .519 | 14 | 27 |
 | Joey Wendle | Tampa Bay Rays | .500 | 10 | 20 |
 | Willie Mays | San Francisco Giants | .500 | 9 | 18 |
 | Willie McCovey | San Francisco Giants | .500 | 9 | 18 |
-| Nomar Garciaparra | Boston Red Sox | .476 | 10 | 21 |
 | Juan Soto | Washington Nationals | .471 | 8 | 17 |
 | Willie Randolph | New York Yankees | .471 | 8 | 17 |
 | Hanley Ramirez | Miami Marlins | .467 | 7 | 15 |
@@ -216,14 +216,14 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Ted Williams | Boston Red Sox | .409 | 9 | 22 |
 | Will Clark | San Francisco Giants | .389 | 7 | 18 |
 | Ty Cobb | Detroit Tigers | .346 | 9 | 26 |
+| Matt Williams | Arizona Diamondbacks | .333 | 7 | 21 |
+| Gabriel Moreno | Arizona Diamondbacks | .333 | 5 | 15 |
 | Miguel Cabrera | Miami Marlins | .333 | 5 | 15 |
+| Nick Johnson | Washington Nationals | .333 | 5 | 15 |
 | Al Kaline | Detroit Tigers | .320 | 8 | 25 |
-| Matt Williams | Arizona Diamondbacks | .318 | 7 | 22 |
-| Gabriel Moreno | Arizona Diamondbacks | .313 | 5 | 16 |
-| Nick Johnson | Washington Nationals | .313 | 5 | 16 |
+| Jeff Kent | San Francisco Giants | .313 | 5 | 16 |
 | Tris Speaker | Boston Red Sox | .310 | 9 | 29 |
 | Giancarlo Stanton | Miami Marlins | .294 | 5 | 17 |
-| Jeff Kent | San Francisco Giants | .294 | 5 | 17 |
 | Ryan Zimmerman | Washington Nationals | .294 | 5 | 17 |
 | Carlton Fisk | Boston Red Sox | .278 | 5 | 18 |
 | Corbin Carroll | Arizona Diamondbacks | .269 | 7 | 26 |
@@ -238,11 +238,11 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Denard Span | Washington Nationals | .238 | 5 | 21 |
 | Buster Posey | San Francisco Giants | .214 | 3 | 14 |
 | Luis Castillo | Miami Marlins | .214 | 3 | 14 |
+| Alan Trammell | Detroit Tigers | .200 | 4 | 20 |
 | Hank Greenberg | Detroit Tigers | .200 | 4 | 20 |
 | Bobby Veach | Detroit Tigers | .200 | 2 | 10 |
 | Geraldo Perdomo | Arizona Diamondbacks | .190 | 4 | 21 |
 | Anthony Rendon | Washington Nationals | .176 | 3 | 17 |
-| Alan Trammell | Detroit Tigers | .174 | 4 | 23 |
 | Dustin Pedroia | Boston Red Sox | .167 | 5 | 30 |
 | Carl Crawford | Tampa Bay Rays | .167 | 4 | 24 |
 | Dwight Evans | Boston Red Sox | .136 | 3 | 22 |
@@ -252,7 +252,7 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Luis Gonzalez | Arizona Diamondbacks | .125 | 3 | 24 |
 | Brandon Lowe | Tampa Bay Rays | .105 | 2 | 19 |
 | Paul Goldschmidt | Arizona Diamondbacks | .083 | 2 | 24 |
-| Daniel Murphy | Washington Nationals | .071 | 1 | 14 |
+| Daniel Murphy | Washington Nationals | .083 | 1 | 12 |
 | Wilson Ramos | Washington Nationals | .071 | 1 | 14 |
 | J.T. Realmuto | Miami Marlins | .000 | 0 | 10 |
 | Kevin Kiermaier | Tampa Bay Rays | .000 | 0 | 17 |

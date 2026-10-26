@@ -26,7 +26,14 @@ GAMES = ROOT / "games"
 # covered every series slot and the team won-lost lines; those move when a new
 # game is imported. Team lines are still reconciled below. The old value was
 # 7ab032794ae6f1b3c47184df4bf99ab8827c76ea50d9734bc8b10c118da41cf4.
-FINGERPRINT = "d2b7b66dfb53fd57e5593a4207278a76cf8860fc662b9655d661ba6eca7aef45"
+# Reset 2026-10-25 under Joe's correction ruling: a bunt fielder's-choice
+# play is scored a sacrifice (a plate appearance, not an at-bat), so ten
+# recorded batting lines moved AB to SAC (R1-02: Kent G1, Murphy G2 and G3,
+# Johnson G2; R1-03: Garciaparra G5; R1-04: Williams G1, Moreno G2,
+# Trammell G4, G5, and G6). No score, result, or pitching line changed.
+# The old value was
+# d2b7b66dfb53fd57e5593a4207278a76cf8860fc662b9655d661ba6eca7aef45.
+FINGERPRINT = "7b12e577dbfe542585fb0fb1dd4bce53b9fd5515b5a894940685968e28182f4d"
 # Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
 # The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
 FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
