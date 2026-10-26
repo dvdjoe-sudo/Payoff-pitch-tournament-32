@@ -2086,18 +2086,6 @@
      2016
     ]
    },
-   "LR Mike DeJean 6": {
-    "lahman_id": "dejeami01",
-    "status": "ok",
-    "text": "Peak 162 with Colorado Rockies (1997–2005). Years away from the franchise inside this span are not in the totals. 65 G, 4-3, 1 SV, 72.2 IP, 78 H, 38 ER, 30 BB, 41 SO, 4.73 ERA, 1.49 WHIP, 5.1 K/9",
-    "years": [
-     1997,
-     1998,
-     1999,
-     2000,
-     2005
-    ]
-   },
    "MR Jerry DiPoto 7": {
     "lahman_id": "dipotje01",
     "status": "ok",
@@ -2130,6 +2118,18 @@
      2018,
      2019,
      2020
+    ]
+   },
+   "OF5 Ellis Burks OF R 5": {
+    "lahman_id": "burksel01",
+    "status": "ok",
+    "text": "Peak 162 with Colorado Rockies (1994–1998): 162 G, 640 PA, 567 AB, 112 R, 174 H, 32 2B, 7 3B, 36 HR, 105 RBI, 16 SB, 63 BB, 118 SO, .306/.378/.579/.957",
+    "years": [
+     1994,
+     1995,
+     1996,
+     1997,
+     1998
     ]
    },
    "SP1 Ubaldo Jiménez 8": {
