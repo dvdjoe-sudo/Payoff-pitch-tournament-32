@@ -1,16 +1,16 @@
 {
  "clubs": {
   "ATL": {
-   "1 Herman Long SS R": {
-    "lahman_id": "longhe01",
+   "1 Rabbit Maranville SS R": {
+    "lahman_id": "maranra01",
     "status": "ok",
-    "text": "Peak 162 with Atlanta Braves (1891–1895): 162 G, 779 PA, 699 AB, 160 R, 207 H, 32 2B, 11 3B, 11 HR, 91 RBI, 54 SB, 66 BB, 37 SO, .296/.363/.419/.782",
+    "text": "Peak 162 with Atlanta Braves (1916–1920): 162 G, 678 PA, 615 AB, 69 R, 158 H, 20 2B, 15 3B, 4 HR, 48 RBI, 24 SB, 45 BB, 46 SO, .257/.309/.356/.665",
     "years": [
-     1891,
-     1892,
-     1893,
-     1894,
-     1895
+     1916,
+     1917,
+     1918,
+     1919,
+     1920
     ]
    },
    "2 Chipper Jones DH S": {
