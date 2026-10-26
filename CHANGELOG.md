@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Bracket image
+
+The build writes `graphics/bracket.png`, 1200 by 1500. The title is Payoff Pitch Tournament 32. A finished series puts the winner in gold with a WIN tag and dims the loser. A series that is scheduled or in progress is labeled UPCOMING. The footer says "All rounds will be re-seeded." The image has no site address. The bracket page links it as Download bracket image. The service worker cache is payoff-pitch-v22. No game result was changed.
+
 ## 2026-10-26 — Series lineup previews
 
 Each scheduled series with both clubs named has a lineup preview. The two owner lineups sit side by side, with the stored Peak 162 line under each name. The leader is the lineup hitter with the highest OPS on that line. The starter is the rotation arm with the lowest ERA on his. A club without an owner card says "Roster not announced yet." The build writes a 1200 by 1500 PNG for each of those series, and the page has a Download image link. The service worker cache is payoff-pitch-v21. No game result was changed.
