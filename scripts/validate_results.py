@@ -361,6 +361,42 @@ def detail_for(game: dict, check: Check):
     }
 
 
+
+def check_pha_roster_alignment(check: Check) -> None:
+    """Owner-approved card roster, without inventing Valo's frozen conversion."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["PHA"]
+    pha = rosters["PHA"]["players"]
+    count = lambda group: sum(p["group"] == group for p in pha)
+    check.expect(len(pha) == 26 and len({p["id"] for p in pha}) == 26, "PHA exactly 26 distinct players")
+    check.expect((count("lineup"), count("bench"), count("rotation"), count("bullpen")) == (9, 7, 5, 5),
+                 "PHA owner-approved 9/7/5/5 slot distribution")
+    by_id = {p["id"]: p for p in pha}
+    for pid, group, slot, pos in (
+        ("fainfe01", "lineup", 9, "DH"),
+        ("bishoma01", "bench", 6, "2B"),
+        ("valoel01", "bench", 7, "OF"),
+    ):
+        spot = by_id.get(pid, {})
+        check.expect((spot.get("group"), spot.get("slot"), spot.get("pos")) == (group, slot, pos),
+                     "PHA approved slot " + pid)
+        c = cards.get("PHA|" + pid, {})
+        check.expect(bool(c) and any(s.get("group") == group and s.get("slot") == slot for s in c.get("spots", [])),
+                     "PHA card spot matches roster for " + pid)
+    check.expect("earnsge01" not in by_id and "PHA|earnsge01" not in cards,
+                 "Earnshaw absent from PHA owner-approved cards")
+    check.expect({k.split("|", 1)[1] for k in cards if k.startswith("PHA|")} == set(by_id),
+                 "PHA roster and card catalog have identical player ids")
+    check.expect(any("Elmer Valo" in s for s in announced["bench"]) and
+                 any("Ferris Fain DH" in s for s in announced["lineup"]) and
+                 any("Max Bishop" in s for s in announced["bench"]),
+                 "PHA owner-announced card amendments remain present")
+    valo = cards.get("PHA|valoel01", {})
+    check.expect(bool(valo.get("card_bat")) or bool(valo.get("conversion_status")),
+                 "Valo has genuine converted card or explicit nonplayable status")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -372,6 +408,7 @@ def main() -> int:
     if len(details) == len(data["games"]):
         reconcile(data, details, check)
     documents(check)
+    check_pha_roster_alignment(check)
     return check.done()
 
 

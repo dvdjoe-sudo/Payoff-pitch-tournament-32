@@ -1630,6 +1630,7 @@
     if (!roster) return;
     var body = el("div");
     body.appendChild(el("p", { class: "note", text: "The converted set, in set order. Open a player for his card and his tournament line." }));
+    if (code === "PHA") body.appendChild(el("p", { class: "note", text: "Owner-approved 26-man roster: Ferris Fain is DH, Max Bishop is on the bench, and George Earnshaw is not on the roster. Elmer Valo is on the bench; his Hitter v0.5 card is awaiting original frozen-engine conversion and is not yet playable." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
       var rows = roster.players.filter(function (spot) { return spot.group === group; })
         .sort(function (a, b) { return a.slot - b.slot; });
@@ -1906,9 +1907,14 @@
       if (spotsText(card)) onlyPage.appendChild(el("p", { class: "meta", text: spotsText(card) }));
       onlyPage.appendChild(el("h3", { text: "Tournament" }));
       var roster = state.rosters && state.rosters[code];
-      onlyPage.appendChild(el("p", { text: roster && !roster.played
-        ? clubName(code) + " has not played a tournament game yet. The peak line and the card are below."
-        : "No appearances in the tournament yet. The peak line and the card are below." }));
+      onlyPage.appendChild(el("p", { text: card.conversion_status
+        ? "Official roster member; Payoff Pitch card not yet available."
+        : roster && !roster.played
+          ? clubName(code) + " has not played a tournament game yet. The peak line and the card are below."
+          : "No appearances in the tournament yet. The peak line and the card are below." }));
+      if (card.conversion_status) {
+        onlyPage.appendChild(el("p", { class: "note", text: "Elmer Valo: the original frozen Hitter v0.5 conversion is required before play. No percentile bands have been fabricated. His approved five-season Peak 162 summary remains on the Philadelphia Athletics team page." }));
+      }
       peakSections(onlyPage, card);
       cardSections(onlyPage, card);
       view.appendChild(onlyPage);
