@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Results timeline
+
+The Results page is a day-by-day scoreboard of every game on the book. Each day lists the games played that day, with the club logos, the final score, and a link to the game. Games with no stored date sit after the dated days. The layout stays on a phone. The service worker cache is payoff-pitch-v32. No game result was changed.
+
 ## 2026-10-26 — Player game logs
 
 A player page lists one row for each tournament game. Batting shows AB, R, H, 2B, 3B, HR, RBI, BB, SO, and SB. Pitching shows IP, H, R, ER, BB, K, and the stored decision. The date and the opponent sit in the first cell, and the row links to the game. A game with no date says so. The columns stay on a phone. The service worker cache is payoff-pitch-v31. No game result was changed.

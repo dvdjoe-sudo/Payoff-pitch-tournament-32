@@ -3020,6 +3020,59 @@
     return events;
   }
 
+  function scoreSide(game, code) {
+    var winner = game.winner === code;
+    var side = el("div", { class: "score-side" + (winner ? " winner-club" : "") });
+    var name = el("span", { class: "club-name" });
+    var team = state.byCode[code];
+    if (team) name.appendChild(logo(team, team.name + " mark", true));
+    name.appendChild(el("span", { class: "score-club", text: clubName(code) }));
+    side.appendChild(name);
+    side.appendChild(el("span", { class: "score-runs", text: String(game.score[code]) }));
+    paintClubRow(side, code, winner);
+    return side;
+  }
+
+  function renderResults() {
+    markNav("results");
+    var buckets = {};
+    var keys = [];
+    state.data.games.forEach(function (game) {
+      var key = game.date || "";
+      if (!buckets[key]) {
+        buckets[key] = [];
+        keys.push(key);
+      }
+      buckets[key].push(game);
+    });
+    keys.sort(function (a, b) {
+      if (!a !== !b) return a ? -1 : 1;
+      if (a < b) return -1;
+      if (a > b) return 1;
+      return 0;
+    });
+    var page = el("article", { class: "stack" });
+    page.appendChild(el("h2", { text: "Results" }));
+    page.appendChild(el("p", { class: "note", text: "Every played game, by the date stored on that game. The score is the box score. A game with no date is listed after the dated days." }));
+    if (!keys.length) page.appendChild(el("p", { text: "No games are on the book." }));
+    keys.forEach(function (key) {
+      var day = el("section", { class: "score-day" });
+      var games = buckets[key];
+      day.appendChild(el("h3", { text: key || "Date not stored" }));
+      day.appendChild(el("p", { class: "meta", text: games.length + (games.length === 1 ? " game" : " games") }));
+      games.forEach(function (game) {
+        var card = el("a", { class: "score-game", href: "#/game/" + game.id });
+        card.appendChild(scoreSide(game, game.away));
+        card.appendChild(scoreSide(game, game.home));
+        card.appendChild(el("span", { class: "score-id", text: game.id }));
+        day.appendChild(card);
+      });
+      page.appendChild(day);
+    });
+    clear(view);
+    view.appendChild(page);
+  }
+
   function renderHistory() {
     markNav("history");
     var page = el("article", { class: "stack" });
@@ -3673,6 +3726,7 @@
     else if (where.name === "previews") renderPreviews();
     else if (where.name === "stats") renderStats();
     else if (where.name === "leaders") renderLeaders();
+    else if (where.name === "results") renderResults();
     else if (where.name === "history") renderHistory();
     else if (where.name === "recap") renderRecap();
     else if (where.name === "add") renderAdd();
