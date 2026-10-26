@@ -28,6 +28,10 @@ Games resolve on the FAC deck: the 256-card Fast Action Card deck mode is the to
 
 There is no home-field advantage adjustment. Home and away results are tracked, not handicapped.
 
+## The designated hitter
+
+Every club plays with the designated hitter in every series (Joe, 2026-10-26). No club plays NL-style. This settles the question the Open questions section previously carried about St. Louis; it is now closed. The ruling changes nothing already recorded: every governed series to date was played with a designated hitter, and every converted lineup carries a DH slot, so no recorded game, set file, or archive entry changes.
+
 ## Governance hierarchy
 
 When rules speak to the same decision, they apply in this order (Joe's rulings):
@@ -52,6 +56,8 @@ Default policy: in the ninth inning, with a lead of one to three runs, if the st
 ## Manager traits
 
 Each club's manager governs under his encoded profile, built before the club's first game and proven in the sandbox battery before it governs. A profile is Joe's authored text, filed word for word; every place the encoding had to interpret the text is flagged in the traits specification for Joe's veto. Traits never override the book's mechanics or the house hard rule; they act inside the hierarchy above.
+
+The designated hitter rule above has one recorded consequence here. Tony La Russa's Second Leadoff cannot fire under a DH: the sets carry no pitcher batting cards, so there is no pitcher's spot in the order for it to act on. His Double-Switch Master fires only in its combined-move form. Both mechanics stand as encoded.
 
 ## Rotation
 
@@ -108,4 +114,3 @@ Kept open for Joe, because play has not settled them:
 
 - The Rest Chart's days-based rest accounting diverges from the house outs-based convention in some states. The governed games so far have not forced the choice; it is Joe's call when it bites.
 - Whether any fixed relief-innings cap applies beyond the Rest Chart, the hook policy, and manager traits. Governed play has applied no separate cap; none is written here until Joe rules.
-- Whether St. Louis plays NL-style (no designated hitter) in its series. As lineups stand every converted lineup carries a DH and the sets hold no pitcher batting cards, so the encoded Second Leadoff mechanic cannot fire under a DH; Joe's call governs if he wants the Cardinals treated differently.
