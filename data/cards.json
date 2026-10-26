@@ -48546,6 +48546,5780 @@
   "team": "PHA",
   "tournament": null
  },
+ "SD|adamsmi03": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 4,
+    "hold": 7,
+    "inj": "Normal",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": null
+   },
+   "card_type": "RP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "NONE",
+   "special": [
+    "PATIENT-OUT",
+    "TOUGH-OUT"
+   ],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "TOUGH-OUT",
+    "12": "WHEELHOUSE",
+    "2": "TOUGH",
+    "3": "PATIENT",
+    "4": "TOUGH-OUT",
+    "5": "TOUGH",
+    "6": "IN-PLAY",
+    "7": "TOUGH",
+    "8": "TOUGH",
+    "9": "PATIENT"
+   },
+   "throws": "R"
+  },
+  "id": "adamsmi03",
+  "name": "Mike Adams",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 59,
+   "bf": 842,
+   "er": 40,
+   "g": 209,
+   "gs": 0,
+   "h": 137,
+   "hbp": 0,
+   "hr": 12,
+   "ip": "217.0",
+   "l": 5,
+   "r": 48,
+   "so": 241,
+   "sv": 1,
+   "w": 9,
+   "window_years": [
+    2008,
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 15,
+   "bf": 211,
+   "er": 10,
+   "g": 52,
+   "gs": 0,
+   "h": 34,
+   "hbp": 0,
+   "hr": 3,
+   "ip": "54.1",
+   "ip_outs": 163,
+   "l": 1,
+   "r": 12,
+   "seasons": 4,
+   "so": 60,
+   "sv": 0,
+   "team_games": 648,
+   "w": 2,
+   "window_years": [
+    2008,
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 3
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|ashbyan01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 8,
+    "hold": 7,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
+   },
+   "card_type": "SP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "+20",
+   "special": [
+    "PATIENT-OUT",
+    "TOUGH-OUT"
+   ],
+   "stamina": {
+    "relief": null,
+    "start": 6
+   },
+   "table_2d6": {
+    "10": "IN-PLAY",
+    "11": "BALLPARK",
+    "12": "IN-PLAY",
+    "2": "IN-PLAY",
+    "3": "TOUGH-OUT",
+    "4": "IN-PLAY",
+    "5": "IN-PLAY",
+    "6": "DEFENSE",
+    "7": "PATIENT",
+    "8": "TOUGH",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "ashbyan01",
+  "name": "Andy Ashby",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 251,
+   "bf": 3895,
+   "er": 350,
+   "g": 143,
+   "gs": 143,
+   "h": 899,
+   "hbp": 31,
+   "hr": 99,
+   "ip": "940.3333",
+   "l": 45,
+   "r": 399,
+   "so": 639,
+   "sv": 0,
+   "w": 58,
+   "window_years": [
+    1994,
+    1995,
+    1996,
+    1998,
+    1999
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 54,
+   "bf": 845,
+   "er": 76,
+   "g": 31,
+   "gs": 31,
+   "h": 195,
+   "hbp": 7,
+   "hr": 21,
+   "ip": "204.0",
+   "ip_outs": 612,
+   "l": 10,
+   "r": 87,
+   "seasons": 5,
+   "so": 139,
+   "sv": 0,
+   "team_games": 747,
+   "w": 13,
+   "window_years": [
+    1994,
+    1995,
+    1996,
+    1998,
+    1999
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 4
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|bellhe01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 7,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "BALLPARK",
+    "12": "PATIENT",
+    "2": "PATIENT-OUT",
+    "3": "PATIENT",
+    "4": "PATIENT",
+    "5": "TOUGH",
+    "6": "DEFENSE",
+    "7": "TOUGH",
+    "8": "TOUGH",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "bellhe01",
+  "name": "Heath Bell",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 131,
+   "bf": 1508,
+   "er": 105,
+   "g": 354,
+   "gs": 0,
+   "h": 287,
+   "hbp": 6,
+   "hr": 16,
+   "ip": "374.0",
+   "l": 19,
+   "r": 110,
+   "so": 389,
+   "sv": 134,
+   "w": 27,
+   "window_years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 26,
+   "bf": 301,
+   "er": 21,
+   "g": 71,
+   "gs": 0,
+   "h": 57,
+   "hbp": 1,
+   "hr": 3,
+   "ip": "74.2",
+   "ip_outs": 224,
+   "l": 4,
+   "r": 22,
+   "seasons": 5,
+   "so": 78,
+   "sv": 27,
+   "team_games": 811,
+   "w": 5,
+   "window_years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 2
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|caminke01": {
+  "card_bat": {
+   "arm": "Above Average",
+   "bats": "S",
+   "dp": 7,
+   "fielding": "Great",
+   "out_table": [
+    {
+     "range": [
+      26,
+      30
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      38,
+      41
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      56,
+      62
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      31,
+      32
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      71
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      33,
+      33
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      43,
+      47
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      72,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      49,
+      55
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 7,
+     "e": 2,
+     "pos": "3B",
+     "range": "A"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 7,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       1,
+       7
+      ],
+      "2B": null,
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       31
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       51,
+       60
+      ],
+      "2B": null,
+      "3B": [
+       40,
+       49
+      ],
+      "BB": [
+       1,
+       41
+      ],
+      "HBP": [
+       61,
+       68
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": [
+       52,
+       64
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       51
+      ],
+      "HBP": null
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       47,
+       57
+      ],
+      "2B": [
+       36,
+       37
+      ],
+      "3B": [
+       38,
+       46
+      ],
+      "SO": [
+       1,
+       36
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       64,
+       79
+      ],
+      "2B": [
+       59,
+       63
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       58
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       56,
+       152
+      ],
+      "2B": null,
+      "3B": [
+       46,
+       46
+      ],
+      "HR": [
+       1,
+       49
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       77,
+       85
+      ],
+      "2B": null,
+      "3B": [
+       71,
+       70
+      ],
+      "HR": [
+       1,
+       70
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "caminke01",
+  "name": "Ken Caminiti",
+  "peak_bat": {
+   "2B": 127,
+   "3B": 2,
+   "AB": 2010,
+   "BB": 298,
+   "CS": 14,
+   "G": 557,
+   "GIDP": 44,
+   "H": 592,
+   "HBP": 12,
+   "HR": 121,
+   "IBB": 37,
+   "PA": 2351,
+   "R": 362,
+   "RBI": 396,
+   "SB": 40,
+   "SF": 31,
+   "SO": 419,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1995,
+    1996,
+    1997,
+    1998
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 37,
+   "3B": 1,
+   "AB": 585,
+   "BB": 87,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 13,
+   "H": 172,
+   "HBP": 3,
+   "HR": 35,
+   "IBB": 11,
+   "PA": 684,
+   "R": 105,
+   "RBI": 115,
+   "SB": 12,
+   "SF": 9,
+   "SO": 122,
+   "team_line": "San Diego Padres",
+   "window_games": 557,
+   "window_years": [
+    1995,
+    1996,
+    1997,
+    1998
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "3B",
+    "slot": 4
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|davisma01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 8,
+    "hold": 7,
+    "inj": "Prone",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-33"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "WHEELHOUSE",
+    "12": "TOUGH-OUT",
+    "2": "TOUGH",
+    "3": "TOUGH",
+    "4": "PATIENT",
+    "5": "TOUGH",
+    "6": "PATIENT",
+    "7": "TOUGH",
+    "8": "TOUGH",
+    "9": "IN-PLAY"
+   },
+   "throws": "L"
+  },
+  "id": "davisma01",
+  "name": "Mark Davis",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 124,
+   "bf": 1210,
+   "er": 78,
+   "g": 210,
+   "gs": 0,
+   "h": 231,
+   "hbp": 4,
+   "hr": 19,
+   "ip": "291.6667",
+   "l": 19,
+   "r": 86,
+   "so": 283,
+   "sv": 78,
+   "w": 14,
+   "window_years": [
+    1987,
+    1988,
+    1989,
+    1993
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 31,
+   "bf": 303,
+   "er": 20,
+   "g": 53,
+   "gs": 0,
+   "h": 58,
+   "hbp": 1,
+   "hr": 5,
+   "ip": "73.0",
+   "ip_outs": 219,
+   "l": 5,
+   "r": 22,
+   "seasons": 4,
+   "so": 71,
+   "sv": 20,
+   "team_games": 647,
+   "w": 4,
+   "window_years": [
+    1987,
+    1988,
+    1989,
+    1993
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 4
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|fingero01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 5,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "+10",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "IN-PLAY",
+    "11": "TOUGH",
+    "12": "TOUGH-OUT",
+    "2": "TOUGH",
+    "3": "BALLPARK",
+    "4": "TOUGH",
+    "5": "TOUGH",
+    "6": "IN-PLAY",
+    "7": "PATIENT",
+    "8": "TOUGH",
+    "9": "IN-PLAY"
+   },
+   "throws": "R"
+  },
+  "id": "fingero01",
+  "name": "Rollie Fingers",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 134,
+   "bf": 1777,
+   "er": 148,
+   "g": 265,
+   "gs": 0,
+   "h": 399,
+   "hbp": 3,
+   "hr": 26,
+   "ip": "426.3333",
+   "l": 40,
+   "r": 162,
+   "so": 319,
+   "sv": 108,
+   "w": 34,
+   "window_years": [
+    1977,
+    1978,
+    1979,
+    1980
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 34,
+   "bf": 444,
+   "er": 37,
+   "g": 66,
+   "gs": 0,
+   "h": 100,
+   "hbp": 1,
+   "hr": 7,
+   "ip": "106.2",
+   "ip_outs": 320,
+   "l": 10,
+   "r": 41,
+   "seasons": 4,
+   "so": 80,
+   "sv": 27,
+   "team_games": 648,
+   "w": 9,
+   "window_years": [
+    1977,
+    1978,
+    1979,
+    1980
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 5
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|finlest01": {
+  "card_bat": {
+   "arm": "Strong",
+   "bats": "L",
+   "dp": 7,
+   "fielding": "Great",
+   "out_table": [
+    {
+     "range": [
+      23,
+      35
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      43,
+      46
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      60,
+      66
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      47,
+      47
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      67,
+      73
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      38,
+      38
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      48,
+      51
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      74,
+      82
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      39,
+      40
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      52,
+      52
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      83,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      41,
+      42
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      53,
+      59
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 8,
+     "e": 2,
+     "pos": "CF",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       5,
+       10
+      ],
+      "2B": [
+       1,
+       4
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       3,
+       31
+      ],
+      "2B": [
+       1,
+       2
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       36,
+       35
+      ],
+      "2B": null,
+      "3B": [
+       25,
+       35
+      ],
+      "BB": [
+       1,
+       28
+      ],
+      "HBP": [
+       47,
+       54
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       49,
+       49
+      ],
+      "2B": [
+       35,
+       48
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       34
+      ],
+      "HBP": null
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       40,
+       49
+      ],
+      "2B": [
+       29,
+       30
+      ],
+      "3B": [
+       31,
+       39
+      ],
+      "SO": [
+       1,
+       31
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       48,
+       63
+      ],
+      "2B": [
+       43,
+       47
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       42
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       37,
+       257
+      ],
+      "2B": null,
+      "3B": [
+       27,
+       28
+      ],
+      "HR": [
+       1,
+       33
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       49,
+       48
+      ],
+      "2B": null,
+      "3B": [
+       43,
+       42
+      ],
+      "HR": [
+       1,
+       42
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "L"
+  },
+  "card_pit": null,
+  "id": "finlest01",
+  "name": "Steve Finley",
+  "peak_bat": {
+   "2B": 134,
+   "3B": 28,
+   "AB": 2396,
+   "BB": 203,
+   "CS": 26,
+   "G": 602,
+   "GIDP": 47,
+   "H": 662,
+   "HBP": 13,
+   "HR": 82,
+   "IBB": 12,
+   "PA": 2630,
+   "R": 423,
+   "RBI": 298,
+   "SB": 85,
+   "SF": 18,
+   "SO": 344,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1995,
+    1996,
+    1997,
+    1998
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 8,
+   "AB": 645,
+   "BB": 55,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 13,
+   "H": 178,
+   "HBP": 3,
+   "HR": 22,
+   "IBB": 3,
+   "PA": 708,
+   "R": 114,
+   "RBI": 80,
+   "SB": 23,
+   "SF": 5,
+   "SO": 93,
+   "team_line": "San Diego Padres",
+   "window_games": 602,
+   "window_years": [
+    1995,
+    1996,
+    1997,
+    1998
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "CF",
+    "slot": 8
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|gonzaad01": {
+  "card_bat": {
+   "arm": "Below Average",
+   "bats": "L",
+   "dp": 7,
+   "fielding": "Average",
+   "out_table": [
+    {
+     "range": [
+      29,
+      33
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      41,
+      44
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      58,
+      64
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      65,
+      72
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      36,
+      36
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      46,
+      49
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      73,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      37,
+      38
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      50,
+      50
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      39,
+      40
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      51,
+      57
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 5,
+     "e": 4,
+     "pos": "1B",
+     "range": "C"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 7,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       9,
+       30
+      ],
+      "2B": [
+       1,
+       8
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       6,
+       20
+      ],
+      "2B": [
+       1,
+       5
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       53,
+       52
+      ],
+      "2B": null,
+      "3B": [
+       46,
+       45
+      ],
+      "BB": [
+       1,
+       54
+      ],
+      "HBP": [
+       66,
+       72
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       48,
+       53
+      ],
+      "2B": [
+       37,
+       45
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       36
+      ],
+      "HBP": [
+       59,
+       59
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       59,
+       59
+      ],
+      "2B": null,
+      "3B": [
+       49,
+       58
+      ],
+      "SO": [
+       1,
+       60
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       57,
+       75
+      ],
+      "2B": null,
+      "3B": [
+       54,
+       56
+      ],
+      "SO": [
+       1,
+       53
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       51,
+       326
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       63
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       61,
+       60
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       60
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 2,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "L"
+  },
+  "card_pit": null,
+  "id": "gonzaad01",
+  "name": "Adrian Gonzalez",
+  "peak_bat": {
+   "2B": 176,
+   "3B": 7,
+   "AB": 2975,
+   "BB": 403,
+   "CS": 2,
+   "G": 799,
+   "GIDP": 92,
+   "H": 856,
+   "HBP": 20,
+   "HR": 161,
+   "IBB": 93,
+   "PA": 3420,
+   "R": 464,
+   "RBI": 501,
+   "SB": 1,
+   "SF": 22,
+   "SO": 618,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 1,
+   "AB": 603,
+   "BB": 82,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 19,
+   "H": 174,
+   "HBP": 4,
+   "HR": 33,
+   "IBB": 19,
+   "PA": 693,
+   "R": 94,
+   "RBI": 102,
+   "SB": 0,
+   "SF": 4,
+   "SO": 125,
+   "team_line": "San Diego Padres",
+   "window_games": 799,
+   "window_years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "1B",
+    "slot": 5
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|gregelu01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 6,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
+   },
+   "card_type": "RP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "+10",
+   "special": [
+    "TOUGH-OUT"
+   ],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "IN-PLAY",
+    "11": "BALLPARK",
+    "12": "TOUGH",
+    "2": "DEFENSE",
+    "3": "PATIENT",
+    "4": "IN-PLAY",
+    "5": "TOUGH",
+    "6": "TOUGH",
+    "7": "IN-PLAY",
+    "8": "TOUGH-OUT",
+    "9": "PATIENT"
+   },
+   "throws": "R"
+  },
+  "id": "gregelu01",
+  "name": "Luke Gregerson",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 107,
+   "bf": 1418,
+   "er": 111,
+   "g": 363,
+   "gs": 0,
+   "h": 272,
+   "hbp": 13,
+   "hr": 23,
+   "ip": "347.0",
+   "l": 22,
+   "r": 125,
+   "so": 352,
+   "sv": 16,
+   "w": 17,
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 21,
+   "bf": 284,
+   "er": 22,
+   "g": 73,
+   "gs": 0,
+   "h": 54,
+   "hbp": 3,
+   "hr": 5,
+   "ip": "69.1",
+   "ip_outs": 208,
+   "l": 4,
+   "r": 25,
+   "seasons": 5,
+   "so": 70,
+   "sv": 3,
+   "team_games": 810,
+   "w": 3,
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 6
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|gwynnto01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "L",
+   "dp": 7,
+   "fielding": "Below Average",
+   "out_table": [
+    {
+     "range": [
+      13,
+      34
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      42,
+      45
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      59,
+      65
+     ],
+     "result": "F7"
+    },
+    {
+     "range": [
+      35,
+      36
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      46,
+      46
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      66,
+      74
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      37,
+      37
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      47,
+      50
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      38,
+      39
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      51,
+      51
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      91
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      52,
+      58
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F9"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 5,
+     "pos": "RF",
+     "range": "D"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       7,
+       51
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       5
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       44
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       41,
+       52
+      ],
+      "2B": [
+       35,
+       34
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       34
+      ],
+      "HBP": null
+     },
+     "vsRHP": {
+      "1B": [
+       34,
+       37
+      ],
+      "2B": [
+       26,
+       27
+      ],
+      "3B": [
+       31,
+       32
+      ],
+      "BB": [
+       1,
+       25
+      ],
+      "HBP": [
+       38,
+       39
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       8,
+       39
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       8
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       29,
+       47
+      ],
+      "2B": null,
+      "3B": [
+       16,
+       28
+      ],
+      "SO": [
+       1,
+       15
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       8,
+       99
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       7
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       22,
+       53
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       21
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "L"
+  },
+  "card_pit": null,
+  "id": "gwynnto01",
+  "name": "Tony Gwynn",
+  "peak_bat": {
+   "2B": 166,
+   "3B": 39,
+   "AB": 3033,
+   "BB": 292,
+   "CS": 60,
+   "G": 782,
+   "GIDP": 72,
+   "H": 1065,
+   "HBP": 12,
+   "HR": 47,
+   "IBB": 78,
+   "PA": 3364,
+   "R": 493,
+   "RBI": 365,
+   "SB": 178,
+   "SF": 27,
+   "SO": 151,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1984,
+    1986,
+    1987,
+    1989,
+    1997
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 8,
+   "AB": 628,
+   "BB": 60,
+   "CS": 12,
+   "G": 162,
+   "GIDP": 15,
+   "H": 221,
+   "HBP": 2,
+   "HR": 10,
+   "IBB": 16,
+   "PA": 697,
+   "R": 102,
+   "RBI": 76,
+   "SB": 37,
+   "SF": 6,
+   "SO": 31,
+   "team_line": "San Diego Padres",
+   "window_games": 782,
+   "window_years": [
+    1984,
+    1986,
+    1987,
+    1989,
+    1997
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "RF",
+    "slot": 2
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|hoffmtr01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 6,
+    "hold": 7,
+    "inj": "Normal",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-33"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "TOUGH",
+    "12": "PATIENT-OUT",
+    "2": "TOUGH-OUT",
+    "3": "BALLPARK",
+    "4": "DEFENSE",
+    "5": "TOUGH",
+    "6": "TOUGH",
+    "7": "TOUGH",
+    "8": "PATIENT",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "hoffmtr01",
+  "name": "Trevor Hoffman",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 104,
+   "bf": 1455,
+   "er": 89,
+   "g": 335,
+   "gs": 0,
+   "h": 246,
+   "hbp": 4,
+   "hr": 28,
+   "ip": "372.6667",
+   "l": 16,
+   "r": 99,
+   "so": 431,
+   "sv": 218,
+   "w": 21,
+   "window_years": [
+    1996,
+    1997,
+    1998,
+    1999,
+    2006
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 21,
+   "bf": 291,
+   "er": 18,
+   "g": 67,
+   "gs": 0,
+   "h": 49,
+   "hbp": 1,
+   "hr": 6,
+   "ip": "74.2",
+   "ip_outs": 224,
+   "l": 3,
+   "r": 20,
+   "seasons": 5,
+   "so": 86,
+   "sv": 44,
+   "team_games": 810,
+   "w": 4,
+   "window_years": [
+    1996,
+    1997,
+    1998,
+    1999,
+    2006
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 1
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|jonesra01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 9,
+    "hold": 7,
+    "inj": "Normal",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": null
+   },
+   "card_type": "SP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "+10",
+   "special": [
+    "PATIENT-OUT",
+    "TOUGH-OUT"
+   ],
+   "stamina": {
+    "relief": null,
+    "start": 7
+   },
+   "table_2d6": {
+    "10": "BALLPARK",
+    "11": "DEFENSE",
+    "12": "IN-PLAY",
+    "2": "PATIENT-OUT",
+    "3": "IN-PLAY",
+    "4": "DEFENSE",
+    "5": "PATIENT-OUT",
+    "6": "IN-PLAY",
+    "7": "IN-PLAY",
+    "8": "TOUGH",
+    "9": "TOUGH"
+   },
+   "throws": "L"
+  },
+  "id": "jonesra01",
+  "name": "Randy Jones",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 271,
+   "bf": 5104,
+   "er": 403,
+   "g": 173,
+   "gs": 170,
+   "h": 1165,
+   "hbp": 8,
+   "hr": 68,
+   "ip": "1256.0",
+   "l": 58,
+   "r": 485,
+   "so": 456,
+   "sv": 0,
+   "w": 73,
+   "window_years": [
+    1973,
+    1975,
+    1976,
+    1978,
+    1979
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 54,
+   "bf": 1022,
+   "er": 81,
+   "g": 35,
+   "gs": 34,
+   "h": 233,
+   "hbp": 2,
+   "hr": 14,
+   "ip": "251.2",
+   "ip_outs": 755,
+   "l": 12,
+   "r": 97,
+   "seasons": 5,
+   "so": 91,
+   "sv": 0,
+   "team_games": 809,
+   "w": 15,
+   "window_years": [
+    1973,
+    1975,
+    1976,
+    1978,
+    1979
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 2
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|kimha01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Below Average",
+   "out_table": [
+    {
+     "range": [
+      26,
+      33
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      41,
+      44
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      58,
+      64
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      65,
+      72
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      36,
+      36
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      46,
+      49
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      73,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      37,
+      38
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      50,
+      50
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      39,
+      40
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      51,
+      57
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 5,
+     "pos": "SS",
+     "range": "D"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       4,
+       34
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       3
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       29
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       53,
+       55
+      ],
+      "2B": [
+       42,
+       52
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       39
+      ],
+      "HBP": [
+       56,
+       56
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       51,
+       53
+      ],
+      "2B": null,
+      "3B": [
+       50,
+       50
+      ],
+      "BB": [
+       1,
+       49
+      ],
+      "HBP": [
+       54,
+       57
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       64,
+       75
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       62
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       58,
+       65
+      ],
+      "2B": [
+       49,
+       57
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       48
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       35,
+       79
+      ],
+      "2B": null,
+      "3B": [
+       21,
+       20
+      ],
+      "HR": [
+       1,
+       22
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       46,
+       77
+      ],
+      "2B": null,
+      "3B": [
+       33,
+       44
+      ],
+      "HR": [
+       1,
+       32
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "kimha01",
+  "name": "Ha-Seong Kim",
+  "peak_bat": {
+   "2B": 68,
+   "3B": 6,
+   "AB": 1458,
+   "BB": 184,
+   "CS": 16,
+   "G": 423,
+   "GIDP": 24,
+   "H": 364,
+   "HBP": 12,
+   "HR": 39,
+   "IBB": 5,
+   "PA": 1666,
+   "R": 202,
+   "RBI": 166,
+   "SB": 72,
+   "SF": 12,
+   "SO": 301,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 26,
+   "3B": 2,
+   "AB": 558,
+   "BB": 70,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 9,
+   "H": 139,
+   "HBP": 5,
+   "HR": 15,
+   "IBB": 2,
+   "PA": 638,
+   "R": 77,
+   "RBI": 64,
+   "SB": 28,
+   "SF": 5,
+   "SO": 115,
+   "team_line": "San Diego Padres",
+   "window_games": 423,
+   "window_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "SS",
+    "slot": 2
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|leffecr01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 7,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "DEFENSE",
+    "12": "PATIENT",
+    "2": "TOUGH-OUT",
+    "3": "IN-PLAY",
+    "4": "BALLPARK",
+    "5": "TOUGH",
+    "6": "DEFENSE",
+    "7": "PATIENT",
+    "8": "TOUGH",
+    "9": "TOUGH"
+   },
+   "throws": "L"
+  },
+  "id": "leffecr01",
+  "name": "Craig Lefferts",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 135,
+   "bf": 1763,
+   "er": 140,
+   "g": 294,
+   "gs": 0,
+   "h": 385,
+   "hbp": 5,
+   "hr": 37,
+   "ip": "426.6667",
+   "l": 25,
+   "r": 159,
+   "so": 275,
+   "sv": 41,
+   "w": 28,
+   "window_years": [
+    1984,
+    1985,
+    1986,
+    1987,
+    1990
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 27,
+   "bf": 353,
+   "er": 28,
+   "g": 59,
+   "gs": 0,
+   "h": 77,
+   "hbp": 1,
+   "hr": 7,
+   "ip": "85.1",
+   "ip_outs": 256,
+   "l": 5,
+   "r": 32,
+   "seasons": 5,
+   "so": 55,
+   "sv": 8,
+   "team_games": 810,
+   "w": 6,
+   "window_years": [
+    1984,
+    1985,
+    1986,
+    1987,
+    1990
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|loretma01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Below Average",
+   "out_table": [
+    {
+     "range": [
+      15,
+      32
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      40,
+      43
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      57,
+      63
+     ],
+     "result": "F7"
+    },
+    {
+     "range": [
+      33,
+      34
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      44,
+      44
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      64,
+      72
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      35,
+      35
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      45,
+      48
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      73,
+      82
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      49,
+      49
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      83,
+      91
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      38,
+      39
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      50,
+      56
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F9"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 5,
+     "pos": "2B",
+     "range": "D"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 7,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       1,
+       18
+      ],
+      "2B": null,
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       45
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       39,
+       53
+      ],
+      "2B": null,
+      "3B": [
+       28,
+       37
+      ],
+      "BB": [
+       1,
+       28
+      ],
+      "HBP": [
+       54,
+       62
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       52,
+       52
+      ],
+      "2B": [
+       39,
+       51
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       38
+      ],
+      "HBP": [
+       53,
+       55
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       17,
+       30
+      ],
+      "2B": [
+       6,
+       7
+      ],
+      "3B": [
+       8,
+       16
+      ],
+      "SO": [
+       1,
+       5
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       34,
+       52
+      ],
+      "2B": [
+       30,
+       33
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       29
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       24,
+       99
+      ],
+      "2B": null,
+      "3B": [
+       14,
+       13
+      ],
+      "HR": [
+       1,
+       14
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       32,
+       55
+      ],
+      "2B": null,
+      "3B": [
+       26,
+       25
+      ],
+      "HR": [
+       1,
+       25
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 4,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "loretma01",
+  "name": "Mark Loretta",
+  "peak_bat": {
+   "2B": 91,
+   "3B": 7,
+   "AB": 1613,
+   "BB": 157,
+   "CS": 11,
+   "G": 413,
+   "GIDP": 38,
+   "H": 506,
+   "HBP": 20,
+   "HR": 32,
+   "IBB": 9,
+   "PA": 1814,
+   "R": 236,
+   "RBI": 186,
+   "SB": 18,
+   "SF": 24,
+   "SO": 141,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    2003,
+    2004,
+    2005
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 3,
+   "AB": 633,
+   "BB": 62,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 15,
+   "H": 198,
+   "HBP": 8,
+   "HR": 13,
+   "IBB": 4,
+   "PA": 712,
+   "R": 93,
+   "RBI": 73,
+   "SB": 7,
+   "SF": 9,
+   "SO": 55,
+   "team_line": "San Diego Padres",
+   "window_games": 413,
+   "window_years": [
+    2003,
+    2004,
+    2005
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "2B",
+    "slot": 9
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|machama01": {
+  "card_bat": {
+   "arm": "Below Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Below Average",
+   "out_table": [
+    {
+     "range": [
+      29,
+      33
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      41,
+      44
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      58,
+      64
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      65,
+      72
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      36,
+      36
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      46,
+      49
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      73,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      37,
+      38
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      50,
+      50
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      39,
+      40
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      51,
+      57
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 5,
+     "e": 5,
+     "pos": "3B",
+     "range": "D"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 8,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       8,
+       35
+      ],
+      "2B": [
+       1,
+       7
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       8,
+       37
+      ],
+      "2B": [
+       1,
+       7
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       39,
+       49
+      ],
+      "2B": [
+       32,
+       37
+      ],
+      "3B": [
+       38,
+       38
+      ],
+      "BB": [
+       1,
+       32
+      ],
+      "HBP": [
+       50,
+       50
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       41,
+       51
+      ],
+      "2B": [
+       36,
+       39
+      ],
+      "3B": [
+       40,
+       40
+      ],
+      "BB": [
+       1,
+       35
+      ],
+      "HBP": [
+       52,
+       53
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       62,
+       72
+      ],
+      "2B": [
+       58,
+       61
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       58
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       56,
+       66
+      ],
+      "2B": [
+       54,
+       55
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       53
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": null,
+      "2B": [
+       44,
+       59
+      ],
+      "3B": [
+       59,
+       58
+      ],
+      "HR": [
+       1,
+       42
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": [
+       63,
+       75
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       62
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "machama01",
+  "name": "Manny Machado",
+  "peak_bat": {
+   "2B": 152,
+   "3B": 5,
+   "AB": 2937,
+   "BB": 291,
+   "CS": 12,
+   "G": 770,
+   "GIDP": 87,
+   "H": 811,
+   "HBP": 13,
+   "HR": 148,
+   "IBB": 33,
+   "PA": 3266,
+   "R": 441,
+   "RBI": 493,
+   "SB": 51,
+   "SF": 25,
+   "SO": 618,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    2019,
+    2021,
+    2022,
+    2024,
+    2025
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 1,
+   "AB": 618,
+   "BB": 61,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 18,
+   "H": 171,
+   "HBP": 3,
+   "HR": 31,
+   "IBB": 7,
+   "PA": 687,
+   "R": 93,
+   "RBI": 104,
+   "SB": 11,
+   "SF": 5,
+   "SO": 130,
+   "team_line": "San Diego Padres",
+   "window_games": 770,
+   "window_years": [
+    2019,
+    2021,
+    2022,
+    2024,
+    2025
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "3B",
+    "slot": 6
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|merrija01": {
+  "card_bat": {
+   "arm": "Strong",
+   "bats": "L",
+   "dp": 7,
+   "fielding": "Elite",
+   "out_table": [
+    {
+     "range": [
+      22,
+      30
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      38,
+      41
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      56,
+      62
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      31,
+      32
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      71
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      33,
+      33
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      43,
+      47
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      72,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      49,
+      55
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 8,
+     "e": 1,
+     "pos": "CF",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       11,
+       35
+      ],
+      "2B": [
+       1,
+       10
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       10,
+       39
+      ],
+      "2B": [
+       1,
+       9
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       32,
+       44
+      ],
+      "2B": [
+       23,
+       29
+      ],
+      "3B": [
+       30,
+       31
+      ],
+      "BB": [
+       1,
+       22
+      ],
+      "HBP": [
+       45,
+       46
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       32,
+       44
+      ],
+      "2B": [
+       26,
+       29
+      ],
+      "3B": [
+       30,
+       31
+      ],
+      "BB": [
+       1,
+       25
+      ],
+      "HBP": [
+       45,
+       46
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       73,
+       81
+      ],
+      "2B": [
+       69,
+       72
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       68
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       64,
+       74
+      ],
+      "2B": [
+       60,
+       63
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       59
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       46,
+       45
+      ],
+      "2B": [
+       37,
+       43
+      ],
+      "3B": [
+       44,
+       50
+      ],
+      "HR": [
+       1,
+       36
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": [
+       52,
+       55
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       51
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "merrija01",
+  "name": "Jackson Merrill",
+  "peak_bat": {
+   "2B": 82,
+   "3B": 17,
+   "AB": 1607,
+   "BB": 103,
+   "CS": 9,
+   "G": 429,
+   "GIDP": 14,
+   "H": 434,
+   "HBP": 8,
+   "HR": 66,
+   "IBB": 6,
+   "PA": 1731,
+   "R": 222,
+   "RBI": 244,
+   "SB": 44,
+   "SF": 13,
+   "SO": 369,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    2024,
+    2025
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 6,
+   "AB": 607,
+   "BB": 39,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 5,
+   "H": 164,
+   "HBP": 3,
+   "HR": 25,
+   "IBB": 2,
+   "PA": 654,
+   "R": 84,
+   "RBI": 92,
+   "SB": 17,
+   "SF": 5,
+   "SO": 139,
+   "team_line": "San Diego Padres",
+   "window_games": 429,
+   "window_years": [
+    2024,
+    2025
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "CF",
+    "slot": 3
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|peavyja01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 6,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "SP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": null,
+    "start": 5
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "BALLPARK",
+    "12": "IN-PLAY",
+    "2": "PATIENT-OUT",
+    "3": "PATIENT-OUT",
+    "4": "PATIENT-OUT",
+    "5": "TOUGH",
+    "6": "TOUGH",
+    "7": "TOUGH",
+    "8": "IN-PLAY",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "peavyja01",
+  "name": "Jake Peavy",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 292,
+   "bf": 3959,
+   "er": 317,
+   "g": 150,
+   "gs": 150,
+   "h": 810,
+   "hbp": 35,
+   "hr": 84,
+   "ip": "968.6667",
+   "l": 44,
+   "r": 336,
+   "so": 1010,
+   "sv": 0,
+   "w": 68,
+   "window_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 58,
+   "bf": 791,
+   "er": 63,
+   "g": 30,
+   "gs": 30,
+   "h": 162,
+   "hbp": 7,
+   "hr": 17,
+   "ip": "193.1",
+   "ip_outs": 580,
+   "l": 9,
+   "r": 67,
+   "seasons": 5,
+   "so": 202,
+   "sv": 0,
+   "team_games": 811,
+   "w": 14,
+   "window_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 1
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|santibe01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Average",
+   "out_table": [
+    {
+     "range": [
+      26,
+      30
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      38,
+      41
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      56,
+      62
+     ],
+     "result": "F7"
+    },
+    {
+     "range": [
+      31,
+      32
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      71
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      33,
+      33
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      43,
+      47
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      72,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      49,
+      55
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F9"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 4,
+     "pos": "C",
+     "range": "C"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       7,
+       30
+      ],
+      "2B": [
+       1,
+       6
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       8,
+       44
+      ],
+      "2B": [
+       1,
+       7
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       24,
+       31
+      ],
+      "2B": [
+       16,
+       21
+      ],
+      "3B": [
+       22,
+       23
+      ],
+      "BB": [
+       1,
+       14
+      ],
+      "HBP": [
+       32,
+       32
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       23,
+       30
+      ],
+      "2B": [
+       17,
+       20
+      ],
+      "3B": [
+       21,
+       22
+      ],
+      "BB": [
+       1,
+       16
+      ],
+      "HBP": [
+       31,
+       32
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       55,
+       63
+      ],
+      "2B": [
+       53,
+       54
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       54
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       51,
+       63
+      ],
+      "2B": [
+       49,
+       50
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       48
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       38,
+       60
+      ],
+      "2B": [
+       27,
+       39
+      ],
+      "3B": [
+       36,
+       37
+      ],
+      "HR": [
+       1,
+       26
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       44,
+       59
+      ],
+      "2B": [
+       38,
+       43
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       37
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "santibe01",
+  "name": "Benito Santiago",
+  "peak_bat": {
+   "2B": 114,
+   "3B": 10,
+   "AB": 2466,
+   "BB": 110,
+   "CS": 40,
+   "G": 672,
+   "GIDP": 74,
+   "H": 647,
+   "HBP": 11,
+   "HR": 71,
+   "IBB": 16,
+   "PA": 2609,
+   "R": 260,
+   "RBI": 316,
+   "SB": 57,
+   "SF": 22,
+   "SO": 449,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1987,
+    1988,
+    1989,
+    1991,
+    1992
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 27,
+   "3B": 2,
+   "AB": 594,
+   "BB": 27,
+   "CS": 10,
+   "G": 162,
+   "GIDP": 18,
+   "H": 156,
+   "HBP": 3,
+   "HR": 17,
+   "IBB": 4,
+   "PA": 629,
+   "R": 63,
+   "RBI": 76,
+   "SB": 14,
+   "SF": 5,
+   "SO": 108,
+   "team_line": "San Diego Padres",
+   "window_games": 672,
+   "window_years": [
+    1987,
+    1988,
+    1989,
+    1991,
+    1992
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "C",
+    "slot": 1
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|sheffga01": {
+  "card_bat": {
+   "arm": "Above Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Great",
+   "out_table": [
+    {
+     "range": [
+      13,
+      34
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      42,
+      45
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      59,
+      65
+     ],
+     "result": "F7"
+    },
+    {
+     "range": [
+      35,
+      36
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      46,
+      46
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      66,
+      74
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      37,
+      37
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      47,
+      50
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      38,
+      39
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      51,
+      51
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      91
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      52,
+      58
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F9"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 7,
+     "e": 2,
+     "pos": "3B",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 6,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       4,
+       41
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       3
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       42
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       40,
+       44
+      ],
+      "2B": [
+       27,
+       41
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       25
+      ],
+      "HBP": [
+       45,
+       46
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       35,
+       37
+      ],
+      "2B": null,
+      "3B": [
+       33,
+       34
+      ],
+      "BB": [
+       1,
+       32
+      ],
+      "HBP": [
+       38,
+       42
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       40,
+       55
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       38
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       24,
+       35
+      ],
+      "2B": [
+       12,
+       23
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       11
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       80,
+       102
+      ],
+      "2B": [
+       51,
+       75
+      ],
+      "3B": [
+       65,
+       66
+      ],
+      "HR": [
+       1,
+       49
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       87,
+       99
+      ],
+      "2B": null,
+      "3B": [
+       74,
+       86
+      ],
+      "HR": [
+       1,
+       73
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 2,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "sheffga01",
+  "name": "Gary Sheffield",
+  "peak_bat": {
+   "2B": 34,
+   "3B": 3,
+   "AB": 557,
+   "BB": 48,
+   "CS": 6,
+   "G": 146,
+   "GIDP": 19,
+   "H": 184,
+   "HBP": 6,
+   "HR": 33,
+   "IBB": 5,
+   "PA": 618,
+   "R": 87,
+   "RBI": 100,
+   "SB": 5,
+   "SF": 7,
+   "SO": 40,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1992
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 38,
+   "3B": 3,
+   "AB": 618,
+   "BB": 53,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 21,
+   "H": 204,
+   "HBP": 7,
+   "HR": 37,
+   "IBB": 6,
+   "PA": 686,
+   "R": 97,
+   "RBI": 111,
+   "SB": 6,
+   "SF": 8,
+   "SO": 44,
+   "team_line": "San Diego Padres",
+   "window_games": 146,
+   "window_years": [
+    1992
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "3B",
+    "slot": 5
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|shower01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 7,
+    "hold": 7,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "SP",
+   "qa_status": "PASS",
+   "so_modifier": "+10",
+   "special": [],
+   "stamina": {
+    "relief": null,
+    "start": 6
+   },
+   "table_2d6": {
+    "10": "TOUGH-OUT",
+    "11": "TOUGH",
+    "12": "IN-PLAY",
+    "2": "PATIENT",
+    "3": "PATIENT",
+    "4": "BALLPARK",
+    "5": "TOUGH",
+    "6": "IN-PLAY",
+    "7": "IN-PLAY",
+    "8": "TOUGH-OUT",
+    "9": "PATIENT"
+   },
+   "throws": "R"
+  },
+  "id": "shower01",
+  "name": "Eric Show",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 342,
+   "bf": 3980,
+   "er": 342,
+   "g": 172,
+   "gs": 137,
+   "h": 827,
+   "hbp": 29,
+   "hr": 96,
+   "ip": "960.3333",
+   "l": 49,
+   "r": 376,
+   "so": 584,
+   "sv": 3,
+   "w": 55,
+   "window_years": [
+    1982,
+    1985,
+    1986,
+    1987,
+    1988
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 68,
+   "bf": 797,
+   "er": 68,
+   "g": 34,
+   "gs": 27,
+   "h": 166,
+   "hbp": 6,
+   "hr": 19,
+   "ip": "192.1",
+   "ip_outs": 577,
+   "l": 10,
+   "r": 75,
+   "seasons": 5,
+   "so": 117,
+   "sv": 1,
+   "team_games": 809,
+   "w": 11,
+   "window_years": [
+    1982,
+    1985,
+    1986,
+    1987,
+    1988
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 5
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|tatisfe02": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Poor",
+   "out_table": [
+    {
+     "range": [
+      26,
+      30
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      38,
+      41
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      56,
+      62
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      31,
+      32
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      71
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      33,
+      33
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      43,
+      47
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      72,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      49,
+      55
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 5,
+     "pos": "SS",
+     "range": "F"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       7,
+       34
+      ],
+      "2B": [
+       1,
+       6
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       8,
+       36
+      ],
+      "2B": [
+       1,
+       7
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       46,
+       51
+      ],
+      "2B": [
+       38,
+       43
+      ],
+      "3B": [
+       44,
+       45
+      ],
+      "BB": [
+       1,
+       38
+      ],
+      "HBP": [
+       52,
+       54
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       48,
+       53
+      ],
+      "2B": [
+       42,
+       45
+      ],
+      "3B": [
+       46,
+       47
+      ],
+      "BB": [
+       1,
+       41
+      ],
+      "HBP": [
+       54,
+       57
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       59,
+       68
+      ],
+      "2B": [
+       57,
+       58
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       57
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       69,
+       78
+      ],
+      "2B": [
+       65,
+       68
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       64
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       55,
+       76
+      ],
+      "2B": [
+       45,
+       50
+      ],
+      "3B": [
+       53,
+       53
+      ],
+      "HR": [
+       1,
+       44
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       69,
+       81
+      ],
+      "2B": [
+       63,
+       68
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       62
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "tatisfe02",
+  "name": "Fernando Tatis Jr.",
+  "peak_bat": {
+   "2B": 144,
+   "3B": 7,
+   "AB": 2671,
+   "BB": 300,
+   "CS": 31,
+   "G": 687,
+   "GIDP": 51,
+   "H": 733,
+   "HBP": 25,
+   "HR": 138,
+   "IBB": 19,
+   "PA": 3012,
+   "R": 461,
+   "RBI": 378,
+   "SB": 135,
+   "SF": 16,
+   "SO": 649,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    2019,
+    2021,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 2,
+   "AB": 630,
+   "BB": 71,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 12,
+   "H": 173,
+   "HBP": 6,
+   "HR": 33,
+   "IBB": 4,
+   "PA": 710,
+   "R": 109,
+   "RBI": 89,
+   "SB": 32,
+   "SF": 4,
+   "SO": 153,
+   "team_line": "San Diego Padres",
+   "window_games": 687,
+   "window_years": [
+    2019,
+    2021,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "SS",
+    "slot": 1
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|templga01": {
+  "card_bat": {
+   "arm": "Above Average",
+   "bats": "S",
+   "dp": 7,
+   "fielding": "Average",
+   "out_table": [
+    {
+     "range": [
+      29,
+      31
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      39,
+      42
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      56,
+      62
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      32,
+      33
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      43,
+      43
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      71
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      34,
+      34
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      44,
+      47
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      72,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      35,
+      36
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      37,
+      38
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      49,
+      55
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 7,
+     "e": 4,
+     "pos": "SS",
+     "range": "C"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       1,
+       0
+      ],
+      "2B": null,
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       8,
+       34
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       7
+      ]
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": null,
+      "2B": [
+       11,
+       10
+      ],
+      "3B": [
+       21,
+       20
+      ],
+      "BB": [
+       1,
+       18
+      ],
+      "HBP": [
+       36,
+       37
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": [
+       14,
+       13
+      ],
+      "3B": [
+       17,
+       17
+      ],
+      "BB": [
+       1,
+       13
+      ],
+      "HBP": null
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       48,
+       47
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       70
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       43,
+       42
+      ],
+      "2B": null,
+      "3B": [
+       39,
+       42
+      ],
+      "SO": [
+       1,
+       38
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       12,
+       820
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       17
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       27,
+       26
+      ],
+      "2B": null,
+      "3B": [
+       15,
+       29
+      ],
+      "HR": [
+       1,
+       14
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "templga01",
+  "name": "Garry Templeton",
+  "peak_bat": {
+   "2B": 125,
+   "3B": 19,
+   "AB": 2613,
+   "BB": 153,
+   "CS": 32,
+   "G": 723,
+   "GIDP": 66,
+   "H": 674,
+   "HBP": 3,
+   "HR": 29,
+   "IBB": 73,
+   "PA": 2786,
+   "R": 267,
+   "RBI": 253,
+   "SB": 53,
+   "SF": 17,
+   "SO": 390,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1982,
+    1984,
+    1985,
+    1989,
+    1990
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 28,
+   "3B": 4,
+   "AB": 585,
+   "BB": 34,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 15,
+   "H": 151,
+   "HBP": 1,
+   "HR": 6,
+   "IBB": 16,
+   "PA": 624,
+   "R": 60,
+   "RBI": 57,
+   "SB": 12,
+   "SF": 4,
+   "SO": 87,
+   "team_line": "San Diego Padres",
+   "window_games": 723,
+   "window_years": [
+    1982,
+    1984,
+    1985,
+    1989,
+    1990
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "SS",
+    "slot": 4
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|tenacge01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Average",
+   "out_table": [
+    {
+     "range": [
+      22,
+      27
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      35,
+      38
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      54,
+      61
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      28,
+      29
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      39,
+      39
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      62,
+      70
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      30,
+      30
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      40,
+      44
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      71,
+      80
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      31,
+      32
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      81,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      33,
+      34
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      46,
+      53
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 4,
+     "pos": "C",
+     "range": "C"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 9,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       9,
+       34
+      ],
+      "2B": [
+       1,
+       7
+      ],
+      "3B": [
+       8,
+       8
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       6,
+       31
+      ],
+      "2B": [
+       1,
+       4
+      ],
+      "3B": [
+       5,
+       5
+      ]
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       82,
+       86
+      ],
+      "2B": [
+       76,
+       80
+      ],
+      "3B": [
+       81,
+       81
+      ],
+      "BB": [
+       1,
+       76
+      ],
+      "HBP": [
+       87,
+       91
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       87,
+       91
+      ],
+      "2B": [
+       83,
+       85
+      ],
+      "3B": [
+       86,
+       86
+      ],
+      "BB": [
+       1,
+       82
+      ],
+      "HBP": [
+       92,
+       99
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       55,
+       61
+      ],
+      "2B": [
+       52,
+       53
+      ],
+      "3B": [
+       54,
+       54
+      ],
+      "SO": [
+       1,
+       51
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       58,
+       63
+      ],
+      "2B": [
+       55,
+       56
+      ],
+      "3B": [
+       57,
+       57
+      ],
+      "SO": [
+       1,
+       54
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": null,
+      "2B": [
+       33,
+       41
+      ],
+      "3B": [
+       41,
+       40
+      ],
+      "HR": [
+       1,
+       31
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": [
+       45,
+       49
+      ],
+      "3B": [
+       50,
+       50
+      ],
+      "HR": [
+       1,
+       44
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 4,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "tenacge01",
+  "name": "Gene Tenace",
+  "peak_bat": {
+   "2B": 69,
+   "3B": 13,
+   "AB": 1617,
+   "BB": 423,
+   "CS": 18,
+   "G": 573,
+   "GIDP": 28,
+   "H": 384,
+   "HBP": 35,
+   "HR": 68,
+   "IBB": 33,
+   "PA": 2091,
+   "R": 233,
+   "RBI": 239,
+   "SB": 17,
+   "SF": 16,
+   "SO": 386,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1977,
+    1978,
+    1979,
+    1980
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 20,
+   "3B": 4,
+   "AB": 457,
+   "BB": 120,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 8,
+   "H": 109,
+   "HBP": 10,
+   "HR": 19,
+   "IBB": 9,
+   "PA": 591,
+   "R": 66,
+   "RBI": 68,
+   "SB": 5,
+   "SF": 5,
+   "SO": 109,
+   "team_line": "San Diego Padres",
+   "window_games": 573,
+   "window_years": [
+    1977,
+    1978,
+    1979,
+    1980
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "C",
+    "slot": 7
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|whitsed01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 6,
+    "hold": 7,
+    "inj": "Normal",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "SP",
+   "qa_status": "PASS",
+   "so_modifier": "+20",
+   "special": [],
+   "stamina": {
+    "relief": null,
+    "start": 6
+   },
+   "table_2d6": {
+    "10": "IN-PLAY",
+    "11": "IN-PLAY",
+    "12": "DEFENSE",
+    "2": "BALLPARK",
+    "3": "BALLPARK",
+    "4": "IN-PLAY",
+    "5": "IN-PLAY",
+    "6": "PATIENT-OUT",
+    "7": "TOUGH-OUT",
+    "8": "TOUGH",
+    "9": "IN-PLAY"
+   },
+   "throws": "R"
+  },
+  "id": "whitsed01",
+  "name": "Ed Whitson",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 232,
+   "bf": 4068,
+   "er": 356,
+   "g": 161,
+   "gs": 150,
+   "h": 939,
+   "hbp": 11,
+   "hr": 91,
+   "ip": "994.3333",
+   "l": 46,
+   "r": 388,
+   "so": 546,
+   "sv": 1,
+   "w": 62,
+   "window_years": [
+    1983,
+    1984,
+    1988,
+    1989,
+    1990
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 46,
+   "bf": 814,
+   "er": 71,
+   "g": 32,
+   "gs": 30,
+   "h": 188,
+   "hbp": 2,
+   "hr": 18,
+   "ip": "199.0",
+   "ip_outs": 597,
+   "l": 9,
+   "r": 78,
+   "seasons": 5,
+   "so": 109,
+   "sv": 0,
+   "team_games": 810,
+   "w": 12,
+   "window_years": [
+    1983,
+    1984,
+    1988,
+    1989,
+    1990
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 3
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
+ "SD|winfida01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Below Average",
+   "out_table": [
+    {
+     "range": [
+      23,
+      35
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      43,
+      46
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      60,
+      66
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      47,
+      47
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      67,
+      73
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      38,
+      38
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      48,
+      51
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      74,
+      82
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      39,
+      40
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      52,
+      52
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      83,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      41,
+      42
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      53,
+      59
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 5,
+     "pos": "LF",
+     "range": "D"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       12,
+       41
+      ],
+      "2B": [
+       1,
+       11
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       9,
+       25
+      ],
+      "2B": [
+       1,
+       8
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       50,
+       60
+      ],
+      "2B": null,
+      "3B": [
+       43,
+       42
+      ],
+      "BB": [
+       1,
+       42
+      ],
+      "HBP": [
+       61,
+       64
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       45,
+       53
+      ],
+      "2B": [
+       34,
+       44
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       33
+      ],
+      "HBP": null
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       47,
+       50
+      ],
+      "2B": null,
+      "3B": [
+       37,
+       44
+      ],
+      "SO": [
+       1,
+       36
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       38,
+       55
+      ],
+      "2B": null,
+      "3B": [
+       35,
+       37
+      ],
+      "SO": [
+       1,
+       34
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       42,
+       98
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       41
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       47,
+       81
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       46
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "winfida01",
+  "name": "Dave Winfield",
+  "peak_bat": {
+   "2B": 137,
+   "3B": 32,
+   "AB": 2849,
+   "BB": 342,
+   "CS": 39,
+   "G": 773,
+   "GIDP": 61,
+   "H": 827,
+   "HBP": 9,
+   "HR": 116,
+   "IBB": 76,
+   "PA": 3221,
+   "R": 459,
+   "RBI": 463,
+   "SB": 101,
+   "SF": 21,
+   "SO": 388,
+   "team_line": "San Diego Padres",
+   "window_years": [
+    1976,
+    1977,
+    1978,
+    1979,
+    1980
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 7,
+   "AB": 597,
+   "BB": 72,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 13,
+   "H": 173,
+   "HBP": 2,
+   "HR": 24,
+   "IBB": 16,
+   "PA": 675,
+   "R": 96,
+   "RBI": 97,
+   "SB": 21,
+   "SF": 4,
+   "SO": 81,
+   "team_line": "San Diego Padres",
+   "window_games": 773,
+   "window_years": [
+    1976,
+    1977,
+    1978,
+    1979,
+    1980
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "LF",
+    "slot": 3
+   }
+  ],
+  "team": "SD",
+  "tournament": null
+ },
  "SF|beckro01": {
   "card_bat": null,
   "card_pit": {

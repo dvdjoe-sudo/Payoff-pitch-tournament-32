@@ -1735,6 +1735,222 @@
   ],
   "seed": 17
  },
+ "SD": {
+  "code": "SD",
+  "name": "San Diego Padres",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "tatisfe02",
+    "kind": "hitter",
+    "name": "Fernando Tatis Jr.",
+    "pos": "SS",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "gwynnto01",
+    "kind": "hitter",
+    "name": "Tony Gwynn",
+    "pos": "RF",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "winfida01",
+    "kind": "hitter",
+    "name": "Dave Winfield",
+    "pos": "LF",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "caminke01",
+    "kind": "hitter",
+    "name": "Ken Caminiti",
+    "pos": "3B",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "gonzaad01",
+    "kind": "hitter",
+    "name": "Adrian Gonzalez",
+    "pos": "1B",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "machama01",
+    "kind": "hitter",
+    "name": "Manny Machado",
+    "pos": "3B",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "tenacge01",
+    "kind": "hitter",
+    "name": "Gene Tenace",
+    "pos": "C",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "finlest01",
+    "kind": "hitter",
+    "name": "Steve Finley",
+    "pos": "CF",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "loretma01",
+    "kind": "hitter",
+    "name": "Mark Loretta",
+    "pos": "2B",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "santibe01",
+    "kind": "hitter",
+    "name": "Benito Santiago",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "kimha01",
+    "kind": "hitter",
+    "name": "Ha-Seong Kim",
+    "pos": "SS",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "merrija01",
+    "kind": "hitter",
+    "name": "Jackson Merrill",
+    "pos": "CF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "templga01",
+    "kind": "hitter",
+    "name": "Garry Templeton",
+    "pos": "SS",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "sheffga01",
+    "kind": "hitter",
+    "name": "Gary Sheffield",
+    "pos": "3B",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "peavyja01",
+    "kind": "pitcher",
+    "name": "Jake Peavy",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "jonesra01",
+    "kind": "pitcher",
+    "name": "Randy Jones",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "whitsed01",
+    "kind": "pitcher",
+    "name": "Ed Whitson",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "ashbyan01",
+    "kind": "pitcher",
+    "name": "Andy Ashby",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "shower01",
+    "kind": "pitcher",
+    "name": "Eric Show",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "hoffmtr01",
+    "kind": "pitcher",
+    "name": "Trevor Hoffman",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "bellhe01",
+    "kind": "pitcher",
+    "name": "Heath Bell",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "adamsmi03",
+    "kind": "pitcher",
+    "name": "Mike Adams",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "davisma01",
+    "kind": "pitcher",
+    "name": "Mark Davis",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "fingero01",
+    "kind": "pitcher",
+    "name": "Rollie Fingers",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "gregelu01",
+    "kind": "pitcher",
+    "name": "Luke Gregerson",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "leffecr01",
+    "kind": "pitcher",
+    "name": "Craig Lefferts",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 26
+ },
  "SF": {
   "code": "SF",
   "name": "San Francisco Giants",
