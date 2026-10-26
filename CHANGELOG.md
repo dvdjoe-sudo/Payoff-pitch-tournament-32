@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Converted cards sit beside the owner rosters
+
+Main's converted Payoff Pitch sets and player cards are on the same site as the owner's announced cards and the franchise Peak 162 lines. A club with a converted set shows that set. A club with an owner card shows that card. Detroit shows both, plus the game lines already on the book. Washington keeps the converted set and the game record; the Nationals owner card stays off. No game result was changed. The service worker cache is payoff-pitch-v6 so both sets of data files are in the shell.
+
 ## 2026-10-25 — Owner cards for the remaining clubs, and Peak 162
 
 The owner's second set of cards is in `data/announced_rosters.json` with the first nine. Montreal maps to the Expos. Cleveland maps to the Guardians. The Twins card includes the 1901–1960 Senators. The Philadelphia Athletics card is separate from Oakland. Connie Mack's lineup spot 9 is Ferris Fain at DH. Lefty Grove stays the first starter only, and Fain is not on the bench. Benches and bullpens that list six names are kept at six. Honorable mentions and the what-if lines are separate and are not on the active roster.
@@ -13,6 +17,18 @@ Peak 162 on each of those cards is a Major League franchise line from the 2025 L
 ## 2026-10-25 — Official rosters for nine clubs
 
 The tournament owner supplied rosters for the Rockies, Dodgers, Padres, Angels, Astros, Athletics, Mariners, Rangers, and Braves. They are stored in `data/announced_rosters.json` and shown on those team pages and in `ROSTERS.md`. The Rockies manager is Bud Black. Names and accents are copied as given. No graphic cards, bios, or counting stats were added. The other clubs that have not played still say "Roster not announced yet." No game result was changed.
+
+## 2026-10-25 — Peak lines shown as 162-game averages
+
+Joe's call: the peak section on each player page now shows a 162-game average of the prime years instead of the multi-season window totals. The raw window totals stay in `data/cards.json` as `peak_bat` and `peak_pit`, untouched: they are the card's build line, and the viewer still computes AVG, OBP, SLG, and ERA from them, so every rate on the page is the window's own and has not moved. What changed is the counting line beside the rates, in new `peak_bat_162` and `peak_pit_162` blocks written by `scripts/build_cards.py`; the method is documented in the script header and in [SCHEMA.md](SCHEMA.md).
+
+Batters scale by 162 / window games, rounded half up, with games shown as 162. Harry Heilmann is the shape of it: his 1921, 1923, 1924, 1925, and 1927 window (737 games, a .386/.456/.590 line) now reads as 162 games, 688 PA, 610 AB, 120 runs, 235 hits, 49 doubles, 13 triples, 16 homers, 137 RBI, 76 walks, and 35 strikeouts, at the same .386/.456/.590. Pitchers become an average season on a 162-game schedule: the per-season average rescaled by (162 x window seasons) / the club's total team games across the window seasons, from the Lahman Teams table. Hal Newhouser's 1944-48 window ran against 778 Detroit team games, so his line now reads 25-12 with a 2.35 ERA over 307.1 innings and 207 strikeouts instead of the five-season bulk. Innings are scaled in outs and rendered back in thirds. A window season with no Lahman row for the club counts as 162 team games and would be named in the generator's log; no window season needed the fallback in this build. No game, series, tournament line, or card changed, and the validator's fingerprint, frozen-series hash, and counting totals are unchanged. The service worker cache moved to payoff-pitch-v5 for the updated viewer and data.
+
+## 2026-10-25 — Player cards and rosters
+
+The viewer gained a Rosters view and, on each converted club's page, the full roster in set order. Eight clubs have converted Payoff Pitch sets: Boston, Philadelphia, San Francisco, Montreal, Washington, Tampa Bay, Detroit, and Arizona, 208 players and 209 roster spots (Babe Ruth holds two Boston spots, bench bat and bullpen arm, and his player page shows both of his cards). Each player page now shows his peak prime-window line, the line his converted card was built from, and the card itself: for hitters the positions with range, error, and arm, the four result sections as percentile bands against each hand, the out table, and the run, steal, and bunt ratings the card prints; for pitchers the v2 card's 2d6 section table, strikeout modifier, special ratings, stamina line, and addendum ratings. The tournament tables on the same page are headed "Tournament batting" and "Tournament pitching" and now carry games, OBP, and SLG for hitters and games, runs, and home runs for pitchers, all from the same archive lines. 112 of the 208 players have tournament lines. Philadelphia and Montreal have not played a series, so their players show peak lines and cards with that stated.
+
+`scripts/build_cards.py` generates `data/rosters.json` and `data/cards.json` from the set files and the master archive; its header documents the inputs and how a future converted set joins. Player identity keys on the Lahman id from the set inputs, except where this site already publishes the same player under a different id: Shane McClanahan is `mcclash01` in the inputs and the master archive and `mcclasha01` here, so the card data keys on the published id and his tournament line, matched by name, is intact. The locked series are untouched: no game, series, or line changed, and the validator's fingerprint, frozen-series hash, and counting totals are unchanged. The service worker cache moved to payoff-pitch-v4 for the new data files.
 
 ## 2026-10-25 — R1-04 complete, Detroit 4-2
 
