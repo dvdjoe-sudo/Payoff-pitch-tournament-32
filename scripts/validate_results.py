@@ -272,11 +272,19 @@ def documents(check: Check) -> None:
     check.expect("Joe's picks" in readme or "Joe's pins" in readme, "readme names the six pins")
     for club in ("Philadelphia Athletics", "Oakland Athletics", "Montreal Expos", "Washington Nationals", "Miami Marlins", "New York Yankees"):
         check.expect(club in readme, f"readme names {club}")
-    check.expect(rules.count(THREE_INNINGS) == 2, "the 3-inning rule is worded the same in both sections")
+    # Rules-content checks replaced 2026-10-25 under Joe's ruling of that
+    # date ("Remove all APBA items except Yankees series"): the old checks
+    # required the rules to keep the APBA boards (Version 23), the card-41
+    # injury check, the SCBL Rule 34 steal gate, and the duplicated
+    # 3-inning reliever wording. The rewritten rules are a Payoff Pitch
+    # document; the checks below pin its standing content instead.
+    check.expect("FAC deck" in rules, "rules state FAC deck mode")
+    check.expect("house hard rule" in rules, "rules state the house hard rule")
+    check.expect("closer branch" in rules, "rules state the closer branch")
+    check.expect("R1-01" in rules and "played under APBA" in rules, "rules keep the R1-01 provenance")
+    check.expect("Open questions" in rules, "rules keep the open questions")
     check.expect("TOURNAMENT_SEEDS.md" in rules, "rules point at the seed file")
     check.expect("Seeds 1-29 are unchanged" not in rules and "SUPERSEDED" not in seeds, "stale seed tables removed from the current docs")
-    for marker in ("Version 23", "card-41", "Rule 34", "TODO for Joe"):
-        check.expect(marker in rules, f"rules keep {marker}")
     check.expect(all(year in changelog for year in ("2026-10-22", "2026-10-23", "2026-10-24")), "changelog has the ruling dates")
     leaders = load_mod(ROOT / "scripts" / "build_leaders.py", "build_leaders")
     rosters = load_mod(ROOT / "scripts" / "build_rosters.py", "build_rosters")

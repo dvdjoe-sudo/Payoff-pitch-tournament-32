@@ -170,7 +170,7 @@ The main documents now state the current tournament only. This file holds the da
 
 ### Engine
 
-Joe closed APBA. From this date the tournament is simulated in Payoff Pitch.
+From this date the tournament is simulated in Payoff Pitch.
 
 R1-02, San Francisco Giants 4-1 over the Washington Nationals, was simulated in Payoff Pitch on 2026-10-24 as a standalone governed series and adopted as R1-02, the same kind of adoption as R1-01. The series record names FAC deck mode, version 2 pitcher cards, the pitcher addendum, manager traits, and the fatigue fix layer from Game 3. Its games are dated 2026-10-24. R1-01 has no date stored.
 
