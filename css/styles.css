@@ -609,6 +609,50 @@ a.player-link, a.team-link { color: inherit; }
   max-width: 46rem;
 }
 
+.h2h-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 0 0.8rem;
+}
+
+.h2h-form select, .h2h-form button {
+  min-height: 44px;
+  font: inherit;
+}
+
+.h2h-form button {
+  border-radius: 999px;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  color: #f6f1e6;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+}
+
+.h2h-form select {
+  flex: 1 1 12rem;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
+}
+
+.h2h-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  align-items: start;
+}
+
+.h2h-col { min-width: 0; }
+.h2h-col h3 { font-size: 1.05rem; }
+.h2h-spot { margin: 0 0 0.65rem; }
+.h2h-spot strong, .h2h-spot span { display: block; overflow-wrap: anywhere; }
+.h2h-spot span { color: var(--muted); font-size: 0.82rem; margin-top: 0.12rem; }
+
 .timeline {
   list-style: none;
   margin: 0;

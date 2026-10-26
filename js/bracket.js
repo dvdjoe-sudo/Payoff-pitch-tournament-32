@@ -1761,6 +1761,114 @@
     }
   }
 
+  function slashFromCard(card, code) {
+    var raw = card && card.peak_bat;
+    if (!raw || !nz(raw.AB)) return "Peak stats unavailable";
+    var avg = rateLabel(raw.H, raw.AB);
+    var obpDen = nz(raw.AB) + nz(raw.BB) + nz(raw.HBP) + nz(raw.SF);
+    var obpValue = obpDen ? (nz(raw.H) + nz(raw.BB) + nz(raw.HBP)) / obpDen : null;
+    var tb = nz(raw.H) + nz(raw["2B"]) + 2 * nz(raw["3B"]) + 3 * nz(raw.HR);
+    var slgValue = raw.AB ? tb / raw.AB : null;
+    var opsValue = (obpValue || 0) + (slgValue || 0);
+    return peakLabel(clubName(code), peakYears(raw)) + ": " + avg + "/" + rate3(obpValue) + "/" + rate3(slgValue) + "/" + rate3(opsValue);
+  }
+
+  function h2hSpots(code) {
+    var announced = state.announced && state.announced[code];
+    if (announced && (announced.lineup || []).length) {
+      return (announced.lineup || []).map(function (line) {
+        var parts = splitRosterLine(line);
+        return { slot: parts.slot, name: parts.name, pos: parts.pos, peak: peakLine(code, line) };
+      });
+    }
+    var roster = state.rosters && state.rosters[code];
+    if (!roster) return null;
+    return roster.players.filter(function (spot) { return spot.group === "lineup"; })
+      .sort(function (a, b) { return a.slot - b.slot; })
+      .map(function (spot) {
+        var card = cardFor(code, spot.id);
+        return { slot: String(spot.slot), name: spot.name, pos: spot.pos, peak: card ? slashFromCard(card, code) : "Peak stats unavailable" };
+      });
+  }
+
+  function h2hNeeds(code) {
+    var announced = state.announced && state.announced[code];
+    if (announced && (announced.lineup || []).length) return "peak";
+    if (state.rosters && state.rosters[code]) return "cards";
+    return "";
+  }
+
+  function renderHeadToHead(codes) {
+    codes = codes || [];
+    var left = codes[0] || "";
+    var right = codes[1] || "";
+    if (left && h2hNeeds(left) === "peak" && !state.peakLoaded) {
+      loadOnDemand("peak", function () { renderHeadToHead(codes); });
+      return;
+    }
+    if (right && h2hNeeds(right) === "peak" && !state.peakLoaded) {
+      loadOnDemand("peak", function () { renderHeadToHead(codes); });
+      return;
+    }
+    if ((h2hNeeds(left) === "cards" || h2hNeeds(right) === "cards") && !state.cardsLoaded) {
+      loadOnDemand("cards", function () { renderHeadToHead(codes); });
+      return;
+    }
+    markNav("h2h");
+    clear(view);
+    var page = el("article", { class: "panel" });
+    page.appendChild(el("h2", { text: "Head to head" }));
+    page.appendChild(el("p", { class: "note", text: "Pick two clubs. The comparison uses the owner lineup when one is stored, and the converted lineup otherwise. A club with neither says so. Peak lines are the stored franchise peaks." }));
+    var clubs = state.data.teams.slice().sort(function (a, b) { return a.seed - b.seed; });
+    function picker(id, selected) {
+      var select = el("select", { id: id });
+      select.appendChild(el("option", { value: "", text: "Pick a club" }));
+      clubs.forEach(function (team) {
+        var option = el("option", { value: team.code, text: "#" + team.seed + " " + team.name });
+        if (team.code === selected) option.setAttribute("selected", "");
+        select.appendChild(option);
+      });
+      return select;
+    }
+    var form = el("form", { class: "h2h-form" });
+    form.appendChild(picker("h2h-a", left));
+    form.appendChild(picker("h2h-b", right));
+    form.appendChild(el("button", { type: "submit", text: "Compare" }));
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var a = document.getElementById("h2h-a").value;
+      var b = document.getElementById("h2h-b").value;
+      if (!a || !b) return;
+      location.hash = "#/h2h/" + encodeURIComponent(a) + "/" + encodeURIComponent(b);
+    });
+    page.appendChild(form);
+    if (left && right && left === right) {
+      page.appendChild(el("p", { text: "Pick two different clubs." }));
+    } else if (left && right) {
+      page.appendChild(el("h3", { text: clubName(left) + " and " + clubName(right) }));
+      var pair = el("div", { class: "h2h-pair" });
+      [left, right].forEach(function (code) {
+        var col = el("div", { class: "h2h-col" });
+        col.appendChild(el("h3", null, linkTeam(code)));
+        var spots = h2hSpots(code);
+        if (!spots) {
+          col.appendChild(el("p", { text: "Roster not announced yet" }));
+        } else {
+          spots.forEach(function (spot) {
+            var block = el("p", { class: "h2h-spot" });
+            var who = (spot.slot ? spot.slot + " " : "") + spot.name + (spot.pos ? " " + spot.pos : "");
+            block.appendChild(el("strong", { text: who }));
+            block.appendChild(el("span", { text: spot.peak || "Peak stats unavailable" }));
+            col.appendChild(block);
+          });
+        }
+        pair.appendChild(col);
+      });
+      page.appendChild(pair);
+    }
+    view.appendChild(page);
+  }
+
   function renderPreviews() {
     markNav("previews");
     var page = el("article", { class: "stack" });
@@ -2704,6 +2812,7 @@
     else if (where.name === "team") renderTeam(where.rest[0]);
     else if (where.name === "player") renderPlayer(where.rest[0], where.rest[1]);
     else if (where.name === "search") renderSearch(where.query || where.rest.join("/"));
+    else if (where.name === "h2h") renderHeadToHead(where.rest);
     else if (where.name === "previews") renderPreviews();
     else if (where.name === "stats") renderStats();
     else if (where.name === "history") renderHistory();

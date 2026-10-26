@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Head to head
+
+The Head to head page compares any two clubs, lineup spot by lineup spot. An owner card is used when one is stored. Otherwise the converted lineup is used, with the peak line taken from that card. A club with neither says "Roster not announced yet." No player or stat is added. The service worker cache is payoff-pitch-v16. No game result was changed.
+
 ## 2026-10-26 — Roster tables fit a phone
 
 Team-page lineup, bench, rotation, and bullpen tables keep a narrow left-aligned slot, a wrapping player name, and a compact position. The hand, the years on the owner card, and the Peak 162 line stack under the name. Converted Payoff Pitch cards use the same layout. Nothing in the tables runs off the side of a phone. The service worker cache is payoff-pitch-v11. No roster line and no game result was changed.
