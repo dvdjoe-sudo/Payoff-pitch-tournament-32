@@ -276,7 +276,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Slot 4: Hank Greenberg (`greenha01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 5: Miguel Cabrera (`cabremi01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Harry Heilmann (`heilmha01`) in R1-04-G6
-- Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 4 later games)
+- Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 8: George Kell (`kellge01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 9: Alan Trammell (`trammal01`) in R1-04-G1 (same starter in 5 later games)
 
@@ -1510,14 +1510,14 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Carl Crawford (`crawfca02`) in R1-03-G1 (same starter in 5 later games)
-- Slot 2: Yandy Diaz (`diazya01`) in R1-03-G5
+- Slot 1: Carl Crawford (`crawfca02`) in R1-03-G1 (same starter in 6 later games)
+- Slot 2: Yandy Diaz (`diazya01`) in R1-03-G1 (same starter in 6 later games)
 - Slot 3: Evan Longoria (`longoev01`) in R1-03-G1 (same starter in 6 later games)
-- Slot 4: Carlos Pena (`penaca01`) in R1-03-G1 (same starter in 5 later games)
+- Slot 4: Carlos Pena (`penaca01`) in R1-03-G1 (same starter in 6 later games)
 - Slot 5: Ben Zobrist (`zobribe01`) in R1-03-G1 (same starter in 6 later games)
-- Slot 6: Brandon Lowe (`lowebr01`) in R1-03-G1 (same starter in 5 later games)
+- Slot 6: Brandon Lowe (`lowebr01`) in R1-03-G1 (same starter in 6 later games)
 - Slot 7: Jason Bartlett (`bartlja01`) in R1-03-G1 (same starter in 6 later games)
-- Slot 8: Kevin Kiermaier (`kiermke01`) in R1-03-G1 (same starter in 5 later games)
+- Slot 8: Kevin Kiermaier (`kiermke01`) in R1-03-G1 (same starter in 6 later games)
 - Slot 9: Toby Hall (`hallto02`) in R1-03-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
@@ -1646,7 +1646,7 @@ Recorded on that roster and not yet in a box score:
 - Slot 6: Hanley Ramirez (`ramirha01`) in R1-01-G1 (same starter in 3 later games)
 - Slot 7: Cliff Floyd (`floydcl01`) in R1-01-G1 (same starter in 3 later games)
 - Slot 8: Jeff Conine (`coninje01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 9: J.T. Realmuto (`realmjt01`) in R1-01-G1 (same starter in 2 later games)
+- Slot 9: J.T. Realmuto (`realmjt01`) in R1-01-G1 (same starter in 3 later games)
 
 ### Substitutes who have batted
 

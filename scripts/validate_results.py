@@ -33,7 +33,14 @@ GAMES = ROOT / "games"
 # Trammell G4, G5, and G6). No score, result, or pitching line changed.
 # The old value was
 # d2b7b66dfb53fd57e5593a4207278a76cf8860fc662b9655d661ba6eca7aef45.
-FINGERPRINT = "7b12e577dbfe542585fb0fb1dd4bce53b9fd5515b5a894940685968e28182f4d"
+# Reset 2026-10-25 under Joe's ruling that a starter removed before his
+# first plate appearance is carried on a zero line: twelve all-zero
+# starter rows were inserted ahead of the men who batted in their slots
+# (R1-01 G3 Realmuto; R1-03 Diaz in G1, G2, G3, G4, G6, G7, Crawford,
+# Pena, Lowe, and Kiermaier in G5; R1-04 G3 Freehan). No score, result,
+# or existing line changed. The old value was
+# 7b12e577dbfe542585fb0fb1dd4bce53b9fd5515b5a894940685968e28182f4d.
+FINGERPRINT = "d63cc54955d2ee1232c99a056d155e3143bf6f485c9f2a35fb7be7ebcaa9b755"
 # Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
 # The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
 FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
