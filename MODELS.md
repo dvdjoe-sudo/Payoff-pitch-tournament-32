@@ -55,6 +55,18 @@ Taken only from recorded lines:
 
 A club's chance to win one game against another is 1 / (1 + exp(−(index A − index B) / 80)). There is no home-field edge. Each series is played out to 4 wins from the games already on the book. The bracket then reseeds the way [BRACKET.md](BRACKET.md) describes, including a fresh F-02 when the one-loss finalist wins F-01. Four thousand draws use a fixed seed, so the file does not change between rebuilds. A finished series is recorded as 1 for the winner and 0 for the loser, not resimulated. A shown 0.0 means that side won none of the 4,000 draws. It is not a mathematical zero. Joe can change the scale in `scripts/odds.py` if the gaps should produce more upsets. The simulation does not edit a score or a seed.
 
+## Leaders page
+
+The Leaders page reads the played games already on the site. It does not invent a stat and it does not change a box score. Plate appearances, the 10 plate-appearance minimum, the 5-inning minimum, and the counting tie rule are the same limits as [LEADERS.md](LEADERS.md).
+
+- Batting average is hits divided by at-bats, for a player with at least 10 plate appearances. Plate appearances are AB + BB + HBP + SAC + SF as recorded.
+- OPS is on-base percentage plus slugging, with that same plate-appearance minimum. On-base percentage is (H + BB + HBP) / (AB + BB + HBP + SF). Slugging is total bases divided by at-bats. Total bases are H + 2B + 2×3B + 3×HR.
+- Home runs, runs batted in, hits, runs, and stolen bases are the counting totals. The list is the top 10, and anyone tied with the tenth player stays.
+- ERA is 27 × ER / outs, for a pitcher with at least 15 outs. WHIP is (H + BB) × 3 / outs, with the same minimum. Hit batsmen are not in WHIP.
+- Wins, strikeouts, and saves are counting totals. A win is the W decision and a save is the S decision.
+
+A pushed game is on the page when that game is in the loaded archive. The page is rebuilt with the site. No second board is stored.
+
 ## Peak 162
 
 Peak 162 is a display line on an owner's roster card. It is not a tournament stat and it does not change a box score. The source is the Lahman database, 2025 edition (CRAN package Lahman 14.0-0), seasons 1871 through 2025. The 2026 season is not in that file. Lahman does not publish WAR, so the window is not chosen by WAR.
