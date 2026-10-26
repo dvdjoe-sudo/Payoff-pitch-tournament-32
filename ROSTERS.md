@@ -326,7 +326,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - UTIL-IF Red Schoendienst
 - OF4 Lou Brock
 - FLEX Johnny Mize
-- BAT Tip O'Neill
+- BAT Mark McGwire
 - BAT2 David Freese
 
 ### Rotation

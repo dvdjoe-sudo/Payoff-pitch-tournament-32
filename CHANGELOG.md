@@ -2,6 +2,16 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — St. Louis Cardinals converted set joins; bench BAT chair corrected to Mark McGwire (Joe's ruling)
+
+The St. Louis Cardinals' converted Payoff Pitch set joins the site: 26 players with peak lines shown as 162-game averages and converted cards, and no tournament lines, because St. Louis has not played a series yet. Eleven clubs now have converted sets, 286 players and 287 roster spots in `data/cards.json` and `data/rosters.json`; the 112 players with tournament lines are unchanged. `scripts/build_cards.py` gained the one SETS row for the club. The set's audit stands at 15 PASS and 11 architecture-limited of 26, its engineered battery's three games all audit clean, and its sampled stress test returns PLAYS TRUE for all three tested hitters; the full build report lives in the payoff-pitch-cardinals set folder.
+
+The Cardinals' announced roster is also corrected to the governing roster: the bench BAT chair is Mark McGwire, per Joe's 2026-10-23 ruling ("Make all changes with recommendations but keep Nichols"), confirmed by Joe on 2026-10-25, and Tip O'Neill is out of the 26. The correction is made in `data/announced_rosters.json` and `ROSTERS.md`, and `data/peak162.json` is regenerated from the corrected roster, so O'Neill's peak line is replaced by McGwire's. The same correction pattern was used for the Cubs' Dawson chair earlier today.
+
+The 2026 check for this set, under Joe's rule that the completed 2026 season counts in prime windows: the only rostered Cardinal who appeared in 2026 was Ryan Helsley, and he pitched for Baltimore, so no St. Louis window takes a 2026 season and every window in the set stands as computed from St. Louis seasons only.
+
+No game, series, or locked line changed: the tournament archive still holds 22 games. The validator passes with no re-lock, a second generator run is a zero diff, and the service worker cache moved to payoff-pitch-v9 for the updated data files.
+
 ## 2026-10-25 — Colorado Rockies converted set joins; 2026 seasons counted in prime windows (Joe's rule)
 
 Two changes land in one regeneration. First, the Colorado Rockies' converted Payoff Pitch set joins the site: 26 players with peak lines shown as 162-game averages and converted cards, and no tournament lines, because Colorado has not played a series yet. Ten clubs now have converted sets, 260 players and 261 roster spots in `data/cards.json` and `data/rosters.json`; the 112 players with tournament lines are unchanged. `scripts/build_cards.py` gained the one SETS row for the club.

@@ -86,6 +86,7 @@ SETS = [
     ("ARI", "payoff-pitch-diamondbacks", "ari"),
     ("CHC", "payoff-pitch-cubs", "chc"),
     ("COL", "payoff-pitch-rockies", "col"),
+    ("STL", "payoff-pitch-cardinals", "stl"),
 ]
 
 # Window years for a card whose input line the APBA files do not carry.
@@ -117,7 +118,7 @@ TEAM_IDS = {
     "TB": ["TBA", "TBD"],
     "DET": ["DET"],
     "ARI": ["ARI"],
-    "CHC": ["CHN"],
+    "CHC": ["CHN"], "STL": ["SLN"],
     "COL": ["COL"],
 }
 
