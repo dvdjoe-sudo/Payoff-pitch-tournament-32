@@ -1206,7 +1206,8 @@
     page.appendChild(el("h3", { text: "Roster and player cards" }));
     page.appendChild(el("p", { class: "note", text: "The converted Payoff Pitch set, in set order. Open a player for his peak line, his card, and his tournament line." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
-      var rows = roster.players.filter(function (spot) { return spot.group === group; });
+      var rows = roster.players.filter(function (spot) { return spot.group === group; })
+        .sort(function (a, b) { return a.slot - b.slot; });
       if (!rows.length) return;
       page.appendChild(el("h4", { text: GROUP_TITLES[group] }));
       page.appendChild(table(["Slot", "Player", "Position"], rows.map(function (spot) {
