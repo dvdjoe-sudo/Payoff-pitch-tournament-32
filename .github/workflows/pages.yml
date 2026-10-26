@@ -32,6 +32,8 @@ jobs:
           python3 scripts/build_peak162.py
           python3 scripts/build_rosters.py
           python3 scripts/build_leaders.py
+          python3 scripts/build_series_previews.py
+          python3 scripts/build_bracket_image.py
       - name: Generated files match the commit
         run: git diff --exit-code
 

@@ -4,7 +4,27 @@ Dated rulings and repo history. The rules, seeds, and bracket in force are [TOUR
 
 ## 2026-10-26 — Head to head
 
-The Head to head page compares any two clubs, lineup spot by lineup spot. An owner card is used when one is stored. Otherwise the converted lineup is used, with the peak line taken from that card. A club with neither says "Roster not announced yet." No player or stat is added. The service worker cache is payoff-pitch-v16. No game result was changed.
+The Head to head page compares any two clubs, lineup spot by lineup spot. An owner card is used when one is stored. Otherwise the converted lineup is used, with the peak line taken from that card. A club with neither says "Roster not announced yet." No player or stat is added. The service worker cache is payoff-pitch-v23. No game result was changed.
+
+## 2026-10-26 — Bracket image
+
+The build writes `graphics/bracket.png`, 1200 by 1500. The title is Payoff Pitch Tournament 32. A finished series puts the winner in gold with a WIN tag and dims the loser. A series that is scheduled or in progress is labeled UPCOMING. The footer says "All rounds will be re-seeded." The image has no site address. The bracket page links it as Download bracket image. The service worker cache is payoff-pitch-v22. No game result was changed.
+
+## 2026-10-26 — Series lineup previews
+
+Each scheduled series with both clubs named has a lineup preview. The two owner lineups sit side by side, with the stored Peak 162 line under each name. The leader is the lineup hitter with the highest OPS on that line. The starter is the rotation arm with the lowest ERA on his. A club without an owner card says "Roster not announced yet." The build writes a 1200 by 1500 PNG for each of those series, and the page has a Download image link. The service worker cache is payoff-pitch-v21. No game result was changed.
+
+## 2026-10-26 — Classic cap logos
+
+Every club on the team page and the bracket shows a real cap logo. The marks already in the repo stay for the clubs that had a 1986 file, except Cleveland: the field club is the Guardians, so the Indians cap is replaced by the Guardians cap. Miami, Tampa Bay, Arizona, Colorado, Washington, and the Philadelphia Athletics had monograms. Those are now real cap logos. Sources are in [CREDITS.md](CREDITS.md). The service worker cache is payoff-pitch-v20. No game result was changed.
+
+## 2026-10-26 — Club colors on the team page and the bracket
+
+Each club in the 32-team field has a primary and a secondary color in `data/team_colors.json`, matched to the club as it is named in the field. Los Angeles is Dodger blue, Montreal is the Expos tricolor, the Philadelphia Athletics are navy, Oakland is green and gold, Cleveland is the Guardians' navy and red, and Miami is black and blue. The team-page header sits on the primary color, with light or dark text chosen by contrast. Roster slot chips use the same pair. On the bracket, a club row keeps a color bar and a swatch, and the name takes a team color only when that color stays readable on the card. Winners stay in the site's winner color. The gold theme is unchanged, and the same rules hold in dark mode. The service worker cache is payoff-pitch-v19. No game result was changed.
+
+## 2026-10-26 — Payoff Pitch cards fit a phone
+
+On a phone, a player card keeps the percentile bands on the screen. The result column is narrow, the hand columns read vs L and vs R, and the band numbers stay in view. Hitter and pitcher attributes sit in label chips, two to a row. Each fielding spot is the position plus range, error, and arm. The pitcher 2d6 line is a two-column grid. Wider screens still show vs LHP and vs RHP and a wrapping chip row. The service worker cache is payoff-pitch-v18. No card number and no game result was changed.
 
 ## 2026-10-26 — Roster tables fit a phone
 
