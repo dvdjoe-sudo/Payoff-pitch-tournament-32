@@ -1144,76 +1144,140 @@
     }
   }
 
+  function factChip(label, value, wide) {
+    var text = value == null ? "—" : String(value);
+    return el("span", { class: "card-chip" + (wide || text.length > 18 ? " wide" : "") },
+      el("span", { class: "card-k", text: label }),
+      el("span", { class: "card-v", text: text }));
+  }
+
+  function factRow(chips) {
+    var kept = chips.filter(Boolean);
+    if (!kept.length) return null;
+    var row = el("div", { class: "card-facts" });
+    kept.forEach(function (chip) { row.appendChild(chip); });
+    return row;
+  }
+
+  function bandHead(full, short, numeric) {
+    return el("th", { class: numeric ? "num" : null, scope: "col" },
+      el("span", { class: "wide-label", text: full }),
+      el("span", { class: "phone-label", text: short }));
+  }
+
+  function cardBandTable(rows) {
+    var wrap = el("div", { class: "table-wrap card-band" });
+    var t = el("table");
+    t.appendChild(el("colgroup", null,
+      el("col", { class: "band-result" }),
+      el("col", { class: "band-num" }),
+      el("col", { class: "band-num" })));
+    var head = el("tr");
+    head.appendChild(bandHead("Result", "Result", false));
+    head.appendChild(bandHead("vs LHP", "vs L", true));
+    head.appendChild(bandHead("vs RHP", "vs R", true));
+    t.appendChild(el("thead", null, head));
+    var body = el("tbody");
+    rows.forEach(function (row) {
+      var tr = el("tr");
+      tr.appendChild(el("td", { text: row[0] }));
+      tr.appendChild(el("td", { class: "num", text: row[1] }));
+      tr.appendChild(el("td", { class: "num", text: row[2] }));
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    return wrap;
+  }
+
+  function fieldingLine(positions) {
+    var list = el("div", { class: "fielding-line" });
+    positions.forEach(function (spot) {
+      var row = el("div", { class: "field-row" });
+      row.appendChild(el("span", { class: "field-pos", text: spot.pos || "" }));
+      if (spot.range != null && spot.range !== "") row.appendChild(factChip("Range", spot.range));
+      if (spot.e != null && spot.e !== "") row.appendChild(factChip("E", spot.e));
+      if (spot.arm != null && spot.arm !== "") row.appendChild(factChip("Arm", spot.arm));
+      list.appendChild(row);
+    });
+    return list;
+  }
+
+  function diceGrid(table) {
+    var grid = el("div", { class: "dice-grid" });
+    ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"].forEach(function (total) {
+      var text = table[total] || "—";
+      grid.appendChild(el("div", { class: "dice-cell" + (text.length > 12 ? " wide" : "") },
+        el("span", { class: "card-k", text: total }),
+        el("span", { class: "card-v", text: text })));
+    });
+    return grid;
+  }
+
   function cardSections(page, card) {
     if (!card.card_bat && !card.card_pit) return;
-    page.appendChild(el("h3", { text: "Payoff Pitch card" }));
+    var block = el("section", { class: "payoff-card" });
+    block.appendChild(el("h3", { text: "Payoff Pitch card" }));
     if (card.card_bat) {
       var bat = card.card_bat;
-      page.appendChild(el("h4", { text: "Hitter card" }));
+      block.appendChild(el("h4", { text: "Hitter card" }));
       var bits = [];
-      if (bat.bats) bits.push("Bats " + bat.bats);
-      if (bat.throws) bits.push("Throws " + bat.throws);
-      if (bat.run != null) bits.push("Run " + bat.run);
-      if (bat.steal) bits.push("Steal " + bat.steal.rating + (bat.steal.jump != null ? " (jump " + bat.steal.jump + ")" : ""));
-      if (bat.sac_bunt) bits.push("Sac bunt " + bat.sac_bunt);
-      if (bat.dp != null) bits.push("DP " + bat.dp);
-      if (bat.fielding) bits.push("Fielding " + bat.fielding);
-      if (bat.arm) bits.push("Arm " + bat.arm);
-      if (bits.length) page.appendChild(el("p", { class: "meta", text: bits.join(" · ") }));
-      if (bat.positions && bat.positions.length) {
-        page.appendChild(el("p", { text: bat.positions.map(function (spot) {
-          return spot.pos + " (range " + spot.range + ", E" + spot.e + ", arm " + spot.arm + ")";
-        }).join(" · ") }));
-      }
+      if (bat.bats) bits.push(factChip("Bats", bat.bats));
+      if (bat.throws) bits.push(factChip("Throws", bat.throws));
+      if (bat.run != null) bits.push(factChip("Run", bat.run));
+      if (bat.steal) bits.push(factChip("Steal", bat.steal.rating + (bat.steal.jump != null ? ", jump " + bat.steal.jump : "")));
+      if (bat.sac_bunt) bits.push(factChip("Sac bunt", bat.sac_bunt));
+      if (bat.dp != null) bits.push(factChip("DP", bat.dp));
+      if (bat.fielding) bits.push(factChip("Fielding", bat.fielding));
+      if (bat.arm) bits.push(factChip("Arm", bat.arm));
+      var facts = factRow(bits);
+      if (facts) block.appendChild(facts);
+      if (bat.positions && bat.positions.length) block.appendChild(fieldingLine(bat.positions));
       ["WHEELHOUSE", "PATIENT", "TOUGH", "IN-PLAY"].forEach(function (name) {
         var section = bat.sections && bat.sections[name];
         if (!section) return;
-        page.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
+        block.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
         var rows = ["HR", "3B", "2B", "1B", "BB", "HBP", "SO"].filter(function (result) {
           return (section.vsLHP && section.vsLHP[result]) || (section.vsRHP && section.vsRHP[result]);
         }).map(function (result) {
           return [result, bandText(section.vsLHP && section.vsLHP[result]), bandText(section.vsRHP && section.vsRHP[result])];
         });
-        if (rows.length) page.appendChild(table(["Result", "vs LHP", "vs RHP"], rows));
+        if (rows.length) block.appendChild(cardBandTable(rows));
       });
       if (bat.out_table && bat.out_table.length) {
-        page.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
+        block.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
           return row.range[0] + "-" + row.range[1] + " " + row.result;
         }).join(" · ") }));
       }
-      if (bat.qa_status) page.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
+      if (bat.qa_status) block.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
     }
     if (card.card_pit) {
       var pit = card.card_pit;
-      page.appendChild(el("h4", { text: "Pitcher card (v2)" }));
+      block.appendChild(el("h4", { text: "Pitcher card (v2)" }));
       var pbits = [];
-      if (pit.throws) pbits.push("Throws " + pit.throws);
-      if (pit.card_type) pbits.push(pit.card_type);
-      if (pit.so_modifier) pbits.push("Strikeout modifier " + pit.so_modifier);
-      if (pit.special && pit.special.length) pbits.push("Special ratings: " + pit.special.join(", "));
-      if (pbits.length) page.appendChild(el("p", { class: "meta", text: pbits.join(" · ") }));
-      var stam = [];
+      if (pit.throws) pbits.push(factChip("Throws", pit.throws));
+      if (pit.card_type) pbits.push(factChip("Type", pit.card_type));
+      if (pit.so_modifier) pbits.push(factChip("SO modifier", pit.so_modifier));
+      if (pit.special && pit.special.length) pbits.push(factChip("Special", pit.special.join(", "), true));
       if (pit.stamina) {
-        if (pit.stamina.start != null) stam.push("start " + pit.stamina.start);
-        if (pit.stamina.relief) stam.push("relief " + pit.stamina.relief);
+        if (pit.stamina.start != null) pbits.push(factChip("Start", pit.stamina.start));
+        if (pit.stamina.relief) pbits.push(factChip("Relief", pit.stamina.relief));
       }
-      if (stam.length) page.appendChild(el("p", { text: "Stamina: " + stam.join(" · ") }));
       if (pit.addendum) {
-        var abits = [];
         [["wp", "WP"], ["dp", "DP"], ["hold", "Hold"], ["pickoff", "Pickoff"], ["inj", "Inj"]].forEach(function (pair) {
           var value = pit.addendum[pair[0]];
-          if (value != null && value !== "") abits.push(pair[1] + " " + value);
+          if (value != null && value !== "") pbits.push(factChip(pair[1], value));
         });
-        if (abits.length) page.appendChild(el("p", { class: "note", text: "Addendum ratings: " + abits.join(" · ") + "." }));
       }
+      var pfacts = factRow(pbits);
+      if (pfacts) block.appendChild(pfacts);
       if (pit.table_2d6) {
-        var totals = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-        page.appendChild(table(
-          ["2d6"].concat(totals),
-          [["Section"].concat(totals.map(function (total) { return pit.table_2d6[total] || "—"; }))]));
+        block.appendChild(el("p", { class: "meta", text: "2d6 section" }));
+        block.appendChild(diceGrid(pit.table_2d6));
       }
-      if (pit.qa_status) page.appendChild(el("p", { class: "note", text: "Card QA: " + pit.qa_status + "." }));
+      if (pit.qa_status) block.appendChild(el("p", { class: "note", text: "Card QA: " + pit.qa_status + "." }));
     }
+    page.appendChild(block);
   }
 
   function isNameStart(token) {
