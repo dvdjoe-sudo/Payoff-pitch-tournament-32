@@ -71,6 +71,17 @@ A club's chance to win one game against another is 1 / (1 + exp(−(index A − 
 
 The Records page lists one-game highs from the batting and pitching lines already stored. It does not invent a line. Total bases are H + 2B + 2×3B + 3×HR from that game's batting line. Innings are the outs on that game's pitching line, shown in thirds. Each list is the top 10, and a tie with the tenth line stays. The milestone bars below those lists are unchanged.
 
+## Team stats
+
+The Team stats page sums the batting and pitching lines already stored for each club. It does not invent a stat and it does not change a box score.
+
+- Batting average is hits divided by at-bats. On-base percentage is (H + BB + HBP) / (AB + BB + HBP + SF). Catcher's interference is a plate appearance and is left out of on-base percentage. Slugging is total bases divided by at-bats. Total bases are H + 2B + 2×3B + 3×HR. OPS is on-base percentage plus slugging.
+- Clubs that have played are ranked by OPS. A tie goes to the club with more runs scored, then to the name that sorts first.
+- ERA is 27 × ER / outs. A half hundredth rounds to the even hundredth. WHIP is (H + BB) × 3 / outs and rounds half up. Wins and losses are the stored decisions.
+- Pitching is ranked by ERA, lowest first. A tie goes to the name that sorts first.
+- A club with no game on the book is listed after the ranked clubs and says it has not played yet.
+- A new game moves the ranks when that game is in the archive.
+
 ## Leaders page
 
 The Leaders page reads the played games already on the site. It does not invent a stat and it does not change a box score. Plate appearances, the 10 plate-appearance minimum, the 5-inning minimum, and the counting tie rule are the same limits as [LEADERS.md](LEADERS.md).

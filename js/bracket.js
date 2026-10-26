@@ -100,6 +100,23 @@
     return average.toFixed(3).replace(/^0/, "");
   }
 
+  function slashLabel(numer, denom) {
+    if (!denom || numer < 0) return "—";
+    var thousandths = divHalfUp(numer * 1000, denom);
+    if (thousandths >= 1000) return "1.000";
+    var text = String(thousandths);
+    while (text.length < 3) text = "0" + text;
+    return "." + text;
+  }
+
+  function whipLabel(hits, walks, outs) {
+    if (!outs) return "—";
+    var hundredths = divHalfUp((hits + walks) * 300, outs);
+    var text = String(Math.abs(hundredths));
+    while (text.length < 3) text = "0" + text;
+    return text.slice(0, text.length - 2) + "." + text.slice(text.length - 2);
+  }
+
   function eraLabel(er, outs) {
     if (!outs) return "—";
     var hundredths = 27 * er * 100;
@@ -1735,6 +1752,157 @@
     view.appendChild(page);
   }
 
+  function clubTotals() {
+    var clubs = {};
+    state.data.teams.forEach(function (team) {
+      clubs[team.code] = {
+        team: team,
+        played: false,
+        bat: { ab: 0, r: 0, h: 0, doubles: 0, triples: 0, hr: 0, rbi: 0, bb: 0, k: 0, hbp: 0, sb: 0, cs: 0, sac: 0, sf: 0, ci: 0 },
+        pit: { w: 0, l: 0, sv: 0, outs: 0, h: 0, r: 0, er: 0, bb: 0, k: 0 },
+        rs: 0,
+        ra: 0
+      };
+    });
+    state.data.games.forEach(function (game) {
+      [game.home, game.away].forEach(function (code) {
+        var club = clubs[code];
+        if (!club) return;
+        club.played = true;
+        var opp = code === game.home ? game.away : game.home;
+        club.rs += nz(game.score[code]);
+        club.ra += nz(game.score[opp]);
+      });
+      (game.batting || []).forEach(function (line) {
+        var club = clubs[line.team];
+        if (!club) return;
+        club.played = true;
+        ["ab", "r", "h", "doubles", "triples", "hr", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "sf", "ci"].forEach(function (field) {
+          club.bat[field] += nz(line[field]);
+        });
+      });
+      (game.pitching || []).forEach(function (line) {
+        var club = clubs[line.team];
+        if (!club) return;
+        club.played = true;
+        ["outs", "h", "r", "er", "bb", "k"].forEach(function (field) {
+          club.pit[field] += nz(line[field]);
+        });
+      });
+      ["W", "L", "S"].forEach(function (decision) {
+        var award = game.wls && game.wls[decision];
+        if (!award || !clubs[award.team]) return;
+        clubs[award.team].pit[decision === "S" ? "sv" : decision.toLowerCase()] += 1;
+      });
+    });
+    return clubs;
+  }
+
+  function opsThousandths(bat) {
+    var obpDen = bat.ab + bat.bb + bat.hbp + bat.sf;
+    var tb = bat.h + bat.doubles + (2 * bat.triples) + (3 * bat.hr);
+    var obpThou = obpDen ? divHalfUp((bat.h + bat.bb + bat.hbp) * 1000, obpDen) : 0;
+    var slgThou = bat.ab ? divHalfUp(tb * 1000, bat.ab) : 0;
+    return obpThou + slgThou;
+  }
+
+  function opsLabel(bat) {
+    var sum = opsThousandths(bat);
+    if (sum >= 1000) {
+      var frac = String(sum % 1000);
+      while (frac.length < 3) frac = "0" + frac;
+      return Math.floor(sum / 1000) + "." + frac;
+    }
+    var text = String(sum);
+    while (text.length < 3) text = "0" + text;
+    return "." + text;
+  }
+
+  function clubStatRow(rank, club, headline, detail, rowId) {
+    var item = el("li", { class: "award-row", id: rowId });
+    var palette = clubPalette(club.team.code);
+    if (palette) {
+      item.classList.add("leader-colored");
+      item.style.setProperty("--leader-color", palette.primary);
+    }
+    item.appendChild(el("span", { class: "award-rank", text: String(rank) }));
+    var who = el("div", { class: "award-who" });
+    who.appendChild(logo(club.team, club.team.name + " mark", true));
+    var name = el("div", { class: "award-name" });
+    var link = linkTeam(club.team.code, club.team.name);
+    link.classList.add("leader-name");
+    name.appendChild(link);
+    name.appendChild(el("span", { class: "award-club", text: club.team.series_wins + "-" + club.team.series_losses + " series · " + club.team.game_wins + "-" + club.team.game_losses + " games" }));
+    who.appendChild(name);
+    item.appendChild(who);
+    item.appendChild(el("span", { class: "award-pts", text: headline }));
+    item.appendChild(el("p", { class: "award-detail", text: detail }));
+    return item;
+  }
+
+  function battingDetail(club) {
+    var bat = club.bat;
+    var tb = bat.h + bat.doubles + (2 * bat.triples) + (3 * bat.hr);
+    return slashLabel(bat.h, bat.ab) + " / " + slashLabel(bat.h + bat.bb + bat.hbp, bat.ab + bat.bb + bat.hbp + bat.sf) + " / " + slashLabel(tb, bat.ab) +
+      " · " + paOf(bat) + " PA · " + bat.h + " H · " + bat.hr + " HR · " + bat.r + " R";
+  }
+
+  function pitchingDetail(club) {
+    var pit = club.pit;
+    return whipLabel(pit.h, pit.bb, pit.outs) + " WHIP · " + ipLabel(pit.outs) + " IP · " + pit.w + "-" + pit.l + " · " + pit.k + " K · " + pit.er + " ER";
+  }
+
+  function renderTeamStats(focus) {
+    markNav("team-stats");
+    var clubs = clubTotals();
+    var played = state.data.teams.filter(function (team) { return clubs[team.code].played; }).map(function (team) { return clubs[team.code]; });
+    var waiting = state.data.teams.filter(function (team) { return !clubs[team.code].played; }).sort(function (a, b) { return a.seed - b.seed; });
+    var batting = played.slice().sort(function (a, b) {
+      var diff = opsThousandths(b.bat) - opsThousandths(a.bat);
+      if (diff) return diff;
+      if (a.rs !== b.rs) return b.rs - a.rs;
+      return a.team.name.localeCompare(b.team.name);
+    });
+    var pitching = played.filter(function (club) { return club.pit.outs > 0; }).sort(function (a, b) {
+      var left = a.pit.er * b.pit.outs;
+      var right = b.pit.er * a.pit.outs;
+      if (left !== right) return left - right;
+      return a.team.name.localeCompare(b.team.name);
+    });
+    var page = el("article", { class: "stack" });
+    page.appendChild(el("h2", { text: "Team stats" }));
+    page.appendChild(el("p", { class: "note", text: "Batting and pitching totals from the box scores. Batting is ranked by OPS. Pitching is ranked by ERA, lowest first. A club with no game says it has not played yet. A new game moves the ranks when it is in the archive." }));
+    page.appendChild(el("h3", { text: "Batting" }));
+    var batList = el("ol", { class: "award-list" });
+    batting.forEach(function (club, index) {
+      batList.appendChild(clubStatRow(index + 1, club, opsLabel(club.bat), battingDetail(club), "club-" + club.team.code));
+    });
+    page.appendChild(batList);
+    page.appendChild(el("h3", { text: "Pitching" }));
+    var pitList = el("ol", { class: "award-list" });
+    pitching.forEach(function (club, index) {
+      pitList.appendChild(clubStatRow(index + 1, club, eraLabel(club.pit.er, club.pit.outs), pitchingDetail(club), "club-pit-" + club.team.code));
+    });
+    page.appendChild(pitList);
+    page.appendChild(el("h3", { text: "Not played yet" }));
+    page.appendChild(el("p", { class: "note", text: waiting.length + (waiting.length === 1 ? " club has" : " clubs have") + " no tournament game on the book." }));
+    var wait = el("ul", { class: "wait-list" });
+    waiting.forEach(function (team) {
+      var item = el("li", { id: "club-wait-" + team.code });
+      item.appendChild(logo(team, team.name + " mark", true));
+      item.appendChild(linkTeam(team.code, team.name));
+      item.appendChild(el("span", { text: "Not played yet" }));
+      wait.appendChild(item);
+    });
+    page.appendChild(wait);
+    clear(view);
+    view.appendChild(page);
+    if (focus) {
+      var target = document.getElementById("club-" + focus) || document.getElementById("club-wait-" + focus);
+      if (target) target.scrollIntoView({ behavior: "instant", block: "start" });
+    }
+  }
+
   function renderTeam(code) {
     if (state.announced && state.announced[code] && !state.peakLoaded) {
       loadOnDemand("peak", function () { renderTeam(code); });
@@ -1759,6 +1927,7 @@
     page.appendChild(hero);
     page.appendChild(el("p", { class: "muted", text: markNote(team.code) }));
     page.appendChild(el("p", { text: "Run differential " + (diff.rs - diff.ra) + " (" + diff.rs + " scored, " + diff.ra + " allowed)." }));
+    page.appendChild(el("p", null, el("a", { href: "#/team-stats/" + code, text: "Tournament team stats" })));
     if (team.game_wins + team.game_losses > 0) {
       var split = teamSplits()[code] || { home: [0, 0], away: [0, 0], extra: [0, 0], one: [0, 0] };
       page.appendChild(el("p", { text: "Home " + recordPair(split.home) + ", away " + recordPair(split.away) + ", extra innings " + recordPair(split.extra) + ", one-run " + recordPair(split.one) + "." }));
@@ -3805,6 +3974,8 @@
     page.appendChild(el("p", { text: "The bracket also shows a Monte Carlo from the club indexes: one game is 1 / (1 + exp(−(index A − index B) / 80)), with no home-field edge. Four thousand draws use a fixed seed. A finished series is recorded as 1 and 0, not resimulated. A shown 0.0 means that side won none of the draws." }));
     page.appendChild(el("h3", { text: "Single-game records" }));
     page.appendChild(el("p", { text: "The Records page lists one-game highs from the box scores: hits, home runs, runs batted in, total bases, runs, stolen bases, walks, pitcher strikeouts, and innings. Total bases are H + 2B + 2×3B + 3×HR. The list is the top 10, and a tie at the tenth line stays." }));
+    page.appendChild(el("h3", { text: "Team stats" }));
+    page.appendChild(el("p", { text: "The Team stats page sums each club's batting and pitching lines. Batting average is hits divided by at-bats. On-base percentage is (H + BB + HBP) / (AB + BB + HBP + SF). Slugging is total bases divided by at-bats. OPS is on-base percentage plus slugging, and that is the batting rank. ERA is 27 × ER / outs, with a half hundredth rounded to the even hundredth. WHIP is (H + BB) / IP and rounds half up. Pitching is ranked by ERA, lowest first. A club with no game is listed as not played yet. A new game moves the ranks when it is in the archive." }));
     page.appendChild(el("h3", { text: "Leaders" }));
     page.appendChild(el("p", { text: "The Leaders page counts the played games. Batting average and OPS need 10 plate appearances. OPS is on-base percentage plus slugging. ERA and WHIP need 5 innings. ERA is 27 × ER / outs, and a half hundredth rounds to the even hundredth, so 1.125 is 1.12. WHIP is (H + BB) / IP and rounds half up. Counting lists are the top 10, and a tie at tenth place stays. A new game is on the board when it is in the archive." }));
     page.appendChild(el("h3", { text: "Peak 162" }));
@@ -3831,6 +4002,7 @@
     else if (where.name === "preview") renderSeriesPreview(where.rest[0]);
     else if (where.name === "previews") renderPreviews();
     else if (where.name === "stats") renderStats();
+    else if (where.name === "team-stats") renderTeamStats(where.rest[0]);
     else if (where.name === "leaders") renderLeaders();
     else if (where.name === "results") renderResults();
     else if (where.name === "history") renderHistory();
