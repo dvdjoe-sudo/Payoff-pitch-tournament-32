@@ -29,6 +29,7 @@ jobs:
         run: python3 scripts/validate_results.py
       - name: Rebuild generated pages
         run: |
+          python3 scripts/build_peak162.py
           python3 scripts/build_rosters.py
           python3 scripts/build_leaders.py
       - name: Generated files match the commit

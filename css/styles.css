@@ -527,7 +527,14 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   padding-left: 1.2rem;
 }
 
-.roster-list li { margin: 0.12rem 0; }
+.roster-list li { margin: 0.12rem 0 0.45rem; }
+.roster-name { display: block; }
+.roster-peak {
+  display: block;
+  margin-top: 0.12rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
 
 .muted { color: var(--muted); }
 .stack > * + * { margin-top: 0.35rem; }
