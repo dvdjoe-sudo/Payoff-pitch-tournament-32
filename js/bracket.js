@@ -796,6 +796,66 @@
     return { nohitters: nohitters, highK: highK, big: big };
   }
 
+  function bump(map, team, id, name) {
+    var key = team + "|" + id;
+    if (!map[key]) map[key] = { team: team, id: id, name: name };
+    return map[key];
+  }
+
+  function seriesMvp(series) {
+    if (!series || series.status !== "complete") return null;
+    var games = (series.games || []).map(function (id) { return state.games[id]; }).filter(Boolean);
+    if (!games.length) return null;
+    var bat = {};
+    var pit = {};
+    games.forEach(function (game) {
+      (game.batting || []).forEach(function (line) {
+        var item = bump(bat, line.team, line.player_id, line.name);
+        ["h", "doubles", "triples", "hr", "r", "rbi", "sb", "bb", "hbp", "cs"].forEach(function (field) {
+          item[field] = nz(item[field]) + nz(line[field]);
+        });
+      });
+      (game.pitching || []).forEach(function (line) {
+        var item = bump(pit, line.team, line.player_id, line.name);
+        ["outs", "k", "er", "bb"].forEach(function (field) {
+          item[field] = nz(item[field]) + nz(line[field]);
+        });
+      });
+      var wls = game.wls || {};
+      [["W", "w"], ["S", "sv"]].forEach(function (pair) {
+        var award = wls[pair[0]];
+        if (!award || !award.player_id) return;
+        var item = bump(pit, award.team, award.player_id, award.name);
+        item[pair[1]] = nz(item[pair[1]]) + 1;
+      });
+    });
+    var best = {};
+    function keep(item) {
+      var key = item.team + "|" + item.id;
+      if (!best[key] || item.points > best[key].points) best[key] = item;
+    }
+    Object.keys(bat).forEach(function (key) {
+      var b = bat[key];
+      var tb = nz(b.h) + nz(b.doubles) + 2 * nz(b.triples) + 3 * nz(b.hr);
+      var points = tb + nz(b.r) + nz(b.rbi) + nz(b.sb) + 0.5 * nz(b.bb) + 0.5 * nz(b.hbp) - nz(b.cs);
+      keep({ team: b.team, id: b.id, name: b.name, points: points, line: nz(b.hr) + " HR, " + nz(b.rbi) + " RBI, " + nz(b.h) + " H" });
+    });
+    Object.keys(pit).forEach(function (key) {
+      var p = pit[key];
+      if (nz(p.outs) + nz(p.w) + nz(p.sv) === 0) return;
+      var ip = nz(p.outs) / 3;
+      var points = ip + (0.4 * nz(p.k)) + (5 * nz(p.w)) + (3 * nz(p.sv)) - (1.5 * nz(p.er)) - (0.3 * nz(p.bb));
+      keep({
+        team: p.team, id: p.id, name: p.name, points: points,
+        line: ipLabel(nz(p.outs)) + " IP, " + nz(p.k) + " K, " + nz(p.w) + " W, " + nz(p.sv) + " SV, " + nz(p.er) + " ER"
+      });
+    });
+    var list = Object.keys(best).map(function (key) { return best[key]; });
+    list.sort(function (a, b) { return b.points - a.points || a.name.localeCompare(b.name); });
+    if (!list.length) return null;
+    return { mvp: list[0], runner: list[1] || null };
+  }
+
   function seriesCard(series, activeId) {
     var classes = "series-card";
     if (series.id === activeId) classes += " selected";
@@ -827,6 +887,8 @@
       paintClubRow(row, code, winner);
       card.appendChild(row);
     });
+    var picked = seriesMvp(series);
+    if (picked) card.appendChild(el("p", { class: "card-odds", text: "MVP " + picked.mvp.name }));
     var mc = mcOdds(series);
     if (mc) {
       card.appendChild(el("p", {
@@ -1025,19 +1087,28 @@
       }
     }
     page.appendChild(oddsBar(series));
-    if (series.mvp) {
+    var picked = seriesMvp(series);
+    if (picked) {
       page.appendChild(el("h3", { text: "Series MVP" }));
       page.appendChild(el("p", null,
-        linkPlayer(series.mvp.team, series.mvp.player_id, series.mvp.name),
-        " · " + series.mvp.line
+        linkPlayer(picked.mvp.team, picked.mvp.id, picked.mvp.name),
+        " · " + picked.mvp.line + " · " + q1(picked.mvp.points) + " pts"
       ));
-      if (series.mvp_runner_up) {
+      if (picked.runner) {
         page.appendChild(el("p", null,
           "Runner-up: ",
-          linkPlayer(series.mvp_runner_up.team, series.mvp_runner_up.player_id, series.mvp_runner_up.name),
-          " · " + series.mvp_runner_up.line
+          linkPlayer(picked.runner.team, picked.runner.id, picked.runner.name),
+          " · " + picked.runner.line + " · " + q1(picked.runner.points) + " pts"
         ));
       }
+      page.appendChild(el("p", { class: "note", text: "Computed from the box scores in this series. The formula is on the Formulas page." }));
+    }
+    if (series.mvp && (!picked || series.mvp.player_id !== picked.mvp.id || series.mvp.team !== picked.mvp.team)) {
+      page.appendChild(el("p", null,
+        "The series file names ",
+        linkPlayer(series.mvp.team, series.mvp.player_id, series.mvp.name),
+        series.mvp.line ? " · " + series.mvp.line : ""
+      ));
     }
     var counted = seriesCounting(series);
     if (counted) page.appendChild(counted);
@@ -3105,6 +3176,8 @@
     page.appendChild(el("p", { text: "MVP, hitters: total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H + 2B + 2×3B + 3×HR." }));
     page.appendChild(el("p", { text: "Cy Young, pitchers with at least one start: IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP is outs / 3." }));
     page.appendChild(el("p", { text: "Reliever, pitchers with zero starts: 5×SV + 2×IP + 0.4×K − 1.5×ER. A pitcher who has started stays on the Cy Young list." }));
+    page.appendChild(el("h3", { text: "Series MVP" }));
+    page.appendChild(el("p", { text: "A finished series scores every player from the box scores in that series only. A hitter uses the MVP line above. A pitcher uses IP + 0.4×K + 5×W + 3×SV − 1.5×ER − 0.3×BB. IP is outs / 3. Wins and saves are the stored decisions. A player who both hit and pitched keeps the higher score. The higher score is the series MVP. A tie goes to the name that sorts first. The pick does not change a game or a series score." }));
     page.appendChild(el("h3", { text: "Win probability" }));
     page.appendChild(el("p", { text: "Before the first pitch the home club is 0.50. After each step the home win probability is 1 / (1 + exp(−1.35 × margin / sqrt(innings left))). Margin is home runs minus away runs. Innings left is at least 0.5. The chart uses the stored line, and scoring plays only when they land on the final score. It is omitted when the innings do not add up to that score." }));
     page.appendChild(el("h3", { text: "Series odds" }));

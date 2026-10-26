@@ -12,6 +12,15 @@ Points are not an official vote and they are not a Major League award.
 
 A pitcher who has started is only on the Cy Young list. Saves on that pitcher's line do not move him to the reliever list.
 
+## Series MVP
+
+A finished series scores every player from the box scores in that series only. It does not change a game, a series score, or a name stored on the series file.
+
+- A hitter uses the MVP line above.
+- A pitcher uses IP + 0.4×K + 5×W + 3×SV − 1.5×ER − 0.3×BB. IP is outs / 3. Wins and saves are the stored decisions on each game.
+- A player who both hit and pitched keeps the higher of the two scores.
+- The higher score is the series MVP. The next score is the runner-up. A tie goes to the name that sorts first.
+
 ## Win probability
 
 Win probability is a display model, not a simulation, and the game page labels the chart as a model estimate. It is not a recorded probability and it does not change the final score. Before the first pitch the home club is 0.50. After each step the home win probability is 1 / (1 + exp(−1.35 × margin / sqrt(innings left))), where margin is home runs minus away runs and innings left is max(0.5, 9.5 − inning − 0.5 when the half is the bottom). An extra inning uses that 0.5 floor. The chart is omitted when the game has no inning arrays, or when those arrays do not add up to the stored score.

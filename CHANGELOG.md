@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Series MVP from the box scores
+
+A finished series now names a series MVP from the games in that series. A hitter uses the awards MVP line. A pitcher uses IP + 0.4×K + 5×W + 3×SV − 1.5×ER − 0.3×BB, with wins and saves taken from the stored decisions. A player who both hit and pitched keeps the higher score. The formula is in [MODELS.md](MODELS.md) and on the Formulas page. The name is on the series page and on the bracket card. A name already stored in the series file is left in the file and is still shown when it differs. No game result was changed. The service worker cache is payoff-pitch-v24.
+
 ## 2026-10-26 — Head to head
 
 The Head to head page compares any two clubs, lineup spot by lineup spot. An owner card is used when one is stored. Otherwise the converted lineup is used, with the peak line taken from that card. A club with neither says "Roster not announced yet." No player or stat is added. The service worker cache is payoff-pitch-v23. No game result was changed.
