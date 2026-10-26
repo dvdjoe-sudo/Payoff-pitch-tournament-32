@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Peak 162 series projections
+
+An upcoming or in-progress series shows a projection on the bracket and on the series preview. Offense is the mean Peak 162 OPS of the owner lineup. Pitching is the mean Peak 162 ERA of the owner rotation. One game is the log5 of the two Pythagorean win percentages, and the series chance is the best of 7 from the wins already stored. The line is labeled Projection. A club without an announced roster says Odds TBD. The projection is for the pairing as it stands, and the next round is projected again after the re-seed. The formula is on the Formulas page and in MODELS.md. The service worker cache is payoff-pitch-v26. No game result was changed.
+
 ## 2026-10-26 — Tournament leaders page
 
 The Leaders page lists the top 10 from the played games: batting average, home runs, runs batted in, hits, runs, stolen bases, and OPS, then earned run average, WHIP, wins, strikeouts, and saves. Rate hitting needs 10 plate appearances. Rate pitching needs 5 innings. A tie at the tenth place stays on the list. Each row uses the club logo and color and links to the player page. The numbers are the same book as [LEADERS.md](LEADERS.md), counted in the browser from the loaded games, so a game that is pushed is on the board when the site updates. OPS is on-base percentage plus slugging. The service worker cache is payoff-pitch-v25. No game result was changed.
