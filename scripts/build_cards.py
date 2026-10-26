@@ -129,7 +129,7 @@ BAT_COUNTING = ["G", "PA", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB",
 ARCHIVE_BAT = [("ab", "ab"), ("r", "r"), ("h", "h"), ("doubles", "2b"),
                ("triples", "3b"), ("hr", "hr"), ("rbi", "rbi"), ("bb", "bb"),
                ("k", "so"), ("hbp", "hbp"), ("sb", "sb"), ("cs", "cs"),
-               ("sac", "sac"), ("sf", "sf"), ("gidp", "gidp")]
+               ("sac", "sac"), ("sf", "sf"), ("gidp", "gidp"), ("ci", "ci")]
 ARCHIVE_PIT = [("h", "h"), ("r", "r"), ("er", "er"), ("bb", "bb"),
                ("k", "so"), ("hr", "hr"), ("bf", "bf")]
 

@@ -8,7 +8,7 @@ R1-01 was adopted into the tournament by Joe's ruling. R1-02 onward were played 
 
 ## Definitions and limits
 
-- Plate appearances: AB + BB + HBP + SAC + SF as recorded. In the Payoff Pitch series, sacrifice flies are folded into the single SAC category and SF is not split out, so those plate appearances ride in SAC, and OBP uses SF as recorded (0 where the source does not split it).
+- Plate appearances: AB + BB + HBP + SAC + SF + CI as recorded. In the Payoff Pitch series, sacrifice flies are folded into the single SAC category and SF is not split out, so those plate appearances ride in SAC, and OBP uses SF as recorded (0 where the source does not split it). CI is catcher's interference: a plate appearance, never an at-bat, and excluded from OBP by rule (Joe's ruling, 2026-10-25).
 - Home runs allowed is recorded for the Payoff Pitch series only. The R1-01 records do not carry it, so no tournament HR-allowed leaderboard is kept.
 - Rate hitting (AVG, OBP, SLG): 10 plate appearances.
 - Rate pitching (ERA, WHIP): 5 innings, which is 15 outs. ERA is 27 × ER / outs. A half hundredth rounds to the even hundredth, the Baseball-Reference rule, so 1 earned run in 8 innings (1.125) is 1.12. WHIP still rounds half up.
@@ -42,7 +42,7 @@ At least 10 plate appearances.
 | Miguel Cabrera | Miami Marlins | .333 | 5 | 15 | 17 |
 | Nick Johnson | Washington Nationals | .333 | 5 | 15 | 17 |
 | Ted Williams | Boston Red Sox | .318 | 7 | 22 | 30 |
-| Toby Hall | Tampa Bay Rays | .318 | 7 | 22 | 22 |
+| Toby Hall | Tampa Bay Rays | .318 | 7 | 22 | 23 |
 | Christian Yelich | Miami Marlins | .313 | 5 | 16 | 19 |
 | Ty Cobb | Detroit Tigers | .308 | 8 | 26 | 29 |
 | Juan Soto | Washington Nationals | .294 | 5 | 17 | 20 |
@@ -137,7 +137,7 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Hank Greenberg | Detroit Tigers | .333 | 27 |
 | Tris Speaker | Boston Red Sox | .323 | 31 |
 | Steve Finley | Arizona Diamondbacks | .320 | 25 |
-| Toby Hall | Tampa Bay Rays | .318 | 22 |
+| Toby Hall | Tampa Bay Rays | .318 | 23 |
 | Yogi Berra | New York Yankees | .316 | 19 |
 | Hanley Ramirez | Miami Marlins | .313 | 16 |
 | David Ortiz | Boston Red Sox | .300 | 30 |

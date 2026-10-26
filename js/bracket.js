@@ -693,7 +693,7 @@
   }
 
   function paOf(stats) {
-    return stats.ab + stats.bb + stats.hbp + stats.sac + stats.sf;
+    return stats.ab + stats.bb + stats.hbp + stats.sac + stats.sf + (stats.ci || 0);
   }
 
   function totalBases(stats) {
@@ -707,7 +707,7 @@
       if (!players[key]) {
         players[key] = {
           key: key, team: code, id: id, name: name,
-          bat: { ab: 0, r: 0, h: 0, rbi: 0, bb: 0, k: 0, hbp: 0, sb: 0, cs: 0, sac: 0, sf: 0, doubles: 0, triples: 0, hr: 0 },
+          bat: { ab: 0, r: 0, h: 0, rbi: 0, bb: 0, k: 0, hbp: 0, sb: 0, cs: 0, sac: 0, sf: 0, ci: 0, doubles: 0, triples: 0, hr: 0 },
           pit: { outs: 0, h: 0, r: 0, er: 0, bb: 0, k: 0, hr: 0, gs: 0, w: 0, l: 0, sv: 0 },
           log: [], grades: []
         };
@@ -718,7 +718,7 @@
     state.data.games.forEach(function (game) {
       game.batting.forEach(function (line) {
         var player = bucket(line.team, line.player_id, line.name);
-        ["ab", "r", "h", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "sf", "doubles", "triples", "hr"].forEach(function (field) {
+        ["ab", "r", "h", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "sf", "ci", "doubles", "triples", "hr"].forEach(function (field) {
           player.bat[field] += nz(line[field]);
         });
         player.log.push({ game: game.id, side: "bat", line: line });

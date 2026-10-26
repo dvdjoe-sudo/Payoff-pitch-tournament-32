@@ -82,7 +82,7 @@ def nz(value) -> int:
 
 
 def pa_of(stats: dict) -> int:
-    return stats["ab"] + stats["bb"] + stats["hbp"] + stats["sac"] + stats["sf"]
+    return stats["ab"] + stats["bb"] + stats["hbp"] + stats["sac"] + stats["sf"] + nz(stats.get("ci"))
 
 
 def total_bases(stats: dict) -> int:
@@ -130,8 +130,8 @@ def accumulate(data: dict):
             key = (line["team"], line["player_id"])
             names[key] = line["name"]
             bucket = batting[key]
-            for field in ("ab", "r", "h", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "sf", "gidp", "ibb", "doubles", "triples", "hr"):
-                bucket[field] += nz(line[field])
+            for field in ("ab", "r", "h", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "sf", "gidp", "ibb", "doubles", "triples", "hr", "ci"):
+                bucket[field] += nz(line.get(field))
         started = set()
         for line in game["pitching"]:
             key = (line["team"], line["player_id"])
@@ -274,7 +274,7 @@ def leaders_markdown(data: dict | None = None) -> str:
         "",
         "## Definitions and limits",
         "",
-        "- Plate appearances: AB + BB + HBP + SAC + SF as recorded. In the Payoff Pitch series, sacrifice flies are folded into the single SAC category and SF is not split out, so those plate appearances ride in SAC, and OBP uses SF as recorded (0 where the source does not split it).",
+        "- Plate appearances: AB + BB + HBP + SAC + SF + CI as recorded. In the Payoff Pitch series, sacrifice flies are folded into the single SAC category and SF is not split out, so those plate appearances ride in SAC, and OBP uses SF as recorded (0 where the source does not split it). CI is catcher's interference: a plate appearance, never an at-bat, and excluded from OBP by rule (Joe's ruling, 2026-10-25).",
         "- Home runs allowed is recorded for the Payoff Pitch series only. The R1-01 records do not carry it, so no tournament HR-allowed leaderboard is kept.",
         "- Rate hitting (AVG, OBP, SLG): 10 plate appearances.",
         "- Rate pitching (ERA, WHIP): 5 innings, which is 15 outs. ERA is 27 × ER / outs. A half hundredth rounds to the even hundredth, the Baseball-Reference rule, so 1 earned run in 8 innings (1.125) is 1.12. WHIP still rounds half up.",
@@ -370,7 +370,7 @@ def team_stats_markdown(data: dict | None = None) -> str:
         lines = []
         totals = blank()
         for _pa, name, stats, _pid in bat_rows:
-            for field in ("ab", "r", "h", "doubles", "triples", "hr", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "sf"):
+            for field in ("ab", "r", "h", "doubles", "triples", "hr", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "sf", "ci"):
                 totals[field] += stats[field]
             lines.append([
                 name, str(pa_of(stats)), str(stats["ab"]), str(stats["r"]), str(stats["h"]),
@@ -460,7 +460,7 @@ def box_markdown(game_id: str, data: dict | None = None) -> str:
         if show_sf:
             headers.append("SF")
         body = []
-        totals = {field: 0 for field in ("ab", "r", "h", "doubles", "triples", "hr", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "gidp", "sf")}
+        totals = {field: 0 for field in ("ab", "r", "h", "doubles", "triples", "hr", "rbi", "bb", "k", "hbp", "sb", "cs", "sac", "gidp", "sf", "ci")}
         any_sub = False
         for line in lines:
             any_sub = any_sub or bool(line.get("is_substitute"))
@@ -478,7 +478,7 @@ def box_markdown(game_id: str, data: dict | None = None) -> str:
                 cells.append(dash(line.get("sf")))
             body.append(cells)
             for field in totals:
-                totals[field] += nz(line[field])
+                totals[field] += nz(line.get(field))
         total_cells = [
             "", "**Totals**", str(totals["ab"]), str(totals["r"]), str(totals["h"]),
             str(totals["doubles"]), str(totals["triples"]), str(totals["hr"]),
@@ -489,7 +489,7 @@ def box_markdown(game_id: str, data: dict | None = None) -> str:
             total_cells.append(str(totals["sf"]))
         body.append(total_cells)
         parts.extend(md_table(headers, body))
-        plate = totals["ab"] + totals["bb"] + totals["hbp"] + totals["sac"] + totals["sf"]
+        plate = totals["ab"] + totals["bb"] + totals["hbp"] + totals["sac"] + totals["sf"] + totals["ci"]
         parts.append(f"Plate appearances: {plate}.")
         if any_sub:
             parts.append("* Entered as a substitute.")
