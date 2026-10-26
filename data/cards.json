@@ -43653,10 +43653,10 @@
   "peak_pit_162": null,
   "spots": [
    {
-    "group": "lineup",
+    "group": "bench",
     "kind": "hitter",
     "pos": "2B",
-    "slot": 9
+    "slot": 6
    }
   ],
   "team": "PHA",
@@ -44873,103 +44873,6 @@
   "team": "PHA",
   "tournament": null
  },
- "PHA|earnsge01": {
-  "card_bat": null,
-  "card_pit": {
-   "addendum": {
-    "dp": 7,
-    "hold": 7,
-    "inj": "Iron",
-    "pickoff": "chart p18, keyed to Hold",
-    "wp": "30-31"
-   },
-   "card_type": "RP",
-   "qa_status": "PASS",
-   "so_modifier": "NONE",
-   "special": [],
-   "stamina": {
-    "relief": "Long",
-    "start": 8
-   },
-   "table_2d6": {
-    "10": "TOUGH",
-    "11": "TOUGH",
-    "12": "WHEELHOUSE",
-    "2": "PATIENT",
-    "3": "TOUGH",
-    "4": "TOUGH",
-    "5": "TOUGH",
-    "6": "TOUGH",
-    "7": "TOUGH",
-    "8": "PATIENT",
-    "9": "TOUGH"
-   },
-   "throws": "R"
-  },
-  "id": "earnsge01",
-  "name": "George Earnshaw",
-  "peak_bat": null,
-  "peak_bat_162": null,
-  "peak_pit": {
-   "bb": 533,
-   "bf": 5398,
-   "er": 551,
-   "g": 198,
-   "gs": 157,
-   "h": 1192,
-   "hbp": 14,
-   "hr": 79,
-   "ip": "1236.0",
-   "l": 48,
-   "r": 630,
-   "so": 720,
-   "sv": 10,
-   "w": 93,
-   "window_years": [
-    1928,
-    1929,
-    1930,
-    1931,
-    1932
-   ]
-  },
-  "peak_pit_162": {
-   "bb": 113,
-   "bf": 1143,
-   "er": 117,
-   "g": 42,
-   "gs": 33,
-   "h": 252,
-   "hbp": 3,
-   "hr": 17,
-   "ip": "261.2",
-   "ip_outs": 785,
-   "l": 10,
-   "r": 133,
-   "seasons": 5,
-   "so": 152,
-   "sv": 2,
-   "team_games": 765,
-   "w": 20,
-   "window_years": [
-    1928,
-    1929,
-    1930,
-    1931,
-    1932
-   ]
-  },
-  "spots": [
-   {
-    "group": "bullpen",
-    "kind": "pitcher",
-    "pos": "RP",
-    "slot": 6
-   }
-  ],
-  "team": "PHA",
-  "tournament": null
- },
  "PHA|fainfe01": {
   "card_bat": {
    "arm": "Average",
@@ -45302,10 +45205,10 @@
   "peak_pit_162": null,
   "spots": [
    {
-    "group": "bench",
+    "group": "lineup",
     "kind": "hitter",
-    "pos": "1B",
-    "slot": 6
+    "pos": "DH",
+    "slot": 9
    }
   ],
   "team": "PHA",
@@ -48347,6 +48250,27 @@
     "kind": "hitter",
     "pos": "CF",
     "slot": 2
+   }
+  ],
+  "team": "PHA",
+  "tournament": null
+ },
+ "PHA|valoel01": {
+  "card_bat": null,
+  "card_pit": null,
+  "conversion_status": "PENDING: frozen Hitter v0.5 card source not available; not yet playable",
+  "id": "valoel01",
+  "name": "Elmer Valo",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "OF",
+    "slot": 7
    }
   ],
   "team": "PHA",
