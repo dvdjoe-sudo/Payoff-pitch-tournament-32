@@ -797,6 +797,7 @@
       select
     ));
     root.appendChild(el("p", { class: "note", text: "Swipe the rounds sideways. A series score is the games each club has won. Click a series for its games." }));
+    root.appendChild(el("p", null, el("a", { href: "graphics/bracket.png", download: "payoff-pitch-bracket.png", text: "Download bracket image" })));
     var strip = titleStrip();
     if (strip) root.appendChild(strip);
     GROUPS.forEach(function (group) {
