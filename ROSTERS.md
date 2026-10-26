@@ -370,7 +370,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 - C Johnny Kling
 - UTL Billy Herman
-- OF Jimmy Ryan
+- OF Andre Dawson
 - INF Joe Tinker
 - PH/3B Stan Hack
 - 1B Mark Grace
@@ -396,7 +396,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 These names are not on the active roster.
 
-- Andre Dawson RF
 - Derrek Lee 1B
 - Kris Bryant 3B/OF
 - Javier Báez SS/2B

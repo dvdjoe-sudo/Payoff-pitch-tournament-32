@@ -2,6 +2,14 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — Chicago Cubs converted set joins; bench chair corrected
+
+The Chicago Cubs' converted Payoff Pitch set is on the site: 26 players (15 hitters, 11 pitchers) with peak lines shown as 162-game averages, converted cards, and the tournament state stated plainly, because Chicago has not played a series yet. Nine clubs now have converted sets, 234 players and 235 roster spots in `data/cards.json` and `data/rosters.json`; the 112 players with tournament lines are unchanged. The set was built to the standing conversion standard (frozen engines, v2 pitcher cards, pitcher addendum) in the workspace; its own reports live with the set. `scripts/build_cards.py` gained the one SETS row and the Lahman team-games id for the club (CHN).
+
+The owner's announced Cubs card is corrected in the same commit. Joe's rulings of 2026-10-23, confirmed 2026-10-25, put Andre Dawson in the bench outfield chair: `data/announced_rosters.json` and `ROSTERS.md` now list Dawson on the bench, Jimmy Ryan is off the 26, and Dawson no longer appears in the honorable mentions. `data/peak162.json` was regenerated to match. Frank Chance is the recorded manager; his manager profile is a separate build and is not part of this change.
+
+No game, series, or locked line changed, and the validator passes with its fingerprint, frozen-series hash, and counting totals unchanged. The service worker cache moved to payoff-pitch-v7 for the updated data files.
+
 ## 2026-10-26 — Converted cards sit beside the owner rosters
 
 Main's converted Payoff Pitch sets and player cards are on the same site as the owner's announced cards and the franchise Peak 162 lines. A club with a converted set shows that set. A club with an owner card shows that card. Detroit shows both, plus the game lines already on the book. Washington keeps the converted set and the game record; the Nationals owner card stays off. No game result was changed. The service worker cache is payoff-pitch-v6 so both sets of data files are in the shell.

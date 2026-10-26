@@ -741,18 +741,6 @@
      2025
     ]
    },
-   "Andre Dawson RF": {
-    "lahman_id": "dawsoan01",
-    "status": "ok",
-    "text": "Peak 162 with Chicago Cubs (1987 to 1991): 162 G, 657 PA, 609 AB, 83 R, 174 H, 27 2B, 6 3B, 34 HR, 111 RBI, 11 SB, 38 BB, 86 SO, .286/.329/.517/.846",
-    "years": [
-     1987,
-     1988,
-     1989,
-     1990,
-     1991
-    ]
-   },
    "Aramis Ramirez 3B": {
     "lahman_id": "ramirar01",
     "status": "ok",
@@ -931,16 +919,16 @@
      2006
     ]
    },
-   "OF Jimmy Ryan": {
-    "lahman_id": "ryanji01",
+   "OF Andre Dawson": {
+    "lahman_id": "dawsoan01",
     "status": "ok",
-    "text": "Peak 162 with Chicago Cubs (1885 to 1889): 162 G, 734 PA, 670 AB, 147 R, 211 H, 36 2B, 14 3B, 16 HR, 90 RBI, 56 SB, 58 BB, 54 SO, .314/.374/.481/.855. Pitching (1886 to 1893). Years away from the franchise inside this span are not in the totals. 65 G, 16-3, 5 SV, 317.0 IP, 360 H, 127 ER, 119 BB, 116 SO, 3.62 ERA, 1.51 WHIP, 3.3 K/9",
+    "text": "Peak 162 with Chicago Cubs (1987 to 1991): 162 G, 657 PA, 609 AB, 83 R, 174 H, 27 2B, 6 3B, 34 HR, 111 RBI, 11 SB, 38 BB, 86 SO, .286/.329/.517/.846",
     "years": [
-     1885,
-     1886,
-     1887,
-     1888,
-     1889
+     1987,
+     1988,
+     1989,
+     1990,
+     1991
     ]
    },
    "PH/3B Stan Hack": {

@@ -439,6 +439,222 @@
   ],
   "seed": 3
  },
+ "CHC": {
+  "code": "CHC",
+  "name": "Chicago Cubs",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "sandbry01",
+    "kind": "hitter",
+    "name": "Ryne Sandberg",
+    "pos": "2B",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "rizzoan01",
+    "kind": "hitter",
+    "name": "Anthony Rizzo",
+    "pos": "1B",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "santoro01",
+    "kind": "hitter",
+    "name": "Ron Santo",
+    "pos": "3B",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "sosasa01",
+    "kind": "hitter",
+    "name": "Sammy Sosa",
+    "pos": "RF",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "willibi01",
+    "kind": "hitter",
+    "name": "Billy Williams",
+    "pos": "LF",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "bankser01",
+    "kind": "hitter",
+    "name": "Ernie Banks",
+    "pos": "SS",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "wilsoha01",
+    "kind": "hitter",
+    "name": "Hack Wilson",
+    "pos": "CF",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "hartnga01",
+    "kind": "hitter",
+    "name": "Gabby Hartnett",
+    "pos": "C",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "crowape01",
+    "kind": "hitter",
+    "name": "Pete Crow-Armstrong",
+    "pos": "CF",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "klingjo01",
+    "kind": "hitter",
+    "name": "Johnny Kling",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "hermabi01",
+    "kind": "hitter",
+    "name": "Billy Herman",
+    "pos": "2B",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "dawsoan01",
+    "kind": "hitter",
+    "name": "Andre Dawson",
+    "pos": "RF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "tinkejo01",
+    "kind": "hitter",
+    "name": "Joe Tinker",
+    "pos": "SS",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "hackst01",
+    "kind": "hitter",
+    "name": "Stan Hack",
+    "pos": "3B",
+    "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "gracema01",
+    "kind": "hitter",
+    "name": "Mark Grace",
+    "pos": "1B",
+    "slot": 6
+   },
+   {
+    "group": "rotation",
+    "id": "jenkife01",
+    "kind": "pitcher",
+    "name": "Fergie Jenkins",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "brownmo01",
+    "kind": "pitcher",
+    "name": "Mordecai Brown",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "reuscri01",
+    "kind": "pitcher",
+    "name": "Rick Reuschel",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "alexape01",
+    "kind": "pitcher",
+    "name": "Pete Alexander",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "zambrca01",
+    "kind": "pitcher",
+    "name": "Carlos Zambrano",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "suttebr01",
+    "kind": "pitcher",
+    "name": "Bruce Sutter",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "smithle02",
+    "kind": "pitcher",
+    "name": "Lee Smith",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "woodke02",
+    "kind": "pitcher",
+    "name": "Kerry Wood",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "stroppe01",
+    "kind": "pitcher",
+    "name": "Pedro Strop",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "marshse01",
+    "kind": "pitcher",
+    "name": "Sean Marshall",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "vaughhi01",
+    "kind": "pitcher",
+    "name": "Hippo Vaughn",
+    "pos": "RP",
+    "slot": 6
+   }
+  ],
+  "seed": 6
+ },
  "DET": {
   "code": "DET",
   "name": "Detroit Tigers",
