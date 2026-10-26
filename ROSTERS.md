@@ -590,6 +590,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - RH UTIL Pedro Guerrero 11
 - LH INF Max Muncy 8
 - MI/PR Maury Wills 12
+- RH BAT/OF Matt Kemp 10
 
 ### Rotation
 
@@ -939,6 +940,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - UTIL Jimmy Dykes 15
 - IF2 Jack Barry 8
 - 2B/BAT Max Bishop 10
+- LH BAT/OF Elmer Valo 13
 
 ### Rotation
 
