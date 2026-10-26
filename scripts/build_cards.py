@@ -539,7 +539,79 @@ def build():
             "players": roster_players,
         }
 
+    apply_owner_roster_amendments(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
+
+
+
+def apply_owner_roster_amendments(cards, rosters):
+    """Keep the staged PHA converted-set view aligned with Joe's dated owner card.
+
+    The original external set directory has not yet been regenerated. This
+    adapter deliberately does NOT invent a Hitter v0.5 card for Elmer Valo.
+    When the frozen engine output is available, rebuild the source set first,
+    then rerun this builder to replace the visible pending entry.
+    """
+    roster = rosters.get("PHA")
+    if roster is None:
+        return
+    players = roster["players"]
+    index = {p["id"]: p for p in players}
+    for player_id in ("fainfe01", "bishoma01"):
+        if player_id not in index:
+            raise SystemExit("PHA roster amendment missing " + player_id)
+
+    index["fainfe01"].update(group="lineup", slot=9, pos="DH")
+    index["bishoma01"].update(group="bench", slot=6, pos="2B")
+
+    players[:] = [p for p in players if p["id"] != "earnsge01"]
+    cards.pop("PHA|earnsge01", None)
+    valo_id = "valoel01"
+    if valo_id not in index:
+        players.append({
+            "group": "bench", "id": valo_id, "kind": "hitter",
+            "name": "Elmer Valo", "pos": "OF", "slot": 7,
+        })
+    else:
+        index[valo_id].update(group="bench", slot=7, pos="OF")
+
+    for player_id in ("fainfe01", "bishoma01"):
+        card = cards["PHA|" + player_id]
+        spot = index[player_id]
+        card["spots"] = [{
+            "group": spot["group"], "kind": "hitter",
+            "pos": spot["pos"], "slot": spot["slot"],
+        }]
+
+    # This placeholder is NOT a converted or playable card. Only original
+    # Hitter v0.5 output is authorized to populate card_bat.
+    valocard = cards.get("PHA|" + valo_id)
+    if valocard is None:
+        valocard = {
+            "id": valo_id, "name": "Elmer Valo", "team": "PHA",
+            "spots": [], "card_bat": None, "card_pit": None,
+            "peak_bat": None, "peak_bat_162": None,
+            "peak_pit": None, "peak_pit_162": None, "tournament": None,
+        }
+        cards["PHA|" + valo_id] = valocard
+    valocard["spots"] = [{
+        "group": "bench", "kind": "hitter", "pos": "OF", "slot": 7,
+    }]
+    if valocard.get("card_bat") is None:
+        valocard["conversion_status"] = (
+            "PENDING: frozen Hitter v0.5 card source not available; "
+            "not yet playable"
+        )
+    else:
+        valocard.pop("conversion_status", None)
+
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {group: sum(p["group"] == group for p in players) for group in order}
+    if counts != {"lineup": 9, "bench": 7, "rotation": 5, "bullpen": 5}:
+        raise SystemExit("PHA owner roster slot mismatch: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("PHA owner roster requires 26 distinct players")
 
 
 def dump(obj, path):
