@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Roster tables fit a phone
+
+Team-page lineup, bench, rotation, and bullpen tables keep a narrow left-aligned slot, a wrapping player name, and a compact position. The hand, the years on the owner card, and the Peak 162 line stack under the name. Converted Payoff Pitch cards use the same layout. Nothing in the tables runs off the side of a phone. The service worker cache is payoff-pitch-v11. No roster line and no game result was changed.
+
 ## 2026-10-26 — Site cleanups
 
 The Players page now says converted cards exist for eleven clubs (ARI, BOS, CHC, COL, DET, MON, PHA, SF, STL, TB, WSH), including the Rockies and Cardinals sets, and that every club's roster is on its team page. On a club that has both an owner card and a converted set, the owner card is the list and the converted set is behind a Payoff Pitch cards toggle. Peak lines use one label, `Peak 162 with <club> (YYYY–YYYY)`, and one note. About and Formulas are pages in the site. The walkthrough video link is gone. `data/cards.json` and `data/peak162.json` load when opened, and they are out of the service worker install cache (`payoff-pitch-v10`). `scripts/split_game_detail.py` is removed. The Philadelphia roster, the 25 owner cards, and the waiting-on-a-graphic note are closed. Open questions are gathered in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md). No game result was changed.

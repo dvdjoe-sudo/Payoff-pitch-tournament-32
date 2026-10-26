@@ -1216,6 +1216,80 @@
     }
   }
 
+  function isNameStart(token) {
+    if (/^[A-Z](?:\.[A-Z]\.?)+$/.test(token)) return true;
+    if (/^(DJ|AJ|JJ)$/.test(token)) return true;
+    if (token.indexOf("/") !== -1 || /\d/.test(token)) return false;
+    return /[a-zà-ÿ]/.test(token);
+  }
+
+  function isYearToken(token) {
+    return /^\(?\d+\)?$/.test(token) || /^\d{4}(?:-\d{2,4})?,?$/.test(token);
+  }
+
+  function isPosToken(token) {
+    return /^(?:C|1B|2B|3B|SS|LF|CF|RF|DH|OF|IF|SP|RP|P|UT|INF|CI|MI|PH)(?:\/(?:C|1B|2B|3B|SS|LF|CF|RF|DH|OF|IF|SP|RP|P|UT|INF|CI|MI|PH|Bat|Power|Utility|PR|DEF))*$/i.test(token);
+  }
+
+  function splitRosterLine(line) {
+    var tokens = String(line || "").trim().split(/\s+/).filter(Boolean);
+    var i = 0;
+    while (i < tokens.length && !isNameStart(tokens[i])) i += 1;
+    if (!tokens.length || i === 0 || i >= tokens.length) return { slot: "", name: tokens.join(" "), pos: "", meta: "" };
+    var rest = tokens.slice(i);
+    var meta = [];
+    function peelYears() {
+      while (rest.length > 1 && (isYearToken(rest[rest.length - 1]) || /^[LRS]$/.test(rest[rest.length - 1]))) {
+        meta.unshift(rest.pop());
+      }
+    }
+    peelYears();
+    var pos = "";
+    var tail = rest[rest.length - 1];
+    if (rest.length > 2 && /^(Utility|Power|Bat)$/i.test(tail) && isPosToken(rest[rest.length - 2])) {
+      var word = rest.pop();
+      pos = rest.pop() + " " + word;
+      peelYears();
+    } else if (rest.length > 1 && isPosToken(tail)) {
+      pos = rest.pop();
+      peelYears();
+    }
+    return { slot: tokens.slice(0, i).join(" "), name: rest.join(" "), pos: pos, meta: meta.join(" ") };
+  }
+
+  function rosterTable(rows) {
+    var showSlot = rows.some(function (row) { return row.slot; });
+    var showPos = rows.some(function (row) { return row.pos; });
+    var longest = 0;
+    rows.forEach(function (row) { longest = Math.max(longest, String(row.slot || "").length); });
+    var slotSize = longest <= 2 ? " slot-num" : longest <= 4 ? " slot-mid" : " slot-wide";
+    var wrap = el("div", { class: "table-wrap roster-fit" });
+    var t = el("table", { class: "roster-table" + (showSlot ? " has-slot" + slotSize : " no-slot") + (showPos ? " has-pos" : " no-pos") });
+    if (showSlot || showPos) {
+      var head = el("tr");
+      if (showSlot) head.appendChild(el("th", { text: "Slot" }));
+      head.appendChild(el("th", { text: "Player" }));
+      if (showPos) head.appendChild(el("th", { text: "Pos" }));
+      t.appendChild(el("thead", null, head));
+    }
+    var body = el("tbody");
+    rows.forEach(function (row) {
+      var tr = el("tr");
+      if (showSlot) tr.appendChild(el("td", { class: "roster-slot", text: row.slot || "" }));
+      var who = el("td", { class: "roster-who" });
+      if (row.name && row.name.nodeType) who.appendChild(row.name);
+      else who.appendChild(el("span", { class: "roster-player", text: row.name || "" }));
+      if (row.meta) who.appendChild(el("span", { class: "roster-meta", text: row.meta }));
+      if (row.peak) who.appendChild(el("span", { class: "roster-peak muted", text: row.peak }));
+      tr.appendChild(who);
+      if (showPos) tr.appendChild(el("td", { class: "roster-pos", text: row.pos || "" }));
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    return wrap;
+  }
+
   function rosterSection(page, code, collapsed) {
     var roster = state.rosters && state.rosters[code];
     if (!roster) return;
@@ -1226,8 +1300,8 @@
         .sort(function (a, b) { return a.slot - b.slot; });
       if (!rows.length) return;
       body.appendChild(el("h4", { text: GROUP_TITLES[group] }));
-      body.appendChild(table(["Slot", "Player", "Position"], rows.map(function (spot) {
-        return [spot.slot, linkPlayer(code, spot.id, spot.name), spot.pos];
+      body.appendChild(rosterTable(rows.map(function (spot) {
+        return { slot: String(spot.slot), name: linkPlayer(code, spot.id, spot.name), pos: spot.pos };
       })));
     });
     if (collapsed) {
@@ -1367,19 +1441,13 @@
     return row.text;
   }
 
-  function rosterItem(code, line) {
-    return el("li", null,
-      el("span", { class: "roster-name", text: line }),
-      el("span", { class: "roster-peak muted", text: peakLine(code, line) })
-    );
-  }
-
   function rosterGroup(code, title, lines) {
     var block = el("div");
     block.appendChild(el("h4", { text: title }));
-    var list = el("ul", { class: "roster-list" });
-    (lines || []).forEach(function (line) { list.appendChild(rosterItem(code, line)); });
-    block.appendChild(list);
+    block.appendChild(rosterTable((lines || []).map(function (line) {
+      var parts = splitRosterLine(line);
+      return { slot: parts.slot, name: parts.name, pos: parts.pos, meta: parts.meta, peak: peakLine(code, line) };
+    })));
     return block;
   }
 
@@ -1397,8 +1465,8 @@
       var title = "Honorable mentions";
       if (roster.honorable_note) title += " (" + roster.honorable_note + ")";
       var honors = rosterGroup(code, title, roster.honorable_mentions);
-      var list = honors.querySelector("ul");
-      honors.insertBefore(el("p", { class: "note", text: "These names are not on the active roster." }), list);
+      var head = honors.querySelector("h4");
+      honors.insertBefore(el("p", { class: "note", text: "These names are not on the active roster." }), head.nextSibling);
       block.appendChild(honors);
     }
     if (roster.what_if) {
