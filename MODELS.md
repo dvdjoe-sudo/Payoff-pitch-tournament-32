@@ -72,7 +72,7 @@ The Leaders page reads the played games already on the site. It does not invent 
 - Batting average is hits divided by at-bats, for a player with at least 10 plate appearances. Plate appearances are AB + BB + HBP + SAC + SF as recorded.
 - OPS is on-base percentage plus slugging, with that same plate-appearance minimum. On-base percentage is (H + BB + HBP) / (AB + BB + HBP + SF). Slugging is total bases divided by at-bats. Total bases are H + 2B + 2×3B + 3×HR.
 - Home runs, runs batted in, hits, runs, and stolen bases are the counting totals. The list is the top 10, and anyone tied with the tenth player stays.
-- ERA is 27 × ER / outs, for a pitcher with at least 15 outs. WHIP is (H + BB) × 3 / outs, with the same minimum. Hit batsmen are not in WHIP.
+- ERA is 27 × ER / outs, for a pitcher with at least 15 outs. Outs are thirds of an inning. The printed ERA rounds half to even, the Baseball-Reference rule, so 2 earned runs in 16 innings (1.125) is 1.12. WHIP is (H + BB) × 3 / outs, with the same minimum, and WHIP still rounds half up. Hit batsmen are not in WHIP.
 - Wins, strikeouts, and saves are counting totals. A win is the W decision and a save is the S decision.
 
 A pushed game is on the page when that game is in the loaded archive. The page is rebuilt with the site. No second board is stored.

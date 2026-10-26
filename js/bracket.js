@@ -102,7 +102,13 @@
 
   function eraLabel(er, outs) {
     if (!outs) return "—";
-    return ((27 * er) / outs).toFixed(2);
+    var hundredths = 27 * er * 100;
+    var whole = Math.floor(hundredths / outs);
+    var remainder = hundredths % outs;
+    if (remainder * 2 > outs || (remainder * 2 === outs && whole % 2 === 1)) whole += 1;
+    var text = String(whole);
+    while (text.length < 3) text = "0" + text;
+    return text.slice(0, text.length - 2) + "." + text.slice(text.length - 2);
   }
 
   function q1(value) {
@@ -3352,7 +3358,7 @@
       if (pit.outs >= 15) {
         var era = (27 * pit.er) / pit.outs;
         var whip = (3 * (pit.h + pit.bb)) / pit.outs;
-        arm.era.push(leaderEntry(player, era, -pit.outs, halfUp(era, 2)));
+        arm.era.push(leaderEntry(player, era, -pit.outs, eraLabel(pit.er, pit.outs)));
         arm.whip.push(leaderEntry(player, whip, -pit.outs, halfUp(whip, 2)));
       }
       counting(arm.w, pit.w, -pit.l);
@@ -3454,7 +3460,7 @@
     page.appendChild(el("p", { text: "Among clubs that have both means, the league is their average OPS and average ERA. A club win percentage is o² / (o² + e²), where o is the club OPS divided by the league OPS and e is the club ERA divided by the league ERA. One game is the log5 of those two win percentages: (a × (1 − b)) / (a × (1 − b) + b × (1 − a)). The series chance is the probability of reaching 4 wins first from the wins already stored, with each remaining game independent at that game probability. After a round is re-seeded, the next pairing is a new projection." }));
     page.appendChild(el("p", { text: "The bracket also shows a Monte Carlo from the club indexes: one game is 1 / (1 + exp(−(index A − index B) / 80)), with no home-field edge. Four thousand draws use a fixed seed. A finished series is recorded as 1 and 0, not resimulated. A shown 0.0 means that side won none of the draws." }));
     page.appendChild(el("h3", { text: "Leaders" }));
-    page.appendChild(el("p", { text: "The Leaders page counts the played games. Batting average and OPS need 10 plate appearances. OPS is on-base percentage plus slugging. ERA and WHIP need 5 innings. ERA is 27 × ER / outs. WHIP is (H + BB) / IP. Counting lists are the top 10, and a tie at tenth place stays. A new game is on the board when it is in the archive." }));
+    page.appendChild(el("p", { text: "The Leaders page counts the played games. Batting average and OPS need 10 plate appearances. OPS is on-base percentage plus slugging. ERA and WHIP need 5 innings. ERA is 27 × ER / outs, and a half hundredth rounds to the even hundredth, so 1.125 is 1.12. WHIP is (H + BB) / IP and rounds half up. Counting lists are the top 10, and a tie at tenth place stays. A new game is on the board when it is in the archive." }));
     page.appendChild(el("h3", { text: "Peak 162" }));
     page.appendChild(el("p", { text: PEAK_NOTE + " The label is Peak 162 with the club and the first and last year of the stretch." }));
     page.appendChild(el("h3", { text: "Run differential" }));

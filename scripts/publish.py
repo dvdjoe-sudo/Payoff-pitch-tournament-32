@@ -12,7 +12,7 @@ import json
 import struct
 import zlib
 from collections import defaultdict
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal, ROUND_HALF_EVEN, ROUND_HALF_UP
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -59,9 +59,16 @@ def avg_label(numer: int, denom: int) -> str:
 
 
 def era_label(earned: int, outs: int) -> str:
+    """ERA as Baseball-Reference prints it.
+
+    Innings are thirds of an inning (outs / 3). The rate is 9 * ER / IP,
+    which is 27 * ER / outs. A value that lands exactly on a half hundredth
+    rounds to the even hundredth, so 1.125 is 1.12.
+    """
     if outs <= 0:
         return "—"
-    return q2((Decimal(27) * Decimal(earned)) / Decimal(outs))
+    era = (Decimal(27) * Decimal(earned)) / Decimal(outs)
+    return f"{era.quantize(Decimal('0.01'), rounding=ROUND_HALF_EVEN)}"
 
 
 def whip_label(hits: int, walks: int, outs: int) -> str:
@@ -270,7 +277,7 @@ def leaders_markdown(data: dict | None = None) -> str:
         "- Plate appearances: AB + BB + HBP + SAC + SF as recorded. In the Payoff Pitch series, sacrifice flies are folded into the single SAC category and SF is not split out, so those plate appearances ride in SAC, and OBP uses SF as recorded (0 where the source does not split it).",
         "- Home runs allowed is recorded for the Payoff Pitch series only. The APBA-played R1-01 records do not carry it, so no tournament HR-allowed leaderboard is kept.",
         "- Rate hitting (AVG, OBP, SLG): 10 plate appearances.",
-        "- Rate pitching (ERA, WHIP): 5 innings, which is 15 outs. ERA is 27 × ER / outs, rounded half up. 1 earned run in 8 innings is 1.13.",
+        "- Rate pitching (ERA, WHIP): 5 innings, which is 15 outs. ERA is 27 × ER / outs. A half hundredth rounds to the even hundredth, the Baseball-Reference rule, so 1 earned run in 8 innings (1.125) is 1.12. WHIP still rounds half up.",
         "- Counting tables list the top 10, with ties at the cutoff included. A counting row needs at least 1 of that stat.",
         "- Innings are baseball innings: 7.2 is seven innings and two outs.",
         "",
