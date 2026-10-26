@@ -218,6 +218,30 @@ main { padding: 0.5rem 1.25rem 2.5rem; }
   margin-top: 0.15rem;
 }
 
+.club-line.club-colored {
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0.65rem;
+}
+
+.club-name { min-width: 0; }
+
+.club-swatch {
+  display: inline-flex;
+  width: 0.7rem;
+  height: 0.9rem;
+  margin-right: 0.35rem;
+  vertical-align: -0.12rem;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(90, 80, 60, 0.35);
+}
+
+.club-swatch i {
+  flex: 1 1 auto;
+  display: block;
+}
+
 .club-line strong { font-weight: 700; }
 
 .club-line .runs {
@@ -400,6 +424,14 @@ details.card-set summary {
 .roster-table .roster-meta,
 .roster-table .roster-peak { margin-top: 0.12rem; font-size: 0.92rem; line-height: 1.35; }
 .roster-table a { overflow-wrap: break-word; }
+.roster-table.roster-accent { box-shadow: inset 3px 0 0 var(--club-primary); }
+.roster-table.roster-accent .roster-slot {
+  background: var(--club-primary);
+  color: var(--club-ink);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: inset 0 -3px 0 var(--club-secondary);
+}
 
 table {
   width: 100%;
@@ -460,6 +492,10 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   table { min-width: 32rem; }
   .table-wrap.roster-fit table.roster-table { min-width: 0; }
   .table-wrap.card-band table { min-width: 0; }
+  .team-hero-colored {
+    margin: -0.8rem -0.8rem 0.85rem;
+    padding: 0.8rem 0.8rem 0.65rem;
+  }
   .standings { min-width: 28rem; }
   .card-facts {
     display: grid;
@@ -661,6 +697,28 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   align-items: center;
   margin-bottom: 0.6rem;
 }
+
+.team-hero-colored {
+  flex-wrap: wrap;
+  margin: -1rem -1rem 0.85rem;
+  padding: 0.9rem 1rem 0.75rem;
+  border-radius: 13px 13px 0 0;
+}
+
+.team-hero-colored h2 { margin: 0 0 0.15rem; }
+.team-hero-colored .meta,
+.team-hero-colored a { color: inherit; }
+
+.hero-stripes {
+  display: flex;
+  flex: 1 0 100%;
+  height: 6px;
+  margin: 0.45rem 0 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hero-stripes span { flex: 1 1 auto; display: block; }
 
 .logo {
   width: 3.2rem;

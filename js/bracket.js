@@ -39,7 +39,7 @@
   var state = {
     data: null, byCode: {}, games: {}, players: {}, highlight: "",
     colors: {}, bios: {}, odds: null, recap: null, plays: null,
-    cards: {}, rosters: {}, announced: {}, peak: null
+    cards: {}, rosters: {}, announced: {}, peak: null, clubColors: {}
   };
   var detailCache = {};
   var renderToken = 0;
@@ -122,6 +122,147 @@
 
   function teamColors(code) {
     return (state.colors && code && state.colors[code]) || null;
+  }
+
+  var INK_LIGHT = "#f6f1e6";
+  var INK_DARK = "#1b1714";
+
+  function clubPalette(code) {
+    var palette = state.clubColors && code && state.clubColors[code];
+    if (!palette || !palette.primary) return null;
+    return palette;
+  }
+
+  function hexToRgb(hex) {
+    var h = String(hex || "").replace("#", "").trim();
+    if (h.length === 3) h = h.charAt(0) + h.charAt(0) + h.charAt(1) + h.charAt(1) + h.charAt(2) + h.charAt(2);
+    if (!/^[0-9a-fA-F]{6}$/.test(h)) return null;
+    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+  }
+
+  function channelLum(channel) {
+    var scaled = channel / 255;
+    return scaled <= 0.04045 ? scaled / 12.92 : Math.pow((scaled + 0.055) / 1.055, 2.4);
+  }
+
+  function relativeLuminance(hex) {
+    var rgb = hexToRgb(hex);
+    if (!rgb) return 0;
+    return 0.2126 * channelLum(rgb[0]) + 0.7152 * channelLum(rgb[1]) + 0.0722 * channelLum(rgb[2]);
+  }
+
+  function contrastRatio(a, b) {
+    var left = relativeLuminance(a);
+    var right = relativeLuminance(b);
+    var hi = Math.max(left, right);
+    var lo = Math.min(left, right);
+    return (hi + 0.05) / (lo + 0.05);
+  }
+
+  function inkOn(bg) {
+    return contrastRatio(bg, INK_LIGHT) >= contrastRatio(bg, INK_DARK) ? INK_LIGHT : INK_DARK;
+  }
+
+  function cssHex(name, fallback) {
+    var value = "";
+    try { value = getComputedStyle(document.documentElement).getPropertyValue(name).trim(); } catch (err) { value = ""; }
+    return /^#[0-9a-fA-F]{6}$/.test(value) ? value : fallback;
+  }
+
+  function paletteColors(palette) {
+    return [palette.primary, palette.secondary, palette.accent].filter(Boolean);
+  }
+
+  function accentOn(palette, surface) {
+    var best = "";
+    var bestRatio = 4.5;
+    paletteColors(palette).forEach(function (color) {
+      var ratio = contrastRatio(color, surface);
+      if (ratio >= bestRatio) {
+        best = color;
+        bestRatio = ratio;
+      }
+    });
+    return best;
+  }
+
+  function barColor(palette, surface) {
+    var best = palette.primary;
+    var bestRatio = -1;
+    paletteColors(palette).forEach(function (color) {
+      var ratio = contrastRatio(color, surface);
+      if (ratio > bestRatio) {
+        best = color;
+        bestRatio = ratio;
+      }
+    });
+    return best;
+  }
+
+  function paintHero(hero, code) {
+    var palette = clubPalette(code);
+    if (!palette || !hero) return;
+    hero.classList.add("team-hero-colored");
+    hero.style.background = palette.primary;
+    hero.style.color = inkOn(palette.primary);
+    var stripes = hero.querySelector(".hero-stripes");
+    if (!stripes) {
+      stripes = el("div", { class: "hero-stripes", "aria-hidden": "true" });
+      hero.appendChild(stripes);
+    }
+    while (stripes.firstChild) stripes.removeChild(stripes.firstChild);
+    [palette.secondary, palette.accent].forEach(function (color) {
+      if (!color) return;
+      var bit = el("span");
+      bit.style.background = color;
+      stripes.appendChild(bit);
+    });
+  }
+
+  function paintRosterTable(table, code) {
+    var palette = clubPalette(code);
+    if (!palette || !table) return;
+    table.classList.add("roster-accent");
+    table.style.setProperty("--club-primary", palette.primary);
+    table.style.setProperty("--club-secondary", palette.secondary || palette.primary);
+    table.style.setProperty("--club-ink", inkOn(palette.primary));
+  }
+
+  function paintClubRow(row, code, winner) {
+    var palette = clubPalette(code);
+    if (!palette || !row) return;
+    row.setAttribute("data-club", code);
+    row.setAttribute("data-club-paint", "row");
+    row.classList.add("club-colored");
+    var surface = cssHex("--card", "#fffaf1");
+    var bar = barColor(palette, surface);
+    var stripe = palette.secondary && palette.secondary !== bar ? palette.secondary : palette.primary;
+    row.style.boxShadow = "inset 4px 0 0 " + bar + ", inset 7px 0 0 " + stripe;
+    var swatch = row.querySelector(".club-swatch");
+    if (!swatch) {
+      swatch = el("span", { class: "club-swatch", "aria-hidden": "true" });
+      var name = row.querySelector(".club-name");
+      if (name) name.insertBefore(swatch, name.firstChild);
+    }
+    while (swatch.firstChild) swatch.removeChild(swatch.firstChild);
+    [palette.primary, palette.secondary, palette.accent].forEach(function (color) {
+      if (!color) return;
+      var bit = el("i");
+      bit.style.background = color;
+      swatch.appendChild(bit);
+    });
+    var nameEl = row.querySelector(".club-name");
+    if (!nameEl || winner) {
+      if (nameEl) nameEl.style.color = "";
+      return;
+    }
+    nameEl.style.color = accentOn(palette, surface);
+  }
+
+  function repaintClubRows() {
+    document.querySelectorAll("[data-club-paint='row']").forEach(function (row) {
+      paintClubRow(row, row.getAttribute("data-club"), row.classList.contains("winner-club"));
+    });
   }
 
   function logo(team, label) {
@@ -671,11 +812,14 @@
       var name = (code && series.seed_a != null && code === series.team_a ? "#" + series.seed_a + " " : "");
       if (code && code === series.team_b && series.seed_b != null) name = "#" + series.seed_b + " ";
       name += clubName(code);
-      var rowClass = "club-line" + (series.winner && series.winner === code ? " winner-club" : "");
-      card.appendChild(el("div", { class: rowClass },
-        el("span", { text: name }),
+      var winner = !!(series.winner && series.winner === code);
+      var rowClass = "club-line" + (winner ? " winner-club" : "");
+      var row = el("div", { class: rowClass },
+        el("span", { class: "club-name", text: name }),
         el("span", { class: "runs", text: wins })
-      ));
+      );
+      paintClubRow(row, code, winner);
+      card.appendChild(row);
     });
     var mc = mcOdds(series);
     if (mc) {
@@ -1321,7 +1465,7 @@
     return { slot: tokens.slice(0, i).join(" "), name: rest.join(" "), pos: pos, meta: meta.join(" ") };
   }
 
-  function rosterTable(rows) {
+  function rosterTable(rows, code) {
     var showSlot = rows.some(function (row) { return row.slot; });
     var showPos = rows.some(function (row) { return row.pos; });
     var longest = 0;
@@ -1350,6 +1494,7 @@
       body.appendChild(tr);
     });
     t.appendChild(body);
+    paintRosterTable(t, code);
     wrap.appendChild(t);
     return wrap;
   }
@@ -1366,7 +1511,7 @@
       body.appendChild(el("h4", { text: GROUP_TITLES[group] }));
       body.appendChild(rosterTable(rows.map(function (spot) {
         return { slot: String(spot.slot), name: linkPlayer(code, spot.id, spot.name), pos: spot.pos };
-      })));
+      }), code));
     });
     if (collapsed) {
       var details = el("details", { class: "card-set" });
@@ -1434,6 +1579,7 @@
       el("h2", { text: "#" + team.seed + " " + team.name }),
       el("p", { class: "meta", text: team.code + " · " + (team.bracket || "winners") + " bracket · series " + team.series_wins + "-" + team.series_losses + " · games " + team.game_wins + "-" + team.game_losses })
     ));
+    paintHero(hero, code);
     page.appendChild(hero);
     page.appendChild(el("p", { class: "muted", text: markNote(team.code) }));
     page.appendChild(el("p", { text: "Run differential " + (diff.rs - diff.ra) + " (" + diff.rs + " scored, " + diff.ra + " allowed)." }));
@@ -1511,7 +1657,7 @@
     block.appendChild(rosterTable((lines || []).map(function (line) {
       var parts = splitRosterLine(line);
       return { slot: parts.slot, name: parts.name, pos: parts.pos, meta: parts.meta, peak: peakLine(code, line) };
-    })));
+    }), code));
     return block;
   }
 
@@ -2795,6 +2941,7 @@
   themeButton.addEventListener("click", function () {
     var current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
     applyTheme(current === "dark" ? "light" : "dark");
+    repaintClubRows();
   });
   applyTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
 
@@ -2839,7 +2986,8 @@
       loadOptional("data/rosters.json"),
       loadOptional("feed/odds.json"),
       loadOptional("feed/recap.json"),
-      loadOptional("data/announced_rosters.json")
+      loadOptional("data/announced_rosters.json"),
+      loadOptional("data/team_colors.json")
     ]);
   }).then(function (parts) {
     var data = parts[0];
@@ -2850,6 +2998,7 @@
     state.odds = parts[4];
     state.recap = parts[5];
     state.announced = parts[6] || {};
+    state.clubColors = parts[7] || {};
     state.cards = {};
     state.cardsLoaded = false;
     state.peak = null;
