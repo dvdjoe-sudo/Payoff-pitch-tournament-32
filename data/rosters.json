@@ -1735,6 +1735,222 @@
   ],
   "seed": 17
  },
+ "PIT": {
+  "code": "PIT",
+  "name": "Pittsburgh Pirates",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "wagneho01",
+    "kind": "hitter",
+    "name": "Honus Wagner",
+    "pos": "SS",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "mccutan01",
+    "kind": "hitter",
+    "name": "Andrew McCutchen",
+    "pos": "CF",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "clemero01",
+    "kind": "hitter",
+    "name": "Roberto Clemente",
+    "pos": "RF",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "bondsba01",
+    "kind": "hitter",
+    "name": "Barry Bonds",
+    "pos": "LF",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "stargwi01",
+    "kind": "hitter",
+    "name": "Willie Stargell",
+    "pos": "1B",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "kinerra01",
+    "kind": "hitter",
+    "name": "Ralph Kiner",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "sanguma01",
+    "kind": "hitter",
+    "name": "Manny Sanguillen",
+    "pos": "C",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "traynpi01",
+    "kind": "hitter",
+    "name": "Pie Traynor",
+    "pos": "3B",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "mazerbi01",
+    "kind": "hitter",
+    "name": "Bill Mazeroski",
+    "pos": "2B",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "kendaja01",
+    "kind": "hitter",
+    "name": "Jason Kendall",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "vaughar01",
+    "kind": "hitter",
+    "name": "Arky Vaughan",
+    "pos": "SS",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "careyma01",
+    "kind": "hitter",
+    "name": "Max Carey",
+    "pos": "CF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "leachto01",
+    "kind": "hitter",
+    "name": "Tommy Leach",
+    "pos": "3B",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "parkeda01",
+    "kind": "hitter",
+    "name": "Dave Parker",
+    "pos": "RF",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "skenepa01",
+    "kind": "pitcher",
+    "name": "Paul Skenes",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "coopewi01",
+    "kind": "pitcher",
+    "name": "Wilbur Cooper",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "adamsba01",
+    "kind": "pitcher",
+    "name": "Babe Adams",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "candejo01",
+    "kind": "pitcher",
+    "name": "John Candelaria",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "frienbo01",
+    "kind": "pitcher",
+    "name": "Bob Friend",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "tekulke01",
+    "kind": "pitcher",
+    "name": "Kent Tekulve",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "facero01",
+    "kind": "pitcher",
+    "name": "Roy Face",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "giustda01",
+    "kind": "pitcher",
+    "name": "Dave Giusti",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "melanma01",
+    "kind": "pitcher",
+    "name": "Mark Melancon",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "mcbeaal01",
+    "kind": "pitcher",
+    "name": "Al McBean",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "jacksgr01",
+    "kind": "pitcher",
+    "name": "Grant Jackson",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "leevesa01",
+    "kind": "pitcher",
+    "name": "Sam Leever",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 8
+ },
  "SD": {
   "code": "SD",
   "name": "San Diego Padres",
