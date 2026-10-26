@@ -311,7 +311,7 @@ def season_notes(total: int, size: int, start: int, end: int) -> list[str]:
 def year_label(start: int, end: int) -> str:
     if start == end:
         return f"({start})"
-    return f"({start} to {end})"
+    return f"({start}\u2013{end})"
 
 
 def hitter_line(stats: dict, games: int) -> str:

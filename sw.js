@@ -1,5 +1,5 @@
 /* Payoff Pitch offline shell. Bump CACHE when a shipped asset must replace a cached copy. */
-var CACHE = "payoff-pitch-v9";
+var CACHE = "payoff-pitch-v10";
 var SHELL = [
   "./",
   "./index.html",
@@ -10,8 +10,6 @@ var SHELL = [
   "./data/teams.json",
   "./data/bios.json",
   "./data/announced_rosters.json",
-  "./data/peak162.json",
-  "./data/cards.json",
   "./data/rosters.json",
   "./feed/odds.json",
   "./feed/recap.json",

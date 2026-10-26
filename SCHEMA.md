@@ -62,7 +62,7 @@ Optional fields, present only where the archive had them:
 | `stage`, `formation`, `feeders`, `feeder_labels` | Shells after the opening round. `formation.pool` and `formation.gate` say what the slot is waiting on. |
 | `provenance`, `carry` | R1-02 and R1-03. `carry.rotation_next_start` is the next starter named for each club. |
 
-TODO for Joe: R1-04 through R1-16 do not carry `round`. R1-01, R1-02, and R1-03 set `round` to 1. Confirm whether the unplayed opening shells should say 1. They were left as stored.
+R1-01, R1-02, R1-03, and R1-04 set `round` to 1. Unplayed opening shells R1-05 through R1-16 do not carry `round`. They were left as stored. Whether they should say 1 is an open question in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
 
 `home_by_game` is filled for a paired series. Keys are game numbers `"1"` through `"7"`. An unfilled shell has an empty object.
 
@@ -155,6 +155,6 @@ Two generated files sit beside the results file. They are not part of schema 1 a
 | `peak_pit_162` | The same window as an average season on a 162-game schedule, the form the player page displays: the per-season average (window total / window seasons) rescaled by (162 x seasons) / `team_games`, the club's total team games across the window seasons from the Lahman Teams table, which multiplies out to window total x 162 / `team_games`. Counting fields round half up; IP is scaled in outs (`ip_outs`) and rendered back in baseball thirds (`ip`, so "307.1" is 307 and a third). The block also carries `window_years`, `seasons`, and `team_games`; a window season with no Lahman row for the club counts as 162 team games and is named in `team_games_fallback` and in the generator's build log. ERA is not carried here; the viewer computes it from `peak_pit`, unchanged. |
 | `card_bat` | The converted hitter card: bats, throws, `positions` (pos, range, e, arm), `sections` (the four sections, each hand, each result a percentile band or null), `out_table`, `dp`, `steal` (jump and rating), `run`, `sac_bunt`, the stat line's fielding and arm labels, and the set's QA status. |
 | `card_pit` | The converted v2 pitcher card: throws, `card_type`, the `table_2d6` section map, `so_modifier`, `special` ratings, the addendum `stamina` (start number, relief class), the addendum ratings (wp, dp, hold, pickoff, inj), and the card's QA classification. |
-| `tournament` | The player's line aggregated from the master archive only: `batting` and `pitching` counting lines (pitching carries outs, not innings) and the `games` he appears in, in archive order. Null when he has no appearance; Philadelphia, Montreal, Chicago, and Colorado players are all null today. |
+| `tournament` | The player's line aggregated from the master archive only: `batting` and `pitching` counting lines (pitching carries outs, not innings) and the `games` he appears in, in archive order. Null when he has no appearance; Philadelphia, Montreal, Chicago, Colorado, and St. Louis players are all null today. |
 
 Player ids are the Lahman ids from the set inputs, unless the published results file already carries the same player under a different id; the published id wins so links keep working, and the generator prints each such case as a reconciliation. McClanahan is the one case today: `mcclash01` in the inputs and the master archive, `mcclasha01` here.

@@ -241,6 +241,17 @@ h4 { margin: 0.85rem 0 0.3rem; font-size: 1.02rem; }
 
 details { margin: 0.4rem 0 0.8rem; }
 summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+details.card-set {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.15rem 0.85rem 0.7rem;
+  background: var(--paper);
+}
+details.card-set summary {
+  font-weight: 700;
+  color: var(--navy);
+}
+:root[data-theme="dark"] details.card-set summary { color: var(--ink); }
 
 .meta { color: var(--muted); margin: 0 0 0.8rem; }
 

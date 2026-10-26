@@ -58,7 +58,7 @@ Counting stats are then scaled. Hitters scale to 162 games. A rotation card scal
 
 A hitter's line also shows pitching when the pitching window has at least 10 starts or 50 innings. A pitcher's line also shows batting when the batting window has at least 200 plate appearances and those appearances are more than eight times his pitching appearances in that window, so a pitcher who only batted on the days he pitched does not get a second line.
 
-The label is `Peak 162 with <club> (YYYY to YYYY)`. One season prints a single year. Players who cannot be matched, or who have no franchise seasons, say `Peak stats unavailable`.
+The label is `Peak 162 with <club> (YYYY–YYYY)`. One season prints a single year. Players who cannot be matched, or who have no franchise seasons, say `Peak stats unavailable`.
 
 Philadelphia Athletics use only the 1901–1954 Athletics (Lahman team `PHA`). Oakland uses only Oakland seasons from 1968 on, including the 2025 Athletics team id `ATH`, and not the Kansas City Athletics. Montreal uses only the Expos, 1969–2004. The Nationals card is not applied: that club has already played. Other clubs use the franchise team ids in `scripts/build_peak162.py`, including Brooklyn for the Dodgers, the Boston and Milwaukee Braves, the 1961–1971 Senators for the Rangers, the 1901–1960 Senators for the Twins, the Browns for the Orioles, and the Pilots for the Brewers. The Pilots are not Mariners seasons. The 1882 American Association Athletics are not the Philadelphia Athletics card.
 

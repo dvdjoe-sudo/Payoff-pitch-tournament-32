@@ -60,6 +60,6 @@ Philadelphia and Montreal were never on the graphic, and their slots are Joe's p
 
 The estimates are an ordinary least-squares regression of the graphic's index values on Legacy Lore Studio APEX roster sums, over the same 26-man rosters (career-sum field). Oakland and Washington were left out of the fit because their graphic values describe the merged franchises. The fit was R² 0.947, residual standard deviation 42.6, leave-one-out RMSE 44.2. Philadelphia estimates at 699.2, with an APEX_100 cross-check of 718.6. Montreal estimates at 543.2, with a cross-check of 545.7.
 
-TODO for Joe: the regression script and its output file are not in this repository. Confirm whether they should be added.
+The regression script and its output file are not in this repository. Whether they should be added is an open question in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
 
 The amendment that put Philadelphia at #17 accepted this estimate's #17-ish place on the index scale once Oakland is counted at its index position. That history is in the changelog. The table above is the one that governs.

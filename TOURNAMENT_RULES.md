@@ -6,7 +6,7 @@ Seeds are only in [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md). The bracket map is
 
 ## Rosters
 
-Every club carries 26 men: a nine-man lineup, a five-man bench, a five-man rotation, and a seven-man bullpen, from Joe's all-time roster graphics. [ROSTERS.md](ROSTERS.md) is the roster record for all 32 clubs. Where a club has not played and its graphic is not in the results file, that page carries a TODO.
+Every club carries 26 men: a nine-man lineup, a five-man bench, a five-man rotation, and a seven-man bullpen, from Joe's all-time roster graphics. [ROSTERS.md](ROSTERS.md) is the roster record for all 32 clubs. Owner cards are on file for 25 clubs, including the Philadelphia Athletics. The note that a missing graphic left a roster TODO is closed. A club that has played and has no owner card still lists only the players who have appeared.
 
 A pitcher carded in a swing or long role is a bullpen arm, not a starter. On the recorded Yankees and Marlins rosters those arms are Reynolds and Burnett. Section 2 does not bar them from pitching in relief.
 
@@ -20,13 +20,9 @@ Play resolution, symbols, grades, and the manager's menu, as adopted for this to
 
 Play resolution uses the APBA Basic Game boards, Version 23 (the 2012–2020 printing; Version 24 made no play-result changes). A cell's value is its latest documented change in the APBA Handbook Part 5 change catalogue, carried forward. Coverage as audited: 1,065 of 2,352 cells established (45.3 percent). Any cell the catalogue could not establish is model-filled: it resolves on the project's card plus log5 model. Nothing resolves on an unlabeled fallback.
 
-TODO for Joe: the board reconstruction is not in this repository. Confirm whether it should be added.
-
 ### Master Game symbols
 
-Master Game symbols are assigned to every card by the Master Game Instructions' old-card procedures and are permanent: steal allowance letters and steal success numbers, catcher Th and PB ratings, arm ratings, pitcher MF, and QR ratings. They are never recomputed between games.
-
-TODO for Joe: the symbol tables are not in this repository. The assignments that were written up covered the Yankees and Marlins cards. Confirm whether those tables should be added.
+Master Game symbols are assigned to every card by the Master Game Instructions' old-card procedures and are permanent: steal allowance letters and steal success numbers, catcher Th and PB ratings, arm ratings, pitcher MF, and QR ratings. They are never recomputed between games. The symbol tables are not in this repository. The assignments that were written up covered the Yankees and Marlins cards.
 
 ### Pitcher grades during a game
 
@@ -38,9 +34,7 @@ Pitcher grades move during a game by three sources, applied together:
 
 The starter fatigue chart works as printed. At each start, two dice set the BFR adjustment, and BF Adjusted equals the pitcher's BF rating plus the adjustment. Once batters faced reach BF Adjusted and the starter has allowed his first earned run, the escalator applies: retire the next two, minus one grade; retire batters three and four, minus one more; any batter reaches, minus one; two consecutive batters reach, minus three; three consecutive reach, straight to D, which is the floor. Grade advancement under Rule 26 trumps the chart until the first earned run.
 
-On model-filled cells only, a grade step moves a pitcher's log5 rates by the factors derived from the project's 24 pitcher cards. One step toward A: hits ×0.9283, walks ×0.9181, strikeouts ×1.1474. A step toward D applies the inverse of each. Home runs scale with hits. On board-resolved cells, the pitcher's live grade letter picks the board column.
-
-TODO for Joe: a longer calibration table is not in this repository. The factors in this section are the standing factors.
+On model-filled cells only, a grade step moves a pitcher's log5 rates by the factors derived from the project's 24 pitcher cards. One step toward A: hits ×0.9283, walks ×0.9181, strikeouts ×1.1474. A step toward D applies the inverse of each. Home runs scale with hits. On board-resolved cells, the pitcher's live grade letter picks the board column. A longer calibration table is not in this repository. The factors in this section are the standing factors.
 
 ### Stealing
 
@@ -57,9 +51,7 @@ The SCBL Rule 34 gate decides who may attempt a called steal. A and B rated runn
 
 ### Manager decisions
 
-The decision menu is full. Recorded bench styles are the Yankees old-school fireman and the Marlins modern matchup. Style picks which legal arm follows. It never decides whether the hook rules apply.
-
-TODO for Joe: bench styles for the other clubs are not recorded.
+The decision menu is full. Recorded bench styles are the Yankees old-school fireman and the Marlins modern matchup. Style picks which legal arm follows. It never decides whether the hook rules apply. Bench styles for the other clubs are not recorded.
 
 Managers decide:
 
@@ -82,29 +74,17 @@ From 2026-10-24 the tournament is simulated in Payoff Pitch. R1-01 was simulated
 
 Section 1 states that play resolution uses the Version 23 boards, with model-filled cells where the catalogue has no cell. R1-01 carries a board-versus-model resolution count. R1-02's `resolutions` is null.
 
-TODO for Joe: confirm whether Version 23 boards still govern Payoff Pitch games, or whether Payoff Pitch deck resolution replaces them from R1-02 forward.
-
 ### Master Game symbols
 
 Section 1 states that Master Game symbols are permanent and are not recomputed between games. The symbol tables are not in this repository. R1-02's empty `final_grades` matches its provenance: Payoff Pitch has no letter grades.
-
-TODO for Joe: confirm whether Master Game symbols still govern Payoff Pitch games (steal, arm, fatigue), or only the adopted APBA series.
 
 ### Card-41 injury check
 
 Section 9 states that the card-41 check is the only injury trigger. R1-02 records `n41` as null. Its provenance says that APBA counter does not exist in Payoff Pitch.
 
-TODO for Joe: confirm the injury rule for Payoff Pitch games.
-
 ### SCBL Rule 34 steal gate
 
-Section 1 states the gate: A and B runners anytime; C and D runners only within one run. The R1-02 record does not say whether that gate was applied.
-
-TODO for Joe: confirm that Rule 34 still decides who may steal in a Payoff Pitch game.
-
-TODO for Joe: Rules 32, 44, 20c, 35, and 22 are written above as in force. Confirm they still govern Payoff Pitch games.
-
-TODO for Joe: Sections 1, 4, and 5 describe APBA letter-grade fatigue and the run and grade hooks. R1-02 stores `fatigue_end_states` and an empty `final_grades` object. Confirm which fatigue and hook rules govern Payoff Pitch.
+Section 1 states the gate: A and B runners anytime; C and D runners only within one run. The R1-02 record does not say whether that gate was applied. Rules 32, 44, 20c, 35, and 22 are written above as in force. Sections 1, 4, and 5 describe APBA letter-grade fatigue and the run and grade hooks. R1-02 stores `fatigue_end_states` and an empty `final_grades` object.
 
 ## 2. Starters never relieve
 
@@ -160,9 +140,7 @@ An injured player is out for the rest of that game only and returns at full stre
 
 Every game record states the board-versus-model resolution split for an APBA game: board cells, model-filled cells, and unparsed established texts, out of total resolutions. It lists any model-filled cell that decided a play: a game-winning hit, a deciding error, a season-ending out. Those counts are the `resolutions` object. A Payoff Pitch game may store null there; see the section above.
 
-The standing record of a played game is the summary object in `tournament_results.json` and the detail file in `games/`. Rules sources are named with the game, including the standing note that stealing runs on the Master Game Instructions procedure with the SCBL Rule 34 gate because the Base Stealing board is not in Handbook Part 5.
-
-TODO for Joe: standalone write-ups of individual games are not in this repository. The JSON is the record that is here.
+The standing record of a played game is the summary object in `tournament_results.json` and the detail file in `games/`. Rules sources are named with the game, including the standing note that stealing runs on the Master Game Instructions procedure with the SCBL Rule 34 gate because the Base Stealing board is not in Handbook Part 5. Standalone write-ups of individual games are not in this repository. The JSON is the record that is here.
 
 ## Tournament format
 
@@ -185,6 +163,16 @@ A best of 7 turns the five-man rotation and returns to the first and second star
 
 ## Pool-relative pitching grades
 
-Pitcher letter grades are assigned by ranking the tournament pool. Starters and relievers are separate pools. The pool grades are frozen: the starter A line extends through number 35 (Gibson A). Those frozen grades are the grades of record. Fixed-band grades printed on the cards are kept as history.
+Pitcher letter grades are assigned by ranking the tournament pool. Starters and relievers are separate pools. The pool grades are frozen: the starter A line extends through number 35 (Gibson A). Those frozen grades are the grades of record. Fixed-band grades printed on the cards are kept as history. The frozen grade table is not in this repository. R1-02's `final_grades` object is empty, and that series' provenance says Payoff Pitch has no letter grades.
 
-TODO for Joe: the frozen grade table is not in this repository. Confirm it should be added, and confirm whether pool-relative letter grades still apply in Payoff Pitch. R1-02's `final_grades` object is empty, and that series' provenance says Payoff Pitch has no letter grades.
+## Open questions
+
+TODO for Joe:
+
+- The Version 23 board reconstruction, the Master Game symbol tables, the longer grade-calibration table, and the frozen pool-grade table are not in this repository. Confirm whether any of them should be added, and whether pool-relative letter grades still apply in Payoff Pitch.
+- Bench styles are recorded only for the Yankees and the Marlins.
+- For Payoff Pitch games, confirm whether Version 23 boards, Master Game symbols, the card-41 injury check, Rule 34, Rules 32, 44, 20c, 35, and 22, and the letter-grade fatigue and hook rules still govern, or whether deck resolution replaces them. R1-02 stores null `resolutions`, null `n41`, and an empty `final_grades` object.
+- Standalone write-ups of individual games are not in this repository. The JSON is the record.
+- Unplayed opening shells R1-05 through R1-16 do not carry `round`. R1-01, R1-02, R1-03, and R1-04 set it to 1. Confirm whether the unplayed shells should say 1.
+- The seed regression script and its output file are not in this repository. Confirm whether they should be added.
+- San Francisco, Boston, Arizona, Tampa Bay, and Washington have played and have no owner roster card. Positions, managers, and anyone who has not appeared are still unrecorded on those clubs.

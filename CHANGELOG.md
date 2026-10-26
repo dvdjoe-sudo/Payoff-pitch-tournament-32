@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Site cleanups
+
+The Players page now says converted cards exist for eleven clubs (ARI, BOS, CHC, COL, DET, MON, PHA, SF, STL, TB, WSH), including the Rockies and Cardinals sets, and that every club's roster is on its team page. On a club that has both an owner card and a converted set, the owner card is the list and the converted set is behind a Payoff Pitch cards toggle. Peak lines use one label, `Peak 162 with <club> (YYYY–YYYY)`, and one note. About and Formulas are pages in the site. The walkthrough video link is gone. `data/cards.json` and `data/peak162.json` load when opened, and they are out of the service worker install cache (`payoff-pitch-v10`). `scripts/split_game_detail.py` is removed. The Philadelphia roster, the 25 owner cards, and the waiting-on-a-graphic note are closed. Open questions are gathered in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md). No game result was changed.
+
 ## 2026-10-25 — St. Louis Cardinals converted set joins; bench BAT chair corrected to Mark McGwire (Joe's ruling)
 
 The St. Louis Cardinals' converted Payoff Pitch set joins the site: 26 players with peak lines shown as 162-game averages and converted cards, and no tournament lines, because St. Louis has not played a series yet. Eleven clubs now have converted sets, 286 players and 287 roster spots in `data/cards.json` and `data/rosters.json`; the 112 players with tournament lines are unchanged. `scripts/build_cards.py` gained the one SETS row for the club. The set's audit stands at 15 PASS and 11 architecture-limited of 26, its engineered battery's three games all audit clean, and its sampled stress test returns PLAYS TRUE for all three tested hitters; the full build report lives in the payoff-pitch-cardinals set folder.
@@ -130,7 +134,7 @@ The bracket is winners stages of 16, 8, 4, 2, and 1 series counting the opening 
 
 Pool-relative pitcher grades were frozen. The starter A line extends through #35 (Gibson A). The frozen table is not in this repository. The current statement is in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
 
-Card status as recorded that day: all 32 clubs were described as built on the prime-window basis, the four split clubs from their own graphics. Philadelphia's graphic was said to name 25 distinct players, so that club was recorded with 25 cards. The build report is not in this repository. [ROSTERS.md](ROSTERS.md) leaves Philadelphia as a TODO until the roster is confirmed.
+Card status as recorded that day: all 32 clubs were described as built on the prime-window basis, the four split clubs from their own graphics. Philadelphia's graphic was said to name 25 distinct players, so that club was recorded with 25 cards. The build report is not in this repository. The Philadelphia roster was later confirmed: it is Connie Mack's card in [ROSTERS.md](ROSTERS.md), with Ferris Fain at DH. The waiting-on-a-graphic note is closed.
 
 ### Seed table this day used
 
