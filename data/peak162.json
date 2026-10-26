@@ -7359,18 +7359,6 @@
      1951
     ]
    },
-   "LONG Jason Isringhausen": {
-    "lahman_id": "isrinja01",
-    "status": "ok",
-    "text": "Peak 162 with St. Louis Cardinals (2003–2007): 65 G, 3-3, 38 SV, 65.1 IP, 47 H, 20 ER, 29 BB, 58 SO, 2.70 ERA, 1.17 WHIP, 8.1 K/9",
-    "years": [
-     2003,
-     2004,
-     2005,
-     2006,
-     2007
-    ]
-   },
    "MID1 Lindy McDaniel": {
     "lahman_id": "mcdanli01",
     "status": "ok",
@@ -7475,6 +7463,18 @@
      1982,
      1983,
      1984
+    ]
+   },
+   "SU3 Jason Isringhausen": {
+    "lahman_id": "isrinja01",
+    "status": "ok",
+    "text": "Peak 162 with St. Louis Cardinals (2003–2007): 65 G, 3-3, 38 SV, 65.1 IP, 47 H, 20 ER, 29 BB, 58 SO, 2.70 ERA, 1.17 WHIP, 8.1 K/9",
+    "years": [
+     2003,
+     2004,
+     2005,
+     2006,
+     2007
     ]
    },
    "UTIL-IF Red Schoendienst": {

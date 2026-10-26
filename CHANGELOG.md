@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Rockies and Cardinals card repairs
+
+Colorado and St. Louis hitter dice now cover 01–99. A band that ran past 99 keeps only the open faces, and a face left out of both the result bands and the out table is an out. Ten hitters and seven pitchers use a new franchise window. The raw counting line and the 162-game scale come from those seasons. The printed dice on those seventeen cards stay the repaired chart until a frozen-engine rebuild. Andres Galarraga and Enos Slaughter bat in the DH slot. Their cards stay first base and right field. Larry Walker's right field is range C and arm 6. Trevor Story's and Yadier Molina's arms are 7. Garrett Hampson also plays second base. Al Brazle is bullpen-only. Jason Isringhausen's owner slot is SU3. No game result was changed. The service worker cache is payoff-pitch-v39.
+
 ## 2026-10-26 — Milestone feed
 
 The home page, the Results page, and each player page list feats from the box scores: a cycle, a shutout, a complete game, a multi-home-run game, a four-hit game, a game of 10 or more strikeouts, and a no-hitter. A complete game is a start that recorded every out for that club. A shutout is that complete game with no runs allowed. A combined shutout names every pitcher who recorded an out. No cycle is on the book. The definitions are on the Formulas page. The lines wrap on a phone. A new game is on the list when it is in the archive. The service worker cache is payoff-pitch-v38. No game result was changed.
