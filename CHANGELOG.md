@@ -2,6 +2,14 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — Colorado Rockies converted set joins; 2026 seasons counted in prime windows (Joe's rule)
+
+Two changes land in one regeneration. First, the Colorado Rockies' converted Payoff Pitch set joins the site: 26 players with peak lines shown as 162-game averages and converted cards, and no tournament lines, because Colorado has not played a series yet. Ten clubs now have converted sets, 260 players and 261 roster spots in `data/cards.json` and `data/rosters.json`; the 112 players with tournament lines are unchanged. `scripts/build_cards.py` gained the one SETS row for the club.
+
+Second, Joe's rule of 2026-10-25 ("Yes any active player can use 2026 season is over") is applied across the converted sets: any active player's prime window is computed with the completed 2026 season counting like any other season, franchise seasons only. Twelve windows changed and their cards were rebuilt under the frozen engines: Washington (Keibert Ruiz, CJ Abrams, James Wood), Tampa Bay (Yandy Díaz, Junior Caminero, Shane McClanahan, Kevin Kelly), Detroit (Tyler Holton), and Arizona (Corbin Carroll, Ketel Marte, Gabriel Moreno, Geraldo Perdomo). Pete Crow-Armstrong's identical rebuild for Chicago landed earlier the same day. Each rebuilt player's page now shows the new window years and the new 162-game peak line; the set folders carry the dated amendment in each SET_REPORT.md with old and new fits. Players whose 2026 was played for another club do not count it for their set, and every other card is byte-identical.
+
+No game, series, or locked line changed: the tournament archive still holds 22 games, and the games already played with the old cards stand as played. The validator passes with no re-lock, a second generator run is a zero diff, and the service worker cache moved to payoff-pitch-v8 for the updated data files.
+
 ## 2026-10-25 — Chicago Cubs converted set joins; bench chair corrected
 
 The Chicago Cubs' converted Payoff Pitch set is on the site: 26 players (15 hitters, 11 pitchers) with peak lines shown as 162-game averages, converted cards, and the tournament state stated plainly, because Chicago has not played a series yet. Nine clubs now have converted sets, 234 players and 235 roster spots in `data/cards.json` and `data/rosters.json`; the 112 players with tournament lines are unchanged. The set was built to the standing conversion standard (frozen engines, v2 pitcher cards, pitcher addendum) in the workspace; its own reports live with the set. `scripts/build_cards.py` gained the one SETS row and the Lahman team-games id for the club (CHN).

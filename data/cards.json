@@ -96,10 +96,10 @@
  },
  "ARI|carroco02": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "Strong",
    "bats": "L",
    "dp": 7,
-   "fielding": "Above Average",
+   "fielding": "Great",
    "out_table": [
     {
      "range": [
@@ -209,10 +209,10 @@
    ],
    "positions": [
     {
-     "arm": 6,
-     "e": 3,
+     "arm": 8,
+     "e": 2,
      "pos": "RF",
-     "range": "B"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -222,122 +222,122 @@
     "IN-PLAY": {
      "vsLHP": {
       "1B": [
-       14,
-       43
+       4,
+       25
       ],
-      "2B": [
+      "2B": null,
+      "3B": [
        1,
-       13
-      ],
-      "3B": null
+       3
+      ]
      },
      "vsRHP": {
       "1B": [
-       12,
-       26
-      ],
-      "2B": [
        1,
-       11
+       21
       ],
+      "2B": null,
       "3B": null
      }
     },
     "PATIENT": {
      "vsLHP": {
-      "1B": [
-       56,
-       62
-      ],
-      "2B": null,
-      "3B": [
-       49,
-       48
-      ],
-      "BB": [
-       1,
-       48
-      ],
-      "HBP": [
-       63,
-       75
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       54,
-       58
-      ],
+      "1B": null,
       "2B": [
-       41,
-       53
+       39,
+       54
       ],
       "3B": null,
       "BB": [
        1,
-       40
+       37
       ],
       "HBP": [
-       59,
-       62
+       54,
+       57
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": null,
+      "3B": [
+       46,
+       48
+      ],
+      "BB": [
+       1,
+       45
+      ],
+      "HBP": [
+       49,
+       55
       ]
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
-       59,
-       61
+       70,
+       78
       ],
       "2B": null,
-      "3B": [
-       49,
-       58
-      ],
+      "3B": null,
       "SO": [
        1,
-       49
+       69
       ]
      },
      "vsRHP": {
       "1B": [
-       68,
+       75,
        79
       ],
-      "2B": null,
-      "3B": [
-       65,
-       67
+      "2B": [
+       59,
+       74
       ],
+      "3B": null,
       "SO": [
        1,
-       64
+       58
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       44,
-       75
+       68,
+       99
       ],
-      "2B": null,
-      "3B": null,
+      "2B": [
+       35,
+       49
+      ],
+      "3B": [
+       52,
+       67
+      ],
       "HR": [
        1,
-       45
+       35
       ]
      },
      "vsRHP": {
       "1B": [
-       51,
-       57
+       68,
+       99
       ],
-      "2B": null,
-      "3B": null,
+      "2B": [
+       52,
+       54
+      ],
+      "3B": [
+       55,
+       67
+      ],
       "HR": [
        1,
-       50
+       51
       ]
      }
     }
@@ -353,54 +353,56 @@
   "id": "carroco02",
   "name": "Corbin Carroll",
   "peak_bat": {
-   "2B": 84,
-   "3B": 41,
-   "AB": 1718,
-   "BB": 197,
-   "CS": 19,
-   "G": 456,
-   "GIDP": 16,
-   "H": 443,
-   "HBP": 30,
-   "HR": 78,
-   "IBB": 5,
-   "PA": 1962,
-   "R": 344,
-   "RBI": 234,
-   "SB": 121,
-   "SF": 17,
-   "SO": 408,
+   "2B": 117,
+   "3B": 58,
+   "AB": 2300,
+   "BB": 270,
+   "CS": 22,
+   "G": 612,
+   "GIDP": 24,
+   "H": 582,
+   "HBP": 38,
+   "HR": 100,
+   "IBB": 9,
+   "PA": 2633,
+   "R": 435,
+   "RBI": 312,
+   "SB": 142,
+   "SF": 25,
+   "SO": 559,
    "team_line": "Arizona Diamondbacks",
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
-   "2B": 30,
+   "2B": 31,
    "3B": 15,
-   "AB": 610,
-   "BB": 70,
-   "CS": 7,
+   "AB": 609,
+   "BB": 71,
+   "CS": 6,
    "G": 162,
    "GIDP": 6,
-   "H": 157,
-   "HBP": 11,
-   "HR": 28,
+   "H": 154,
+   "HBP": 10,
+   "HR": 26,
    "IBB": 2,
    "PA": 697,
-   "R": 122,
+   "R": 115,
    "RBI": 83,
-   "SB": 43,
-   "SF": 6,
-   "SO": 145,
+   "SB": 38,
+   "SF": 7,
+   "SO": 148,
    "team_line": "Arizona Diamondbacks",
-   "window_games": 456,
+   "window_games": 612,
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,
@@ -2671,18 +2673,21 @@
      "vsLHP": {
       "1B": [
        7,
-       36
+       34
       ],
-      "2B": null,
-      "3B": [
+      "2B": [
        1,
-       5
+       3
+      ],
+      "3B": [
+       4,
+       6
       ]
      },
      "vsRHP": {
       "1B": [
        1,
-       26
+       31
       ],
       "2B": null,
       "3B": null
@@ -2691,92 +2696,101 @@
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       52,
-       59
+       48,
+       48
       ],
       "2B": [
-       47,
-       46
+       36,
+       47
       ],
       "3B": null,
       "BB": [
        1,
-       47
+       35
       ],
-      "HBP": null
+      "HBP": [
+       49,
+       50
+      ]
      },
      "vsRHP": {
-      "1B": null,
-      "2B": [
-       40,
-       39
-      ],
-      "3B": [
+      "1B": [
        45,
        45
       ],
+      "2B": null,
+      "3B": [
+       43,
+       44
+      ],
       "BB": [
        1,
-       39
+       42
       ],
       "HBP": [
-       48,
-       52
+       46,
+       50
       ]
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
-       41,
-       62
+       63,
+       74
       ],
       "2B": null,
       "3B": null,
       "SO": [
        1,
-       41
+       62
       ]
      },
      "vsRHP": {
       "1B": [
-       60,
-       71
-      ],
-      "2B": null,
-      "3B": [
-       47,
+       51,
        59
       ],
+      "2B": [
+       39,
+       50
+      ],
+      "3B": null,
       "SO": [
        1,
-       46
+       38
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       37,
-       96
+       59,
+       126
       ],
       "2B": null,
-      "3B": null,
+      "3B": [
+       44,
+       45
+      ],
       "HR": [
        1,
-       39
+       43
       ]
      },
      "vsRHP": {
       "1B": [
-       63,
+       78,
        99
       ],
       "2B": null,
-      "3B": null,
+      "3B": [
+       65,
+       77
+      ],
       "HR": [
        1,
-       62
+       64
       ]
      }
     }
@@ -2792,58 +2806,58 @@
   "id": "marteke01",
   "name": "Ketel Marte",
   "peak_bat": {
-   "2B": 139,
-   "3B": 32,
-   "AB": 2642,
-   "BB": 307,
-   "CS": 8,
-   "G": 709,
-   "GIDP": 56,
-   "H": 762,
-   "HBP": 26,
-   "HR": 135,
-   "IBB": 20,
-   "PA": 2996,
-   "R": 439,
-   "RBI": 400,
-   "SB": 35,
-   "SF": 21,
-   "SO": 463,
+   "2B": 144,
+   "3B": 23,
+   "AB": 2684,
+   "BB": 304,
+   "CS": 7,
+   "G": 697,
+   "GIDP": 50,
+   "H": 767,
+   "HBP": 29,
+   "HR": 143,
+   "IBB": 22,
+   "PA": 3041,
+   "R": 449,
+   "RBI": 417,
+   "SB": 33,
+   "SF": 24,
+   "SO": 470,
    "team_line": "Arizona Diamondbacks",
    "window_years": [
-    2018,
     2019,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
-   "2B": 32,
-   "3B": 7,
-   "AB": 604,
-   "BB": 70,
+   "2B": 33,
+   "3B": 5,
+   "AB": 624,
+   "BB": 71,
    "CS": 2,
    "G": 162,
-   "GIDP": 13,
-   "H": 174,
-   "HBP": 6,
-   "HR": 31,
+   "GIDP": 12,
+   "H": 178,
+   "HBP": 7,
+   "HR": 33,
    "IBB": 5,
-   "PA": 685,
-   "R": 100,
-   "RBI": 91,
+   "PA": 707,
+   "R": 104,
+   "RBI": 97,
    "SB": 8,
-   "SF": 5,
-   "SO": 106,
+   "SF": 6,
+   "SO": 109,
    "team_line": "Arizona Diamondbacks",
-   "window_games": 709,
+   "window_games": 697,
    "window_years": [
-    2018,
     2019,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,
@@ -3222,99 +3236,99 @@
    "out_table": [
     {
      "range": [
-      31,
-      34
+      26,
+      33
      ],
      "result": "P4"
     },
     {
      "range": [
-      42,
-      45
+      41,
+      44
      ],
      "result": "G1"
     },
     {
      "range": [
-      59,
-      65
+      58,
+      64
      ],
-     "result": "F9"
+     "result": "F7"
     },
     {
      "range": [
-      35,
-      36
+      34,
+      35
      ],
      "result": "P6"
     },
     {
      "range": [
-      46,
-      46
+      45,
+      45
      ],
      "result": "L4"
     },
     {
      "range": [
-      66,
-      72
-     ],
-     "result": "G4"
-    },
-    {
-     "range": [
-      37,
-      37
-     ],
-     "result": "P2"
-    },
-    {
-     "range": [
-      47,
-      50
-     ],
-     "result": "G3"
-    },
-    {
-     "range": [
-      73,
-      81
-     ],
-     "result": "F8"
-    },
-    {
-     "range": [
-      38,
-      39
-     ],
-     "result": "P3"
-    },
-    {
-     "range": [
-      51,
-      51
-     ],
-     "result": "L6"
-    },
-    {
-     "range": [
-      82,
-      91
+      65,
+      73
      ],
      "result": "G6"
     },
     {
      "range": [
-      40,
-      41
+      36,
+      36
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      46,
+      49
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      74,
+      82
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      37,
+      38
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      50,
+      50
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      83,
+      91
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      39,
+      40
      ],
      "result": "P5"
     },
     {
      "range": [
-      52,
-      58
+      51,
+      57
      ],
      "result": "G5"
     },
@@ -3323,7 +3337,7 @@
       92,
       99
      ],
-     "result": "F7"
+     "result": "F9"
     }
    ],
    "positions": [
@@ -3344,48 +3358,26 @@
        4,
        38
       ],
-      "2B": [
+      "2B": null,
+      "3B": [
        1,
        3
-      ],
-      "3B": null
+      ]
      },
      "vsRHP": {
       "1B": [
-       3,
-       22
-      ],
-      "2B": [
        1,
-       2
+       36
       ],
+      "2B": null,
       "3B": null
      }
     },
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       53,
-       66
-      ],
-      "2B": null,
-      "3B": [
-       46,
-       45
-      ],
-      "BB": [
-       1,
-       46
-      ],
-      "HBP": [
-       67,
-       72
-      ]
-     },
-     "vsRHP": {
-      "1B": [
        49,
-       60
+       51
       ],
       "2B": [
        38,
@@ -3394,75 +3386,97 @@
       "3B": null,
       "BB": [
        1,
-       37
+       35
       ],
       "HBP": [
-       61,
-       61
+       52,
+       54
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       48,
+       50
+      ],
+      "2B": null,
+      "3B": [
+       46,
+       47
+      ],
+      "BB": [
+       1,
+       45
+      ],
+      "HBP": [
+       51,
+       53
       ]
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
-       57,
-       65
+       63,
+       75
       ],
       "2B": null,
-      "3B": [
-       47,
-       56
-      ],
+      "3B": null,
       "SO": [
        1,
-       44
+       60
       ]
      },
      "vsRHP": {
       "1B": [
-       56,
-       77
+       54,
+       63
       ],
-      "2B": null,
-      "3B": [
-       53,
-       55
+      "2B": [
+       43,
+       53
       ],
+      "3B": null,
       "SO": [
        1,
-       52
+       42
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       27,
-       98
+       36,
+       88
       ],
       "2B": null,
-      "3B": null,
+      "3B": [
+       21,
+       20
+      ],
       "HR": [
        1,
-       25
+       21
       ]
      },
      "vsRHP": {
       "1B": [
-       26,
-       34
+       46,
+       84
       ],
       "2B": null,
-      "3B": null,
+      "3B": [
+       33,
+       45
+      ],
       "HR": [
        1,
-       25
+       32
       ]
      }
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 4,
     "jump_mod": null,
     "rating": "D"
    },
@@ -3472,54 +3486,56 @@
   "id": "morenga01",
   "name": "Gabriel Moreno",
   "peak_bat": {
-   "2B": 49,
-   "3B": 3,
-   "AB": 923,
-   "BB": 99,
-   "CS": 5,
-   "G": 291,
-   "GIDP": 33,
-   "H": 257,
-   "HBP": 6,
-   "HR": 21,
+   "2B": 82,
+   "3B": 4,
+   "AB": 1396,
+   "BB": 160,
+   "CS": 9,
+   "G": 421,
+   "GIDP": 42,
+   "H": 404,
+   "HBP": 11,
+   "HR": 37,
    "IBB": 4,
-   "PA": 1040,
-   "R": 116,
-   "RBI": 135,
-   "SB": 11,
-   "SF": 12,
-   "SO": 180,
+   "PA": 1589,
+   "R": 188,
+   "RBI": 218,
+   "SB": 17,
+   "SF": 22,
+   "SO": 260,
    "team_line": "Arizona Diamondbacks",
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
-   "2B": 27,
+   "2B": 32,
    "3B": 2,
-   "AB": 514,
-   "BB": 55,
+   "AB": 537,
+   "BB": 62,
    "CS": 3,
    "G": 162,
-   "GIDP": 18,
-   "H": 143,
-   "HBP": 3,
-   "HR": 12,
+   "GIDP": 16,
+   "H": 155,
+   "HBP": 4,
+   "HR": 14,
    "IBB": 2,
-   "PA": 579,
-   "R": 65,
-   "RBI": 75,
-   "SB": 6,
-   "SF": 7,
+   "PA": 611,
+   "R": 72,
+   "RBI": 84,
+   "SB": 7,
+   "SF": 8,
    "SO": 100,
    "team_line": "Arizona Diamondbacks",
-   "window_games": 291,
+   "window_games": 421,
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,
@@ -3568,7 +3584,7 @@
    "arm": "Above Average",
    "bats": "S",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Above Average",
    "out_table": [
     {
      "range": [
@@ -3679,9 +3695,9 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -3691,119 +3707,146 @@
     "IN-PLAY": {
      "vsLHP": {
       "1B": [
-       1,
-       4
+       7,
+       39
       ],
-      "2B": null,
-      "3B": null
+      "2B": [
+       1,
+       5
+      ],
+      "3B": [
+       6,
+       6
+      ]
      },
      "vsRHP": {
       "1B": [
-       1,
-       25
+       9,
+       39
       ],
-      "2B": null,
-      "3B": null
+      "2B": [
+       1,
+       7
+      ],
+      "3B": [
+       8,
+       8
+      ]
      }
     },
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       54,
-       87
+       57,
+       69
       ],
-      "2B": null,
+      "2B": [
+       51,
+       55
+      ],
       "3B": [
-       43,
-       53
+       56,
+       56
       ],
       "BB": [
        1,
-       42
+       49
       ],
       "HBP": [
-       88,
-       97
+       70,
+       73
       ]
      },
      "vsRHP": {
       "1B": [
-       68,
-       85
+       60,
+       72
       ],
       "2B": [
-       55,
-       67
+       56,
+       58
       ],
-      "3B": null,
+      "3B": [
+       59,
+       59
+      ],
       "BB": [
        1,
-       54
+       55
       ],
       "HBP": [
-       86,
-       88
+       73,
+       77
       ]
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
+       49,
+       57
+      ],
+      "2B": null,
+      "3B": [
+       48,
+       48
+      ],
+      "SO": [
+       1,
+       46
+      ]
+     },
+     "vsRHP": {
+      "1B": [
        45,
        53
       ],
       "2B": null,
       "3B": [
-       36,
+       44,
        44
       ],
       "SO": [
        1,
-       36
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       51,
-       64
-      ],
-      "2B": null,
-      "3B": null,
-      "SO": [
-       1,
-       50
+       43
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       23,
-       54
+       26,
+       28
       ],
-      "2B": null,
+      "2B": [
+       16,
+       21
+      ],
       "3B": [
-       13,
-       12
+       25,
+       35
       ],
       "HR": [
        1,
-       13
+       15
       ]
      },
      "vsRHP": {
       "1B": [
-       30,
-       34
+       29,
+       35
       ],
-      "2B": null,
-      "3B": [
-       24,
+      "2B": [
+       22,
        27
+      ],
+      "3B": [
+       28,
+       28
       ],
       "HR": [
        1,
-       23
+       21
       ]
      }
     }
@@ -3819,56 +3862,58 @@
   "id": "perdoge01",
   "name": "Geraldo Perdomo",
   "peak_bat": {
-   "2B": 84,
-   "3B": 13,
-   "AB": 1772,
-   "BB": 244,
-   "CS": 13,
-   "G": 551,
-   "GIDP": 21,
-   "H": 449,
-   "HBP": 24,
-   "HR": 34,
+   "2B": 104,
+   "3B": 22,
+   "AB": 2334,
+   "BB": 340,
+   "CS": 23,
+   "G": 708,
+   "GIDP": 33,
+   "H": 596,
+   "HBP": 29,
+   "HR": 43,
    "IBB": 2,
-   "PA": 2062,
-   "R": 288,
-   "RBI": 224,
-   "SB": 61,
-   "SF": 22,
-   "SO": 330,
+   "PA": 2733,
+   "R": 363,
+   "RBI": 283,
+   "SB": 82,
+   "SF": 30,
+   "SO": 416,
    "team_line": "Arizona Diamondbacks",
    "window_years": [
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
-   "2B": 25,
-   "3B": 4,
-   "AB": 521,
-   "BB": 72,
-   "CS": 4,
+   "2B": 24,
+   "3B": 5,
+   "AB": 534,
+   "BB": 78,
+   "CS": 5,
    "G": 162,
-   "GIDP": 6,
-   "H": 132,
+   "GIDP": 8,
+   "H": 136,
    "HBP": 7,
    "HR": 10,
-   "IBB": 1,
-   "PA": 606,
-   "R": 85,
-   "RBI": 66,
-   "SB": 18,
-   "SF": 6,
-   "SO": 97,
+   "IBB": 0,
+   "PA": 625,
+   "R": 83,
+   "RBI": 65,
+   "SB": 19,
+   "SF": 7,
+   "SO": 95,
    "team_line": "Arizona Diamondbacks",
-   "window_games": 551,
+   "window_games": 708,
    "window_years": [
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,
@@ -18675,6 +18720,5764 @@
   "team": "CHC",
   "tournament": null
  },
+ "COL|arenano01": {
+  "card_bat": {
+   "arm": "Strong",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Elite",
+   "out_table": [
+    {
+     "range": [
+      28,
+      39
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      46,
+      48
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      62,
+      67
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      49,
+      49
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      74
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      50,
+      53
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      43,
+      44
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      54,
+      54
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      55,
+      61
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 8,
+     "e": 1,
+     "pos": "3B",
+     "range": "A"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       2,
+       8
+      ],
+      "2B": [
+       1,
+       1
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       33
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       36,
+       45
+      ],
+      "2B": null,
+      "3B": [
+       25,
+       34
+      ],
+      "BB": [
+       1,
+       27
+      ],
+      "HBP": [
+       49,
+       56
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       49,
+       49
+      ],
+      "2B": [
+       35,
+       48
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       34
+      ],
+      "HBP": null
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       46,
+       54
+      ],
+      "2B": [
+       33,
+       36
+      ],
+      "3B": [
+       37,
+       45
+      ],
+      "SO": [
+       1,
+       35
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       58,
+       72
+      ],
+      "2B": [
+       52,
+       57
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       51
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       64,
+       177
+      ],
+      "2B": null,
+      "3B": [
+       54,
+       71
+      ],
+      "HR": [
+       1,
+       59
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       88,
+       87
+      ],
+      "2B": null,
+      "3B": [
+       82,
+       81
+      ],
+      "HR": [
+       1,
+       81
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 3,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "arenano01",
+  "name": "Nolan Arenado",
+  "peak_bat": {
+   "2B": 190,
+   "3B": 21,
+   "AB": 3018,
+   "BB": 299,
+   "CS": 14,
+   "G": 787,
+   "GIDP": 85,
+   "H": 906,
+   "HBP": 17,
+   "HR": 199,
+   "IBB": 53,
+   "PA": 3373,
+   "R": 519,
+   "RBI": 621,
+   "SB": 12,
+   "SF": 39,
+   "SO": 534,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 39,
+   "3B": 4,
+   "AB": 621,
+   "BB": 62,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 17,
+   "H": 186,
+   "HBP": 3,
+   "HR": 41,
+   "IBB": 11,
+   "PA": 694,
+   "R": 107,
+   "RBI": 128,
+   "SB": 2,
+   "SF": 8,
+   "SO": 110,
+   "team_line": "Colorado Rockies",
+   "window_games": 787,
+   "window_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "3B",
+    "slot": 4
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|belisma01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 8,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "+20",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "DEFENSE",
+    "11": "BALLPARK",
+    "12": "IN-PLAY",
+    "2": "DEFENSE",
+    "3": "TOUGH",
+    "4": "IN-PLAY",
+    "5": "TOUGH",
+    "6": "TOUGH",
+    "7": "IN-PLAY",
+    "8": "PATIENT",
+    "9": "IN-PLAY"
+   },
+   "throws": "R"
+  },
+  "id": "belisma01",
+  "name": "Matt Belisle",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 68,
+   "bf": 1448,
+   "er": 143,
+   "g": 326,
+   "gs": 0,
+   "h": 363,
+   "hbp": 10,
+   "hr": 29,
+   "ip": "348.0",
+   "l": 25,
+   "r": 161,
+   "so": 302,
+   "sv": 4,
+   "w": 28,
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 14,
+   "bf": 290,
+   "er": 29,
+   "g": 65,
+   "gs": 0,
+   "h": 73,
+   "hbp": 2,
+   "hr": 6,
+   "ip": "69.2",
+   "ip_outs": 209,
+   "l": 5,
+   "r": 32,
+   "seasons": 5,
+   "so": 60,
+   "sv": 1,
+   "team_games": 810,
+   "w": 6,
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 5
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|betanra01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 4,
+    "hold": 7,
+    "inj": "Prone",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "BALLPARK",
+    "11": "IN-PLAY",
+    "12": "TOUGH",
+    "2": "IN-PLAY",
+    "3": "TOUGH",
+    "4": "TOUGH",
+    "5": "PATIENT-OUT",
+    "6": "TOUGH",
+    "7": "TOUGH",
+    "8": "DEFENSE",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "betanra01",
+  "name": "Rafael Betancourt",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 40,
+   "bf": 896,
+   "er": 90,
+   "g": 245,
+   "gs": 0,
+   "h": 194,
+   "hbp": 0,
+   "hr": 26,
+   "ip": "221.6667",
+   "l": 9,
+   "r": 94,
+   "so": 259,
+   "sv": 41,
+   "w": 10,
+   "window_years": [
+    2010,
+    2011,
+    2012,
+    2015
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 10,
+   "bf": 224,
+   "er": 23,
+   "g": 61,
+   "gs": 0,
+   "h": 49,
+   "hbp": 0,
+   "hr": 7,
+   "ip": "55.1",
+   "ip_outs": 166,
+   "l": 2,
+   "r": 24,
+   "seasons": 4,
+   "so": 65,
+   "sv": 10,
+   "team_games": 648,
+   "w": 3,
+   "window_years": [
+    2010,
+    2011,
+    2012,
+    2015
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 3
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|blackch02": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "L",
+   "dp": 7,
+   "fielding": "Average",
+   "out_table": [
+    {
+     "range": [
+      28,
+      39
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      46,
+      48
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      62,
+      67
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      49,
+      49
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      74
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      50,
+      53
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      43,
+      44
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      54,
+      54
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      55,
+      61
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 4,
+     "pos": "CF",
+     "range": "C"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       5,
+       33
+      ],
+      "2B": [
+       1,
+       1
+      ],
+      "3B": [
+       2,
+       4
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       34
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       41,
+       50
+      ],
+      "2B": [
+       27,
+       40
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       26
+      ],
+      "HBP": [
+       51,
+       54
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       35,
+       38
+      ],
+      "2B": null,
+      "3B": [
+       33,
+       34
+      ],
+      "BB": [
+       1,
+       32
+      ],
+      "HBP": [
+       39,
+       46
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       73,
+       85
+      ],
+      "2B": [
+       72,
+       72
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       73
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       57,
+       66
+      ],
+      "2B": [
+       43,
+       56
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       42
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       55,
+       120
+      ],
+      "2B": null,
+      "3B": [
+       40,
+       64
+      ],
+      "HR": [
+       1,
+       39
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       72,
+       95
+      ],
+      "2B": null,
+      "3B": [
+       59,
+       68
+      ],
+      "HR": [
+       1,
+       58
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "L"
+  },
+  "card_pit": null,
+  "id": "blackch02",
+  "name": "Charlie Blackmon",
+  "peak_bat": {
+   "2B": 174,
+   "3B": 42,
+   "AB": 3042,
+   "BB": 253,
+   "CS": 41,
+   "G": 755,
+   "GIDP": 31,
+   "H": 940,
+   "HBP": 53,
+   "HR": 144,
+   "IBB": 18,
+   "PA": 3366,
+   "R": 572,
+   "RBI": 400,
+   "SB": 88,
+   "SF": 18,
+   "SO": 587,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 37,
+   "3B": 9,
+   "AB": 653,
+   "BB": 54,
+   "CS": 9,
+   "G": 162,
+   "GIDP": 7,
+   "H": 202,
+   "HBP": 11,
+   "HR": 31,
+   "IBB": 4,
+   "PA": 722,
+   "R": 123,
+   "RBI": 86,
+   "SB": 19,
+   "SF": 4,
+   "SO": 126,
+   "team_line": "Colorado Rockies",
+   "window_games": 755,
+   "window_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "CF",
+    "slot": 1
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|chacijh01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 8,
+    "hold": 7,
+    "inj": "Prone",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
+   },
+   "card_type": "SP",
+   "qa_status": "PASS",
+   "so_modifier": "+20",
+   "special": [],
+   "stamina": {
+    "relief": null,
+    "start": 7
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "TOUGH",
+    "12": "DEFENSE",
+    "2": "TOUGH",
+    "3": "BALLPARK",
+    "4": "PATIENT-OUT",
+    "5": "IN-PLAY",
+    "6": "IN-PLAY",
+    "7": "IN-PLAY",
+    "8": "PATIENT",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "chacijh01",
+  "name": "Jhoulys Chacin",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 258,
+   "bf": 2714,
+   "er": 275,
+   "g": 171,
+   "gs": 84,
+   "h": 578,
+   "hbp": 18,
+   "hr": 56,
+   "ip": "640.3333",
+   "l": 39,
+   "r": 309,
+   "so": 498,
+   "sv": 0,
+   "w": 41,
+   "window_years": [
+    2010,
+    2011,
+    2013,
+    2021,
+    2022
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 52,
+   "bf": 543,
+   "er": 55,
+   "g": 34,
+   "gs": 17,
+   "h": 116,
+   "hbp": 4,
+   "hr": 11,
+   "ip": "128.1",
+   "ip_outs": 385,
+   "l": 8,
+   "r": 62,
+   "seasons": 5,
+   "so": 100,
+   "sv": 0,
+   "team_games": 809,
+   "w": 8,
+   "window_years": [
+    2010,
+    2011,
+    2013,
+    2021,
+    2022
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 5
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|cookaa01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 9,
+    "hold": 7,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "SP",
+   "qa_status": "PASS",
+   "so_modifier": "+10",
+   "special": [],
+   "stamina": {
+    "relief": null,
+    "start": 5
+   },
+   "table_2d6": {
+    "10": "IN-PLAY",
+    "11": "BALLPARK",
+    "12": "TOUGH-OUT",
+    "2": "PATIENT",
+    "3": "TOUGH",
+    "4": "TOUGH-OUT",
+    "5": "TOUGH-OUT",
+    "6": "PATIENT-OUT",
+    "7": "IN-PLAY",
+    "8": "IN-PLAY",
+    "9": "IN-PLAY"
+   },
+   "throws": "R"
+  },
+  "id": "cookaa01",
+  "name": "Aaron Cook",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 246,
+   "bf": 3746,
+   "er": 414,
+   "g": 139,
+   "gs": 139,
+   "h": 978,
+   "hbp": 23,
+   "hr": 75,
+   "ip": "875.6667",
+   "l": 45,
+   "r": 449,
+   "so": 389,
+   "sv": 0,
+   "w": 50,
+   "window_years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 49,
+   "bf": 748,
+   "er": 83,
+   "g": 28,
+   "gs": 28,
+   "h": 195,
+   "hbp": 5,
+   "hr": 15,
+   "ip": "175.0",
+   "ip_outs": 525,
+   "l": 9,
+   "r": 90,
+   "seasons": 5,
+   "so": 78,
+   "sv": 0,
+   "team_games": 811,
+   "w": 10,
+   "window_years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 3
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|dejeami01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 9,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
+   },
+   "card_type": "RP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "NONE",
+   "special": [
+    "TOUGH-OUT",
+    "PATIENT-OUT"
+   ],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "PATIENT",
+    "11": "BALLPARK",
+    "12": "TOUGH-OUT",
+    "2": "TOUGH",
+    "3": "TOUGH",
+    "4": "IN-PLAY",
+    "5": "TOUGH",
+    "6": "IN-PLAY",
+    "7": "TOUGH",
+    "8": "DEFENSE",
+    "9": "PATIENT-OUT"
+   },
+   "throws": "R"
+  },
+  "id": "dejeami01",
+  "name": "Mike DeJean",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 122,
+   "bf": 1276,
+   "er": 154,
+   "g": 262,
+   "gs": 1,
+   "h": 315,
+   "hbp": 8,
+   "hr": 30,
+   "ip": "293.0",
+   "l": 12,
+   "r": 169,
+   "so": 165,
+   "sv": 4,
+   "w": 16,
+   "window_years": [
+    1997,
+    1998,
+    1999,
+    2000,
+    2005
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 24,
+   "bf": 255,
+   "er": 31,
+   "g": 52,
+   "gs": 0,
+   "h": 63,
+   "hbp": 2,
+   "hr": 6,
+   "ip": "58.2",
+   "ip_outs": 176,
+   "l": 2,
+   "r": 34,
+   "seasons": 5,
+   "so": 33,
+   "sv": 1,
+   "team_games": 810,
+   "w": 3,
+   "window_years": [
+    1997,
+    1998,
+    1999,
+    2000,
+    2005
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|desmoia01": {
+  "card_bat": {
+   "arm": "Weak",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Poor",
+   "out_table": [
+    {
+     "range": [
+      26,
+      28
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      36,
+      39
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      55,
+      62
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      29,
+      30
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      40,
+      40
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      70
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      31,
+      31
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      41,
+      45
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      71,
+      80
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      32,
+      33
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      46,
+      46
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      81,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      47,
+      54
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 4,
+     "e": 5,
+     "pos": "LF",
+     "range": "F"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       4,
+       30
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       3
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       28
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       40,
+       43
+      ],
+      "2B": [
+       28,
+       39
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       27
+      ],
+      "HBP": [
+       44,
+       45
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": null,
+      "3B": [
+       35,
+       36
+      ],
+      "BB": [
+       1,
+       34
+      ],
+      "HBP": [
+       37,
+       40
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       98,
+       99
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       97
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       72,
+       78
+      ],
+      "2B": [
+       59,
+       71
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       58
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       46,
+       112
+      ],
+      "2B": null,
+      "3B": [
+       31,
+       30
+      ],
+      "HR": [
+       1,
+       32
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       59,
+       100
+      ],
+      "2B": null,
+      "3B": [
+       46,
+       56
+      ],
+      "HR": [
+       1,
+       45
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "desmoia01",
+  "name": "Ian Desmond",
+  "peak_bat": {
+   "2B": 63,
+   "3B": 13,
+   "AB": 1337,
+   "BB": 111,
+   "CS": 13,
+   "G": 395,
+   "GIDP": 42,
+   "H": 337,
+   "HBP": 12,
+   "HR": 49,
+   "IBB": 2,
+   "PA": 1470,
+   "R": 193,
+   "RBI": 193,
+   "SB": 38,
+   "SF": 10,
+   "SO": 352,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 26,
+   "3B": 5,
+   "AB": 548,
+   "BB": 46,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 17,
+   "H": 138,
+   "HBP": 5,
+   "HR": 20,
+   "IBB": 1,
+   "PA": 603,
+   "R": 79,
+   "RBI": 79,
+   "SB": 16,
+   "SF": 4,
+   "SO": 144,
+   "team_line": "Colorado Rockies",
+   "window_games": 395,
+   "window_years": [
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "LF",
+    "slot": 5
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|diazel01": {
+  "card_bat": {
+   "arm": "Below Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Poor",
+   "out_table": [
+    {
+     "range": [
+      22,
+      30
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      38,
+      41
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      56,
+      62
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      31,
+      32
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      71
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      33,
+      33
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      43,
+      47
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      72,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      82,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      49,
+      55
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 5,
+     "e": 5,
+     "pos": "C",
+     "range": "F"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 6,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       9,
+       38
+      ],
+      "2B": [
+       1,
+       8
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       9,
+       39
+      ],
+      "2B": [
+       1,
+       8
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       35,
+       47
+      ],
+      "2B": [
+       27,
+       32
+      ],
+      "3B": [
+       33,
+       34
+      ],
+      "BB": [
+       1,
+       24
+      ],
+      "HBP": [
+       48,
+       49
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       36,
+       48
+      ],
+      "2B": [
+       30,
+       33
+      ],
+      "3B": [
+       34,
+       35
+      ],
+      "BB": [
+       1,
+       29
+      ],
+      "HBP": [
+       49,
+       51
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       66,
+       73
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       64
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       57,
+       66
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       56
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       41,
+       44
+      ],
+      "2B": [
+       28,
+       37
+      ],
+      "3B": [
+       39,
+       48
+      ],
+      "HR": [
+       1,
+       27
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       49,
+       51
+      ],
+      "2B": [
+       40,
+       48
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       39
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 2,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "diazel01",
+  "name": "Elias Diaz",
+  "peak_bat": {
+   "2B": 79,
+   "3B": 4,
+   "AB": 1479,
+   "BB": 106,
+   "CS": 1,
+   "G": 436,
+   "GIDP": 48,
+   "H": 375,
+   "HBP": 10,
+   "HR": 46,
+   "IBB": 3,
+   "PA": 1605,
+   "R": 155,
+   "RBI": 203,
+   "SB": 1,
+   "SF": 10,
+   "SO": 324,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 1,
+   "AB": 550,
+   "BB": 39,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 18,
+   "H": 139,
+   "HBP": 4,
+   "HR": 17,
+   "IBB": 1,
+   "PA": 596,
+   "R": 58,
+   "RBI": 75,
+   "SB": 0,
+   "SF": 4,
+   "SO": 120,
+   "team_line": "Colorado Rockies",
+   "window_games": 436,
+   "window_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "C",
+    "slot": 8
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|dipotje01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 8,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
+   },
+   "card_type": "RP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "NONE",
+   "special": [
+    "TOUGH-OUT",
+    "PATIENT-OUT"
+   ],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "PATIENT",
+    "11": "IN-PLAY",
+    "12": "WHEELHOUSE",
+    "2": "TOUGH-OUT",
+    "3": "TOUGH-OUT",
+    "4": "TOUGH",
+    "5": "DEFENSE",
+    "6": "TOUGH",
+    "7": "TOUGH",
+    "8": "IN-PLAY",
+    "9": "PATIENT"
+   },
+   "throws": "R"
+  },
+  "id": "dipotje01",
+  "name": "Jerry DiPoto",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 102,
+   "bf": 1096,
+   "er": 119,
+   "g": 205,
+   "gs": 0,
+   "h": 260,
+   "hbp": 10,
+   "hr": 24,
+   "ip": "253.6667",
+   "l": 12,
+   "r": 131,
+   "so": 192,
+   "sv": 36,
+   "w": 12,
+   "window_years": [
+    1997,
+    1998,
+    1999
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 34,
+   "bf": 365,
+   "er": 40,
+   "g": 68,
+   "gs": 0,
+   "h": 87,
+   "hbp": 3,
+   "hr": 8,
+   "ip": "84.2",
+   "ip_outs": 254,
+   "l": 4,
+   "r": 44,
+   "seasons": 3,
+   "so": 64,
+   "sv": 12,
+   "team_games": 486,
+   "w": 4,
+   "window_years": [
+    1997,
+    1998,
+    1999
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 4
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|freelky01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 8,
+    "hold": 7,
+    "inj": "Normal",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "SP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": null,
+    "start": 5
+   },
+   "table_2d6": {
+    "10": "PATIENT",
+    "11": "IN-PLAY",
+    "12": "DEFENSE",
+    "2": "DEFENSE",
+    "3": "TOUGH-OUT",
+    "4": "BALLPARK",
+    "5": "PATIENT",
+    "6": "TOUGH",
+    "7": "TOUGH",
+    "8": "DEFENSE",
+    "9": "IN-PLAY"
+   },
+   "throws": "L"
+  },
+  "id": "freelky01",
+  "name": "Kyle Freeland",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 266,
+   "bf": 3490,
+   "er": 368,
+   "g": 149,
+   "gs": 144,
+   "h": 864,
+   "hbp": 35,
+   "hr": 102,
+   "ip": "809.3333",
+   "l": 51,
+   "r": 393,
+   "so": 610,
+   "sv": 0,
+   "w": 50,
+   "window_years": [
+    2017,
+    2018,
+    2021,
+    2022,
+    2023
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 53,
+   "bf": 698,
+   "er": 74,
+   "g": 30,
+   "gs": 29,
+   "h": 173,
+   "hbp": 7,
+   "hr": 20,
+   "ip": "162.0",
+   "ip_outs": 486,
+   "l": 10,
+   "r": 79,
+   "seasons": 5,
+   "so": 122,
+   "sv": 0,
+   "team_games": 810,
+   "w": 10,
+   "window_years": [
+    2017,
+    2018,
+    2021,
+    2022,
+    2023
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 2
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|fuentbr01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 6,
+    "hold": 7,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "WHEELHOUSE",
+    "12": "IN-PLAY",
+    "2": "TOUGH",
+    "3": "TOUGH",
+    "4": "TOUGH",
+    "5": "PATIENT",
+    "6": "DEFENSE",
+    "7": "TOUGH",
+    "8": "TOUGH",
+    "9": "PATIENT"
+   },
+   "throws": "L"
+  },
+  "id": "fuentbr01",
+  "name": "Brian Fuentes",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 139,
+   "bf": 1426,
+   "er": 112,
+   "g": 350,
+   "gs": 0,
+   "h": 266,
+   "hbp": 30,
+   "hr": 30,
+   "ip": "339.0",
+   "l": 22,
+   "r": 122,
+   "so": 384,
+   "sv": 115,
+   "w": 12,
+   "window_years": [
+    2003,
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 28,
+   "bf": 285,
+   "er": 22,
+   "g": 70,
+   "gs": 0,
+   "h": 53,
+   "hbp": 6,
+   "hr": 6,
+   "ip": "67.2",
+   "ip_outs": 203,
+   "l": 4,
+   "r": 24,
+   "seasons": 5,
+   "so": 77,
+   "sv": 23,
+   "team_games": 811,
+   "w": 2,
+   "window_years": [
+    2003,
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 1
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|galaran01": {
+  "card_bat": {
+   "arm": "Above Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Great",
+   "out_table": [
+    {
+     "range": [
+      28,
+      39
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      46,
+      48
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      62,
+      67
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      49,
+      49
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      74
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      50,
+      53
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      43,
+      44
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      54,
+      54
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      55,
+      61
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 7,
+     "e": 2,
+     "pos": "1B",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       11,
+       37
+      ],
+      "2B": [
+       1,
+       10
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       11,
+       44
+      ],
+      "2B": [
+       1,
+       10
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       29,
+       39
+      ],
+      "2B": [
+       20,
+       26
+      ],
+      "3B": [
+       27,
+       28
+      ],
+      "BB": [
+       1,
+       19
+      ],
+      "HBP": [
+       40,
+       45
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       28,
+       38
+      ],
+      "2B": [
+       22,
+       25
+      ],
+      "3B": [
+       26,
+       27
+      ],
+      "BB": [
+       1,
+       21
+      ],
+      "HBP": [
+       39,
+       48
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       72,
+       81
+      ],
+      "2B": [
+       68,
+       71
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       68
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       61,
+       72
+      ],
+      "2B": [
+       58,
+       60
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       57
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       67,
+       81
+      ],
+      "2B": [
+       57,
+       65
+      ],
+      "3B": [
+       65,
+       68
+      ],
+      "HR": [
+       1,
+       56
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       86,
+       95
+      ],
+      "2B": [
+       81,
+       85
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       80
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "galaran01",
+  "name": "Andres Galarraga",
+  "peak_bat": {
+   "2B": 155,
+   "3B": 13,
+   "AB": 2667,
+   "BB": 169,
+   "CS": 25,
+   "G": 679,
+   "GIDP": 55,
+   "H": 843,
+   "HBP": 61,
+   "HR": 172,
+   "IBB": 31,
+   "PA": 2924,
+   "R": 476,
+   "RBI": 579,
+   "SB": 55,
+   "SF": 27,
+   "SO": 610,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    1993,
+    1994,
+    1995,
+    1996,
+    1997
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 37,
+   "3B": 3,
+   "AB": 636,
+   "BB": 40,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 13,
+   "H": 201,
+   "HBP": 15,
+   "HR": 41,
+   "IBB": 7,
+   "PA": 698,
+   "R": 114,
+   "RBI": 138,
+   "SB": 13,
+   "SF": 6,
+   "SO": 146,
+   "team_line": "Colorado Rockies",
+   "window_games": 679,
+   "window_years": [
+    1993,
+    1994,
+    1995,
+    1996,
+    1997
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "1B",
+    "slot": 9
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|hampsga01": {
+  "card_bat": {
+   "arm": "Strong",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Elite",
+   "out_table": [
+    {
+     "range": [
+      26,
+      28
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      36,
+      39
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      55,
+      62
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      29,
+      30
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      40,
+      40
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      70
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      31,
+      31
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      41,
+      45
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      71,
+      80
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      32,
+      33
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      46,
+      46
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      81,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      47,
+      54
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 8,
+     "e": 1,
+     "pos": "CF",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 9,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       8,
+       31
+      ],
+      "2B": [
+       1,
+       7
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       10,
+       36
+      ],
+      "2B": [
+       1,
+       9
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       36,
+       43
+      ],
+      "2B": [
+       27,
+       33
+      ],
+      "3B": [
+       34,
+       35
+      ],
+      "BB": [
+       1,
+       27
+      ],
+      "HBP": [
+       44,
+       44
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       36,
+       43
+      ],
+      "2B": [
+       30,
+       33
+      ],
+      "3B": [
+       34,
+       35
+      ],
+      "BB": [
+       1,
+       29
+      ],
+      "HBP": [
+       44,
+       45
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       82,
+       89
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       82
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       70,
+       79
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       69
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       43,
+       54
+      ],
+      "2B": [
+       23,
+       46
+      ],
+      "3B": [
+       41,
+       46
+      ],
+      "HR": [
+       1,
+       21
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       48,
+       64
+      ],
+      "2B": [
+       33,
+       47
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       32
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "hampsga01",
+  "name": "Garrett Hampson",
+  "peak_bat": {
+   "2B": 30,
+   "3B": 10,
+   "AB": 752,
+   "BB": 57,
+   "CS": 10,
+   "G": 252,
+   "GIDP": 8,
+   "H": 180,
+   "HBP": 3,
+   "HR": 19,
+   "IBB": 3,
+   "PA": 816,
+   "R": 109,
+   "RBI": 60,
+   "SB": 32,
+   "SF": 4,
+   "SO": 206,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2019,
+    2021
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 19,
+   "3B": 6,
+   "AB": 483,
+   "BB": 37,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 5,
+   "H": 116,
+   "HBP": 2,
+   "HR": 12,
+   "IBB": 2,
+   "PA": 525,
+   "R": 70,
+   "RBI": 39,
+   "SB": 21,
+   "SF": 3,
+   "SO": 132,
+   "team_line": "Colorado Rockies",
+   "window_games": 252,
+   "window_years": [
+    2019,
+    2021
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "CF",
+    "slot": 2
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|heltoto01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "L",
+   "dp": 7,
+   "fielding": "Great",
+   "out_table": [
+    {
+     "range": [
+      23,
+      36
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      44,
+      47
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      61,
+      67
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      37,
+      38
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      74
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      39,
+      39
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      49,
+      52
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      53,
+      53
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      42,
+      43
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      54,
+      60
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 2,
+     "pos": "1B",
+     "range": "A"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       1,
+       14
+      ],
+      "2B": null,
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       9,
+       47
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       8
+      ]
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       53,
+       81
+      ],
+      "2B": [
+       38,
+       37
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       50
+      ],
+      "HBP": [
+       91,
+       99
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       83,
+       99
+      ],
+      "2B": [
+       62,
+       67
+      ],
+      "3B": [
+       68,
+       82
+      ],
+      "BB": [
+       1,
+       61
+      ],
+      "HBP": null
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": null,
+      "2B": null,
+      "3B": [
+       40,
+       42
+      ],
+      "SO": [
+       1,
+       46
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       31
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       58,
+       319
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       74
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       83,
+       82
+      ],
+      "2B": null,
+      "3B": [
+       69,
+       68
+      ],
+      "HR": [
+       1,
+       68
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 4,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "L"
+  },
+  "card_pit": null,
+  "id": "heltoto01",
+  "name": "Todd Helton",
+  "peak_bat": {
+   "2B": 250,
+   "3B": 15,
+   "AB": 2850,
+   "BB": 538,
+   "CS": 13,
+   "G": 789,
+   "GIDP": 67,
+   "H": 994,
+   "HBP": 19,
+   "HR": 186,
+   "IBB": 98,
+   "PA": 3445,
+   "R": 627,
+   "RBI": 615,
+   "SB": 20,
+   "SF": 38,
+   "SO": 400,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 51,
+   "3B": 3,
+   "AB": 585,
+   "BB": 110,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 14,
+   "H": 204,
+   "HBP": 4,
+   "HR": 38,
+   "IBB": 20,
+   "PA": 707,
+   "R": 129,
+   "RBI": 126,
+   "SB": 4,
+   "SF": 8,
+   "SO": 82,
+   "team_line": "Colorado Rockies",
+   "window_games": 789,
+   "window_years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "1B",
+    "slot": 3
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|hollima01": {
+  "card_bat": {
+   "arm": "Weak",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Poor",
+   "out_table": [
+    {
+     "range": [
+      28,
+      39
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      46,
+      48
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      62,
+      67
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      49,
+      49
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      74
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      50,
+      53
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      43,
+      44
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      54,
+      54
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      55,
+      61
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 4,
+     "e": 5,
+     "pos": "LF",
+     "range": "F"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       4,
+       39
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       3
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       41
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       44,
+       45
+      ],
+      "2B": [
+       30,
+       41
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       31
+      ],
+      "HBP": [
+       48,
+       51
+      ]
+     },
+     "vsRHP": {
+      "1B": null,
+      "2B": null,
+      "3B": [
+       37,
+       38
+      ],
+      "BB": [
+       1,
+       36
+      ],
+      "HBP": [
+       39,
+       46
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       65,
+       77
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       68
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       58,
+       67
+      ],
+      "2B": [
+       44,
+       57
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       43
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       72,
+       71
+      ],
+      "2B": [
+       40,
+       39
+      ],
+      "3B": [
+       57,
+       56
+      ],
+      "HR": [
+       1,
+       44
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       75,
+       110
+      ],
+      "2B": [
+       60,
+       88
+      ],
+      "3B": [
+       62,
+       72
+      ],
+      "HR": [
+       1,
+       59
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "hollima01",
+  "name": "Matt Holliday",
+  "peak_bat": {
+   "2B": 188,
+   "3B": 23,
+   "AB": 2656,
+   "BB": 251,
+   "CS": 17,
+   "G": 698,
+   "GIDP": 74,
+   "H": 848,
+   "HBP": 46,
+   "HR": 128,
+   "IBB": 17,
+   "PA": 2967,
+   "R": 479,
+   "RBI": 483,
+   "SB": 66,
+   "SF": 14,
+   "SO": 505,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 44,
+   "3B": 5,
+   "AB": 616,
+   "BB": 58,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 17,
+   "H": 197,
+   "HBP": 11,
+   "HR": 30,
+   "IBB": 4,
+   "PA": 689,
+   "R": 111,
+   "RBI": 112,
+   "SB": 15,
+   "SF": 3,
+   "SO": 117,
+   "team_line": "Colorado Rockies",
+   "window_games": 698,
+   "window_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "LF",
+    "slot": 7
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|jimenub01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 7,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
+   },
+   "card_type": "SP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "NONE",
+   "special": [
+    "TOUGH-OUT",
+    "PATIENT-OUT"
+   ],
+   "stamina": {
+    "relief": null,
+    "start": 5
+   },
+   "table_2d6": {
+    "10": "TOUGH",
+    "11": "TOUGH-OUT",
+    "12": "PATIENT-OUT",
+    "2": "WHEELHOUSE",
+    "3": "DEFENSE",
+    "4": "PATIENT",
+    "5": "PATIENT",
+    "6": "TOUGH",
+    "7": "TOUGH",
+    "8": "IN-PLAY",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "jimenub01",
+  "name": "Ubaldo Jimenez",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 331,
+   "bf": 3208,
+   "er": 304,
+   "g": 121,
+   "gs": 121,
+   "h": 647,
+   "hbp": 36,
+   "hr": 44,
+   "ip": "761.3333",
+   "l": 41,
+   "r": 325,
+   "so": 702,
+   "sv": 0,
+   "w": 52,
+   "window_years": [
+    2008,
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 83,
+   "bf": 802,
+   "er": 76,
+   "g": 30,
+   "gs": 30,
+   "h": 162,
+   "hbp": 9,
+   "hr": 11,
+   "ip": "190.1",
+   "ip_outs": 571,
+   "l": 10,
+   "r": 81,
+   "seasons": 4,
+   "so": 176,
+   "sv": 0,
+   "team_games": 648,
+   "w": 13,
+   "window_years": [
+    2008,
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 1
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|lemahdj01": {
+  "card_bat": {
+   "arm": "Strong",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Elite",
+   "out_table": [
+    {
+     "range": [
+      33,
+      36
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      44,
+      47
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      61,
+      67
+     ],
+     "result": "F7"
+    },
+    {
+     "range": [
+      37,
+      38
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      48,
+      48
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      75
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      39,
+      39
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      49,
+      52
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      76,
+      84
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      53,
+      53
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      85,
+      92
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      42,
+      43
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      54,
+      60
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F9"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 8,
+     "e": 1,
+     "pos": "2B",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       4,
+       43
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       3
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       47
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       41,
+       45
+      ],
+      "2B": [
+       29,
+       40
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       27
+      ],
+      "HBP": [
+       46,
+       47
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       38,
+       42
+      ],
+      "2B": null,
+      "3B": [
+       36,
+       37
+      ],
+      "BB": [
+       1,
+       35
+      ],
+      "HBP": [
+       43,
+       44
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       68,
+       82
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       67
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       43,
+       55
+      ],
+      "2B": [
+       35,
+       42
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       34
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       36,
+       64
+      ],
+      "2B": [
+       13,
+       18
+      ],
+      "3B": [
+       21,
+       32
+      ],
+      "HR": [
+       1,
+       12
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       35,
+       61
+      ],
+      "2B": null,
+      "3B": [
+       22,
+       34
+      ],
+      "HR": [
+       1,
+       21
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "lemahdj01",
+  "name": "DJ LeMahieu",
+  "peak_bat": {
+   "2B": 128,
+   "3B": 24,
+   "AB": 2752,
+   "BB": 245,
+   "CS": 30,
+   "G": 728,
+   "GIDP": 90,
+   "H": 830,
+   "HBP": 14,
+   "HR": 45,
+   "IBB": 14,
+   "PA": 3033,
+   "R": 433,
+   "RBI": 295,
+   "SB": 56,
+   "SF": 22,
+   "SO": 456,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 28,
+   "3B": 5,
+   "AB": 612,
+   "BB": 55,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 20,
+   "H": 185,
+   "HBP": 3,
+   "HR": 10,
+   "IBB": 3,
+   "PA": 675,
+   "R": 96,
+   "RBI": 66,
+   "SB": 12,
+   "SF": 5,
+   "SO": 101,
+   "team_line": "Colorado Rockies",
+   "window_games": 728,
+   "window_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "2B",
+    "slot": 2
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|loganbo02": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 6,
+    "hold": 7,
+    "inj": "Iron",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-33"
+   },
+   "card_type": "RP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "BALLPARK",
+    "11": "TOUGH-OUT",
+    "12": "IN-PLAY",
+    "2": "TOUGH",
+    "3": "TOUGH-OUT",
+    "4": "TOUGH",
+    "5": "PATIENT",
+    "6": "PATIENT",
+    "7": "TOUGH",
+    "8": "IN-PLAY",
+    "9": "TOUGH"
+   },
+   "throws": "L"
+  },
+  "id": "loganbo02",
+  "name": "Boone Logan",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 37,
+   "bf": 355,
+   "er": 36,
+   "g": 126,
+   "gs": 0,
+   "h": 67,
+   "hbp": 7,
+   "hr": 7,
+   "ip": "81.6667",
+   "l": 8,
+   "r": 40,
+   "so": 101,
+   "sv": 1,
+   "w": 2,
+   "window_years": [
+    2015,
+    2016
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 19,
+   "bf": 178,
+   "er": 18,
+   "g": 63,
+   "gs": 0,
+   "h": 34,
+   "hbp": 4,
+   "hr": 4,
+   "ip": "41.0",
+   "ip_outs": 123,
+   "l": 4,
+   "r": 20,
+   "seasons": 2,
+   "so": 51,
+   "sv": 1,
+   "team_games": 324,
+   "w": 1,
+   "window_years": [
+    2015,
+    2016
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 6
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|marquge01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 7,
+    "hold": 7,
+    "inj": "Normal",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
+   },
+   "card_type": "SP",
+   "qa_status": "PASS",
+   "so_modifier": "NONE",
+   "special": [],
+   "stamina": {
+    "relief": null,
+    "start": 5
+   },
+   "table_2d6": {
+    "10": "BALLPARK",
+    "11": "TOUGH",
+    "12": "TOUGH-OUT",
+    "2": "TOUGH-OUT",
+    "3": "TOUGH-OUT",
+    "4": "TOUGH-OUT",
+    "5": "IN-PLAY",
+    "6": "TOUGH",
+    "7": "PATIENT",
+    "8": "IN-PLAY",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "marquge01",
+  "name": "German Marquez",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 268,
+   "bf": 3774,
+   "er": 441,
+   "g": 153,
+   "gs": 153,
+   "h": 877,
+   "hbp": 29,
+   "hr": 129,
+   "ip": "893.6667",
+   "l": 47,
+   "r": 469,
+   "so": 878,
+   "sv": 0,
+   "w": 58,
+   "window_years": [
+    2017,
+    2018,
+    2019,
+    2021,
+    2022
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 54,
+   "bf": 755,
+   "er": 88,
+   "g": 31,
+   "gs": 31,
+   "h": 175,
+   "hbp": 6,
+   "hr": 26,
+   "ip": "178.2",
+   "ip_outs": 536,
+   "l": 9,
+   "r": 94,
+   "seasons": 5,
+   "so": 176,
+   "sv": 0,
+   "team_games": 810,
+   "w": 12,
+   "window_years": [
+    2017,
+    2018,
+    2019,
+    2021,
+    2022
+   ]
+  },
+  "spots": [
+   {
+    "group": "rotation",
+    "kind": "pitcher",
+    "pos": "SP",
+    "slot": 4
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|reynoma01": {
+  "card_bat": {
+   "arm": "Above Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Elite",
+   "out_table": [
+    {
+     "range": [
+      24,
+      26
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      34,
+      37
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      53,
+      60
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      27,
+      28
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      38,
+      38
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      61,
+      70
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      29,
+      29
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      39,
+      43
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      71,
+      80
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      30,
+      31
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      44,
+      44
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      81,
+      91
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      32,
+      33
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      45,
+      52
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 7,
+     "e": 1,
+     "pos": "1B",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 5,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       4,
+       32
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       3
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       30
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       53,
+       59
+      ],
+      "2B": [
+       42,
+       53
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       41
+      ],
+      "HBP": [
+       57,
+       58
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       50,
+       53
+      ],
+      "2B": null,
+      "3B": [
+       49,
+       49
+      ],
+      "BB": [
+       1,
+       48
+      ],
+      "HBP": [
+       54,
+       55
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       97,
+       99
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       95
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       84,
+       92
+      ],
+      "2B": [
+       74,
+       83
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       74
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       53,
+       111
+      ],
+      "2B": null,
+      "3B": [
+       39,
+       38
+      ],
+      "HR": [
+       1,
+       40
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       72,
+       104
+      ],
+      "2B": null,
+      "3B": [
+       59,
+       66
+      ],
+      "HR": [
+       1,
+       58
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 2,
+    "jump_mod": null,
+    "rating": "F"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "reynoma01",
+  "name": "Mark Reynolds",
+  "peak_bat": {
+   "2B": 46,
+   "3B": 1,
+   "AB": 913,
+   "BB": 111,
+   "CS": 3,
+   "G": 266,
+   "GIDP": 18,
+   "H": 250,
+   "HBP": 5,
+   "HR": 44,
+   "IBB": 1,
+   "PA": 1034,
+   "R": 143,
+   "RBI": 150,
+   "SB": 3,
+   "SF": 5,
+   "SO": 287,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2016,
+    2017
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 28,
+   "3B": 1,
+   "AB": 556,
+   "BB": 68,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 11,
+   "H": 152,
+   "HBP": 3,
+   "HR": 27,
+   "IBB": 1,
+   "PA": 630,
+   "R": 87,
+   "RBI": 91,
+   "SB": 2,
+   "SF": 3,
+   "SO": 175,
+   "team_line": "Colorado Rockies",
+   "window_games": 266,
+   "window_years": [
+    2016,
+    2017
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "1B",
+    "slot": 4
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|storytr01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Great",
+   "out_table": [
+    {
+     "range": [
+      28,
+      35
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      43,
+      46
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      60,
+      66
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      36,
+      37
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      47,
+      47
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      67,
+      73
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      38,
+      38
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      48,
+      51
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      74,
+      82
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      39,
+      40
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      52,
+      52
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      83,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      41,
+      42
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      53,
+      59
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 2,
+     "pos": "SS",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       1,
+       32
+      ],
+      "2B": null,
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       14
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       42,
+       52
+      ],
+      "2B": null,
+      "3B": [
+       38,
+       37
+      ],
+      "BB": [
+       1,
+       38
+      ],
+      "HBP": [
+       53,
+       54
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       47,
+       55
+      ],
+      "2B": [
+       35,
+       46
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       34
+      ],
+      "HBP": [
+       56,
+       61
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       93,
+       99
+      ],
+      "2B": null,
+      "3B": [
+       87,
+       91
+      ],
+      "SO": [
+       1,
+       93
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       88,
+       99
+      ],
+      "2B": null,
+      "3B": [
+       78,
+       87
+      ],
+      "SO": [
+       1,
+       77
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       72,
+       141
+      ],
+      "2B": null,
+      "3B": [
+       64,
+       63
+      ],
+      "HR": [
+       1,
+       68
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       64,
+       89
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       63
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "storytr01",
+  "name": "Trevor Story",
+  "peak_bat": {
+   "2B": 167,
+   "3B": 23,
+   "AB": 2587,
+   "BB": 242,
+   "CS": 27,
+   "G": 686,
+   "GIDP": 39,
+   "H": 700,
+   "HBP": 32,
+   "HR": 147,
+   "IBB": 11,
+   "PA": 2875,
+   "R": 422,
+   "RBI": 422,
+   "SB": 85,
+   "SF": 14,
+   "SO": 802,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2021
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 39,
+   "3B": 5,
+   "AB": 611,
+   "BB": 57,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 9,
+   "H": 165,
+   "HBP": 8,
+   "HR": 35,
+   "IBB": 3,
+   "PA": 679,
+   "R": 100,
+   "RBI": 100,
+   "SB": 20,
+   "SF": 3,
+   "SO": 189,
+   "team_line": "Colorado Rockies",
+   "window_games": 686,
+   "window_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2021
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "SS",
+    "slot": 3
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|streehu01": {
+  "card_bat": null,
+  "card_pit": {
+   "addendum": {
+    "dp": 6,
+    "hold": 7,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
+   },
+   "card_type": "RP",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "NONE",
+   "special": [
+    "TOUGH-OUT"
+   ],
+   "stamina": {
+    "relief": "Short",
+    "start": null
+   },
+   "table_2d6": {
+    "10": "BALLPARK",
+    "11": "TOUGH-OUT",
+    "12": "IN-PLAY",
+    "2": "TOUGH",
+    "3": "TOUGH",
+    "4": "IN-PLAY",
+    "5": "TOUGH",
+    "6": "PATIENT",
+    "7": "TOUGH-OUT",
+    "8": "IN-PLAY",
+    "9": "TOUGH"
+   },
+   "throws": "R"
+  },
+  "id": "streehu01",
+  "name": "Huston Street",
+  "peak_bat": null,
+  "peak_bat_162": null,
+  "peak_pit": {
+   "bb": 33,
+   "bf": 666,
+   "er": 65,
+   "g": 170,
+   "gs": 0,
+   "h": 144,
+   "hbp": 3,
+   "hr": 22,
+   "ip": "167.3333",
+   "l": 9,
+   "r": 71,
+   "so": 170,
+   "sv": 84,
+   "w": 9,
+   "window_years": [
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 11,
+   "bf": 222,
+   "er": 22,
+   "g": 57,
+   "gs": 0,
+   "h": 48,
+   "hbp": 1,
+   "hr": 7,
+   "ip": "55.2",
+   "ip_outs": 167,
+   "l": 3,
+   "r": 24,
+   "seasons": 3,
+   "so": 57,
+   "sv": 28,
+   "team_games": 486,
+   "w": 3,
+   "window_years": [
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "spots": [
+   {
+    "group": "bullpen",
+    "kind": "pitcher",
+    "pos": "RP",
+    "slot": 2
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|torreyo01": {
+  "card_bat": {
+   "arm": "Below Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Poor",
+   "out_table": [
+    {
+     "range": [
+      30,
+      34
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      42,
+      45
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      59,
+      65
+     ],
+     "result": "F7"
+    },
+    {
+     "range": [
+      35,
+      36
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      46,
+      46
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      66,
+      74
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      37,
+      37
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      47,
+      50
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      38,
+      39
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      51,
+      51
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      91
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      52,
+      58
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F9"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 5,
+     "e": 5,
+     "pos": "C",
+     "range": "F"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 5,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       1,
+       11
+      ],
+      "2B": null,
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       35
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       36,
+       45
+      ],
+      "2B": null,
+      "3B": [
+       26,
+       35
+      ],
+      "BB": [
+       1,
+       26
+      ],
+      "HBP": [
+       46,
+       56
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       48,
+       50
+      ],
+      "2B": [
+       36,
+       47
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       35
+      ],
+      "HBP": [
+       51,
+       54
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       49,
+       56
+      ],
+      "2B": null,
+      "3B": [
+       40,
+       48
+      ],
+      "SO": [
+       1,
+       41
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       54,
+       69
+      ],
+      "2B": [
+       52,
+       53
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       51
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       24,
+       86
+      ],
+      "2B": null,
+      "3B": [
+       15,
+       14
+      ],
+      "HR": [
+       1,
+       14
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       33,
+       56
+      ],
+      "2B": null,
+      "3B": [
+       27,
+       28
+      ],
+      "HR": [
+       1,
+       26
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 2,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "torreyo01",
+  "name": "Yorvit Torrealba",
+  "peak_bat": {
+   "2B": 22,
+   "3B": 1,
+   "AB": 396,
+   "BB": 34,
+   "CS": 1,
+   "G": 113,
+   "GIDP": 19,
+   "H": 101,
+   "HBP": 6,
+   "HR": 8,
+   "IBB": 1,
+   "PA": 437,
+   "R": 47,
+   "RBI": 47,
+   "SB": 2,
+   "SF": 1,
+   "SO": 73,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2007
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 1,
+   "AB": 568,
+   "BB": 49,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 27,
+   "H": 145,
+   "HBP": 9,
+   "HR": 11,
+   "IBB": 1,
+   "PA": 626,
+   "R": 67,
+   "RBI": 67,
+   "SB": 3,
+   "SF": 1,
+   "SO": 105,
+   "team_line": "Colorado Rockies",
+   "window_games": 113,
+   "window_years": [
+    2007
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "C",
+    "slot": 1
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|tulowtr01": {
+  "card_bat": {
+   "arm": "Strong",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Elite",
+   "out_table": [
+    {
+     "range": [
+      28,
+      39
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      46,
+      48
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      62,
+      67
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      49,
+      49
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      74
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      50,
+      53
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      43,
+      44
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      54,
+      54
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      55,
+      61
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 8,
+     "e": 1,
+     "pos": "SS",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       10,
+       38
+      ],
+      "2B": [
+       1,
+       8
+      ],
+      "3B": [
+       9,
+       9
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       10,
+       42
+      ],
+      "2B": [
+       1,
+       8
+      ],
+      "3B": [
+       9,
+       9
+      ]
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       46,
+       56
+      ],
+      "2B": [
+       38,
+       44
+      ],
+      "3B": [
+       45,
+       45
+      ],
+      "BB": [
+       1,
+       36
+      ],
+      "HBP": [
+       57,
+       59
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       46,
+       56
+      ],
+      "2B": [
+       41,
+       44
+      ],
+      "3B": [
+       45,
+       45
+      ],
+      "BB": [
+       1,
+       40
+      ],
+      "HBP": [
+       57,
+       60
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       57,
+       65
+      ],
+      "2B": [
+       52,
+       55
+      ],
+      "3B": [
+       56,
+       56
+      ],
+      "SO": [
+       1,
+       50
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       50,
+       59
+      ],
+      "2B": [
+       47,
+       48
+      ],
+      "3B": [
+       49,
+       49
+      ],
+      "SO": [
+       1,
+       46
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       57,
+       69
+      ],
+      "2B": [
+       47,
+       58
+      ],
+      "3B": [
+       56,
+       57
+      ],
+      "HR": [
+       1,
+       46
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       72,
+       80
+      ],
+      "2B": [
+       64,
+       70
+      ],
+      "3B": [
+       71,
+       71
+      ],
+      "HR": [
+       1,
+       63
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "tulowtr01",
+  "name": "Troy Tulowitzki",
+  "peak_bat": {
+   "2B": 153,
+   "3B": 19,
+   "AB": 2605,
+   "BB": 294,
+   "CS": 22,
+   "G": 697,
+   "GIDP": 76,
+   "H": 787,
+   "HBP": 25,
+   "HR": 138,
+   "IBB": 28,
+   "PA": 2950,
+   "R": 447,
+   "RBI": 473,
+   "SB": 48,
+   "SF": 26,
+   "SO": 484,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    2007,
+    2009,
+    2010,
+    2011,
+    2013
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 4,
+   "AB": 605,
+   "BB": 68,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 18,
+   "H": 183,
+   "HBP": 6,
+   "HR": 32,
+   "IBB": 7,
+   "PA": 686,
+   "R": 104,
+   "RBI": 110,
+   "SB": 11,
+   "SF": 6,
+   "SO": 112,
+   "team_line": "Colorado Rockies",
+   "window_games": 697,
+   "window_years": [
+    2007,
+    2009,
+    2010,
+    2011,
+    2013
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "SS",
+    "slot": 6
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
+ "COL|walkela01": {
+  "card_bat": {
+   "arm": "Weak",
+   "bats": "L",
+   "dp": 7,
+   "fielding": "Poor",
+   "out_table": [
+    {
+     "range": [
+      40,
+      50
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      55,
+      57
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      68,
+      72
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      51,
+      51
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      58,
+      58
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      73,
+      79
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      52,
+      52
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      59,
+      61
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      80,
+      86
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      53,
+      53
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      62,
+      62
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      87,
+      93
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      54,
+      54
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      63,
+      67
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      94,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 4,
+     "e": 5,
+     "pos": "RF",
+     "range": "F"
+    }
+   ],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       13,
+       54
+      ],
+      "2B": [
+       1,
+       12
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       13,
+       40
+      ],
+      "2B": [
+       1,
+       12
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       61,
+       72
+      ],
+      "2B": null,
+      "3B": [
+       54,
+       54
+      ],
+      "BB": [
+       1,
+       56
+      ],
+      "HBP": [
+       73,
+       87
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       57,
+       66
+      ],
+      "2B": [
+       45,
+       56
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       44
+      ],
+      "HBP": [
+       67,
+       71
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       46,
+       50
+      ],
+      "2B": null,
+      "3B": [
+       36,
+       45
+      ],
+      "SO": [
+       1,
+       35
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       44,
+       54
+      ],
+      "2B": null,
+      "3B": [
+       41,
+       43
+      ],
+      "SO": [
+       1,
+       40
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       64,
+       80
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       67
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       79,
+       118
+      ],
+      "2B": null,
+      "3B": null,
+      "HR": [
+       1,
+       78
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "C"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "walkela01",
+  "name": "Larry Walker",
+  "peak_bat": {
+   "2B": 193,
+   "3B": 18,
+   "AB": 2434,
+   "BB": 346,
+   "CS": 26,
+   "G": 688,
+   "GIDP": 55,
+   "H": 874,
+   "HBP": 51,
+   "HR": 173,
+   "IBB": 36,
+   "PA": 2855,
+   "R": 566,
+   "RBI": 539,
+   "SB": 78,
+   "SF": 24,
+   "SO": 379,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    1997,
+    1998,
+    1999,
+    2001,
+    2002
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 45,
+   "3B": 4,
+   "AB": 573,
+   "BB": 81,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 13,
+   "H": 206,
+   "HBP": 12,
+   "HR": 41,
+   "IBB": 8,
+   "PA": 672,
+   "R": 133,
+   "RBI": 127,
+   "SB": 18,
+   "SF": 6,
+   "SO": 89,
+   "team_line": "Colorado Rockies",
+   "window_games": 688,
+   "window_years": [
+    1997,
+    1998,
+    1999,
+    2001,
+    2002
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "RF",
+    "slot": 5
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
  "DET|bridgto01": {
   "card_bat": null,
   "card_pit": {
@@ -21604,28 +27407,25 @@
     "wp": "30-31"
    },
    "card_type": "RP",
-   "qa_status": "ARCHITECTURE-LIMITED",
+   "qa_status": "PASS",
    "so_modifier": "NONE",
-   "special": [
-    "TOUGH-OUT",
-    "PATIENT-OUT"
-   ],
+   "special": [],
    "stamina": {
     "relief": "Short",
     "start": null
    },
    "table_2d6": {
-    "10": "TOUGH-OUT",
-    "11": "PATIENT",
-    "12": "TOUGH",
-    "2": "TOUGH",
-    "3": "WHEELHOUSE",
-    "4": "PATIENT",
-    "5": "IN-PLAY",
-    "6": "DEFENSE",
-    "7": "TOUGH-OUT",
-    "8": "TOUGH",
-    "9": "IN-PLAY"
+    "10": "DEFENSE",
+    "11": "DEFENSE",
+    "12": "IN-PLAY",
+    "2": "TOUGH-OUT",
+    "3": "TOUGH",
+    "4": "BALLPARK",
+    "5": "TOUGH",
+    "6": "TOUGH",
+    "7": "DEFENSE",
+    "8": "PATIENT",
+    "9": "TOUGH"
    },
    "throws": "L"
   },
@@ -21634,48 +27434,53 @@
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
-   "bb": 52,
-   "bf": 990,
-   "er": 75,
-   "g": 195,
-   "gs": 16,
-   "h": 178,
-   "hbp": 5,
-   "hr": 31,
-   "ip": "258.3333",
-   "l": 9,
-   "r": 80,
-   "so": 215,
-   "sv": 9,
-   "w": 16,
+   "bb": 71,
+   "bf": 1291,
+   "er": 97,
+   "g": 262,
+   "gs": 19,
+   "h": 249,
+   "hbp": 11,
+   "hr": 39,
+   "ip": "330.3333",
+   "l": 14,
+   "r": 107,
+   "so": 270,
+   "sv": 11,
+   "w": 18,
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit_162": {
-   "bb": 17,
-   "bf": 330,
-   "er": 25,
-   "g": 65,
+   "bb": 18,
+   "bf": 323,
+   "er": 24,
+   "g": 66,
    "gs": 5,
-   "h": 59,
-   "hbp": 2,
+   "h": 62,
+   "hbp": 3,
    "hr": 10,
-   "ip": "86.0",
-   "ip_outs": 258,
-   "l": 3,
+   "ip": "82.2",
+   "ip_outs": 248,
+   "l": 4,
    "r": 27,
-   "seasons": 3,
-   "so": 72,
+   "seasons": 4,
+   "so": 68,
    "sv": 3,
-   "team_games": 486,
+   "team_games": 648,
+   "team_games_fallback": [
+    2026
+   ],
    "w": 5,
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "spots": [
@@ -43989,7 +49794,7 @@
  },
  "TB|caminju01": {
   "card_bat": {
-   "arm": "Weak",
+   "arm": "Below Average",
    "bats": "R",
    "dp": 7,
    "fielding": "Poor",
@@ -44102,7 +49907,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 5,
      "e": 5,
      "pos": "3B",
      "range": "F"
@@ -44115,19 +49920,16 @@
     "IN-PLAY": {
      "vsLHP": {
       "1B": [
-       4,
-       33
+       1,
+       1
       ],
       "2B": null,
-      "3B": [
-       1,
-       3
-      ]
+      "3B": null
      },
      "vsRHP": {
       "1B": [
        1,
-       33
+       28
       ],
       "2B": null,
       "3B": null
@@ -44136,79 +49938,85 @@
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       33,
-       36
-      ],
-      "2B": [
-       23,
-       32
-      ],
-      "3B": null,
-      "BB": [
-       1,
-       22
-      ],
-      "HBP": [
-       36,
-       37
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       30,
-       32
+       37,
+       61
       ],
       "2B": null,
       "3B": [
-       29,
-       29
+       27,
+       28
       ],
       "BB": [
        1,
        28
       ],
       "HBP": [
-       33,
-       34
+       50,
+       57
       ]
+     },
+     "vsRHP": {
+      "1B": [
+       49,
+       49
+      ],
+      "2B": [
+       37,
+       48
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       36
+      ],
+      "HBP": null
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
-       76,
-       85
+       48,
+       55
       ],
-      "2B": null,
-      "3B": null,
+      "2B": [
+       38,
+       38
+      ],
+      "3B": [
+       39,
+       47
+      ],
       "SO": [
        1,
-       73
+       38
       ]
      },
      "vsRHP": {
       "1B": [
-       59,
-       67
+       66,
+       80
       ],
       "2B": [
-       49,
-       58
+       62,
+       65
       ],
       "3B": null,
       "SO": [
        1,
-       48
+       61
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
-      "1B": null,
+      "1B": [
+       67,
+       145
+      ],
       "2B": null,
       "3B": [
-       65,
-       72
+       58,
+       57
       ],
       "HR": [
        1,
@@ -44217,14 +50025,14 @@
      },
      "vsRHP": {
       "1B": null,
-      "2B": null,
-      "3B": [
-       95,
-       99
+      "2B": [
+       88,
+       87
       ],
+      "3B": null,
       "HR": [
        1,
-       94
+       87
       ]
      }
     }
@@ -44232,7 +50040,7 @@
    "steal": {
     "jump": 3,
     "jump_mod": null,
-    "rating": "B"
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -44240,50 +50048,52 @@
   "id": "caminju01",
   "name": "Junior Caminero",
   "peak_bat": {
-   "2B": 28,
-   "3B": 0,
-   "AB": 602,
-   "BB": 41,
-   "CS": 1,
-   "G": 154,
-   "GIDP": 31,
-   "H": 159,
-   "HBP": 3,
-   "HR": 45,
-   "IBB": 1,
-   "PA": 653,
-   "R": 93,
-   "RBI": 110,
-   "SB": 7,
-   "SF": 7,
-   "SO": 125,
+   "2B": 53,
+   "3B": 1,
+   "AB": 1218,
+   "BB": 120,
+   "CS": 4,
+   "G": 316,
+   "GIDP": 57,
+   "H": 329,
+   "HBP": 7,
+   "HR": 87,
+   "IBB": 15,
+   "PA": 1355,
+   "R": 193,
+   "RBI": 211,
+   "SB": 10,
+   "SF": 10,
+   "SO": 254,
    "team_line": "Tampa Bay Rays",
    "window_years": [
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
-   "2B": 29,
-   "3B": 0,
-   "AB": 633,
-   "BB": 43,
-   "CS": 1,
+   "2B": 27,
+   "3B": 1,
+   "AB": 624,
+   "BB": 62,
+   "CS": 2,
    "G": 162,
-   "GIDP": 33,
-   "H": 167,
-   "HBP": 3,
-   "HR": 47,
-   "IBB": 1,
-   "PA": 687,
-   "R": 98,
-   "RBI": 116,
-   "SB": 7,
-   "SF": 7,
-   "SO": 131,
+   "GIDP": 29,
+   "H": 169,
+   "HBP": 4,
+   "HR": 45,
+   "IBB": 8,
+   "PA": 695,
+   "R": 99,
+   "RBI": 108,
+   "SB": 5,
+   "SF": 5,
+   "SO": 130,
    "team_line": "Tampa Bay Rays",
-   "window_games": 154,
+   "window_games": 316,
    "window_years": [
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,
@@ -44806,99 +50616,99 @@
    "out_table": [
     {
      "range": [
-      26,
-      37
+      32,
+      39
      ],
      "result": "P4"
     },
     {
      "range": [
-      45,
-      47
+      46,
+      48
      ],
      "result": "G1"
     },
     {
      "range": [
-      61,
+      62,
       67
      ],
-     "result": "F9"
+     "result": "F7"
     },
     {
      "range": [
-      38,
-      39
+      40,
+      41
      ],
      "result": "P6"
     },
     {
      "range": [
-      48,
-      48
+      49,
+      49
      ],
      "result": "L4"
     },
     {
      "range": [
       68,
-      74
+      75
      ],
-     "result": "G4"
+     "result": "G6"
     },
     {
      "range": [
-      40,
-      40
+      42,
+      42
      ],
      "result": "P2"
     },
     {
      "range": [
-      49,
-      52
+      50,
+      53
      ],
      "result": "G3"
     },
     {
      "range": [
-      75,
-      83
+      76,
+      84
      ],
      "result": "F8"
-    },
-    {
-     "range": [
-      41,
-      42
-     ],
-     "result": "P3"
-    },
-    {
-     "range": [
-      53,
-      53
-     ],
-     "result": "L6"
-    },
-    {
-     "range": [
-      84,
-      92
-     ],
-     "result": "G6"
     },
     {
      "range": [
       43,
       44
      ],
-     "result": "P5"
+     "result": "P3"
     },
     {
      "range": [
       54,
-      60
+      54
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      85,
+      92
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      55,
+      61
      ],
      "result": "G5"
     },
@@ -44907,7 +50717,7 @@
       93,
       99
      ],
-     "result": "F7"
+     "result": "F9"
     }
    ],
    "positions": [
@@ -44925,122 +50735,134 @@
     "IN-PLAY": {
      "vsLHP": {
       "1B": [
-       1,
-       12
+       8,
+       39
       ],
-      "2B": null,
+      "2B": [
+       1,
+       7
+      ],
       "3B": null
      },
      "vsRHP": {
       "1B": [
-       1,
-       35
+       8,
+       44
       ],
-      "2B": null,
+      "2B": [
+       1,
+       7
+      ],
       "3B": null
      }
     },
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       48,
-       66
+       46,
+       60
       ],
-      "2B": null,
+      "2B": [
+       39,
+       44
+      ],
       "3B": [
-       38,
-       47
+       45,
+       45
       ],
       "BB": [
        1,
        37
       ],
       "HBP": [
-       67,
-       75
+       61,
+       64
       ]
      },
      "vsRHP": {
       "1B": [
-       61,
-       65
+       47,
+       61
       ],
       "2B": [
-       49,
-       60
+       43,
+       45
       ],
-      "3B": null,
+      "3B": [
+       46,
+       46
+      ],
       "BB": [
        1,
-       48
+       42
       ],
       "HBP": [
-       66,
-       67
+       62,
+       66
       ]
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
-       30,
-       42
-      ],
-      "2B": null,
-      "3B": [
-       21,
-       29
-      ],
-      "SO": [
-       1,
-       21
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       51,
-       66
+       47,
+       58
       ],
       "2B": [
-       50,
-       50
+       44,
+       46
       ],
       "3B": null,
       "SO": [
        1,
-       49
+       45
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       43,
+       56
+      ],
+      "2B": [
+       40,
+       42
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       39
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       33,
-       98
+       39,
+       38
       ],
-      "2B": null,
+      "2B": [
+       29,
+       40
+      ],
       "3B": [
-       24,
-       23
+       38,
+       40
       ],
       "HR": [
        1,
-       24
+       28
       ]
      },
      "vsRHP": {
-      "1B": [
-       46,
-       75
+      "1B": null,
+      "2B": [
+       41,
+       47
       ],
-      "2B": null,
-      "3B": [
-       40,
-       42
-      ],
+      "3B": null,
       "HR": [
        1,
-       39
+       40
       ]
      }
     }
@@ -45056,58 +50878,58 @@
   "id": "diazya01",
   "name": "Yandy Diaz",
   "peak_bat": {
-   "2B": 148,
+   "2B": 154,
    "3B": 3,
-   "AB": 2609,
-   "BB": 319,
+   "AB": 2758,
+   "BB": 306,
    "CS": 6,
-   "G": 702,
-   "GIDP": 61,
-   "H": 765,
-   "HBP": 27,
-   "HR": 83,
-   "IBB": 10,
-   "PA": 2971,
-   "R": 362,
-   "RBI": 347,
-   "SB": 7,
-   "SF": 16,
-   "SO": 426,
+   "G": 722,
+   "GIDP": 65,
+   "H": 826,
+   "HBP": 34,
+   "HR": 92,
+   "IBB": 12,
+   "PA": 3116,
+   "R": 393,
+   "RBI": 368,
+   "SB": 9,
+   "SF": 18,
+   "SO": 439,
    "team_line": "Tampa Bay Rays",
    "window_years": [
-    2021,
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
-   "2B": 34,
+   "2B": 35,
    "3B": 1,
-   "AB": 602,
-   "BB": 74,
+   "AB": 619,
+   "BB": 69,
    "CS": 1,
    "G": 162,
-   "GIDP": 14,
-   "H": 177,
-   "HBP": 6,
-   "HR": 19,
-   "IBB": 2,
-   "PA": 686,
-   "R": 84,
-   "RBI": 80,
+   "GIDP": 15,
+   "H": 185,
+   "HBP": 8,
+   "HR": 21,
+   "IBB": 3,
+   "PA": 699,
+   "R": 88,
+   "RBI": 83,
    "SB": 2,
    "SF": 4,
-   "SO": 98,
+   "SO": 99,
    "team_line": "Tampa Bay Rays",
-   "window_games": 702,
+   "window_games": 722,
    "window_years": [
-    2021,
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,
@@ -45963,23 +51785,26 @@
     "wp": "30"
    },
    "card_type": "RP",
-   "qa_status": "PASS",
+   "qa_status": "ARCHITECTURE-LIMITED",
    "so_modifier": "+10",
-   "special": [],
+   "special": [
+    "PATIENT-OUT",
+    "TOUGH-OUT"
+   ],
    "stamina": {
     "relief": "Short",
     "start": null
    },
    "table_2d6": {
-    "10": "TOUGH",
+    "10": "BALLPARK",
     "11": "TOUGH",
-    "12": "DEFENSE",
+    "12": "IN-PLAY",
     "2": "IN-PLAY",
-    "3": "BALLPARK",
-    "4": "IN-PLAY",
-    "5": "PATIENT",
-    "6": "IN-PLAY",
-    "7": "DEFENSE",
+    "3": "IN-PLAY",
+    "4": "TOUGH",
+    "5": "PATIENT-OUT",
+    "6": "DEFENSE",
+    "7": "IN-PLAY",
     "8": "TOUGH",
     "9": "TOUGH"
    },
@@ -45990,48 +51815,53 @@
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
-   "bb": 33,
-   "bf": 725,
-   "er": 70,
-   "g": 166,
+   "bb": 44,
+   "bf": 1004,
+   "er": 90,
+   "g": 237,
    "gs": 0,
-   "h": 157,
-   "hbp": 15,
-   "hr": 20,
-   "ip": "177.3333",
-   "l": 9,
-   "r": 81,
-   "so": 154,
-   "sv": 2,
-   "w": 12,
+   "h": 212,
+   "hbp": 18,
+   "hr": 26,
+   "ip": "251.0",
+   "l": 13,
+   "r": 104,
+   "so": 217,
+   "sv": 6,
+   "w": 18,
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit_162": {
    "bb": 11,
-   "bf": 242,
+   "bf": 251,
    "er": 23,
-   "g": 55,
+   "g": 59,
    "gs": 0,
-   "h": 52,
+   "h": 53,
    "hbp": 5,
    "hr": 7,
-   "ip": "59.0",
-   "ip_outs": 177,
+   "ip": "62.2",
+   "ip_outs": 188,
    "l": 3,
-   "r": 27,
-   "seasons": 3,
-   "so": 51,
-   "sv": 1,
-   "team_games": 486,
-   "w": 4,
+   "r": 26,
+   "seasons": 4,
+   "so": 54,
+   "sv": 2,
+   "team_games": 648,
+   "team_games_fallback": [
+    2026
+   ],
+   "w": 5,
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "spots": [
@@ -47141,30 +52971,32 @@
    "addendum": {
     "dp": 7,
     "hold": 7,
-    "inj": "Iron",
+    "inj": "Prone",
     "pickoff": "chart p18, keyed to Hold",
-    "wp": "30-32"
+    "wp": "30-31"
    },
    "card_type": "SP",
-   "qa_status": "PASS",
-   "so_modifier": "NONE",
-   "special": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "so_modifier": "+20",
+   "special": [
+    "TOUGH-OUT"
+   ],
    "stamina": {
     "relief": null,
     "start": 4
    },
    "table_2d6": {
-    "10": "TOUGH",
-    "11": "TOUGH",
-    "12": "PATIENT",
-    "2": "TOUGH-OUT",
-    "3": "TOUGH",
-    "4": "IN-PLAY",
-    "5": "TOUGH",
-    "6": "IN-PLAY",
-    "7": "TOUGH",
-    "8": "PATIENT-OUT",
-    "9": "BALLPARK"
+    "10": "DEFENSE",
+    "11": "TOUGH-OUT",
+    "12": "TOUGH",
+    "2": "WHEELHOUSE",
+    "3": "PATIENT",
+    "4": "BALLPARK",
+    "5": "IN-PLAY",
+    "6": "TOUGH-OUT",
+    "7": "IN-PLAY",
+    "8": "PATIENT",
+    "9": "TOUGH-OUT"
    },
    "throws": "L"
   },
@@ -47173,48 +53005,53 @@
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
-   "bb": 116,
-   "bf": 1627,
-   "er": 136,
-   "g": 74,
-   "gs": 74,
-   "h": 331,
-   "hbp": 5,
-   "hr": 48,
-   "ip": "404.6667",
-   "l": 16,
-   "r": 143,
-   "so": 456,
+   "bb": 155,
+   "bf": 2114,
+   "er": 180,
+   "g": 98,
+   "gs": 98,
+   "h": 424,
+   "hbp": 9,
+   "hr": 58,
+   "ip": "522.6667",
+   "l": 23,
+   "r": 195,
+   "so": 562,
    "sv": 0,
-   "w": 33,
+   "w": 43,
    "window_years": [
     2021,
     2022,
-    2023
+    2023,
+    2026
    ]
   },
   "peak_pit_162": {
    "bb": 39,
-   "bf": 542,
+   "bf": 529,
    "er": 45,
    "g": 25,
    "gs": 25,
-   "h": 110,
+   "h": 106,
    "hbp": 2,
-   "hr": 16,
-   "ip": "135.0",
-   "ip_outs": 405,
-   "l": 5,
-   "r": 48,
-   "seasons": 3,
-   "so": 152,
+   "hr": 15,
+   "ip": "130.2",
+   "ip_outs": 392,
+   "l": 6,
+   "r": 49,
+   "seasons": 4,
+   "so": 141,
    "sv": 0,
-   "team_games": 486,
+   "team_games": 648,
+   "team_games_fallback": [
+    2026
+   ],
    "w": 11,
    "window_years": [
     2021,
     2022,
-    2023
+    2023,
+    2026
    ]
   },
   "spots": [
@@ -49507,7 +55344,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
-   "fielding": "Elite",
+   "fielding": "Great",
    "out_table": [
     {
      "range": [
@@ -49618,7 +55455,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 2,
      "pos": "SS",
      "range": "A"
     }
@@ -49630,41 +55467,63 @@
     "IN-PLAY": {
      "vsLHP": {
       "1B": [
-       11,
-       38
+       10,
+       31
       ],
       "2B": [
        1,
-       9
+       8
       ],
       "3B": [
-       10,
-       10
+       9,
+       9
       ]
      },
      "vsRHP": {
       "1B": [
-       11,
-       39
+       10,
+       32
       ],
       "2B": [
        1,
-       9
+       8
       ],
       "3B": [
-       10,
-       10
+       9,
+       9
       ]
      }
     },
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       32,
-       39
+       33,
+       48
       ],
       "2B": [
-       24,
+       26,
+       31
+      ],
+      "3B": [
+       32,
+       32
+      ],
+      "BB": [
+       1,
+       27
+      ],
+      "HBP": [
+       49,
+       56
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       32,
+       47
+      ],
+      "2B": [
+       28,
        30
       ],
       "3B": [
@@ -49673,109 +55532,81 @@
       ],
       "BB": [
        1,
-       22
+       27
       ],
       "HBP": [
-       40,
-       47
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       31,
-       38
-      ],
-      "2B": [
-       26,
-       29
-      ],
-      "3B": [
-       30,
-       30
-      ],
-      "BB": [
-       1,
-       25
-      ],
-      "HBP": [
-       39,
-       49
+       48,
+       57
       ]
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
-       65,
-       72
+       69,
+       75
       ],
-      "2B": [
-       62,
-       63
-      ],
+      "2B": null,
       "3B": [
-       64,
-       64
+       68,
+       68
       ],
       "SO": [
        1,
-       60
+       68
       ]
      },
      "vsRHP": {
       "1B": [
-       61,
-       68
-      ],
-      "2B": [
-       58,
-       59
-      ],
-      "3B": [
        60,
-       60
+       66
+      ],
+      "2B": null,
+      "3B": [
+       59,
+       59
       ],
       "SO": [
        1,
-       57
+       58
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       41,
-       50
+       52,
+       57
       ],
       "2B": [
-       31,
-       41
+       37,
+       43
       ],
       "3B": [
-       40,
-       40
+       51,
+       68
       ],
       "HR": [
        1,
-       29
+       34
       ]
      },
      "vsRHP": {
       "1B": [
-       50,
-       53
+       61,
+       76
       ],
       "2B": [
-       42,
-       48
+       49,
+       59
       ],
       "3B": [
-       49,
-       49
+       60,
+       60
       ],
       "HR": [
        1,
-       41
+       48
       ]
      }
     }
@@ -49791,54 +55622,56 @@
   "id": "abramcj01",
   "name": "CJ Abrams",
   "peak_bat": {
-   "2B": 92,
-   "3B": 17,
-   "AB": 1684,
-   "BB": 109,
-   "CS": 19,
-   "G": 433,
-   "GIDP": 16,
-   "H": 420,
-   "HBP": 43,
-   "HR": 57,
-   "IBB": 6,
-   "PA": 1846,
-   "R": 254,
-   "RBI": 189,
-   "SB": 109,
-   "SF": 10,
-   "SO": 371,
+   "2B": 122,
+   "3B": 21,
+   "AB": 2263,
+   "BB": 166,
+   "CS": 25,
+   "G": 585,
+   "GIDP": 25,
+   "H": 571,
+   "HBP": 55,
+   "HR": 90,
+   "IBB": 10,
+   "PA": 2500,
+   "R": 347,
+   "RBI": 295,
+   "SB": 143,
+   "SF": 16,
+   "SO": 529,
    "team_line": "Washington Nationals",
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
    "2B": 34,
    "3B": 6,
-   "AB": 630,
-   "BB": 41,
+   "AB": 627,
+   "BB": 46,
    "CS": 7,
    "G": 162,
-   "GIDP": 6,
-   "H": 157,
-   "HBP": 16,
-   "HR": 21,
-   "IBB": 2,
-   "PA": 691,
-   "R": 95,
-   "RBI": 71,
-   "SB": 41,
+   "GIDP": 7,
+   "H": 158,
+   "HBP": 15,
+   "HR": 25,
+   "IBB": 3,
+   "PA": 692,
+   "R": 96,
+   "RBI": 82,
+   "SB": 40,
    "SF": 4,
-   "SO": 139,
+   "SO": 146,
    "team_line": "Washington Nationals",
-   "window_games": 433,
+   "window_games": 585,
    "window_years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,
@@ -53040,105 +58873,105 @@
    "out_table": [
     {
      "range": [
-      18,
-      36
+      26,
+      30
      ],
      "result": "P4"
     },
     {
      "range": [
-      44,
-      47
+      38,
+      41
      ],
      "result": "G1"
     },
     {
      "range": [
-      61,
-      67
+      56,
+      62
      ],
      "result": "F7"
     },
     {
      "range": [
-      37,
-      38
+      31,
+      32
      ],
      "result": "P6"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      63,
+      71
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      33,
+      33
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      43,
+      47
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      72,
+      81
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      34,
+      35
+     ],
+     "result": "P3"
     },
     {
      "range": [
       48,
       48
      ],
-     "result": "L4"
-    },
-    {
-     "range": [
-      68,
-      75
-     ],
-     "result": "G6"
-    },
-    {
-     "range": [
-      39,
-      39
-     ],
-     "result": "P2"
-    },
-    {
-     "range": [
-      49,
-      52
-     ],
-     "result": "G3"
-    },
-    {
-     "range": [
-      76,
-      84
-     ],
-     "result": "F8"
-    },
-    {
-     "range": [
-      40,
-      41
-     ],
-     "result": "P3"
-    },
-    {
-     "range": [
-      53,
-      53
-     ],
      "result": "L6"
     },
     {
      "range": [
-      85,
-      92
+      82,
+      91
      ],
      "result": "G4"
     },
     {
      "range": [
-      42,
-      43
+      36,
+      37
      ],
      "result": "P5"
     },
     {
      "range": [
-      54,
-      60
+      49,
+      55
      ],
      "result": "G5"
     },
     {
      "range": [
-      93,
+      92,
       99
      ],
      "result": "F9"
@@ -53159,118 +58992,148 @@
     "IN-PLAY": {
      "vsLHP": {
       "1B": [
-       4,
-       24
+       3,
+       34
       ],
-      "2B": null,
-      "3B": [
+      "2B": [
        1,
-       3
+       1
+      ],
+      "3B": [
+       2,
+       2
       ]
      },
      "vsRHP": {
       "1B": [
-       1,
-       30
+       8,
+       44
       ],
-      "2B": null,
-      "3B": null
+      "2B": [
+       1,
+       6
+      ],
+      "3B": [
+       7,
+       7
+      ]
      }
     },
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       32,
-       40
+       28,
+       36
       ],
       "2B": [
-       20,
-       28
+       21,
+       26
       ],
-      "3B": null,
+      "3B": [
+       27,
+       27
+      ],
       "BB": [
        1,
-       19
+       20
       ],
       "HBP": [
-       42,
-       44
+       37,
+       40
       ]
      },
      "vsRHP": {
       "1B": [
        27,
-       30
+       35
       ],
-      "2B": null,
+      "2B": [
+       23,
+       25
+      ],
       "3B": [
-       25,
+       26,
        26
       ],
       "BB": [
        1,
-       24
+       22
       ],
       "HBP": [
-       31,
-       36
+       36,
+       40
       ]
      }
     },
     "TOUGH": {
      "vsLHP": {
       "1B": [
-       52,
-       63
+       43,
+       51
       ],
-      "2B": null,
-      "3B": null,
+      "2B": [
+       41,
+       41
+      ],
+      "3B": [
+       42,
+       42
+      ],
       "SO": [
        1,
-       53
+       40
       ]
      },
      "vsRHP": {
       "1B": [
-       28,
-       37
+       32,
+       41
       ],
       "2B": [
-       25,
-       27
+       29,
+       30
       ],
-      "3B": null,
+      "3B": [
+       31,
+       31
+      ],
       "SO": [
        1,
-       24
+       28
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       39,
-       38
+       36,
+       52
       ],
-      "2B": null,
+      "2B": [
+       26,
+       31
+      ],
       "3B": [
-       24,
-       23
+       35,
+       34
       ],
       "HR": [
        1,
-       26
+       25
       ]
      },
      "vsRHP": {
       "1B": [
-       49,
-       131
+       43,
+       48
       ],
-      "2B": null,
-      "3B": [
+      "2B": [
        36,
-       54
+       41
+      ],
+      "3B": [
+       42,
+       42
       ],
       "HR": [
        1,
@@ -53290,54 +59153,56 @@
   "id": "ruizke01",
   "name": "Keibert Ruiz",
   "peak_bat": {
-   "2B": 67,
+   "2B": 91,
    "3B": 0,
-   "AB": 1376,
-   "BB": 77,
-   "CS": 3,
-   "G": 375,
-   "GIDP": 35,
-   "H": 340,
-   "HBP": 17,
-   "HR": 38,
-   "IBB": 1,
-   "PA": 1479,
-   "R": 134,
-   "RBI": 160,
-   "SB": 10,
-   "SF": 9,
-   "SO": 162,
+   "AB": 1708,
+   "BB": 93,
+   "CS": 4,
+   "G": 480,
+   "GIDP": 42,
+   "H": 433,
+   "HBP": 20,
+   "HR": 48,
+   "IBB": 2,
+   "PA": 1833,
+   "R": 178,
+   "RBI": 208,
+   "SB": 12,
+   "SF": 12,
+   "SO": 199,
    "team_line": "Washington Nationals",
    "window_years": [
     2022,
     2023,
-    2024
+    2024,
+    2026
    ]
   },
   "peak_bat_162": {
-   "2B": 29,
+   "2B": 31,
    "3B": 0,
-   "AB": 594,
-   "BB": 33,
+   "AB": 576,
+   "BB": 31,
    "CS": 1,
    "G": 162,
-   "GIDP": 15,
-   "H": 147,
+   "GIDP": 14,
+   "H": 146,
    "HBP": 7,
    "HR": 16,
-   "IBB": 0,
-   "PA": 639,
-   "R": 58,
-   "RBI": 69,
+   "IBB": 1,
+   "PA": 619,
+   "R": 60,
+   "RBI": 70,
    "SB": 4,
    "SF": 4,
-   "SO": 70,
+   "SO": 67,
    "team_line": "Washington Nationals",
-   "window_games": 375,
+   "window_games": 480,
    "window_years": [
     2022,
     2023,
-    2024
+    2024,
+    2026
    ]
   },
   "peak_pit": null,
@@ -54978,29 +60843,23 @@
      "range": "F"
     }
    ],
-   "qa_status": "ARCHITECTURE-LIMITED",
-   "run": 7,
+   "qa_status": "PASS",
+   "run": 8,
    "sac_bunt": "F",
    "sections": {
     "IN-PLAY": {
      "vsLHP": {
       "1B": [
-       13,
-       36
-      ],
-      "2B": [
        1,
-       9
+       3
       ],
-      "3B": [
-       10,
-       12
-      ]
+      "2B": null,
+      "3B": null
      },
      "vsRHP": {
       "1B": [
        1,
-       22
+       23
       ],
       "2B": null,
       "3B": null
@@ -55009,107 +60868,104 @@
     "PATIENT": {
      "vsLHP": {
       "1B": [
-       56,
-       68
+       57,
+       80
       ],
-      "2B": [
-       44,
+      "2B": null,
+      "3B": [
+       46,
        56
       ],
-      "3B": null,
       "BB": [
        1,
-       42
+       47
       ],
       "HBP": [
-       69,
-       70
+       81,
+       88
       ]
      },
      "vsRHP": {
       "1B": [
-       54,
-       60
+       71,
+       78
       ],
-      "2B": null,
-      "3B": [
-       52,
-       53
+      "2B": [
+       58,
+       70
       ],
+      "3B": null,
       "BB": [
        1,
-       51
+       57
       ],
-      "HBP": [
-       61,
-       62
-      ]
+      "HBP": null
      }
     },
     "TOUGH": {
      "vsLHP": {
-      "1B": null,
+      "1B": [
+       80,
+       97
+      ],
       "2B": null,
-      "3B": null,
+      "3B": [
+       71,
+       79
+      ],
       "SO": [
        1,
-       99
+       68
       ]
      },
      "vsRHP": {
       "1B": [
-       85,
+       95,
        99
       ],
       "2B": null,
       "3B": null,
       "SO": [
        1,
-       84
+       94
       ]
      }
     },
     "WHEELHOUSE": {
      "vsLHP": {
       "1B": [
-       76,
-       99
+       48,
+       102
       ],
-      "2B": [
-       36,
-       60
-      ],
+      "2B": null,
       "3B": [
-       61,
-       75
+       38,
+       37
       ],
       "HR": [
        1,
-       34
+       36
       ]
      },
      "vsRHP": {
       "1B": [
-       77,
-       99
+       65,
+       96
       ],
-      "2B": [
-       54,
-       63
-      ],
+      "2B": null,
       "3B": [
-       64,
-       76
+       59,
+       64
       ],
       "HR": [
        1,
-       53
+       58
       ]
      }
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 5,
     "jump_mod": null,
     "rating": "D"
    },
@@ -55119,52 +60975,54 @@
   "id": "woodja03",
   "name": "James Wood",
   "peak_bat": {
-   "2B": 51,
-   "3B": 4,
-   "AB": 893,
-   "BB": 124,
-   "CS": 15,
-   "G": 236,
-   "GIDP": 13,
-   "H": 231,
-   "HBP": 5,
-   "HR": 40,
-   "IBB": 9,
-   "PA": 1025,
-   "R": 130,
-   "RBI": 135,
-   "SB": 29,
-   "SF": 3,
-   "SO": 318,
+   "2B": 81,
+   "3B": 5,
+   "AB": 1406,
+   "BB": 226,
+   "CS": 19,
+   "G": 371,
+   "GIDP": 18,
+   "H": 367,
+   "HBP": 9,
+   "HR": 70,
+   "IBB": 19,
+   "PA": 1648,
+   "R": 236,
+   "RBI": 212,
+   "SB": 50,
+   "SF": 7,
+   "SO": 497,
    "team_line": "Washington Nationals",
    "window_years": [
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_bat_162": {
    "2B": 35,
-   "3B": 3,
-   "AB": 613,
-   "BB": 85,
-   "CS": 10,
+   "3B": 2,
+   "AB": 614,
+   "BB": 99,
+   "CS": 8,
    "G": 162,
-   "GIDP": 9,
-   "H": 159,
-   "HBP": 3,
-   "HR": 27,
-   "IBB": 6,
-   "PA": 704,
-   "R": 89,
+   "GIDP": 8,
+   "H": 160,
+   "HBP": 4,
+   "HR": 31,
+   "IBB": 8,
+   "PA": 720,
+   "R": 103,
    "RBI": 93,
-   "SB": 20,
-   "SF": 2,
-   "SO": 218,
+   "SB": 22,
+   "SF": 3,
+   "SO": 217,
    "team_line": "Washington Nationals",
-   "window_games": 236,
+   "window_games": 371,
    "window_years": [
     2024,
-    2025
+    2025,
+    2026
    ]
   },
   "peak_pit": null,

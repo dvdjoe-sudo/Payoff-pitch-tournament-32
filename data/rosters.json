@@ -655,6 +655,222 @@
   ],
   "seed": 6
  },
+ "COL": {
+  "code": "COL",
+  "name": "Colorado Rockies",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "blackch02",
+    "kind": "hitter",
+    "name": "Charlie Blackmon",
+    "pos": "CF",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "lemahdj01",
+    "kind": "hitter",
+    "name": "DJ LeMahieu",
+    "pos": "2B",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "heltoto01",
+    "kind": "hitter",
+    "name": "Todd Helton",
+    "pos": "1B",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "arenano01",
+    "kind": "hitter",
+    "name": "Nolan Arenado",
+    "pos": "3B",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "walkela01",
+    "kind": "hitter",
+    "name": "Larry Walker",
+    "pos": "RF",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "tulowtr01",
+    "kind": "hitter",
+    "name": "Troy Tulowitzki",
+    "pos": "SS",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "hollima01",
+    "kind": "hitter",
+    "name": "Matt Holliday",
+    "pos": "LF",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "diazel01",
+    "kind": "hitter",
+    "name": "Elias Diaz",
+    "pos": "C",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "galaran01",
+    "kind": "hitter",
+    "name": "Andres Galarraga",
+    "pos": "1B",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "torreyo01",
+    "kind": "hitter",
+    "name": "Yorvit Torrealba",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "hampsga01",
+    "kind": "hitter",
+    "name": "Garrett Hampson",
+    "pos": "CF",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "storytr01",
+    "kind": "hitter",
+    "name": "Trevor Story",
+    "pos": "SS",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "reynoma01",
+    "kind": "hitter",
+    "name": "Mark Reynolds",
+    "pos": "1B",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "desmoia01",
+    "kind": "hitter",
+    "name": "Ian Desmond",
+    "pos": "LF",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "jimenub01",
+    "kind": "pitcher",
+    "name": "Ubaldo Jimenez",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "freelky01",
+    "kind": "pitcher",
+    "name": "Kyle Freeland",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "cookaa01",
+    "kind": "pitcher",
+    "name": "Aaron Cook",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "marquge01",
+    "kind": "pitcher",
+    "name": "German Marquez",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "chacijh01",
+    "kind": "pitcher",
+    "name": "Jhoulys Chacin",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "fuentbr01",
+    "kind": "pitcher",
+    "name": "Brian Fuentes",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "streehu01",
+    "kind": "pitcher",
+    "name": "Huston Street",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "betanra01",
+    "kind": "pitcher",
+    "name": "Rafael Betancourt",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "dipotje01",
+    "kind": "pitcher",
+    "name": "Jerry DiPoto",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "belisma01",
+    "kind": "pitcher",
+    "name": "Matt Belisle",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "loganbo02",
+    "kind": "pitcher",
+    "name": "Boone Logan",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "dejeami01",
+    "kind": "pitcher",
+    "name": "Mike DeJean",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 28
+ },
  "DET": {
   "code": "DET",
   "name": "Detroit Tigers",
