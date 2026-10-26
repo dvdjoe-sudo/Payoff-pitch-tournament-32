@@ -10,7 +10,9 @@ One series predates Payoff Pitch play. R1-01, New York Yankees 4-0 over the Miam
 
 ## Rosters and converted sets
 
-Every club carries 26 men: a nine-man lineup, a five-man bench, a five-man rotation, and a seven-man bullpen, taken from the club's canonical all-time roster graphic and Joe's dated amendments to it. Where a staged roster and the canonical roster file disagree, the build stops and Joe rules; the canonical file's amendment chain has governed every dispute so far.
+Every club carries **26 active players**: nine in the posted lineup, five in the starting rotation, and the remaining twelve divided between bench and bullpen. Five bench players and seven relievers is the **default**, not a mandatory split. The owner-approved canonical all-time roster and Joe's dated amendments govern each club; an explicitly approved roster may carry more bench players and fewer relievers, or vice versa. The current Dodgers, Cubs, Guardians, Reds, Cardinals, and Philadelphia Athletics rosters are valid with their recorded bench/bullpen counts.
+
+**Roster flexibility during the tournament (Joe, 2026-10-26):** bench and bullpen sizes and individual roster assignments may be changed as the tournament progresses, but only with Joe's approval. Record each change as a dated roster amendment before it takes effect, and keep the club at 26 active players. The newly approved roster governs subsequent games only; previously played games, their recorded lineups and cards, box scores, dice/FAC logs, and results remain unchanged. Where a staged or converted set differs from the latest approved roster, it must be reconciled before use; no mismatch authorizes an automatic player change.
 
 A club's Payoff Pitch set is built when its fixture comes up, to the standing conversion standard:
 

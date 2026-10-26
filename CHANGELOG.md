@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Flexible 26-man roster composition (Joe's Issue 5 ruling)
+
+Joe approved allowing different bench and bullpen sizes by club, and allowing owner-approved roster adjustments during the tournament. Every club must keep 26 active players, with nine lineup spots and five scheduled starters; the usual five-man bench and seven-man bullpen is only the default. The current Dodgers, Cubs, Guardians, Reds, Cardinals, and Philadelphia Athletics roster distributions are valid as published. Future changes require Joe's approval and a dated amendment, effective only for future games. This ruling did not change any player, card, seed, lineup already played, or tournament result. See [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
+
 ## 2026-10-26 — Results timeline
 
 The Results page is a day-by-day scoreboard of every game on the book. Each day lists the games played that day, with the club logos, the final score, and a link to the game. Games with no stored date sit after the dated days. The layout stays on a phone. The service worker cache is payoff-pitch-v32. No game result was changed.
