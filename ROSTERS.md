@@ -342,7 +342,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - CL Ryan Helsley
 - SU1 Todd Worrell
 - SU2 Bruce Sutter
-- LONG Jason Isringhausen
+- SU3 Jason Isringhausen
 - LHS Al Brazle
 - MID1 Lindy McDaniel
 

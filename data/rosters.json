@@ -1161,7 +1161,7 @@
     "id": "galaran01",
     "kind": "hitter",
     "name": "Andres Galarraga",
-    "pos": "1B",
+    "pos": "DH",
     "slot": 9
    },
    {
@@ -2873,7 +2873,7 @@
     "id": "slaugen01",
     "kind": "hitter",
     "name": "Enos Slaughter",
-    "pos": "RF",
+    "pos": "DH",
     "slot": 7
    },
    {
