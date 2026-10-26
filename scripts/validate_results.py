@@ -316,6 +316,12 @@ def documents(check: Check) -> None:
     html = (ROOT / "index.html").read_text(encoding="utf-8")
     script = (ROOT / "js" / "bracket.js").read_text(encoding="utf-8")
     check.expect("css/styles.css" in html and "js/bracket.js" in html, "viewer assets")
+    check.expect("function convertedClubs()" in script and "var clubs = convertedClubs()" in script and
+                 "var converted = convertedClubs()" in script,
+                 "roster and about pages calculate converted-club counts from the live roster data")
+    check.expect("exist for 11 clubs" not in script and "exist for eleven clubs" not in script and
+                 "Converted Payoff Pitch cards exist for eleven clubs" not in readme,
+                 "converted-club counts are not hardcoded in the website or README")
     check.expect("tournament_results.json" in script, "viewer reads the results file")
     check.expect("detail" in script, "viewer follows detail links")
     css = (ROOT / "css" / "styles.css").read_text(encoding="utf-8")
