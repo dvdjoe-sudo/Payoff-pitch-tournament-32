@@ -39,7 +39,7 @@
   var state = {
     data: null, byCode: {}, games: {}, players: {}, highlight: "",
     colors: {}, bios: {}, odds: null, recap: null, plays: null,
-    cards: {}, rosters: {}, announced: {}, peak: null
+    cards: {}, rosters: {}, announced: {}, peak: null, clubColors: {}
   };
   var detailCache = {};
   var renderToken = 0;
@@ -124,15 +124,158 @@
     return (state.colors && code && state.colors[code]) || null;
   }
 
-  function logo(team, label) {
+  var INK_LIGHT = "#f6f1e6";
+  var INK_DARK = "#1b1714";
+
+  function clubPalette(code) {
+    var palette = state.clubColors && code && state.clubColors[code];
+    if (!palette || !palette.primary) return null;
+    return palette;
+  }
+
+  function hexToRgb(hex) {
+    var h = String(hex || "").replace("#", "").trim();
+    if (h.length === 3) h = h.charAt(0) + h.charAt(0) + h.charAt(1) + h.charAt(1) + h.charAt(2) + h.charAt(2);
+    if (!/^[0-9a-fA-F]{6}$/.test(h)) return null;
+    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+  }
+
+  function channelLum(channel) {
+    var scaled = channel / 255;
+    return scaled <= 0.04045 ? scaled / 12.92 : Math.pow((scaled + 0.055) / 1.055, 2.4);
+  }
+
+  function relativeLuminance(hex) {
+    var rgb = hexToRgb(hex);
+    if (!rgb) return 0;
+    return 0.2126 * channelLum(rgb[0]) + 0.7152 * channelLum(rgb[1]) + 0.0722 * channelLum(rgb[2]);
+  }
+
+  function contrastRatio(a, b) {
+    var left = relativeLuminance(a);
+    var right = relativeLuminance(b);
+    var hi = Math.max(left, right);
+    var lo = Math.min(left, right);
+    return (hi + 0.05) / (lo + 0.05);
+  }
+
+  function inkOn(bg) {
+    return contrastRatio(bg, INK_LIGHT) >= contrastRatio(bg, INK_DARK) ? INK_LIGHT : INK_DARK;
+  }
+
+  function cssHex(name, fallback) {
+    var value = "";
+    try { value = getComputedStyle(document.documentElement).getPropertyValue(name).trim(); } catch (err) { value = ""; }
+    return /^#[0-9a-fA-F]{6}$/.test(value) ? value : fallback;
+  }
+
+  function paletteColors(palette) {
+    return [palette.primary, palette.secondary, palette.accent].filter(Boolean);
+  }
+
+  function accentOn(palette, surface) {
+    var best = "";
+    var bestRatio = 4.5;
+    paletteColors(palette).forEach(function (color) {
+      var ratio = contrastRatio(color, surface);
+      if (ratio >= bestRatio) {
+        best = color;
+        bestRatio = ratio;
+      }
+    });
+    return best;
+  }
+
+  function barColor(palette, surface) {
+    var best = palette.primary;
+    var bestRatio = -1;
+    paletteColors(palette).forEach(function (color) {
+      var ratio = contrastRatio(color, surface);
+      if (ratio > bestRatio) {
+        best = color;
+        bestRatio = ratio;
+      }
+    });
+    return best;
+  }
+
+  function paintHero(hero, code) {
+    var palette = clubPalette(code);
+    if (!palette || !hero) return;
+    hero.classList.add("team-hero-colored");
+    hero.style.background = palette.primary;
+    hero.style.color = inkOn(palette.primary);
+    var stripes = hero.querySelector(".hero-stripes");
+    if (!stripes) {
+      stripes = el("div", { class: "hero-stripes", "aria-hidden": "true" });
+      hero.appendChild(stripes);
+    }
+    while (stripes.firstChild) stripes.removeChild(stripes.firstChild);
+    [palette.secondary, palette.accent].forEach(function (color) {
+      if (!color) return;
+      var bit = el("span");
+      bit.style.background = color;
+      stripes.appendChild(bit);
+    });
+  }
+
+  function paintRosterTable(table, code) {
+    var palette = clubPalette(code);
+    if (!palette || !table) return;
+    table.classList.add("roster-accent");
+    table.style.setProperty("--club-primary", palette.primary);
+    table.style.setProperty("--club-secondary", palette.secondary || palette.primary);
+    table.style.setProperty("--club-ink", inkOn(palette.primary));
+  }
+
+  function paintClubRow(row, code, winner) {
+    var palette = clubPalette(code);
+    if (!palette || !row) return;
+    row.setAttribute("data-club", code);
+    row.setAttribute("data-club-paint", "row");
+    row.classList.add("club-colored");
+    var surface = cssHex("--card", "#fffaf1");
+    var bar = barColor(palette, surface);
+    var stripe = palette.secondary && palette.secondary !== bar ? palette.secondary : palette.primary;
+    row.style.boxShadow = "inset 4px 0 0 " + bar + ", inset 7px 0 0 " + stripe;
+    var swatch = row.querySelector(".club-swatch");
+    if (!swatch) {
+      swatch = el("span", { class: "club-swatch", "aria-hidden": "true" });
+      var name = row.querySelector(".club-name");
+      if (name) name.insertBefore(swatch, name.firstChild);
+    }
+    while (swatch.firstChild) swatch.removeChild(swatch.firstChild);
+    [palette.primary, palette.secondary, palette.accent].forEach(function (color) {
+      if (!color) return;
+      var bit = el("i");
+      bit.style.background = color;
+      swatch.appendChild(bit);
+    });
+    var nameEl = row.querySelector(".club-name");
+    if (!nameEl || winner) {
+      if (nameEl) nameEl.style.color = "";
+      return;
+    }
+    nameEl.style.color = accentOn(palette, surface);
+  }
+
+  function repaintClubRows() {
+    document.querySelectorAll("[data-club-paint='row']").forEach(function (row) {
+      paintClubRow(row, row.getAttribute("data-club"), row.classList.contains("winner-club"));
+    });
+  }
+
+  function logo(team, label, inline) {
     var colors = team ? teamColors(team.code) : null;
     var alt = label || (team && team.name ? team.name + " mark" : "Club mark");
+    var cls = inline ? "logo logo-inline" : "logo";
+    var size = inline ? "28" : "64";
     if (colors && colors.logo) {
-      return el("img", { class: "logo", src: colors.logo, alt: alt, width: "64", height: "64" });
+      return el("img", { class: cls, src: colors.logo, alt: alt, width: size, height: size });
     }
     var color = colors && colors.primary ? colors.primary : placeholderColor(team ? team.seed : 1);
     var ink = colors && colors.font ? colors.font : "#f6f1e6";
-    var node = svg("svg", { class: "logo", viewBox: "0 0 64 64", role: "img" });
+    var node = svg("svg", { class: cls, viewBox: "0 0 64 64", role: "img" });
     node.appendChild(svg("title")).textContent = alt;
     node.appendChild(svg("rect", { width: "64", height: "64", rx: "8", fill: color }));
     var text = svg("text", {
@@ -671,11 +814,18 @@
       var name = (code && series.seed_a != null && code === series.team_a ? "#" + series.seed_a + " " : "");
       if (code && code === series.team_b && series.seed_b != null) name = "#" + series.seed_b + " ";
       name += clubName(code);
-      var rowClass = "club-line" + (series.winner && series.winner === code ? " winner-club" : "");
-      card.appendChild(el("div", { class: rowClass },
-        el("span", { text: name }),
+      var winner = !!(series.winner && series.winner === code);
+      var rowClass = "club-line" + (winner ? " winner-club" : "");
+      var nameSpan = el("span", { class: "club-name" });
+      var team = code ? state.byCode[code] : null;
+      if (team) nameSpan.appendChild(logo(team, team.name + " mark", true));
+      nameSpan.appendChild(el("span", { text: name }));
+      var row = el("div", { class: rowClass },
+        nameSpan,
         el("span", { class: "runs", text: wins })
-      ));
+      );
+      paintClubRow(row, code, winner);
+      card.appendChild(row);
     });
     var mc = mcOdds(series);
     if (mc) {
@@ -1147,76 +1297,140 @@
     }
   }
 
+  function factChip(label, value, wide) {
+    var text = value == null ? "—" : String(value);
+    return el("span", { class: "card-chip" + (wide || text.length > 18 ? " wide" : "") },
+      el("span", { class: "card-k", text: label }),
+      el("span", { class: "card-v", text: text }));
+  }
+
+  function factRow(chips) {
+    var kept = chips.filter(Boolean);
+    if (!kept.length) return null;
+    var row = el("div", { class: "card-facts" });
+    kept.forEach(function (chip) { row.appendChild(chip); });
+    return row;
+  }
+
+  function bandHead(full, short, numeric) {
+    return el("th", { class: numeric ? "num" : null, scope: "col" },
+      el("span", { class: "wide-label", text: full }),
+      el("span", { class: "phone-label", text: short }));
+  }
+
+  function cardBandTable(rows) {
+    var wrap = el("div", { class: "table-wrap card-band" });
+    var t = el("table");
+    t.appendChild(el("colgroup", null,
+      el("col", { class: "band-result" }),
+      el("col", { class: "band-num" }),
+      el("col", { class: "band-num" })));
+    var head = el("tr");
+    head.appendChild(bandHead("Result", "Result", false));
+    head.appendChild(bandHead("vs LHP", "vs L", true));
+    head.appendChild(bandHead("vs RHP", "vs R", true));
+    t.appendChild(el("thead", null, head));
+    var body = el("tbody");
+    rows.forEach(function (row) {
+      var tr = el("tr");
+      tr.appendChild(el("td", { text: row[0] }));
+      tr.appendChild(el("td", { class: "num", text: row[1] }));
+      tr.appendChild(el("td", { class: "num", text: row[2] }));
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    return wrap;
+  }
+
+  function fieldingLine(positions) {
+    var list = el("div", { class: "fielding-line" });
+    positions.forEach(function (spot) {
+      var row = el("div", { class: "field-row" });
+      row.appendChild(el("span", { class: "field-pos", text: spot.pos || "" }));
+      if (spot.range != null && spot.range !== "") row.appendChild(factChip("Range", spot.range));
+      if (spot.e != null && spot.e !== "") row.appendChild(factChip("E", spot.e));
+      if (spot.arm != null && spot.arm !== "") row.appendChild(factChip("Arm", spot.arm));
+      list.appendChild(row);
+    });
+    return list;
+  }
+
+  function diceGrid(table) {
+    var grid = el("div", { class: "dice-grid" });
+    ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"].forEach(function (total) {
+      var text = table[total] || "—";
+      grid.appendChild(el("div", { class: "dice-cell" + (text.length > 12 ? " wide" : "") },
+        el("span", { class: "card-k", text: total }),
+        el("span", { class: "card-v", text: text })));
+    });
+    return grid;
+  }
+
   function cardSections(page, card) {
     if (!card.card_bat && !card.card_pit) return;
-    page.appendChild(el("h3", { text: "Payoff Pitch card" }));
+    var block = el("section", { class: "payoff-card" });
+    block.appendChild(el("h3", { text: "Payoff Pitch card" }));
     if (card.card_bat) {
       var bat = card.card_bat;
-      page.appendChild(el("h4", { text: "Hitter card" }));
+      block.appendChild(el("h4", { text: "Hitter card" }));
       var bits = [];
-      if (bat.bats) bits.push("Bats " + bat.bats);
-      if (bat.throws) bits.push("Throws " + bat.throws);
-      if (bat.run != null) bits.push("Run " + bat.run);
-      if (bat.steal) bits.push("Steal " + bat.steal.rating + (bat.steal.jump != null ? " (jump " + bat.steal.jump + ")" : ""));
-      if (bat.sac_bunt) bits.push("Sac bunt " + bat.sac_bunt);
-      if (bat.dp != null) bits.push("DP " + bat.dp);
-      if (bat.fielding) bits.push("Fielding " + bat.fielding);
-      if (bat.arm) bits.push("Arm " + bat.arm);
-      if (bits.length) page.appendChild(el("p", { class: "meta", text: bits.join(" · ") }));
-      if (bat.positions && bat.positions.length) {
-        page.appendChild(el("p", { text: bat.positions.map(function (spot) {
-          return spot.pos + " (range " + spot.range + ", E" + spot.e + ", arm " + spot.arm + ")";
-        }).join(" · ") }));
-      }
+      if (bat.bats) bits.push(factChip("Bats", bat.bats));
+      if (bat.throws) bits.push(factChip("Throws", bat.throws));
+      if (bat.run != null) bits.push(factChip("Run", bat.run));
+      if (bat.steal) bits.push(factChip("Steal", bat.steal.rating + (bat.steal.jump != null ? ", jump " + bat.steal.jump : "")));
+      if (bat.sac_bunt) bits.push(factChip("Sac bunt", bat.sac_bunt));
+      if (bat.dp != null) bits.push(factChip("DP", bat.dp));
+      if (bat.fielding) bits.push(factChip("Fielding", bat.fielding));
+      if (bat.arm) bits.push(factChip("Arm", bat.arm));
+      var facts = factRow(bits);
+      if (facts) block.appendChild(facts);
+      if (bat.positions && bat.positions.length) block.appendChild(fieldingLine(bat.positions));
       ["WHEELHOUSE", "PATIENT", "TOUGH", "IN-PLAY"].forEach(function (name) {
         var section = bat.sections && bat.sections[name];
         if (!section) return;
-        page.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
+        block.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
         var rows = ["HR", "3B", "2B", "1B", "BB", "HBP", "SO"].filter(function (result) {
           return (section.vsLHP && section.vsLHP[result]) || (section.vsRHP && section.vsRHP[result]);
         }).map(function (result) {
           return [result, bandText(section.vsLHP && section.vsLHP[result]), bandText(section.vsRHP && section.vsRHP[result])];
         });
-        if (rows.length) page.appendChild(table(["Result", "vs LHP", "vs RHP"], rows));
+        if (rows.length) block.appendChild(cardBandTable(rows));
       });
       if (bat.out_table && bat.out_table.length) {
-        page.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
+        block.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
           return row.range[0] + "-" + row.range[1] + " " + row.result;
         }).join(" · ") }));
       }
-      if (bat.qa_status) page.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
+      if (bat.qa_status) block.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
     }
     if (card.card_pit) {
       var pit = card.card_pit;
-      page.appendChild(el("h4", { text: "Pitcher card (v2)" }));
+      block.appendChild(el("h4", { text: "Pitcher card (v2)" }));
       var pbits = [];
-      if (pit.throws) pbits.push("Throws " + pit.throws);
-      if (pit.card_type) pbits.push(pit.card_type);
-      if (pit.so_modifier) pbits.push("Strikeout modifier " + pit.so_modifier);
-      if (pit.special && pit.special.length) pbits.push("Special ratings: " + pit.special.join(", "));
-      if (pbits.length) page.appendChild(el("p", { class: "meta", text: pbits.join(" · ") }));
-      var stam = [];
+      if (pit.throws) pbits.push(factChip("Throws", pit.throws));
+      if (pit.card_type) pbits.push(factChip("Type", pit.card_type));
+      if (pit.so_modifier) pbits.push(factChip("SO modifier", pit.so_modifier));
+      if (pit.special && pit.special.length) pbits.push(factChip("Special", pit.special.join(", "), true));
       if (pit.stamina) {
-        if (pit.stamina.start != null) stam.push("start " + pit.stamina.start);
-        if (pit.stamina.relief) stam.push("relief " + pit.stamina.relief);
+        if (pit.stamina.start != null) pbits.push(factChip("Start", pit.stamina.start));
+        if (pit.stamina.relief) pbits.push(factChip("Relief", pit.stamina.relief));
       }
-      if (stam.length) page.appendChild(el("p", { text: "Stamina: " + stam.join(" · ") }));
       if (pit.addendum) {
-        var abits = [];
         [["wp", "WP"], ["dp", "DP"], ["hold", "Hold"], ["pickoff", "Pickoff"], ["inj", "Inj"]].forEach(function (pair) {
           var value = pit.addendum[pair[0]];
-          if (value != null && value !== "") abits.push(pair[1] + " " + value);
+          if (value != null && value !== "") pbits.push(factChip(pair[1], value));
         });
-        if (abits.length) page.appendChild(el("p", { class: "note", text: "Addendum ratings: " + abits.join(" · ") + "." }));
       }
+      var pfacts = factRow(pbits);
+      if (pfacts) block.appendChild(pfacts);
       if (pit.table_2d6) {
-        var totals = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-        page.appendChild(table(
-          ["2d6"].concat(totals),
-          [["Section"].concat(totals.map(function (total) { return pit.table_2d6[total] || "—"; }))]));
+        block.appendChild(el("p", { class: "meta", text: "2d6 section" }));
+        block.appendChild(diceGrid(pit.table_2d6));
       }
-      if (pit.qa_status) page.appendChild(el("p", { class: "note", text: "Card QA: " + pit.qa_status + "." }));
+      if (pit.qa_status) block.appendChild(el("p", { class: "note", text: "Card QA: " + pit.qa_status + "." }));
     }
+    page.appendChild(block);
   }
 
   function isNameStart(token) {
@@ -1260,7 +1474,7 @@
     return { slot: tokens.slice(0, i).join(" "), name: rest.join(" "), pos: pos, meta: meta.join(" ") };
   }
 
-  function rosterTable(rows) {
+  function rosterTable(rows, code) {
     var showSlot = rows.some(function (row) { return row.slot; });
     var showPos = rows.some(function (row) { return row.pos; });
     var longest = 0;
@@ -1289,6 +1503,7 @@
       body.appendChild(tr);
     });
     t.appendChild(body);
+    paintRosterTable(t, code);
     wrap.appendChild(t);
     return wrap;
   }
@@ -1305,7 +1520,7 @@
       body.appendChild(el("h4", { text: GROUP_TITLES[group] }));
       body.appendChild(rosterTable(rows.map(function (spot) {
         return { slot: String(spot.slot), name: linkPlayer(code, spot.id, spot.name), pos: spot.pos };
-      })));
+      }), code));
     });
     if (collapsed) {
       var details = el("details", { class: "card-set" });
@@ -1373,6 +1588,7 @@
       el("h2", { text: "#" + team.seed + " " + team.name }),
       el("p", { class: "meta", text: team.code + " · " + (team.bracket || "winners") + " bracket · series " + team.series_wins + "-" + team.series_losses + " · games " + team.game_wins + "-" + team.game_losses })
     ));
+    paintHero(hero, code);
     page.appendChild(hero);
     page.appendChild(el("p", { class: "muted", text: markNote(team.code) }));
     page.appendChild(el("p", { text: "Run differential " + (diff.rs - diff.ra) + " (" + diff.rs + " scored, " + diff.ra + " allowed)." }));
@@ -1450,7 +1666,7 @@
     block.appendChild(rosterTable((lines || []).map(function (line) {
       var parts = splitRosterLine(line);
       return { slot: parts.slot, name: parts.name, pos: parts.pos, meta: parts.meta, peak: peakLine(code, line) };
-    })));
+    }), code));
     return block;
   }
 
@@ -1716,10 +1932,7 @@
 
   function markNote(code) {
     var colors = teamColors(code);
-    if (colors && colors.mark === "monogram") {
-      return "Monogram in team colors. " + (colors.color_source || "") + " Swap the file in data/teams.json.";
-    }
-    if (colors) return "Logo file (" + colors.mark + "). Swap the file in data/teams.json.";
+    if (colors && colors.logo) return "Classic cap logo. Where each file came from is in CREDITS.md.";
     return "Swap the file in data/teams.json.";
   }
 
@@ -2836,6 +3049,7 @@
   themeButton.addEventListener("click", function () {
     var current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
     applyTheme(current === "dark" ? "light" : "dark");
+    repaintClubRows();
   });
   applyTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
 
@@ -2880,7 +3094,8 @@
       loadOptional("data/rosters.json"),
       loadOptional("feed/odds.json"),
       loadOptional("feed/recap.json"),
-      loadOptional("data/announced_rosters.json")
+      loadOptional("data/announced_rosters.json"),
+      loadOptional("data/team_colors.json")
     ]);
   }).then(function (parts) {
     var data = parts[0];
@@ -2891,6 +3106,7 @@
     state.odds = parts[4];
     state.recap = parts[5];
     state.announced = parts[6] || {};
+    state.clubColors = parts[7] || {};
     state.cards = {};
     state.cardsLoaded = false;
     state.peak = null;
@@ -2902,7 +3118,7 @@
     renderNext();
     var complete = data.series.filter(function (series) { return series.status === "complete"; }).length;
     var progress = data.series.filter(function (series) { return series.status === "in-progress"; }).length;
-    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Display formulas are on the Formulas page. Logo files live in data/teams.json: a 1986 file where the franchise matches, a monogram otherwise.";
+    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Display formulas are on the Formulas page. Each club uses a classic cap logo. Sources are in CREDITS.md.";
     if (!location.hash) location.hash = "#/bracket";
     var where = route();
     if (where.name === "search") searchInput.value = where.query || where.rest.join("/");

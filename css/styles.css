@@ -218,6 +218,36 @@ main { padding: 0.5rem 1.25rem 2.5rem; }
   margin-top: 0.15rem;
 }
 
+.club-line.club-colored {
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0.65rem;
+}
+
+.club-name {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.club-name span { min-width: 0; }
+
+.club-swatch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.9rem;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(90, 80, 60, 0.35);
+}
+
+.club-swatch i {
+  flex: 1 1 auto;
+  display: block;
+}
+
 .club-line strong { font-weight: 700; }
 
 .club-line .runs {
@@ -254,6 +284,96 @@ details.card-set summary {
 :root[data-theme="dark"] details.card-set summary { color: var(--ink); }
 
 .meta { color: var(--muted); margin: 0 0 0.8rem; }
+
+.card-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.85rem;
+}
+
+.card-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 0.18rem 0.62rem;
+  line-height: 1.3;
+}
+
+.card-k {
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-v { overflow-wrap: anywhere; }
+
+.fielding-line {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0 0 0.85rem;
+}
+
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.field-pos {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  min-width: 2.2rem;
+}
+
+.table-wrap.card-band { overflow-x: visible; max-width: 100%; }
+
+.card-band table {
+  min-width: 0;
+  width: max-content;
+  max-width: 100%;
+}
+
+.card-band th:first-child,
+.card-band td:first-child {
+  white-space: nowrap;
+}
+
+.card-band .num {
+  white-space: nowrap;
+  text-align: left;
+  padding-left: 0.85rem;
+}
+
+.phone-label { display: none; }
+
+.dice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 0.35rem;
+  margin: 0 0 0.9rem;
+}
+
+.dice-cell {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.28rem 0.5rem;
+  background: var(--paper);
+  min-width: 0;
+}
+
+.dice-cell .card-k,
+.dice-cell .card-v { display: block; }
+
+.dice-cell .card-v { font-weight: 600; }
 
 .game-row {
   display: flex;
@@ -310,6 +430,14 @@ details.card-set summary {
 .roster-table .roster-meta,
 .roster-table .roster-peak { margin-top: 0.12rem; font-size: 0.92rem; line-height: 1.35; }
 .roster-table a { overflow-wrap: break-word; }
+.roster-table.roster-accent { box-shadow: inset 3px 0 0 var(--club-primary); }
+.roster-table.roster-accent .roster-slot {
+  background: var(--club-primary);
+  color: var(--club-ink);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: inset 0 -3px 0 var(--club-secondary);
+}
 
 table {
   width: 100%;
@@ -369,7 +497,36 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   .panel { padding: 0.8rem; }
   table { min-width: 32rem; }
   .table-wrap.roster-fit table.roster-table { min-width: 0; }
+  .table-wrap.card-band table { min-width: 0; }
+  .team-hero-colored {
+    margin: -0.8rem -0.8rem 0.85rem;
+    padding: 0.8rem 0.8rem 0.65rem;
+  }
   .standings { min-width: 28rem; }
+  .card-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.05rem;
+    border-radius: 8px;
+    padding: 0.28rem 0.45rem;
+    min-width: 0;
+  }
+  .card-chip.wide { grid-column: 1 / -1; }
+  .field-row .card-chip { border-radius: 8px; }
+  .card-band table { width: 100%; table-layout: fixed; }
+  .card-band col.band-result { width: 3.35rem; }
+  .card-band th,
+  .card-band td { padding: 0.28rem 0.32rem; font-size: 0.82rem; }
+  .card-band th { font-size: 0.68rem; letter-spacing: 0; }
+  .card-band .num { padding-left: 0.45rem; }
+  .card-band .wide-label { display: none; }
+  .card-band .phone-label { display: inline; }
+  .dice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -547,10 +704,41 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   margin-bottom: 0.6rem;
 }
 
+.team-hero-colored {
+  flex-wrap: wrap;
+  margin: -1rem -1rem 0.85rem;
+  padding: 0.9rem 1rem 0.75rem;
+  border-radius: 13px 13px 0 0;
+}
+
+.team-hero-colored h2 { margin: 0 0 0.15rem; }
+.team-hero-colored .meta,
+.team-hero-colored a { color: inherit; }
+
+.hero-stripes {
+  display: flex;
+  flex: 1 0 100%;
+  height: 6px;
+  margin: 0.45rem 0 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hero-stripes span { flex: 1 1 auto; display: block; }
+
 .logo {
   width: 3.2rem;
   height: 3.2rem;
   flex: 0 0 auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.logo-inline {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 3px;
 }
 
 .swatch {
