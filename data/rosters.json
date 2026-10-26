@@ -2815,6 +2815,222 @@
   ],
   "seed": 30
  },
+ "TOR": {
+  "code": "TOR",
+  "name": "Toronto Blue Jays",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "alomaro01",
+    "kind": "hitter",
+    "name": "Roberto Alomar",
+    "pos": "2B",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "fernato01",
+    "kind": "hitter",
+    "name": "Tony Fernandez",
+    "pos": "SS",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "donaljo02",
+    "kind": "hitter",
+    "name": "Josh Donaldson",
+    "pos": "3B",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "delgaca01",
+    "kind": "hitter",
+    "name": "Carlos Delgado",
+    "pos": "1B",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "bautijo02",
+    "kind": "hitter",
+    "name": "Jose Bautista",
+    "pos": "RF",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "bellge02",
+    "kind": "hitter",
+    "name": "George Bell",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "barfije01",
+    "kind": "hitter",
+    "name": "Jesse Barfield",
+    "pos": "RF",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "whitede03",
+    "kind": "hitter",
+    "name": "Devon White",
+    "pos": "CF",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "whitter01",
+    "kind": "hitter",
+    "name": "Ernie Whitt",
+    "pos": "C",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "kirkal01",
+    "kind": "hitter",
+    "name": "Alejandro Kirk",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "hillaa01",
+    "kind": "hitter",
+    "name": "Aaron Hill",
+    "pos": "2B",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "mosebll01",
+    "kind": "hitter",
+    "name": "Lloyd Moseby",
+    "pos": "CF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "encared01",
+    "kind": "hitter",
+    "name": "Edwin Encarnacion",
+    "pos": "1B",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "mcgrifr01",
+    "kind": "hitter",
+    "name": "Fred McGriff",
+    "pos": "1B",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "stiebda01",
+    "kind": "pitcher",
+    "name": "Dave Stieb",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "hallaro01",
+    "kind": "pitcher",
+    "name": "Roy Halladay",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "keyji01",
+    "kind": "pitcher",
+    "name": "Jimmy Key",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "hentgpa01",
+    "kind": "pitcher",
+    "name": "Pat Hentgen",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "gausmke01",
+    "kind": "pitcher",
+    "name": "Kevin Gausman",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "henketo01",
+    "kind": "pitcher",
+    "name": "Tom Henke",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "eichhma01",
+    "kind": "pitcher",
+    "name": "Mark Eichhorn",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "warddu01",
+    "kind": "pitcher",
+    "name": "Duane Ward",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "osunaro01",
+    "kind": "pitcher",
+    "name": "Roberto Osuna",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "downssc01",
+    "kind": "pitcher",
+    "name": "Scott Downs",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "quantpa01",
+    "kind": "pitcher",
+    "name": "Paul Quantrill",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "clancji01",
+    "kind": "pitcher",
+    "name": "Jim Clancy",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 25
+ },
  "WSH": {
   "code": "WSH",
   "name": "Washington Nationals",

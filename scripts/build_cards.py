@@ -90,6 +90,7 @@ SETS = [
     ("ATL", "payoff-pitch-braves", "atl"),
     ("SD", "payoff-pitch-padres", "sd"),
     ("PIT", "payoff-pitch-pirates", "pit"),
+    ("TOR", "payoff-pitch-bluejays", "tor"),
 ]
 
 # Window years for a card whose input line the APBA files do not carry.
@@ -126,6 +127,7 @@ TEAM_IDS = {
     "ATL": ["BSN", "ML1", "ATL"],
     "SD": ["SDN"],
     "PIT": ["PIT"],
+    "TOR": ["TOR"],
 }
 
 BAT_COUNTING = ["G", "PA", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB",
