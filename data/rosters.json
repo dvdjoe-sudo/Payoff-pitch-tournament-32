@@ -1205,6 +1205,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "burksel01",
+    "kind": "hitter",
+    "name": "Ellis Burks",
+    "pos": "CF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "jimenub01",
     "kind": "pitcher",
@@ -1291,14 +1299,6 @@
     "name": "Boone Logan",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "dejeami01",
-    "kind": "pitcher",
-    "name": "Mike DeJean",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 28

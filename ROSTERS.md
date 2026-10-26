@@ -1447,6 +1447,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF4 Trevor Story SS/OF R 6
 - IF2 Mark Reynolds 1B/3B R 5
 - BAT Ian Desmond OF R 5
+- OF5 Ellis Burks OF R 5
 
 ### Rotation
 
@@ -1464,7 +1465,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MR Jerry DiPoto 7
 - MR Matt Belisle 7
 - LHP Boone Logan 6
-- LR Mike DeJean 6
 
 ## 29. Arizona Diamondbacks (ARI)
 

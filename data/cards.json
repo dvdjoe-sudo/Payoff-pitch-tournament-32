@@ -31429,6 +31429,333 @@
   "team": "COL",
   "tournament": null
  },
+ "COL|burksel01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "dp": 7,
+   "fielding": "Below Average",
+   "out_table": [
+    {
+     "range": [
+      28,
+      39
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      46,
+      48
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      62,
+      67
+     ],
+     "result": "F9"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      49,
+      49
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      68,
+      74
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      42,
+      42
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      50,
+      53
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      43,
+      44
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      54,
+      54
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      84,
+      92
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      45,
+      45
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      55,
+      61
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      93,
+      99
+     ],
+     "result": "F7"
+    }
+   ],
+   "positions": [
+    {
+     "arm": 6,
+     "e": 5,
+     "pos": "CF",
+     "range": "D"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 10,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       4,
+       32
+      ],
+      "2B": null,
+      "3B": [
+       1,
+       3
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       1,
+       30
+      ],
+      "2B": null,
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       50,
+       63
+      ],
+      "2B": [
+       37,
+       49
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       38
+      ],
+      "HBP": [
+       64,
+       66
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       47,
+       55
+      ],
+      "2B": null,
+      "3B": [
+       45,
+       46
+      ],
+      "BB": [
+       1,
+       44
+      ],
+      "HBP": [
+       56,
+       58
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       67,
+       78
+      ],
+      "2B": null,
+      "3B": null,
+      "SO": [
+       1,
+       66
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       62,
+       69
+      ],
+      "2B": [
+       48,
+       61
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       47
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       68,
+       95
+      ],
+      "2B": [
+       51,
+       50
+      ],
+      "3B": [
+       53,
+       62
+      ],
+      "HR": [
+       1,
+       51
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       88,
+       102
+      ],
+      "2B": null,
+      "3B": [
+       75,
+       87
+      ],
+      "HR": [
+       1,
+       74
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 5,
+    "jump_mod": null,
+    "rating": "D"
+   },
+   "throws": "R"
+  },
+  "card_pit": null,
+  "id": "burksel01",
+  "name": "Ellis Burks",
+  "peak_bat": {
+   "2B": 96,
+   "3B": 21,
+   "AB": 1672,
+   "BB": 186,
+   "CS": 18,
+   "G": 478,
+   "GIDP": 53,
+   "H": 510,
+   "HBP": 13,
+   "HR": 102,
+   "IBB": 2,
+   "PA": 1881,
+   "R": 328,
+   "RBI": 313,
+   "SB": 49,
+   "SF": 10,
+   "SO": 341,
+   "team_line": "Colorado Rockies",
+   "window_years": [
+    1995,
+    1996,
+    1997,
+    1998
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 7,
+   "AB": 567,
+   "BB": 63,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 18,
+   "H": 173,
+   "HBP": 4,
+   "HR": 35,
+   "IBB": 1,
+   "PA": 637,
+   "R": 111,
+   "RBI": 106,
+   "SB": 17,
+   "SF": 3,
+   "SO": 116,
+   "team_line": "Colorado Rockies",
+   "window_games": 478,
+   "window_years": [
+    1995,
+    1996,
+    1997,
+    1998
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "bench",
+    "kind": "hitter",
+    "pos": "CF",
+    "slot": 6
+   }
+  ],
+  "team": "COL",
+  "tournament": null
+ },
  "COL|chacijh01": {
   "card_bat": null,
   "card_pit": {
@@ -31618,106 +31945,6 @@
     "kind": "pitcher",
     "pos": "SP",
     "slot": 3
-   }
-  ],
-  "team": "COL",
-  "tournament": null
- },
- "COL|dejeami01": {
-  "card_bat": null,
-  "card_pit": {
-   "addendum": {
-    "dp": 9,
-    "hold": 7,
-    "inj": "Iron",
-    "pickoff": "chart p18, keyed to Hold",
-    "wp": "30-32"
-   },
-   "card_type": "RP",
-   "qa_status": "ARCHITECTURE-LIMITED",
-   "so_modifier": "NONE",
-   "special": [
-    "TOUGH-OUT",
-    "PATIENT-OUT"
-   ],
-   "stamina": {
-    "relief": "Short",
-    "start": null
-   },
-   "table_2d6": {
-    "10": "PATIENT",
-    "11": "BALLPARK",
-    "12": "TOUGH-OUT",
-    "2": "TOUGH",
-    "3": "TOUGH",
-    "4": "IN-PLAY",
-    "5": "TOUGH",
-    "6": "IN-PLAY",
-    "7": "TOUGH",
-    "8": "DEFENSE",
-    "9": "PATIENT-OUT"
-   },
-   "throws": "R"
-  },
-  "id": "dejeami01",
-  "name": "Mike DeJean",
-  "peak_bat": null,
-  "peak_bat_162": null,
-  "peak_pit": {
-   "bb": 122,
-   "bf": 1276,
-   "er": 154,
-   "g": 262,
-   "gs": 1,
-   "h": 315,
-   "hbp": 8,
-   "hr": 30,
-   "ip": "293.0",
-   "l": 12,
-   "r": 169,
-   "so": 165,
-   "sv": 4,
-   "w": 16,
-   "window_years": [
-    1997,
-    1998,
-    1999,
-    2000,
-    2005
-   ]
-  },
-  "peak_pit_162": {
-   "bb": 24,
-   "bf": 255,
-   "er": 31,
-   "g": 52,
-   "gs": 0,
-   "h": 63,
-   "hbp": 2,
-   "hr": 6,
-   "ip": "58.2",
-   "ip_outs": 176,
-   "l": 2,
-   "r": 34,
-   "seasons": 5,
-   "so": 33,
-   "sv": 1,
-   "team_games": 810,
-   "w": 3,
-   "window_years": [
-    1997,
-    1998,
-    1999,
-    2000,
-    2005
-   ]
-  },
-  "spots": [
-   {
-    "group": "bullpen",
-    "kind": "pitcher",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "team": "COL",
