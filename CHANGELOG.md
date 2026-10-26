@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Inbox import rebuild
+
+An inbox import now rebuilds the Peak 162 file, the roster page, the leaders and feeds, the series-preview images, and the bracket image, the same commands the site workflow runs. A pushed game then passes that workflow's generated-file check. The service worker cache is payoff-pitch-v29. No game result was changed.
+
 ## 2026-10-26 — Clemens ERA
 
 Roger Clemens allowed 2 earned runs in 48 outs, 16.0 innings. ERA is 27 × 2 / 48 = 1.125. Baseball-Reference rounds a half hundredth to the even hundredth, so the printed ERA is 1.12. The leaders page and the player page had been rounding that half up to 1.13. Carl Hubbell, 1 earned run in 8.0 innings, is the same 1.125 and now prints 1.12 as well. The innings and the earned runs were not changed. WHIP still rounds half up. The service worker cache is payoff-pitch-v28.

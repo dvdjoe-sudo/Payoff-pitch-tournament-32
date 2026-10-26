@@ -77,7 +77,9 @@ The first command only writes a preview under `imports/`. `--check` compares the
 
 Put the `.md` or `.csv` in [`inbox/`](inbox/) on `main`. [`.github/workflows/inbox.yml`](.github/workflows/inbox.yml) runs on that push, and from the Actions tab (Run workflow). It imports every box score in the folder, validates, regenerates, commits, and deploys. The same push also starts the Tournament site workflow, which deploys again.
 
-A file that fails is left in `inbox/`. The reason is committed to `inbox/errors/<name>.txt`. A file that lands moves to `inbox/imported/`. The workflow's token needs permission to push to `main` (Actions, workflow permissions, read and write).
+A file that fails is left in `inbox/`. The reason is committed to `inbox/errors/<name>.txt`. A file that lands moves to `inbox/imported/`. The import also rebuilds the Peak 162 file, rosters, leaders, series previews, and the bracket image, the same set the site workflow checks.
+
+The workflow asks for permission to write to the repository. GitHub still blocks the push when the repository maximum is read-only. Open the repository, then Settings, then Actions, then General. Under Workflow permissions, choose Read and write permissions, and save. No secret is required for the import. If those choices are greyed out, an organization owner sets the same control: the organization, then Settings, then Actions, then General, then Workflow permissions, then Read and write permissions.
 
 ## Posting a final
 
