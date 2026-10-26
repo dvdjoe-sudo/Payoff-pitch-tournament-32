@@ -3166,6 +3166,165 @@
     view.appendChild(page);
   }
 
+  function halfUp(value, places) {
+    var negative = value < 0;
+    var raw = Math.abs(value).toFixed(places + 8);
+    var parts = raw.split(".");
+    var whole = parts[0];
+    var frac = parts[1] || "";
+    var keep = frac.slice(0, places);
+    var next = frac.charAt(places) || "0";
+    if (next >= "5") {
+      var combined = String(parseInt(whole + keep, 10) + 1);
+      var width = whole.length + places;
+      while (combined.length < width) combined = "0" + combined;
+      whole = places ? combined.slice(0, combined.length - places) : combined;
+      keep = places ? combined.slice(combined.length - places) : "";
+    }
+    var text = places ? whole + "." + keep : whole;
+    if (negative && text !== "0" && !/^0\.0+$/.test(text)) text = "-" + text;
+    return text;
+  }
+
+  function rate3FromValue(value) {
+    if (value == null || isNaN(value)) return "—";
+    var text = halfUp(value, 3);
+    if (text.charAt(0) === "0" && text.charAt(1) === ".") return text.slice(1);
+    return text;
+  }
+
+  function byLeader(higher) {
+    return function (a, b) {
+      if (a.primary !== b.primary) return higher ? b.primary - a.primary : a.primary - b.primary;
+      if (a.secondary !== b.secondary) return higher ? b.secondary - a.secondary : a.secondary - b.secondary;
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    };
+  }
+
+  function topTies(rows, limit) {
+    if (rows.length <= limit) return rows;
+    var border = rows[limit - 1].primary;
+    var kept = [];
+    rows.forEach(function (item) {
+      if (kept.length < limit || item.primary === border) kept.push(item);
+    });
+    return kept;
+  }
+
+  function leaderEntry(player, primary, secondary, label) {
+    return { player: player, name: player.name, primary: primary, secondary: secondary, label: label };
+  }
+
+  function leaderRows() {
+    var hit = { avg: [], ops: [], hr: [], rbi: [], h: [], r: [], sb: [] };
+    var arm = { era: [], whip: [], w: [], k: [], sv: [] };
+    Object.keys(state.players).forEach(function (key) {
+      var player = state.players[key];
+      var bat = player.bat;
+      var pit = player.pit;
+      function counting(list, value, secondary) {
+        if (value < 1) return;
+        list.push(leaderEntry(player, value, secondary, String(value)));
+      }
+      counting(hit.hr, bat.hr, bat.h);
+      counting(hit.rbi, bat.rbi, bat.h);
+      counting(hit.h, bat.h, bat.h);
+      counting(hit.r, bat.r, bat.h);
+      counting(hit.sb, bat.sb, bat.h);
+      if (paOf(bat) >= 10) {
+        var avg = bat.ab ? bat.h / bat.ab : 0;
+        var obpDen = bat.ab + bat.bb + bat.hbp + bat.sf;
+        var obp = obpDen ? (bat.h + bat.bb + bat.hbp) / obpDen : 0;
+        var slg = bat.ab ? totalBases(bat) / bat.ab : 0;
+        hit.avg.push(leaderEntry(player, avg, bat.h, bat.ab ? rate3FromValue(avg) : "—"));
+        hit.ops.push(leaderEntry(player, obp + slg, bat.h, rate3FromValue(obp + slg)));
+      }
+      if (pit.outs >= 15) {
+        var era = (27 * pit.er) / pit.outs;
+        var whip = (3 * (pit.h + pit.bb)) / pit.outs;
+        arm.era.push(leaderEntry(player, era, -pit.outs, halfUp(era, 2)));
+        arm.whip.push(leaderEntry(player, whip, -pit.outs, halfUp(whip, 2)));
+      }
+      counting(arm.w, pit.w, -pit.l);
+      counting(arm.k, pit.k, pit.outs);
+      counting(arm.sv, pit.sv, pit.outs);
+    });
+    return { hit: hit, arm: arm };
+  }
+
+  function leaderTable(rows, higher, stat) {
+    var shown = topTies(rows.slice().sort(byLeader(higher)), 10);
+    var wrap = el("div", { class: "table-wrap leader-fit" });
+    var t = el("table", { class: "leader-table" });
+    var head = el("tr");
+    head.appendChild(el("th", { text: "Player" }));
+    head.appendChild(el("th", { class: "num", text: stat }));
+    t.appendChild(el("thead", null, head));
+    var body = el("tbody");
+    shown.forEach(function (item, index) {
+      var tr = el("tr");
+      var palette = clubPalette(item.player.team);
+      if (palette) {
+        tr.className = "leader-colored";
+        tr.style.setProperty("--leader-color", palette.primary);
+      }
+      var who = el("td");
+      var line = el("div", { class: "leader-who" });
+      line.appendChild(el("span", { class: "leader-rank", text: String(index + 1) }));
+      var team = state.byCode[item.player.team];
+      if (team) line.appendChild(logo(team, team.name + " mark", true));
+      var link = linkPlayer(item.player.team, item.player.id, item.player.name);
+      link.classList.add("leader-name");
+      line.appendChild(link);
+      who.appendChild(line);
+      tr.appendChild(who);
+      tr.appendChild(el("td", { class: "num", text: item.label }));
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    return wrap;
+  }
+
+  function leaderBoard(title, note, rows, higher, stat) {
+    var section = el("section", { class: "leader-board" });
+    section.appendChild(el("h3", { text: title }));
+    section.appendChild(el("p", { class: "note", text: note }));
+    if (!rows.length) section.appendChild(el("p", { text: "No one has qualified." }));
+    else section.appendChild(leaderTable(rows, higher, stat));
+    return section;
+  }
+
+  function renderLeaders() {
+    markNav("leaders");
+    var boards = leaderRows();
+    var page = el("article", { class: "stack" });
+    page.appendChild(el("h2", { text: "Leaders" }));
+    page.appendChild(el("p", { class: "note", text: "Counted from the played games, one line per club. The same book as the generated leaders file. A game shows up here when it is in the archive. Rate hitting needs 10 plate appearances. Rate pitching needs 5 innings. A counting list is the top 10, and a tie at the cutoff stays." }));
+    var batting = el("div", { class: "leader-grid" });
+    batting.appendChild(leaderBoard("Batting average", "At least 10 plate appearances.", boards.hit.avg, true, "AVG"));
+    batting.appendChild(leaderBoard("Home runs", "Top 10, ties included.", boards.hit.hr, true, "HR"));
+    batting.appendChild(leaderBoard("Runs batted in", "Top 10, ties included.", boards.hit.rbi, true, "RBI"));
+    batting.appendChild(leaderBoard("Hits", "Top 10, ties included.", boards.hit.h, true, "H"));
+    batting.appendChild(leaderBoard("Runs", "Top 10, ties included.", boards.hit.r, true, "R"));
+    batting.appendChild(leaderBoard("Stolen bases", "Top 10, ties included.", boards.hit.sb, true, "SB"));
+    batting.appendChild(leaderBoard("OPS", "At least 10 plate appearances. On-base percentage plus slugging.", boards.hit.ops, true, "OPS"));
+    var pitching = el("div", { class: "leader-grid" });
+    pitching.appendChild(leaderBoard("Earned run average", "At least 5 innings. Lowest first.", boards.arm.era, false, "ERA"));
+    pitching.appendChild(leaderBoard("WHIP", "At least 5 innings. (H + BB) / IP.", boards.arm.whip, false, "WHIP"));
+    pitching.appendChild(leaderBoard("Wins", "Top 10, ties included. The W decision.", boards.arm.w, true, "W"));
+    pitching.appendChild(leaderBoard("Strikeouts", "Top 10, ties included.", boards.arm.k, true, "K"));
+    pitching.appendChild(leaderBoard("Saves", "Top 10, ties included. The S decision.", boards.arm.sv, true, "SV"));
+    page.appendChild(el("h3", { text: "Batting" }));
+    page.appendChild(batting);
+    page.appendChild(el("h3", { text: "Pitching" }));
+    page.appendChild(pitching);
+    clear(view);
+    view.appendChild(page);
+  }
+
   function renderFormulas() {
     markNav("formulas");
     clear(view);
@@ -3183,6 +3342,8 @@
     page.appendChild(el("h3", { text: "Series odds" }));
     page.appendChild(el("p", { text: "Each remaining game is an independent 0.55 win for the higher seed. The bar is the chance that club reaches 4 wins first. A completed series shows the winner at 1." }));
     page.appendChild(el("p", { text: "The bracket also shows a Monte Carlo from the club indexes: one game is 1 / (1 + exp(−(index A − index B) / 80)), with no home-field edge. Four thousand draws use a fixed seed. A finished series is recorded as 1 and 0, not resimulated. A shown 0.0 means that side won none of the draws." }));
+    page.appendChild(el("h3", { text: "Leaders" }));
+    page.appendChild(el("p", { text: "The Leaders page counts the played games. Batting average and OPS need 10 plate appearances. OPS is on-base percentage plus slugging. ERA and WHIP need 5 innings. ERA is 27 × ER / outs. WHIP is (H + BB) / IP. Counting lists are the top 10, and a tie at tenth place stays. A new game is on the board when it is in the archive." }));
     page.appendChild(el("h3", { text: "Peak 162" }));
     page.appendChild(el("p", { text: PEAK_NOTE + " The label is Peak 162 with the club and the first and last year of the stretch." }));
     page.appendChild(el("h3", { text: "Run differential" }));
@@ -3207,6 +3368,7 @@
     else if (where.name === "preview") renderSeriesPreview(where.rest[0]);
     else if (where.name === "previews") renderPreviews();
     else if (where.name === "stats") renderStats();
+    else if (where.name === "leaders") renderLeaders();
     else if (where.name === "history") renderHistory();
     else if (where.name === "recap") renderRecap();
     else if (where.name === "add") renderAdd();

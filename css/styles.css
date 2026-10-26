@@ -447,6 +447,58 @@ table {
 
 .standings { min-width: 0; }
 
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.leader-board {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.65rem 0.7rem 0.35rem;
+  min-width: 0;
+}
+
+.leader-board h3 { margin: 0 0 0.15rem; font-size: 1.05rem; }
+.leader-board .note { margin-bottom: 0.45rem; }
+
+.table-wrap.leader-fit { overflow-x: visible; max-width: 100%; }
+
+.table-wrap.leader-fit table.leader-table {
+  min-width: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.leader-table th,
+.leader-table td {
+  overflow-wrap: break-word;
+  vertical-align: middle;
+}
+
+.leader-table th:last-child,
+.leader-table td:last-child { width: 3.6rem; }
+
+.leader-who {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.leader-rank {
+  flex: 0 0 1.25rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.leader-name { min-width: 0; overflow-wrap: anywhere; }
+
+.leader-table tr.leader-colored td:first-child { box-shadow: inset 3px 0 0 var(--leader-color, var(--gold)); }
+
 th, td {
   padding: 0.4rem 0.55rem;
   border-bottom: 1px solid var(--line);
@@ -498,6 +550,8 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   table { min-width: 32rem; }
   .table-wrap.roster-fit table.roster-table { min-width: 0; }
   .table-wrap.card-band table { min-width: 0; }
+  .table-wrap.leader-fit table.leader-table { min-width: 0; }
+  .leader-grid { grid-template-columns: 1fr; }
   .team-hero-colored {
     margin: -0.8rem -0.8rem 0.85rem;
     padding: 0.8rem 0.8rem 0.65rem;
