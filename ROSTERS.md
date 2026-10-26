@@ -527,7 +527,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - C2 Ernie Lombardi 10
 - UTIL Dave Concepcion 19
 - OF4 Edd Roush 12
-- IF2 Bid McPhee 18
+- IF2 Johnny Temple 8
 - OF5 Vada Pinson 11
 - BAT/PH Ted Kluszewski 11
 

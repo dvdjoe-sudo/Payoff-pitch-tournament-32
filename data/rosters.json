@@ -871,6 +871,222 @@
   ],
   "seed": 6
  },
+ "CIN": {
+  "code": "CIN",
+  "name": "Cincinnati Reds",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "rosepe01",
+    "kind": "hitter",
+    "name": "Pete Rose",
+    "pos": "3B",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "morgajo02",
+    "kind": "hitter",
+    "name": "Joe Morgan",
+    "pos": "2B",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "robinfr02",
+    "kind": "hitter",
+    "name": "Frank Robinson",
+    "pos": "RF",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "benchjo01",
+    "kind": "hitter",
+    "name": "Johnny Bench",
+    "pos": "C",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "vottojo01",
+    "kind": "hitter",
+    "name": "Joey Votto",
+    "pos": "1B",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "fostege01",
+    "kind": "hitter",
+    "name": "George Foster",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "perezto01",
+    "kind": "hitter",
+    "name": "Tony Perez",
+    "pos": "3B",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "daviser01",
+    "kind": "hitter",
+    "name": "Eric Davis",
+    "pos": "CF",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "larkiba01",
+    "kind": "hitter",
+    "name": "Barry Larkin",
+    "pos": "SS",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "lombaer01",
+    "kind": "hitter",
+    "name": "Ernie Lombardi",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "conceda01",
+    "kind": "hitter",
+    "name": "Dave Concepcion",
+    "pos": "SS",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "roushed01",
+    "kind": "hitter",
+    "name": "Edd Roush",
+    "pos": "CF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "templjo01",
+    "kind": "hitter",
+    "name": "Johnny Temple",
+    "pos": "2B",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "pinsova01",
+    "kind": "hitter",
+    "name": "Vada Pinson",
+    "pos": "CF",
+    "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "kluszte01",
+    "kind": "hitter",
+    "name": "Ted Kluszewski",
+    "pos": "1B",
+    "slot": 6
+   },
+   {
+    "group": "rotation",
+    "id": "hahnno01",
+    "kind": "pitcher",
+    "name": "Noodles Hahn",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "waltebu01",
+    "kind": "pitcher",
+    "name": "Bucky Walters",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "rijojo01",
+    "kind": "pitcher",
+    "name": "Jose Rijo",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "luquedo01",
+    "kind": "pitcher",
+    "name": "Dolf Luque",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "malonji01",
+    "kind": "pitcher",
+    "name": "Jim Maloney",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "chapmar01",
+    "kind": "pitcher",
+    "name": "Aroldis Chapman",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "dibblro01",
+    "kind": "pitcher",
+    "name": "Rob Dibble",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "francjo01",
+    "kind": "pitcher",
+    "name": "John Franco",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "carrocl02",
+    "kind": "pitcher",
+    "name": "Clay Carroll",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "cordefr01",
+    "kind": "pitcher",
+    "name": "Francisco Cordero",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "rixeyep01",
+    "kind": "pitcher",
+    "name": "Eppa Rixey",
+    "pos": "RP",
+    "slot": 6
+   }
+  ],
+  "seed": 9
+ },
  "COL": {
   "code": "COL",
   "name": "Colorado Rockies",
