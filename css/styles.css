@@ -524,6 +524,23 @@ table {
 .award-pts { grid-area: pts; font-weight: 700; font-variant-numeric: tabular-nums; }
 .award-detail { grid-area: detail; margin: 0; color: var(--muted); font-size: 0.78rem; overflow-wrap: anywhere; }
 
+.feat-feed { min-width: 0; }
+.feat-list { list-style: none; margin: 0.2rem 0 0.8rem; padding: 0; }
+.feat-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.45rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+.feat-kind { font-weight: 700; }
+.feat-who { min-width: 0; }
+.feat-who .logo { vertical-align: middle; margin-right: 0.3rem; }
+.feat-who a, .feat-line, .feat-game, .feat-kind { overflow-wrap: anywhere; }
+.feat-line, .feat-game { color: var(--muted); }
+
 .wait-list { list-style: none; margin: 0; padding: 0; }
 .wait-list li {
   display: flex;
