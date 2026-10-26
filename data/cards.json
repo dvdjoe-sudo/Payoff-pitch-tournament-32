@@ -49326,10 +49326,10 @@
  },
  "PIT|clemero01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "Strong",
    "bats": "R",
    "dp": 7,
-   "fielding": "Below Average",
+   "fielding": "Great",
    "out_table": [
     {
      "range": [
@@ -49439,10 +49439,10 @@
    ],
    "positions": [
     {
-     "arm": 6,
-     "e": 5,
+     "arm": 8,
+     "e": 2,
      "pos": "RF",
-     "range": "D"
+     "range": "A"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
