@@ -46,6 +46,24 @@ Taken only from recorded lines:
 
 A club's chance to win one game against another is 1 / (1 + exp(−(index A − index B) / 80)). There is no home-field edge. Each series is played out to 4 wins from the games already on the book. The bracket then reseeds the way [BRACKET.md](BRACKET.md) describes, including a fresh F-02 when the one-loss finalist wins F-01. Four thousand draws use a fixed seed, so the file does not change between rebuilds. A finished series is recorded as 1 for the winner and 0 for the loser, not resimulated. A shown 0.0 means that side won none of the 4,000 draws. It is not a mathematical zero. Joe can change the scale in `scripts/odds.py` if the gaps should produce more upsets. The simulation does not edit a score or a seed.
 
+## Peak 162
+
+Peak 162 is a display line on an owner's roster card. It is not a tournament stat and it does not change a box score. The source is the Lahman database, 2025 edition (CRAN package Lahman 14.0-0), seasons 1871 through 2025. The 2026 season is not in that file. Lahman does not publish WAR, so the window is not chosen by WAR.
+
+A franchise season is a year with a batting or pitching stint for that tournament club's franchise only. A mid-season stint with another club is left out. Consecutive means the next season in that list. A year the player did not play for the franchise is not a zero season and is not inside the totals. The label years are the first and last year of the chosen window.
+
+The window is the best 5 of those seasons when the player has at least 5. With 3 or 4, it is the best 3. With fewer than 3, it is every season, and the line says so. Hitters are ranked by league OPS+ on the window's combined totals: 100 times (OBP divided by the league OBP, plus SLG divided by the league SLG, minus 1). Pitchers are ranked by ERA+ times innings. ERA+ is 100 times the league ERA divided by the pitcher's ERA. There is no park adjustment. League rates are the Lahman team totals for that league and year, weighted by the player's plate appearances or outs in the window. A shutout window is ranked as if it had allowed half a run, so the rank stays finite. The printed ERA still uses the real earned runs. Missing hit-by-pitch and sacrifice-fly cells in Lahman are treated as zero, which is how that file records them.
+
+Counting stats are then scaled. Hitters scale to 162 games. A rotation card scales to 34 starts. A bullpen card scales to 65 appearances. The roster slot sets that choice. Honorable mentions and what-if names with no slot are pitchers when they have fewer than 200 franchise plate appearances, or at least 10 franchise starts, or at least 50 franchise innings. Among those, they are starters when franchise starts are at least half their appearances, and relievers otherwise. A hitter who only mopped up stays a hitter. Rates are computed from the unscaled totals, then rounded half up. Counting stats, including outs, are rounded half up. AVG, OBP, SLG, and OPS are three decimals. ERA and WHIP are two. Strikeouts per nine are one.
+
+A hitter's line also shows pitching when the pitching window has at least 10 starts or 50 innings. A pitcher's line also shows batting when the batting window has at least 200 plate appearances and those appearances are more than eight times his pitching appearances in that window, so a pitcher who only batted on the days he pitched does not get a second line.
+
+The label is `Peak 162 with <club> (YYYY to YYYY)`. One season prints a single year. Players who cannot be matched, or who have no franchise seasons, say `Peak stats unavailable`.
+
+Philadelphia Athletics use only the 1901–1954 Athletics (Lahman team `PHA`). Oakland uses only Oakland seasons from 1968 on, including the 2025 Athletics team id `ATH`, and not the Kansas City Athletics. Montreal uses only the Expos, 1969–2004. The Nationals card is not applied: that club has already played. Other clubs use the franchise team ids in `scripts/build_peak162.py`, including Brooklyn for the Dodgers, the Boston and Milwaukee Braves, the 1961–1971 Senators for the Rangers, the 1901–1960 Senators for the Twins, the Browns for the Orioles, and the Pilots for the Brewers. The Pilots are not Mariners seasons. The 1882 American Association Athletics are not the Philadelphia Athletics card.
+
+Clubs that have already played and have no owner card on this page (Yankees, Giants, Red Sox, Rays, Diamondbacks, Marlins, and Nationals) do not get a Peak 162 line. Their game pages are unchanged.
+
 ## Share graphics
 
 `graphics/games/` and `graphics/series/` are drawn from the final score and the series wins. They are for sharing. They are not a second box score.

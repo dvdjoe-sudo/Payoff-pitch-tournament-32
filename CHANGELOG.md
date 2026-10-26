@@ -2,6 +2,14 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-25 — Owner cards for the remaining clubs, and Peak 162
+
+The owner's second set of cards is in `data/announced_rosters.json` with the first nine. Montreal maps to the Expos. Cleveland maps to the Guardians. The Twins card includes the 1901–1960 Senators. The Philadelphia Athletics card is separate from Oakland. Connie Mack's lineup spot 9 is Ferris Fain at DH. Lefty Grove stays the first starter only, and Fain is not on the bench. Benches and bullpens that list six names are kept at six. Honorable mentions and the what-if lines are separate and are not on the active roster.
+
+The Nationals card was not applied. Washington has already played, as have the Yankees, Giants, Red Sox, Rays, Diamondbacks, and Marlins. Those pages are unchanged. Detroit has played, and the owner's Tigers card is shown beside the existing game lines. No game result was changed.
+
+Peak 162 on each of those cards is a Major League franchise line from the 2025 Lahman database, through the 2025 season. The formula is in [MODELS.md](MODELS.md). A player who cannot be matched says "Peak stats unavailable."
+
 ## 2026-10-25 — Official rosters for nine clubs
 
 The tournament owner supplied rosters for the Rockies, Dodgers, Padres, Angels, Astros, Athletics, Mariners, Rangers, and Braves. They are stored in `data/announced_rosters.json` and shown on those team pages and in `ROSTERS.md`. The Rockies manager is Bud Black. Names and accents are copied as given. No graphic cards, bios, or counting stats were added. The other clubs that have not played still say "Roster not announced yet." No game result was changed.

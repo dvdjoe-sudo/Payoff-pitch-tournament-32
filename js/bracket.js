@@ -1137,7 +1137,7 @@
       }
     });
     var announced = state.rosters && state.rosters[code];
-    if (announced) page.appendChild(announcedRoster(announced));
+    if (announced) page.appendChild(announcedRoster(announced, code));
     else if (!batRows.length && !pitRows.length) {
       page.appendChild(el("h3", { text: "Roster" }));
       page.appendChild(el("p", { text: "Roster not announced yet." }));
@@ -1154,17 +1154,53 @@
     view.appendChild(page);
   }
 
-  function announcedRoster(roster) {
+  function peakLine(code, line) {
+    var book = state.peak && state.peak.clubs && state.peak.clubs[code];
+    var row = book && book[line];
+    if (!row || row.status !== "ok" || !row.text) return "Peak stats unavailable";
+    return row.text;
+  }
+
+  function rosterItem(code, line) {
+    return el("li", null,
+      el("span", { class: "roster-name", text: line }),
+      el("span", { class: "roster-peak muted", text: peakLine(code, line) })
+    );
+  }
+
+  function rosterGroup(code, title, lines) {
+    var block = el("div");
+    block.appendChild(el("h4", { text: title }));
+    var list = el("ul", { class: "roster-list" });
+    (lines || []).forEach(function (line) { list.appendChild(rosterItem(code, line)); });
+    block.appendChild(list);
+    return block;
+  }
+
+  function announcedRoster(roster, code) {
+    var headers = roster.headers || {};
     var block = el("div", { class: "roster" });
     block.appendChild(el("h3", { text: "Roster" }));
-    block.appendChild(el("p", { class: "note", text: "Official roster from the tournament owner. The lines are copied from that roster. No stats or bios were added." }));
+    block.appendChild(el("p", { class: "note", text: "Official roster from the tournament owner. The lines are copied from that card. Peak 162 is a Major League franchise line from the Lahman database, not a tournament stat." }));
+    if (state.peak && state.peak.cutoff_note) {
+      block.appendChild(el("p", { class: "muted", text: state.peak.cutoff_note }));
+    }
     block.appendChild(el("p", { text: "Manager: " + roster.manager }));
-    [["Lineup", roster.lineup], ["Bench", roster.bench], ["Rotation", roster.rotation], ["Bullpen", roster.bullpen]].forEach(function (pair) {
-      block.appendChild(el("h4", { text: pair[0] }));
-      var list = el("ul", { class: "roster-list" });
-      (pair[1] || []).forEach(function (line) { list.appendChild(el("li", { text: line })); });
-      block.appendChild(list);
-    });
+    block.appendChild(rosterGroup(code, headers.lineup || "Lineup", roster.lineup));
+    block.appendChild(rosterGroup(code, headers.bench || "Bench", roster.bench));
+    block.appendChild(rosterGroup(code, headers.rotation || "Rotation", roster.rotation));
+    block.appendChild(rosterGroup(code, headers.bullpen || "Bullpen", roster.bullpen));
+    if ((roster.honorable_mentions || []).length) {
+      var title = "Honorable mentions";
+      if (roster.honorable_note) title += " (" + roster.honorable_note + ")";
+      var honors = rosterGroup(code, title, roster.honorable_mentions);
+      var list = honors.querySelector("ul");
+      honors.insertBefore(el("p", { class: "note", text: "These names are not on the active roster." }), list);
+      block.appendChild(honors);
+    }
+    if (roster.what_if) {
+      block.appendChild(rosterGroup(code, roster.what_if_label || "What if", [roster.what_if]));
+    }
     return block;
   }
 
@@ -2360,7 +2396,8 @@
       loadOptional("data/bios.json"),
       loadOptional("feed/odds.json"),
       loadOptional("feed/recap.json"),
-      loadOptional("data/announced_rosters.json")
+      loadOptional("data/announced_rosters.json"),
+      loadOptional("data/peak162.json")
     ]);
   }).then(function (parts) {
     var data = parts[0];
@@ -2370,6 +2407,7 @@
     state.odds = parts[3];
     state.recap = parts[4];
     state.rosters = parts[5] || {};
+    state.peak = parts[6] || null;
     state.highlight = storageGet("pp-path");
     data.teams.forEach(function (team) { state.byCode[team.code] = team; });
     data.games.forEach(function (game) { state.games[game.id] = game; });
