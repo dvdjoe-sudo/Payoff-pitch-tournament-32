@@ -77,9 +77,6 @@ FORBIDDEN = (
     "tournament app",
     "conversion_work/",
 )
-VIDEO = "https://muse.ai/s/payoff-pitch-top-32-tournament-xck6hxnxfvxsxmfi/CveOB6LiiLsVcK7Go4H5MqGh_DyskYPHOntiaN4jpvs"
-
-
 def digest(obj) -> str:
     blob = json.dumps(obj, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(blob.encode()).hexdigest()
@@ -262,8 +259,8 @@ def documents(check: Check) -> None:
     check.expect("4-3" in readme and "Pedro" in readme and "Complete" in readme, "readme records R1-03")
     check.expect("4-3" in bracket and "Complete" in bracket, "bracket records R1-03")
     check.expect("MODELS.md" in readme and "feed/games.xml" in readme, "readme links the models and the feed")
+    check.expect("muse.ai" not in readme and "muse.ai" not in (ROOT / "index.html").read_text(encoding="utf-8"), "walkthrough video link removed")
     check.expect("in-progress" in (ROOT / "SCHEMA.md").read_text(encoding="utf-8"), "schema names in-progress")
-    check.expect(VIDEO in readme, "readme video")
     for name in (
         "BRACKET.md", "TOURNAMENT_RULES.md", "TOURNAMENT_SEEDS.md", "ROSTERS.md",
         "LEADERS.md", "CHANGELOG.md", "SCHEMA.md", "LICENSE", "index.html",

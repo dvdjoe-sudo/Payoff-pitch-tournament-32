@@ -62,7 +62,7 @@ Optional fields, present only where the archive had them:
 | `stage`, `formation`, `feeders`, `feeder_labels` | Shells after the opening round. `formation.pool` and `formation.gate` say what the slot is waiting on. |
 | `provenance`, `carry` | R1-02 and R1-03. `carry.rotation_next_start` is the next starter named for each club. |
 
-TODO for Joe: R1-04 through R1-16 do not carry `round`. R1-01, R1-02, and R1-03 set `round` to 1. Confirm whether the unplayed opening shells should say 1. They were left as stored.
+R1-01, R1-02, R1-03, and R1-04 set `round` to 1. Unplayed opening shells R1-05 through R1-16 do not carry `round`. They were left as stored. Whether they should say 1 is an open question in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
 
 `home_by_game` is filled for a paired series. Keys are game numbers `"1"` through `"7"`. An unfilled shell has an empty object.
 

@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Site cleanups
+
+The Players page now says converted cards exist for nine clubs (ARI, BOS, CHC, DET, MON, PHA, SF, TB, WSH) and that every club's roster is on its team page. On a club that has both an owner card and a converted set, the owner card is the list and the converted set is behind a Payoff Pitch cards toggle. Peak lines use one label, `Peak 162 with <club> (YYYY–YYYY)`, and one note. About and Formulas are pages in the site. The walkthrough video link is gone. `data/cards.json` and `data/peak162.json` load when opened, and they are out of the service worker install cache (`payoff-pitch-v8`). `scripts/split_game_detail.py` is removed. The Philadelphia roster, the 25 owner cards, and the waiting-on-a-graphic note are closed. Open questions are gathered in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md). No game result was changed.
+
 ## 2026-10-25 — Chicago Cubs converted set joins; bench chair corrected
 
 The Chicago Cubs' converted Payoff Pitch set is on the site: 26 players (15 hitters, 11 pitchers) with peak lines shown as 162-game averages, converted cards, and the tournament state stated plainly, because Chicago has not played a series yet. Nine clubs now have converted sets, 234 players and 235 roster spots in `data/cards.json` and `data/rosters.json`; the 112 players with tournament lines are unchanged. The set was built to the standing conversion standard (frozen engines, v2 pitcher cards, pitcher addendum) in the workspace; its own reports live with the set. `scripts/build_cards.py` gained the one SETS row and the Lahman team-games id for the club (CHN).
@@ -112,7 +116,7 @@ The bracket is winners stages of 16, 8, 4, 2, and 1 series counting the opening 
 
 Pool-relative pitcher grades were frozen. The starter A line extends through #35 (Gibson A). The frozen table is not in this repository. The current statement is in [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
 
-Card status as recorded that day: all 32 clubs were described as built on the prime-window basis, the four split clubs from their own graphics. Philadelphia's graphic was said to name 25 distinct players, so that club was recorded with 25 cards. The build report is not in this repository. [ROSTERS.md](ROSTERS.md) leaves Philadelphia as a TODO until the roster is confirmed.
+Card status as recorded that day: all 32 clubs were described as built on the prime-window basis, the four split clubs from their own graphics. Philadelphia's graphic was said to name 25 distinct players, so that club was recorded with 25 cards. The build report is not in this repository. The Philadelphia roster was later confirmed: it is Connie Mack's card in [ROSTERS.md](ROSTERS.md), with Ferris Fain at DH. The waiting-on-a-graphic note is closed.
 
 ### Seed table this day used
 

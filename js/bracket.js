@@ -1098,17 +1098,33 @@
     }).join("; ");
   }
 
+  var PEAK_NOTE = "Counting stats are scaled to a 162-game season. The averages and ERA are that stretch's own, not a tournament stat.";
+
+  function peakYears(row) {
+    var years = row && row.window_years;
+    if (!years || !years.length) return [];
+    return years.slice().sort(function (a, b) { return a - b; });
+  }
+
+  function peakLabel(team, years) {
+    if (!years || !years.length) return "Peak 162 with " + team;
+    var start = years[0];
+    var end = years[years.length - 1];
+    if (start === end) return "Peak 162 with " + team + " (" + start + ")";
+    return "Peak 162 with " + team + " (" + start + "\u2013" + end + ")";
+  }
+
   function peakSections(page, card) {
     if (!card.peak_bat && !card.peak_pit) return;
-    page.appendChild(el("h3", { text: "Peak (prime window)" }));
-    page.appendChild(el("p", { class: "note", text: "The prime-window line the converted card was built from, shown as a 162-game average of the window seasons: the counting stats are scaled to that shape, and the averages and ERA are the window's own." }));
+    var team = (card.peak_bat && card.peak_bat.team_line) || (card.peak_pit && card.peak_pit.team_line) || clubName(card.team);
+    var batYears = peakYears(card.peak_bat);
+    var pitYears = peakYears(card.peak_pit);
+    page.appendChild(el("h3", { text: peakLabel(team, batYears.length ? batYears : pitYears) }));
+    page.appendChild(el("p", { class: "note", text: PEAK_NOTE }));
     if (card.peak_bat) {
       var rawBat = card.peak_bat;
       var bat = card.peak_bat_162 || rawBat;
-      page.appendChild(el("h4", { text: "Peak batting · 162-game average" }));
-      if (bat.window_years && bat.window_years.length) {
-        page.appendChild(el("p", { class: "note", text: "Window: " + bat.window_years.join(", ") + (bat.team_line ? " · " + bat.team_line : "") + "." }));
-      }
+      if (card.peak_pit) page.appendChild(el("h4", { text: "Batting" }));
       var tb = nz(rawBat.H) + nz(rawBat["2B"]) + 2 * nz(rawBat["3B"]) + 3 * nz(rawBat.HR);
       var obpDen = nz(rawBat.AB) + nz(rawBat.BB) + nz(rawBat.HBP) + nz(rawBat.SF);
       page.appendChild(table(
@@ -1119,10 +1135,8 @@
     if (card.peak_pit) {
       var rawPit = card.peak_pit;
       var pit = card.peak_pit_162 || rawPit;
-      page.appendChild(el("h4", { text: "Peak pitching · 162-game average" }));
-      if (pit.window_years && pit.window_years.length) {
-        page.appendChild(el("p", { class: "note", text: "Window: " + pit.window_years.join(", ") + "." }));
-      }
+      var sameYears = batYears.length && pitYears.length && batYears[0] === pitYears[0] && batYears[batYears.length - 1] === pitYears[pitYears.length - 1];
+      page.appendChild(el("h4", { text: card.peak_bat && !sameYears ? peakLabel(team, pitYears) : "Pitching" }));
       page.appendChild(table(
         ["W", "L", "G", "GS", "SV", "IP", "H", "R", "ER", "HR", "BB", "SO", "BF", "ERA"],
         [[pit.w, pit.l, pit.g, pit.gs, pit.sv, pit.ip == null ? null : q1(Number(pit.ip)), pit.h, pit.r, pit.er, pit.hr, pit.bb, pit.so, pit.bf,
@@ -1202,28 +1216,41 @@
     }
   }
 
-  function rosterSection(page, code) {
+  function rosterSection(page, code, collapsed) {
     var roster = state.rosters && state.rosters[code];
     if (!roster) return;
-    page.appendChild(el("h3", { text: "Roster and player cards" }));
-    page.appendChild(el("p", { class: "note", text: "The converted Payoff Pitch set, in set order. Open a player for his peak line, his card, and his tournament line." }));
+    var body = el("div");
+    body.appendChild(el("p", { class: "note", text: "The converted set, in set order. Open a player for his card and his tournament line." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
       var rows = roster.players.filter(function (spot) { return spot.group === group; })
         .sort(function (a, b) { return a.slot - b.slot; });
       if (!rows.length) return;
-      page.appendChild(el("h4", { text: GROUP_TITLES[group] }));
-      page.appendChild(table(["Slot", "Player", "Position"], rows.map(function (spot) {
+      body.appendChild(el("h4", { text: GROUP_TITLES[group] }));
+      body.appendChild(table(["Slot", "Player", "Position"], rows.map(function (spot) {
         return [spot.slot, linkPlayer(code, spot.id, spot.name), spot.pos];
       })));
     });
+    if (collapsed) {
+      var details = el("details", { class: "card-set" });
+      details.appendChild(el("summary", { text: "Payoff Pitch cards" }));
+      details.appendChild(body);
+      page.appendChild(details);
+      return;
+    }
+    page.appendChild(el("h3", { text: "Payoff Pitch cards" }));
+    page.appendChild(body);
   }
 
   function renderRosters() {
+    if (!state.cardsLoaded) {
+      loadOnDemand("cards", renderRosters);
+      return;
+    }
     markNav("rosters");
     clear(view);
     var page = el("section");
     page.appendChild(el("h2", { text: "Rosters and player cards" }));
-    page.appendChild(el("p", { class: "note", text: "Eight clubs have converted Payoff Pitch sets on file. Each club page lists its roster spots in set order; each player page shows his peak prime-window line, his converted card, and his tournament line. The other 24 clubs join this page as their sets are converted." }));
+    page.appendChild(el("p", { class: "note", text: "Converted Payoff Pitch cards exist for 9 clubs (ARI, BOS, CHC, DET, MON, PHA, SF, TB, WSH). Every club's roster is on its team page." }));
     var clubs = Object.keys(state.rosters || {}).map(function (code) { return state.rosters[code]; })
       .sort(function (a, b) { return a.seed - b.seed; });
     if (!clubs.length) page.appendChild(el("p", { text: "No converted sets are on file yet." }));
@@ -1250,6 +1277,10 @@
   }
 
   function renderTeam(code) {
+    if (state.announced && state.announced[code] && !state.peakLoaded) {
+      loadOnDemand("peak", function () { renderTeam(code); });
+      return;
+    }
     markNav("standings");
     var team = state.byCode[code];
     clear(view);
@@ -1290,7 +1321,6 @@
       page.appendChild(block);
     });
     if (!any) page.appendChild(el("p", { text: "No series played yet." }));
-    rosterSection(page, code);
     var batRows = [];
     var pitRows = [];
     Object.keys(state.players).forEach(function (key) {
@@ -1313,6 +1343,7 @@
     });
     var announced = state.announced && state.announced[code];
     if (announced) page.appendChild(announcedRoster(announced, code));
+    rosterSection(page, code, !!announced);
     if (batRows.length || pitRows.length) page.appendChild(el("h3", { text: "Roster stats" }));
     else if (!announced && !(state.rosters && state.rosters[code])) {
       page.appendChild(el("h3", { text: "Roster" }));
@@ -1356,10 +1387,7 @@
     var headers = roster.headers || {};
     var block = el("div", { class: "roster" });
     block.appendChild(el("h3", { text: "Roster" }));
-    block.appendChild(el("p", { class: "note", text: "Official roster from the tournament owner. The lines are copied from that card. Peak 162 is a Major League franchise line from the Lahman database, not a tournament stat." }));
-    if (state.peak && state.peak.cutoff_note) {
-      block.appendChild(el("p", { class: "muted", text: state.peak.cutoff_note }));
-    }
+    block.appendChild(el("p", { class: "note", text: "Official roster from the tournament owner. " + PEAK_NOTE }));
     block.appendChild(el("p", { text: "Manager: " + roster.manager }));
     block.appendChild(rosterGroup(code, headers.lineup || "Lineup", roster.lineup));
     block.appendChild(rosterGroup(code, headers.bench || "Bench", roster.bench));
@@ -1380,6 +1408,10 @@
   }
 
   function renderPlayer(code, id) {
+    if (!state.cardsLoaded) {
+      loadOnDemand("cards", function () { renderPlayer(code, id); });
+      return;
+    }
     markNav("standings");
     var player = state.players[code + "|" + id];
     var card = cardFor(code, id);
@@ -1579,8 +1611,12 @@
   }
 
   function renderSearch(query) {
-    markNav("standings");
     var needle = (query || "").trim().toLowerCase();
+    if (needle && !state.cardsLoaded) {
+      loadOnDemand("cards", function () { renderSearch(query); });
+      return;
+    }
+    markNav("standings");
     clear(view);
     var page = el("section");
     page.appendChild(el("h2", { text: "Player search" }));
@@ -2533,6 +2569,60 @@
     view.appendChild(page);
   }
 
+  function loadOnDemand(kind, again) {
+    clear(view);
+    view.appendChild(el("p", { text: "Loading…" }));
+    state._loads = state._loads || {};
+    if (!state._loads[kind]) {
+      var url = kind === "cards" ? "data/cards.json" : "data/peak162.json";
+      state._loads[kind] = loadOptional(url).then(function (data) {
+        if (kind === "cards") {
+          state.cards = data || {};
+          state.cardsLoaded = true;
+        } else {
+          state.peak = data || null;
+          state.peakLoaded = true;
+        }
+      });
+    }
+    state._loads[kind].then(again);
+  }
+
+  function renderAbout() {
+    markNav("about");
+    clear(view);
+    var page = el("article", { class: "panel" });
+    page.appendChild(el("h2", { text: "About this tournament" }));
+    page.appendChild(el("p", { text: "Thirty-two all-time franchise clubs play a double-elimination bracket. Every series is a best of 7. A club is eliminated on its second series loss. There are no byes. After the opening round, each stage is reseeded by original seed, highest survivor against lowest." }));
+    page.appendChild(el("p", { text: "Six seeds are Joe's pins: New York Yankees 1, Philadelphia Athletics 17, Oakland Athletics 22, Montreal Expos 27, Washington Nationals 31, and Miami Marlins 32. The other clubs fill the remaining slots by Full 26 Index." }));
+    page.appendChild(el("p", { text: "On the book: the Yankees beat the Marlins 4-0, the Giants beat the Nationals 4-1, Boston beat Tampa Bay 4-3, and Detroit beat Arizona 4-2. R1-01 was played in APBA and adopted. Later series are played in Payoff Pitch. A stored line is the result. This page does not change one." }));
+    page.appendChild(el("p", { text: "Every club's roster is on its team page. Twenty-five clubs have an owner card. Converted Payoff Pitch cards exist for nine clubs: ARI, BOS, CHC, DET, MON, PHA, SF, TB, and WSH. Where both exist, the owner card is the list and the converted set is under Payoff Pitch cards." }));
+    page.appendChild(el("p", { class: "note", text: PEAK_NOTE }));
+    view.appendChild(page);
+  }
+
+  function renderFormulas() {
+    markNav("formulas");
+    clear(view);
+    var page = el("article", { class: "panel" });
+    page.appendChild(el("h2", { text: "Formulas" }));
+    page.appendChild(el("p", { class: "note", text: "These are display models. They do not change a box score, a series score, or a seed." }));
+    page.appendChild(el("h3", { text: "Awards" }));
+    page.appendChild(el("p", { text: "MVP, hitters: total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H + 2B + 2×3B + 3×HR." }));
+    page.appendChild(el("p", { text: "Cy Young, pitchers with at least one start: IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP is outs / 3." }));
+    page.appendChild(el("p", { text: "Reliever, pitchers with zero starts: 5×SV + 2×IP + 0.4×K − 1.5×ER. A pitcher who has started stays on the Cy Young list." }));
+    page.appendChild(el("h3", { text: "Win probability" }));
+    page.appendChild(el("p", { text: "Before the first pitch the home club is 0.50. After each step the home win probability is 1 / (1 + exp(−1.35 × margin / sqrt(innings left))). Margin is home runs minus away runs. Innings left is at least 0.5. The chart uses the stored line, and scoring plays only when they land on the final score. It is omitted when the innings do not add up to that score." }));
+    page.appendChild(el("h3", { text: "Series odds" }));
+    page.appendChild(el("p", { text: "Each remaining game is an independent 0.55 win for the higher seed. The bar is the chance that club reaches 4 wins first. A completed series shows the winner at 1." }));
+    page.appendChild(el("p", { text: "The bracket also shows a Monte Carlo from the club indexes: one game is 1 / (1 + exp(−(index A − index B) / 80)), with no home-field edge. Four thousand draws use a fixed seed. A finished series is recorded as 1 and 0, not resimulated. A shown 0.0 means that side won none of the draws." }));
+    page.appendChild(el("h3", { text: "Peak 162" }));
+    page.appendChild(el("p", { text: PEAK_NOTE + " The label is Peak 162 with the club and the first and last year of the stretch." }));
+    page.appendChild(el("h3", { text: "Run differential" }));
+    page.appendChild(el("p", { text: "Run differential is runs scored minus runs allowed, summed from the game scores." }));
+    view.appendChild(page);
+  }
+
   function render() {
     if (!state.data) return;
     var where = route();
@@ -2551,6 +2641,8 @@
     else if (where.name === "history") renderHistory();
     else if (where.name === "recap") renderRecap();
     else if (where.name === "add") renderAdd();
+    else if (where.name === "about") renderAbout();
+    else if (where.name === "formulas") renderFormulas();
     else renderBracket(activeSeries);
     renderBanner();
     if (where.name === "bracket" && activeSeries) {
@@ -2612,24 +2704,24 @@
       data,
       loadOptional("data/teams.json"),
       loadOptional("data/bios.json"),
-      loadOptional("data/cards.json"),
       loadOptional("data/rosters.json"),
       loadOptional("feed/odds.json"),
       loadOptional("feed/recap.json"),
-      loadOptional("data/announced_rosters.json"),
-      loadOptional("data/peak162.json")
+      loadOptional("data/announced_rosters.json")
     ]);
   }).then(function (parts) {
     var data = parts[0];
     state.data = data;
     state.colors = parts[1] || {};
     state.bios = parts[2] || {};
-    state.cards = parts[3] || {};
-    state.rosters = parts[4] || {};
-    state.odds = parts[5];
-    state.recap = parts[6];
-    state.announced = parts[7] || {};
-    state.peak = parts[8] || null;
+    state.rosters = parts[3] || {};
+    state.odds = parts[4];
+    state.recap = parts[5];
+    state.announced = parts[6] || {};
+    state.cards = {};
+    state.cardsLoaded = false;
+    state.peak = null;
+    state.peakLoaded = false;
     state.highlight = storageGet("pp-path");
     data.teams.forEach(function (team) { state.byCode[team.code] = team; });
     data.games.forEach(function (game) { state.games[game.id] = game; });
@@ -2637,7 +2729,7 @@
     renderNext();
     var complete = data.series.filter(function (series) { return series.status === "complete"; }).length;
     var progress = data.series.filter(function (series) { return series.status === "in-progress"; }).length;
-    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Formulas are in MODELS.md. Logo files live in data/teams.json: a 1986 file where the franchise matches, a monogram otherwise.";
+    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Display formulas are on the Formulas page. Logo files live in data/teams.json: a 1986 file where the franchise matches, a monogram otherwise.";
     if (!location.hash) location.hash = "#/bracket";
     var where = route();
     if (where.name === "search") searchInput.value = where.query || where.rest.join("/");
