@@ -2,6 +2,22 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Converted cards sit beside the owner rosters
+
+Main's converted Payoff Pitch sets and player cards are on the same site as the owner's announced cards and the franchise Peak 162 lines. A club with a converted set shows that set. A club with an owner card shows that card. Detroit shows both, plus the game lines already on the book. Washington keeps the converted set and the game record; the Nationals owner card stays off. No game result was changed. The service worker cache is payoff-pitch-v6 so both sets of data files are in the shell.
+
+## 2026-10-25 — Owner cards for the remaining clubs, and Peak 162
+
+The owner's second set of cards is in `data/announced_rosters.json` with the first nine. Montreal maps to the Expos. Cleveland maps to the Guardians. The Twins card includes the 1901–1960 Senators. The Philadelphia Athletics card is separate from Oakland. Connie Mack's lineup spot 9 is Ferris Fain at DH. Lefty Grove stays the first starter only, and Fain is not on the bench. Benches and bullpens that list six names are kept at six. Honorable mentions and the what-if lines are separate and are not on the active roster.
+
+The Nationals card was not applied. Washington has already played, as have the Yankees, Giants, Red Sox, Rays, Diamondbacks, and Marlins. Those pages are unchanged. Detroit has played, and the owner's Tigers card is shown beside the existing game lines. No game result was changed.
+
+Peak 162 on each of those cards is a Major League franchise line from the 2025 Lahman database, through the 2025 season. The formula is in [MODELS.md](MODELS.md). A player who cannot be matched says "Peak stats unavailable."
+
+## 2026-10-25 — Official rosters for nine clubs
+
+The tournament owner supplied rosters for the Rockies, Dodgers, Padres, Angels, Astros, Athletics, Mariners, Rangers, and Braves. They are stored in `data/announced_rosters.json` and shown on those team pages and in `ROSTERS.md`. The Rockies manager is Bud Black. Names and accents are copied as given. No graphic cards, bios, or counting stats were added. The other clubs that have not played still say "Roster not announced yet." No game result was changed.
+
 ## 2026-10-25 — Peak lines shown as 162-game averages
 
 Joe's call: the peak section on each player page now shows a 162-game average of the prime years instead of the multi-season window totals. The raw window totals stay in `data/cards.json` as `peak_bat` and `peak_pit`, untouched: they are the card's build line, and the viewer still computes AVG, OBP, SLG, and ERA from them, so every rate on the page is the window's own and has not moved. What changed is the counting line beside the rates, in new `peak_bat_162` and `peak_pit_162` blocks written by `scripts/build_cards.py`; the method is documented in the script header and in [SCHEMA.md](SCHEMA.md).
