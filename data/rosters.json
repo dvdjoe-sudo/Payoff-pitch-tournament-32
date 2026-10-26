@@ -1590,10 +1590,10 @@
    },
    {
     "group": "lineup",
-    "id": "bishoma01",
+    "id": "fainfe01",
     "kind": "hitter",
-    "name": "Max Bishop",
-    "pos": "2B",
+    "name": "Ferris Fain",
+    "pos": "DH",
     "slot": 9
    },
    {
@@ -1638,11 +1638,19 @@
    },
    {
     "group": "bench",
-    "id": "fainfe01",
+    "id": "bishoma01",
     "kind": "hitter",
-    "name": "Ferris Fain",
-    "pos": "1B",
+    "name": "Max Bishop",
+    "pos": "2B",
     "slot": 6
+   },
+   {
+    "group": "bench",
+    "id": "valoel01",
+    "kind": "hitter",
+    "name": "Elmer Valo",
+    "pos": "OF",
+    "slot": 7
    },
    {
     "group": "rotation",
@@ -1723,14 +1731,6 @@
     "name": "Jack Quinn",
     "pos": "RP",
     "slot": 5
-   },
-   {
-    "group": "bullpen",
-    "id": "earnsge01",
-    "kind": "pitcher",
-    "name": "George Earnshaw",
-    "pos": "RP",
-    "slot": 6
    }
   ],
   "seed": 17
