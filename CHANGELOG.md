@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Boston series dates
+
+Joe ruled that every game of R1-03, Boston against Tampa Bay, was played on 2026-10-23. All seven game dates are that day. Games 1 and 2 had been 2026-10-24, and Games 3 through 7 had no date. Scores, lines, and decisions are unchanged. The service worker cache is payoff-pitch-v27.
+
 ## 2026-10-26 — Peak 162 series projections
 
 An upcoming or in-progress series shows a projection on the bracket and on the series preview. Offense is the mean Peak 162 OPS of the owner lineup. Pitching is the mean Peak 162 ERA of the owner rotation. One game is the log5 of the two Pythagorean win percentages, and the series chance is the best of 7 from the wins already stored. The line is labeled Projection. A club without an announced roster says Odds TBD. The projection is for the pairing as it stands, and the next round is projected again after the re-seed. The formula is on the Formulas page and in MODELS.md. The service worker cache is payoff-pitch-v26. No game result was changed.
