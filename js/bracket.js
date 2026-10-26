@@ -1791,6 +1791,79 @@
     return block;
   }
 
+  function logSpot(gameId, team) {
+    var game = state.games[gameId];
+    var spot = el("span", { class: "log-spot" });
+    spot.appendChild(linkGame(gameId, game && game.date ? game.date : "No date"));
+    if (game) {
+      var opp = game.home === team ? game.away : game.home;
+      var where = game.home === team ? "vs " : "at ";
+      spot.appendChild(el("span", { class: "log-opp" }, where, linkTeam(opp, opp)));
+    }
+    return spot;
+  }
+
+  function logTable(headers, rows) {
+    var wrap = el("div", { class: "table-wrap log-fit" });
+    var t = el("table", { class: "log-table" });
+    var head = el("tr");
+    headers.forEach(function (header, index) {
+      head.appendChild(el("th", { text: header, class: index === 0 ? null : "num" }));
+    });
+    t.appendChild(el("thead", null, head));
+    var body = el("tbody");
+    rows.forEach(function (row) {
+      var tr = el("tr");
+      row.forEach(function (cell, index) {
+        var td = el("td", { class: index === 0 ? "log-game" : "num" });
+        if (cell && cell.nodeType) td.appendChild(cell);
+        else td.textContent = cell == null ? "" : String(cell);
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    return wrap;
+  }
+
+  function battingLogTable(entries) {
+    return logTable(
+      ["Game", "AB", "R", "H", "2B", "3B", "HR", "BI", "BB", "K", "SB"],
+      entries.map(function (item) {
+        var line = item.line;
+        return [
+          logSpot(item.game, line.team),
+          nz(line.ab), nz(line.r), nz(line.h), nz(line.doubles), nz(line.triples),
+          nz(line.hr), nz(line.rbi), nz(line.bb), nz(line.k), nz(line.sb)
+        ];
+      })
+    );
+  }
+
+  function decisionFor(game, team, playerId) {
+    var wls = (game && game.wls) || {};
+    if (wls.W && wls.W.team === team && wls.W.player_id === playerId) return "W";
+    if (wls.L && wls.L.team === team && wls.L.player_id === playerId) return "L";
+    if (wls.S && wls.S.team === team && wls.S.player_id === playerId) return "S";
+    return "";
+  }
+
+  function pitchingLogTable(team, playerId, entries) {
+    return logTable(
+      ["Game", "IP", "H", "R", "ER", "BB", "K", "Dec"],
+      entries.map(function (item) {
+        var line = item.line;
+        var game = state.games[item.game];
+        return [
+          logSpot(item.game, line.team),
+          ipLabel(nz(line.outs)), nz(line.h), nz(line.r), nz(line.er), nz(line.bb), nz(line.k),
+          decisionFor(game, team, playerId)
+        ];
+      })
+    );
+  }
+
   function renderPlayer(code, id) {
     if (!state.cardsLoaded) {
       loadOnDemand("cards", function () { renderPlayer(code, id); });
@@ -1888,16 +1961,18 @@
         player.grades.map(function (item) { return [linkGame(item.game), item.grade]; })
       ));
     }
-    page.appendChild(el("h3", { text: "Game log" }));
-    page.appendChild(table(
-      ["Game", "Role", "Line"],
-      player.log.map(function (item) {
-        var summary = item.side === "bat"
-          ? nz(item.line.ab) + " AB, " + nz(item.line.h) + " H, " + nz(item.line.hr) + " HR, " + nz(item.line.rbi) + " RBI"
-          : ipLabel(nz(item.line.outs)) + " IP, " + nz(item.line.er) + " ER, " + nz(item.line.k) + " K";
-        return [linkGame(item.game), item.side === "bat" ? "Batting" : "Pitching", summary];
-      })
-    ));
+    var batLog = player.log.filter(function (item) { return item.side === "bat"; });
+    var pitLog = player.log.filter(function (item) { return item.side === "pit"; });
+    if (batLog.length) {
+      page.appendChild(el("h3", { text: "Batting log" }));
+      page.appendChild(el("p", { class: "note", text: "One row for each tournament game. The numbers are that game's box score." }));
+      page.appendChild(battingLogTable(batLog));
+    }
+    if (pitLog.length) {
+      page.appendChild(el("h3", { text: "Pitching log" }));
+      page.appendChild(el("p", { class: "note", text: "One row for each tournament game. The decision is the stored W, L, or S." }));
+      page.appendChild(pitchingLogTable(code, id, pitLog));
+    }
     view.appendChild(page);
   }
 

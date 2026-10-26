@@ -512,6 +512,24 @@ table {
 .record-table th:nth-child(3),
 .record-table td:nth-child(3) { width: 5.4rem; padding-left: 0.2rem; padding-right: 0.2rem; }
 
+.table-wrap.log-fit { overflow-x: visible; max-width: 100%; }
+.table-wrap.log-fit table.log-table {
+  min-width: 0;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 0.72rem;
+}
+.log-table th,
+.log-table td {
+  padding: 0.28rem 0.08rem;
+  overflow-wrap: anywhere;
+  vertical-align: middle;
+}
+.log-table th:first-child,
+.log-table td.log-game { width: 5.5rem; text-align: left; }
+.log-spot { display: block; }
+.log-opp { display: block; color: var(--muted); }
+
 th, td {
   padding: 0.4rem 0.55rem;
   border-bottom: 1px solid var(--line);
@@ -565,6 +583,7 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   .table-wrap.card-band table { min-width: 0; }
   .table-wrap.leader-fit table.leader-table { min-width: 0; }
   .table-wrap.record-fit table.record-table { min-width: 0; }
+  .table-wrap.log-fit table.log-table { min-width: 0; }
   .leader-grid { grid-template-columns: 1fr; }
   .team-hero-colored {
     margin: -0.8rem -0.8rem 0.85rem;
