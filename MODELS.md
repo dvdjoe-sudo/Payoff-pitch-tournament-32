@@ -12,6 +12,8 @@ Points are not an official vote and they are not a Major League award.
 
 A pitcher who has started is only on the Cy Young list. Saves on that pitcher's line do not move him to the reliever list.
 
+The Awards page ranks the same points from the lines already stored. A printed point is one decimal, and a half tenth rounds up. The list is the top 15, and a tie at the fifteenth line stays. A new game moves the race when that game is in the archive.
+
 ## Series MVP
 
 A finished series scores every player from the box scores in that series only. It does not change a game, a series score, or a name stored on the series file.

@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Awards race on a phone
+
+The Awards page ranks tournament MVP, Cy Young, and reliever points from the box scores. MVP is total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Cy Young, for a pitcher with a start, is IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. The formula is on the Formulas page and in MODELS.md. Each row keeps the name, the club, the points, and the counting line on a phone. The list is the top 15, and a tie at the fifteenth line stays. A new game moves the race when it is in the archive. The service worker cache is payoff-pitch-v36. No game result was changed.
+
 ## 2026-10-26 — Flexible 26-man roster composition (Joe's Issue 5 ruling)
 
 Joe approved allowing different bench and bullpen sizes by club, and allowing owner-approved roster adjustments during the tournament. Every club must keep 26 active players, with nine lineup spots and five scheduled starters; the usual five-man bench and seven-man bullpen is only the default. The current Dodgers, Cubs, Guardians, Reds, Cardinals, and Philadelphia Athletics roster distributions are valid as published. Future changes require Joe's approval and a dated amendment, effective only for future games. This ruling did not change any player, card, seed, lineup already played, or tournament result. See [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
