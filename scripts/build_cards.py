@@ -21,8 +21,31 @@ Inputs (workspace paths; override with the environment variables shown):
   PP_ARCHIVE     ~/workspace/apba-card-builder/all_time_rosters/apba_games/
                  tournament_results.json  (the master archive; only its
                  games count as tournament stats)
+  PP_LAHMAN_TEAMS ~/workspace/apba-card-builder/all_time_rosters/lahman/
+                 Teams.csv  (the Lahman Teams table; only its yearID,
+                 teamID, and G columns are read, for the pitcher scaling
+                 below)
   the repo's own tournament_results.json supplies club names, seeds, and
   the player ids the site already publishes
+
+Peak display: the 162-game average. Each entry also carries a
+peak_bat_162 / peak_pit_162 block: the prime-window line rescaled the
+way Joe asked for it, as one 162-game season. The raw window totals stay
+in peak_bat / peak_pit untouched (they are the card's build line and
+feed the rates); the viewer displays the 162 blocks and computes AVG,
+OBP, SLG, and ERA from the raw line, so the rates are the window's own
+and never move.
+
+  Batters: every counting stat is scaled by 162 / (games played in the
+  window) and rounded half up; the games column shows 162.
+  Pitchers: the window becomes an average season on a 162-game
+  schedule: the per-season average (window total / window seasons)
+  rescaled by (162 x seasons) / (the club's total team games across the
+  window seasons, from the Lahman Teams table), which multiplies out to
+  window total x 162 / team games. Counting stats round half up. IP is
+  scaled in outs and stored both as outs and in baseball thirds
+  ("307.1" is 307 and a third). A window season with no Lahman row for
+  the club counts as 162 team games, and the build log names it.
 
 Player identity: the Lahman id from input_stats.csv, unless the site's
 published results file already carries the same player (same club, same
@@ -43,6 +66,7 @@ byte-identical files.
 
 import csv
 import json
+import math
 import os
 import sys
 import unicodedata
@@ -74,6 +98,24 @@ ARCHIVE_PATH = os.environ.get(
     "PP_ARCHIVE",
     os.path.join(WORKSPACE, "apba-card-builder", "all_time_rosters",
                  "apba_games", "tournament_results.json"))
+LAHMAN_TEAMS_PATH = os.environ.get(
+    "PP_LAHMAN_TEAMS",
+    os.path.join(WORKSPACE, "apba-card-builder", "all_time_rosters",
+                 "lahman", "Teams.csv"))
+
+# Lahman team ids per converted club, across the eras its prime windows
+# reach: the Giants' New York years are NY1 in the Lahman table, and
+# Tampa Bay's early years are TBD in some releases, TBA in others.
+TEAM_IDS = {
+    "BOS": ["BOS"],
+    "PHA": ["PHA"],
+    "SF": ["SFN", "NY1"],
+    "MON": ["MON"],
+    "WSH": ["WAS"],
+    "TB": ["TBA", "TBD"],
+    "DET": ["DET"],
+    "ARI": ["ARI"],
+}
 
 BAT_COUNTING = ["G", "PA", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB",
                 "IBB", "SO", "HBP", "SB", "CS", "GIDP", "SF"]
@@ -123,6 +165,106 @@ def load_json(path):
 def window_years(row):
     raw = (row or {}).get("window_years") or ""
     return [int(y) for y in raw.split(";") if y.strip()]
+
+
+def round_half_up(value):
+    return int(math.floor(value + 0.5))
+
+
+_team_games_cache = None
+
+
+def load_team_games():
+    """(team id, year) -> games played, from the Lahman Teams table.
+    An empty map when the file is not on hand; every lookup then falls
+    back to a 162-game season, and the build log names the seasons."""
+    global _team_games_cache
+    if _team_games_cache is None:
+        _team_games_cache = {}
+        if os.path.exists(LAHMAN_TEAMS_PATH):
+            for row in read_csv(LAHMAN_TEAMS_PATH):
+                year = as_int(row.get("yearID"))
+                games = as_int(row.get("G"))
+                if year is not None and games is not None:
+                    _team_games_cache[(row.get("teamID"), year)] = games
+    return _team_games_cache
+
+
+def team_games_total(code, years):
+    """The club's total team games across the window seasons, and the
+    seasons no Lahman row covered (each counted as 162)."""
+    table = load_team_games()
+    total = 0
+    missing = []
+    for year in years:
+        games = None
+        for team_id in TEAM_IDS.get(code, []):
+            games = table.get((team_id, year))
+            if games is not None:
+                break
+        if games is None:
+            games = 162
+            missing.append(year)
+        total += games
+    return total, missing
+
+
+def scale_bat_162(peak):
+    """The window's batting line as a 162-game average: every counting
+    stat scaled by 162 / window games, rounded half up, games shown as
+    162. Rates are not carried here; the viewer computes them from the
+    raw peak_bat line, so they are the window's own."""
+    games = peak.get("G")
+    if not games:
+        return None
+    factor = 162.0 / games
+    block = {f: (round_half_up(peak[f] * factor)
+                 if peak.get(f) is not None else None)
+             for f in BAT_COUNTING}
+    block["G"] = 162
+    block["window_years"] = peak.get("window_years")
+    block["team_line"] = peak.get("team_line")
+    block["window_games"] = games
+    return block
+
+
+PIT_COUNTING_162 = ("w", "l", "g", "gs", "sv", "h", "r", "er", "hr",
+                    "bb", "so", "hbp", "bf")
+
+
+def scale_pit_162(code, name, peak, notes):
+    """The window's pitching line as an average season on a 162-game
+    schedule (the arithmetic is in the header). IP scales in outs and
+    renders back in baseball thirds. ERA is not carried here; the
+    viewer computes it from the raw peak_pit line, unchanged."""
+    years = peak.get("window_years") or []
+    if not years:
+        return None
+    total, missing = team_games_total(code, years)
+    if not total:
+        return None
+    factor = 162.0 / total
+    block = {f: (round_half_up(peak[f] * factor)
+                 if peak.get(f) is not None else None)
+             for f in PIT_COUNTING_162}
+    ip = peak.get("ip")
+    if ip is not None:
+        outs = round_half_up(round(float(ip) * 3) * factor)
+        block["ip_outs"] = outs
+        block["ip"] = "%d.%d" % (outs // 3, outs % 3)
+    else:
+        block["ip_outs"] = None
+        block["ip"] = None
+    block["window_years"] = years
+    block["seasons"] = len(years)
+    block["team_games"] = total
+    if missing:
+        block["team_games_fallback"] = missing
+        notes.append(
+            "%s %s: no Lahman team-games row for %s; counted as 162 "
+            "team games" % (code, name,
+                            ", ".join(str(y) for y in missing)))
+    return block
 
 
 def tournament_index(archive):
@@ -206,6 +348,7 @@ def build():
     master_ids, master_lines, master_decisions = tournament_index(archive)
 
     reconciliations = []
+    peak_notes = []
     cards = {}
     rosters = {}
 
@@ -293,7 +436,9 @@ def build():
                 "team": code,
                 "spots": person["spots"],
                 "peak_bat": None,
+                "peak_bat_162": None,
                 "peak_pit": None,
+                "peak_pit_162": None,
                 "card_bat": None,
                 "card_pit": None,
                 "tournament": aggregate_tournament(
@@ -309,6 +454,7 @@ def build():
                     WINDOW_EXCEPTIONS.get((code, key), [])
                 peak["team_line"] = line.get("Team")
                 entry["peak_bat"] = peak
+                entry["peak_bat_162"] = scale_bat_162(peak)
                 entry["card_bat"] = {
                     "bats": card.get("bats"),
                     "throws": card.get("throws"),
@@ -342,6 +488,8 @@ def build():
                     peak["er"] = as_int(pit_row.get("ER"))
                     peak["r"] = as_int(pit_row.get("R"))
                 entry["peak_pit"] = peak
+                entry["peak_pit_162"] = scale_pit_162(
+                    code, name, peak, peak_notes)
                 add = add_by_name.get(key, {})
                 ratings = add.get("ratings", {})
                 stamina = (ratings.get("stamina") or {}).get("value") or {}
@@ -382,7 +530,7 @@ def build():
             "players": roster_players,
         }
 
-    return cards, rosters, reconciliations
+    return cards, rosters, reconciliations, peak_notes
 
 
 def dump(obj, path):
@@ -392,7 +540,7 @@ def dump(obj, path):
 
 
 def main():
-    cards, rosters, reconciliations = build()
+    cards, rosters, reconciliations, peak_notes = build()
     dump(rosters, os.path.join(ROOT, "data", "rosters.json"))
     dump(cards, os.path.join(ROOT, "data", "cards.json"))
     with_stats = sum(1 for c in cards.values() if c["tournament"])
@@ -400,8 +548,13 @@ def main():
     print("players: %d" % len(cards))
     print("players with tournament lines: %d" % with_stats)
     print("roster spots: %d" % sum(len(r["players"]) for r in rosters.values()))
+    print("peak 162 blocks: %d batting, %d pitching" % (
+        sum(1 for c in cards.values() if c["peak_bat_162"]),
+        sum(1 for c in cards.values() if c["peak_pit_162"])))
     for line in reconciliations:
         print("reconciled: " + line)
+    for line in peak_notes:
+        print("peak scale: " + line)
     print("wrote data/rosters.json and data/cards.json")
 
 

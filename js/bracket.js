@@ -1101,30 +1101,32 @@
   function peakSections(page, card) {
     if (!card.peak_bat && !card.peak_pit) return;
     page.appendChild(el("h3", { text: "Peak (prime window)" }));
-    page.appendChild(el("p", { class: "note", text: "The prime-window line the converted card was built from, as the set records it." }));
+    page.appendChild(el("p", { class: "note", text: "The prime-window line the converted card was built from, shown as a 162-game average of the window seasons: the counting stats are scaled to that shape, and the averages and ERA are the window's own." }));
     if (card.peak_bat) {
-      var bat = card.peak_bat;
-      page.appendChild(el("h4", { text: "Peak batting" }));
+      var rawBat = card.peak_bat;
+      var bat = card.peak_bat_162 || rawBat;
+      page.appendChild(el("h4", { text: "Peak batting · 162-game average" }));
       if (bat.window_years && bat.window_years.length) {
         page.appendChild(el("p", { class: "note", text: "Window: " + bat.window_years.join(", ") + (bat.team_line ? " · " + bat.team_line : "") + "." }));
       }
-      var tb = nz(bat.H) + nz(bat["2B"]) + 2 * nz(bat["3B"]) + 3 * nz(bat.HR);
-      var obpDen = nz(bat.AB) + nz(bat.BB) + nz(bat.HBP) + nz(bat.SF);
+      var tb = nz(rawBat.H) + nz(rawBat["2B"]) + 2 * nz(rawBat["3B"]) + 3 * nz(rawBat.HR);
+      var obpDen = nz(rawBat.AB) + nz(rawBat.BB) + nz(rawBat.HBP) + nz(rawBat.SF);
       page.appendChild(table(
         ["G", "PA", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB", "SO", "HBP", "SB", "CS", "AVG", "OBP", "SLG"],
         [[bat.G, bat.PA, bat.AB, bat.R, bat.H, bat["2B"], bat["3B"], bat.HR, bat.RBI, bat.BB, bat.SO, bat.HBP, bat.SB, bat.CS,
-          rateLabel(bat.H, bat.AB), rate3(obpDen ? (nz(bat.H) + nz(bat.BB) + nz(bat.HBP)) / obpDen : null), rate3(bat.AB ? tb / bat.AB : null)]]));
+          rateLabel(rawBat.H, rawBat.AB), rate3(obpDen ? (nz(rawBat.H) + nz(rawBat.BB) + nz(rawBat.HBP)) / obpDen : null), rate3(rawBat.AB ? tb / rawBat.AB : null)]]));
     }
     if (card.peak_pit) {
-      var pit = card.peak_pit;
-      page.appendChild(el("h4", { text: "Peak pitching" }));
+      var rawPit = card.peak_pit;
+      var pit = card.peak_pit_162 || rawPit;
+      page.appendChild(el("h4", { text: "Peak pitching · 162-game average" }));
       if (pit.window_years && pit.window_years.length) {
         page.appendChild(el("p", { class: "note", text: "Window: " + pit.window_years.join(", ") + "." }));
       }
       page.appendChild(table(
         ["W", "L", "G", "GS", "SV", "IP", "H", "R", "ER", "HR", "BB", "SO", "BF", "ERA"],
         [[pit.w, pit.l, pit.g, pit.gs, pit.sv, pit.ip == null ? null : q1(Number(pit.ip)), pit.h, pit.r, pit.er, pit.hr, pit.bb, pit.so, pit.bf,
-          eraLabel(nz(pit.er), Math.round(Number(pit.ip || 0) * 3))]]));
+          eraLabel(nz(rawPit.er), Math.round(Number(rawPit.ip || 0) * 3))]]));
     }
   }
 

@@ -35,6 +35,7 @@
   "id": "bradlar01",
   "name": "Archie Bradley",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 144,
    "bf": 1541,
@@ -50,6 +51,31 @@
    "so": 384,
    "sv": 22,
    "w": 19,
+   "window_years": [
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 36,
+   "bf": 385,
+   "er": 38,
+   "g": 58,
+   "gs": 7,
+   "h": 85,
+   "hbp": 4,
+   "hr": 9,
+   "ip": "89.2",
+   "ip_outs": 269,
+   "l": 6,
+   "r": 40,
+   "seasons": 4,
+   "so": 96,
+   "sv": 6,
+   "team_games": 648,
+   "w": 5,
    "window_years": [
     2016,
     2017,
@@ -351,7 +377,34 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 30,
+   "3B": 15,
+   "AB": 610,
+   "BB": 70,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 6,
+   "H": 157,
+   "HBP": 11,
+   "HR": 28,
+   "IBB": 2,
+   "PA": 697,
+   "R": 122,
+   "RBI": 83,
+   "SB": 43,
+   "SF": 6,
+   "SO": 145,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 456,
+   "window_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -430,6 +483,7 @@
   "id": "chafian01",
   "name": "Andrew Chafin",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 112,
    "bf": 1113,
@@ -445,6 +499,32 @@
    "so": 289,
    "sv": 10,
    "w": 11,
+   "window_years": [
+    2015,
+    2017,
+    2018,
+    2019,
+    2023
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 22,
+   "bf": 223,
+   "er": 20,
+   "g": 67,
+   "gs": 0,
+   "h": 46,
+   "hbp": 1,
+   "hr": 3,
+   "ip": "52.2",
+   "ip_outs": 158,
+   "l": 2,
+   "r": 20,
+   "seasons": 5,
+   "so": 58,
+   "sv": 2,
+   "team_games": 810,
+   "w": 2,
    "window_years": [
     2015,
     2017,
@@ -766,7 +846,36 @@
     2006
    ]
   },
+  "peak_bat_162": {
+   "2B": 27,
+   "3B": 4,
+   "AB": 583,
+   "BB": 69,
+   "CS": 9,
+   "G": 162,
+   "GIDP": 9,
+   "H": 153,
+   "HBP": 6,
+   "HR": 6,
+   "IBB": 3,
+   "PA": 662,
+   "R": 87,
+   "RBI": 49,
+   "SB": 18,
+   "SF": 4,
+   "SO": 75,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 597,
+   "window_years": [
+    2001,
+    2002,
+    2003,
+    2005,
+    2006
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -816,6 +925,7 @@
   "id": "cruzju02",
   "name": "Juan Cruz",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 63,
    "bf": 477,
@@ -831,6 +941,29 @@
    "so": 158,
    "sv": 0,
    "w": 10,
+   "window_years": [
+    2007,
+    2008
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 32,
+   "bf": 239,
+   "er": 18,
+   "g": 55,
+   "gs": 0,
+   "h": 40,
+   "hbp": 4,
+   "hr": 6,
+   "ip": "56.1",
+   "ip_outs": 169,
+   "l": 1,
+   "r": 23,
+   "seasons": 2,
+   "so": 79,
+   "sv": 0,
+   "team_games": 324,
+   "w": 5,
    "window_years": [
     2007,
     2008
@@ -1159,7 +1292,36 @@
     2003
    ]
   },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 7,
+   "AB": 575,
+   "BB": 65,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 8,
+   "H": 160,
+   "HBP": 5,
+   "HR": 28,
+   "IBB": 7,
+   "PA": 649,
+   "R": 94,
+   "RBI": 94,
+   "SB": 13,
+   "SF": 5,
+   "SO": 90,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 745,
+   "window_years": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2003
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -1235,6 +1397,7 @@
   "id": "galleza01",
   "name": "Zac Gallen",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 263,
    "bf": 3517,
@@ -1250,6 +1413,32 @@
    "so": 882,
    "sv": 0,
    "w": 60,
+   "window_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 53,
+   "bf": 703,
+   "er": 71,
+   "g": 30,
+   "gs": 30,
+   "h": 145,
+   "hbp": 6,
+   "hr": 20,
+   "ip": "171.0",
+   "ip_outs": 513,
+   "l": 9,
+   "r": 75,
+   "seasons": 5,
+   "so": 176,
+   "sv": 0,
+   "team_games": 810,
+   "w": 12,
    "window_years": [
     2021,
     2022,
@@ -1577,7 +1766,36 @@
     2018
    ]
   },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 3,
+   "AB": 594,
+   "BB": 105,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 16,
+   "H": 179,
+   "HBP": 5,
+   "HR": 33,
+   "IBB": 18,
+   "PA": 710,
+   "R": 107,
+   "RBI": 109,
+   "SB": 19,
+   "SF": 5,
+   "SO": 157,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 790,
+   "window_years": [
+    2013,
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -1899,7 +2117,36 @@
     2003
    ]
   },
+  "peak_bat_162": {
+   "2B": 40,
+   "3B": 4,
+   "AB": 611,
+   "BB": 90,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 15,
+   "H": 191,
+   "HBP": 9,
+   "HR": 35,
+   "IBB": 13,
+   "PA": 716,
+   "R": 110,
+   "RBI": 119,
+   "SB": 5,
+   "SF": 7,
+   "SO": 78,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 781,
+   "window_years": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2003
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -1978,6 +2225,7 @@
   "id": "johnsra05",
   "name": "Randy Johnson",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 332,
    "bf": 5073,
@@ -1993,6 +2241,32 @@
    "so": 1707,
    "sv": 0,
    "w": 97,
+   "window_years": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2004
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 66,
+   "bf": 1015,
+   "er": 71,
+   "g": 35,
+   "gs": 35,
+   "h": 193,
+   "hbp": 11,
+   "hr": 23,
+   "ip": "255.0",
+   "ip_outs": 765,
+   "l": 8,
+   "r": 83,
+   "seasons": 5,
+   "so": 341,
+   "sv": 0,
+   "team_games": 810,
+   "w": 19,
    "window_years": [
     1999,
     2000,
@@ -2069,6 +2343,7 @@
   "id": "kellyme01",
   "name": "Merrill Kelly",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 266,
    "bf": 3484,
@@ -2084,6 +2359,32 @@
    "so": 773,
    "sv": 0,
    "w": 54,
+   "window_years": [
+    2019,
+    2021,
+    2022,
+    2023,
+    2025
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 53,
+   "bf": 697,
+   "er": 71,
+   "g": 29,
+   "gs": 29,
+   "h": 151,
+   "hbp": 3,
+   "hr": 21,
+   "ip": "169.2",
+   "ip_outs": 509,
+   "l": 9,
+   "r": 76,
+   "seasons": 5,
+   "so": 155,
+   "sv": 0,
+   "team_games": 810,
+   "w": 11,
    "window_years": [
     2019,
     2021,
@@ -2162,6 +2463,7 @@
   "id": "kimby01",
   "name": "Byung-Hyun Kim",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 116,
    "bf": 1055,
@@ -2177,6 +2479,30 @@
    "so": 316,
    "sv": 69,
    "w": 19,
+   "window_years": [
+    2000,
+    2001,
+    2002
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 39,
+   "bf": 352,
+   "er": 29,
+   "g": 70,
+   "gs": 0,
+   "h": 58,
+   "hbp": 8,
+   "hr": 8,
+   "ip": "84.1",
+   "ip_outs": 253,
+   "l": 5,
+   "r": 30,
+   "seasons": 3,
+   "so": 105,
+   "sv": 23,
+   "team_games": 486,
+   "w": 6,
    "window_years": [
     2000,
     2001,
@@ -2492,7 +2818,36 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 7,
+   "AB": 604,
+   "BB": 70,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 13,
+   "H": 174,
+   "HBP": 6,
+   "HR": 31,
+   "IBB": 5,
+   "PA": 685,
+   "R": 100,
+   "RBI": 91,
+   "SB": 8,
+   "SF": 5,
+   "SO": 106,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 709,
+   "window_years": [
+    2018,
+    2019,
+    2023,
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -2817,7 +3172,36 @@
     2014
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 1,
+   "AB": 565,
+   "BB": 65,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 16,
+   "H": 151,
+   "HBP": 9,
+   "HR": 18,
+   "IBB": 9,
+   "PA": 644,
+   "R": 67,
+   "RBI": 85,
+   "SB": 0,
+   "SF": 5,
+   "SO": 125,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 661,
+   "window_years": [
+    2009,
+    2011,
+    2012,
+    2013,
+    2014
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -3112,7 +3496,34 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 27,
+   "3B": 2,
+   "AB": 514,
+   "BB": 55,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 18,
+   "H": 143,
+   "HBP": 3,
+   "HR": 12,
+   "IBB": 2,
+   "PA": 579,
+   "R": 65,
+   "RBI": 75,
+   "SB": 6,
+   "SF": 7,
+   "SO": 100,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 291,
+   "window_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -3433,7 +3844,35 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 4,
+   "AB": 521,
+   "BB": 72,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 6,
+   "H": 132,
+   "HBP": 7,
+   "HR": 10,
+   "IBB": 1,
+   "PA": 606,
+   "R": 85,
+   "RBI": 66,
+   "SB": 18,
+   "SF": 6,
+   "SO": 97,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 551,
+   "window_years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -3751,7 +4190,35 @@
     2018
    ]
   },
+  "peak_bat_162": {
+   "2B": 38,
+   "3B": 7,
+   "AB": 590,
+   "BB": 47,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 12,
+   "H": 165,
+   "HBP": 6,
+   "HR": 20,
+   "IBB": 1,
+   "PA": 648,
+   "R": 96,
+   "RBI": 71,
+   "SB": 26,
+   "SF": 5,
+   "SO": 107,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 519,
+   "window_years": [
+    2013,
+    2015,
+    2017,
+    2018
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -3799,6 +4266,7 @@
   "id": "putzjj01",
   "name": "J.J. Putz",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 40,
    "bf": 587,
@@ -3814,6 +4282,30 @@
    "so": 164,
    "sv": 83,
    "w": 6,
+   "window_years": [
+    2011,
+    2012,
+    2013
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 13,
+   "bf": 196,
+   "er": 13,
+   "g": 52,
+   "gs": 0,
+   "h": 37,
+   "hbp": 1,
+   "hr": 4,
+   "ip": "49.0",
+   "ip_outs": 147,
+   "l": 3,
+   "r": 14,
+   "seasons": 3,
+   "so": 55,
+   "sv": 28,
+   "team_games": 486,
+   "w": 2,
    "window_years": [
     2011,
     2012,
@@ -4121,7 +4613,35 @@
     2010
    ]
   },
+  "peak_bat_162": {
+   "2B": 27,
+   "3B": 3,
+   "AB": 570,
+   "BB": 75,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 9,
+   "H": 138,
+   "HBP": 6,
+   "HR": 35,
+   "IBB": 4,
+   "PA": 657,
+   "R": 94,
+   "RBI": 100,
+   "SB": 12,
+   "SF": 5,
+   "SO": 221,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 563,
+   "window_years": [
+    2007,
+    2008,
+    2009,
+    2010
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -4172,6 +4692,7 @@
   "id": "schilcu01",
   "name": "Curt Schilling",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 104,
    "bf": 2711,
@@ -4187,6 +4708,30 @@
    "so": 803,
    "sv": 0,
    "w": 53,
+   "window_years": [
+    2001,
+    2002,
+    2003
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 35,
+   "bf": 904,
+   "er": 78,
+   "g": 32,
+   "gs": 31,
+   "h": 200,
+   "hbp": 2,
+   "hr": 28,
+   "ip": "228.0",
+   "ip_outs": 684,
+   "l": 7,
+   "r": 80,
+   "seasons": 3,
+   "so": 268,
+   "sv": 0,
+   "team_games": 486,
+   "w": 18,
    "window_years": [
     2001,
     2002,
@@ -4506,7 +5051,36 @@
     2012
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 6,
+   "AB": 594,
+   "BB": 69,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 11,
+   "H": 167,
+   "HBP": 8,
+   "HR": 25,
+   "IBB": 7,
+   "PA": 677,
+   "R": 99,
+   "RBI": 83,
+   "SB": 18,
+   "SF": 6,
+   "SO": 155,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 688,
+   "window_years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -4557,6 +5131,7 @@
   "id": "valvejo01",
   "name": "Jose Valverde",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 94,
    "bf": 960,
@@ -4572,6 +5147,31 @@
    "so": 293,
    "sv": 90,
    "w": 8,
+   "window_years": [
+    2003,
+    2005,
+    2006,
+    2007
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 24,
+   "bf": 240,
+   "er": 20,
+   "g": 56,
+   "gs": 0,
+   "h": 43,
+   "hbp": 2,
+   "hr": 6,
+   "ip": "57.2",
+   "ip_outs": 173,
+   "l": 3,
+   "r": 22,
+   "seasons": 4,
+   "so": 73,
+   "sv": 23,
+   "team_games": 648,
+   "w": 2,
    "window_years": [
     2003,
     2005,
@@ -4908,7 +5508,36 @@
     2024
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 1,
+   "AB": 584,
+   "BB": 66,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 13,
+   "H": 147,
+   "HBP": 8,
+   "HR": 30,
+   "IBB": 4,
+   "PA": 664,
+   "R": 87,
+   "RBI": 91,
+   "SB": 5,
+   "SF": 6,
+   "SO": 148,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 714,
+   "window_years": [
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -4987,6 +5616,7 @@
   "id": "webbbr01",
   "name": "Brandon Webb",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 374,
    "bf": 4552,
@@ -5002,6 +5632,32 @@
    "so": 891,
    "sv": 0,
    "w": 73,
+   "window_years": [
+    2003,
+    2004,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 75,
+   "bf": 910,
+   "er": 77,
+   "g": 33,
+   "gs": 33,
+   "h": 193,
+   "hbp": 9,
+   "hr": 14,
+   "ip": "217.1",
+   "ip_outs": 652,
+   "l": 10,
+   "r": 91,
+   "seasons": 5,
+   "so": 178,
+   "sv": 0,
+   "team_games": 810,
+   "w": 15,
    "window_years": [
     2003,
     2004,
@@ -5325,7 +5981,35 @@
     2001
    ]
   },
+  "peak_bat_162": {
+   "2B": 37,
+   "3B": 2,
+   "AB": 632,
+   "BB": 42,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 20,
+   "H": 178,
+   "HBP": 4,
+   "HR": 27,
+   "IBB": 7,
+   "PA": 682,
+   "R": 89,
+   "RBI": 107,
+   "SB": 3,
+   "SF": 5,
+   "SO": 104,
+   "team_line": "Arizona Diamondbacks",
+   "window_games": 491,
+   "window_years": [
+    1998,
+    1999,
+    2000,
+    2001
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -5401,6 +6085,7 @@
   "id": "zieglbr01",
   "name": "Brad Ziegler",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 99,
    "bf": 1269,
@@ -5416,6 +6101,32 @@
    "so": 203,
    "sv": 62,
    "w": 21,
+   "window_years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 20,
+   "bf": 254,
+   "er": 18,
+   "g": 65,
+   "gs": 0,
+   "h": 53,
+   "hbp": 2,
+   "hr": 3,
+   "ip": "63.0",
+   "ip_outs": 189,
+   "l": 2,
+   "r": 20,
+   "seasons": 5,
+   "so": 41,
+   "sv": 12,
+   "team_games": 810,
+   "w": 4,
    "window_years": [
     2012,
     2013,
@@ -5723,7 +6434,36 @@
     2019
    ]
   },
+  "peak_bat_162": {
+   "2B": 47,
+   "3B": 5,
+   "AB": 658,
+   "BB": 76,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 9,
+   "H": 199,
+   "HBP": 4,
+   "HR": 29,
+   "IBB": 5,
+   "PA": 745,
+   "R": 126,
+   "RBI": 99,
+   "SB": 26,
+   "SF": 7,
+   "SO": 95,
+   "team_line": "Boston Red Sox",
+   "window_games": 742,
+   "window_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -6035,7 +6775,36 @@
     1989
    ]
   },
+  "peak_bat_162": {
+   "2B": 47,
+   "3B": 5,
+   "AB": 630,
+   "BB": 113,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 18,
+   "H": 225,
+   "HBP": 3,
+   "HR": 10,
+   "IBB": 16,
+   "PA": 753,
+   "R": 119,
+   "RBI": 74,
+   "SB": 1,
+   "SF": 6,
+   "SO": 50,
+   "team_line": "Boston Red Sox",
+   "window_games": 768,
+   "window_years": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1989
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -6114,6 +6883,7 @@
   "id": "burgmto01",
   "name": "Tom Burgmeier",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 98,
    "bf": 1703,
@@ -6129,6 +6899,32 @@
    "so": 217,
    "sv": 40,
    "w": 21,
+   "window_years": [
+    1978,
+    1979,
+    1980,
+    1981,
+    1982
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 21,
+   "bf": 366,
+   "er": 27,
+   "g": 46,
+   "gs": 0,
+   "h": 88,
+   "hbp": 3,
+   "hr": 6,
+   "ip": "88.1",
+   "ip_outs": 265,
+   "l": 3,
+   "r": 32,
+   "seasons": 5,
+   "so": 47,
+   "sv": 9,
+   "team_games": 753,
+   "w": 5,
    "window_years": [
     1978,
     1979,
@@ -6184,6 +6980,7 @@
   "id": "clemero02",
   "name": "Roger Clemens",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 331,
    "bf": 5140,
@@ -6199,6 +6996,32 @@
    "so": 1152,
    "sv": 0,
    "w": 101,
+   "window_years": [
+    1986,
+    1987,
+    1990,
+    1991,
+    1992
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 66,
+   "bf": 1029,
+   "er": 71,
+   "g": 33,
+   "gs": 33,
+   "h": 209,
+   "hbp": 7,
+   "hr": 15,
+   "ip": "256.2",
+   "ip_outs": 770,
+   "l": 8,
+   "r": 82,
+   "seasons": 5,
+   "so": 231,
+   "sv": 0,
+   "team_games": 809,
+   "w": 20,
    "window_years": [
     1986,
     1987,
@@ -6533,7 +7356,36 @@
     1950
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 8,
+   "AB": 627,
+   "BB": 78,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 21,
+   "H": 179,
+   "HBP": 2,
+   "HR": 23,
+   "IBB": 0,
+   "PA": 706,
+   "R": 102,
+   "RBI": 117,
+   "SB": 5,
+   "SF": 0,
+   "SO": 55,
+   "team_line": "Boston Red Sox",
+   "window_games": 734,
+   "window_years": [
+    1943,
+    1946,
+    1948,
+    1949,
+    1950
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -6845,7 +7697,36 @@
     1988
    ]
   },
+  "peak_bat_162": {
+   "2B": 35,
+   "3B": 5,
+   "AB": 609,
+   "BB": 104,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 16,
+   "H": 176,
+   "HBP": 3,
+   "HR": 31,
+   "IBB": 3,
+   "PA": 722,
+   "R": 115,
+   "RBI": 106,
+   "SB": 5,
+   "SF": 6,
+   "SO": 112,
+   "team_line": "Boston Red Sox",
+   "window_games": 786,
+   "window_years": [
+    1982,
+    1984,
+    1985,
+    1987,
+    1988
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -7174,7 +8055,36 @@
     1980
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 6,
+   "AB": 581,
+   "BB": 67,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 12,
+   "H": 167,
+   "HBP": 9,
+   "HR": 24,
+   "IBB": 6,
+   "PA": 662,
+   "R": 97,
+   "RBI": 85,
+   "SB": 10,
+   "SF": 6,
+   "SO": 88,
+   "team_line": "Boston Red Sox",
+   "window_games": 705,
+   "window_years": [
+    1972,
+    1976,
+    1977,
+    1978,
+    1980
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -7253,6 +8163,7 @@
   "id": "foulkke01",
   "name": "Keith Foulke",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 40,
    "bf": 748,
@@ -7268,6 +8179,30 @@
    "so": 149,
    "sv": 47,
    "w": 13,
+   "window_years": [
+    2004,
+    2005,
+    2006
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 13,
+   "bf": 249,
+   "er": 25,
+   "g": 53,
+   "gs": 0,
+   "h": 56,
+   "hbp": 4,
+   "hr": 8,
+   "ip": "59.1",
+   "ip_outs": 178,
+   "l": 3,
+   "r": 25,
+   "seasons": 3,
+   "so": 50,
+   "sv": 16,
+   "team_games": 486,
+   "w": 4,
    "window_years": [
     2004,
     2005,
@@ -7567,7 +8502,36 @@
     1940
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 8,
+   "AB": 606,
+   "BB": 115,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 8,
+   "H": 197,
+   "HBP": 1,
+   "HR": 44,
+   "IBB": 0,
+   "PA": 722,
+   "R": 138,
+   "RBI": 150,
+   "SB": 8,
+   "SF": 0,
+   "SO": 101,
+   "team_line": "Boston Red Sox",
+   "window_games": 722,
+   "window_years": [
+    1936,
+    1937,
+    1938,
+    1939,
+    1940
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -7905,7 +8869,36 @@
     2003
    ]
   },
+  "peak_bat_162": {
+   "2B": 49,
+   "3B": 9,
+   "AB": 674,
+   "BB": 45,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 14,
+   "H": 216,
+   "HBP": 7,
+   "HR": 30,
+   "IBB": 6,
+   "PA": 735,
+   "R": 121,
+   "RBI": 117,
+   "SB": 14,
+   "SF": 9,
+   "SO": 71,
+   "team_line": "Boston Red Sox",
+   "window_games": 748,
+   "window_years": [
+    1997,
+    1998,
+    2000,
+    2002,
+    2003
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -7982,6 +8975,7 @@
   "id": "grovele01",
   "name": "Lefty Grove",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 323,
    "bf": 4817,
@@ -7997,6 +8991,32 @@
    "so": 584,
    "sv": 4,
    "w": 83,
+   "window_years": [
+    1935,
+    1936,
+    1937,
+    1938,
+    1939
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 68,
+   "bf": 1020,
+   "er": 76,
+   "g": 32,
+   "gs": 29,
+   "h": 238,
+   "hbp": 2,
+   "hr": 10,
+   "ip": "242.0",
+   "ip_outs": 726,
+   "l": 9,
+   "r": 90,
+   "seasons": 5,
+   "so": 124,
+   "sv": 1,
+   "team_games": 765,
+   "w": 18,
    "window_years": [
     1935,
     1936,
@@ -8074,6 +9094,7 @@
   "id": "martipe02",
   "name": "Pedro Martinez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 223,
    "bf": 4139,
@@ -8089,6 +9110,32 @@
    "so": 1293,
    "sv": 0,
    "w": 94,
+   "window_years": [
+    1998,
+    1999,
+    2000,
+    2002,
+    2003
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 45,
+   "bf": 828,
+   "er": 52,
+   "g": 30,
+   "gs": 30,
+   "h": 153,
+   "hbp": 11,
+   "hr": 14,
+   "ip": "210.0",
+   "ip_outs": 630,
+   "l": 5,
+   "r": 59,
+   "seasons": 5,
+   "so": 259,
+   "sv": 0,
+   "team_games": 810,
+   "w": 19,
    "window_years": [
     1998,
     1999,
@@ -8429,7 +9476,36 @@
     2016
    ]
   },
+  "peak_bat_162": {
+   "2B": 46,
+   "3B": 2,
+   "AB": 603,
+   "BB": 104,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 16,
+   "H": 185,
+   "HBP": 3,
+   "HR": 46,
+   "IBB": 14,
+   "PA": 716,
+   "R": 111,
+   "RBI": 142,
+   "SB": 1,
+   "SF": 7,
+   "SO": 120,
+   "team_line": "Boston Red Sox",
+   "window_games": 760,
+   "window_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2016
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -8509,6 +9585,7 @@
   "id": "papeljo01",
   "name": "Jonathan Papelbon",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 70,
    "bf": 1294,
@@ -8524,6 +9601,32 @@
    "so": 399,
    "sv": 182,
    "w": 15,
+   "window_years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2011
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 14,
+   "bf": 259,
+   "er": 14,
+   "g": 63,
+   "gs": 0,
+   "h": 46,
+   "hbp": 2,
+   "hr": 4,
+   "ip": "65.2",
+   "ip_outs": 197,
+   "l": 2,
+   "r": 16,
+   "seasons": 5,
+   "so": 80,
+   "sv": 36,
+   "team_games": 810,
+   "w": 3,
    "window_years": [
     2006,
     2007,
@@ -8852,7 +9955,36 @@
     2016
    ]
   },
+  "peak_bat_162": {
+   "2B": 45,
+   "3B": 2,
+   "AB": 659,
+   "BB": 71,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 20,
+   "H": 204,
+   "HBP": 3,
+   "HR": 16,
+   "IBB": 3,
+   "PA": 740,
+   "R": 110,
+   "RBI": 83,
+   "SB": 19,
+   "SF": 7,
+   "SO": 68,
+   "team_line": "Boston Red Sox",
+   "window_games": 784,
+   "window_years": [
+    2008,
+    2009,
+    2011,
+    2013,
+    2016
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -8929,6 +10061,7 @@
   "id": "radatdi01",
   "name": "Dick Radatz",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 202,
    "bf": 2208,
@@ -8944,6 +10077,31 @@
    "so": 608,
    "sv": 100,
    "w": 49,
+   "window_years": [
+    1962,
+    1963,
+    1964,
+    1965
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 51,
+   "bf": 555,
+   "er": 39,
+   "g": 68,
+   "gs": 0,
+   "h": 99,
+   "hbp": 5,
+   "hr": 11,
+   "ip": "135.1",
+   "ip_outs": 406,
+   "l": 8,
+   "r": 41,
+   "seasons": 4,
+   "so": 153,
+   "sv": 25,
+   "team_games": 645,
+   "w": 12,
    "window_years": [
     1962,
     1963,
@@ -9273,7 +10431,36 @@
     1986
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 8,
+   "AB": 650,
+   "BB": 58,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 21,
+   "H": 207,
+   "HBP": 6,
+   "HR": 37,
+   "IBB": 7,
+   "PA": 720,
+   "R": 108,
+   "RBI": 126,
+   "SB": 4,
+   "SF": 7,
+   "SO": 107,
+   "team_line": "Boston Red Sox",
+   "window_games": 793,
+   "window_years": [
+    1977,
+    1978,
+    1979,
+    1983,
+    1986
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -9612,6 +10799,31 @@
     1919
    ]
   },
+  "peak_bat_162": {
+   "2B": 43,
+   "3B": 17,
+   "AB": 539,
+   "BB": 114,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 0,
+   "H": 168,
+   "HBP": 6,
+   "HR": 29,
+   "IBB": 0,
+   "PA": 660,
+   "R": 110,
+   "RBI": 130,
+   "SB": 9,
+   "SF": 0,
+   "SO": 84,
+   "team_line": "Boston Red Sox",
+   "window_games": 225,
+   "window_years": [
+    1918,
+    1919
+   ]
+  },
   "peak_pit": {
    "bb": 418,
    "bf": 4759,
@@ -9627,6 +10839,32 @@
    "so": 480,
    "sv": 4,
    "w": 87,
+   "window_years": [
+    1915,
+    1916,
+    1917,
+    1918,
+    1919
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 93,
+   "bf": 1053,
+   "er": 62,
+   "g": 34,
+   "gs": 31,
+   "h": 202,
+   "hbp": 6,
+   "hr": 2,
+   "ip": "258.1",
+   "ip_outs": 775,
+   "l": 10,
+   "r": 81,
+   "seasons": 5,
+   "so": 106,
+   "sv": 1,
+   "team_games": 732,
+   "w": 19,
    "window_years": [
     1915,
     1916,
@@ -9943,7 +11181,36 @@
     1915
    ]
   },
+  "peak_bat_162": {
+   "2B": 39,
+   "3B": 17,
+   "AB": 601,
+   "BB": 78,
+   "CS": 18,
+   "G": 162,
+   "GIDP": 0,
+   "H": 210,
+   "HBP": 7,
+   "HR": 5,
+   "IBB": 0,
+   "PA": 686,
+   "R": 116,
+   "RBI": 84,
+   "SB": 44,
+   "SF": 0,
+   "SO": 29,
+   "team_line": "Boston Red Sox",
+   "window_games": 743,
+   "window_years": [
+    1910,
+    1912,
+    1913,
+    1914,
+    1915
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -10022,6 +11289,7 @@
   "id": "stanlbo01",
   "name": "Bob Stanley",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 204,
    "bf": 2971,
@@ -10037,6 +11305,32 @@
    "so": 303,
    "sv": 81,
    "w": 51,
+   "window_years": [
+    1978,
+    1980,
+    1982,
+    1983,
+    1985
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 41,
+   "bf": 594,
+   "er": 48,
+   "g": 53,
+   "gs": 4,
+   "h": 142,
+   "hbp": 3,
+   "hr": 8,
+   "ip": "143.2",
+   "ip_outs": 431,
+   "l": 7,
+   "r": 54,
+   "seasons": 5,
+   "so": 61,
+   "sv": 16,
+   "team_games": 810,
+   "w": 10,
    "window_years": [
     1978,
     1980,
@@ -10112,6 +11406,7 @@
   "id": "ueharko01",
   "name": "Koji Uehara",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 37,
    "bf": 858,
@@ -10127,6 +11422,31 @@
    "so": 291,
    "sv": 79,
    "w": 14,
+   "window_years": [
+    2013,
+    2014,
+    2015,
+    2016
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 9,
+   "bf": 215,
+   "er": 14,
+   "g": 58,
+   "gs": 0,
+   "h": 37,
+   "hbp": 1,
+   "hr": 7,
+   "ip": "56.2",
+   "ip_outs": 170,
+   "l": 3,
+   "r": 15,
+   "seasons": 4,
+   "so": 73,
+   "sv": 20,
+   "team_games": 648,
+   "w": 4,
    "window_years": [
     2013,
     2014,
@@ -10433,7 +11753,36 @@
     2007
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 2,
+   "AB": 543,
+   "BB": 69,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 12,
+   "H": 149,
+   "HBP": 7,
+   "HR": 24,
+   "IBB": 7,
+   "PA": 624,
+   "R": 77,
+   "RBI": 88,
+   "SB": 4,
+   "SF": 5,
+   "SO": 131,
+   "team_line": "Boston Red Sox",
+   "window_games": 687,
+   "window_years": [
+    1999,
+    2003,
+    2004,
+    2005,
+    2007
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -10736,7 +12085,36 @@
     1949
    ]
   },
+  "peak_bat_162": {
+   "2B": 39,
+   "3B": 6,
+   "AB": 556,
+   "BB": 166,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 14,
+   "H": 198,
+   "HBP": 3,
+   "HR": 40,
+   "IBB": 0,
+   "PA": 724,
+   "R": 149,
+   "RBI": 140,
+   "SB": 1,
+   "SF": 0,
+   "SO": 47,
+   "team_line": "Boston Red Sox",
+   "window_games": 754,
+   "window_years": [
+    1941,
+    1942,
+    1946,
+    1947,
+    1949
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -10813,6 +12191,7 @@
   "id": "woodjo02",
   "name": "Smoky Joe Wood",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 319,
    "bf": 4432,
@@ -10828,6 +12207,32 @@
    "so": 820,
    "sv": 8,
    "w": 95,
+   "window_years": [
+    1910,
+    1911,
+    1912,
+    1913,
+    1915
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 67,
+   "bf": 931,
+   "er": 49,
+   "g": 36,
+   "gs": 26,
+   "h": 187,
+   "hbp": 9,
+   "hr": 2,
+   "ip": "235.1",
+   "ip_outs": 706,
+   "l": 9,
+   "r": 81,
+   "seasons": 5,
+   "so": 172,
+   "sv": 2,
+   "team_games": 771,
+   "w": 20,
    "window_years": [
     1910,
     1911,
@@ -11149,7 +12554,36 @@
     1970
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 2,
+   "AB": 584,
+   "BB": 109,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 11,
+   "H": 179,
+   "HBP": 2,
+   "HR": 33,
+   "IBB": 10,
+   "PA": 698,
+   "R": 105,
+   "RBI": 97,
+   "SB": 14,
+   "SF": 3,
+   "SO": 79,
+   "team_line": "Boston Red Sox",
+   "window_games": 792,
+   "window_years": [
+    1963,
+    1967,
+    1968,
+    1969,
+    1970
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -11197,6 +12631,7 @@
   "id": "youngcy01",
   "name": "Cy Young",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 194,
    "bf": 6565,
@@ -11212,6 +12647,32 @@
    "so": 854,
    "sv": 4,
    "w": 132,
+   "window_years": [
+    1901,
+    1902,
+    1903,
+    1905,
+    1908
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 43,
+   "bf": 1467,
+   "er": 77,
+   "g": 45,
+   "gs": 41,
+   "h": 323,
+   "hbp": 8,
+   "hr": 5,
+   "ip": "383.2",
+   "ip_outs": 1151,
+   "l": 13,
+   "r": 118,
+   "seasons": 5,
+   "so": 191,
+   "sv": 1,
+   "team_games": 725,
+   "w": 29,
    "window_years": [
     1901,
     1902,
@@ -11287,6 +12748,7 @@
   "id": "bridgto01",
   "name": "Tommy Bridges",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 561,
    "bf": 5485,
@@ -11302,6 +12764,32 @@
    "so": 717,
    "sv": 5,
    "w": 94,
+   "window_years": [
+    1932,
+    1933,
+    1934,
+    1935,
+    1936
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 118,
+   "bf": 1157,
+   "er": 104,
+   "g": 38,
+   "gs": 34,
+   "h": 249,
+   "hbp": 4,
+   "hr": 17,
+   "ip": "269.2",
+   "ip_outs": 809,
+   "l": 12,
+   "r": 123,
+   "seasons": 5,
+   "so": 151,
+   "sv": 1,
+   "team_games": 768,
+   "w": 20,
    "window_years": [
     1932,
     1933,
@@ -11629,7 +13117,36 @@
     2016
    ]
   },
+  "peak_bat_162": {
+   "2B": 40,
+   "3B": 1,
+   "AB": 602,
+   "BB": 89,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 24,
+   "H": 201,
+   "HBP": 4,
+   "HR": 40,
+   "IBB": 22,
+   "PA": 700,
+   "R": 110,
+   "RBI": 128,
+   "SB": 2,
+   "SF": 5,
+   "SO": 102,
+   "team_line": "Detroit Tigers",
+   "window_games": 778,
+   "window_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2016
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -11957,7 +13474,36 @@
     1917
    ]
   },
+  "peak_bat_162": {
+   "2B": 41,
+   "3B": 18,
+   "AB": 610,
+   "BB": 72,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 0,
+   "H": 236,
+   "HBP": 7,
+   "HR": 7,
+   "IBB": 0,
+   "PA": 689,
+   "R": 134,
+   "RBI": 114,
+   "SB": 81,
+   "SF": 0,
+   "SO": 45,
+   "team_line": "Detroit Tigers",
+   "window_games": 750,
+   "window_years": [
+    1909,
+    1910,
+    1911,
+    1915,
+    1917
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -12273,7 +13819,36 @@
     1914
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 20,
+   "AB": 624,
+   "BB": 56,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 0,
+   "H": 204,
+   "HBP": 1,
+   "HR": 8,
+   "IBB": 0,
+   "PA": 682,
+   "R": 95,
+   "RBI": 102,
+   "SB": 25,
+   "SF": 0,
+   "SO": 33,
+   "team_line": "Detroit Tigers",
+   "window_games": 764,
+   "window_years": [
+    1908,
+    1909,
+    1911,
+    1913,
+    1914
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -12585,7 +14160,36 @@
     1974
    ]
   },
+  "peak_bat_162": {
+   "2B": 23,
+   "3B": 4,
+   "AB": 562,
+   "BB": 60,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 11,
+   "H": 159,
+   "HBP": 15,
+   "HR": 23,
+   "IBB": 7,
+   "PA": 641,
+   "R": 71,
+   "RBI": 82,
+   "SB": 2,
+   "SF": 5,
+   "SO": 65,
+   "team_line": "Detroit Tigers",
+   "window_games": 732,
+   "window_years": [
+    1964,
+    1967,
+    1968,
+    1971,
+    1974
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -12909,7 +14513,36 @@
     1936
    ]
   },
+  "peak_bat_162": {
+   "2B": 49,
+   "3B": 13,
+   "AB": 654,
+   "BB": 83,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 0,
+   "H": 223,
+   "HBP": 5,
+   "HR": 16,
+   "IBB": 0,
+   "PA": 742,
+   "R": 143,
+   "RBI": 117,
+   "SB": 15,
+   "SF": 0,
+   "SO": 19,
+   "team_line": "Detroit Tigers",
+   "window_games": 767,
+   "window_years": [
+    1929,
+    1930,
+    1934,
+    1935,
+    1936
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -13237,7 +14870,36 @@
     1940
    ]
   },
+  "peak_bat_162": {
+   "2B": 49,
+   "3B": 10,
+   "AB": 624,
+   "BB": 99,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 3,
+   "H": 207,
+   "HBP": 2,
+   "HR": 43,
+   "IBB": 0,
+   "PA": 725,
+   "R": 138,
+   "RBI": 168,
+   "SB": 7,
+   "SF": 0,
+   "SO": 96,
+   "team_line": "Detroit Tigers",
+   "window_games": 762,
+   "window_years": [
+    1934,
+    1935,
+    1937,
+    1938,
+    1940
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -13577,7 +15239,36 @@
     1927
    ]
   },
+  "peak_bat_162": {
+   "2B": 49,
+   "3B": 13,
+   "AB": 610,
+   "BB": 76,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 0,
+   "H": 235,
+   "HBP": 3,
+   "HR": 16,
+   "IBB": 0,
+   "PA": 688,
+   "R": 120,
+   "RBI": 137,
+   "SB": 9,
+   "SF": 0,
+   "SO": 35,
+   "team_line": "Detroit Tigers",
+   "window_games": 737,
+   "window_years": [
+    1921,
+    1923,
+    1924,
+    1925,
+    1927
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -13654,6 +15345,7 @@
   "id": "hennemi01",
   "name": "Mike Henneman",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 153,
    "bf": 1836,
@@ -13669,6 +15361,32 @@
    "so": 302,
    "sv": 96,
    "w": 43,
+   "window_years": [
+    1987,
+    1988,
+    1990,
+    1991,
+    1993
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 31,
+   "bf": 367,
+   "er": 26,
+   "g": 62,
+   "gs": 0,
+   "h": 80,
+   "hbp": 2,
+   "hr": 5,
+   "ip": "87.2",
+   "ip_outs": 263,
+   "l": 4,
+   "r": 30,
+   "seasons": 5,
+   "so": 60,
+   "sv": 19,
+   "team_games": 810,
+   "w": 9,
    "window_years": [
     1987,
     1988,
@@ -13727,6 +15445,7 @@
   "id": "hernawi01",
   "name": "Willie Hernandez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 122,
    "bf": 1840,
@@ -13742,6 +15461,32 @@
    "so": 354,
    "sv": 105,
    "w": 34,
+   "window_years": [
+    1984,
+    1985,
+    1986,
+    1987,
+    1988
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 24,
+   "bf": 368,
+   "er": 28,
+   "g": 65,
+   "gs": 0,
+   "h": 74,
+   "hbp": 3,
+   "hr": 10,
+   "ip": "90.2",
+   "ip_outs": 272,
+   "l": 6,
+   "r": 31,
+   "seasons": 5,
+   "so": 71,
+   "sv": 21,
+   "team_games": 809,
+   "w": 7,
    "window_years": [
     1984,
     1985,
@@ -13824,6 +15569,7 @@
   "id": "hillejo01",
   "name": "John Hiller",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 239,
    "bf": 2299,
@@ -13839,6 +15585,32 @@
    "so": 536,
    "sv": 93,
    "w": 50,
+   "window_years": [
+    1973,
+    1974,
+    1975,
+    1976,
+    1978
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 48,
+   "bf": 462,
+   "er": 28,
+   "g": 54,
+   "gs": 0,
+   "h": 85,
+   "hbp": 1,
+   "hr": 7,
+   "ip": "112.1",
+   "ip_outs": 337,
+   "l": 7,
+   "r": 31,
+   "seasons": 5,
+   "so": 108,
+   "sv": 19,
+   "team_games": 806,
+   "w": 10,
    "window_years": [
     1973,
     1974,
@@ -13897,6 +15669,7 @@
   "id": "holtoty01",
   "name": "Tyler Holton",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 52,
    "bf": 990,
@@ -13912,6 +15685,30 @@
    "so": 215,
    "sv": 9,
    "w": 16,
+   "window_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 17,
+   "bf": 330,
+   "er": 25,
+   "g": 65,
+   "gs": 5,
+   "h": 59,
+   "hbp": 2,
+   "hr": 10,
+   "ip": "86.0",
+   "ip_outs": 258,
+   "l": 3,
+   "r": 27,
+   "seasons": 3,
+   "so": 72,
+   "sv": 3,
+   "team_games": 486,
+   "w": 5,
    "window_years": [
     2023,
     2024,
@@ -14223,7 +16020,36 @@
     1967
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 6,
+   "AB": 617,
+   "BB": 83,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 15,
+   "H": 199,
+   "HBP": 3,
+   "HR": 28,
+   "IBB": 9,
+   "PA": 709,
+   "R": 115,
+   "RBI": 108,
+   "SB": 10,
+   "SF": 6,
+   "SO": 54,
+   "team_line": "Detroit Tigers",
+   "window_games": 725,
+   "window_years": [
+    1955,
+    1956,
+    1959,
+    1961,
+    1967
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -14542,7 +16368,36 @@
     1951
    ]
   },
+  "peak_bat_162": {
+   "2B": 41,
+   "3B": 7,
+   "AB": 649,
+   "BB": 67,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 18,
+   "H": 214,
+   "HBP": 3,
+   "HR": 5,
+   "IBB": 0,
+   "PA": 719,
+   "R": 104,
+   "RBI": 82,
+   "SB": 7,
+   "SF": 0,
+   "SO": 18,
+   "team_line": "Detroit Tigers",
+   "window_games": 695,
+   "window_years": [
+    1946,
+    1947,
+    1949,
+    1950,
+    1951
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -14621,6 +16476,7 @@
   "id": "lolicmi01",
   "name": "Mickey Lolich",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 408,
    "bf": 5800,
@@ -14636,6 +16492,32 @@
    "so": 1195,
    "sv": 3,
    "w": 98,
+   "window_years": [
+    1964,
+    1967,
+    1969,
+    1971,
+    1972
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 82,
+   "bf": 1166,
+   "er": 93,
+   "g": 40,
+   "gs": 37,
+   "h": 240,
+   "hbp": 9,
+   "hr": 26,
+   "ip": "285.1",
+   "ip_outs": 856,
+   "l": 12,
+   "r": 101,
+   "seasons": 5,
+   "so": 240,
+   "sv": 1,
+   "team_games": 806,
+   "w": 20,
    "window_years": [
     1964,
     1967,
@@ -14714,6 +16596,7 @@
   "id": "lopezau01",
   "name": "Aurelio Lopez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 228,
    "bf": 2423,
@@ -14729,6 +16612,32 @@
    "so": 440,
    "sv": 77,
    "w": 47,
+   "window_years": [
+    1979,
+    1980,
+    1981,
+    1983,
+    1984
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 49,
+   "bf": 519,
+   "er": 43,
+   "g": 61,
+   "gs": 1,
+   "h": 104,
+   "hbp": 2,
+   "hr": 14,
+   "ip": "125.2",
+   "ip_outs": 377,
+   "l": 5,
+   "r": 46,
+   "seasons": 5,
+   "so": 94,
+   "sv": 17,
+   "team_games": 756,
+   "w": 10,
    "window_years": [
     1979,
     1980,
@@ -14808,6 +16717,7 @@
   "id": "mclaide01",
   "name": "Denny McLain",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 333,
    "bf": 4969,
@@ -14823,6 +16733,32 @@
    "so": 915,
    "sv": 1,
    "w": 95,
+   "window_years": [
+    1964,
+    1965,
+    1966,
+    1968,
+    1969
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 66,
+   "bf": 990,
+   "er": 79,
+   "g": 34,
+   "gs": 33,
+   "h": 198,
+   "hbp": 3,
+   "hr": 28,
+   "ip": "248.1",
+   "ip_outs": 745,
+   "l": 8,
+   "r": 86,
+   "seasons": 5,
+   "so": 182,
+   "sv": 0,
+   "team_games": 813,
+   "w": 19,
    "window_years": [
     1964,
     1965,
@@ -14901,6 +16837,7 @@
   "id": "morrija02",
   "name": "Jack Morris",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 427,
    "bf": 5280,
@@ -14916,6 +16853,32 @@
    "so": 967,
    "sv": 0,
    "w": 92,
+   "window_years": [
+    1979,
+    1983,
+    1985,
+    1986,
+    1987
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 86,
+   "bf": 1060,
+   "er": 95,
+   "g": 34,
+   "gs": 34,
+   "h": 222,
+   "hbp": 3,
+   "hr": 30,
+   "ip": "257.1",
+   "ip_outs": 772,
+   "l": 10,
+   "r": 103,
+   "seasons": 5,
+   "so": 194,
+   "sv": 0,
+   "team_games": 807,
+   "w": 18,
    "window_years": [
     1979,
     1983,
@@ -14994,6 +16957,7 @@
   "id": "newhoha01",
   "name": "Hal Newhouser",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 519,
    "bf": 6070,
@@ -15009,6 +16973,32 @@
    "so": 993,
    "sv": 8,
    "w": 118,
+   "window_years": [
+    1944,
+    1945,
+    1946,
+    1947,
+    1948
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 108,
+   "bf": 1264,
+   "er": 80,
+   "g": 42,
+   "gs": 36,
+   "h": 257,
+   "hbp": 1,
+   "hr": 8,
+   "ip": "307.1",
+   "ip_outs": 922,
+   "l": 12,
+   "r": 95,
+   "seasons": 5,
+   "so": 207,
+   "sv": 2,
+   "team_games": 778,
+   "w": 25,
    "window_years": [
     1944,
     1945,
@@ -15331,7 +17321,36 @@
     1985
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 3,
+   "AB": 624,
+   "BB": 44,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 16,
+   "H": 168,
+   "HBP": 2,
+   "HR": 32,
+   "IBB": 6,
+   "PA": 677,
+   "R": 84,
+   "RBI": 108,
+   "SB": 3,
+   "SF": 7,
+   "SO": 118,
+   "team_line": "Detroit Tigers",
+   "window_games": 719,
+   "window_years": [
+    1980,
+    1982,
+    1983,
+    1984,
+    1985
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -15660,7 +17679,36 @@
     1994
    ]
   },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 3,
+   "AB": 616,
+   "BB": 116,
+   "CS": 9,
+   "G": 162,
+   "GIDP": 11,
+   "H": 173,
+   "HBP": 3,
+   "HR": 14,
+   "IBB": 3,
+   "PA": 741,
+   "R": 113,
+   "RBI": 69,
+   "SB": 16,
+   "SF": 5,
+   "SO": 108,
+   "team_line": "Detroit Tigers",
+   "window_games": 722,
+   "window_years": [
+    1990,
+    1991,
+    1992,
+    1993,
+    1994
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -15987,7 +18035,36 @@
     1990
    ]
   },
+  "peak_bat_162": {
+   "2B": 35,
+   "3B": 5,
+   "AB": 629,
+   "BB": 70,
+   "CS": 11,
+   "G": 162,
+   "GIDP": 10,
+   "H": 194,
+   "HBP": 3,
+   "HR": 19,
+   "IBB": 5,
+   "PA": 707,
+   "R": 106,
+   "RBI": 89,
+   "SB": 20,
+   "SF": 6,
+   "SO": 63,
+   "team_line": "Detroit Tigers",
+   "window_games": 733,
+   "window_years": [
+    1980,
+    1984,
+    1986,
+    1987,
+    1990
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -16063,6 +18140,7 @@
   "id": "troutdi01",
   "name": "Dizzy Trout",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 428,
    "bf": 5101,
@@ -16078,6 +18156,32 @@
    "so": 569,
    "sv": 13,
    "w": 83,
+   "window_years": [
+    1939,
+    1943,
+    1944,
+    1946,
+    1948
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 89,
+   "bf": 1066,
+   "er": 75,
+   "g": 41,
+   "gs": 31,
+   "h": 235,
+   "hbp": 3,
+   "hr": 8,
+   "ip": "255.1",
+   "ip_outs": 766,
+   "l": 13,
+   "r": 92,
+   "seasons": 5,
+   "so": 119,
+   "sv": 3,
+   "team_games": 775,
+   "w": 17,
    "window_years": [
     1939,
     1943,
@@ -16411,7 +18515,36 @@
     1922
    ]
   },
+  "peak_bat_162": {
+   "2B": 39,
+   "3B": 13,
+   "AB": 625,
+   "BB": 58,
+   "CS": 10,
+   "G": 162,
+   "GIDP": 0,
+   "H": 201,
+   "HBP": 5,
+   "HR": 8,
+   "IBB": 0,
+   "PA": 688,
+   "R": 97,
+   "RBI": 119,
+   "SB": 18,
+   "SF": 0,
+   "SO": 40,
+   "team_line": "Detroit Tigers",
+   "window_games": 761,
+   "window_years": [
+    1915,
+    1916,
+    1917,
+    1921,
+    1922
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -16485,6 +18618,7 @@
   "id": "verlaju01",
   "name": "Justin Verlander",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 308,
    "bf": 4735,
@@ -16500,6 +18634,32 @@
    "so": 1231,
    "sv": 0,
    "w": 94,
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2016
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 62,
+   "bf": 947,
+   "er": 78,
+   "g": 34,
+   "gs": 34,
+   "h": 189,
+   "hbp": 6,
+   "hr": 21,
+   "ip": "236.1",
+   "ip_outs": 709,
+   "l": 8,
+   "r": 85,
+   "seasons": 5,
+   "so": 246,
+   "sv": 0,
+   "team_games": 810,
+   "w": 19,
    "window_years": [
     2009,
     2010,
@@ -16839,7 +18999,36 @@
     1991
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 5,
+   "AB": 614,
+   "BB": 86,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 6,
+   "H": 172,
+   "HBP": 2,
+   "HR": 22,
+   "IBB": 7,
+   "PA": 709,
+   "R": 103,
+   "RBI": 79,
+   "SB": 10,
+   "SF": 7,
+   "SO": 73,
+   "team_line": "Detroit Tigers",
+   "window_games": 748,
+   "window_years": [
+    1983,
+    1985,
+    1987,
+    1989,
+    1991
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -16887,6 +19076,7 @@
   "id": "burketi01",
   "name": "Tim Burke",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 150,
    "bf": 1937,
@@ -16902,6 +19092,32 @@
    "so": 328,
    "sv": 78,
    "w": 37,
+   "window_years": [
+    1985,
+    1986,
+    1987,
+    1989,
+    1990
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 30,
+   "bf": 388,
+   "er": 24,
+   "g": 66,
+   "gs": 0,
+   "h": 79,
+   "hbp": 3,
+   "hr": 6,
+   "ip": "94.2",
+   "ip_outs": 284,
+   "l": 3,
+   "r": 28,
+   "seasons": 5,
+   "so": 66,
+   "sv": 16,
+   "team_games": 808,
+   "w": 7,
    "window_years": [
     1985,
     1986,
@@ -17221,7 +19437,36 @@
     2003
    ]
   },
+  "peak_bat_162": {
+   "2B": 41,
+   "3B": 3,
+   "AB": 601,
+   "BB": 43,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 16,
+   "H": 162,
+   "HBP": 3,
+   "HR": 14,
+   "IBB": 4,
+   "PA": 651,
+   "R": 73,
+   "RBI": 75,
+   "SB": 17,
+   "SF": 5,
+   "SO": 54,
+   "team_line": "Montreal Expos",
+   "window_games": 706,
+   "window_years": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2003
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -17512,7 +19757,36 @@
     1984
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 3,
+   "AB": 585,
+   "BB": 65,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 12,
+   "H": 164,
+   "HBP": 5,
+   "HR": 28,
+   "IBB": 9,
+   "PA": 663,
+   "R": 83,
+   "RBI": 99,
+   "SB": 3,
+   "SF": 7,
+   "SO": 76,
+   "team_line": "Montreal Expos",
+   "window_games": 766,
+   "window_years": [
+    1977,
+    1980,
+    1982,
+    1983,
+    1984
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -17827,7 +20101,36 @@
     1983
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 9,
+   "AB": 645,
+   "BB": 36,
+   "CS": 11,
+   "G": 162,
+   "GIDP": 10,
+   "H": 185,
+   "HBP": 9,
+   "HR": 26,
+   "IBB": 7,
+   "PA": 699,
+   "R": 101,
+   "RBI": 94,
+   "SB": 34,
+   "SF": 9,
+   "SO": 103,
+   "team_line": "Montreal Expos",
+   "window_games": 770,
+   "window_years": [
+    1978,
+    1979,
+    1980,
+    1982,
+    1983
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -18127,7 +20430,36 @@
     1974
    ]
   },
+  "peak_bat_162": {
+   "2B": 20,
+   "3B": 1,
+   "AB": 493,
+   "BB": 86,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 10,
+   "H": 136,
+   "HBP": 4,
+   "HR": 19,
+   "IBB": 11,
+   "PA": 586,
+   "R": 67,
+   "RBI": 73,
+   "SB": 5,
+   "SF": 3,
+   "SO": 59,
+   "team_line": "Montreal Expos",
+   "window_games": 648,
+   "window_years": [
+    1970,
+    1971,
+    1972,
+    1973,
+    1974
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -18178,6 +20510,7 @@
   "id": "fasseje01",
   "name": "Jeff Fassero",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 200,
    "bf": 2743,
@@ -18193,6 +20526,32 @@
    "so": 586,
    "sv": 10,
    "w": 45,
+   "window_years": [
+    1991,
+    1992,
+    1993,
+    1994,
+    1996
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 43,
+   "bf": 583,
+   "er": 45,
+   "g": 49,
+   "gs": 15,
+   "h": 122,
+   "hbp": 1,
+   "hr": 9,
+   "ip": "140.2",
+   "ip_outs": 422,
+   "l": 7,
+   "r": 53,
+   "seasons": 5,
+   "so": 125,
+   "sv": 2,
+   "team_games": 762,
+   "w": 10,
    "window_years": [
     1991,
     1992,
@@ -18251,6 +20610,7 @@
   "id": "frymawo01",
   "name": "Woodie Fryman",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 210,
    "bf": 2347,
@@ -18266,6 +20626,32 @@
    "so": 369,
    "sv": 39,
    "w": 37,
+   "window_years": [
+    1975,
+    1976,
+    1979,
+    1980,
+    1981
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 45,
+   "bf": 504,
+   "er": 40,
+   "g": 46,
+   "gs": 11,
+   "h": 110,
+   "hbp": 4,
+   "hr": 6,
+   "ip": "119.0",
+   "ip_outs": 357,
+   "l": 8,
+   "r": 48,
+   "seasons": 5,
+   "so": 79,
+   "sv": 8,
+   "team_games": 754,
+   "w": 8,
    "window_years": [
     1975,
     1976,
@@ -18567,7 +20953,36 @@
     1994
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 6,
+   "AB": 628,
+   "BB": 47,
+   "CS": 12,
+   "G": 162,
+   "GIDP": 10,
+   "H": 176,
+   "HBP": 2,
+   "HR": 13,
+   "IBB": 4,
+   "PA": 682,
+   "R": 100,
+   "RBI": 66,
+   "SB": 64,
+   "SF": 4,
+   "SO": 85,
+   "team_line": "Montreal Expos",
+   "window_games": 672,
+   "window_years": [
+    1990,
+    1991,
+    1992,
+    1993,
+    1994
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -18864,7 +21279,36 @@
     2002
    ]
   },
+  "peak_bat_162": {
+   "2B": 38,
+   "3B": 6,
+   "AB": 616,
+   "BB": 61,
+   "CS": 13,
+   "G": 162,
+   "GIDP": 19,
+   "H": 201,
+   "HBP": 8,
+   "HR": 40,
+   "IBB": 22,
+   "PA": 689,
+   "R": 107,
+   "RBI": 119,
+   "SB": 23,
+   "SF": 4,
+   "SO": 79,
+   "team_line": "Montreal Expos",
+   "window_games": 793,
+   "window_years": [
+    1998,
+    1999,
+    2000,
+    2001,
+    2002
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -19170,7 +21614,36 @@
     1997
    ]
   },
+  "peak_bat_162": {
+   "2B": 39,
+   "3B": 2,
+   "AB": 614,
+   "BB": 46,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 16,
+   "H": 170,
+   "HBP": 7,
+   "HR": 12,
+   "IBB": 2,
+   "PA": 670,
+   "R": 81,
+   "RBI": 63,
+   "SB": 23,
+   "SF": 3,
+   "SO": 80,
+   "team_line": "Montreal Expos",
+   "window_games": 677,
+   "window_years": [
+    1993,
+    1994,
+    1995,
+    1996,
+    1997
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -19218,6 +21691,7 @@
   "id": "martide01",
   "name": "Dennis Martinez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 266,
    "bf": 4280,
@@ -19233,6 +21707,32 @@
    "so": 630,
    "sv": 0,
    "w": 66,
+   "window_years": [
+    1987,
+    1988,
+    1990,
+    1991,
+    1992
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 53,
+   "bf": 856,
+   "er": 64,
+   "g": 30,
+   "gs": 30,
+   "h": 180,
+   "hbp": 6,
+   "hr": 13,
+   "ip": "211.0",
+   "ip_outs": 633,
+   "l": 10,
+   "r": 76,
+   "seasons": 5,
+   "so": 126,
+   "sv": 0,
+   "team_games": 810,
+   "w": 13,
    "window_years": [
     1987,
     1988,
@@ -19288,6 +21788,7 @@
   "id": "martipe02",
   "name": "Pedro Martinez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 248,
    "bf": 3216,
@@ -19303,6 +21804,31 @@
    "so": 843,
    "sv": 1,
    "w": 55,
+   "window_years": [
+    1994,
+    1995,
+    1996,
+    1997
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 69,
+   "bf": 895,
+   "er": 75,
+   "g": 33,
+   "gs": 33,
+   "h": 173,
+   "hbp": 9,
+   "hr": 19,
+   "ip": "222.0",
+   "ip_outs": 666,
+   "l": 9,
+   "r": 84,
+   "seasons": 4,
+   "so": 235,
+   "sv": 0,
+   "team_games": 582,
+   "w": 15,
    "window_years": [
     1994,
     1995,
@@ -19360,6 +21886,7 @@
   "id": "mcgafan01",
   "name": "Andy McGaffigan",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 179,
    "bf": 1992,
@@ -19375,6 +21902,32 @@
    "so": 354,
    "sv": 21,
    "w": 27,
+   "window_years": [
+    1984,
+    1986,
+    1987,
+    1988,
+    1989
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 36,
+   "bf": 399,
+   "er": 31,
+   "g": 52,
+   "gs": 3,
+   "h": 85,
+   "hbp": 2,
+   "hr": 5,
+   "ip": "95.1",
+   "ip_outs": 286,
+   "l": 3,
+   "r": 34,
+   "seasons": 5,
+   "so": 71,
+   "sv": 4,
+   "team_games": 809,
+   "w": 5,
    "window_years": [
     1984,
     1986,
@@ -19694,7 +22247,36 @@
     1987
    ]
   },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 10,
+   "AB": 626,
+   "BB": 93,
+   "CS": 10,
+   "G": 162,
+   "GIDP": 9,
+   "H": 199,
+   "HBP": 3,
+   "HR": 12,
+   "IBB": 14,
+   "PA": 725,
+   "R": 122,
+   "RBI": 65,
+   "SB": 76,
+   "SF": 4,
+   "SO": 67,
+   "team_line": "Montreal Expos",
+   "window_games": 756,
+   "window_years": [
+    1983,
+    1984,
+    1985,
+    1986,
+    1987
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -19742,6 +22324,7 @@
   "id": "reardje01",
   "name": "Jeff Reardon",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 152,
    "bf": 1721,
@@ -19757,6 +22340,32 @@
    "so": 331,
    "sv": 117,
    "w": 25,
+   "window_years": [
+    1981,
+    1982,
+    1983,
+    1984,
+    1985
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 33,
+   "bf": 369,
+   "er": 26,
+   "g": 64,
+   "gs": 0,
+   "h": 71,
+   "hbp": 2,
+   "hr": 6,
+   "ip": "89.2",
+   "ip_outs": 269,
+   "l": 6,
+   "r": 28,
+   "seasons": 5,
+   "so": 71,
+   "sv": 25,
+   "team_games": 755,
+   "w": 5,
    "window_years": [
     1981,
     1982,
@@ -19814,6 +22423,7 @@
   "id": "rogerst01",
   "name": "Steve Rogers",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 337,
    "bf": 4787,
@@ -19829,6 +22439,32 @@
    "so": 718,
    "sv": 1,
    "w": 72,
+   "window_years": [
+    1973,
+    1977,
+    1978,
+    1979,
+    1982
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 68,
+   "bf": 960,
+   "er": 69,
+   "g": 32,
+   "gs": 32,
+   "h": 206,
+   "hbp": 4,
+   "hr": 12,
+   "ip": "236.2",
+   "ip_outs": 710,
+   "l": 10,
+   "r": 79,
+   "seasons": 5,
+   "so": 144,
+   "sv": 0,
+   "team_games": 808,
+   "w": 14,
    "window_years": [
     1973,
     1977,
@@ -19887,6 +22523,7 @@
   "id": "rojasme01",
   "name": "Mel Rojas",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 137,
    "bf": 1617,
@@ -19902,6 +22539,32 @@
    "so": 320,
    "sv": 73,
    "w": 25,
+   "window_years": [
+    1990,
+    1992,
+    1993,
+    1994,
+    1996
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 29,
+   "bf": 343,
+   "er": 26,
+   "g": 61,
+   "gs": 0,
+   "h": 66,
+   "hbp": 3,
+   "hr": 6,
+   "ip": "83.2",
+   "ip_outs": 251,
+   "l": 3,
+   "r": 29,
+   "seasons": 5,
+   "so": 68,
+   "sv": 15,
+   "team_games": 763,
+   "w": 5,
    "window_years": [
     1990,
     1992,
@@ -20203,7 +22866,33 @@
     2004
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 3,
+   "AB": 514,
+   "BB": 53,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 13,
+   "H": 126,
+   "HBP": 3,
+   "HR": 14,
+   "IBB": 12,
+   "PA": 573,
+   "R": 49,
+   "RBI": 63,
+   "SB": 0,
+   "SF": 3,
+   "SO": 92,
+   "team_line": "Montreal Expos",
+   "window_games": 243,
+   "window_years": [
+    2003,
+    2004
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -20253,6 +22942,7 @@
   "id": "smithbr01",
   "name": "Bryn Smith",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 221,
    "bf": 3932,
@@ -20268,6 +22958,32 @@
    "so": 580,
    "sv": 3,
    "w": 58,
+   "window_years": [
+    1983,
+    1984,
+    1985,
+    1988,
+    1989
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 44,
+   "bf": 786,
+   "er": 63,
+   "g": 35,
+   "gs": 27,
+   "h": 174,
+   "hbp": 5,
+   "hr": 14,
+   "ip": "194.0",
+   "ip_outs": 582,
+   "l": 10,
+   "r": 73,
+   "seasons": 5,
+   "so": 116,
+   "sv": 1,
+   "team_games": 810,
+   "w": 12,
    "window_years": [
     1983,
     1984,
@@ -20596,7 +23312,36 @@
     1982
    ]
   },
+  "peak_bat_162": {
+   "2B": 24,
+   "3B": 4,
+   "AB": 542,
+   "BB": 64,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 15,
+   "H": 134,
+   "HBP": 1,
+   "HR": 6,
+   "IBB": 13,
+   "PA": 610,
+   "R": 50,
+   "RBI": 49,
+   "SB": 1,
+   "SF": 3,
+   "SO": 72,
+   "team_line": "Montreal Expos",
+   "window_games": 686,
+   "window_years": [
+    1977,
+    1978,
+    1979,
+    1980,
+    1982
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -20891,7 +23636,34 @@
     1971
    ]
   },
+  "peak_bat_162": {
+   "2B": 28,
+   "3B": 6,
+   "AB": 579,
+   "BB": 100,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 14,
+   "H": 171,
+   "HBP": 7,
+   "HR": 26,
+   "IBB": 12,
+   "PA": 690,
+   "R": 95,
+   "RBI": 91,
+   "SB": 8,
+   "SF": 3,
+   "SO": 66,
+   "team_line": "Montreal Expos",
+   "window_games": 480,
+   "window_years": [
+    1969,
+    1970,
+    1971
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -20939,6 +23711,7 @@
   "id": "vazquja01",
   "name": "Javier Vazquez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 263,
    "bf": 4419,
@@ -20954,6 +23727,32 @@
    "so": 937,
    "sv": 0,
    "w": 59,
+   "window_years": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2003
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 53,
+   "bf": 884,
+   "er": 90,
+   "g": 32,
+   "gs": 32,
+   "h": 208,
+   "hbp": 4,
+   "hr": 25,
+   "ip": "211.1",
+   "ip_outs": 634,
+   "l": 11,
+   "r": 100,
+   "seasons": 5,
+   "so": 187,
+   "sv": 0,
+   "team_games": 810,
+   "w": 12,
    "window_years": [
     1999,
     2000,
@@ -21258,7 +24057,36 @@
     2003
    ]
   },
+  "peak_bat_162": {
+   "2B": 47,
+   "3B": 2,
+   "AB": 613,
+   "BB": 54,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 17,
+   "H": 194,
+   "HBP": 6,
+   "HR": 19,
+   "IBB": 3,
+   "PA": 677,
+   "R": 98,
+   "RBI": 85,
+   "SB": 3,
+   "SF": 4,
+   "SO": 66,
+   "team_line": "Montreal Expos",
+   "window_games": 713,
+   "window_years": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2003
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -21555,7 +24383,36 @@
     1994
    ]
   },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 4,
+   "AB": 574,
+   "BB": 64,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 10,
+   "H": 163,
+   "HBP": 6,
+   "HR": 25,
+   "IBB": 10,
+   "PA": 651,
+   "R": 90,
+   "RBI": 94,
+   "SB": 24,
+   "SF": 6,
+   "SO": 114,
+   "team_line": "Montreal Expos",
+   "window_games": 654,
+   "window_years": [
+    1990,
+    1991,
+    1992,
+    1993,
+    1994
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -21882,7 +24739,36 @@
     1990
    ]
   },
+  "peak_bat_162": {
+   "2B": 38,
+   "3B": 3,
+   "AB": 615,
+   "BB": 47,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 13,
+   "H": 173,
+   "HBP": 4,
+   "HR": 22,
+   "IBB": 8,
+   "PA": 673,
+   "R": 78,
+   "RBI": 96,
+   "SB": 5,
+   "SF": 6,
+   "SO": 91,
+   "team_line": "Montreal Expos",
+   "window_games": 782,
+   "window_years": [
+    1982,
+    1983,
+    1987,
+    1989,
+    1990
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -21933,6 +24819,7 @@
   "id": "wettejo01",
   "name": "John Wetteland",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 85,
    "bf": 952,
@@ -21948,6 +24835,30 @@
    "so": 280,
    "sv": 105,
    "w": 17,
+   "window_years": [
+    1992,
+    1993,
+    1994
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 31,
+   "bf": 351,
+   "er": 22,
+   "g": 70,
+   "gs": 0,
+   "h": 62,
+   "hbp": 3,
+   "hr": 5,
+   "ip": "85.2",
+   "ip_outs": 257,
+   "l": 5,
+   "r": 24,
+   "seasons": 3,
+   "so": 103,
+   "sv": 39,
+   "team_games": 439,
+   "w": 6,
    "window_years": [
     1992,
     1993,
@@ -22265,7 +25176,36 @@
     1914
    ]
   },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 16,
+   "AB": 619,
+   "BB": 51,
+   "CS": 10,
+   "G": 162,
+   "GIDP": 0,
+   "H": 204,
+   "HBP": 6,
+   "HR": 10,
+   "IBB": 0,
+   "PA": 675,
+   "R": 106,
+   "RBI": 117,
+   "SB": 33,
+   "SF": 0,
+   "SO": 42,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 744,
+   "window_years": [
+    1909,
+    1911,
+    1912,
+    1913,
+    1914
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -22568,7 +25508,36 @@
     1914
    ]
   },
+  "peak_bat_162": {
+   "2B": 21,
+   "3B": 6,
+   "AB": 551,
+   "BB": 55,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 0,
+   "H": 143,
+   "HBP": 7,
+   "HR": 2,
+   "IBB": 0,
+   "PA": 614,
+   "R": 78,
+   "RBI": 72,
+   "SB": 24,
+   "SF": 0,
+   "SO": 49,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 686,
+   "window_years": [
+    1910,
+    1911,
+    1912,
+    1913,
+    1914
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -22619,6 +25588,7 @@
   "id": "bendech01",
   "name": "Chief Bender",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 243,
    "bf": 4565,
@@ -22634,6 +25604,32 @@
    "so": 677,
    "sv": 20,
    "w": 95,
+   "window_years": [
+    1907,
+    1909,
+    1910,
+    1911,
+    1913
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 52,
+   "bf": 969,
+   "er": 53,
+   "g": 37,
+   "gs": 27,
+   "h": 206,
+   "hbp": 5,
+   "hr": 1,
+   "ip": "249.0",
+   "ip_outs": 747,
+   "l": 8,
+   "r": 73,
+   "seasons": 5,
+   "so": 144,
+   "sv": 4,
+   "team_games": 763,
+   "w": 20,
    "window_years": [
     1907,
     1909,
@@ -22692,6 +25688,7 @@
   "id": "berryjo03",
   "name": "Joe Berry",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 61,
    "bf": 982,
@@ -22707,6 +25704,29 @@
    "so": 95,
    "sv": 17,
    "w": 18,
+   "window_years": [
+    1944,
+    1945
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 32,
+   "bf": 517,
+   "er": 31,
+   "g": 55,
+   "gs": 0,
+   "h": 101,
+   "hbp": 1,
+   "hr": 5,
+   "ip": "127.0",
+   "ip_outs": 381,
+   "l": 8,
+   "r": 38,
+   "seasons": 2,
+   "so": 50,
+   "sv": 9,
+   "team_games": 308,
+   "w": 9,
    "window_years": [
     1944,
     1945
@@ -23038,7 +26058,36 @@
     1933
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 6,
+   "AB": 583,
+   "BB": 146,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 0,
+   "H": 162,
+   "HBP": 4,
+   "HR": 7,
+   "IBB": 0,
+   "PA": 734,
+   "R": 133,
+   "RBI": 52,
+   "SB": 4,
+   "SF": 0,
+   "SO": 61,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 632,
+   "window_years": [
+    1928,
+    1929,
+    1930,
+    1931,
+    1933
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -23089,6 +26138,7 @@
   "id": "chrisru01",
   "name": "Russ Christopher",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 328,
    "bf": 3472,
@@ -23104,6 +26154,32 @@
    "so": 331,
    "sv": 18,
    "w": 46,
+   "window_years": [
+    1942,
+    1943,
+    1944,
+    1945,
+    1947
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 69,
+   "bf": 728,
+   "er": 62,
+   "g": 35,
+   "gs": 18,
+   "h": 159,
+   "hbp": 5,
+   "hr": 6,
+   "ip": "172.0",
+   "ip_outs": 516,
+   "l": 12,
+   "r": 73,
+   "seasons": 5,
+   "so": 69,
+   "sv": 4,
+   "team_games": 773,
+   "w": 10,
    "window_years": [
     1942,
     1943,
@@ -23438,7 +26514,36 @@
     1933
    ]
   },
+  "peak_bat_162": {
+   "2B": 43,
+   "3B": 7,
+   "AB": 594,
+   "BB": 95,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 0,
+   "H": 196,
+   "HBP": 3,
+   "HR": 18,
+   "IBB": 0,
+   "PA": 693,
+   "R": 131,
+   "RBI": 109,
+   "SB": 5,
+   "SF": 0,
+   "SO": 22,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 656,
+   "window_years": [
+    1929,
+    1930,
+    1931,
+    1932,
+    1933
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -23738,7 +26843,36 @@
     1914
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 13,
+   "AB": 588,
+   "BB": 84,
+   "CS": 11,
+   "G": 162,
+   "GIDP": 0,
+   "H": 201,
+   "HBP": 5,
+   "HR": 2,
+   "IBB": 0,
+   "PA": 677,
+   "R": 121,
+   "RBI": 77,
+   "SB": 68,
+   "SF": 0,
+   "SO": 37,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 759,
+   "window_years": [
+    1909,
+    1910,
+    1912,
+    1913,
+    1914
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -23789,6 +26923,7 @@
   "id": "coombja01",
   "name": "Jack Coombs",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 414,
    "bf": 4538,
@@ -23804,6 +26939,32 @@
    "so": 611,
    "sv": 4,
    "w": 81,
+   "window_years": [
+    1906,
+    1908,
+    1909,
+    1910,
+    1912
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 87,
+   "bf": 958,
+   "er": 60,
+   "g": 35,
+   "gs": 27,
+   "h": 191,
+   "hbp": 7,
+   "hr": 1,
+   "ip": "242.1",
+   "ip_outs": 727,
+   "l": 10,
+   "r": 81,
+   "seasons": 5,
+   "so": 129,
+   "sv": 1,
+   "team_games": 767,
+   "w": 17,
    "window_years": [
     1906,
     1908,
@@ -24108,7 +27269,36 @@
     1932
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 9,
+   "AB": 606,
+   "BB": 66,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 0,
+   "H": 168,
+   "HBP": 10,
+   "HR": 11,
+   "IBB": 0,
+   "PA": 683,
+   "R": 90,
+   "RBI": 73,
+   "SB": 7,
+   "SF": 0,
+   "SO": 81,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 717,
+   "window_years": [
+    1920,
+    1921,
+    1922,
+    1925,
+    1932
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -24156,6 +27346,7 @@
   "id": "earnsge01",
   "name": "George Earnshaw",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 533,
    "bf": 5398,
@@ -24171,6 +27362,32 @@
    "so": 720,
    "sv": 10,
    "w": 93,
+   "window_years": [
+    1928,
+    1929,
+    1930,
+    1931,
+    1932
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 113,
+   "bf": 1143,
+   "er": 117,
+   "g": 42,
+   "gs": 33,
+   "h": 252,
+   "hbp": 3,
+   "hr": 17,
+   "ip": "261.2",
+   "ip_outs": 785,
+   "l": 10,
+   "r": 133,
+   "seasons": 5,
+   "so": 152,
+   "sv": 2,
+   "team_games": 765,
+   "w": 20,
    "window_years": [
     1928,
     1929,
@@ -24490,7 +27707,36 @@
     1952
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 5,
+   "AB": 572,
+   "BB": 130,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 19,
+   "H": 165,
+   "HBP": 2,
+   "HR": 6,
+   "IBB": 0,
+   "PA": 703,
+   "R": 88,
+   "RBI": 84,
+   "SB": 7,
+   "SF": 0,
+   "SO": 39,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 727,
+   "window_years": [
+    1947,
+    1948,
+    1949,
+    1950,
+    1952
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -24778,7 +28024,36 @@
     1935
    ]
   },
+  "peak_bat_162": {
+   "2B": 35,
+   "3B": 9,
+   "AB": 601,
+   "BB": 114,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 0,
+   "H": 209,
+   "HBP": 0,
+   "HR": 48,
+   "IBB": 0,
+   "PA": 716,
+   "R": 138,
+   "RBI": 158,
+   "SB": 6,
+   "SF": 0,
+   "SO": 92,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 753,
+   "window_years": [
+    1930,
+    1932,
+    1933,
+    1934,
+    1935
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -24828,6 +28103,7 @@
   "id": "grovele01",
   "name": "Lefty Grove",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 383,
    "bf": 5798,
@@ -24843,6 +28119,32 @@
    "so": 936,
    "sv": 31,
    "w": 117,
+   "window_years": [
+    1926,
+    1929,
+    1930,
+    1931,
+    1932
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 81,
+   "bf": 1233,
+   "er": 85,
+   "g": 47,
+   "gs": 34,
+   "h": 276,
+   "hbp": 3,
+   "hr": 10,
+   "ip": "298.2",
+   "ip_outs": 896,
+   "l": 8,
+   "r": 104,
+   "seasons": 5,
+   "so": 199,
+   "sv": 7,
+   "team_games": 762,
+   "w": 25,
    "window_years": [
     1926,
     1929,
@@ -25177,7 +28479,36 @@
     1942
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 8,
+   "AB": 605,
+   "BB": 96,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 10,
+   "H": 183,
+   "HBP": 2,
+   "HR": 25,
+   "IBB": 0,
+   "PA": 703,
+   "R": 110,
+   "RBI": 113,
+   "SB": 8,
+   "SF": 0,
+   "SO": 75,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 747,
+   "window_years": [
+    1935,
+    1938,
+    1939,
+    1941,
+    1942
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -25501,7 +28832,36 @@
     1952
    ]
   },
+  "peak_bat_162": {
+   "2B": 28,
+   "3B": 4,
+   "AB": 603,
+   "BB": 138,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 6,
+   "H": 151,
+   "HBP": 5,
+   "HR": 21,
+   "IBB": 0,
+   "PA": 746,
+   "R": 114,
+   "RBI": 80,
+   "SB": 6,
+   "SF": 0,
+   "SO": 100,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 716,
+   "window_years": [
+    1947,
+    1948,
+    1949,
+    1951,
+    1952
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -25789,7 +29149,36 @@
     1941
    ]
   },
+  "peak_bat_162": {
+   "2B": 43,
+   "3B": 10,
+   "AB": 648,
+   "BB": 72,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 2,
+   "H": 206,
+   "HBP": 1,
+   "HR": 12,
+   "IBB": 0,
+   "PA": 721,
+   "R": 108,
+   "RBI": 66,
+   "SB": 10,
+   "SF": 0,
+   "SO": 40,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 700,
+   "window_years": [
+    1936,
+    1937,
+    1938,
+    1940,
+    1941
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -26092,7 +29481,36 @@
     1911
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 14,
+   "AB": 590,
+   "BB": 39,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 0,
+   "H": 174,
+   "HBP": 6,
+   "HR": 6,
+   "IBB": 0,
+   "PA": 636,
+   "R": 84,
+   "RBI": 76,
+   "SB": 23,
+   "SF": 0,
+   "SO": 33,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 742,
+   "window_years": [
+    1904,
+    1905,
+    1909,
+    1910,
+    1911
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -26140,6 +29558,7 @@
   "id": "planked01",
   "name": "Eddie Plank",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 373,
    "bf": 5939,
@@ -26155,6 +29574,32 @@
    "so": 768,
    "sv": 6,
    "w": 117,
+   "window_years": [
+    1903,
+    1904,
+    1909,
+    1911,
+    1912
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 81,
+   "bf": 1283,
+   "er": 76,
+   "g": 43,
+   "gs": 38,
+   "h": 284,
+   "hbp": 15,
+   "hr": 2,
+   "ip": "318.2",
+   "ip_outs": 956,
+   "l": 12,
+   "r": 105,
+   "seasons": 5,
+   "so": 166,
+   "sv": 1,
+   "team_games": 750,
+   "w": 25,
    "window_years": [
     1903,
     1904,
@@ -26213,6 +29658,7 @@
   "id": "quinnja01",
   "name": "Jack Quinn",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 168,
    "bf": 3528,
@@ -26228,6 +29674,32 @@
    "so": 213,
    "sv": 11,
    "w": 63,
+   "window_years": [
+    1926,
+    1927,
+    1928,
+    1929,
+    1930
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 36,
+   "bf": 749,
+   "er": 68,
+   "g": 35,
+   "gs": 21,
+   "h": 198,
+   "hbp": 4,
+   "hr": 6,
+   "ip": "175.2",
+   "ip_outs": 527,
+   "l": 9,
+   "r": 82,
+   "seasons": 5,
+   "so": 45,
+   "sv": 2,
+   "team_games": 763,
+   "w": 13,
    "window_years": [
     1926,
     1927,
@@ -26283,6 +29755,7 @@
   "id": "rommeed01",
   "name": "Eddie Rommel",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 363,
    "bf": 5283,
@@ -26298,6 +29771,32 @@
    "so": 292,
    "sv": 11,
    "w": 84,
+   "window_years": [
+    1920,
+    1922,
+    1923,
+    1925,
+    1926
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 77,
+   "bf": 1116,
+   "er": 95,
+   "g": 48,
+   "gs": 27,
+   "h": 269,
+   "hbp": 4,
+   "hr": 13,
+   "ip": "263.0",
+   "ip_outs": 789,
+   "l": 13,
+   "r": 117,
+   "seasons": 5,
+   "so": 62,
+   "sv": 2,
+   "team_games": 767,
+   "w": 18,
    "window_years": [
     1920,
     1922,
@@ -26601,7 +30100,35 @@
     1917
    ]
   },
+  "peak_bat_162": {
+   "2B": 18,
+   "3B": 13,
+   "AB": 474,
+   "BB": 59,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 0,
+   "H": 128,
+   "HBP": 15,
+   "HR": 5,
+   "IBB": 0,
+   "PA": 549,
+   "R": 68,
+   "RBI": 59,
+   "SB": 16,
+   "SF": 0,
+   "SO": 53,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 451,
+   "window_years": [
+    1914,
+    1915,
+    1916,
+    1917
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -26898,7 +30425,36 @@
     1932
    ]
   },
+  "peak_bat_162": {
+   "2B": 45,
+   "3B": 12,
+   "AB": 670,
+   "BB": 44,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 0,
+   "H": 240,
+   "HBP": 1,
+   "HR": 33,
+   "IBB": 0,
+   "PA": 716,
+   "R": 137,
+   "RBI": 157,
+   "SB": 8,
+   "SF": 0,
+   "SO": 52,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 735,
+   "window_years": [
+    1925,
+    1926,
+    1929,
+    1930,
+    1932
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -27192,7 +30748,36 @@
     1917
    ]
   },
+  "peak_bat_162": {
+   "2B": 27,
+   "3B": 11,
+   "AB": 573,
+   "BB": 71,
+   "CS": 19,
+   "G": 162,
+   "GIDP": 0,
+   "H": 168,
+   "HBP": 2,
+   "HR": 2,
+   "IBB": 0,
+   "PA": 646,
+   "R": 83,
+   "RBI": 59,
+   "SB": 26,
+   "SF": 0,
+   "SO": 58,
+   "team_line": "Philadelphia Athletics",
+   "window_games": 674,
+   "window_years": [
+    1912,
+    1914,
+    1915,
+    1916,
+    1917
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -27240,6 +30825,7 @@
   "id": "wadderu01",
   "name": "Rube Waddell",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 422,
    "bf": 6211,
@@ -27255,6 +30841,32 @@
    "so": 1344,
    "sv": 0,
    "w": 112,
+   "window_years": [
+    1902,
+    1903,
+    1904,
+    1905,
+    1906
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 94,
+   "bf": 1378,
+   "er": 76,
+   "g": 46,
+   "gs": 40,
+   "h": 279,
+   "hbp": 12,
+   "hr": 5,
+   "ip": "351.2",
+   "ip_outs": 1055,
+   "l": 15,
+   "r": 107,
+   "seasons": 5,
+   "so": 298,
+   "sv": 0,
+   "team_games": 730,
+   "w": 25,
    "window_years": [
     1902,
     1903,
@@ -27310,6 +30922,7 @@
   "id": "walberu01",
   "name": "Rube Walberg",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 409,
    "bf": 4862,
@@ -27325,6 +30938,32 @@
    "so": 466,
    "sv": 17,
    "w": 75,
+   "window_years": [
+    1925,
+    1926,
+    1928,
+    1929,
+    1931
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 87,
+   "bf": 1036,
+   "er": 97,
+   "g": 46,
+   "gs": 29,
+   "h": 246,
+   "hbp": 2,
+   "hr": 15,
+   "ip": "242.1",
+   "ip_outs": 727,
+   "l": 13,
+   "r": 112,
+   "seasons": 5,
+   "so": 99,
+   "sv": 4,
+   "team_games": 760,
+   "w": 16,
    "window_years": [
     1925,
     1926,
@@ -27383,6 +31022,7 @@
   "id": "beckro01",
   "name": "Rod Beck",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 59,
    "bf": 1397,
@@ -27398,6 +31038,32 @@
    "so": 313,
    "sv": 165,
    "w": 15,
+   "window_years": [
+    1992,
+    1993,
+    1994,
+    1996,
+    1997
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 13,
+   "bf": 297,
+   "er": 22,
+   "g": 69,
+   "gs": 0,
+   "h": 62,
+   "hbp": 2,
+   "hr": 9,
+   "ip": "74.2",
+   "ip_outs": 224,
+   "l": 4,
+   "r": 24,
+   "seasons": 5,
+   "so": 66,
+   "sv": 35,
+   "team_games": 763,
+   "w": 3,
    "window_years": [
     1992,
     1993,
@@ -27696,7 +31362,36 @@
     2004
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 3,
+   "AB": 492,
+   "BB": 188,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 8,
+   "H": 166,
+   "HBP": 6,
+   "HR": 54,
+   "IBB": 63,
+   "PA": 691,
+   "R": 133,
+   "RBI": 128,
+   "SB": 21,
+   "SF": 4,
+   "SO": 72,
+   "team_line": "San Francisco Giants",
+   "window_games": 760,
+   "window_years": [
+    1993,
+    1996,
+    2001,
+    2002,
+    2004
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -28020,7 +31715,36 @@
     1973
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 6,
+   "AB": 656,
+   "BB": 76,
+   "CS": 9,
+   "G": 162,
+   "GIDP": 10,
+   "H": 183,
+   "HBP": 5,
+   "HR": 32,
+   "IBB": 6,
+   "PA": 742,
+   "R": 127,
+   "RBI": 92,
+   "SB": 43,
+   "SF": 4,
+   "SO": 165,
+   "team_line": "San Francisco Giants",
+   "window_games": 783,
+   "window_years": [
+    1969,
+    1970,
+    1971,
+    1972,
+    1973
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -28334,7 +32058,36 @@
     1987
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 1,
+   "AB": 514,
+   "BB": 65,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 10,
+   "H": 130,
+   "HBP": 3,
+   "HR": 20,
+   "IBB": 7,
+   "PA": 587,
+   "R": 66,
+   "RBI": 70,
+   "SB": 9,
+   "SF": 5,
+   "SO": 85,
+   "team_line": "San Francisco Giants",
+   "window_games": 654,
+   "window_years": [
+    1983,
+    1984,
+    1985,
+    1986,
+    1987
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -28655,7 +32408,36 @@
     1991
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 7,
+   "AB": 599,
+   "BB": 70,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 6,
+   "H": 182,
+   "HBP": 4,
+   "HR": 28,
+   "IBB": 15,
+   "PA": 681,
+   "R": 98,
+   "RBI": 109,
+   "SB": 7,
+   "SF": 8,
+   "SO": 109,
+   "team_line": "San Francisco Giants",
+   "window_games": 773,
+   "window_years": [
+    1987,
+    1988,
+    1989,
+    1990,
+    1991
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -28985,7 +32767,36 @@
     1983
    ]
   },
+  "peak_bat_162": {
+   "2B": 26,
+   "3B": 2,
+   "AB": 569,
+   "BB": 94,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 8,
+   "H": 147,
+   "HBP": 2,
+   "HR": 22,
+   "IBB": 11,
+   "PA": 671,
+   "R": 81,
+   "RBI": 79,
+   "SB": 8,
+   "SF": 6,
+   "SO": 76,
+   "team_line": "San Francisco Giants",
+   "window_games": 756,
+   "window_years": [
+    1978,
+    1979,
+    1980,
+    1982,
+    1983
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -29279,7 +33090,36 @@
     1917
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 9,
+   "AB": 615,
+   "BB": 20,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 0,
+   "H": 170,
+   "HBP": 17,
+   "HR": 4,
+   "IBB": 0,
+   "PA": 652,
+   "R": 74,
+   "RBI": 80,
+   "SB": 20,
+   "SF": 0,
+   "SO": 40,
+   "team_line": "San Francisco Giants",
+   "window_games": 704,
+   "window_years": [
+    1913,
+    1914,
+    1915,
+    1916,
+    1917
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -29594,7 +33434,36 @@
     1926
    ]
   },
+  "peak_bat_162": {
+   "2B": 32,
+   "3B": 13,
+   "AB": 661,
+   "BB": 51,
+   "CS": 12,
+   "G": 162,
+   "GIDP": 0,
+   "H": 220,
+   "HBP": 2,
+   "HR": 8,
+   "IBB": 0,
+   "PA": 714,
+   "R": 121,
+   "RBI": 85,
+   "SB": 35,
+   "SF": 0,
+   "SO": 21,
+   "team_line": "San Francisco Giants",
+   "window_games": 716,
+   "window_years": [
+    1921,
+    1922,
+    1923,
+    1924,
+    1926
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -29669,6 +33538,7 @@
   "id": "garcija01",
   "name": "Santiago Casilla",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 113,
    "bf": 1134,
@@ -29684,6 +33554,32 @@
    "so": 239,
    "sv": 54,
    "w": 26,
+   "window_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 23,
+   "bf": 227,
+   "er": 13,
+   "g": 57,
+   "gs": 0,
+   "h": 40,
+   "hbp": 3,
+   "hr": 3,
+   "ip": "55.2",
+   "ip_outs": 167,
+   "l": 3,
+   "r": 15,
+   "seasons": 5,
+   "so": 48,
+   "sv": 11,
+   "team_games": 810,
+   "w": 5,
    "window_years": [
     2010,
     2011,
@@ -29742,6 +33638,7 @@
   "id": "hubbeca01",
   "name": "Carl Hubbell",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 248,
    "bf": 5824,
@@ -29757,6 +33654,32 @@
    "so": 689,
    "sv": 21,
    "w": 102,
+   "window_years": [
+    1931,
+    1932,
+    1933,
+    1934,
+    1936
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 52,
+   "bf": 1225,
+   "er": 77,
+   "g": 45,
+   "gs": 34,
+   "h": 269,
+   "hbp": 4,
+   "hr": 13,
+   "ip": "306.2",
+   "ip_outs": 920,
+   "l": 11,
+   "r": 91,
+   "seasons": 5,
+   "so": 145,
+   "sv": 4,
+   "team_games": 770,
+   "w": 21,
    "window_years": [
     1931,
     1932,
@@ -30087,7 +34010,36 @@
     2002
    ]
   },
+  "peak_bat_162": {
+   "2B": 44,
+   "3B": 4,
+   "AB": 621,
+   "BB": 64,
+   "CS": 5,
+   "G": 162,
+   "GIDP": 17,
+   "H": 186,
+   "HBP": 10,
+   "HR": 32,
+   "IBB": 5,
+   "PA": 705,
+   "R": 103,
+   "RBI": 125,
+   "SB": 9,
+   "SF": 10,
+   "SO": 116,
+   "team_line": "San Francisco Giants",
+   "window_games": 762,
+   "window_years": [
+    1997,
+    1998,
+    2000,
+    2001,
+    2002
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -30165,6 +34117,7 @@
   "id": "lavelga01",
   "name": "Gary Lavelle",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 179,
    "bf": 2151,
@@ -30180,6 +34133,32 @@
    "so": 388,
    "sv": 80,
    "w": 41,
+   "window_years": [
+    1976,
+    1977,
+    1979,
+    1982,
+    1983
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 36,
+   "bf": 430,
+   "er": 29,
+   "g": 66,
+   "gs": 0,
+   "h": 93,
+   "hbp": 1,
+   "hr": 5,
+   "ip": "103.1",
+   "ip_outs": 310,
+   "l": 7,
+   "r": 34,
+   "seasons": 5,
+   "so": 78,
+   "sv": 16,
+   "team_games": 810,
+   "w": 8,
    "window_years": [
     1976,
     1977,
@@ -30238,6 +34217,7 @@
   "id": "linceti01",
   "name": "Tim Lincecum",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 379,
    "bf": 4248,
@@ -30253,6 +34233,32 @@
    "so": 1127,
    "sv": 0,
    "w": 69,
+   "window_years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 76,
+   "bf": 850,
+   "er": 68,
+   "g": 31,
+   "gs": 31,
+   "h": 168,
+   "hbp": 5,
+   "hr": 13,
+   "ip": "205.2",
+   "ip_outs": 617,
+   "l": 8,
+   "r": 74,
+   "seasons": 5,
+   "so": 225,
+   "sv": 0,
+   "team_games": 810,
+   "w": 14,
    "window_years": [
     2007,
     2008,
@@ -30330,6 +34336,7 @@
   "id": "lopezja02",
   "name": "Javier Lopez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 87,
    "bf": 850,
@@ -30345,6 +34352,32 @@
    "so": 153,
    "sv": 9,
    "w": 14,
+   "window_years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 17,
+   "bf": 170,
+   "er": 11,
+   "g": 70,
+   "gs": 0,
+   "h": 32,
+   "hbp": 1,
+   "hr": 1,
+   "ip": "41.0",
+   "ip_outs": 123,
+   "l": 1,
+   "r": 12,
+   "seasons": 5,
+   "so": 31,
+   "sv": 2,
+   "team_games": 810,
+   "w": 3,
    "window_years": [
     2011,
     2012,
@@ -30402,6 +34435,7 @@
   "id": "maricju01",
   "name": "Juan Marichal",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 249,
    "bf": 5868,
@@ -30417,6 +34451,32 @@
    "so": 1121,
    "sv": 1,
    "w": 114,
+   "window_years": [
+    1963,
+    1964,
+    1965,
+    1966,
+    1969
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 50,
+   "bf": 1174,
+   "er": 75,
+   "g": 37,
+   "gs": 36,
+   "h": 239,
+   "hbp": 4,
+   "hr": 24,
+   "ip": "298.2",
+   "ip_outs": 896,
+   "l": 9,
+   "r": 89,
+   "seasons": 5,
+   "so": 224,
+   "sv": 0,
+   "team_games": 810,
+   "w": 23,
    "window_years": [
     1963,
     1964,
@@ -30492,6 +34552,7 @@
   "id": "mathech01",
   "name": "Christy Mathewson",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 214,
    "bf": 6262,
@@ -30507,6 +34568,32 @@
    "so": 889,
    "sv": 17,
    "w": 142,
+   "window_years": [
+    1905,
+    1908,
+    1909,
+    1911,
+    1912
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 45,
+   "bf": 1304,
+   "er": 60,
+   "g": 47,
+   "gs": 39,
+   "h": 279,
+   "hbp": 1,
+   "hr": 5,
+   "ip": "337.2",
+   "ip_outs": 1013,
+   "l": 11,
+   "r": 91,
+   "seasons": 5,
+   "so": 185,
+   "sv": 4,
+   "team_games": 778,
+   "w": 30,
    "window_years": [
     1905,
     1908,
@@ -30834,7 +34921,36 @@
     1965
    ]
   },
+  "peak_bat_162": {
+   "2B": 26,
+   "3B": 8,
+   "AB": 605,
+   "BB": 79,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 14,
+   "H": 188,
+   "HBP": 2,
+   "HR": 49,
+   "IBB": 12,
+   "PA": 691,
+   "R": 125,
+   "RBI": 123,
+   "SB": 16,
+   "SF": 5,
+   "SO": 77,
+   "team_line": "San Francisco Giants",
+   "window_games": 785,
+   "window_years": [
+    1955,
+    1962,
+    1963,
+    1964,
+    1965
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -31155,7 +35271,36 @@
     1970
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 4,
+   "AB": 556,
+   "BB": 100,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 11,
+   "H": 162,
+   "HBP": 6,
+   "HR": 43,
+   "IBB": 24,
+   "PA": 667,
+   "R": 101,
+   "RBI": 117,
+   "SB": 1,
+   "SF": 5,
+   "SO": 96,
+   "team_line": "San Francisco Giants",
+   "window_games": 761,
+   "window_years": [
+    1963,
+    1965,
+    1968,
+    1969,
+    1970
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -31479,7 +35624,36 @@
     1949
    ]
   },
+  "peak_bat_162": {
+   "2B": 27,
+   "3B": 4,
+   "AB": 606,
+   "BB": 84,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 8,
+   "H": 181,
+   "HBP": 5,
+   "HR": 39,
+   "IBB": 0,
+   "PA": 696,
+   "R": 117,
+   "RBI": 125,
+   "SB": 3,
+   "SF": 0,
+   "SO": 40,
+   "team_line": "San Francisco Giants",
+   "window_games": 655,
+   "window_years": [
+    1942,
+    1946,
+    1947,
+    1948,
+    1949
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -31530,6 +35704,7 @@
   "id": "nenro01",
   "name": "Robb Nen",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 113,
    "bf": 1546,
@@ -31545,6 +35720,32 @@
    "so": 453,
    "sv": 206,
    "w": 24,
+   "window_years": [
+    1998,
+    1999,
+    2000,
+    2001,
+    2002
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 23,
+   "bf": 309,
+   "er": 20,
+   "g": 73,
+   "gs": 0,
+   "h": 59,
+   "hbp": 1,
+   "hr": 5,
+   "ip": "75.2",
+   "ip_outs": 227,
+   "l": 5,
+   "r": 24,
+   "seasons": 5,
+   "so": 90,
+   "sv": 41,
+   "team_games": 811,
+   "w": 5,
    "window_years": [
     1998,
     1999,
@@ -31871,7 +36072,36 @@
     1938
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 7,
+   "AB": 589,
+   "BB": 113,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 6,
+   "H": 190,
+   "HBP": 5,
+   "HR": 39,
+   "IBB": 0,
+   "PA": 707,
+   "R": 131,
+   "RBI": 141,
+   "SB": 4,
+   "SF": 0,
+   "SO": 45,
+   "team_line": "San Francisco Giants",
+   "window_games": 757,
+   "window_years": [
+    1929,
+    1932,
+    1934,
+    1936,
+    1938
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -31948,6 +36178,7 @@
   "id": "perryga01",
   "name": "Gaylord Perry",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 385,
    "bf": 6167,
@@ -31963,6 +36194,32 @@
    "so": 1008,
    "sv": 2,
    "w": 89,
+   "window_years": [
+    1967,
+    1968,
+    1969,
+    1970,
+    1971
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 77,
+   "bf": 1232,
+   "er": 91,
+   "g": 39,
+   "gs": 38,
+   "h": 261,
+   "hbp": 6,
+   "hr": 20,
+   "ip": "303.1",
+   "ip_outs": 910,
+   "l": 14,
+   "r": 112,
+   "seasons": 5,
+   "so": 201,
+   "sv": 0,
+   "team_games": 811,
+   "w": 18,
    "window_years": [
     1967,
     1968,
@@ -32296,7 +36553,36 @@
     2016
    ]
   },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 1,
+   "AB": 590,
+   "BB": 65,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 19,
+   "H": 183,
+   "HBP": 4,
+   "HR": 21,
+   "IBB": 8,
+   "PA": 668,
+   "R": 80,
+   "RBI": 96,
+   "SB": 2,
+   "SF": 9,
+   "SO": 78,
+   "team_line": "San Francisco Giants",
+   "window_games": 739,
+   "window_years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -32371,6 +36657,7 @@
   "id": "romose01",
   "name": "Sergio Romo",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 49,
    "bf": 1017,
@@ -32386,6 +36673,32 @@
    "so": 294,
    "sv": 53,
    "w": 20,
+   "window_years": [
+    2008,
+    2010,
+    2011,
+    2012,
+    2013
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 10,
+   "bf": 203,
+   "er": 12,
+   "g": 59,
+   "gs": 0,
+   "h": 36,
+   "hbp": 2,
+   "hr": 4,
+   "ip": "52.0",
+   "ip_outs": 156,
+   "l": 3,
+   "r": 14,
+   "seasons": 5,
+   "so": 59,
+   "sv": 11,
+   "team_games": 810,
+   "w": 4,
    "window_years": [
     2008,
     2010,
@@ -32464,6 +36777,7 @@
   "id": "wilheho01",
   "name": "Hoyt Wilhelm",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 269,
    "bf": 2582,
@@ -32479,6 +36793,32 @@
    "so": 385,
    "sv": 41,
    "w": 42,
+   "window_years": [
+    1952,
+    1953,
+    1954,
+    1955,
+    1956
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 57,
+   "bf": 543,
+   "er": 42,
+   "g": 67,
+   "gs": 0,
+   "h": 112,
+   "hbp": 4,
+   "hr": 10,
+   "ip": "127.2",
+   "ip_outs": 383,
+   "l": 5,
+   "r": 53,
+   "seasons": 5,
+   "so": 81,
+   "sv": 9,
+   "team_games": 771,
+   "w": 9,
    "window_years": [
     1952,
     1953,
@@ -32798,7 +37138,36 @@
     1994
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 4,
+   "AB": 622,
+   "BB": 37,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 14,
+   "H": 166,
+   "HBP": 6,
+   "HR": 38,
+   "IBB": 8,
+   "PA": 670,
+   "R": 89,
+   "RBI": 111,
+   "SB": 5,
+   "SF": 6,
+   "SO": 122,
+   "team_line": "San Francisco Giants",
+   "window_games": 719,
+   "window_years": [
+    1990,
+    1991,
+    1992,
+    1993,
+    1994
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -32876,6 +37245,7 @@
   "id": "adamja01",
   "name": "Jason Adam",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 53,
    "bf": 639,
@@ -32891,6 +37261,30 @@
    "so": 194,
    "sv": 24,
    "w": 10,
+   "window_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 18,
+   "bf": 213,
+   "er": 14,
+   "g": 57,
+   "gs": 0,
+   "h": 31,
+   "hbp": 6,
+   "hr": 5,
+   "ip": "55.0",
+   "ip_outs": 165,
+   "l": 2,
+   "r": 17,
+   "seasons": 3,
+   "so": 65,
+   "sv": 8,
+   "team_games": 486,
+   "w": 3,
    "window_years": [
     2022,
     2023,
@@ -33216,7 +37610,35 @@
     2024
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 3,
+   "AB": 599,
+   "BB": 67,
+   "CS": 12,
+   "G": 162,
+   "GIDP": 12,
+   "H": 152,
+   "HBP": 16,
+   "HR": 23,
+   "IBB": 2,
+   "PA": 687,
+   "R": 91,
+   "RBI": 83,
+   "SB": 27,
+   "SF": 4,
+   "SO": 173,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 545,
+   "window_years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -33534,7 +37956,34 @@
     2010
    ]
   },
+  "peak_bat_162": {
+   "2B": 33,
+   "3B": 5,
+   "AB": 576,
+   "BB": 49,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 8,
+   "H": 166,
+   "HBP": 8,
+   "HR": 8,
+   "IBB": 2,
+   "PA": 637,
+   "R": 85,
+   "RBI": 61,
+   "SB": 25,
+   "SF": 4,
+   "SO": 98,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 400,
+   "window_years": [
+    2008,
+    2009,
+    2010
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -33850,7 +38299,32 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 0,
+   "AB": 633,
+   "BB": 43,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 33,
+   "H": 167,
+   "HBP": 3,
+   "HR": 47,
+   "IBB": 1,
+   "PA": 687,
+   "R": 98,
+   "RBI": 116,
+   "SB": 7,
+   "SF": 7,
+   "SO": 131,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 154,
+   "window_years": [
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -33921,6 +38395,7 @@
   "id": "castidi01",
   "name": "Diego Castillo",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 36,
    "bf": 435,
@@ -33936,6 +38411,29 @@
    "so": 130,
    "sv": 22,
    "w": 7,
+   "window_years": [
+    2019,
+    2021
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 18,
+   "bf": 218,
+   "er": 19,
+   "g": 51,
+   "gs": 3,
+   "h": 43,
+   "hbp": 3,
+   "hr": 7,
+   "ip": "52.2",
+   "ip_outs": 158,
+   "l": 6,
+   "r": 23,
+   "seasons": 2,
+   "so": 65,
+   "sv": 11,
+   "team_games": 324,
+   "w": 4,
    "window_years": [
     2019,
     2021
@@ -34267,7 +38765,36 @@
     2010
    ]
   },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 15,
+   "AB": 648,
+   "BB": 41,
+   "CS": 12,
+   "G": 162,
+   "GIDP": 6,
+   "H": 196,
+   "HBP": 4,
+   "HR": 16,
+   "IBB": 2,
+   "PA": 699,
+   "R": 105,
+   "RBI": 78,
+   "SB": 57,
+   "SF": 5,
+   "SO": 95,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 769,
+   "window_years": [
+    2004,
+    2005,
+    2006,
+    2009,
+    2010
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -34592,7 +39119,36 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 1,
+   "AB": 602,
+   "BB": 74,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 14,
+   "H": 177,
+   "HBP": 6,
+   "HR": 19,
+   "IBB": 2,
+   "PA": 686,
+   "R": 84,
+   "RBI": 80,
+   "SB": 2,
+   "SF": 4,
+   "SO": 98,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 702,
+   "window_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -34663,6 +39219,7 @@
   "id": "fairbpe01",
   "name": "Pete Fairbanks",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 76,
    "bf": 802,
@@ -34678,6 +39235,31 @@
    "so": 227,
    "sv": 80,
    "w": 12,
+   "window_years": [
+    2021,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 19,
+   "bf": 201,
+   "er": 17,
+   "g": 51,
+   "gs": 0,
+   "h": 37,
+   "hbp": 2,
+   "hr": 4,
+   "ip": "48.1",
+   "ip_outs": 145,
+   "l": 5,
+   "r": 20,
+   "seasons": 4,
+   "so": 57,
+   "sv": 20,
+   "team_games": 648,
+   "w": 3,
    "window_years": [
     2021,
     2023,
@@ -35002,7 +39584,35 @@
     2005
    ]
   },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 0,
+   "AB": 563,
+   "BB": 28,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 22,
+   "H": 148,
+   "HBP": 6,
+   "HR": 11,
+   "IBB": 3,
+   "PA": 604,
+   "R": 52,
+   "RBI": 68,
+   "SB": 0,
+   "SF": 8,
+   "SO": 51,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 469,
+   "window_years": [
+    2002,
+    2003,
+    2004,
+    2005
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -35082,6 +39692,7 @@
   "id": "hernaro01",
   "name": "Roberto Hernandez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 97,
    "bf": 946,
@@ -35097,6 +39708,30 @@
    "so": 185,
    "sv": 101,
    "w": 8,
+   "window_years": [
+    1998,
+    1999,
+    2000
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 32,
+   "bf": 316,
+   "er": 28,
+   "g": 69,
+   "gs": 0,
+   "h": 66,
+   "hbp": 4,
+   "hr": 5,
+   "ip": "72.2",
+   "ip_outs": 218,
+   "l": 5,
+   "r": 31,
+   "seasons": 3,
+   "so": 62,
+   "sv": 34,
+   "team_games": 485,
+   "w": 3,
    "window_years": [
     1998,
     1999,
@@ -35153,6 +39788,7 @@
   "id": "howeljp01",
   "name": "J.P. Howell",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 112,
    "bf": 989,
@@ -35168,6 +39804,31 @@
    "so": 239,
    "sv": 21,
    "w": 16,
+   "window_years": [
+    2008,
+    2009,
+    2011,
+    2012
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 28,
+   "bf": 247,
+   "er": 20,
+   "g": 59,
+   "gs": 0,
+   "h": 45,
+   "hbp": 3,
+   "hr": 6,
+   "ip": "59.1",
+   "ip_outs": 178,
+   "l": 2,
+   "r": 23,
+   "seasons": 4,
+   "so": 60,
+   "sv": 5,
+   "team_games": 648,
+   "w": 4,
    "window_years": [
     2008,
     2009,
@@ -35247,6 +39908,7 @@
   "id": "kazmisc01",
   "name": "Scott Kazmir",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 361,
    "bf": 3460,
@@ -35262,6 +39924,32 @@
    "so": 833,
    "sv": 0,
    "w": 53,
+   "window_years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 72,
+   "bf": 692,
+   "er": 68,
+   "g": 27,
+   "gs": 27,
+   "h": 149,
+   "hbp": 6,
+   "hr": 17,
+   "ip": "160.0",
+   "ip_outs": 480,
+   "l": 8,
+   "r": 76,
+   "seasons": 5,
+   "so": 167,
+   "sv": 0,
+   "team_games": 810,
+   "w": 11,
    "window_years": [
     2005,
     2006,
@@ -35337,6 +40025,7 @@
   "id": "kellyke02",
   "name": "Kevin Kelly",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 33,
    "bf": 725,
@@ -35352,6 +40041,30 @@
    "so": 154,
    "sv": 2,
    "w": 12,
+   "window_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 11,
+   "bf": 242,
+   "er": 23,
+   "g": 55,
+   "gs": 0,
+   "h": 52,
+   "hbp": 5,
+   "hr": 7,
+   "ip": "59.0",
+   "ip_outs": 177,
+   "l": 3,
+   "r": 27,
+   "seasons": 3,
+   "so": 51,
+   "sv": 1,
+   "team_games": 486,
+   "w": 4,
    "window_years": [
     2023,
     2024,
@@ -35684,7 +40397,36 @@
     2019
    ]
   },
+  "peak_bat_162": {
+   "2B": 26,
+   "3B": 9,
+   "AB": 556,
+   "BB": 39,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 7,
+   "H": 142,
+   "HBP": 6,
+   "HR": 17,
+   "IBB": 2,
+   "PA": 604,
+   "R": 73,
+   "RBI": 56,
+   "SB": 22,
+   "SF": 2,
+   "SO": 121,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 591,
+   "window_years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2019
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -36012,7 +40754,36 @@
     2016
    ]
   },
+  "peak_bat_162": {
+   "2B": 40,
+   "3B": 3,
+   "AB": 621,
+   "BB": 64,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 18,
+   "H": 170,
+   "HBP": 6,
+   "HR": 30,
+   "IBB": 10,
+   "PA": 699,
+   "R": 92,
+   "RBI": 101,
+   "SB": 6,
+   "SF": 8,
+   "SO": 144,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 790,
+   "window_years": [
+    2009,
+    2010,
+    2013,
+    2014,
+    2016
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -36332,7 +41103,36 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 28,
+   "3B": 2,
+   "AB": 586,
+   "BB": 60,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 7,
+   "H": 146,
+   "HBP": 8,
+   "HR": 36,
+   "IBB": 2,
+   "PA": 657,
+   "R": 93,
+   "RBI": 100,
+   "SB": 8,
+   "SF": 4,
+   "SO": 184,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 581,
+   "window_years": [
+    2019,
+    2021,
+    2023,
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -36408,6 +41208,7 @@
   "id": "mcclasha01",
   "name": "Shane McClanahan",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 116,
    "bf": 1627,
@@ -36423,6 +41224,30 @@
    "so": 456,
    "sv": 0,
    "w": 33,
+   "window_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 39,
+   "bf": 542,
+   "er": 45,
+   "g": 25,
+   "gs": 25,
+   "h": 110,
+   "hbp": 2,
+   "hr": 16,
+   "ip": "135.0",
+   "ip_outs": 405,
+   "l": 5,
+   "r": 48,
+   "seasons": 3,
+   "so": 152,
+   "sv": 0,
+   "team_games": 486,
+   "w": 11,
    "window_years": [
     2021,
     2022,
@@ -36499,6 +41324,7 @@
   "id": "mcgeeja01",
   "name": "Jake McGee",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 57,
    "bf": 893,
@@ -36514,6 +41340,31 @@
    "so": 286,
    "sv": 26,
    "w": 16,
+   "window_years": [
+    2012,
+    2013,
+    2014,
+    2015
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 14,
+   "bf": 223,
+   "er": 16,
+   "g": 63,
+   "gs": 0,
+   "h": 40,
+   "hbp": 1,
+   "hr": 4,
+   "ip": "56.2",
+   "ip_outs": 170,
+   "l": 2,
+   "r": 17,
+   "seasons": 4,
+   "so": 71,
+   "sv": 6,
+   "team_games": 649,
+   "w": 4,
    "window_years": [
     2012,
     2013,
@@ -36868,7 +41719,36 @@
     2012
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 2,
+   "AB": 543,
+   "BB": 103,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 7,
+   "H": 125,
+   "HBP": 11,
+   "HR": 36,
+   "IBB": 8,
+   "PA": 663,
+   "R": 90,
+   "RBI": 104,
+   "SB": 3,
+   "SF": 6,
+   "SO": 181,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 726,
+   "window_years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2012
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -36944,6 +41824,7 @@
   "id": "priceda01",
   "name": "David Price",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 251,
    "bf": 4044,
@@ -36959,6 +41840,32 @@
    "so": 951,
    "sv": 0,
    "w": 72,
+   "window_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 50,
+   "bf": 808,
+   "er": 68,
+   "g": 29,
+   "gs": 29,
+   "h": 174,
+   "hbp": 5,
+   "hr": 18,
+   "ip": "200.0",
+   "ip_outs": 600,
+   "l": 8,
+   "r": 75,
+   "seasons": 5,
+   "so": 190,
+   "sv": 0,
+   "team_games": 811,
+   "w": 14,
    "window_years": [
     2010,
     2011,
@@ -37038,6 +41945,7 @@
   "id": "shielja02",
   "name": "James Shields",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 251,
    "bf": 4600,
@@ -37053,6 +41961,32 @@
    "so": 959,
    "sv": 0,
    "w": 68,
+   "window_years": [
+    2007,
+    2008,
+    2009,
+    2011,
+    2012
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 50,
+   "bf": 920,
+   "er": 89,
+   "g": 33,
+   "gs": 33,
+   "h": 210,
+   "hbp": 8,
+   "hr": 26,
+   "ip": "225.1",
+   "ip_outs": 676,
+   "l": 10,
+   "r": 98,
+   "seasons": 5,
+   "so": 192,
+   "sv": 0,
+   "team_games": 810,
+   "w": 14,
    "window_years": [
     2007,
     2008,
@@ -37132,6 +42066,7 @@
   "id": "snellbl01",
   "name": "Blake Snell",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 163,
    "bf": 1688,
@@ -37147,6 +42082,30 @@
    "so": 487,
    "sv": 0,
    "w": 32,
+   "window_years": [
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 54,
+   "bf": 563,
+   "er": 49,
+   "g": 26,
+   "gs": 26,
+   "h": 107,
+   "hbp": 1,
+   "hr": 15,
+   "ip": "139.0",
+   "ip_outs": 417,
+   "l": 7,
+   "r": 53,
+   "seasons": 3,
+   "so": 162,
+   "sv": 0,
+   "team_games": 486,
+   "w": 11,
    "window_years": [
     2017,
     2018,
@@ -37478,7 +42437,36 @@
     2012
    ]
   },
+  "peak_bat_162": {
+   "2B": 35,
+   "3B": 3,
+   "AB": 596,
+   "BB": 77,
+   "CS": 11,
+   "G": 162,
+   "GIDP": 15,
+   "H": 154,
+   "HBP": 3,
+   "HR": 23,
+   "IBB": 3,
+   "PA": 681,
+   "R": 94,
+   "RBI": 82,
+   "SB": 39,
+   "SF": 6,
+   "SO": 174,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 727,
+   "window_years": [
+    2007,
+    2008,
+    2010,
+    2011,
+    2012
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -37801,7 +42789,33 @@
     2021
    ]
   },
+  "peak_bat_162": {
+   "2B": 38,
+   "3B": 6,
+   "AB": 558,
+   "BB": 38,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 12,
+   "H": 158,
+   "HBP": 11,
+   "HR": 11,
+   "IBB": 5,
+   "PA": 615,
+   "R": 80,
+   "RBI": 68,
+   "SB": 14,
+   "SF": 8,
+   "SO": 123,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 275,
+   "window_years": [
+    2018,
+    2021
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -38126,7 +43140,36 @@
     2014
    ]
   },
+  "peak_bat_162": {
+   "2B": 39,
+   "3B": 5,
+   "AB": 597,
+   "BB": 87,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 12,
+   "H": 165,
+   "HBP": 3,
+   "HR": 19,
+   "IBB": 4,
+   "PA": 693,
+   "R": 92,
+   "RBI": 80,
+   "SB": 15,
+   "SF": 6,
+   "SO": 108,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 768,
+   "window_years": [
+    2009,
+    2011,
+    2012,
+    2013,
+    2014
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -38436,7 +43479,32 @@
     2021
    ]
   },
+  "peak_bat_162": {
+   "2B": 16,
+   "3B": 3,
+   "AB": 495,
+   "BB": 51,
+   "CS": 0,
+   "G": 162,
+   "GIDP": 10,
+   "H": 107,
+   "HBP": 10,
+   "HR": 49,
+   "IBB": 0,
+   "PA": 557,
+   "R": 95,
+   "RBI": 92,
+   "SB": 0,
+   "SF": 1,
+   "SO": 196,
+   "team_line": "Tampa Bay Rays",
+   "window_games": 109,
+   "window_years": [
+    2021
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -38784,7 +43852,34 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 6,
+   "AB": 630,
+   "BB": 41,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 6,
+   "H": 157,
+   "HBP": 16,
+   "HR": 21,
+   "IBB": 2,
+   "PA": 691,
+   "R": 95,
+   "RBI": 71,
+   "SB": 41,
+   "SF": 4,
+   "SO": 139,
+   "team_line": "Washington Nationals",
+   "window_games": 433,
+   "window_years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -38835,6 +43930,7 @@
   "id": "burnese01",
   "name": "Sean Burnett",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 53,
    "bf": 742,
@@ -38850,6 +43946,30 @@
    "so": 152,
    "sv": 9,
    "w": 7,
+   "window_years": [
+    2010,
+    2011,
+    2012
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 18,
+   "bf": 248,
+   "er": 18,
+   "g": 71,
+   "gs": 0,
+   "h": 55,
+   "hbp": 2,
+   "hr": 4,
+   "ip": "59.0",
+   "ip_outs": 177,
+   "l": 5,
+   "r": 19,
+   "seasons": 3,
+   "so": 51,
+   "sv": 3,
+   "team_games": 485,
+   "w": 2,
    "window_years": [
     2010,
     2011,
@@ -38906,6 +44026,7 @@
   "id": "clippty01",
   "name": "Tyler Clippard",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 146,
    "bf": 1506,
@@ -38921,6 +44042,32 @@
    "so": 438,
    "sv": 2,
    "w": 31,
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2013,
+    2014
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 29,
+   "bf": 302,
+   "er": 21,
+   "g": 68,
+   "gs": 0,
+   "h": 47,
+   "hbp": 2,
+   "hr": 8,
+   "ip": "76.1",
+   "ip_outs": 229,
+   "l": 3,
+   "r": 22,
+   "seasons": 5,
+   "so": 88,
+   "sv": 0,
+   "team_games": 809,
+   "w": 6,
    "window_years": [
     2009,
     2010,
@@ -38979,6 +44126,7 @@
   "id": "cordech01",
   "name": "Chad Cordero",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 68,
    "bf": 928,
@@ -38994,6 +44142,30 @@
    "so": 192,
    "sv": 113,
    "w": 12,
+   "window_years": [
+    2005,
+    2006,
+    2007
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 23,
+   "bf": 309,
+   "er": 23,
+   "g": 73,
+   "gs": 0,
+   "h": 63,
+   "hbp": 2,
+   "hr": 10,
+   "ip": "74.1",
+   "ip_outs": 223,
+   "l": 4,
+   "r": 27,
+   "seasons": 3,
+   "so": 64,
+   "sv": 38,
+   "team_games": 486,
+   "w": 4,
    "window_years": [
     2005,
     2006,
@@ -39067,6 +44239,7 @@
   "id": "doolise01",
   "name": "Sean Doolittle",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 29,
    "bf": 541,
@@ -39082,6 +44255,30 @@
    "so": 157,
    "sv": 75,
    "w": 10,
+   "window_years": [
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 10,
+   "bf": 180,
+   "er": 14,
+   "g": 45,
+   "gs": 0,
+   "h": 35,
+   "hbp": 1,
+   "hr": 5,
+   "ip": "45.0",
+   "ip_outs": 135,
+   "l": 3,
+   "r": 15,
+   "seasons": 3,
+   "so": 52,
+   "sv": 25,
+   "team_games": 486,
+   "w": 3,
    "window_years": [
     2017,
     2018,
@@ -39138,6 +44335,7 @@
   "id": "gonzagi01",
   "name": "Gio Gonzalez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 356,
    "bf": 3879,
@@ -39153,6 +44351,32 @@
    "so": 918,
    "sv": 0,
    "w": 68,
+   "window_years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2017
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 71,
+   "bf": 776,
+   "er": 68,
+   "g": 31,
+   "gs": 31,
+   "h": 158,
+   "hbp": 4,
+   "hr": 13,
+   "ip": "186.0",
+   "ip_outs": 558,
+   "l": 9,
+   "r": 72,
+   "seasons": 5,
+   "so": 184,
+   "sv": 0,
+   "team_games": 810,
+   "w": 14,
    "window_years": [
     2012,
     2013,
@@ -39477,7 +44701,36 @@
     2018
    ]
   },
+  "peak_bat_162": {
+   "2B": 34,
+   "3B": 3,
+   "AB": 578,
+   "BB": 111,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 13,
+   "H": 162,
+   "HBP": 4,
+   "HR": 35,
+   "IBB": 14,
+   "PA": 700,
+   "R": 114,
+   "RBI": 98,
+   "SB": 14,
+   "SF": 7,
+   "SO": 145,
+   "team_line": "Washington Nationals",
+   "window_games": 709,
+   "window_years": [
+    2012,
+    2015,
+    2016,
+    2017,
+    2018
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -39554,6 +44807,7 @@
   "id": "hernali01",
   "name": "Livan Hernandez",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 246,
    "bf": 3373,
@@ -39569,6 +44823,31 @@
    "so": 449,
    "sv": 0,
    "w": 42,
+   "window_years": [
+    2005,
+    2006,
+    2010,
+    2011
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 62,
+   "bf": 845,
+   "er": 92,
+   "g": 30,
+   "gs": 30,
+   "h": 215,
+   "hbp": 6,
+   "hr": 20,
+   "ip": "195.1",
+   "ip_outs": 586,
+   "l": 11,
+   "r": 100,
+   "seasons": 4,
+   "so": 112,
+   "sv": 0,
+   "team_games": 647,
+   "w": 11,
    "window_years": [
     2005,
     2006,
@@ -39905,7 +45184,34 @@
     2009
    ]
   },
+  "peak_bat_162": {
+   "2B": 42,
+   "3B": 2,
+   "AB": 563,
+   "BB": 109,
+   "CS": 6,
+   "G": 162,
+   "GIDP": 16,
+   "H": 164,
+   "HBP": 13,
+   "HR": 19,
+   "IBB": 11,
+   "PA": 688,
+   "R": 92,
+   "RBI": 84,
+   "SB": 6,
+   "SF": 3,
+   "SO": 109,
+   "team_line": "Washington Nationals",
+   "window_games": 376,
+   "window_years": [
+    2005,
+    2006,
+    2009
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -40249,7 +45555,32 @@
     2019
    ]
   },
+  "peak_bat_162": {
+   "2B": 31,
+   "3B": 1,
+   "AB": 447,
+   "BB": 36,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 15,
+   "H": 154,
+   "HBP": 5,
+   "HR": 23,
+   "IBB": 1,
+   "PA": 495,
+   "R": 82,
+   "RBI": 83,
+   "SB": 3,
+   "SF": 7,
+   "SO": 66,
+   "team_line": "Washington Nationals",
+   "window_games": 121,
+   "window_years": [
+    2019
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -40555,7 +45886,33 @@
     2017
    ]
   },
+  "peak_bat_162": {
+   "2B": 51,
+   "3B": 5,
+   "AB": 603,
+   "BB": 49,
+   "CS": 2,
+   "G": 162,
+   "GIDP": 11,
+   "H": 202,
+   "HBP": 7,
+   "HR": 27,
+   "IBB": 14,
+   "PA": 666,
+   "R": 103,
+   "RBI": 112,
+   "SB": 4,
+   "SF": 6,
+   "SO": 76,
+   "team_line": "Washington Nationals",
+   "window_games": 286,
+   "window_years": [
+    2016,
+    2017
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -40873,7 +46230,36 @@
     2016
    ]
   },
+  "peak_bat_162": {
+   "2B": 25,
+   "3B": 0,
+   "AB": 594,
+   "BB": 38,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 24,
+   "H": 160,
+   "HBP": 1,
+   "HR": 24,
+   "IBB": 5,
+   "PA": 639,
+   "R": 63,
+   "RBI": 92,
+   "SB": 0,
+   "SF": 5,
+   "SO": 107,
+   "team_line": "Washington Nationals",
+   "window_games": 538,
+   "window_years": [
+    2011,
+    2013,
+    2014,
+    2015,
+    2016
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -40951,6 +46337,7 @@
   "id": "rauchjo01",
   "name": "Jon Rauch",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 75,
    "bf": 1053,
@@ -40966,6 +46353,31 @@
    "so": 224,
    "sv": 23,
    "w": 18,
+   "window_years": [
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 19,
+   "bf": 264,
+   "er": 24,
+   "g": 59,
+   "gs": 0,
+   "h": 55,
+   "hbp": 1,
+   "hr": 7,
+   "ip": "64.1",
+   "ip_outs": 193,
+   "l": 4,
+   "r": 26,
+   "seasons": 4,
+   "so": 56,
+   "sv": 6,
+   "team_games": 647,
+   "w": 5,
    "window_years": [
     2005,
     2006,
@@ -41269,7 +46681,36 @@
     2019
    ]
   },
+  "peak_bat_162": {
+   "2B": 45,
+   "3B": 3,
+   "AB": 606,
+   "BB": 75,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 9,
+   "H": 180,
+   "HBP": 8,
+   "HR": 27,
+   "IBB": 5,
+   "PA": 697,
+   "R": 107,
+   "RBI": 107,
+   "SB": 9,
+   "SF": 8,
+   "SO": 103,
+   "team_line": "Washington Nationals",
+   "window_games": 738,
+   "window_years": [
+    2014,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -41588,7 +47029,34 @@
     2022
    ]
   },
+  "peak_bat_162": {
+   "2B": 26,
+   "3B": 2,
+   "AB": 505,
+   "BB": 35,
+   "CS": 8,
+   "G": 162,
+   "GIDP": 7,
+   "H": 117,
+   "HBP": 21,
+   "HR": 10,
+   "IBB": 2,
+   "PA": 564,
+   "R": 68,
+   "RBI": 48,
+   "SB": 21,
+   "SF": 4,
+   "SO": 135,
+   "team_line": "Washington Nationals",
+   "window_games": 394,
+   "window_years": [
+    2019,
+    2021,
+    2022
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -41883,7 +47351,34 @@
     2024
    ]
   },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 0,
+   "AB": 594,
+   "BB": 33,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 15,
+   "H": 147,
+   "HBP": 7,
+   "HR": 16,
+   "IBB": 0,
+   "PA": 639,
+   "R": 58,
+   "RBI": 69,
+   "SB": 4,
+   "SF": 4,
+   "SO": 70,
+   "team_line": "Washington Nationals",
+   "window_games": 375,
+   "window_years": [
+    2022,
+    2023,
+    2024
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -41931,6 +47426,7 @@
   "id": "scherma01",
   "name": "Max Scherzer",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 229,
    "bf": 4140,
@@ -41946,6 +47442,32 @@
    "so": 1371,
    "sv": 0,
    "w": 79,
+   "window_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 46,
+   "bf": 828,
+   "er": 64,
+   "g": 32,
+   "gs": 32,
+   "h": 152,
+   "hbp": 8,
+   "hr": 24,
+   "ip": "210.0",
+   "ip_outs": 630,
+   "l": 8,
+   "r": 68,
+   "seasons": 5,
+   "so": 274,
+   "sv": 0,
+   "team_games": 810,
+   "w": 16,
    "window_years": [
     2015,
     2016,
@@ -42266,7 +47788,35 @@
     2022
    ]
   },
+  "peak_bat_162": {
+   "2B": 29,
+   "3B": 3,
+   "AB": 563,
+   "BB": 132,
+   "CS": 4,
+   "G": 162,
+   "GIDP": 17,
+   "H": 161,
+   "HBP": 3,
+   "HR": 33,
+   "IBB": 13,
+   "PA": 701,
+   "R": 113,
+   "RBI": 100,
+   "SB": 10,
+   "SF": 3,
+   "SO": 121,
+   "team_line": "Washington Nationals",
+   "window_games": 518,
+   "window_years": [
+    2018,
+    2019,
+    2021,
+    2022
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -42584,7 +48134,33 @@
     2014
    ]
   },
+  "peak_bat_162": {
+   "2B": 36,
+   "3B": 10,
+   "AB": 659,
+   "BB": 50,
+   "CS": 7,
+   "G": 162,
+   "GIDP": 9,
+   "H": 191,
+   "HBP": 2,
+   "HR": 5,
+   "IBB": 1,
+   "PA": 713,
+   "R": 91,
+   "RBI": 45,
+   "SB": 28,
+   "SF": 2,
+   "SO": 77,
+   "team_line": "Washington Nationals",
+   "window_games": 300,
+   "window_years": [
+    2013,
+    2014
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -42659,6 +48235,7 @@
   "id": "stammcr01",
   "name": "Craig Stammen",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 142,
    "bf": 2023,
@@ -42674,6 +48251,32 @@
    "so": 355,
    "sv": 1,
    "w": 25,
+   "window_years": [
+    2009,
+    2010,
+    2012,
+    2013,
+    2014
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 28,
+   "bf": 405,
+   "er": 42,
+   "g": 43,
+   "gs": 8,
+   "h": 98,
+   "hbp": 2,
+   "hr": 9,
+   "ip": "95.1",
+   "ip_outs": 286,
+   "l": 5,
+   "r": 47,
+   "seasons": 5,
+   "so": 71,
+   "sv": 0,
+   "team_games": 810,
+   "w": 5,
    "window_years": [
     2009,
     2010,
@@ -42732,6 +48335,7 @@
   "id": "storedr01",
   "name": "Drew Storen",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 77,
    "bf": 1103,
@@ -42747,6 +48351,32 @@
    "so": 263,
    "sv": 92,
    "w": 17,
+   "window_years": [
+    2010,
+    2011,
+    2012,
+    2014,
+    2015
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 15,
+   "bf": 221,
+   "er": 16,
+   "g": 57,
+   "gs": 0,
+   "h": 43,
+   "hbp": 3,
+   "hr": 3,
+   "ip": "54.2",
+   "ip_outs": 164,
+   "l": 2,
+   "r": 17,
+   "seasons": 5,
+   "so": 53,
+   "sv": 18,
+   "team_games": 809,
+   "w": 3,
    "window_years": [
     2010,
     2011,
@@ -42827,6 +48457,7 @@
   "id": "strasst01",
   "name": "Stephen Strasburg",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 250,
    "bf": 3794,
@@ -42842,6 +48473,32 @@
    "so": 1085,
    "sv": 0,
    "w": 70,
+   "window_years": [
+    2012,
+    2013,
+    2014,
+    2017,
+    2019
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 50,
+   "bf": 759,
+   "er": 64,
+   "g": 31,
+   "gs": 31,
+   "h": 152,
+   "hbp": 8,
+   "hr": 18,
+   "ip": "188.1",
+   "ip_outs": 565,
+   "l": 7,
+   "r": 71,
+   "seasons": 5,
+   "so": 217,
+   "sv": 0,
+   "team_games": 810,
+   "w": 14,
    "window_years": [
     2012,
     2013,
@@ -43169,7 +48826,36 @@
     2021
    ]
   },
+  "peak_bat_162": {
+   "2B": 35,
+   "3B": 8,
+   "AB": 674,
+   "BB": 54,
+   "CS": 9,
+   "G": 162,
+   "GIDP": 10,
+   "H": 201,
+   "HBP": 5,
+   "HR": 24,
+   "IBB": 1,
+   "PA": 734,
+   "R": 116,
+   "RBI": 78,
+   "SB": 52,
+   "SF": 2,
+   "SO": 136,
+   "team_line": "Washington Nationals",
+   "window_games": 551,
+   "window_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2021
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
@@ -43493,7 +49179,33 @@
     2025
    ]
   },
+  "peak_bat_162": {
+   "2B": 35,
+   "3B": 3,
+   "AB": 613,
+   "BB": 85,
+   "CS": 10,
+   "G": 162,
+   "GIDP": 9,
+   "H": 159,
+   "HBP": 3,
+   "HR": 27,
+   "IBB": 6,
+   "PA": 704,
+   "R": 89,
+   "RBI": 93,
+   "SB": 20,
+   "SF": 2,
+   "SO": 218,
+   "team_line": "Washington Nationals",
+   "window_games": 236,
+   "window_years": [
+    2024,
+    2025
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "bench",
@@ -43541,6 +49253,7 @@
   "id": "zimmejo02",
   "name": "Jordan Zimmermann",
   "peak_bat": null,
+  "peak_bat_162": null,
   "peak_pit": {
    "bb": 182,
    "bf": 3963,
@@ -43556,6 +49269,32 @@
    "so": 784,
    "sv": 0,
    "w": 66,
+   "window_years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ]
+  },
+  "peak_pit_162": {
+   "bb": 36,
+   "bf": 794,
+   "er": 68,
+   "g": 31,
+   "gs": 31,
+   "h": 184,
+   "hbp": 7,
+   "hr": 17,
+   "ip": "194.2",
+   "ip_outs": 584,
+   "l": 9,
+   "r": 74,
+   "seasons": 5,
+   "so": 157,
+   "sv": 0,
+   "team_games": 809,
+   "w": 13,
    "window_years": [
     2011,
     2012,
@@ -43880,7 +49619,36 @@
     2012
    ]
   },
+  "peak_bat_162": {
+   "2B": 41,
+   "3B": 3,
+   "AB": 633,
+   "BB": 68,
+   "CS": 3,
+   "G": 162,
+   "GIDP": 21,
+   "H": 181,
+   "HBP": 3,
+   "HR": 27,
+   "IBB": 7,
+   "PA": 709,
+   "R": 100,
+   "RBI": 103,
+   "SB": 6,
+   "SF": 6,
+   "SO": 123,
+   "team_line": "Washington Nationals",
+   "window_games": 763,
+   "window_years": [
+    2006,
+    2007,
+    2009,
+    2010,
+    2012
+   ]
+  },
   "peak_pit": null,
+  "peak_pit_162": null,
   "spots": [
    {
     "group": "lineup",
