@@ -499,6 +499,19 @@ table {
 
 .leader-table tr.leader-colored td:first-child { box-shadow: inset 3px 0 0 var(--leader-color, var(--gold)); }
 
+.table-wrap.record-fit { overflow-x: visible; max-width: 100%; }
+.table-wrap.record-fit table.record-table {
+  min-width: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+.record-table th,
+.record-table td { overflow-wrap: anywhere; vertical-align: middle; }
+.record-table th:nth-child(2),
+.record-table td:nth-child(2) { width: 2.4rem; }
+.record-table th:nth-child(3),
+.record-table td:nth-child(3) { width: 5.4rem; padding-left: 0.2rem; padding-right: 0.2rem; }
+
 th, td {
   padding: 0.4rem 0.55rem;
   border-bottom: 1px solid var(--line);
@@ -551,6 +564,7 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   .table-wrap.roster-fit table.roster-table { min-width: 0; }
   .table-wrap.card-band table { min-width: 0; }
   .table-wrap.leader-fit table.leader-table { min-width: 0; }
+  .table-wrap.record-fit table.record-table { min-width: 0; }
   .leader-grid { grid-template-columns: 1fr; }
   .team-hero-colored {
     margin: -0.8rem -0.8rem 0.85rem;

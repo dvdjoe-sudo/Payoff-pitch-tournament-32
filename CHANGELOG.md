@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Single-game records
+
+The Records page lists one-game highs from the box scores: hits, home runs, runs batted in, total bases, runs, stolen bases, walks, pitcher strikeouts, and innings. Each list is the top 10, and a tie at the tenth line stays. The row uses the club logo and color, links the player, and links the game. The tables keep the full name on a phone. The milestone lists stay. The service worker cache is payoff-pitch-v30. No game result was changed.
+
 ## 2026-10-26 — Inbox import rebuild
 
 An inbox import now rebuilds the Peak 162 file, the roster page, the leaders and feeds, the series-preview images, and the bracket image, the same commands the site workflow runs. A pushed game then passes that workflow's generated-file check. The service worker cache is payoff-pitch-v29. No game result was changed.
