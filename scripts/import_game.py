@@ -656,19 +656,18 @@ def dump(obj) -> str:
 
 
 def regenerate() -> None:
-    import importlib.util
-    for name, filename, call in (
-        ("publish_docs", "publish.py", "write_all"),
-        ("build_rosters", "build_rosters.py", None),
-    ):
-        path = Path(__file__).with_name(filename)
-        spec = importlib.util.spec_from_file_location(name, path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        if call:
-            module.write_all()
-        else:
-            (ROOT / "ROSTERS.md").write_text(module.build(), encoding="utf-8")
+    """Rewrite every file the site workflow checks with git diff --exit-code."""
+    scripts = (
+        "build_peak162.py",
+        "build_rosters.py",
+        "build_leaders.py",
+        "build_series_previews.py",
+        "build_bracket_image.py",
+    )
+    for name in scripts:
+        completed = subprocess.run([sys.executable, str(ROOT / "scripts" / name)], cwd=ROOT)
+        if completed.returncode != 0:
+            raise RuntimeError(name + " failed")
 
 
 def restore_archive(original: str, details: dict[str, str]) -> None:

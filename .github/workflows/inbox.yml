@@ -51,7 +51,10 @@ jobs:
               exit 1
             fi
             git commit -m "Record an inbox import error."
-            git push
+            if ! git push; then
+              echo "The push was refused. In the repository, open Settings, then Actions, then General. Under Workflow permissions, choose Read and write permissions, and save. An organization can lock that choice; an owner sets the same control under the organization's Actions settings."
+              exit 1
+            fi
             echo "pushed=false" >> "$GITHUB_OUTPUT"
             echo "Import failed. The box score is still in inbox/ and the report is in inbox/errors/."
             exit 1
@@ -63,7 +66,10 @@ jobs:
             exit 0
           fi
           git commit -m "Import box scores from inbox."
-          git push
+          if ! git push; then
+            echo "The push was refused. In the repository, open Settings, then Actions, then General. Under Workflow permissions, choose Read and write permissions, and save. An organization can lock that choice; an owner sets the same control under the organization's Actions settings."
+            exit 1
+          fi
           echo "pushed=true" >> "$GITHUB_OUTPUT"
 
   deploy:
