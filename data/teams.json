@@ -35,8 +35,8 @@
   "primary": "#0C2340",
   "secondary": "#E31937",
   "font": "#FFFFFF",
-  "logo": "assets/logos/CLE.png",
-  "mark": "1986 file",
+  "logo": "assets/logos/CLE.svg",
+  "mark": "Guardians cap logo",
   "color_source": "team_colors_1986.csv"
  },
  "DET": {
@@ -212,7 +212,7 @@
   "secondary": "#EF3340",
   "font": "#FFFFFF",
   "logo": "assets/logos/MIA.svg",
-  "mark": "monogram",
+  "mark": "cap logo",
   "color_source": "Marlins teal/orange. Not on the 1986 sheet."
  },
  "TB": {
@@ -220,7 +220,7 @@
   "secondary": "#8FBCE6",
   "font": "#FFFFFF",
   "logo": "assets/logos/TB.svg",
-  "mark": "monogram",
+  "mark": "cap logo",
   "color_source": "Rays navy and Columbia blue. Not on the 1986 sheet."
  },
  "ARI": {
@@ -228,7 +228,7 @@
   "secondary": "#E3D4AD",
   "font": "#FFFFFF",
   "logo": "assets/logos/ARI.svg",
-  "mark": "monogram",
+  "mark": "cap logo",
   "color_source": "Diamondbacks Sedona red and sand. Not on the 1986 sheet."
  },
  "COL": {
@@ -236,7 +236,7 @@
   "secondary": "#C4CED4",
   "font": "#FFFFFF",
   "logo": "assets/logos/COL.svg",
-  "mark": "monogram",
+  "mark": "cap logo",
   "color_source": "Rockies purple and silver. Not on the 1986 sheet."
  },
  "WSH": {
@@ -244,7 +244,7 @@
   "secondary": "#14225A",
   "font": "#FFFFFF",
   "logo": "assets/logos/WSH.svg",
-  "mark": "monogram",
+  "mark": "cap logo",
   "color_source": "Nationals red and navy. Not on the 1986 sheet."
  },
  "PHA": {
@@ -252,7 +252,7 @@
   "secondary": "#FFFFFF",
   "font": "#FFFFFF",
   "logo": "assets/logos/PHA.svg",
-  "mark": "monogram",
+  "mark": "cap logo",
   "color_source": "Philadelphia Athletics blue and white. Not on the 1986 sheet."
  }
 }

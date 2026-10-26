@@ -224,14 +224,20 @@ main { padding: 0.5rem 1.25rem 2.5rem; }
   padding-left: 0.65rem;
 }
 
-.club-name { min-width: 0; }
+.club-name {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.club-name span { min-width: 0; }
 
 .club-swatch {
   display: inline-flex;
+  flex: 0 0 auto;
   width: 0.7rem;
   height: 0.9rem;
-  margin-right: 0.35rem;
-  vertical-align: -0.12rem;
   border-radius: 2px;
   overflow: hidden;
   box-shadow: 0 0 0 1px rgba(90, 80, 60, 0.35);
@@ -724,6 +730,15 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   width: 3.2rem;
   height: 3.2rem;
   flex: 0 0 auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.logo-inline {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 3px;
 }
 
 .swatch {

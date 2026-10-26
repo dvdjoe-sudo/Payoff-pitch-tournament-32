@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Classic cap logos
+
+Every club on the team page and the bracket shows a real cap logo. The marks already in the repo stay for the clubs that had a 1986 file, except Cleveland: the field club is the Guardians, so the Indians cap is replaced by the Guardians cap. Miami, Tampa Bay, Arizona, Colorado, Washington, and the Philadelphia Athletics had monograms. Those are now real cap logos. Sources are in [CREDITS.md](CREDITS.md). The service worker cache is payoff-pitch-v20. No game result was changed.
+
 ## 2026-10-26 — Club colors on the team page and the bracket
 
 Each club in the 32-team field has a primary and a secondary color in `data/team_colors.json`, matched to the club as it is named in the field. Los Angeles is Dodger blue, Montreal is the Expos tricolor, the Philadelphia Athletics are navy, Oakland is green and gold, Cleveland is the Guardians' navy and red, and Miami is black and blue. The team-page header sits on the primary color, with light or dark text chosen by contrast. Roster slot chips use the same pair. On the bracket, a club row keeps a color bar and a swatch, and the name takes a team color only when that color stays readable on the card. Winners stay in the site's winner color. The gold theme is unchanged, and the same rules hold in dark mode. The service worker cache is payoff-pitch-v19. No game result was changed.
