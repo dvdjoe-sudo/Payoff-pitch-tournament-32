@@ -1271,6 +1271,13 @@
     var turning = narrativeFor(game.id);
     if (turning) tools.appendChild(el("p", { class: "recap", text: turning }));
     if (game.series_recap) tools.appendChild(el("p", { class: "recap", text: game.series_recap }));
+    var facHost = el("div");
+    if (game.series_id === "R1-03") {
+      tools.appendChild(el("h4", { text: "FAC flip history" }));
+      tools.appendChild(el("p", null, el("a", { href: "games/" + game.id + ".fac.md", text: "Full FAC and play-by-play transcript" })));
+      tools.appendChild(facHost);
+      facHost.appendChild(el("p", { class: "muted", text: "Loading FAC history…" }));
+    }
     var logHost = el("div");
     tools.appendChild(el("h4", { text: "Manager log" }));
     tools.appendChild(logHost);
@@ -1298,6 +1305,19 @@
     var apply = function (detail) {
       if (token !== renderToken) return;
       clear(logHost);
+      if (game.series_id === "R1-03") {
+        clear(facHost);
+        var facRolls = detail && Array.isArray(detail.rolls) ? detail.rolls : [];
+        if (facRolls.length) {
+          var facList = el("ol");
+          facRolls.forEach(function (entry) {
+            facList.appendChild(el("li", { text: entry[0] ? "FAC #" + entry[0] + " — " + entry[1] : entry[1] }));
+          });
+          facHost.appendChild(el("details", null, el("summary", { text: facRolls.length + " FAC history entries (including reshuffles)" }), facList));
+        } else {
+          facHost.appendChild(el("p", { text: "FAC flip history unavailable for this game." }));
+        }
+      }
       var log = detail && detail.manager_log;
       if (!log || !log.length) {
         logHost.appendChild(el("p", { text: "No manager log was recorded for this game." }));

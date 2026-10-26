@@ -40,7 +40,8 @@ GAMES = ROOT / "games"
 # Pena, Lowe, and Kiermaier in G5; R1-04 G3 Freehan). No score, result,
 # or existing line changed. The old value was
 # 7b12e577dbfe542585fb0fb1dd4bce53b9fd5515b5a894940685968e28182f4d.
-FINGERPRINT = "d63cc54955d2ee1232c99a056d155e3143bf6f485c9f2a35fb7be7ebcaa9b755"
+# PDF-based recovery 2026-10-26: restored original R1-03 G3-G7 FAC histories (128, 164, 183, 137, 159 entries) from the owner-provided 101-page record. Only per-game detail rolls and the locked fingerprint changed; official game summaries and manager_log stay unchanged.
+FINGERPRINT = "70d18c865b46f9fb73c9cae8b124c6e4077b930f21a60ba67f7b87b5799a44dc"
 # Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
 # The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
 FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
@@ -67,7 +68,7 @@ TEAM_FIELDS = (
 )
 
 EXPECTED_TOTALS = {"H": 246, "HR": 49, "RBI": 148, "K": 301, "ER": 148, "OUTS": 832}
-ROLL_COUNTS = {"R1-01-G1": 72, "R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135}
+ROLL_COUNTS = {"R1-01-G1": 72, "R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135, "R1-03-G3": 128, "R1-03-G4": 164, "R1-03-G5": 183, "R1-03-G6": 137, "R1-03-G7": 159}
 DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-23"}
 THREE_INNINGS = (
     "A reliever is lifted when he reaches 3 innings pitched in one appearance, "
