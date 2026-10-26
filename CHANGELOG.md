@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Classic cap logos
+
+Every club on the team page and the bracket shows a real cap logo. The marks already in the repo stay for the clubs that had a 1986 file, except Cleveland: the field club is the Guardians, so the Indians cap is replaced by the Guardians cap. Miami, Tampa Bay, Arizona, Colorado, Washington, and the Philadelphia Athletics had monograms. Those are now real cap logos. Sources are in [CREDITS.md](CREDITS.md). The service worker cache is payoff-pitch-v13. No game result was changed.
+
 ## 2026-10-26 — Roster tables fit a phone
 
 Team-page lineup, bench, rotation, and bullpen tables keep a narrow left-aligned slot, a wrapping player name, and a compact position. The hand, the years on the owner card, and the Peak 162 line stack under the name. Converted Payoff Pitch cards use the same layout. Nothing in the tables runs off the side of a phone. The service worker cache is payoff-pitch-v11. No roster line and no game result was changed.

@@ -124,15 +124,17 @@
     return (state.colors && code && state.colors[code]) || null;
   }
 
-  function logo(team, label) {
+  function logo(team, label, inline) {
     var colors = team ? teamColors(team.code) : null;
     var alt = label || (team && team.name ? team.name + " mark" : "Club mark");
+    var cls = inline ? "logo logo-inline" : "logo";
+    var size = inline ? "28" : "64";
     if (colors && colors.logo) {
-      return el("img", { class: "logo", src: colors.logo, alt: alt, width: "64", height: "64" });
+      return el("img", { class: cls, src: colors.logo, alt: alt, width: size, height: size });
     }
     var color = colors && colors.primary ? colors.primary : placeholderColor(team ? team.seed : 1);
     var ink = colors && colors.font ? colors.font : "#f6f1e6";
-    var node = svg("svg", { class: "logo", viewBox: "0 0 64 64", role: "img" });
+    var node = svg("svg", { class: cls, viewBox: "0 0 64 64", role: "img" });
     node.appendChild(svg("title")).textContent = alt;
     node.appendChild(svg("rect", { width: "64", height: "64", rx: "8", fill: color }));
     var text = svg("text", {
@@ -672,8 +674,12 @@
       if (code && code === series.team_b && series.seed_b != null) name = "#" + series.seed_b + " ";
       name += clubName(code);
       var rowClass = "club-line" + (series.winner && series.winner === code ? " winner-club" : "");
+      var nameSpan = el("span", { class: "club-name" });
+      var team = code ? state.byCode[code] : null;
+      if (team) nameSpan.appendChild(logo(team, team.name + " mark", true));
+      nameSpan.appendChild(el("span", { text: name }));
       card.appendChild(el("div", { class: rowClass },
-        el("span", { text: name }),
+        nameSpan,
         el("span", { class: "runs", text: wins })
       ));
     });
@@ -1713,10 +1719,7 @@
 
   function markNote(code) {
     var colors = teamColors(code);
-    if (colors && colors.mark === "monogram") {
-      return "Monogram in team colors. " + (colors.color_source || "") + " Swap the file in data/teams.json.";
-    }
-    if (colors) return "Logo file (" + colors.mark + "). Swap the file in data/teams.json.";
+    if (colors && colors.logo) return "Classic cap logo. Where each file came from is in CREDITS.md.";
     return "Swap the file in data/teams.json.";
   }
 
@@ -2797,7 +2800,7 @@
     renderNext();
     var complete = data.series.filter(function (series) { return series.status === "complete"; }).length;
     var progress = data.series.filter(function (series) { return series.status === "in-progress"; }).length;
-    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Display formulas are on the Formulas page. Logo files live in data/teams.json: a 1986 file where the franchise matches, a monogram otherwise.";
+    footer.textContent = data.teams.length + " clubs. " + complete + " series complete, " + progress + " in progress. Display formulas are on the Formulas page. Each club uses a classic cap logo. Sources are in CREDITS.md.";
     if (!location.hash) location.hash = "#/bracket";
     var where = route();
     if (where.name === "search") searchInput.value = where.query || where.rest.join("/");

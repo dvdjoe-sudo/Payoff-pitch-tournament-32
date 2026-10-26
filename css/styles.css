@@ -218,6 +218,15 @@ main { padding: 0.5rem 1.25rem 2.5rem; }
   margin-top: 0.15rem;
 }
 
+.club-name {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.club-name span { min-width: 0; }
+
 .club-line strong { font-weight: 700; }
 
 .club-line .runs {
@@ -551,6 +560,15 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   width: 3.2rem;
   height: 3.2rem;
   flex: 0 0 auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.logo-inline {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 3px;
 }
 
 .swatch {
