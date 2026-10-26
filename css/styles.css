@@ -284,6 +284,33 @@ details.card-set summary {
 
 .table-wrap { overflow-x: auto; margin: 0 0 0.9rem; }
 
+.table-wrap.roster-fit { overflow-x: visible; max-width: 100%; }
+.table-wrap.roster-fit table.roster-table {
+  min-width: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+.roster-table th,
+.roster-table td {
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+.roster-table.has-slot th:first-child,
+.roster-table.has-slot td:first-child { width: 2.5rem; }
+.roster-table.slot-mid.has-slot th:first-child,
+.roster-table.slot-mid.has-slot td:first-child { width: 3.6rem; }
+.roster-table.slot-wide.has-slot th:first-child,
+.roster-table.slot-wide.has-slot td:first-child { width: 5.6rem; }
+.roster-table.has-pos th:last-child,
+.roster-table.has-pos td:last-child { width: 3.2rem; }
+.roster-table .roster-player,
+.roster-table .roster-meta,
+.roster-table .roster-peak { display: block; }
+.roster-table .roster-meta,
+.roster-table .roster-peak { margin-top: 0.12rem; font-size: 0.92rem; line-height: 1.35; }
+.roster-table a { overflow-wrap: break-word; }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -341,6 +368,7 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   .round { flex-basis: min(86vw, 320px); }
   .panel { padding: 0.8rem; }
   table { min-width: 32rem; }
+  .table-wrap.roster-fit table.roster-table { min-width: 0; }
   .standings { min-width: 28rem; }
 }
 
