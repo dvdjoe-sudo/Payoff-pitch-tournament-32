@@ -3990,6 +3990,18 @@
      1965
     ]
    },
+   "RH BAT/OF Matt Kemp 10": {
+    "lahman_id": "kempma01",
+    "status": "ok",
+    "text": "Peak 162 with Los Angeles Dodgers (2011–2018). Years away from the franchise inside this span are not in the totals. 162 G, 645 PA, 578 AB, 92 R, 172 H, 34 2B, 2 3B, 29 HR, 102 RBI, 17 SB, 57 BB, 152 SO, .298/.360/.515/.875",
+    "years": [
+     2011,
+     2012,
+     2013,
+     2014,
+     2018
+    ]
+   },
    "RH BRG Clem Labine 11": {
     "lahman_id": "labincl01",
     "status": "ok",
@@ -5786,6 +5798,18 @@
      1911,
      1912,
      1913
+    ]
+   },
+   "LH BAT/OF Elmer Valo 13": {
+    "lahman_id": "valoel01",
+    "status": "ok",
+    "text": "Peak 162 with Philadelphia Athletics (1948–1952): 162 G, 685 PA, 555 AB, 92 R, 161 H, 28 2B, 8 3B, 8 HR, 70 RBI, 15 SB, 115 BB, 26 SO, .290/.417/.412/.829",
+    "years": [
+     1948,
+     1949,
+     1950,
+     1951,
+     1952
     ]
    },
    "LH FIRE Rube Walberg 11": {
