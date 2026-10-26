@@ -1939,11 +1939,121 @@
     view.appendChild(page);
   }
 
+  function singleGameRows() {
+    var hit = { h: [], hr: [], rbi: [], tb: [], r: [], sb: [], bb: [] };
+    var arm = { k: [], ip: [] };
+    state.data.games.forEach(function (game) {
+      (game.batting || []).forEach(function (line) {
+        var tb = nz(line.h) + nz(line.doubles) + (2 * nz(line.triples)) + (3 * nz(line.hr));
+        function add(list, value) {
+          if (value < 1) return;
+          list.push({
+            team: line.team, id: line.player_id, name: line.name,
+            game: game.id, primary: value, label: String(value)
+          });
+        }
+        add(hit.h, nz(line.h));
+        add(hit.hr, nz(line.hr));
+        add(hit.rbi, nz(line.rbi));
+        add(hit.tb, tb);
+        add(hit.r, nz(line.r));
+        add(hit.sb, nz(line.sb));
+        add(hit.bb, nz(line.bb));
+      });
+      (game.pitching || []).forEach(function (line) {
+        if (nz(line.k) >= 1) {
+          arm.k.push({
+            team: line.team, id: line.player_id, name: line.name,
+            game: game.id, primary: nz(line.k), label: String(nz(line.k))
+          });
+        }
+        if (nz(line.outs) >= 1) {
+          arm.ip.push({
+            team: line.team, id: line.player_id, name: line.name,
+            game: game.id, primary: nz(line.outs), label: ipLabel(nz(line.outs))
+          });
+        }
+      });
+    });
+    return { hit: hit, arm: arm };
+  }
+
+  function bySingleGame(a, b) {
+    if (a.primary !== b.primary) return b.primary - a.primary;
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    if (a.game < b.game) return -1;
+    if (a.game > b.game) return 1;
+    return 0;
+  }
+
+  function recordTable(rows, stat) {
+    var shown = topTies(rows.slice().sort(bySingleGame), 10);
+    var wrap = el("div", { class: "table-wrap record-fit" });
+    var t = el("table", { class: "record-table" });
+    var head = el("tr");
+    head.appendChild(el("th", { text: "Player" }));
+    head.appendChild(el("th", { class: "num", text: stat }));
+    head.appendChild(el("th", { text: "Game" }));
+    t.appendChild(el("thead", null, head));
+    var body = el("tbody");
+    shown.forEach(function (item, index) {
+      var tr = el("tr");
+      var palette = clubPalette(item.team);
+      if (palette) {
+        tr.className = "leader-colored";
+        tr.style.setProperty("--leader-color", palette.primary);
+      }
+      var who = el("td");
+      var line = el("div", { class: "leader-who" });
+      line.appendChild(el("span", { class: "leader-rank", text: String(index + 1) }));
+      var team = state.byCode[item.team];
+      if (team) line.appendChild(logo(team, team.name + " mark", true));
+      var link = linkPlayer(item.team, item.id, item.name);
+      link.classList.add("leader-name");
+      line.appendChild(link);
+      who.appendChild(line);
+      tr.appendChild(who);
+      tr.appendChild(el("td", { class: "num", text: item.label }));
+      tr.appendChild(el("td", null, linkGame(item.game)));
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    return wrap;
+  }
+
+  function recordBoard(title, rows, stat) {
+    var section = el("section", { class: "leader-board" });
+    section.appendChild(el("h3", { text: title }));
+    if (!rows.length) section.appendChild(el("p", { text: "None on record." }));
+    else section.appendChild(recordTable(rows, stat));
+    return section;
+  }
+
   function renderRecords() {
     markNav("records");
     var found = milestones();
+    var highs = singleGameRows();
     var page = el("article", { class: "stack" });
     page.appendChild(el("h2", { text: "Records and milestones" }));
+    page.appendChild(el("p", { class: "note", text: "Single-game highs are taken from the box scores. The list is the top 10, and a tie at the tenth line stays. Nothing here is estimated." }));
+    var batting = el("div", { class: "leader-grid" });
+    batting.appendChild(recordBoard("Hits", highs.hit.h, "H"));
+    batting.appendChild(recordBoard("Home runs", highs.hit.hr, "HR"));
+    batting.appendChild(recordBoard("Runs batted in", highs.hit.rbi, "RBI"));
+    batting.appendChild(recordBoard("Total bases", highs.hit.tb, "TB"));
+    batting.appendChild(recordBoard("Runs", highs.hit.r, "R"));
+    batting.appendChild(recordBoard("Stolen bases", highs.hit.sb, "SB"));
+    batting.appendChild(recordBoard("Walks", highs.hit.bb, "BB"));
+    var pitching = el("div", { class: "leader-grid" });
+    pitching.appendChild(recordBoard("Strikeouts", highs.arm.k, "K"));
+    pitching.appendChild(recordBoard("Innings", highs.arm.ip, "IP"));
+    page.appendChild(el("h3", { text: "Batting, one game" }));
+    page.appendChild(batting);
+    page.appendChild(el("h3", { text: "Pitching, one game" }));
+    page.appendChild(pitching);
+    page.appendChild(el("h3", { text: "Milestones" }));
     page.appendChild(el("p", { class: "note", text: "Bars from MODELS.md, counted only from the box scores." }));
     page.appendChild(el("h3", { text: "No-hitters" }));
     if (!found.nohitters.length) page.appendChild(el("p", { text: "None on record." }));
@@ -3459,6 +3569,8 @@
     page.appendChild(el("p", { text: "An upcoming or in-progress series shows a projection. It is not a result and it does not change a score. Offense is the mean Peak 162 OPS on the owner lineup. Pitching is the mean Peak 162 ERA on the owner rotation. A club with no announced roster, or no stored line for either side of that pair, is Odds TBD." }));
     page.appendChild(el("p", { text: "Among clubs that have both means, the league is their average OPS and average ERA. A club win percentage is o² / (o² + e²), where o is the club OPS divided by the league OPS and e is the club ERA divided by the league ERA. One game is the log5 of those two win percentages: (a × (1 − b)) / (a × (1 − b) + b × (1 − a)). The series chance is the probability of reaching 4 wins first from the wins already stored, with each remaining game independent at that game probability. After a round is re-seeded, the next pairing is a new projection." }));
     page.appendChild(el("p", { text: "The bracket also shows a Monte Carlo from the club indexes: one game is 1 / (1 + exp(−(index A − index B) / 80)), with no home-field edge. Four thousand draws use a fixed seed. A finished series is recorded as 1 and 0, not resimulated. A shown 0.0 means that side won none of the draws." }));
+    page.appendChild(el("h3", { text: "Single-game records" }));
+    page.appendChild(el("p", { text: "The Records page lists one-game highs from the box scores: hits, home runs, runs batted in, total bases, runs, stolen bases, walks, pitcher strikeouts, and innings. Total bases are H + 2B + 2×3B + 3×HR. The list is the top 10, and a tie at the tenth line stays." }));
     page.appendChild(el("h3", { text: "Leaders" }));
     page.appendChild(el("p", { text: "The Leaders page counts the played games. Batting average and OPS need 10 plate appearances. OPS is on-base percentage plus slugging. ERA and WHIP need 5 innings. ERA is 27 × ER / outs, and a half hundredth rounds to the even hundredth, so 1.125 is 1.12. WHIP is (H + BB) / IP and rounds half up. Counting lists are the top 10, and a tie at tenth place stays. A new game is on the board when it is in the archive." }));
     page.appendChild(el("h3", { text: "Peak 162" }));

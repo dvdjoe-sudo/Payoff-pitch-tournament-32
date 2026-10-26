@@ -65,6 +65,10 @@ Taken only from recorded lines:
 
 A club's chance to win one game against another is 1 / (1 + exp(−(index A − index B) / 80)). There is no home-field edge. Each series is played out to 4 wins from the games already on the book. The bracket then reseeds the way [BRACKET.md](BRACKET.md) describes, including a fresh F-02 when the one-loss finalist wins F-01. Four thousand draws use a fixed seed, so the file does not change between rebuilds. A finished series is recorded as 1 for the winner and 0 for the loser, not resimulated. A shown 0.0 means that side won none of the 4,000 draws. It is not a mathematical zero. Joe can change the scale in `scripts/odds.py` if the gaps should produce more upsets. The simulation does not edit a score or a seed.
 
+## Single-game records
+
+The Records page lists one-game highs from the batting and pitching lines already stored. It does not invent a line. Total bases are H + 2B + 2×3B + 3×HR from that game's batting line. Innings are the outs on that game's pitching line, shown in thirds. Each list is the top 10, and a tie with the tenth line stays. The milestone bars below those lists are unchanged.
+
 ## Leaders page
 
 The Leaders page reads the played games already on the site. It does not invent a stat and it does not change a box score. Plate appearances, the 10 plate-appearance minimum, the 5-inning minimum, and the counting tie rule are the same limits as [LEADERS.md](LEADERS.md).
