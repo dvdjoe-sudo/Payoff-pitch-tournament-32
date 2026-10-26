@@ -420,7 +420,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup
 
-- 1 Herman Long SS R
+- 1 Rabbit Maranville SS R
 - 2 Chipper Jones DH S
 - 3 Hank Aaron LF R
 - 4 Eddie Mathews 3B L
