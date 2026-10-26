@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Milestone feed
+
+The home page, the Results page, and each player page list feats from the box scores: a cycle, a shutout, a complete game, a multi-home-run game, a four-hit game, a game of 10 or more strikeouts, and a no-hitter. A complete game is a start that recorded every out for that club. A shutout is that complete game with no runs allowed. A combined shutout names every pitcher who recorded an out. No cycle is on the book. The definitions are on the Formulas page. The lines wrap on a phone. A new game is on the list when it is in the archive. The service worker cache is payoff-pitch-v38. No game result was changed.
+
 ## 2026-10-26 — Team batting and pitching
 
 The Team stats page sums each club's batting and pitching lines from the box scores. Batting is ranked by OPS. Pitching is ranked by ERA, lowest first. A club with no game is listed as not played yet. The rates are on the Formulas page. Each club page links to its line. The rows stay on a phone. A new game moves the ranks when it is in the archive. The service worker cache is payoff-pitch-v37. No game result was changed.

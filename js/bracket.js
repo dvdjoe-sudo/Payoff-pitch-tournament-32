@@ -855,6 +855,141 @@
     return { nohitters: nohitters, highK: highK, big: big };
   }
 
+  function boxFeats() {
+    var feats = [];
+    var kindOrder = { cycle: 0, multihr: 1, fourhit: 2, nohitter: 3, shutout: 4, combined: 5, complete: 6, tenk: 7 };
+    state.data.games.forEach(function (game, gameIndex) {
+      var found = [];
+      (game.batting || []).forEach(function (line) {
+        var hits = nz(line.h);
+        var doubles = nz(line.doubles);
+        var triples = nz(line.triples);
+        var homers = nz(line.hr);
+        var singles = hits - doubles - triples - homers;
+        var who = [{ team: line.team, id: line.player_id, name: line.name }];
+        if (singles >= 1 && doubles >= 1 && triples >= 1 && homers >= 1) {
+          found.push({
+            kind: "cycle",
+            title: "Cycle",
+            players: who,
+            text: singles + " single, " + doubles + " double, " + triples + " triple, " + homers + " home run"
+          });
+        }
+        if (homers >= 2) {
+          found.push({ kind: "multihr", title: homers + " home runs", players: who, text: homers + " HR" });
+        }
+        if (hits >= 4) {
+          found.push({ kind: "fourhit", title: hits + " hits", players: who, text: hits + " H" });
+        }
+      });
+      var byTeam = {};
+      (game.pitching || []).forEach(function (line) {
+        if (!byTeam[line.team]) byTeam[line.team] = [];
+        byTeam[line.team].push(line);
+        if (nz(line.k) >= 10) {
+          found.push({
+            kind: "tenk",
+            title: nz(line.k) + " strikeouts",
+            players: [{ team: line.team, id: line.player_id, name: line.name }],
+            text: nz(line.k) + " K in " + ipLabel(nz(line.outs)) + " IP"
+          });
+        }
+        if (line.appearance_order === 1 && nz(line.h) === 0 && nz(line.outs) >= 27) {
+          found.push({
+            kind: "nohitter",
+            title: "No-hitter",
+            players: [{ team: line.team, id: line.player_id, name: line.name }],
+            text: ipLabel(nz(line.outs)) + " IP, 0 H, " + nz(line.k) + " K"
+          });
+        }
+      });
+      Object.keys(byTeam).forEach(function (code) {
+        var lines = byTeam[code].filter(function (line) { return nz(line.outs) > 0; });
+        var starter = null;
+        lines.forEach(function (line) { if (line.appearance_order === 1) starter = line; });
+        var opp = code === game.home ? game.away : game.home;
+        var blanked = nz(game.score[opp]) === 0;
+        if (starter && lines.length === 1) {
+          found.push({
+            kind: "complete",
+            title: "Complete game",
+            players: [{ team: starter.team, id: starter.player_id, name: starter.name }],
+            text: ipLabel(nz(starter.outs)) + " IP, " + nz(starter.r) + " R"
+          });
+          if (blanked) {
+            found.push({
+              kind: "shutout",
+              title: "Shutout",
+              players: [{ team: starter.team, id: starter.player_id, name: starter.name }],
+              text: ipLabel(nz(starter.outs)) + " IP, 0 R"
+            });
+          }
+        } else if (blanked && lines.length > 1) {
+          found.push({
+            kind: "combined",
+            title: "Combined shutout",
+            players: lines.map(function (line) { return { team: line.team, id: line.player_id, name: line.name }; }),
+            text: lines.map(function (line) { return ipLabel(nz(line.outs)) + " IP"; }).join(", ")
+          });
+        }
+      });
+      found.sort(function (a, b) {
+        return kindOrder[a.kind] - kindOrder[b.kind] || a.players[0].name.localeCompare(b.players[0].name);
+      });
+      found.forEach(function (item) {
+        item.game = game;
+        item.order = gameIndex;
+        feats.push(item);
+      });
+    });
+    return feats;
+  }
+
+  function playerFeats(code, id) {
+    return boxFeats().filter(function (item) {
+      return item.players.some(function (player) { return player.team === code && player.id === id; });
+    });
+  }
+
+  function featItem(item) {
+    var row = el("li", { class: "feat-row" });
+    row.appendChild(el("span", { class: "feat-kind", text: item.title }));
+    var who = el("span", { class: "feat-who" });
+    item.players.forEach(function (player, index) {
+      if (item.players.length === 1) {
+        var team = state.byCode[player.team];
+        if (team) who.appendChild(logo(team, team.name + " mark", true));
+      }
+      who.appendChild(linkPlayer(player.team, player.id, player.name));
+      if (index < item.players.length - 1) who.appendChild(document.createTextNode(", "));
+    });
+    row.appendChild(who);
+    row.appendChild(el("span", { class: "feat-line", text: item.text }));
+    var spot = el("span", { class: "feat-game" });
+    if (item.game.date) spot.appendChild(document.createTextNode(item.game.date + " · "));
+    spot.appendChild(linkGame(item.game.id));
+    row.appendChild(spot);
+    return row;
+  }
+
+  function featList(feats) {
+    var list = el("ol", { class: "feat-list" });
+    feats.forEach(function (item) { list.appendChild(featItem(item)); });
+    return list;
+  }
+
+  function milestoneFeed() {
+    var feats = boxFeats();
+    var section = el("section", { class: "feat-feed", id: "milestones" });
+    section.appendChild(el("h2", { text: "Milestones" }));
+    section.appendChild(el("p", { class: "note", text: "Taken from the box scores: a cycle, a shutout, a complete game, a multi-home-run game, a four-hit game, a game of 10 or more strikeouts, and a no-hitter. A new game is on this list when it is in the archive." }));
+    var cycles = feats.filter(function (item) { return item.kind === "cycle"; });
+    if (!cycles.length) section.appendChild(el("p", { class: "note", text: "No cycle is on the book. A cycle is a single, a double, a triple, and a home run in one batting line." }));
+    if (!feats.length) section.appendChild(el("p", { text: "No milestone is on the book." }));
+    else section.appendChild(featList(feats));
+    return section;
+  }
+
   function bump(map, team, id, name) {
     var key = team + "|" + id;
     if (!map[key]) map[key] = { team: team, id: id, name: name };
@@ -1057,6 +1192,7 @@
     var root = el("div");
     var today = onThisDayCard();
     if (today) root.appendChild(today);
+    root.appendChild(milestoneFeed());
     var select = el("select", { id: "path-select" });
     select.appendChild(el("option", { value: "", text: "All clubs" }));
     state.data.teams.slice().sort(function (a, b) { return a.seed - b.seed; }).forEach(function (team) {
@@ -2205,6 +2341,10 @@
         player.grades.map(function (item) { return [linkGame(item.game), item.grade]; })
       ));
     }
+    var ownFeats = playerFeats(code, id);
+    page.appendChild(el("h3", { text: "Milestones" }));
+    if (!ownFeats.length) page.appendChild(el("p", { text: "No cycle, shutout, complete game, multi-home-run game, four-hit game, 10-strikeout game, or no-hitter is in this player's box scores." }));
+    else page.appendChild(featList(ownFeats));
     var batLog = player.log.filter(function (item) { return item.side === "bat"; });
     var pitLog = player.log.filter(function (item) { return item.side === "pit"; });
     if (batLog.length) {
@@ -3321,6 +3461,7 @@
     var page = el("article", { class: "stack" });
     page.appendChild(el("h2", { text: "Results" }));
     page.appendChild(el("p", { class: "note", text: "Every played game, by the date stored on that game. The score is the box score. A game with no date is listed after the dated days." }));
+    page.appendChild(milestoneFeed());
     if (!keys.length) page.appendChild(el("p", { text: "No games are on the book." }));
     keys.forEach(function (key) {
       var day = el("section", { class: "score-day" });
@@ -3972,6 +4113,8 @@
     page.appendChild(el("p", { text: "An upcoming or in-progress series shows a projection. It is not a result and it does not change a score. Offense is the mean Peak 162 OPS on the owner lineup. Pitching is the mean Peak 162 ERA on the owner rotation. A club with no announced roster, or no stored line for either side of that pair, is Odds TBD." }));
     page.appendChild(el("p", { text: "Among clubs that have both means, the league is their average OPS and average ERA. A club win percentage is o² / (o² + e²), where o is the club OPS divided by the league OPS and e is the club ERA divided by the league ERA. One game is the log5 of those two win percentages: (a × (1 − b)) / (a × (1 − b) + b × (1 − a)). The series chance is the probability of reaching 4 wins first from the wins already stored, with each remaining game independent at that game probability. After a round is re-seeded, the next pairing is a new projection." }));
     page.appendChild(el("p", { text: "The bracket also shows a Monte Carlo from the club indexes: one game is 1 / (1 + exp(−(index A − index B) / 80)), with no home-field edge. Four thousand draws use a fixed seed. A finished series is recorded as 1 and 0, not resimulated. A shown 0.0 means that side won none of the draws." }));
+    page.appendChild(el("h3", { text: "Milestones" }));
+    page.appendChild(el("p", { text: "The home page, the Results page, and each player page list feats from the box scores. A cycle is a single, a double, a triple, and a home run in one batting line. Singles are hits minus doubles, triples, and home runs. A multi-home-run game is 2 or more home runs in one line. A four-hit game is 4 or more hits in one line. A 10-strikeout game is 10 or more strikeouts in one pitching line. A no-hitter is a start of at least 27 outs with 0 hits. A complete game is a start that recorded every out for that club. A shutout is that complete game when the opponent scored 0. A combined shutout is a game the opponent did not score, with more than one pitcher recording an out. A pitcher who recorded no out is left off that line. A new game is on the list when it is in the archive." }));
     page.appendChild(el("h3", { text: "Single-game records" }));
     page.appendChild(el("p", { text: "The Records page lists one-game highs from the box scores: hits, home runs, runs batted in, total bases, runs, stolen bases, walks, pitcher strikeouts, and innings. Total bases are H + 2B + 2×3B + 3×HR. The list is the top 10, and a tie at the tenth line stays." }));
     page.appendChild(el("h3", { text: "Team stats" }));

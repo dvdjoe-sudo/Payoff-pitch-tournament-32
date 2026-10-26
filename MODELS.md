@@ -61,6 +61,19 @@ Taken only from recorded lines:
 - High-strikeout game: a pitching line with at least 10 strikeouts.
 - Big scoring game: a club score of at least 10 runs.
 
+## Milestone feed
+
+The home page, the Results page, and each player page list feats from the box scores. A line qualifies on the numbers recorded in that one game. The feed does not invent a line and it does not change a score. A new game is on the list when it is in the archive.
+
+- Cycle: one batting line with at least one single, one double, one triple, and one home run. Singles are H − 2B − 3B − HR.
+- Multi-home-run game: one batting line with at least 2 home runs.
+- Four-hit game: one batting line with at least 4 hits.
+- Ten-strikeout game: one pitching line with at least 10 strikeouts.
+- No-hitter: a start (`appearance_order` 1) of at least 27 outs with 0 hits.
+- Complete game: the starter recorded every out his club recorded in that game.
+- Shutout: that complete game, and the opponent scored 0.
+- Combined shutout: the opponent scored 0 and more than one pitcher recorded an out. A pitcher who recorded no out is not named.
+
 ## Monte Carlo series and title odds
 
 `feed/odds.json` is a second display model, rebuilt by `scripts/build_leaders.py`. The bracket and the series pages use it when the file is present. The 0.55 higher-seed model above stays in the page for a fallback and is still the closed form in [MODELS.md](MODELS.md).
