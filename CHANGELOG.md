@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Clemens ERA
+
+Roger Clemens allowed 2 earned runs in 48 outs, 16.0 innings. ERA is 27 × 2 / 48 = 1.125. Baseball-Reference rounds a half hundredth to the even hundredth, so the printed ERA is 1.12. The leaders page and the player page had been rounding that half up to 1.13. Carl Hubbell, 1 earned run in 8.0 innings, is the same 1.125 and now prints 1.12 as well. The innings and the earned runs were not changed. WHIP still rounds half up. The service worker cache is payoff-pitch-v28.
+
 ## 2026-10-26 — Boston series dates
 
 Joe ruled that every game of R1-03, Boston against Tampa Bay, was played on 2026-10-23. All seven game dates are that day. Games 1 and 2 had been 2026-10-24, and Games 3 through 7 had no date. Scores, lines, and decisions are unchanged. The service worker cache is payoff-pitch-v27.

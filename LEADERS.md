@@ -11,7 +11,7 @@ Two systems, one book. R1-01 was played under APBA and adopted into the tourname
 - Plate appearances: AB + BB + HBP + SAC + SF as recorded. In the Payoff Pitch series, sacrifice flies are folded into the single SAC category and SF is not split out, so those plate appearances ride in SAC, and OBP uses SF as recorded (0 where the source does not split it).
 - Home runs allowed is recorded for the Payoff Pitch series only. The APBA-played R1-01 records do not carry it, so no tournament HR-allowed leaderboard is kept.
 - Rate hitting (AVG, OBP, SLG): 10 plate appearances.
-- Rate pitching (ERA, WHIP): 5 innings, which is 15 outs. ERA is 27 × ER / outs, rounded half up. 1 earned run in 8 innings is 1.13.
+- Rate pitching (ERA, WHIP): 5 innings, which is 15 outs. ERA is 27 × ER / outs. A half hundredth rounds to the even hundredth, the Baseball-Reference rule, so 1 earned run in 8 innings (1.125) is 1.12. WHIP still rounds half up.
 - Counting tables list the top 10, with ties at the cutoff included. A counting row needs at least 1 of that stat.
 - Innings are baseball innings: 7.2 is seven innings and two outs.
 
@@ -387,8 +387,8 @@ At least 5 innings.
 | Jonathan Papelbon | Boston Red Sox | 0.00 | 5.1 | 0 | 6 |
 | Willie Hernandez | Detroit Tigers | 0.87 | 10.1 | 1 | 7 |
 | Cy Young | Boston Red Sox | 1.08 | 8.1 | 1 | 9 |
-| Roger Clemens | Boston Red Sox | 1.13 | 16.0 | 2 | 30 |
-| Carl Hubbell | San Francisco Giants | 1.13 | 8.0 | 1 | 9 |
+| Roger Clemens | Boston Red Sox | 1.12 | 16.0 | 2 | 30 |
+| Carl Hubbell | San Francisco Giants | 1.12 | 8.0 | 1 | 9 |
 | Mickey Lolich | Detroit Tigers | 1.29 | 7.0 | 1 | 8 |
 | Pedro Martinez | Boston Red Sox | 1.59 | 17.0 | 3 | 22 |
 | Zac Gallen | Arizona Diamondbacks | 2.00 | 9.0 | 2 | 8 |
