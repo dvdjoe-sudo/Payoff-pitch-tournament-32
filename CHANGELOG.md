@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-26 — Club colors on the team page and the bracket
+
+Each club in the 32-team field has a primary and a secondary color in `data/team_colors.json`, matched to the club as it is named in the field. Los Angeles is Dodger blue, Montreal is the Expos tricolor, the Philadelphia Athletics are navy, Oakland is green and gold, Cleveland is the Guardians' navy and red, and Miami is black and blue. The team-page header sits on the primary color, with light or dark text chosen by contrast. Roster slot chips use the same pair. On the bracket, a club row keeps a color bar and a swatch, and the name takes a team color only when that color stays readable on the card. Winners stay in the site's winner color. The gold theme is unchanged, and the same rules hold in dark mode. The service worker cache is payoff-pitch-v12. No game result was changed.
+
 ## 2026-10-26 — Roster tables fit a phone
 
 Team-page lineup, bench, rotation, and bullpen tables keep a narrow left-aligned slot, a wrapping player name, and a compact position. The hand, the years on the owner card, and the Peak 162 line stack under the name. Converted Payoff Pitch cards use the same layout. Nothing in the tables runs off the side of a phone. The service worker cache is payoff-pitch-v11. No roster line and no game result was changed.
