@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Texas Rangers Rubén Sierra for Kenny Rogers (owner-approved)
+
+Texas adds switch-hitting outfielder **Rubén Sierra** (`sierrru01`) as sixth bench hitter and backup RF/OF using only Rangers seasons **1986–1992, 2000–2001 and 2003**, excluding all other franchise performance. Kenny Rogers (`rogerke01`) becomes inactive in the bullpen, retaining his original genuine historical converted pitcher card. Darold Knowles takes RP6; Wetteland, Feliz, Zimmerman, Kern and Jeff Russell remain. The original nine hitters, **Corey Seager batting ninth at DH**, and all five starters are unchanged. Active 26: **9 lineup / 6 bench / 5 starters / 6 relievers**. All historical cards, played games, box scores, results and dice/FAC logs are preserved. Sierra's authentic Hitter v0.5 playable conversion is pending, and the Rangers-only five-year Peak 162 display awaits a verified Lahman build. PED matters remain separate.
+
 ## 2026-10-27 — Milwaukee Brewers Ben Oglivie for Freddy Peralta (owner-approved)
 
 Milwaukee's sixth bench hitter is Ben Oglivie (left-handed LF/corner-OF reserve) using **Milwaukee Brewers franchise statistics from 1978–1986 only**. Freddy Peralta leaves the active bullpen and retains his authentic original converted historical card. The six remaining relievers are Josh Hader, Devin Williams, Rollie Fingers, Dan Plesac, Ken Sanders and Jeremy Jeffress. All nine original starters, **Prince Fielder batting fourth at DH**, and the five-man rotation remain unchanged. Active roster **9/6/5/6**, 26 unique players. No historical cards, previously played games, dice/FAC logs, results or box scores were modified. Oglivie's Milwaukee-only five-year Peak 162 (1978–1982) is verified from Lahman; the playable genuine frozen Hitter v0.5 conversion remains pending. No invented card ratings or statistics. PED reviews remain separate.

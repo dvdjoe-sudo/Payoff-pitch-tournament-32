@@ -1411,6 +1411,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF4 Rusty Greer 9
 - CI/3B Buddy Bell 8
 - BAT/1B Mark Teixeira 5
+- OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)
 
 ### Rotation
 
@@ -1427,8 +1428,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 - SU2 Jeff Zimmerman 3
 - FIRE Jim Kern 4
 - MID/LATE Jeff Russell 10
-- LONG/SWING Kenny Rogers 13
 - LH FIRE Darold Knowles 5
+
+### Approved active roster amendment (2026-10-27)
+
+Rubén Sierra (`sierrru01`) joins the **Texas Rangers** active 26 as **sixth bench hitter**, a switch-hitting pinch-hit power option and **right-field / corner-outfield reserve**. Only his **Texas Rangers franchise seasons (1986–1992, 2000–2001, 2003)** qualify, never Oakland, New York, Detroit, Toronto, Cincinnati, Chicago, Seattle or Minnesota statistics.
+
+Kenny Rogers (`rogerke01`) leaves the **active bullpen** but keeps any existing original historical converted pitcher card. Darold Knowles advances from RP7 to **RP6**; the other five active relievers stay **John Wetteland, Neftalí Feliz, Jeff Zimmerman, Jim Kern and Jeff Russell**. **The entire starting nine and five-man rotation remain unchanged, including Corey Seager starting at DH batting ninth**. The Rangers now have **9 lineup / 6 bench / 5 rotation / 6 bullpen** with 26 unique players.
+
+All original historical player cards, completed games, box scores, FAC/dice logs and tournament results remain unchanged. Sierra's verified Texas-only Peak 162 display is awaiting a Lahman generator rebuild and his genuine frozen **Hitter v0.5** playable card conversion remains pending; **no invented card ratings or statistics** have been supplied. PED eligibility questions remain separate.
 
 ## 25. Toronto Blue Jays (TOR)
 

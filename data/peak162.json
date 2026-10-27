@@ -8280,18 +8280,6 @@
      1971
     ]
    },
-   "LONG/SWING Kenny Rogers 13": {
-    "lahman_id": "rogerke01",
-    "status": "ok",
-    "text": "Peak 162 with Texas Rangers (1995–2004). Years away from the franchise inside this span are not in the totals. 65 G, 28-19, 0 SV, 415.2 IP, 450 H, 203 ER, 144 BB, 244 SO, 4.40 ERA, 1.43 WHIP, 5.3 K/9",
-    "years": [
-     1995,
-     2000,
-     2001,
-     2002,
-     2004
-    ]
-   },
    "MID/LATE Jeff Russell 10": {
     "lahman_id": "russeje01",
     "status": "ok",
@@ -8303,6 +8291,12 @@
      1991,
      1992
     ]
+   },
+   "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)": {
+    "lahman_id": "sierrru01",
+    "status": "unavailable",
+    "text": "Peak stats unavailable",
+    "reason": "Awaiting verified Texas Rangers-only Lahman Peak 162 rebuild; no invented statistics"
    },
    "OF4 Rusty Greer 9": {
     "lahman_id": "greerru01",

@@ -805,6 +805,15 @@ def main() -> None:
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
 
+
+            if club == "TEX" and pid == "sierrru01":
+                # Use Rangers stints only. The club-to-team map also excludes
+                # Sierra's seasons with every other MLB franchise.
+                sierra_texas_years = set(range(1986, 1993)) | {2000, 2001, 2003}
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in sierra_texas_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in sierra_texas_years}
             if club == "MIL" and pid == "oglivbe01":
                 # Ben Oglivie's Brewers era only; exclude all Boston/Detroit
                 # performance, including when reprocessing future seasons.
@@ -960,6 +969,7 @@ def main() -> None:
         ("NYM", "BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)", "johnsho01"),
         ("OAK", "IF2 Eric Chavez 3B (Oakland 1998-2010)", "chaveer01"),
         ("MIL", "OF2 Ben Oglivie LF (Milwaukee 1978-1986)", "oglivbe01"),
+        ("TEX", "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)", "sierrru01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -980,6 +990,16 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    rangers_sierra = row("TEX", "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)")
+    if (rangers_sierra.get("status") != "ok"
+            or rangers_sierra.get("lahman_id") != "sierrru01"
+            or not rangers_sierra.get("years")
+            or not all(y in (set(range(1986, 1993)) | {2000, 2001, 2003})
+                       for y in rangers_sierra["years"])
+            or not rangers_sierra.get("text", "").startswith("Peak 162 with Texas Rangers")):
+        raise SystemExit("Rubén Sierra Peak 162 must use Texas Rangers franchise-only seasons")
+    if "LONG/SWING Kenny Rogers 13" in clubs["TEX"]:
+        raise SystemExit("Inactive Kenny Rogers may not appear in active Texas Peak 162")
     brewers_oglivie = row("MIL", "OF2 Ben Oglivie LF (Milwaukee 1978-1986)")
     if (brewers_oglivie.get("status") != "ok"
             or brewers_oglivie.get("lahman_id") != "oglivbe01"

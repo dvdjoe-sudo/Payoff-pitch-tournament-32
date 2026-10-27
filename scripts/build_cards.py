@@ -590,6 +590,7 @@ def build():
     apply_mets_roster_amendment(cards, rosters)
     apply_oakland_roster_amendment(cards, rosters)
     apply_milwaukee_roster_amendment(cards, rosters)
+    apply_texas_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -609,6 +610,7 @@ AUTHORIZED_HITTERS = (
     "NYM|johnsho01",
     "OAK|chaveer01",
     "MIL|oglivbe01",
+    "TEX|sierrru01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -678,6 +680,55 @@ def retain_empty_team_cards(cards, rosters):
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
 
+
+
+
+def apply_texas_roster_amendment(cards, rosters):
+    """Owner-approved Rubén Sierra for Kenny Rogers, Texas franchise only.
+
+    Sierra's Rangers performance (1986-1992, 2000-2001, 2003) alone
+    qualifies for his future frozen Hitter v0.5 card. Retain Rogers's
+    original archived card and every already played game.
+    """
+    roster = rosters.get("TEX")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "rogerke01"]
+    sierra_id = "sierrru01"
+    found = [p for p in players if p["id"] == sierra_id]
+    if not found:
+        players.append({"group": "bench", "id": sierra_id,
+                        "kind": "hitter", "name": "Rubén Sierra",
+                        "pos": "RF", "slot": 6})
+    elif len(found) != 1:
+        raise SystemExit("Duplicate Texas Rubén Sierra active entry")
+    else:
+        found[0].update(group="bench", kind="hitter", pos="RF", slot=6)
+    sierra_card = cards.get("TEX|" + sierra_id)
+    if sierra_card:
+        sierra_card["spots"] = [{"group": "bench", "slot": 6,
+                                "pos": "RF", "kind": "hitter"}]
+    knowles = [p for p in players if p["id"] == "knowlda01"
+               and p["group"] == "bullpen"]
+    if len(knowles) != 1:
+        raise SystemExit("Darold Knowles missing from Texas bullpen")
+    knowles[0]["slot"] = 6
+    knowles_card = cards.get("TEX|knowlda01")
+    if knowles_card:
+        knowles_card["spots"] = [{"group": "bullpen", "slot": 6,
+                                 "pos": "RP", "kind": "pitcher"}]
+    # Never remove/modify the original TEX|rogerke01 historical pitching card.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Texas approved active roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Texas must have 26 distinct active players")
+    dh = [p for p in players if p["group"] == "lineup" and p["slot"] == 9]
+    if len(dh) != 1 or dh[0]["id"] != "seageco01" or dh[0]["pos"] != "DH":
+        raise SystemExit("Texas Corey Seager DH changed without approval")
 
 
 def apply_milwaukee_roster_amendment(cards, rosters):
