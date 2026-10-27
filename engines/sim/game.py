@@ -89,6 +89,12 @@ HOME_PARK = {
     "STL": "BUSCH STADIUM",
     "TEX": "ARLINGTON STADIUM",
     "TOR": "EXHIBITION STADIUM",
+    # No 1986 card exists for these clubs; the 2024 Season PDF park cards are used.
+    "ARI": "CHASE FIELD",
+    "COL": "COORS FIELD",
+    "MIA": "LOANDEPOT PARK",
+    "TB": "TROPICANA FIELD",
+    "WSH": "NATIONALS PARK",
 }
 
 
@@ -197,10 +203,13 @@ def park_for(code):
     for park in PARKS:
         if park["name"] == name:
             return park
-    path = os.path.join(ROOT, "historical-cards", "reference", "ballparks.json")
-    for park in json.load(open(path)):
-        if park["name"] == name:
-            return park
+    # 1986 cards first; ballparks_2024.json holds the 2024 Season PDF cards
+    # for clubs that have no 1986 park (ARI, COL, MIA, TB, WSH).
+    for fname in ("ballparks.json", "ballparks_2024.json"):
+        path = os.path.join(ROOT, "historical-cards", "reference", fname)
+        for park in json.load(open(path)):
+            if park["name"] == name:
+                return park
     return None
 
 
@@ -411,6 +420,7 @@ class Game:
 
     def _half(self):
         while self.outs < 3:
+            self._substitute_removed()
             self._maybe_change_pitcher(before_batter=True)
             self._plate()
         state = self.pitcher[self.fielding["code"]]
@@ -595,7 +605,11 @@ class Game:
             pending[code] = reason
             return
         pending.pop(code, None)
-        pen = [p for p in self.fielding["bullpen"] if not p["removed"] and p is not player]
+        # A pitcher who has left cannot come back in the same game.
+        self._pitched = getattr(self, "_pitched", {})
+        gone = self._pitched.setdefault(code, set())
+        gone.add(player["id"])
+        pen = [p for p in self.fielding["bullpen"] if not p["removed"] and p["id"] not in gone]
         if not pen:
             self.gap("%s stays in. The bullpen has no remaining arm. The book does not name a replacement." % player["name"])
             return
@@ -607,6 +621,62 @@ class Game:
         }
         self._pitch_line()
         self.say("Pitching change: %s replaces %s. %s" % (nxt["name"], player["name"], reason))
+
+    INFIELD = {"1B", "2B", "3B", "SS"}
+    OUTFIELD = {"LF", "CF", "RF", "OF"}
+
+    def _bench_choice(self, club, pos):
+        """Same position first, then the same side of the field, then anyone.
+        The book names no replacement rule; this is a usage choice."""
+        used = self._used_bench.setdefault(club["code"], set())
+        bench = [p for p in club["bench"] if not p["removed"] and p["id"] not in used]
+        if not bench:
+            return None
+
+        def plays(player, group):
+            spots = {player.get("pos")} | {r.get("pos") for r in player.get("positions") or []}
+            return bool(spots & group)
+
+        if pos and pos != "DH":
+            for group in ({pos}, self.INFIELD if pos in self.INFIELD else
+                          self.OUTFIELD if pos in self.OUTFIELD else {pos}):
+                for player in bench:
+                    if plays(player, group):
+                        return player
+            # A catcher must be replaced; anyone else catches if no C is left.
+        return bench[0]
+
+    def _substitute_removed(self):
+        """An injured or removed player leaves for the rest of this game only.
+        Each game loads its clubs fresh, so he is back the next game.
+        Batters come off the bench; pitchers come from the bullpen
+        (_maybe_change_pitcher)."""
+        self._used_bench = getattr(self, "_used_bench", {})
+        for club in (self.batting, self.fielding):
+            changed = False
+            for i, player in enumerate(club["lineup"]):
+                if not player["removed"]:
+                    continue
+                pos = player["pos"]
+                sub = self._bench_choice(club, pos)
+                if sub is None:
+                    if not player.get("_no_sub_noted"):
+                        player["_no_sub_noted"] = True
+                        self.gap("%s cannot be replaced. The bench is used up. He stays in." % player["name"])
+                    continue
+                self._used_bench[club["code"]].add(sub["id"])
+                self.box.setdefault(club["code"] + "|" + sub["id"], _empty_line(sub))
+                sub["pos"] = pos
+                sub["slot"] = player["slot"]
+                club["lineup"][i] = sub
+                for b, runner in enumerate(self.bases):
+                    if runner is player:
+                        self.bases[b] = sub
+                changed = True
+                self.say("Substitution: %s replaces %s (%s) for the rest of this game." % (
+                    sub["name"], player["name"], pos))
+            if changed:
+                self._align(club)
 
     def _no_more_batters(self):
         if self.half == "top" and self.inning >= 9 and self.score[self.home["code"]] > self.score[self.away["code"]]:
@@ -2428,7 +2498,7 @@ class Game:
         self.dice.take()
         if result == "CAUGHT":
             self._out_runner(base, "picked off")
-            self._line_id(self.batting["code"], runner["id"], cs=1)
+            self._line_id(self.batting["code"], runner["id"], po=1)
         elif result == "BALK":
             self.say("Balk. Runners advance 1 (page 18).")
             self._runners_advance(1)
@@ -2449,10 +2519,16 @@ class Game:
         self.say("Pickoff. Hold %s, percentile %02d -> %s (page 18)." % (hold, pct, result))
         self.dice.take()
         if result == "CAUGHT":
-            base = 0 if self.bases[0] and self.bases[0]["id"] == batter["id"] else self._lead_base()
+            base = next((b for b in (0, 1, 2) if self.bases[b] and self.bases[b]["id"] == batter["id"]), None)
+            if base is None:
+                base = self._lead_base()
             if base is not None:
+                picked = self.bases[base]
                 self._out_runner(base, "picked off")
-                self._line_id(self.batting["code"], batter["id"], cs=1)
+                # A pickoff is not a caught stealing unless he was running.
+                # The auto-steal pickoff fires before the jump check, so it is
+                # scored as a pickoff (po), not cs.
+                self._line_id(self.batting["code"], picked["id"], po=1)
         elif result == "BALK":
             self.say("Balk. Runners advance 1 (page 18).")
             self._runners_advance(1)
@@ -2590,7 +2666,7 @@ class Game:
             row[key] = row.get(key, 0) + amount
 
     def _line_id(self, code, pid, **add):
-        row = self.box.setdefault(code + "|" + pid, {"id": pid, "name": pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "sf": 0, "sh": 0, "tb": 0})
+        row = self.box.setdefault(code + "|" + pid, {"id": pid, "name": pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0})
         for key, amount in add.items():
             row[key] = row.get(key, 0) + amount
 
@@ -2627,7 +2703,7 @@ def _empty_line(batter):
     return {
         "id": batter["id"], "name": batter["name"], "pos": batter["pos"],
         "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0,
-        "hbp": 0, "sb": 0, "cs": 0, "sf": 0, "sh": 0, "tb": 0,
+        "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0,
     }
 
 

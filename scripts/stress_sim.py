@@ -45,6 +45,8 @@ class Checked(G.Game):
         self.pa_by_pitcher = collections.Counter()
         self.removed_batted = []
         self.restarts = 0
+        self.matchups = []   # [batter key, pitcher key, ab, h, tb, bb, hbp, so, reached_without_hit]
+        self.steals = []     # [runner key, jump, letter, catcher arm, outcome, auto]
         super().__init__(*a, **k)
         for name in PATHS:
             orig = getattr(self, name, None)
@@ -55,6 +57,17 @@ class Checked(G.Game):
                 self.calls[_n] += 1
                 return _o(*args, **kw)
             setattr(self, name, wrap)
+
+    def _resolve_steal(self, base, letter, runner):
+        key = self.batting["code"] + "|" + runner["id"]
+        before = dict(self.box.get(key) or {})
+        arm = self._arm_of(self._fielder("C"))
+        super()._resolve_steal(base, letter, runner)
+        after = self.box.get(key) or {}
+        out = "sb" if after.get("sb", 0) > before.get("sb", 0) else \
+            "cs" if after.get("cs", 0) > before.get("cs", 0) else "none"
+        st = runner.get("steal") or {}
+        self.steals.append([key, st.get("jump"), letter, arm, out, base])
 
     def _check_state(self, where):
         if self.outs > 3:
@@ -77,7 +90,15 @@ class Checked(G.Game):
         pkey = self.fielding["code"] + "|" + state["player"]["id"]
         if batter["removed"]:
             self.removed_batted.append(batter["name"])
+        bkey = club["code"] + "|" + batter["id"]
+        line0 = dict(self.box.get(bkey) or {})
         super()._plate()
+        line1 = self.box.get(bkey) or {}
+        d = {f: line1.get(f, 0) - line0.get(f, 0) for f in ("ab", "h", "tb", "bb", "hbp", "so")}
+        on = any(b is not None and b["id"] == batter["id"] for b in self.bases)
+        if self.order_index[club["code"]] != order_before:
+            self.matchups.append([bkey, pkey, d["ab"], d["h"], d["tb"], d["bb"], d["hbp"], d["so"],
+                                  int(d["ab"] == 1 and d["h"] == 0 and d["so"] == 0 and on)])
         said = [l for l in self.log[before:] if " vs " in l and l.startswith(batter["name"] + " (")]
         if self.order_index[club["code"]] == order_before:
             self.restarts += 1
@@ -154,6 +175,8 @@ def one(job):
         "calls": dict(g.calls), "wp": rep["wp"], "zero_bf": zero_bf,
         "dp": len(re.findall(r"[Dd]ouble play", joined)),
         "gaps": rep["gaps"], "safety30": "Safety stop at 30" in joined,
+        "matchups": g.matchups, "steals": g.steals,
+        "subs": len(re.findall(r"^Substitution: ", joined, re.M)),
     }
 
 

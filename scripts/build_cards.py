@@ -79,6 +79,7 @@ writes byte-identical files.
 
 import csv
 import json
+import fix_jump_from_attempts as jump_fix
 import math
 import os
 import sys
@@ -375,6 +376,31 @@ def aggregate_tournament(key, lines, decisions, master_ids):
 ERROR_SCALE_MARK = "rulebook p2: 1 worst, 5 best (set-file digit flipped)"
 
 
+OF_ARM_MARK = "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)"
+SET_WORDS = {"Elite", "Great", "Above Average", "Average", "Below Average", "Poor"}
+
+
+def rulebook_of_arm(positions, label=None):
+    """Set files tie outfield arm to the word grade with 8 best; the rulebook
+    (p8), the engine and the 1986 cards use 3 best, 10 worst. Mirror the
+    set's 4-8 band (12 - arm). See scripts/fix_of_arm_scale.py."""
+    if not positions or label not in SET_WORDS:
+        return positions
+    out = []
+    for row in positions:
+        row = dict(row)
+        if row.get("pos") in ("LF", "CF", "RF", "OF") and isinstance(row.get("arm"), int):
+            row["arm"] = 12 - row["arm"]
+        out.append(row)
+    return out
+
+
+def has_of_arm(positions, label=None):
+    return label in SET_WORDS and any(
+        r.get("pos") in ("LF", "CF", "RF", "OF") and isinstance(r.get("arm"), int)
+        for r in positions or [])
+
+
 def rulebook_error_scale(positions, label=None):
     """Set files store the error digit with 1 best; the rulebook (p2), the
     park chart and the 1986 cards use 1 worst, 5 best. See
@@ -517,8 +543,11 @@ def build():
                 entry["card_bat"] = {
                     "bats": card.get("bats"),
                     "throws": card.get("throws"),
-                    "positions": rulebook_error_scale(card.get("positions"), line.get("Fielding")),
+                    "positions": rulebook_of_arm(
+                        rulebook_error_scale(card.get("positions"), line.get("Fielding")),
+                        line.get("Fielding")),
                     "error_scale": ERROR_SCALE_MARK if card.get("positions") else None,
+                    "of_arm_scale": OF_ARM_MARK if has_of_arm(card.get("positions"), line.get("Fielding")) else None,
                     "sections": card.get("sections"),
                     "out_table": card.get("out_table"),
                     "dp": card.get("dp"),
@@ -529,6 +558,8 @@ def build():
                     "arm": line.get("Arm"),
                     "qa_status": hit_row["qa_status"],
                 }
+                # Jump from real attempt rate, calibrated to the 1986 cards.
+                jump_fix.apply(entry)
 
             if key in v2_by_name:
                 v2 = v2_by_name[key]

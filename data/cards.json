@@ -110,6 +110,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -219,7 +220,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "RF",
      "range": "A"
@@ -374,7 +375,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2667,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -873,7 +880,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1374,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -1073,6 +1086,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -1182,7 +1196,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "CF",
      "range": "A"
@@ -1331,7 +1345,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1164,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -1826,7 +1846,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0982,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -1939,6 +1965,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -2048,7 +2075,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -2197,7 +2224,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0403,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -2944,7 +2977,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0509,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -3354,6 +3393,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.015,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -3732,7 +3777,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0575,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -4101,7 +4152,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0534,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -4446,7 +4503,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1319,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -4559,6 +4622,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -4668,7 +4732,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "CF",
      "range": "A"
@@ -4820,7 +4884,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2065,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -5257,7 +5327,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1082,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -5726,7 +5802,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.146,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -6191,7 +6273,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0402,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -6689,7 +6777,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0251,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -6904,6 +6998,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -7153,7 +7248,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0778,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -7237,6 +7338,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -7346,7 +7448,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -7495,7 +7597,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2401,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -7837,7 +7945,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1199,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -8214,7 +8328,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0503,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -8556,7 +8676,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0435,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -9106,7 +9232,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0305,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -9295,6 +9427,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -9404,7 +9537,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -9556,7 +9689,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0686,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -9898,7 +10037,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0641,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -9982,6 +10127,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -10091,7 +10237,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "RF",
      "range": "F"
@@ -10237,7 +10383,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0708,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -10791,7 +10943,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1986,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -11130,7 +11288,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0386,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -11475,7 +11639,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1275,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -11773,6 +11943,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -11882,7 +12053,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -12031,7 +12202,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0725,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -12477,6 +12654,12 @@
    },
    "steal": {
     "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0642,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -13064,6 +13247,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0255,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -13607,7 +13796,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2054,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -14053,7 +14248,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1797,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -14645,7 +14846,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0384,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -15095,7 +15302,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1219,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -15580,6 +15793,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0135,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -15924,7 +16143,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0934,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -16260,7 +16485,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0787,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -16919,7 +17150,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0428,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -17571,7 +17808,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0109,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -17916,7 +18159,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.022,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -18258,7 +18507,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2398,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -18603,7 +18858,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0197,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -18942,7 +19203,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0517,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -19281,7 +19548,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0135,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -19626,7 +19899,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2505,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -19810,6 +20089,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -19919,7 +20199,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "RF",
      "range": "A"
@@ -20071,7 +20351,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1565,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -20413,7 +20699,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0168,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -21016,7 +21308,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0358,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -21100,6 +21398,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -21209,7 +21508,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "RF",
      "range": "F"
@@ -21361,7 +21660,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0304,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -21771,7 +22076,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0782,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -22245,7 +22556,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0511,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -22617,7 +22934,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0863,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -23234,7 +23557,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0142,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -23737,7 +24066,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0955,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -23973,6 +24308,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -24231,7 +24567,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0405,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -24574,6 +24916,12 @@
    },
    "steal": {
     "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0668,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -24741,6 +25089,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -24850,7 +25199,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -25002,7 +25351,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2498,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -25643,7 +25998,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0371,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -25979,7 +26340,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0122,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -26217,6 +26584,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -26475,7 +26843,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0938,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -27048,7 +27422,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0526,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -27238,6 +27618,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -27347,7 +27728,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -27497,6 +27878,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3151,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -27576,6 +27963,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -27685,7 +28073,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "RF",
      "range": "F"
@@ -27831,7 +28219,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1049,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -28176,7 +28570,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0536,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -28518,7 +28918,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0832,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -28898,6 +29304,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0241,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -29242,7 +29654,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0514,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -29731,7 +30149,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2169,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -30284,7 +30708,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0642,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -30626,7 +31056,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1575,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -30971,7 +31407,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0311,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -31402,7 +31844,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0594,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -31955,7 +32403,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2827,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -32143,6 +32597,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -32252,7 +32707,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -32401,7 +32856,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0485,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -32743,7 +33204,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0496,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -33331,7 +33798,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.062,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -33883,7 +34356,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1671,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -34071,6 +34550,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -34180,7 +34660,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -34333,6 +34813,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.328,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -34523,6 +35009,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -34632,7 +35119,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -34787,7 +35274,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0554,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -35337,7 +35830,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.015,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -35679,7 +36178,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1714,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -36058,7 +36563,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0016,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -36612,6 +37123,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.331,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -36956,7 +37473,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0349,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -37040,6 +37563,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -37149,7 +37673,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -37298,7 +37822,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1865,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -37593,6 +38123,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -37848,7 +38379,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1314,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -38193,7 +38730,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0444,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -38538,7 +39081,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1761,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -38880,7 +39429,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1069,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -39222,7 +39777,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0527,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -39779,7 +40340,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0515,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -40115,7 +40682,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0938,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -40457,7 +41030,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0365,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -41014,7 +41593,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0364,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -41464,7 +42049,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1931,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -42121,7 +42712,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1951,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -42464,6 +43061,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3698,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -43377,7 +43980,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2087,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -43719,7 +44328,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0361,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -44096,7 +44711,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0323,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -44542,7 +45163,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1305,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -44884,7 +45511,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0171,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -45229,7 +45862,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1592,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -45574,7 +46213,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1842,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -46026,7 +46671,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.032,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -46646,7 +47297,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1456,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -46756,6 +47413,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -47017,7 +47675,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1367,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -47347,6 +48011,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -47456,7 +48121,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -47608,7 +48273,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1522,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -47985,7 +48656,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0055,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -48684,7 +49361,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1091,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -49056,7 +49739,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1583,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -49140,6 +49829,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -49249,7 +49939,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -49401,7 +50091,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.232,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -49737,7 +50433,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.03,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -49848,6 +50550,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -49957,7 +50660,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -50109,7 +50812,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.103,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -50606,7 +51315,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0964,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -51217,6 +51932,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0218,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -51546,7 +52267,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1758,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -52041,6 +52768,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0273,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -52399,7 +53132,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0801,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -52510,6 +53249,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -52765,7 +53505,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1172,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -53134,7 +53880,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.107,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -53467,7 +54219,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0808,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -54021,7 +54779,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2342,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -54366,7 +55130,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2429,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -54851,7 +55621,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0847,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -55301,7 +56077,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0759,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -55646,7 +56428,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1048,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -56088,7 +56876,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1944,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -56421,7 +57215,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0044,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -56766,7 +57566,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0976,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -57415,7 +58221,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.152,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -57754,7 +58566,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1135,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -58235,7 +59053,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1514,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -58676,7 +59500,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0192,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -59018,7 +59848,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.031,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -59688,7 +60524,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0189,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -60060,6 +60902,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3258,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -60172,6 +61020,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -60281,7 +61130,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "RF",
      "range": "A"
@@ -60433,7 +61282,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1506,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -60816,7 +61671,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0253,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -61190,7 +62051,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0761,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -61564,7 +62431,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2131,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -61906,7 +62779,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0499,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -62280,7 +63159,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0622,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -62834,6 +63719,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -62943,7 +63829,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "RF",
      "range": "A"
@@ -63092,7 +63978,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0594,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -63463,7 +64355,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0568,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -64509,7 +65407,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0464,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -64617,6 +65521,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -64726,7 +65631,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "LF",
      "range": "A"
@@ -64878,7 +65783,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1001,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -65223,7 +66134,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1491,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -65721,7 +66638,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1495,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -66217,7 +67140,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0666,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -66559,7 +67488,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.05,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -66900,7 +67835,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.195,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -67239,7 +68180,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0112,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -67622,7 +68569,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0829,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -67964,7 +68917,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1333,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -68306,7 +69265,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0685,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -68690,7 +69655,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2243,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -69035,7 +70006,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0516,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -69374,7 +70351,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.4167,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -69719,7 +70702,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0566,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -70058,7 +71047,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2441,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -70501,7 +71496,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0909,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -71162,7 +72163,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1404,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -72131,7 +73138,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0896,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -72682,7 +73695,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1574,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -73132,7 +74151,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2148,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -73474,7 +74499,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0676,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -73920,7 +74951,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.088,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -74780,7 +75817,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0249,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -75125,7 +76168,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1089,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -75467,7 +76516,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2304,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -76021,7 +77076,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2313,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -76366,7 +77427,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.3855,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -76743,7 +77810,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0017,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -77125,6 +78198,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0221,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -77778,7 +78857,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0579,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -78123,7 +79208,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0584,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -78465,7 +79556,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1131,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -78808,6 +79905,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3638,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -79153,6 +80256,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3016,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -79494,7 +80603,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0728,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -79862,7 +80977,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0297,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -80201,7 +81322,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1424,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -80745,7 +81872,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.056,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -81088,6 +82221,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3129,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -81537,7 +82676,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0618,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -81873,7 +83018,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0834,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -82215,7 +83366,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0363,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -82554,7 +83711,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0727,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -83002,7 +84165,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.039,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -83480,7 +84649,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0556,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -83820,7 +84995,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.163,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -84572,7 +85753,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0468,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -85022,7 +86209,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1085,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -85470,7 +86663,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1162,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -85661,6 +86860,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -85919,7 +87119,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0911,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -86405,7 +87611,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0242,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -86744,7 +87956,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0305,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -86828,6 +88046,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -86937,7 +88156,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -87089,7 +88308,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1832,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -87644,7 +88869,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0795,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -87728,6 +88959,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -87837,7 +89069,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -87986,7 +89218,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1187,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -88435,7 +89673,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0458,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -89303,7 +90547,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0256,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -89386,6 +90636,7 @@
    "bats": "L",
    "dp": 7,
    "fielding": "Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -89647,7 +90898,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1866,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -90127,7 +91384,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0251,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -90465,7 +91728,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0798,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -90807,7 +92076,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1255,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -90891,6 +92166,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -91000,7 +92276,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "CF",
      "range": "A"
@@ -91149,7 +92425,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0703,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -91598,7 +92880,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0798,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -91943,7 +93231,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.426,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -92805,7 +94099,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0326,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -93147,7 +94447,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2608,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -93597,7 +94903,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0204,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -94041,7 +95353,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1871,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -94418,6 +95736,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0116,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -94863,7 +96187,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0921,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -95208,7 +96538,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1918,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -95540,7 +96876,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0312,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -95987,7 +97329,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0274,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -96330,7 +97678,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.269,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -96813,7 +98167,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0848,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -97254,7 +98614,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1121,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -97592,7 +98958,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0618,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -97937,7 +99309,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0394,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -98384,7 +99762,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1093,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -98724,7 +100108,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1744,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -99275,7 +100665,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0578,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -99654,7 +101050,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0434,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -99994,7 +101396,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0807,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -100336,7 +101744,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0166,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -100787,6 +102201,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3102,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -101444,7 +102864,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0362,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -101789,7 +103215,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1985,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -102134,7 +103566,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.096,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -102784,7 +104222,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0741,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -103269,7 +104713,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1322,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -103611,7 +105061,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0647,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -103953,7 +105409,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2212,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -104492,7 +105954,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1642,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -104834,7 +106302,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1081,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -105281,7 +106755,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0721,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -105664,7 +107144,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0231,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -106114,7 +107600,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1327,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -106438,7 +107930,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2276,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -106783,7 +108281,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0816,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -107231,7 +108735,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1055,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -107576,7 +109086,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1308,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -107915,7 +109431,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0275,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -108467,7 +109989,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0182,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -108947,7 +110475,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0347,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -109289,7 +110823,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.01,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -109736,7 +111276,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1115,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -110186,7 +111732,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1075,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -110528,7 +112080,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.155,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -111080,7 +112638,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2265,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -111632,7 +113196,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1259,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -112078,7 +113648,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1481,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -112461,7 +114037,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0388,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -112545,6 +114127,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -112654,7 +114237,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -112806,7 +114389,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2604,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -113145,7 +114734,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0403,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -113436,6 +115031,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -113531,7 +115127,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -113680,7 +115276,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.4288,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -113764,6 +115366,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -114025,7 +115628,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1507,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -114370,7 +115979,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1777,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -114767,6 +116382,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -115028,7 +116644,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.3854,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -116168,6 +117790,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.02,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -116251,6 +117879,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -116360,7 +117989,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "RF",
      "range": "F"
@@ -116512,7 +118141,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0681,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -116954,7 +118589,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0316,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -117038,6 +118679,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -117299,7 +118941,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1924,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -117641,7 +119289,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0668,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -118086,7 +119740,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0518,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -118425,7 +120085,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0226,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -118767,7 +120433,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1204,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -119253,7 +120925,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0086,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -120111,7 +121789,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0278,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -120453,7 +122137,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2632,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -120798,7 +122488,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1135,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -121353,7 +123049,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1705,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -121803,7 +123505,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0465,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -122148,7 +123856,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0103,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -122626,7 +124340,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0221,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -122969,6 +124689,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3736,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -123412,7 +125138,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2421,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -123855,7 +125587,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2897,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -124197,7 +125935,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1332,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -124577,7 +126321,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0236,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -124919,7 +126669,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0192,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -125366,7 +127122,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.091,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -126026,7 +127788,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.4551,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -126360,7 +128128,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.093,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -126705,7 +128479,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.135,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -127029,7 +128809,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0633,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -127371,7 +129157,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1366,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -127820,7 +129612,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0658,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -128162,7 +129960,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0153,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -128542,7 +130346,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.072,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -128992,7 +130802,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1282,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -129743,7 +131559,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1143,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -130178,7 +132000,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1057,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -130628,7 +132456,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0918,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -131070,7 +132904,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.042,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -131521,6 +133361,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3425,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -131862,7 +133708,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1938,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -132201,7 +134053,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0582,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -132754,7 +134612,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0744,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -133202,6 +135066,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3677,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -133962,7 +135832,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1407,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -134286,7 +136162,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0081,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -134628,7 +136510,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1406,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -135061,7 +136949,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0172,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -135402,7 +137296,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1124,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -135747,7 +137647,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0401,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -136130,7 +138036,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0272,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -136577,7 +138489,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0663,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -136955,7 +138873,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0483,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -137402,7 +139326,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.217,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -137747,7 +139677,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.176,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -138297,7 +140233,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0475,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -138783,7 +140725,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0449,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -139128,7 +141076,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2793,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -139580,7 +141534,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0418,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -139925,7 +141885,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0444,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -140267,7 +142233,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0484,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -140712,7 +142684,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.082,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -141054,7 +143032,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0434,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -141399,7 +143383,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0678,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -141483,6 +143473,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -141592,7 +143583,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "RF",
      "range": "F"
@@ -141741,7 +143732,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1902,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -142434,7 +144431,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1183,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -142875,7 +144878,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0671,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -143220,7 +145229,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1967,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -143565,7 +145580,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1056,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -144112,7 +146133,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1976,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -144556,7 +146583,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0938,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -144901,7 +146934,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1224,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -145239,7 +147278,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2066,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -145728,7 +147773,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0463,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -146073,7 +148124,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2464,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -146628,7 +148685,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.4622,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -146967,7 +149030,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0846,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -147312,7 +149381,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0161,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -147651,7 +149726,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0767,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -148441,7 +150522,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1176,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -148998,7 +151085,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1044,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -149340,7 +151433,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2468,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -149787,7 +151886,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1172,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -150237,7 +152342,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0923,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -150688,7 +152799,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2543,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -151140,7 +153257,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.285,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -151224,6 +153347,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -151333,7 +153457,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "RF",
      "range": "A"
@@ -151485,7 +153609,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0333,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -152395,7 +154525,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1364,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -152734,7 +154870,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0126,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -153079,7 +155221,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2483,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -153528,7 +155676,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0229,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -153709,6 +155863,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -153818,7 +155973,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "CF",
      "range": "A"
@@ -153964,7 +156119,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1383,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -154414,7 +156575,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1456,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -154794,7 +156961,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0534,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -155240,6 +157413,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0157,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -155688,7 +157867,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.086,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -156030,7 +158215,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0464,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -156375,7 +158566,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.3987,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -156720,7 +158917,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0481,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -157369,7 +159572,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0828,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -157655,6 +159864,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -157764,7 +159974,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "CF",
      "range": "A"
@@ -157916,7 +160126,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1751,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -158249,7 +160465,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0578,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -158585,7 +160807,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0032,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -158775,6 +161003,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -159036,7 +161265,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1543,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -159589,7 +161824,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1969,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -160027,7 +162268,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0524,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -160362,7 +162609,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0778,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -160446,6 +162699,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -160555,7 +162809,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -160707,7 +162961,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1395,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -161190,7 +163450,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1521,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -161532,7 +163798,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0655,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -161967,7 +164239,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2141,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -162309,7 +164587,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1429,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -162687,7 +164971,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0506,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -162873,6 +165163,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -163131,7 +165422,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1568,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -163467,7 +165764,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0889,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -163809,7 +166112,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0897,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -164155,6 +166464,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0124,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -164496,7 +166811,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0144,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -165049,7 +167370,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1161,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -165499,6 +167826,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0197,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -166050,7 +168383,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0365,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -166804,7 +169143,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0077,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -167287,7 +169632,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0465,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -167632,7 +169983,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.29,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -168080,7 +170437,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1837,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -168422,7 +170785,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2161,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -168867,7 +171236,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0567,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -169202,7 +171577,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1998,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -169579,7 +171960,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0366,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -169770,6 +172157,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -169879,7 +172267,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -170013,7 +172401,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0652,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -170125,6 +172519,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -170386,7 +172781,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2602,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -170787,7 +173188,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.114,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -171157,7 +173564,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0771,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -171527,7 +173940,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0689,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -171862,7 +174281,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1855,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -172235,7 +174660,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.224,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -172839,7 +175270,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0458,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -173179,7 +175616,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0842,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -173874,6 +176317,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -173983,7 +176427,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -174123,7 +176567,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0996,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -174493,7 +176943,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.011,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -174866,7 +177322,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0229,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -175337,7 +177799,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0261,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -175871,7 +178339,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0088,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -176472,7 +178946,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0353,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -176842,7 +179322,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0542,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -177206,6 +179692,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -177315,7 +179802,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -177464,7 +179951,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 6,
+    "jump_basis": {
+     "attempt_rate": 0.4171,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -177807,6 +180300,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -177916,7 +180410,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -178062,7 +180556,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0522,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -178430,6 +180930,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0246,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -179014,7 +181520,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0875,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -179593,7 +182105,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0032,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -179936,7 +182454,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0282,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -180305,7 +182829,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0202,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -180676,7 +183206,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0506,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -181048,7 +183584,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0319,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -181408,7 +183950,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0541,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -181777,7 +184325,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0385,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -182160,7 +184714,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0186,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -182526,7 +185086,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0426,
+     "attempts": "estimated (no CS kept): SB/0.7",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -182895,7 +185461,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2262,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -183467,6 +186039,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -183576,7 +186149,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -183728,7 +186301,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2164,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -184095,7 +186674,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1835,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -184454,7 +187039,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0444,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -184656,6 +187247,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -184765,7 +187357,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "LF",
      "range": "A"
@@ -184918,6 +187510,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3647,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -185283,7 +187881,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0164,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -186408,7 +189012,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0477,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -186720,6 +189330,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -186829,7 +189440,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -186978,7 +189589,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.186,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -187353,7 +189970,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0545,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -187725,7 +190348,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0587,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -188350,7 +190979,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0254,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -188840,6 +191475,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -188949,7 +191585,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -189101,7 +191737,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2909,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -189463,7 +192105,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1308,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -189828,7 +192476,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1099,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -190561,7 +193215,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0375,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -190894,7 +193554,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0092,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -191189,6 +193855,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -191298,7 +193965,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "RF",
      "range": "F"
@@ -191444,7 +194111,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0226,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -191528,6 +194201,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -191789,7 +194463,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0361,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -191873,6 +194553,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -192131,7 +194812,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0708,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -192319,6 +195006,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -192428,7 +195116,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -192580,7 +195268,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0065,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -193131,7 +195825,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1827,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -193571,7 +196271,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0441,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -194017,7 +196723,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0896,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -194393,7 +197105,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1264,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -195038,7 +197756,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.02,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -195380,7 +198104,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.081,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -195760,7 +198490,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0382,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -196102,7 +198838,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0182,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -196549,7 +199291,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0493,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -196994,7 +199742,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2718,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -197078,6 +199832,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -197187,7 +199942,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 4,
      "pos": "RF",
      "range": "A"
@@ -197333,7 +200088,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1066,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -197417,6 +200178,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -197526,7 +200288,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "RF",
      "range": "F"
@@ -197678,7 +200440,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0568,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -197762,6 +200530,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -197871,7 +200640,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -198023,7 +200792,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0882,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -198365,7 +201140,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.1211,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -198801,7 +201582,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0079,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -199146,7 +201933,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0344,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -199689,7 +202482,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0407,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -200034,7 +202833,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1596,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -200798,7 +203603,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0408,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -201274,7 +204085,13 @@
     }
    },
    "steal": {
-    "jump": 2,
+    "jump": 1,
+    "jump_basis": {
+     "attempt_rate": 0.0032,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -201616,7 +204433,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0463,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -201698,6 +204521,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -201807,7 +204631,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -201959,7 +204783,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2523,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -202466,6 +205296,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -202575,7 +205406,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -202724,7 +205555,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2099,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -203104,7 +205941,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0478,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -203450,6 +206293,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3005,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -204091,6 +206940,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -204346,7 +207196,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0834,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -204843,7 +207699,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0541,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "F"
    },
@@ -205213,6 +208075,12 @@
    },
    "steal": {
     "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0286,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 2
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -205546,7 +208414,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0324,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -206417,7 +209291,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0657,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -206529,6 +209409,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -206638,7 +209519,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -206787,7 +209668,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.2154,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -207153,7 +210040,13 @@
     }
    },
    "steal": {
-    "jump": 3,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0393,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -207359,6 +210252,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -207617,7 +210511,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0597,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -207727,6 +210627,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -207836,7 +210737,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 4,
      "e": 5,
      "pos": "CF",
      "range": "A"
@@ -207985,7 +210886,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1803,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "C"
    },
@@ -208706,6 +211613,12 @@
    },
    "steal": {
     "jump": 5,
+    "jump_basis": {
+     "attempt_rate": 0.3196,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -209072,7 +211985,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 3,
+    "jump_basis": {
+     "attempt_rate": 0.0754,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "B"
    },
@@ -209156,6 +212075,7 @@
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
+   "of_arm_scale": "rulebook p8: 3 best, 10 worst (set-file OF arm mirrored)",
    "out_table": [
     {
      "range": [
@@ -209265,7 +212185,7 @@
    ],
    "positions": [
     {
-     "arm": 4,
+     "arm": 8,
      "e": 1,
      "pos": "LF",
      "range": "F"
@@ -209414,7 +212334,13 @@
     }
    },
    "steal": {
-    "jump": 5,
+    "jump": 4,
+    "jump_basis": {
+     "attempt_rate": 0.1547,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 5
+    },
     "jump_mod": null,
     "rating": "D"
    },
@@ -209873,7 +212799,13 @@
     }
    },
    "steal": {
-    "jump": 4,
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0257,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 4
+    },
     "jump_mod": null,
     "rating": "D"
    },

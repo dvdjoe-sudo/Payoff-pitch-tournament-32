@@ -318,13 +318,13 @@ def roster_rules_and_extra_innings():
 
 def sample_game_stays_out_of_the_tournament():
     report = play("BOS", "TOR", seed=1)
-    assert report["score"] == {"TOR": 1, "BOS": 4}
+    assert report["score"] == {"TOR": 0, "BOS": 4}
     assert report["innings"] == 9
     assert report["postponed"] is False
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
-    assert report["pitching"]["TOR|stiebda01"]["outs"] == 24
+    assert report["pitching"]["TOR|stiebda01"]["outs"] == 21
     assert report["wp"] == {
-        "seen": 13, "fired": 0, "miss": 5, "empty": 8, "no_rating": 0, "unmarked": 0,
+        "seen": 13, "fired": 0, "miss": 8, "empty": 5, "no_rating": 0, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
     assert any("WP? drawn 13. Fired 0." in line for line in report["log"])
@@ -506,6 +506,43 @@ class FixedDice:
         return []
 
 
+def injury_substitution_is_for_one_game():
+    """An injured or removed player leaves for the rest of that game only."""
+    found = game()
+    tor = found.away
+    found.batting, found.fielding = found.away, found.home
+    hurt = next(p for p in tor["lineup"] if p["pos"] not in ("DH", "C"))
+    pos, slot = hurt["pos"], tor["lineup"].index(hurt)
+    hurt["removed"] = True
+    found.bases = [hurt, None, None]
+    found._substitute_removed()
+    sub = tor["lineup"][slot]
+    assert sub is not hurt and sub in tor["bench"]
+    assert sub["pos"] == pos and found.bases[0] is sub
+    spots = {sub.get("pos")} | {r.get("pos") for r in sub.get("positions") or []}
+    bench_at_pos = [p for p in tor["bench"] if pos in {r.get("pos") for r in p.get("positions") or []}]
+    if bench_at_pos:
+        assert pos in spots
+    assert found.defense["TOR"][pos] is sub
+    assert any("Substitution: %s replaces %s" % (sub["name"], hurt["name"]) in line for line in found.log)
+    # A removed pitcher goes to the bullpen; a pitcher who has left never returns.
+    found.batting, found.fielding = found.away, found.home
+    starter = found.pitcher["BOS"]["player"]
+    starter["removed"] = True
+    found._maybe_change_pitcher(before_batter=True)
+    first = found.pitcher["BOS"]["player"]
+    assert first is not starter and first in found.home["bullpen"]
+    found._pending_change = {"BOS": "usage"}
+    found._maybe_change_pitcher(before_batter=True)
+    second = found.pitcher["BOS"]["player"]
+    assert second not in (starter, first)
+    # The next game loads the clubs fresh: everyone is back.
+    again = game()
+    assert not any(p["removed"] for p in again.away["people"])
+    assert hurt["id"] in [p["id"] for p in again.away["lineup"]]
+    assert again.pitcher["BOS"]["player"]["id"] == starter["id"]
+
+
 def stress_test_box_score_fixes():
     """Bugs the 1000+ game stress run found (scripts/stress_sim.py)."""
     import game as engine
@@ -583,4 +620,5 @@ if __name__ == "__main__":
     wp_mark_uses_the_page_10_rating()
     sample_game_stays_out_of_the_tournament()
     stress_test_box_score_fixes()
+    injury_substitution_is_for_one_game()
     print("game tests passed")
