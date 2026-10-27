@@ -6744,18 +6744,6 @@
      1994
     ]
    },
-   "LH SPEC Craig Lefferts 7": {
-    "lahman_id": "leffecr01",
-    "status": "ok",
-    "text": "Peak 162 with San Diego Padres (1984–1990). Years away from the franchise inside this span are not in the totals. 65 G, 6-6, 9 SV, 94.1 IP, 85 H, 31 ER, 30 BB, 61 SO, 2.95 ERA, 1.22 WHIP, 5.8 K/9",
-    "years": [
-     1984,
-     1985,
-     1986,
-     1987,
-     1990
-    ]
-   },
    "MR Luke Gregerson 5": {
     "lahman_id": "gregelu01",
     "status": "ok",
@@ -6775,6 +6763,18 @@
     "years": [
      2024,
      2025
+    ]
+   },
+   "OF5 Brian Giles OF L 7": {
+    "lahman_id": "gilesbr02",
+    "status": "ok",
+    "text": "Peak 162 with San Diego Padres (2004–2008): 162 G, 721 PA, 610 AB, 94 R, 174 H, 38 2B, 5 3B, 17 HR, 82 RBI, 8 SB, 101 BB, 69 SO, .285/.386/.446/.832",
+    "years": [
+     2004,
+     2005,
+     2006,
+     2007,
+     2008
     ]
    },
    "SP1 Jake Peavy 8": {

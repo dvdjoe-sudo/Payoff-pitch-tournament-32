@@ -1387,6 +1387,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF2 Jackson Merrill 2
 - IF2 Garry Templeton 10
 - BAT Gary Sheffield 2
+- OF5 Brian Giles OF L 7
 
 ### Rotation
 
@@ -1404,7 +1405,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 - LH SET Mark Davis 5
 - FR/LR Rollie Fingers 4
 - MR Luke Gregerson 5
-- LH SPEC Craig Lefferts 7
 
 ## 27. Montreal Expos (MON)
 

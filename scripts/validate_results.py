@@ -437,6 +437,34 @@ def check_card_partitions(check: Check) -> None:
         check.expect(True, "card partitions")
 
 
+def check_padres_roster_amendment(check: Check) -> None:
+    """The active 26 follows Joe's approved 6/6 Padres amendment."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["SD"]
+    players = rosters["SD"]["players"]
+    ids = {p["id"] for p in players}
+    check.expect(len(players) == len(ids) == 26, "Padres 26 distinct active players")
+    counts = {g: sum(p["group"] == g for p in players)
+              for g in ("lineup", "bench", "rotation", "bullpen")}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Padres lineup/bench/rotation/bullpen is 9/6/5/6")
+    giles = [p for p in players if p["id"] == "gilesbr02"]
+    check.expect(len(giles) == 1 and giles[0]["group"] == "bench" and
+                 giles[0]["slot"] == 6 and giles[0]["pos"] == "OF",
+                 "Brian Giles occupies Padres bench OF6")
+    check.expect("leffecr01" not in ids, "Craig Lefferts is off the active Padres roster")
+    check.expect(any("Brian Giles" in row for row in announced["bench"]) and
+                 not any("Lefferts" in row for row in announced["bullpen"]),
+                 "Padres owner-announced card matches the roster")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6,
+                 "Padres announced lineup retains six bench and six relievers")
+    # Lefferts' existing converted data is preserved rather than destroyed.
+    check.expect("SD|leffecr01" in cards,
+                 "Lefferts' historical converted card is retained in archive data")
+
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -449,6 +477,7 @@ def main() -> int:
         reconcile(data, details, check)
     documents(check)
     check_pha_roster_alignment(check)
+    check_padres_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 
