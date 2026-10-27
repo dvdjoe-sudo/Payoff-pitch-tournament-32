@@ -1838,6 +1838,9 @@
     if (code === "ARI") {
       body.appendChild(el("p", { class: "note", text: "Approved Diamondbacks 26, effective after R1-04: David Peralta is bench LF6, pending his genuine Hitter v0.5 card. Juan Cruz is inactive; his past appearances and existing historical card remain in the archive." }));
     }
+    if (code === "TB") {
+      body.appendChild(el("p", { class: "note", text: "Approved Rays 26, effective after R1-03: Aubrey Huff joins as bench OF6 (Hitter v0.5 conversion pending), Kevin Kelly leaves the active bullpen, and J.P. Howell takes RP6. Kelly\u0027s original card and any completed game records remain preserved." }));
+    }
     if (code === "PHA") body.appendChild(el("p", { class: "note", text: "Owner-approved 26-man roster: Ferris Fain is DH, Max Bishop is on the bench, and George Earnshaw is not on the roster. Elmer Valo is on the bench; his Hitter v0.5 card is awaiting original frozen-engine conversion and is not yet playable." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
       var rows = roster.players.filter(function (spot) { return spot.group === group; })
@@ -2285,7 +2288,7 @@
         "Approved 26-man roster member. The original frozen Payoff Pitch hitter conversion has not been added yet; no ratings or percentile bands have been invented."
       }));
       pending.appendChild(el("p", { text:
-        code === "ARI" ? "David Peralta: the original Hitter v0.5 conversion and Arizona-only five-season peak line are pending. No unverified card ratings were added." : "The club's franchise-only Peak 162 display is available on the team page. The playable card will be added when converted."
+        code === "ARI" ? "David Peralta: the original Hitter v0.5 conversion and Arizona-only five-season peak line are pending. No unverified card ratings were added." : code === "TB" ? "Aubrey Huff: his original Hitter v0.5 conversion and Rays-only five-season peak line are pending. No playable ratings were invented." : "The club's franchise-only Peak 162 display is available on the team page. The playable card will be added when converted."
       }));
       view.appendChild(pending);
       return;
