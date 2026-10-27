@@ -1303,6 +1303,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF2 Joe Rudi
 - IF2/PR Bert Campaneris
 - BAT Matt Olson
+- IF2 Eric Chavez 3B (Oakland 1998-2010)
 
 ### Rotation
 
@@ -1319,8 +1320,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 - SU Andrew Bailey
 - SU/LH Sean Doolittle
 - PWR Liam Hendriks
-- MID Gene Nelson
 - LH Rick Honeycutt
+
+### Approved active roster amendment (2026-10-27)
+
+Eric Chavez (`chaveer01`) joins the **Oakland Athletics** active roster as **sixth bench hitter**, a left-handed pinch-hit option and **third-base defensive reserve**. His Peak 162, and the eventual frozen Hitter v0.5 card, count **only his Oakland Athletics seasons (1998–2010)**; New York Yankees and Arizona Diamondbacks statistics never qualify.
+
+Gene Nelson (`nelsoge01`) leaves the active bullpen, but his original authentic pitcher card stays in the historical card catalog. Rick Honeycutt shifts from RP7 to RP6, with the other five relievers still Dennis Eckersley, Rollie Fingers, Andrew Bailey, Sean Doolittle and Liam Hendriks. **All nine hitters and five starting pitchers remain exactly unchanged**, including **José Canseco starting at DH batting fifth**. The roster has **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 unique active players.
+
+This approval does **not** resolve the separate PED eligibility discussion and does not authorize removing or changing any starting hitter. All original historical player cards, completed games, original box scores, dice/FAC logs and results remain unchanged. Chavez's authentic Oakland-only playable **Hitter v0.5** conversion is pending and must not be fabricated.
 
 ## 23. Milwaukee Brewers (MIL)
 
