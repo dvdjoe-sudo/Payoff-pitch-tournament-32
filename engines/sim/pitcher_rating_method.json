@@ -1,0 +1,254 @@
+{
+ "start": {
+  "labels": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "cuts": [
+   2.5833,
+   2.5833,
+   2.5833,
+   4.5458,
+   5.4625,
+   6.5749,
+   7.5035,
+   8.4321
+  ],
+  "fit_1986": {
+   "n": 192,
+   "exact": 152,
+   "within_one": 181,
+   "exact_pct": 79.2,
+   "within_one_pct": 94.3
+  },
+  "note": "9 is extrapolated: one cut-spacing above the fitted 8 cut (rulebook p10 allows 1-9)."
+ },
+ "relief": {
+  "labels": [
+   "Short",
+   "Long"
+  ],
+  "cuts": [
+   2.02
+  ],
+  "fit_1986": {
+   "n": 130,
+   "exact": 130,
+   "within_one": 130,
+   "exact_pct": 100.0,
+   "within_one_pct": 100.0
+  },
+  "mixed_rule": "A pitcher with starts and relief games is Long: the 1986 set prints X/Long on 145 of 176 such pitchers."
+ },
+ "wp": {
+  "labels": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "cuts": [
+   0.2702,
+   0.812,
+   1.4213,
+   2.0707,
+   2.9716,
+   3.0404
+  ],
+  "fit_1986": {
+   "n": 291,
+   "exact": 246,
+   "within_one": 290,
+   "exact_pct": 84.5,
+   "within_one_pct": 99.7
+  },
+  "note": "Label is the range width: 0 = no WP rating (wild pitches only from Rare Play), 1 = 30, 2 = 30-31, ... 1986 widths above 6 are rare (11 cards) and are pooled into 6; beyond the 6 cut one more number is added per further cut-spacing."
+ },
+ "dp": {
+  "labels": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "cuts": [
+   0.3725,
+   0.6493,
+   0.8682,
+   1.2219,
+   1.4673,
+   1.983
+  ],
+  "fit_1986": {
+   "n": 291,
+   "exact": 229,
+   "within_one": 289,
+   "exact_pct": 78.7,
+   "within_one_pct": 99.3
+  },
+  "default": 7,
+  "default_note": "League-average value (relative rate 1.0), used only when the stat is missing."
+ },
+ "hold": {
+  "labels": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "cuts": [
+   0.3046,
+   0.4491,
+   0.7299,
+   0.8404,
+   0.991,
+   1.2172,
+   2.1442
+  ],
+  "fit_1986": {
+   "n": 285,
+   "exact": 189,
+   "within_one": 272,
+   "exact_pct": 66.3,
+   "within_one_pct": 95.4
+  },
+  "default": 8,
+  "default_note": "League-average value (relative rate 1.0), used only when the stat is missing."
+ },
+ "range": {
+  "labels": [
+   "F",
+   "D",
+   "C",
+   "B",
+   "A"
+  ],
+  "cuts": [
+   0.7238,
+   0.8472,
+   1.0629,
+   2.4559
+  ],
+  "fit_1986": {
+   "n": 291,
+   "exact": 235,
+   "within_one": 289,
+   "exact_pct": 80.8,
+   "within_one_pct": 99.3
+  },
+  "default": "C",
+  "default_note": "League-average value (relative rate 1.0), used only when the stat is missing."
+ },
+ "e": {
+  "labels": [
+   5,
+   4,
+   3,
+   2,
+   1
+  ],
+  "cuts": [
+   0.1927,
+   0.5315,
+   1.2347,
+   2.1074
+  ],
+  "fit_1986": {
+   "n": 291,
+   "exact": 248,
+   "within_one": 289,
+   "exact_pct": 85.2,
+   "within_one_pct": 99.3
+  },
+  "default": 3,
+  "default_note": "League-average value (relative rate 1.0), used only when the stat is missing."
+ },
+ "inj": {
+  "labels": [
+   "Prone",
+   "Normal",
+   "Durable"
+  ],
+  "cuts": [
+   73.5,
+   262.5
+  ],
+  "fit_1986": {
+   "n": 371,
+   "exact": 297,
+   "within_one": 371,
+   "exact_pct": 80.1,
+   "within_one_pct": 100.0
+  }
+ },
+ "calibration": {
+  "cards_1986": 484,
+  "matched_full_season": 371,
+  "skipped_unmatched": [
+   "T. R. Bryden",
+   "Ed Vande Berg",
+   "Jose DeLeon",
+   "Dave LaPoint",
+   "Tim Stoddard",
+   "Ed Whitson",
+   "Mark Thurmond",
+   "Steve Carlton",
+   "Juan Agosto",
+   "Doyle Alexander",
+   "Larry Andersen",
+   "Jim Acker",
+   "Keith Atherton",
+   "Mike Brown",
+   "Ron Davis",
+   "John Butcher",
+   "Jose DeLeon",
+   "Steve Carlton",
+   "Frank DiPino",
+   "Danny Darwin",
+   "Pete Filson",
+   "Ray Fontenot",
+   "Joe Johnson",
+   "George Frazier",
+   "Matt Keough",
+   "Neal Heaton",
+   "Mark Knudson",
+   "Mark Huismann",
+   "Dave LaPoint",
+   "Ed Lynch",
+   "Dan Schatzeder",
+   "Mickey Mahler",
+   "Ray Searage",
+   "Dennis Martinez",
+   "Tom Seaver",
+   "Bob McClure",
+   "Steve Shields",
+   "Jim Slaton",
+   "Mike Trujillo",
+   "Dave Stewart",
+   "Duane Ward",
+   "Tim Stoddard",
+   "Ed Whitson",
+   "Mark Thurmond",
+   "Dave Von Ohlen",
+   "Randy St. Claire"
+  ],
+  "source": "1986 Payoff Pitch season PDF (printed labels) vs Lahman 1986 + MLB Stats API 1986 SB/CS"
+ }
+}

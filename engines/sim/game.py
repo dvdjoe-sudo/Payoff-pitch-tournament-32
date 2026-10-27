@@ -151,7 +151,9 @@ def _player(roster_row, card):
         "steal": bat.get("steal") or {},
         "dp": bat.get("dp"),
         "sac": bat.get("sac_bunt"),
-        "positions": bat.get("positions") or [],
+        # Pitcher cards carry their own FIELDING line (card_pit.fielding, the
+        # 1986 pitcher-card range/error); a batting card's positions come first.
+        "positions": bat.get("positions") or pit.get("fielding") or [],
         "fielding_label": bat.get("fielding"),
         "out_table": bat.get("out_table") or [],
         "sections": bat.get("sections") or {},

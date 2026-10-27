@@ -1,0 +1,3682 @@
+{
+ "players": [
+  {
+   "card": {
+    "1b": 0.1541,
+    "2b": 0.0429,
+    "3b": 0.0025,
+    "avg": 0.2794,
+    "bb": 0.0803,
+    "hr": 0.0562,
+    "obp": 0.3406,
+    "slg": 0.5158,
+    "so": 0.1282
+   },
+   "delta": {
+    "1b": 0.0023,
+    "2b": -0.0009,
+    "3b": 0.0,
+    "avg": -0.003,
+    "hr": 0.0005,
+    "obp_real": -0.0051,
+    "obp_ubb": 0.0019,
+    "slg": -0.0067,
+    "so": -0.0001
+   },
+   "fit_error": 0.0014,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card."
+   ],
+   "key": "ATL|hornebo01",
+   "kind": "hitter",
+   "name": "Bob Horner",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1518,
+    "2b": 0.0437,
+    "3b": 0.0025,
+    "avg": 0.2824,
+    "bb": 0.0875,
+    "hr": 0.0557,
+    "obp": 0.3457,
+    "obp_ubb": 0.3387,
+    "slg": 0.5225,
+    "so": 0.1283,
+    "ubb": 0.0804
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "142.7",
+     "other_clubs": [],
+     "pa": 358,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1978
+    },
+    {
+     "nulls": [],
+     "ops_plus": "150.0",
+     "other_clubs": [],
+     "pa": 515,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1979
+    },
+    {
+     "nulls": [],
+     "ops_plus": "137.2",
+     "other_clubs": [],
+     "pa": 495,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1980
+    },
+    {
+     "nulls": [],
+     "ops_plus": "134.5",
+     "other_clubs": [],
+     "pa": 336,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1981
+    },
+    {
+     "nulls": [],
+     "ops_plus": "143.9",
+     "other_clubs": [],
+     "pa": 572,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1982
+    },
+    {
+     "nulls": [],
+     "ops_plus": "159.5",
+     "other_clubs": [],
+     "pa": 439,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1983
+    },
+    {
+     "nulls": [],
+     "ops_plus": "124.4",
+     "other_clubs": [],
+     "pa": 129,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1984
+    },
+    {
+     "nulls": [],
+     "ops_plus": "138.1",
+     "other_clubs": [],
+     "pa": 540,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1985
+    },
+    {
+     "nulls": [],
+     "ops_plus": "128.6",
+     "other_clubs": [],
+     "pa": 581,
+     "teams": [
+      "ATL"
+     ],
+     "year": 1986
+    }
+   ],
+   "window_years": [
+    1978,
+    1979,
+    1982,
+    1983,
+    1985
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.2538,
+    "2b": 0.0586,
+    "3b": 0.0239,
+    "avg": 0.3774,
+    "bb": 0.0655,
+    "hr": 0.014,
+    "obp": 0.4221,
+    "slg": 0.5373,
+    "so": 0.0301
+   },
+   "delta": {
+    "1b": -0.0003,
+    "2b": -0.0005,
+    "3b": 0.0003,
+    "avg": -0.0004,
+    "hr": 0.0,
+    "obp_real": -0.0003,
+    "obp_ubb": -0.0003,
+    "slg": -0.0,
+    "so": -0.0002
+   },
+   "fit_error": 0.001,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1915 has 283 plate appearances, under the 300 floor. OPS+ 109.4.",
+    "Lahman nulls treated as zero: CS [1917, 1918, 1919]; GIDP [1917, 1918, 1919, 1920, 1922]; IBB [1917, 1918, 1919, 1920, 1922]; SF [1917, 1918, 1919, 1920, 1922]",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "BAL|sislege01",
+   "kind": "hitter",
+   "name": "George Sisler",
+   "nulls": [
+    {
+     "field": "CS",
+     "year": 1917
+    },
+    {
+     "field": "IBB",
+     "year": 1917
+    },
+    {
+     "field": "SF",
+     "year": 1917
+    },
+    {
+     "field": "GIDP",
+     "year": 1917
+    },
+    {
+     "field": "CS",
+     "year": 1918
+    },
+    {
+     "field": "IBB",
+     "year": 1918
+    },
+    {
+     "field": "SF",
+     "year": 1918
+    },
+    {
+     "field": "GIDP",
+     "year": 1918
+    },
+    {
+     "field": "CS",
+     "year": 1919
+    },
+    {
+     "field": "IBB",
+     "year": 1919
+    },
+    {
+     "field": "SF",
+     "year": 1919
+    },
+    {
+     "field": "GIDP",
+     "year": 1919
+    },
+    {
+     "field": "IBB",
+     "year": 1920
+    },
+    {
+     "field": "SF",
+     "year": 1920
+    },
+    {
+     "field": "GIDP",
+     "year": 1920
+    },
+    {
+     "field": "IBB",
+     "year": 1922
+    },
+    {
+     "field": "SF",
+     "year": 1922
+    },
+    {
+     "field": "GIDP",
+     "year": 1922
+    }
+   ],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.254,
+    "2b": 0.0591,
+    "3b": 0.0236,
+    "avg": 0.3777,
+    "bb": 0.0656,
+    "hr": 0.014,
+    "obp": 0.4223,
+    "obp_ubb": 0.4223,
+    "slg": 0.5373,
+    "so": 0.0304,
+    "ubb": 0.0656
+   },
+   "seasons": [
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "109.4",
+     "other_clubs": [],
+     "pa": 283,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1915
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "135.8",
+     "other_clubs": [],
+     "pa": 625,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1916
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "166.0",
+     "other_clubs": [],
+     "pa": 572,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1917
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "162.2",
+     "other_clubs": [],
+     "pa": 497,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1918
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "166.7",
+     "other_clubs": [],
+     "pa": 543,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1919
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "194.2",
+     "other_clubs": [],
+     "pa": 679,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1920
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "153.7",
+     "other_clubs": [],
+     "pa": 621,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1921
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "185.2",
+     "other_clubs": [],
+     "pa": 638,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1922
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "102.8",
+     "other_clubs": [],
+     "pa": 670,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1924
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "121.8",
+     "other_clubs": [],
+     "pa": 676,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1925
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "95.6",
+     "other_clubs": [],
+     "pa": 646,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1926
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "110.2",
+     "other_clubs": [],
+     "pa": 642,
+     "teams": [
+      "SLA"
+     ],
+     "year": 1927
+    }
+   ],
+   "window_years": [
+    1917,
+    1918,
+    1919,
+    1920,
+    1922
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1615,
+    "2b": 0.0505,
+    "3b": 0.0091,
+    "avg": 0.2969,
+    "bb": 0.0703,
+    "hr": 0.0534,
+    "obp": 0.3496,
+    "slg": 0.5444,
+    "so": 0.2167
+   },
+   "delta": {
+    "1b": 0.0005,
+    "2b": 0.0005,
+    "3b": 0.0002,
+    "avg": -0.005,
+    "hr": 0.0005,
+    "obp_real": -0.0104,
+    "obp_ubb": 0.0021,
+    "slg": -0.0079,
+    "so": 0.0002
+   },
+   "fit_error": 0.0014,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "2014 has 281 plate appearances, under the 300 floor. OPS+ 106.2.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "COL|gonzaca01",
+   "kind": "hitter",
+   "name": "Carlos González",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1611,
+    "2b": 0.05,
+    "3b": 0.0089,
+    "avg": 0.3019,
+    "bb": 0.0825,
+    "hr": 0.0529,
+    "obp": 0.36,
+    "obp_ubb": 0.3475,
+    "slg": 0.5524,
+    "so": 0.2164,
+    "ubb": 0.07
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "135.1",
+     "other_clubs": [],
+     "pa": 312,
+     "teams": [
+      "COL"
+     ],
+     "year": 2009
+    },
+    {
+     "nulls": [],
+     "ops_plus": "165.8",
+     "other_clubs": [],
+     "pa": 636,
+     "teams": [
+      "COL"
+     ],
+     "year": 2010
+    },
+    {
+     "nulls": [],
+     "ops_plus": "148.5",
+     "other_clubs": [],
+     "pa": 542,
+     "teams": [
+      "COL"
+     ],
+     "year": 2011
+    },
+    {
+     "nulls": [],
+     "ops_plus": "144.0",
+     "other_clubs": [],
+     "pa": 579,
+     "teams": [
+      "COL"
+     ],
+     "year": 2012
+    },
+    {
+     "nulls": [],
+     "ops_plus": "168.6",
+     "other_clubs": [],
+     "pa": 436,
+     "teams": [
+      "COL"
+     ],
+     "year": 2013
+    },
+    {
+     "nulls": [],
+     "ops_plus": "106.2",
+     "other_clubs": [],
+     "pa": 281,
+     "teams": [
+      "COL"
+     ],
+     "year": 2014
+    },
+    {
+     "nulls": [],
+     "ops_plus": "138.7",
+     "other_clubs": [],
+     "pa": 607,
+     "teams": [
+      "COL"
+     ],
+     "year": 2015
+    },
+    {
+     "nulls": [],
+     "ops_plus": "131.2",
+     "other_clubs": [],
+     "pa": 632,
+     "teams": [
+      "COL"
+     ],
+     "year": 2016
+    },
+    {
+     "nulls": [],
+     "ops_plus": "104.4",
+     "other_clubs": [],
+     "pa": 534,
+     "teams": [
+      "COL"
+     ],
+     "year": 2017
+    },
+    {
+     "nulls": [],
+     "ops_plus": "119.2",
+     "other_clubs": [],
+     "pa": 504,
+     "teams": [
+      "COL"
+     ],
+     "year": 2018
+    }
+   ],
+   "window_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2015
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1508,
+    "2b": 0.0463,
+    "3b": 0.005,
+    "avg": 0.2987,
+    "bb": 0.1154,
+    "hr": 0.0615,
+    "obp": 0.381,
+    "slg": 0.5716,
+    "so": 0.1893
+   },
+   "delta": {
+    "1b": 0.0018,
+    "2b": 0.0013,
+    "3b": -0.0003,
+    "avg": -0.006,
+    "hr": 0.0007,
+    "obp_real": -0.0184,
+    "obp_ubb": 0.0036,
+    "slg": -0.012,
+    "so": -0.0003
+   },
+   "fit_error": 0.0138,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1973 has 287 plate appearances and OPS+ 180.4. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "Only 2 franchise seasons reach 300 plate appearances. The window is short.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card."
+   ],
+   "key": "CWS|allendi01",
+   "kind": "hitter",
+   "name": "Dick Allen",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.149,
+    "2b": 0.045,
+    "3b": 0.0053,
+    "avg": 0.3048,
+    "bb": 0.1376,
+    "hr": 0.0608,
+    "obp": 0.3995,
+    "obp_ubb": 0.3774,
+    "slg": 0.5837,
+    "so": 0.1896,
+    "ubb": 0.1155
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "213.1",
+     "other_clubs": [],
+     "pa": 609,
+     "teams": [
+      "CHA"
+     ],
+     "year": 1972
+    },
+    {
+     "nulls": [],
+     "ops_plus": "180.4",
+     "other_clubs": [],
+     "pa": 287,
+     "teams": [
+      "CHA"
+     ],
+     "year": 1973
+    },
+    {
+     "nulls": [],
+     "ops_plus": "167.7",
+     "other_clubs": [],
+     "pa": 525,
+     "teams": [
+      "CHA"
+     ],
+     "year": 1974
+    }
+   ],
+   "window_years": [
+    1972,
+    1974
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1561,
+    "2b": 0.0398,
+    "3b": 0.0088,
+    "avg": 0.2809,
+    "bb": 0.0934,
+    "hr": 0.0471,
+    "obp": 0.3553,
+    "slg": 0.5025,
+    "so": 0.1928
+   },
+   "delta": {
+    "1b": 0.0017,
+    "2b": 0.0,
+    "3b": -0.0,
+    "avg": -0.0049,
+    "hr": 0.0004,
+    "obp_real": -0.0098,
+    "obp_ubb": 0.0022,
+    "slg": -0.0093,
+    "so": -0.0002
+   },
+   "fit_error": 0.0009,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1982 has 293 plate appearances, under the 300 floor. OPS+ 114.3.",
+    "1995 has 265 plate appearances, under the 300 floor. OPS+ 109.4.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "DET|gibsoki01",
+   "kind": "hitter",
+   "name": "Kirk Gibson",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1544,
+    "2b": 0.0398,
+    "3b": 0.0088,
+    "avg": 0.2858,
+    "bb": 0.1053,
+    "hr": 0.0466,
+    "obp": 0.3651,
+    "obp_ubb": 0.353,
+    "slg": 0.5117,
+    "so": 0.193,
+    "ubb": 0.0933
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "73.4",
+     "other_clubs": [],
+     "pa": 39,
+     "teams": [
+      "DET"
+     ],
+     "year": 1979
+    },
+    {
+     "nulls": [],
+     "ops_plus": "101.7",
+     "other_clubs": [],
+     "pa": 188,
+     "teams": [
+      "DET"
+     ],
+     "year": 1980
+    },
+    {
+     "nulls": [],
+     "ops_plus": "143.6",
+     "other_clubs": [],
+     "pa": 312,
+     "teams": [
+      "DET"
+     ],
+     "year": 1981
+    },
+    {
+     "nulls": [],
+     "ops_plus": "114.3",
+     "other_clubs": [],
+     "pa": 293,
+     "teams": [
+      "DET"
+     ],
+     "year": 1982
+    },
+    {
+     "nulls": [],
+     "ops_plus": "101.1",
+     "other_clubs": [],
+     "pa": 462,
+     "teams": [
+      "DET"
+     ],
+     "year": 1983
+    },
+    {
+     "nulls": [],
+     "ops_plus": "141.1",
+     "other_clubs": [],
+     "pa": 608,
+     "teams": [
+      "DET"
+     ],
+     "year": 1984
+    },
+    {
+     "nulls": [],
+     "ops_plus": "139.1",
+     "other_clubs": [],
+     "pa": 667,
+     "teams": [
+      "DET"
+     ],
+     "year": 1985
+    },
+    {
+     "nulls": [],
+     "ops_plus": "133.3",
+     "other_clubs": [],
+     "pa": 520,
+     "teams": [
+      "DET"
+     ],
+     "year": 1986
+    },
+    {
+     "nulls": [],
+     "ops_plus": "126.5",
+     "other_clubs": [],
+     "pa": 567,
+     "teams": [
+      "DET"
+     ],
+     "year": 1987
+    },
+    {
+     "nulls": [],
+     "ops_plus": "105.8",
+     "other_clubs": [],
+     "pa": 454,
+     "teams": [
+      "DET"
+     ],
+     "year": 1993
+    },
+    {
+     "nulls": [],
+     "ops_plus": "130.2",
+     "other_clubs": [],
+     "pa": 380,
+     "teams": [
+      "DET"
+     ],
+     "year": 1994
+    },
+    {
+     "nulls": [],
+     "ops_plus": "109.4",
+     "other_clubs": [],
+     "pa": 265,
+     "teams": [
+      "DET"
+     ],
+     "year": 1995
+    }
+   ],
+   "window_years": [
+    1981,
+    1984,
+    1985,
+    1986,
+    1994
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1807,
+    "2b": 0.0529,
+    "3b": 0.0048,
+    "avg": 0.3242,
+    "bb": 0.0926,
+    "hr": 0.054,
+    "obp": 0.3905,
+    "slg": 0.5729,
+    "so": 0.1063
+   },
+   "delta": {
+    "1b": 0.0023,
+    "2b": 0.0006,
+    "3b": 0.0003,
+    "avg": -0.0066,
+    "hr": 0.0005,
+    "obp_real": -0.0124,
+    "obp_ubb": 0.0039,
+    "slg": -0.0118,
+    "so": -0.0001
+   },
+   "fit_error": 0.0026,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "Only 3 franchise seasons reach 300 plate appearances. The window is short.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card."
+   ],
+   "key": "HOU|aloumo01",
+   "kind": "hitter",
+   "name": "Moisés Alou",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1784,
+    "2b": 0.0523,
+    "3b": 0.0045,
+    "avg": 0.3308,
+    "bb": 0.1086,
+    "hr": 0.0535,
+    "obp": 0.4029,
+    "obp_ubb": 0.3866,
+    "slg": 0.5848,
+    "so": 0.1064,
+    "ubb": 0.0923
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "162.5",
+     "other_clubs": [],
+     "pa": 679,
+     "teams": [
+      "HOU"
+     ],
+     "year": 1998
+    },
+    {
+     "nulls": [],
+     "ops_plus": "166.1",
+     "other_clubs": [],
+     "pa": 517,
+     "teams": [
+      "HOU"
+     ],
+     "year": 2000
+    },
+    {
+     "nulls": [],
+     "ops_plus": "149.8",
+     "other_clubs": [],
+     "pa": 581,
+     "teams": [
+      "HOU"
+     ],
+     "year": 2001
+    }
+   ],
+   "window_years": [
+    1998,
+    2000,
+    2001
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1403,
+    "2b": 0.0387,
+    "3b": 0.0034,
+    "avg": 0.2625,
+    "bb": 0.135,
+    "hr": 0.0428,
+    "obp": 0.3673,
+    "slg": 0.4653,
+    "so": 0.1258
+   },
+   "delta": {
+    "1b": 0.002,
+    "2b": 0.0004,
+    "3b": 0.0008,
+    "avg": -0.0047,
+    "hr": 0.0003,
+    "obp_real": -0.0182,
+    "obp_ubb": 0.0034,
+    "slg": -0.0081,
+    "so": 0.0003
+   },
+   "fit_error": 0.01,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card."
+   ],
+   "key": "KC|maybejo01",
+   "kind": "hitter",
+   "name": "John Mayberry",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1383,
+    "2b": 0.0383,
+    "3b": 0.0026,
+    "avg": 0.2672,
+    "bb": 0.1566,
+    "hr": 0.0425,
+    "obp": 0.3855,
+    "obp_ubb": 0.364,
+    "slg": 0.4734,
+    "so": 0.1256,
+    "ubb": 0.1351
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "176.4",
+     "other_clubs": [],
+     "pa": 587,
+     "teams": [
+      "KCA"
+     ],
+     "year": 1972
+    },
+    {
+     "nulls": [],
+     "ops_plus": "152.4",
+     "other_clubs": [],
+     "pa": 638,
+     "teams": [
+      "KCA"
+     ],
+     "year": 1973
+    },
+    {
+     "nulls": [],
+     "ops_plus": "125.1",
+     "other_clubs": [],
+     "pa": 511,
+     "teams": [
+      "KCA"
+     ],
+     "year": 1974
+    },
+    {
+     "nulls": [],
+     "ops_plus": "171.3",
+     "other_clubs": [],
+     "pa": 682,
+     "teams": [
+      "KCA"
+     ],
+     "year": 1975
+    },
+    {
+     "nulls": [],
+     "ops_plus": "95.2",
+     "other_clubs": [],
+     "pa": 690,
+     "teams": [
+      "KCA"
+     ],
+     "year": 1976
+    },
+    {
+     "nulls": [],
+     "ops_plus": "100.8",
+     "other_clubs": [],
+     "pa": 640,
+     "teams": [
+      "KCA"
+     ],
+     "year": 1977
+    }
+   ],
+   "window_years": [
+    1972,
+    1973,
+    1974,
+    1975,
+    1977
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.2306,
+    "2b": 0.0436,
+    "3b": 0.007,
+    "avg": 0.3191,
+    "bb": 0.1014,
+    "hr": 0.0051,
+    "obp": 0.389,
+    "slg": 0.4004,
+    "so": 0.0858
+   },
+   "delta": {
+    "1b": 0.0019,
+    "2b": -0.0001,
+    "3b": 0.0002,
+    "avg": -0.0046,
+    "hr": 0.0001,
+    "obp_real": -0.0113,
+    "obp_ubb": 0.0021,
+    "slg": -0.0056,
+    "so": -0.0002
+   },
+   "fit_error": 0.0236,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "LAA|carewro01",
+   "kind": "hitter",
+   "name": "Rod Carew",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.2287,
+    "2b": 0.0438,
+    "3b": 0.0068,
+    "avg": 0.3237,
+    "bb": 0.1145,
+    "hr": 0.0049,
+    "obp": 0.4003,
+    "obp_ubb": 0.387,
+    "slg": 0.406,
+    "so": 0.086,
+    "ubb": 0.1012
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "121.0",
+     "other_clubs": [],
+     "pa": 485,
+     "teams": [
+      "CAL"
+     ],
+     "year": 1979
+    },
+    {
+     "nulls": [],
+     "ops_plus": "129.1",
+     "other_clubs": [],
+     "pa": 603,
+     "teams": [
+      "CAL"
+     ],
+     "year": 1980
+    },
+    {
+     "nulls": [],
+     "ops_plus": "118.6",
+     "other_clubs": [],
+     "pa": 411,
+     "teams": [
+      "CAL"
+     ],
+     "year": 1981
+    },
+    {
+     "nulls": [],
+     "ops_plus": "121.0",
+     "other_clubs": [],
+     "pa": 596,
+     "teams": [
+      "CAL"
+     ],
+     "year": 1982
+    },
+    {
+     "nulls": [],
+     "ops_plus": "127.5",
+     "other_clubs": [],
+     "pa": 533,
+     "teams": [
+      "CAL"
+     ],
+     "year": 1983
+    },
+    {
+     "nulls": [],
+     "ops_plus": "101.2",
+     "other_clubs": [],
+     "pa": 373,
+     "teams": [
+      "CAL"
+     ],
+     "year": 1984
+    },
+    {
+     "nulls": [],
+     "ops_plus": "98.7",
+     "other_clubs": [],
+     "pa": 509,
+     "teams": [
+      "CAL"
+     ],
+     "year": 1985
+    }
+   ],
+   "window_years": [
+    1979,
+    1980,
+    1981,
+    1982,
+    1983
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1478,
+    "2b": 0.0621,
+    "3b": 0.0006,
+    "avg": 0.2761,
+    "bb": 0.0826,
+    "hr": 0.04,
+    "obp": 0.3432,
+    "slg": 0.4781,
+    "so": 0.129
+   },
+   "delta": {
+    "1b": 0.0014,
+    "2b": 0.0008,
+    "3b": -0.0001,
+    "avg": -0.0039,
+    "hr": 0.0004,
+    "obp_real": -0.006,
+    "obp_ubb": 0.0024,
+    "slg": -0.007,
+    "so": -0.0003
+   },
+   "fit_error": 0.0013,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card."
+   ],
+   "key": "MIA|lowelmi01",
+   "kind": "hitter",
+   "name": "Mike Lowell",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1464,
+    "2b": 0.0613,
+    "3b": 0.0006,
+    "avg": 0.28,
+    "bb": 0.0909,
+    "hr": 0.0397,
+    "obp": 0.3492,
+    "obp_ubb": 0.3409,
+    "slg": 0.4851,
+    "so": 0.1293,
+    "ubb": 0.0826
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "90.2",
+     "other_clubs": [],
+     "pa": 344,
+     "teams": [
+      "FLO"
+     ],
+     "year": 1999
+    },
+    {
+     "nulls": [],
+     "ops_plus": "110.5",
+     "other_clubs": [],
+     "pa": 582,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2000
+    },
+    {
+     "nulls": [],
+     "ops_plus": "108.2",
+     "other_clubs": [],
+     "pa": 614,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2001
+    },
+    {
+     "nulls": [],
+     "ops_plus": "119.1",
+     "other_clubs": [],
+     "pa": 677,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2002
+    },
+    {
+     "nulls": [],
+     "ops_plus": "132.7",
+     "other_clubs": [],
+     "pa": 557,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2003
+    },
+    {
+     "nulls": [],
+     "ops_plus": "129.1",
+     "other_clubs": [],
+     "pa": 671,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2004
+    },
+    {
+     "nulls": [],
+     "ops_plus": "77.1",
+     "other_clubs": [],
+     "pa": 557,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2005
+    }
+   ],
+   "window_years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1686,
+    "2b": 0.0471,
+    "3b": 0.0056,
+    "avg": 0.2868,
+    "bb": 0.0754,
+    "hr": 0.0425,
+    "obp": 0.3441,
+    "slg": 0.4888,
+    "so": 0.119
+   },
+   "delta": {
+    "1b": 0.0033,
+    "2b": 0.001,
+    "3b": -0.0001,
+    "avg": -0.0058,
+    "hr": 0.0002,
+    "obp_real": -0.0159,
+    "obp_ubb": 0.0054,
+    "slg": -0.0118,
+    "so": 0.0006
+   },
+   "fit_error": 0.0027,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "MIL|oglivbe01",
+   "kind": "hitter",
+   "name": "Ben Oglivie",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1653,
+    "2b": 0.0461,
+    "3b": 0.0057,
+    "avg": 0.2927,
+    "bb": 0.0956,
+    "hr": 0.0423,
+    "obp": 0.36,
+    "obp_ubb": 0.3387,
+    "slg": 0.5006,
+    "so": 0.1185,
+    "ubb": 0.0743
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "142.6",
+     "other_clubs": [],
+     "pa": 524,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1978
+    },
+    {
+     "nulls": [],
+     "ops_plus": "131.3",
+     "other_clubs": [],
+     "pa": 568,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1979
+    },
+    {
+     "nulls": [],
+     "ops_plus": "150.2",
+     "other_clubs": [],
+     "pa": 660,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1980
+    },
+    {
+     "nulls": [],
+     "ops_plus": "102.8",
+     "other_clubs": [],
+     "pa": 451,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1981
+    },
+    {
+     "nulls": [],
+     "ops_plus": "112.3",
+     "other_clubs": [],
+     "pa": 677,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1982
+    },
+    {
+     "nulls": [],
+     "ops_plus": "121.9",
+     "other_clubs": [],
+     "pa": 483,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1983
+    },
+    {
+     "nulls": [],
+     "ops_plus": "96.7",
+     "other_clubs": [],
+     "pa": 508,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1984
+    },
+    {
+     "nulls": [],
+     "ops_plus": "116.6",
+     "other_clubs": [],
+     "pa": 390,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1985
+    },
+    {
+     "nulls": [],
+     "ops_plus": "97.1",
+     "other_clubs": [],
+     "pa": 383,
+     "teams": [
+      "ML4"
+     ],
+     "year": 1986
+    }
+   ],
+   "window_years": [
+    1978,
+    1979,
+    1980,
+    1983,
+    1985
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1311,
+    "2b": 0.0379,
+    "3b": 0.0102,
+    "avg": 0.2638,
+    "bb": 0.1295,
+    "hr": 0.0487,
+    "obp": 0.3638,
+    "slg": 0.5005,
+    "so": 0.1832
+   },
+   "delta": {
+    "1b": 0.0009,
+    "2b": -0.0007,
+    "3b": -0.0,
+    "avg": -0.0023,
+    "hr": 0.0002,
+    "obp_real": -0.0039,
+    "obp_ubb": 0.0006,
+    "slg": -0.0049,
+    "so": 0.0004
+   },
+   "fit_error": 0.0012,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "MIN|allisbo01",
+   "kind": "hitter",
+   "name": "Bob Allison",
+   "nulls": [],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1302,
+    "2b": 0.0386,
+    "3b": 0.0102,
+    "avg": 0.2661,
+    "bb": 0.1339,
+    "hr": 0.0485,
+    "obp": 0.3676,
+    "obp_ubb": 0.3632,
+    "slg": 0.5054,
+    "so": 0.1828,
+    "ubb": 0.1295
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "35.6",
+     "other_clubs": [],
+     "pa": 37,
+     "teams": [
+      "WS1"
+     ],
+     "year": 1958
+    },
+    {
+     "nulls": [],
+     "ops_plus": "129.2",
+     "other_clubs": [],
+     "pa": 634,
+     "teams": [
+      "WS1"
+     ],
+     "year": 1959
+    },
+    {
+     "nulls": [],
+     "ops_plus": "118.9",
+     "other_clubs": [],
+     "pa": 599,
+     "teams": [
+      "WS1"
+     ],
+     "year": 1960
+    },
+    {
+     "nulls": [],
+     "ops_plus": "124.6",
+     "other_clubs": [],
+     "pa": 672,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1961
+    },
+    {
+     "nulls": [],
+     "ops_plus": "143.9",
+     "other_clubs": [],
+     "pa": 610,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1962
+    },
+    {
+     "nulls": [],
+     "ops_plus": "162.0",
+     "other_clubs": [],
+     "pa": 625,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1963
+    },
+    {
+     "nulls": [],
+     "ops_plus": "174.2",
+     "other_clubs": [],
+     "pa": 594,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1964
+    },
+    {
+     "nulls": [],
+     "ops_plus": "131.0",
+     "other_clubs": [],
+     "pa": 518,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1965
+    },
+    {
+     "nulls": [],
+     "ops_plus": "124.9",
+     "other_clubs": [],
+     "pa": 203,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1966
+    },
+    {
+     "nulls": [],
+     "ops_plus": "152.3",
+     "other_clubs": [],
+     "pa": 573,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1967
+    },
+    {
+     "nulls": [],
+     "ops_plus": "144.5",
+     "other_clubs": [],
+     "pa": 525,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1968
+    },
+    {
+     "nulls": [],
+     "ops_plus": "117.6",
+     "other_clubs": [],
+     "pa": 219,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1969
+    },
+    {
+     "nulls": [],
+     "ops_plus": "91.4",
+     "other_clubs": [],
+     "pa": 87,
+     "teams": [
+      "MIN"
+     ],
+     "year": 1970
+    }
+   ],
+   "window_years": [
+    1962,
+    1963,
+    1964,
+    1967,
+    1968
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1237,
+    "2b": 0.0487,
+    "3b": 0.0033,
+    "avg": 0.251,
+    "bb": 0.0991,
+    "hr": 0.0496,
+    "obp": 0.3274,
+    "slg": 0.4784,
+    "so": 0.1753
+   },
+   "delta": {
+    "1b": 0.0022,
+    "2b": 0.0005,
+    "3b": -0.0004,
+    "avg": -0.0068,
+    "hr": 0.0008,
+    "obp_real": -0.02,
+    "obp_ubb": 0.0033,
+    "slg": -0.0137,
+    "so": 0.0003
+   },
+   "fit_error": 0.0068,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "Switch hitter. The solver stands him opposite the pitcher and uses the 0.28 left-handed / 0.72 right-handed park mix.",
+    "1986 has 252 plate appearances and OPS+ 123.3. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "1993 has 280 plate appearances, under the 300 floor. OPS+ 103.0.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "NYM|johnsho01",
+   "kind": "hitter",
+   "name": "Howard Johnson",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1215,
+    "2b": 0.0482,
+    "3b": 0.0037,
+    "avg": 0.2578,
+    "bb": 0.1221,
+    "hr": 0.0488,
+    "obp": 0.3474,
+    "obp_ubb": 0.3241,
+    "slg": 0.4921,
+    "so": 0.175,
+    "ubb": 0.0988
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "99.3",
+     "other_clubs": [],
+     "pa": 427,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1985
+    },
+    {
+     "nulls": [],
+     "ops_plus": "123.3",
+     "other_clubs": [],
+     "pa": 252,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1986
+    },
+    {
+     "nulls": [],
+     "ops_plus": "135.7",
+     "other_clubs": [],
+     "pa": 645,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1987
+    },
+    {
+     "nulls": [],
+     "ops_plus": "127.0",
+     "other_clubs": [],
+     "pa": 592,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1988
+    },
+    {
+     "nulls": [],
+     "ops_plus": "171.2",
+     "other_clubs": [],
+     "pa": 655,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1989
+    },
+    {
+     "nulls": [],
+     "ops_plus": "112.6",
+     "other_clubs": [],
+     "pa": 668,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1990
+    },
+    {
+     "nulls": [],
+     "ops_plus": "151.6",
+     "other_clubs": [],
+     "pa": 658,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1991
+    },
+    {
+     "nulls": [],
+     "ops_plus": "96.0",
+     "other_clubs": [],
+     "pa": 410,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1992
+    },
+    {
+     "nulls": [],
+     "ops_plus": "103.0",
+     "other_clubs": [],
+     "pa": 280,
+     "teams": [
+      "NYN"
+     ],
+     "year": 1993
+    }
+   ],
+   "window_years": [
+    1987,
+    1988,
+    1989,
+    1990,
+    1991
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1684,
+    "2b": 0.0437,
+    "3b": 0.0061,
+    "avg": 0.2913,
+    "bb": 0.1414,
+    "hr": 0.0307,
+    "obp": 0.3943,
+    "slg": 0.4647,
+    "so": 0.1035
+   },
+   "delta": {
+    "1b": 0.0007,
+    "2b": 0.0003,
+    "3b": -0.0,
+    "avg": -0.0014,
+    "hr": 0.0,
+    "obp_real": -0.0012,
+    "obp_ubb": 0.0009,
+    "slg": -0.0027,
+    "so": 0.0002
+   },
+   "fit_error": 0.0009,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1989 has 293 plate appearances, under the 300 floor. OPS+ 111.4.",
+    "Only 4 franchise seasons reach 300 plate appearances. The window is short.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "NYY|henderi01",
+   "kind": "hitter",
+   "name": "Rickey Henderson",
+   "nulls": [],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1676,
+    "2b": 0.0434,
+    "3b": 0.0061,
+    "avg": 0.2927,
+    "bb": 0.1434,
+    "hr": 0.0307,
+    "obp": 0.3955,
+    "obp_ubb": 0.3934,
+    "slg": 0.4673,
+    "so": 0.1033,
+    "ubb": 0.1414
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "155.2",
+     "other_clubs": [],
+     "pa": 654,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1985
+    },
+    {
+     "nulls": [],
+     "ops_plus": "123.6",
+     "other_clubs": [],
+     "pa": 701,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1986
+    },
+    {
+     "nulls": [],
+     "ops_plus": "143.6",
+     "other_clubs": [],
+     "pa": 440,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1987
+    },
+    {
+     "nulls": [],
+     "ops_plus": "123.5",
+     "other_clubs": [],
+     "pa": 645,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1988
+    },
+    {
+     "nulls": [],
+     "ops_plus": "111.4",
+     "other_clubs": [
+      "OAK"
+     ],
+     "pa": 293,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1989
+    }
+   ],
+   "window_years": [
+    1985,
+    1986,
+    1987,
+    1988
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1446,
+    "2b": 0.0514,
+    "3b": 0.0044,
+    "avg": 0.2754,
+    "bb": 0.0903,
+    "hr": 0.0493,
+    "obp": 0.3432,
+    "slg": 0.505,
+    "so": 0.1639
+   },
+   "delta": {
+    "1b": 0.0013,
+    "2b": 0.0003,
+    "3b": 0.0004,
+    "avg": -0.0045,
+    "hr": 0.0003,
+    "obp_real": -0.0137,
+    "obp_ubb": 0.0027,
+    "slg": -0.0081,
+    "so": 0.0003
+   },
+   "fit_error": 0.0038,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "OAK|chaveer01",
+   "kind": "hitter",
+   "name": "Eric Chavez",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1433,
+    "2b": 0.051,
+    "3b": 0.0039,
+    "avg": 0.2799,
+    "bb": 0.1063,
+    "hr": 0.0491,
+    "obp": 0.3569,
+    "obp_ubb": 0.3405,
+    "slg": 0.5131,
+    "so": 0.1636,
+    "ubb": 0.09
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "107.2",
+     "other_clubs": [],
+     "pa": 48,
+     "teams": [
+      "OAK"
+     ],
+     "year": 1998
+    },
+    {
+     "nulls": [],
+     "ops_plus": "93.2",
+     "other_clubs": [],
+     "pa": 402,
+     "teams": [
+      "OAK"
+     ],
+     "year": 1999
+    },
+    {
+     "nulls": [],
+     "ops_plus": "113.5",
+     "other_clubs": [],
+     "pa": 569,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2000
+    },
+    {
+     "nulls": [],
+     "ops_plus": "127.4",
+     "other_clubs": [],
+     "pa": 604,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2001
+    },
+    {
+     "nulls": [],
+     "ops_plus": "125.9",
+     "other_clubs": [],
+     "pa": 653,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2002
+    },
+    {
+     "nulls": [],
+     "ops_plus": "125.1",
+     "other_clubs": [],
+     "pa": 654,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2003
+    },
+    {
+     "nulls": [],
+     "ops_plus": "133.2",
+     "other_clubs": [],
+     "pa": 577,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2004
+    },
+    {
+     "nulls": [],
+     "ops_plus": "109.2",
+     "other_clubs": [],
+     "pa": 694,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2005
+    },
+    {
+     "nulls": [],
+     "ops_plus": "102.9",
+     "other_clubs": [],
+     "pa": 576,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2006
+    },
+    {
+     "nulls": [],
+     "ops_plus": "96.0",
+     "other_clubs": [],
+     "pa": 379,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2007
+    },
+    {
+     "nulls": [],
+     "ops_plus": "81.5",
+     "other_clubs": [],
+     "pa": 95,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2008
+    },
+    {
+     "nulls": [],
+     "ops_plus": "-30.4",
+     "other_clubs": [],
+     "pa": 31,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2009
+    },
+    {
+     "nulls": [],
+     "ops_plus": "66.4",
+     "other_clubs": [],
+     "pa": 123,
+     "teams": [
+      "OAK"
+     ],
+     "year": 2010
+    }
+   ],
+   "window_years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ]
+  },
+  {
+   "calibration_year": 1951,
+   "card": {
+    "bb_bf": 0.0851,
+    "h_bf": 0.2076,
+    "hbp_bf": 0.004,
+    "hr_bf": 0.0161,
+    "so_bf": 0.1862
+   },
+   "fit_error": 0.0746,
+   "flags": [
+    "Stamina, wild pitch, double play, hold, pickoff, and injury are empty. There is no set-file addendum and no rulebook formula for them in the repo.",
+    "The chart is fit to the 1986-calibrated target. The comparison below also shows the raw batters-faced rates.",
+    "The roster lists him in the bullpen. Franchise seasons show 105 starts in 152 games. The card uses the 30-inning relief floor because that is the roster group.",
+    "Versus the calibrated target, bb_bf is +0.0135.",
+    "HISTORICAL-TARGET-REVIEW"
+   ],
+   "key": "PHA|shantbo01",
+   "kind": "pitcher",
+   "name": "Bobby Shantz",
+   "nulls": [],
+   "qa_status": "HISTORICAL-TARGET-REVIEW",
+   "raw": {
+    "bb_bf": 0.0815,
+    "h_bf": 0.2308,
+    "hbp_bf": 0.0049,
+    "hr_bf": 0.0187,
+    "so_bf": 0.1122
+   },
+   "seasons": [
+    {
+     "era_plus": "123.4",
+     "ip": "127",
+     "nulls": [],
+     "other_clubs": [],
+     "product": "15671.8",
+     "teams": [
+      "PHA"
+     ],
+     "year": 1949,
+     "zero_er": false
+    },
+    {
+     "era_plus": "99.3",
+     "ip": "214.6666666666666666666666667",
+     "nulls": [],
+     "other_clubs": [],
+     "product": "21316.40000000000000000000000",
+     "teams": [
+      "PHA"
+     ],
+     "year": 1950,
+     "zero_er": false
+    },
+    {
+     "era_plus": "104.5",
+     "ip": "205.3333333333333333333333333",
+     "nulls": [],
+     "other_clubs": [],
+     "product": "21457.33333333333333333333333",
+     "teams": [
+      "PHA"
+     ],
+     "year": 1951,
+     "zero_er": false
+    },
+    {
+     "era_plus": "148.2",
+     "ip": "279.6666666666666666666666667",
+     "nulls": [],
+     "other_clubs": [],
+     "product": "41446.60000000000000000000000",
+     "teams": [
+      "PHA"
+     ],
+     "year": 1952,
+     "zero_er": false
+    },
+    {
+     "era_plus": "97.7",
+     "ip": "105.6666666666666666666666667",
+     "nulls": [],
+     "other_clubs": [],
+     "product": "10323.63333333333333333333334",
+     "teams": [
+      "PHA"
+     ],
+     "year": 1953,
+     "zero_er": false
+    },
+    {
+     "era_plus": "47.3",
+     "ip": "8",
+     "nulls": [],
+     "other_clubs": [],
+     "product": "378.4",
+     "teams": [
+      "PHA"
+     ],
+     "year": 1954,
+     "zero_er": false
+    }
+   ],
+   "target": {
+    "bb_bf": 0.0716,
+    "h_bf": 0.2079,
+    "hbp_bf": 0.0049,
+    "hr_bf": 0.017,
+    "so_bf": 0.1796
+   },
+   "window_years": [
+    1949,
+    1950,
+    1951,
+    1952,
+    1953
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1934,
+    "2b": 0.0689,
+    "3b": 0.0137,
+    "avg": 0.3594,
+    "bb": 0.083,
+    "hr": 0.0529,
+    "obp": 0.4138,
+    "slg": 0.638,
+    "so": 0.0715
+   },
+   "delta": {
+    "1b": -0.0005,
+    "2b": 0.0007,
+    "3b": 0.0002,
+    "avg": 0.0004,
+    "hr": -0.0,
+    "obp_real": 0.0002,
+    "obp_ubb": 0.0002,
+    "slg": 0.0015,
+    "so": -0.0004
+   },
+   "fit_error": 0.0033,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1928 has 268 plate appearances, under the 300 floor. OPS+ 161.5.",
+    "Lahman nulls treated as zero: CS [1929, 1930, 1931, 1932, 1933]; GIDP [1929, 1930, 1931, 1932]; IBB [1929, 1930, 1931, 1932, 1933]; SF [1929, 1930, 1931, 1932, 1933]",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "PHI|kleinch01",
+   "kind": "hitter",
+   "name": "Chuck Klein",
+   "nulls": [
+    {
+     "field": "CS",
+     "year": 1929
+    },
+    {
+     "field": "IBB",
+     "year": 1929
+    },
+    {
+     "field": "SF",
+     "year": 1929
+    },
+    {
+     "field": "GIDP",
+     "year": 1929
+    },
+    {
+     "field": "CS",
+     "year": 1930
+    },
+    {
+     "field": "IBB",
+     "year": 1930
+    },
+    {
+     "field": "SF",
+     "year": 1930
+    },
+    {
+     "field": "GIDP",
+     "year": 1930
+    },
+    {
+     "field": "CS",
+     "year": 1931
+    },
+    {
+     "field": "IBB",
+     "year": 1931
+    },
+    {
+     "field": "SF",
+     "year": 1931
+    },
+    {
+     "field": "GIDP",
+     "year": 1931
+    },
+    {
+     "field": "CS",
+     "year": 1932
+    },
+    {
+     "field": "IBB",
+     "year": 1932
+    },
+    {
+     "field": "SF",
+     "year": 1932
+    },
+    {
+     "field": "GIDP",
+     "year": 1932
+    },
+    {
+     "field": "CS",
+     "year": 1933
+    },
+    {
+     "field": "IBB",
+     "year": 1933
+    },
+    {
+     "field": "SF",
+     "year": 1933
+    }
+   ],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1939,
+    "2b": 0.0682,
+    "3b": 0.0135,
+    "avg": 0.359,
+    "bb": 0.0831,
+    "hr": 0.0529,
+    "obp": 0.4136,
+    "obp_ubb": 0.4136,
+    "slg": 0.6365,
+    "so": 0.072,
+    "ubb": 0.0831
+   },
+   "seasons": [
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "161.5",
+     "other_clubs": [],
+     "pa": 268,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1928
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "169.6",
+     "other_clubs": [],
+     "pa": 670,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1929
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "175.3",
+     "other_clubs": [],
+     "pa": 706,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1930
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "171.0",
+     "other_clubs": [],
+     "pa": 654,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1931
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "187.4",
+     "other_clubs": [],
+     "pa": 711,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1932
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "200.7",
+     "other_clubs": [],
+     "pa": 663,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1933
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "140.7",
+     "other_clubs": [
+      "CHN"
+     ],
+     "pa": 525,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1936
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "146.7",
+     "other_clubs": [],
+     "pa": 446,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1937
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "87.9",
+     "other_clubs": [],
+     "pa": 496,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1938
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "88.5",
+     "other_clubs": [
+      "PIT"
+     ],
+     "pa": 57,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1939
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "82.8",
+     "other_clubs": [],
+     "pa": 398,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1940
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "16.1",
+     "other_clubs": [],
+     "pa": 83,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1941
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "-56.5",
+     "other_clubs": [],
+     "pa": 14,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1942
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "-40.2",
+     "other_clubs": [],
+     "pa": 20,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1943
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "-16.5",
+     "other_clubs": [],
+     "pa": 7,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1944
+    }
+   ],
+   "window_years": [
+    1929,
+    1930,
+    1931,
+    1932,
+    1933
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.2233,
+    "2b": 0.0634,
+    "3b": 0.0256,
+    "avg": 0.3648,
+    "bb": 0.1042,
+    "hr": 0.0127,
+    "obp": 0.4344,
+    "slg": 0.5361,
+    "so": 0.031
+   },
+   "delta": {
+    "1b": 0.0004,
+    "2b": -0.0007,
+    "3b": 0.0002,
+    "avg": -0.0002,
+    "hr": -0.0,
+    "obp_real": -0.0002,
+    "obp_ubb": -0.0002,
+    "slg": -0.0008,
+    "so": 0.0001
+   },
+   "fit_error": 0.0009,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1940 has 261 plate appearances, under the 300 floor. OPS+ 109.7.",
+    "Lahman nulls treated as zero: CS [1926, 1927, 1928, 1934, 1936]; GIDP [1926, 1927, 1928]; IBB [1926, 1927, 1928, 1934, 1936]; SF [1926, 1927, 1928, 1934, 1936]",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "PIT|wanerpa01",
+   "kind": "hitter",
+   "name": "Paul Waner",
+   "nulls": [
+    {
+     "field": "CS",
+     "year": 1926
+    },
+    {
+     "field": "IBB",
+     "year": 1926
+    },
+    {
+     "field": "SF",
+     "year": 1926
+    },
+    {
+     "field": "GIDP",
+     "year": 1926
+    },
+    {
+     "field": "CS",
+     "year": 1927
+    },
+    {
+     "field": "IBB",
+     "year": 1927
+    },
+    {
+     "field": "SF",
+     "year": 1927
+    },
+    {
+     "field": "GIDP",
+     "year": 1927
+    },
+    {
+     "field": "CS",
+     "year": 1928
+    },
+    {
+     "field": "IBB",
+     "year": 1928
+    },
+    {
+     "field": "SF",
+     "year": 1928
+    },
+    {
+     "field": "GIDP",
+     "year": 1928
+    },
+    {
+     "field": "CS",
+     "year": 1934
+    },
+    {
+     "field": "IBB",
+     "year": 1934
+    },
+    {
+     "field": "SF",
+     "year": 1934
+    },
+    {
+     "field": "CS",
+     "year": 1936
+    },
+    {
+     "field": "IBB",
+     "year": 1936
+    },
+    {
+     "field": "SF",
+     "year": 1936
+    }
+   ],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.2229,
+    "2b": 0.0641,
+    "3b": 0.0254,
+    "avg": 0.365,
+    "bb": 0.1043,
+    "hr": 0.0127,
+    "obp": 0.4345,
+    "obp_ubb": 0.4345,
+    "slg": 0.5368,
+    "so": 0.0308,
+    "ubb": 0.1043
+   },
+   "seasons": [
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "160.1",
+     "other_clubs": [],
+     "pa": 606,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1926
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "172.5",
+     "other_clubs": [],
+     "pa": 686,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1927
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "168.6",
+     "other_clubs": [],
+     "pa": 684,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1928
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "145.2",
+     "other_clubs": [],
+     "pa": 688,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1929
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "136.7",
+     "other_clubs": [],
+     "pa": 650,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1930
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "139.0",
+     "other_clubs": [],
+     "pa": 636,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1931
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF",
+      "GIDP"
+     ],
+     "ops_plus": "150.8",
+     "other_clubs": [],
+     "pa": 688,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1932
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "144.4",
+     "other_clubs": [],
+     "pa": 680,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1933
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "166.9",
+     "other_clubs": [],
+     "pa": 669,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1934
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "141.3",
+     "other_clubs": [],
+     "pa": 613,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1935
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "168.6",
+     "other_clubs": [],
+     "pa": 662,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1936
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "141.0",
+     "other_clubs": [],
+     "pa": 682,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1937
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "102.0",
+     "other_clubs": [],
+     "pa": 673,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1938
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "126.3",
+     "other_clubs": [],
+     "pa": 496,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1939
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "109.7",
+     "other_clubs": [],
+     "pa": 261,
+     "teams": [
+      "PIT"
+     ],
+     "year": 1940
+    }
+   ],
+   "window_years": [
+    1926,
+    1927,
+    1928,
+    1934,
+    1936
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1546,
+    "2b": 0.0552,
+    "3b": 0.0024,
+    "avg": 0.263,
+    "bb": 0.0552,
+    "hr": 0.034,
+    "obp": 0.3099,
+    "slg": 0.4359,
+    "so": 0.1617
+   },
+   "delta": {
+    "1b": 0.0016,
+    "2b": -0.001,
+    "3b": -0.0002,
+    "avg": -0.0031,
+    "hr": 0.0003,
+    "obp_real": -0.007,
+    "obp_ubb": 0.0005,
+    "slg": -0.0062,
+    "so": 0.0001
+   },
+   "fit_error": 0.0017,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card."
+   ],
+   "key": "SEA|beltrad01",
+   "kind": "hitter",
+   "name": "Adrián Beltré",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.153,
+    "2b": 0.0562,
+    "3b": 0.0026,
+    "avg": 0.266,
+    "bb": 0.0628,
+    "hr": 0.0337,
+    "obp": 0.3169,
+    "obp_ubb": 0.3094,
+    "slg": 0.4421,
+    "so": 0.1615,
+    "ubb": 0.0553
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "89.1",
+     "other_clubs": [],
+     "pa": 650,
+     "teams": [
+      "SEA"
+     ],
+     "year": 2005
+    },
+    {
+     "nulls": [],
+     "ops_plus": "102.9",
+     "other_clubs": [],
+     "pa": 680,
+     "teams": [
+      "SEA"
+     ],
+     "year": 2006
+    },
+    {
+     "nulls": [],
+     "ops_plus": "108.6",
+     "other_clubs": [],
+     "pa": 639,
+     "teams": [
+      "SEA"
+     ],
+     "year": 2007
+    },
+    {
+     "nulls": [],
+     "ops_plus": "106.2",
+     "other_clubs": [],
+     "pa": 612,
+     "teams": [
+      "SEA"
+     ],
+     "year": 2008
+    },
+    {
+     "nulls": [],
+     "ops_plus": "79.1",
+     "other_clubs": [],
+     "pa": 477,
+     "teams": [
+      "SEA"
+     ],
+     "year": 2009
+    }
+   ],
+   "window_years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1754,
+    "2b": 0.0344,
+    "3b": 0.0115,
+    "avg": 0.2999,
+    "bb": 0.127,
+    "hr": 0.0378,
+    "obp": 0.3951,
+    "slg": 0.4976,
+    "so": 0.0674
+   },
+   "delta": {
+    "1b": -0.0009,
+    "2b": 0.0001,
+    "3b": 0.0,
+    "avg": -0.0015,
+    "hr": 0.0001,
+    "obp_real": -0.0005,
+    "obp_ubb": -0.0005,
+    "slg": -0.0013,
+    "so": -0.0003
+   },
+   "fit_error": 0.0002,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1952 has 137 plate appearances and OPS+ 130.8. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "Only 4 franchise seasons reach 300 plate appearances. The window is short.",
+    "Lahman nulls treated as zero: CS [1950]; IBB [1950, 1951, 1953, 1954]; SF [1950, 1951, 1953]",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "SF|irvinmo01",
+   "kind": "hitter",
+   "name": "Monte Irvin",
+   "nulls": [
+    {
+     "field": "CS",
+     "year": 1950
+    },
+    {
+     "field": "IBB",
+     "year": 1950
+    },
+    {
+     "field": "SF",
+     "year": 1950
+    },
+    {
+     "field": "IBB",
+     "year": 1951
+    },
+    {
+     "field": "SF",
+     "year": 1951
+    },
+    {
+     "field": "IBB",
+     "year": 1953
+    },
+    {
+     "field": "SF",
+     "year": 1953
+    },
+    {
+     "field": "IBB",
+     "year": 1954
+    }
+   ],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1764,
+    "2b": 0.0343,
+    "3b": 0.0114,
+    "avg": 0.3014,
+    "bb": 0.1268,
+    "hr": 0.0377,
+    "obp": 0.3956,
+    "obp_ubb": 0.3956,
+    "slg": 0.4989,
+    "so": 0.0677,
+    "ubb": 0.1268
+   },
+   "seasons": [
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "91.5",
+     "other_clubs": [],
+     "pa": 93,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1949
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "141.9",
+     "other_clubs": [],
+     "pa": 431,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1950
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "158.3",
+     "other_clubs": [],
+     "pa": 656,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1951
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "130.8",
+     "other_clubs": [],
+     "pa": 137,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1952
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "153.8",
+     "other_clubs": [],
+     "pa": 502,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1953
+    },
+    {
+     "nulls": [
+      "IBB"
+     ],
+     "ops_plus": "116.0",
+     "other_clubs": [],
+     "pa": 509,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1954
+    },
+    {
+     "nulls": [],
+     "ops_plus": "85.0",
+     "other_clubs": [],
+     "pa": 172,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1955
+    }
+   ],
+   "window_years": [
+    1950,
+    1951,
+    1953,
+    1954
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1711,
+    "2b": 0.0568,
+    "3b": 0.0094,
+    "avg": 0.29,
+    "bb": 0.0569,
+    "hr": 0.0359,
+    "obp": 0.3313,
+    "slg": 0.4847,
+    "so": 0.1239
+   },
+   "delta": {
+    "1b": 0.0028,
+    "2b": 0.0006,
+    "3b": 0.0,
+    "avg": -0.0034,
+    "hr": 0.0001,
+    "obp_real": -0.0056,
+    "obp_ubb": 0.0038,
+    "slg": -0.0071,
+    "so": 0.0001
+   },
+   "fit_error": 0.0862,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "Switch hitter. The solver stands him opposite the pitcher and uses the 0.28 left-handed / 0.72 right-handed park mix.",
+    "1992 also has a OAK stint. Only the TEX line is in the window.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "TEX|sierrru01",
+   "kind": "hitter",
+   "name": "Rubén Sierra",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1683,
+    "2b": 0.0562,
+    "3b": 0.0094,
+    "avg": 0.2934,
+    "bb": 0.0662,
+    "hr": 0.0358,
+    "obp": 0.3369,
+    "obp_ubb": 0.3275,
+    "slg": 0.4918,
+    "so": 0.1238,
+    "ubb": 0.0569
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "108.6",
+     "other_clubs": [],
+     "pa": 410,
+     "teams": [
+      "TEX"
+     ],
+     "year": 1986
+    },
+    {
+     "nulls": [],
+     "ops_plus": "100.9",
+     "other_clubs": [],
+     "pa": 696,
+     "teams": [
+      "TEX"
+     ],
+     "year": 1987
+    },
+    {
+     "nulls": [],
+     "ops_plus": "101.4",
+     "other_clubs": [],
+     "pa": 668,
+     "teams": [
+      "TEX"
+     ],
+     "year": 1988
+    },
+    {
+     "nulls": [],
+     "ops_plus": "147.9",
+     "other_clubs": [],
+     "pa": 689,
+     "teams": [
+      "TEX"
+     ],
+     "year": 1989
+    },
+    {
+     "nulls": [],
+     "ops_plus": "110.8",
+     "other_clubs": [],
+     "pa": 666,
+     "teams": [
+      "TEX"
+     ],
+     "year": 1990
+    },
+    {
+     "nulls": [],
+     "ops_plus": "135.7",
+     "other_clubs": [],
+     "pa": 726,
+     "teams": [
+      "TEX"
+     ],
+     "year": 1991
+    },
+    {
+     "nulls": [],
+     "ops_plus": "111.9",
+     "other_clubs": [
+      "OAK"
+     ],
+     "pa": 539,
+     "teams": [
+      "TEX"
+     ],
+     "year": 1992
+    },
+    {
+     "nulls": [],
+     "ops_plus": "44.6",
+     "other_clubs": [],
+     "pa": 64,
+     "teams": [
+      "TEX"
+     ],
+     "year": 2000
+    },
+    {
+     "nulls": [],
+     "ops_plus": "127.7",
+     "other_clubs": [],
+     "pa": 369,
+     "teams": [
+      "TEX"
+     ],
+     "year": 2001
+    },
+    {
+     "nulls": [],
+     "ops_plus": "93.2",
+     "other_clubs": [
+      "NYA"
+     ],
+     "pa": 147,
+     "teams": [
+      "TEX"
+     ],
+     "year": 2003
+    }
+   ],
+   "window_years": [
+    1989,
+    1990,
+    1991,
+    1992,
+    2001
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.133,
+    "2b": 0.0517,
+    "3b": 0.0067,
+    "avg": 0.2582,
+    "bb": 0.0559,
+    "hr": 0.0493,
+    "obp": 0.3087,
+    "slg": 0.4867,
+    "so": 0.1563
+   },
+   "delta": {
+    "1b": 0.0023,
+    "2b": 0.0005,
+    "3b": -0.0008,
+    "avg": -0.0042,
+    "hr": 0.0006,
+    "obp_real": -0.0064,
+    "obp_ubb": 0.0026,
+    "slg": -0.0097,
+    "so": -0.0002
+   },
+   "fit_error": 0.0106,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "TOR|cartejo01",
+   "kind": "hitter",
+   "name": "Joe Carter",
+   "nulls": [],
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1307,
+    "2b": 0.0512,
+    "3b": 0.0074,
+    "avg": 0.2624,
+    "bb": 0.0649,
+    "hr": 0.0487,
+    "obp": 0.315,
+    "obp_ubb": 0.306,
+    "slg": 0.4964,
+    "so": 0.1564,
+    "ubb": 0.0559
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "127.8",
+     "other_clubs": [],
+     "pa": 706,
+     "teams": [
+      "TOR"
+     ],
+     "year": 1991
+    },
+    {
+     "nulls": [],
+     "ops_plus": "123.7",
+     "other_clubs": [],
+     "pa": 682,
+     "teams": [
+      "TOR"
+     ],
+     "year": 1992
+    },
+    {
+     "nulls": [],
+     "ops_plus": "112.6",
+     "other_clubs": [],
+     "pa": 669,
+     "teams": [
+      "TOR"
+     ],
+     "year": 1993
+    },
+    {
+     "nulls": [],
+     "ops_plus": "112.6",
+     "other_clubs": [],
+     "pa": 483,
+     "teams": [
+      "TOR"
+     ],
+     "year": 1994
+    },
+    {
+     "nulls": [],
+     "ops_plus": "87.5",
+     "other_clubs": [],
+     "pa": 603,
+     "teams": [
+      "TOR"
+     ],
+     "year": 1995
+    },
+    {
+     "nulls": [],
+     "ops_plus": "94.3",
+     "other_clubs": [],
+     "pa": 682,
+     "teams": [
+      "TOR"
+     ],
+     "year": 1996
+    },
+    {
+     "nulls": [],
+     "ops_plus": "76.7",
+     "other_clubs": [],
+     "pa": 668,
+     "teams": [
+      "TOR"
+     ],
+     "year": 1997
+    }
+   ],
+   "window_years": [
+    1991,
+    1992,
+    1993,
+    1994,
+    1996
+   ]
+  },
+  {
+   "card": {
+    "1b": 0.1547,
+    "2b": 0.0489,
+    "3b": 0.0016,
+    "avg": 0.2708,
+    "bb": 0.1149,
+    "hr": 0.0316,
+    "obp": 0.3621,
+    "slg": 0.4388,
+    "so": 0.2064
+   },
+   "delta": {
+    "1b": 0.0015,
+    "2b": -0.0004,
+    "3b": -0.0002,
+    "avg": -0.0025,
+    "hr": 0.0001,
+    "obp_real": -0.0038,
+    "obp_ubb": 0.0009,
+    "slg": -0.0053,
+    "so": -0.0001
+   },
+   "fit_error": 0.0012,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "2017 has 289 plate appearances, under the 300 floor. OPS+ 91.9."
+   ],
+   "key": "WSH|werthja01",
+   "kind": "hitter",
+   "name": "Jayson Werth",
+   "nulls": [],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1533,
+    "2b": 0.0493,
+    "3b": 0.0018,
+    "avg": 0.2733,
+    "bb": 0.1196,
+    "hr": 0.0315,
+    "obp": 0.3659,
+    "obp_ubb": 0.3612,
+    "slg": 0.4442,
+    "so": 0.2065,
+    "ubb": 0.1149
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "102.8",
+     "other_clubs": [],
+     "pa": 649,
+     "teams": [
+      "WAS"
+     ],
+     "year": 2011
+    },
+    {
+     "nulls": [],
+     "ops_plus": "131.4",
+     "other_clubs": [],
+     "pa": 344,
+     "teams": [
+      "WAS"
+     ],
+     "year": 2012
+    },
+    {
+     "nulls": [],
+     "ops_plus": "163.6",
+     "other_clubs": [],
+     "pa": 532,
+     "teams": [
+      "WAS"
+     ],
+     "year": 2013
+    },
+    {
+     "nulls": [],
+     "ops_plus": "145.4",
+     "other_clubs": [],
+     "pa": 629,
+     "teams": [
+      "WAS"
+     ],
+     "year": 2014
+    },
+    {
+     "nulls": [],
+     "ops_plus": "92.2",
+     "other_clubs": [],
+     "pa": 378,
+     "teams": [
+      "WAS"
+     ],
+     "year": 2015
+    },
+    {
+     "nulls": [],
+     "ops_plus": "105.2",
+     "other_clubs": [],
+     "pa": 606,
+     "teams": [
+      "WAS"
+     ],
+     "year": 2016
+    },
+    {
+     "nulls": [],
+     "ops_plus": "91.9",
+     "other_clubs": [],
+     "pa": 289,
+     "teams": [
+      "WAS"
+     ],
+     "year": 2017
+    }
+   ],
+   "window_years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2016
+   ]
+  }
+ ],
+ "summary": {
+  "lahman_max_year": 2025,
+  "lahman_sha256": "48d05d6ffafb977846b14cfb273d2faf21b5519604cbb337792cb3ec8d25dd31",
+  "players": [
+   "ATL|hornebo01",
+   "BAL|sislege01",
+   "COL|gonzaca01",
+   "CWS|allendi01",
+   "DET|gibsoki01",
+   "HOU|aloumo01",
+   "KC|maybejo01",
+   "LAA|carewro01",
+   "MIA|lowelmi01",
+   "MIL|oglivbe01",
+   "MIN|allisbo01",
+   "NYM|johnsho01",
+   "NYY|henderi01",
+   "OAK|chaveer01",
+   "PHA|shantbo01",
+   "PHI|kleinch01",
+   "PIT|wanerpa01",
+   "SEA|beltrad01",
+   "SF|irvinmo01",
+   "TEX|sierrru01",
+   "TOR|cartejo01",
+   "WSH|werthja01"
+  ],
+  "window_rule": {
+   "hitters": "five best franchise seasons by league OPS+ (one decimal), PA>=300",
+   "pitchers": "five best franchise seasons by one-decimal ERA+ times IP, bullpen floor 30 IP"
+  }
+ }
+}
