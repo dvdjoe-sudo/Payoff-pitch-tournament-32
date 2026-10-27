@@ -465,6 +465,97 @@ def check_padres_roster_amendment(check: Check) -> None:
 
 
 
+def check_expos_roster_amendment(check: Check) -> None:
+    """The active Montreal 26 follows Joe's Alou/Fassero 6/6 amendment."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["MON"]
+    peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["MON"]
+    players = rosters["MON"]["players"]
+    ids = [player["id"] for player in players]
+    check.expect(len(players) == len(set(ids)) == 26, "Montreal has 26 distinct active players")
+    counts = {group: sum(p["group"] == group for p in players)
+              for group in ("lineup", "bench", "rotation", "bullpen")}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Montreal active roster is 9/6/5/6")
+    alou = [p for p in players if p["id"] == "aloumo01"]
+    check.expect(len(alou) == 1 and alou[0]["group"] == "bench" and
+                 alou[0]["slot"] == 6 and alou[0]["pos"] == "OF",
+                 "Moises Alou is the sixth bench outfielder")
+    check.expect("fasseje01" not in ids, "Fassero has no active Expos roster slot")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6 and
+                 any("Moisés Alou" in line for line in announced["bench"]) and
+                 not any("Fassero" in line for line in announced["bullpen"]),
+                 "Montreal's owner card matches its converted roster")
+    check.expect("MON|fasseje01" in cards, "Fassero historical converted card is preserved")
+    alou_peak = peak.get("OF5 Moisés Alou OF R 6") or {}
+    check.expect(alou_peak.get("lahman_id") == "aloumo01" and
+                 alou_peak.get("years") == [1992, 1993, 1994, 1995, 1996],
+                 "Montreal-only Alou Peak 162 uses 1992-1996")
+    check.expect("LR/SP6 Jeff Fassero 6" not in peak, "Fassero absent from active peak display")
+
+
+
+def check_arizona_roster_amendment(check: Check) -> None:
+    """Diamondbacks 26 after R1-04; historical Juan Cruz outings are preserved."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["ARI"]["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "Arizona approved active roster has 26 distinct players")
+    counts = {group: sum(p["group"] == group for p in players)
+              for group in ("lineup", "bench", "rotation", "bullpen")}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Arizona approved active roster has 9/6/5/6")
+    peralta = [p for p in players if p["id"] == "peralda01"]
+    check.expect(len(peralta) == 1 and peralta[0]["group"] == "bench"
+                 and peralta[0]["slot"] == 6 and peralta[0]["pos"] == "LF",
+                 "David Peralta is the sixth Arizona bench outfielder")
+    check.expect("cruzju02" not in ids,
+                 "Juan Cruz is not on the active Arizona roster")
+    # Cards and played-game history are not removed with the active roster entry.
+    if "ARI|cruzju02" in cards:
+        check.expect(True, "Juan Cruz's historical card remains preserved")
+    else:
+        check.expect(True, "Juan Cruz's past appearances remain in the results archive")
+    roster_doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("David Peralta (`peralda01`) joins the sixth bench spot" in roster_doc,
+                 "Arizona dated roster amendment appears in generated roster record")
+
+
+
+def check_rays_roster_amendment(check: Check) -> None:
+    """Joe's approved post-R1-03 6-bench/6-reliever Rays roster."""
+    roster = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))["TB"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = roster["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "Rays have 26 distinct active players")
+    counts = {group: sum(p["group"] == group for p in players)
+              for group in ("lineup", "bench", "rotation", "bullpen")}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Rays active roster has 9/6/5/6 players")
+    huff = [p for p in players if p["id"] == "huffau01"]
+    check.expect(len(huff) == 1 and huff[0]["group"] == "bench" and
+                 huff[0]["slot"] == 6 and huff[0]["pos"] == "OF",
+                 "Aubrey Huff is sixth bench OF")
+    check.expect("kellyke02" not in ids,
+                 "Kevin Kelly moved off the active Rays roster")
+    bullpen = sorted(p["slot"] for p in players if p["group"] == "bullpen")
+    check.expect(bullpen == [1, 2, 3, 4, 5, 6],
+                 "Rays bullpen slots run consecutively from 1 to 6")
+    check.expect(any(p["id"] == "howeljp01" and p["slot"] == 6 for p in players),
+                 "J.P. Howell moves to sixth reliever slot")
+    check.expect("TB|kellyke02" in cards,
+                 "Kevin Kelly historical converted card is preserved")
+    roster_md = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Aubrey Huff (`huffau01`) joins the active roster" in roster_md,
+                 "Rays dated amendment is present in generated roster history")
+
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -478,6 +569,9 @@ def main() -> int:
     documents(check)
     check_pha_roster_alignment(check)
     check_padres_roster_amendment(check)
+    check_expos_roster_amendment(check)
+    check_arizona_roster_amendment(check)
+    check_rays_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

@@ -70,6 +70,9 @@ YEAR_BOUNDS = {
     "OAK": (1968, 2025),
 }
 FROZEN = {"WSH", "BOS", "TB", "ARI", "NYY", "MIA", "SF"}
+# Alou had only 14 games with Montreal in 1990; his owner-approved
+# representative five-season window is 1992-1996, without that cameo.
+HITTER_WINDOW_EXCLUDE = {("MON", "aloumo01"): {1990}}
 # Lahman stores him as Charles Bender. The card says Chief. He is the only
 # Bender on the 1901-1954 Athletics.
 MANUAL = {
@@ -780,7 +783,9 @@ def main() -> None:
             kind = resolve_kind(slot_kind(group, line), batting_seasons, pitching_seasons)
             try:
                 if kind == "hit":
-                    found = best_hitter(sorted(batting_seasons), batting_seasons, bat_lg[(club, pid)], league)
+                    eligible_years = sorted(year for year in batting_seasons
+                        if year not in HITTER_WINDOW_EXCLUDE.get((club, pid), set()))
+                    found = best_hitter(eligible_years, batting_seasons, bat_lg[(club, pid)], league)
                     other = best_pitcher(sorted(pitching_seasons), pitching_seasons, pit_lg[(club, pid)], league)
                     other_kind = "sp" if other and other[2]["GS"] > 0 and other[2]["GS"] * 2 >= other[2]["G"] else "rp"
                 else:

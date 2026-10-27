@@ -137,6 +137,18 @@ The owner's 101-page *R1-03 FAC and Dice Rolls* record was supplied on 2026-10-2
 
 Brian Giles (left-handed OF) was added as sixth bench player, and Craig Lefferts was removed from the active 26. The active roster is 9 lineup / 6 bench / 5 SP / 6 RP. Lefferts' previously converted card stays in `data/cards.json` as archived historical source data and must not be confused with an active roster spot. Giles' original Hitter v0.5 conversion has **not** been produced in this change: he is marked as awaiting conversion on his roster/player page, and no simulated card ratings were invented. The franchise Peak 162 display is Padres-only; his stats from other franchises must never be included.
 
+## 2026-10-26 Tampa Bay Rays approved 6/6 roster
+
+Aubrey Huff (OF, also 1B/3B/DH) joins bench OF6; Kevin Kelly leaves the active bullpen and J.P. Howell becomes bullpen slot 6. Tampa Bay's new active count is 9 lineup / 6 bench / 5 rotation / 6 relievers. Kelly's original converted card remains untouched in `data/cards.json`, and all of the previously played R1-03 Boston series, box scores, FAC/dice sequences and historical appearances remain unchanged. Huff's original Hitter v0.5 conversion and Rays-franchise-only peak profile are **pending**; do not confuse the roster entry with a playable card. Changes take effect only in future tournament games. `scripts/build_cards.py` preserves the approved roster when sets are rebuilt, and `scripts/validate_results.py` checks the active 26.
+
+## 2026-10-26 Arizona Diamondbacks approved 6/6 roster
+
+David Peralta has been added as the sixth Arizona bench player (left-handed LF); Juan Cruz is off the active 26. The active split is 9 lineup / 6 bench / 5 SP / 6 RP. Cruz appeared during R1-04, so his box scores and prior results remain exactly as played, and his converted card remains historical reference data. No invented hitter-card results are supplied for Peralta. His actual frozen Hitter v0.5 conversion and franchise-only five-season peak profile are still needed before play. `data/rosters.json` records the active 26; ROSTERS.md separately preserves previous game appearances. This roster change applies only to future games.
+
+## 2026-10-26 Montreal Expos approved 6/6 roster
+
+Moisés Alou (RH outfielder) is the Expos' sixth bench player; Jeff Fassero leaves the active roster. Montreal now has 9 lineup / 6 bench / 5 SP / 6 RP. Fassero's existing converted pitcher card is retained in `data/cards.json` as historical data. Alou's Hitter v0.5 card is **pending Joe's original conversion**; no fake dice, fielding, or ratings have been generated. His franchise Peak 162 profile uses Montreal seasons 1992–1996 only and omits his brief 1990 cameo. Past games remain unchanged.
+
 ## 2026-10-26 Philadelphia Athletics converted-set alignment
 
 Joe approved reconciling the staged Philadelphia Athletics player-card roster to the official 26-man owner roster. Ferris Fain is lineup/DH (slot 9), Max Bishop is a bench infielder (slot 6), Elmer Valo is the left-handed outfielder/bat on the bench (slot 7), and George Earnshaw was removed from this club's converted roster and card listing. No completed tournament game, opponent, or official result was changed.

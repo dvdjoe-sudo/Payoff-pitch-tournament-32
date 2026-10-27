@@ -568,6 +568,9 @@ def build():
 
     apply_owner_roster_amendments(cards, rosters)
     apply_padres_roster_amendment(cards, rosters)
+    apply_expos_roster_amendment(cards, rosters)
+    apply_diamondbacks_roster_amendment(cards, rosters)
+    apply_rays_roster_amendment(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -682,6 +685,132 @@ def apply_padres_roster_amendment(cards, rosters):
         raise SystemExit("Padres owner roster must be 9/6/5/6: " + str(groups))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Padres owner roster requires 26 distinct players")
+
+
+
+def apply_expos_roster_amendment(cards, rosters):
+    """Owner-approved Montreal Alou/Fassero swap; no invented hitter card.
+
+    The original set may still list Fassero. Keep that existing pitcher
+    card for historical inspection, but not among the active 26.
+    """
+    roster = rosters.get("MON")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "fasseje01"]
+    alou_id = "aloumo01"
+    matching = [p for p in players if p["id"] == alou_id]
+    if not matching:
+        players.append({
+            "group": "bench", "id": alou_id, "kind": "hitter",
+            "name": "Moises Alou", "pos": "OF", "slot": 6,
+        })
+    else:
+        if len(matching) != 1:
+            raise SystemExit("duplicate Expos Moises Alou roster entries")
+        matching[0].update(group="bench", kind="hitter", pos="OF", slot=6)
+    if "MON|" + alou_id in cards:
+        cards["MON|" + alou_id]["spots"] = [
+            {"group": "bench", "kind": "hitter", "pos": "OF", "slot": 6},
+        ]
+    # Do not create a fake card. Joe will perform the Hitter v0.5 conversion.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {group: sum(p["group"] == group for p in players) for group in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Expos owner roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Expos owner roster requires 26 distinct players")
+
+
+
+def apply_diamondbacks_roster_amendment(cards, rosters):
+    """Joe-approved Arizona 6/6 switch after R1-04.
+
+    The original converted set contains Juan Cruz. Keep that card and
+    any R1-04 results unchanged as historical data, but remove Cruz
+    from the active roster. David Peralta occupies bench LF6. His
+    original frozen Hitter v0.5 card must come from Joe; do not invent
+    percentile bands, attributes, or pitching/hitting data here.
+    """
+    roster = rosters.get("ARI")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "cruzju02"]
+    player_id = "peralda01"
+    matches = [p for p in players if p["id"] == player_id]
+    if not matches:
+        players.append({
+            "group": "bench", "id": player_id, "kind": "hitter",
+            "name": "David Peralta", "pos": "LF", "slot": 6,
+        })
+    else:
+        if len(matches) != 1:
+            raise SystemExit("duplicate Diamondbacks David Peralta roster entries")
+        matches[0].update(group="bench", kind="hitter", pos="LF", slot=6)
+    card = cards.get("ARI|" + player_id)
+    if card:
+        card["spots"] = [
+            {"group": "bench", "kind": "hitter", "pos": "LF", "slot": 6},
+        ]
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {group: sum(p["group"] == group for p in players) for group in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Arizona owner roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Arizona owner roster requires 26 distinct players")
+
+
+
+def apply_rays_roster_amendment(cards, rosters):
+    """Joe-approved 2026-10-26 Tampa Bay 6-bench/6-reliever roster.
+
+    Huff replaces Kevin Kelly on the active 26 after R1-03. Preserve
+    Kelly's previously converted card, appearances and tournament lines
+    as historical records; never fabricate Huff's frozen Hitter v0.5 card.
+    """
+    roster = rosters.get("TB")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "kellyke02"]
+    huff_id = "huffau01"
+    matching = [p for p in players if p["id"] == huff_id]
+    if not matching:
+        players.append({
+            "group": "bench", "id": huff_id, "kind": "hitter",
+            "name": "Aubrey Huff", "pos": "OF", "slot": 6,
+        })
+    else:
+        if len(matching) != 1:
+            raise SystemExit("duplicate Tampa Bay Aubrey Huff roster entries")
+        matching[0].update(group="bench", slot=6, pos="OF", kind="hitter")
+    if "TB|" + huff_id in cards:
+        cards["TB|" + huff_id]["spots"] = [
+            {"group": "bench", "slot": 6, "pos": "OF", "kind": "hitter"},
+        ]
+    # The surviving long/left-handed reliever moves from old RP7 to RP6.
+    howell = [p for p in players if p["id"] == "howeljp01"]
+    if len(howell) != 1 or howell[0]["group"] != "bullpen":
+        raise SystemExit("Rays missing J.P. Howell in active bullpen")
+    howell[0]["slot"] = 6
+    if "TB|howeljp01" in cards:
+        card = cards["TB|howeljp01"]
+        card["spots"] = [
+            {"group": "bullpen", "kind": "pitcher", "pos": "RP", "slot": 6},
+        ]
+    # Do NOT remove TB|kellyke02 from the archive or create an
+    # unconverted card for Huff. User handles original card conversion.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    groups = {group: sum(p["group"] == group for p in players) for group in order}
+    if groups != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Rays owner roster must be 9/6/5/6: " + str(groups))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Rays owner roster requires 26 distinct players")
 
 
 
