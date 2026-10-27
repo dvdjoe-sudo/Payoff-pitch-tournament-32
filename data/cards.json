@@ -383,7 +383,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.9091,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -888,7 +893,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2162,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -1353,7 +1363,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1515,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -1854,6 +1869,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.121,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -2232,7 +2252,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8004,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -2985,6 +3010,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9624,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -3400,6 +3430,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5599,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -3785,6 +3820,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8823,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -3894,6 +3934,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 15,
+    "of_g": 562,
+    "rel_assist_rate": 0.576,
+    "years_used": [
+     2014,
+     2015,
+     2018,
+     2019,
+     2022
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -4003,7 +4056,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 8,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -4160,6 +4213,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8871,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "L"
@@ -4511,7 +4569,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2876,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -4892,7 +4955,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.621,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -5335,7 +5403,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.138,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -5538,6 +5611,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 22,
+    "of_g": 673,
+    "rel_assist_rate": 0.665,
+    "years_used": [
+     2008,
+     2009,
+     2010,
+     2011,
+     2012
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -5647,7 +5733,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 8,
      "e": 2,
      "pos": "RF",
      "range": "C"
@@ -5810,7 +5896,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2735,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -6281,6 +6372,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9107,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -6785,7 +6881,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7879,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -7256,7 +7357,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0354,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -7605,7 +7711,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7573,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -7953,7 +8064,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2856,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -8336,7 +8452,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7895,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -8684,6 +8805,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8624,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -9240,6 +9366,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6745,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -9697,7 +9828,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9794,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -10045,6 +10181,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9921,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -10391,7 +10532,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8173,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -10951,6 +11097,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5149,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -11296,7 +11447,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7861,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -11378,6 +11534,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 48,
+    "of_g": 802,
+    "rel_assist_rate": 1.006,
+    "years_used": [
+     1982,
+     1983,
+     1984,
+     1985,
+     1987
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -11487,7 +11656,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "C"
@@ -11647,6 +11816,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2548,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -12210,7 +12384,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9052,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -12661,7 +12840,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8402,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -13254,6 +13438,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.541,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -13535,6 +13724,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 32,
+    "of_g": 701,
+    "rel_assist_rate": 0.818,
+    "years_used": [
+     1992,
+     1993,
+     1996,
+     1997,
+     1999
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -13644,7 +13846,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -13804,7 +14006,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5483,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -13987,6 +14194,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 48,
+    "of_g": 702,
+    "rel_assist_rate": 1.138,
+    "years_used": [
+     1966,
+     1967,
+     1969,
+     1970,
+     1974
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -14256,7 +14476,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4018,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -14854,7 +15079,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7389,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -15310,7 +15540,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1298,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -15800,6 +16035,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6612,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -16151,6 +16391,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1123,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -16493,7 +16738,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0081,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -17158,6 +17408,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8831,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -17816,6 +18071,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5951,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -18167,6 +18427,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6777,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -18515,7 +18780,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7626,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -18866,6 +19136,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7002,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -18948,6 +19223,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 28,
+    "of_g": 620,
+    "rel_assist_rate": 0.761,
+    "years_used": [
+     1966,
+     1967,
+     1968,
+     1969,
+     1971
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -19057,7 +19345,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "RF",
      "range": "C"
@@ -19211,7 +19499,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9037,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -19556,6 +19849,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.597,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -19907,7 +20205,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.8361,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -20359,7 +20662,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4458,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -20707,6 +21015,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5671,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -21316,6 +21629,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7316,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -21668,6 +21986,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7015,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -22084,7 +22407,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9835,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -22564,7 +22892,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7817,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -22942,7 +23275,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0763,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -23565,7 +23903,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7754,
+     "set_file_letter": "B"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -24074,6 +24417,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1519,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -24575,7 +24923,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7586,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -24657,6 +25010,16 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 22,
+    "of_g": 170,
+    "rel_assist_rate": 0.971,
+    "years_used": [
+     1918,
+     1919
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -24766,7 +25129,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -24923,6 +25286,10 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "L"
@@ -25359,7 +25726,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.768,
+     "set_file_letter": "D"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -26006,6 +26378,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8007,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -26088,6 +26465,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 40,
+    "of_g": 651,
+    "rel_assist_rate": 0.822,
+    "years_used": [
+     1941,
+     1942,
+     1946,
+     1955,
+     1957
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -26197,7 +26587,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -26348,6 +26738,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.637,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -26851,7 +27246,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9968,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -27430,7 +27830,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.807,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -27885,7 +28290,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.0831,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -28227,6 +28637,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1309,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -28578,7 +28993,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8764,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -28926,6 +29346,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -29311,7 +29735,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8462,
+     "set_file_letter": "B"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -29662,6 +30091,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -30157,6 +30590,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -30716,7 +31153,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9112,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -31064,7 +31506,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3863,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -31415,6 +31862,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6147,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -31601,6 +32053,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 40,
+    "of_g": 787,
+    "rel_assist_rate": 0.923,
+    "years_used": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -31710,7 +32175,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "C"
@@ -31852,7 +32317,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8481,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -32411,6 +32881,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -32864,6 +33338,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.917,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -32946,6 +33425,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 58,
+    "of_g": 734,
+    "rel_assist_rate": 0.811,
+    "years_used": [
+     1926,
+     1927,
+     1928,
+     1929,
+     1930
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -33055,7 +33547,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "CF",
      "range": "B"
@@ -33212,6 +33704,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -33806,7 +34302,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8961,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -34364,7 +34865,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3671,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -34820,7 +35326,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.1497,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -35282,7 +35793,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9092,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -35838,6 +36354,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6659,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -36186,7 +36707,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4654,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -36571,7 +37097,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6731,
+     "set_file_letter": "B"
+    },
+    "rating": "F"
    },
    "throws": "R"
   },
@@ -37130,7 +37661,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.1458,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -37481,7 +38017,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7795,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -37830,7 +38371,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4746,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -38387,7 +38933,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2489,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -38738,6 +39289,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7256,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -38820,6 +39376,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 82,
+    "of_g": 656,
+    "rel_assist_rate": 0.971,
+    "years_used": [
+     1917,
+     1918,
+     1919,
+     1920,
+     1923
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -38929,7 +39498,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "CF",
      "range": "B"
@@ -39089,7 +39658,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4336,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -39437,6 +40011,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1757,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -39785,7 +40364,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9543,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -40348,7 +40932,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7617,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -40430,6 +41019,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 50,
+    "of_g": 637,
+    "rel_assist_rate": 1.399,
+    "years_used": [
+     1991,
+     1993,
+     1994,
+     1995,
+     1996
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -40539,7 +41141,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -40690,7 +41292,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0707,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -41038,6 +41645,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.728,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -41601,6 +42213,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8059,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -41788,6 +42405,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 115,
+    "of_g": 659,
+    "rel_assist_rate": 1.231,
+    "years_used": [
+     1911,
+     1912,
+     1913,
+     1914,
+     1915
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -42057,7 +42687,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5111,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -42720,6 +43355,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -42802,6 +43441,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 59,
+    "of_g": 643,
+    "rel_assist_rate": 1.626,
+    "years_used": [
+     1993,
+     1994,
+     1995,
+     1996,
+     1999
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -42911,7 +43563,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 2,
      "pos": "CF",
      "range": "B"
@@ -43068,7 +43720,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.2863,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -43439,6 +44096,11 @@
    "steal": {
     "jump": null,
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6005,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -43988,7 +44650,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6433,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -44336,6 +45003,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6916,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -44719,6 +45391,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8292,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -45171,7 +45848,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1599,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -45519,6 +46201,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.636,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -45870,7 +46557,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4336,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -46221,7 +46913,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4819,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -46679,6 +47376,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6716,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -47036,6 +47738,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 25,
+    "of_g": 737,
+    "rel_assist_rate": 0.703,
+    "years_used": [
+     2015,
+     2016,
+     2017,
+     2018,
+     2019
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -47145,7 +47860,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "CF",
      "range": "B"
@@ -47305,7 +48020,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2602,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -47683,7 +48403,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2596,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -48281,7 +49006,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3273,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -48664,6 +49394,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6585,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -49369,7 +50104,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1166,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -49747,7 +50487,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4177,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -50099,7 +50844,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.654,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -50441,7 +51191,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7426,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -50820,6 +51575,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1789,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -51323,7 +52083,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0366,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -51939,6 +52704,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7027,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -52275,7 +53045,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4457,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -52775,6 +53550,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7613,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -53140,7 +53920,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0164,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -53513,6 +54298,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2029,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -53888,7 +54678,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1372,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -54227,7 +55022,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9305,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -54787,7 +55587,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5728,
+     "set_file_letter": "F"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -55138,6 +55943,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -55629,7 +56438,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9968,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -56085,7 +56899,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8326,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -56436,7 +57255,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0924,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -56621,6 +57445,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 94,
+    "of_g": 706,
+    "rel_assist_rate": 1.076,
+    "years_used": [
+     1901,
+     1902,
+     1903,
+     1905,
+     1908
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -56884,6 +57721,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -57223,6 +58064,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6426,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -57574,7 +58420,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8685,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -57960,6 +58811,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 52,
+    "of_g": 675,
+    "rel_assist_rate": 1.074,
+    "years_used": [
+     1951,
+     1953,
+     1954,
+     1956,
+     1957
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -58229,7 +59093,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2507,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -58311,6 +59180,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 50,
+    "of_g": 767,
+    "rel_assist_rate": 1.207,
+    "years_used": [
+     1999,
+     2000,
+     2001,
+     2002,
+     2003
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -58574,7 +59456,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1684,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -59061,7 +59948,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3071,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -59508,6 +60400,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6621,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -59856,6 +60753,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5838,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -60532,6 +61434,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7424,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -60643,6 +61550,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 101,
+    "of_g": 687,
+    "rel_assist_rate": 1.064,
+    "years_used": [
+     1909,
+     1910,
+     1911,
+     1914,
+     1917
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -60909,7 +61829,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.2348,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -61290,6 +62215,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4597,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "L"
@@ -61679,6 +62609,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6623,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -62059,7 +62994,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9905,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -62439,7 +63379,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6316,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -62787,7 +63732,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8769,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -62898,6 +63848,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 49,
+    "of_g": 675,
+    "rel_assist_rate": 0.675,
+    "years_used": [
+     1921,
+     1922,
+     1923,
+     1925,
+     1927
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -63007,7 +63970,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 8,
      "e": 3,
      "pos": "RF",
      "range": "C"
@@ -63167,7 +64130,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8321,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -63986,6 +64954,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8763,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -64363,7 +65336,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8193,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -65415,6 +66393,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6958,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -65791,7 +66774,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0388,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -66142,7 +67130,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2951,
+     "set_file_letter": "F"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -66377,6 +67370,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 85,
+    "of_g": 743,
+    "rel_assist_rate": 0.893,
+    "years_used": [
+     1915,
+     1916,
+     1917,
+     1919,
+     1921
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -66486,7 +67492,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -66646,7 +67652,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2753,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -67148,7 +68159,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8946,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -67230,6 +68246,17 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 26,
+    "of_g": 405,
+    "rel_assist_rate": 1.156,
+    "years_used": [
+     1998,
+     2000,
+     2001
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -67496,7 +68523,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8957,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -67843,7 +68875,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6031,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -68188,7 +69225,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7689,
+     "set_file_letter": "B"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -68577,7 +69619,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0167,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -68925,7 +69972,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2589,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -69007,6 +70059,18 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 26,
+    "of_g": 515,
+    "rel_assist_rate": 0.955,
+    "years_used": [
+     2001,
+     2002,
+     2004,
+     2006
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -69116,7 +70180,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "D"
@@ -69273,7 +70337,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9115,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -69663,7 +70732,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6819,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -70014,7 +71088,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9167,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -70096,6 +71175,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 47,
+    "of_g": 686,
+    "rel_assist_rate": 1.039,
+    "years_used": [
+     1972,
+     1973,
+     1975,
+     1976,
+     1980
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -70205,7 +71297,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 2,
      "pos": "CF",
      "range": "B"
@@ -70359,7 +71451,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.4234,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -70710,6 +71807,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9679,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -70792,6 +71894,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 45,
+    "of_g": 752,
+    "rel_assist_rate": 0.951,
+    "years_used": [
+     1976,
+     1977,
+     1978,
+     1983,
+     1984
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -70901,7 +72016,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -71055,7 +72170,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6781,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -71504,7 +72624,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9578,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -72171,7 +73296,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3222,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -73146,7 +74276,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9861,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -73703,7 +74838,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3654,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -74159,6 +75299,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7022,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -74507,6 +75652,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0206,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -74690,6 +75840,18 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 49,
+    "of_g": 565,
+    "rel_assist_rate": 1.78,
+    "years_used": [
+     2011,
+     2012,
+     2014,
+     2015
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -74799,7 +75961,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -74959,7 +76121,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0292,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -75825,6 +76992,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7042,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -76176,7 +77348,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0288,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -76524,7 +77701,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7136,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -76818,6 +78000,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 40,
+    "of_g": 704,
+    "rel_assist_rate": 0.895,
+    "years_used": [
+     1971,
+     1972,
+     1973,
+     1976,
+     1978
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -76927,7 +78122,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "RF",
      "range": "A"
@@ -77084,7 +78279,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6881,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -77435,7 +78635,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.2929,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -77818,7 +79023,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6734,
+     "set_file_letter": "B"
+    },
+    "rating": "F"
    },
    "throws": "R"
   },
@@ -78205,6 +79415,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6028,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -78865,7 +80080,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9315,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -79216,6 +80436,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8845,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -79564,7 +80789,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0356,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -79646,6 +80876,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 33,
+    "of_g": 680,
+    "rel_assist_rate": 0.768,
+    "years_used": [
+     1979,
+     1980,
+     1982,
+     1984,
+     1990
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -79755,7 +80998,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "CF",
      "range": "B"
@@ -79912,7 +81155,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.3027,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -80263,7 +81511,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.9867,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -80345,6 +81598,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 43,
+    "of_g": 625,
+    "rel_assist_rate": 1.293,
+    "years_used": [
+     1995,
+     2001,
+     2002,
+     2003,
+     2007
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -80611,7 +81877,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9627,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -80985,6 +82256,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6449,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -81330,7 +82606,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1467,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -81880,7 +83161,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8004,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -82228,7 +83514,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.0,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -82684,7 +83975,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9226,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -83026,7 +84322,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0198,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -83374,6 +84675,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.645,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -83456,6 +84762,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 41,
+    "of_g": 596,
+    "rel_assist_rate": 1.37,
+    "years_used": [
+     2004,
+     2005,
+     2006,
+     2007,
+     2008
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -83719,6 +85038,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.032,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -84173,7 +85497,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8784,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -84657,7 +85986,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8168,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -85003,7 +86337,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3543,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -85761,6 +87100,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6796,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -86217,6 +87561,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.209,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -86402,6 +87751,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 19,
+    "of_g": 614,
+    "rel_assist_rate": 0.675,
+    "years_used": [
+     2013,
+     2017,
+     2018,
+     2019,
+     2022
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -86511,7 +87873,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 8,
      "e": 4,
      "pos": "CF",
      "range": "B"
@@ -86671,6 +88033,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2903,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -87127,6 +88494,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1174,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -87619,6 +88991,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7284,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -87964,6 +89341,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6219,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -88316,7 +89698,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4918,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -88877,7 +90264,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.974,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -89226,7 +90618,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1576,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -89681,6 +91078,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.724,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -90555,7 +91957,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8656,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -90906,6 +92313,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5838,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -91392,6 +92804,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6612,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -91736,6 +93153,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1463,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -92084,6 +93506,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.333,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -92433,6 +93860,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8762,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -92619,6 +94051,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 62,
+    "of_g": 667,
+    "rel_assist_rate": 0.753,
+    "years_used": [
+     1914,
+     1916,
+     1920,
+     1923,
+     1924
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -92728,7 +94173,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -92888,7 +94333,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0526,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -93239,7 +94689,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.4747,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -94107,7 +95562,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7555,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -94455,7 +95915,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7443,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -94911,6 +96376,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6649,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -95092,6 +96562,18 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 33,
+    "of_g": 515,
+    "rel_assist_rate": 1.165,
+    "years_used": [
+     1998,
+     2000,
+     2001,
+     2002
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -95361,7 +96843,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4901,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -95743,6 +97230,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6064,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -96195,7 +97687,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0349,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -96546,7 +98043,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5556,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -96884,6 +98386,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8068,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -97337,6 +98844,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6374,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -97686,7 +99198,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.8359,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -98175,7 +99692,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0377,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -98622,7 +100144,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0905,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -98700,6 +100227,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 38,
+    "of_g": 622,
+    "rel_assist_rate": 1.26,
+    "years_used": [
+     2011,
+     2012,
+     2014,
+     2015,
+     2017
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -98966,7 +100506,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9406,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -99317,7 +100862,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7615,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -99504,6 +101054,18 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 19,
+    "of_g": 572,
+    "rel_assist_rate": 0.669,
+    "years_used": [
+     2014,
+     2015,
+     2016,
+     2017
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -99613,7 +101175,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 8,
      "e": 4,
      "pos": "CF",
      "range": "B"
@@ -99770,6 +101332,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1872,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -100116,7 +101683,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4767,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -100673,7 +102245,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8394,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -101058,6 +102635,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8597,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -101404,7 +102986,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9936,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -101752,6 +103339,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6608,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -101939,6 +103531,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 35,
+    "of_g": 610,
+    "rel_assist_rate": 1.178,
+    "years_used": [
+     2010,
+     2012,
+     2013,
+     2014,
+     2015
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -102208,7 +103813,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.0251,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -102603,6 +104213,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 55,
+    "of_g": 630,
+    "rel_assist_rate": 1.645,
+    "years_used": [
+     1999,
+     2000,
+     2001,
+     2003,
+     2005
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -102712,7 +104335,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 4,
      "pos": "RF",
      "range": "C"
@@ -102872,6 +104495,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8948,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -103223,7 +104851,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5658,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -103305,6 +104938,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 42,
+    "of_g": 565,
+    "rel_assist_rate": 1.155,
+    "years_used": [
+     1978,
+     1979,
+     1980,
+     1983,
+     1985
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -103574,7 +105220,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9702,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -104230,7 +105881,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9272,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -104721,7 +106377,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1286,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -105069,7 +106730,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7513,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -105417,7 +107083,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6996,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -105699,6 +107370,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 15,
+    "of_g": 458,
+    "rel_assist_rate": 0.76,
+    "years_used": [
+     2018,
+     2019,
+     2023,
+     2024,
+     2025
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -105808,7 +107492,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -105962,6 +107646,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5065,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -106310,6 +107999,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2094,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -106497,6 +108191,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 34,
+    "of_g": 617,
+    "rel_assist_rate": 0.936,
+    "years_used": [
+     1962,
+     1963,
+     1964,
+     1967,
+     1968
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -106606,7 +108313,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "B"
@@ -106763,7 +108470,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9636,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -107152,6 +108864,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6601,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -107608,6 +109325,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3992,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -107938,7 +109660,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6162,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -108289,7 +110016,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8906,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -108743,7 +110475,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9951,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -108825,6 +110562,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 83,
+    "of_g": 724,
+    "rel_assist_rate": 1.17,
+    "years_used": [
+     1924,
+     1925,
+     1926,
+     1927,
+     1928
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -109094,7 +110844,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2083,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -109439,7 +111194,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7529,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -109997,6 +111757,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6624,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -110483,7 +112248,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7684,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -110831,6 +112601,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6327,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -111018,6 +112793,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 37,
+    "of_g": 712,
+    "rel_assist_rate": 0.907,
+    "years_used": [
+     1964,
+     1965,
+     1966,
+     1968,
+     1971
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -111127,7 +112915,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "C"
@@ -111284,7 +113072,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0916,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -111471,6 +113264,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 50,
+    "of_g": 771,
+    "rel_assist_rate": 1.199,
+    "years_used": [
+     1986,
+     1987,
+     1988,
+     1989,
+     1992
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -111740,7 +113546,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0723,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -112088,7 +113899,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3601,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -112646,7 +114462,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5956,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -113204,7 +115025,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2055,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -113656,7 +115482,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3426,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -114045,6 +115876,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7042,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -114397,7 +116233,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7867,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -114742,7 +116583,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7813,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -115284,7 +117130,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.5499,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -115636,7 +117487,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2263,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -115987,7 +117843,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4574,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -116652,7 +118513,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.4141,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -117346,6 +119212,11 @@
    "steal": {
     "jump": null,
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6246,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -117797,6 +119668,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5507,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -118149,7 +120025,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8506,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -118597,7 +120478,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7785,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -118949,7 +120835,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4979,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -119297,7 +121188,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7809,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -119748,7 +121644,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9215,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -120093,7 +121994,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8011,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -120175,6 +122081,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 40,
+    "of_g": 646,
+    "rel_assist_rate": 1.235,
+    "years_used": [
+     2006,
+     2007,
+     2008,
+     2009,
+     2011
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -120441,6 +122360,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3349,
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -120933,6 +122857,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6344,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -121797,6 +123726,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6943,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -122145,7 +124079,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.8084,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -122227,6 +124166,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 33,
+    "of_g": 643,
+    "rel_assist_rate": 0.848,
+    "years_used": [
+     1968,
+     1969,
+     1970,
+     1971,
+     1974
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -122336,7 +124288,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -122496,7 +124448,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1115,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -123057,7 +125014,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4894,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -123513,6 +125475,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9268,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -123864,7 +125831,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7078,
+     "set_file_letter": "D"
+    },
+    "rating": "F"
    },
    "throws": "L"
   },
@@ -124348,6 +126320,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6441,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -124696,7 +126673,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.2788,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -124883,6 +126865,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 35,
+    "of_g": 691,
+    "rel_assist_rate": 0.916,
+    "years_used": [
+     1985,
+     1986,
+     1987,
+     1988,
+     1990
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -124992,7 +126987,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "C"
@@ -125146,7 +127141,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.665,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -125595,7 +127595,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.933,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -125943,7 +127948,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2828,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -126329,6 +128339,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6442,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -126411,6 +128426,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 56,
+    "of_g": 612,
+    "rel_assist_rate": 1.16,
+    "years_used": [
+     1937,
+     1939,
+     1940,
+     1941,
+     1949
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -126677,6 +128705,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7435,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -127130,7 +129163,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8967,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -127527,6 +129565,18 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 21,
+    "of_g": 492,
+    "rel_assist_rate": 0.771,
+    "years_used": [
+     1985,
+     1986,
+     1987,
+     1988
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -127636,7 +129686,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 2,
      "pos": "LF",
      "range": "B"
@@ -127796,7 +129846,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.6692,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -128136,7 +130191,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9857,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -128487,7 +130547,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3592,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -128569,6 +130634,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 18,
+    "of_g": 555,
+    "rel_assist_rate": 0.79,
+    "years_used": [
+     2017,
+     2022,
+     2023,
+     2024,
+     2025
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -128678,7 +130756,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "RF",
      "range": "C"
@@ -128817,6 +130895,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.012,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -129165,7 +131248,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.158,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -129354,6 +131442,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 31,
+    "of_g": 700,
+    "rel_assist_rate": 0.687,
+    "years_used": [
+     1956,
+     1957,
+     1958,
+     1961,
+     1962
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -129463,7 +131564,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 8,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -129620,7 +131721,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1018,
+     "set_file_letter": "B"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -129968,6 +132074,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6492,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -130354,7 +132465,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8181,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -130810,7 +132926,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3087,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -131567,6 +133688,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2588,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -132008,7 +134134,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9528,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -132464,7 +134595,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.99,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -132912,6 +135048,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6359,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -133368,7 +135509,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.1093,
+     "set_file_letter": "D"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -133716,7 +135862,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4654,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -134061,7 +136212,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9252,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -134620,7 +136776,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9351,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -134807,6 +136968,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 33,
+    "of_g": 598,
+    "rel_assist_rate": 0.956,
+    "years_used": [
+     1981,
+     1989,
+     1990,
+     1992,
+     1993
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -134916,7 +137090,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -135073,7 +137247,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.2811,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -135577,6 +137756,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 46,
+    "of_g": 702,
+    "rel_assist_rate": 1.051,
+    "years_used": [
+     1969,
+     1971,
+     1972,
+     1973,
+     1974
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -135686,7 +137878,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "C"
@@ -135840,7 +138032,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2578,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -136170,6 +138367,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6479,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -136252,6 +138454,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 57,
+    "of_g": 682,
+    "rel_assist_rate": 1.299,
+    "years_used": [
+     1979,
+     1980,
+     1981,
+     1982,
+     1984
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -136518,7 +138733,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2151,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -136957,7 +139177,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7474,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -137304,7 +139529,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0455,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -137655,7 +139885,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7907,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -138044,6 +140279,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6644,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -138497,6 +140737,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9888,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -138881,6 +141126,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7204,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -139334,7 +141584,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6236,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -139685,7 +141940,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4672,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -140241,6 +142501,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6974,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -140733,7 +142998,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7964,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -141084,7 +143354,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.9481,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -141542,7 +143817,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7554,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -141893,6 +144173,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7366,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -142241,7 +144526,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7962,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -142429,6 +144719,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 85,
+    "of_g": 721,
+    "rel_assist_rate": 1.501,
+    "years_used": [
+     1934,
+     1937,
+     1938,
+     1939,
+     1942
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -142538,7 +144841,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -142692,7 +144995,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9505,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -143040,6 +145348,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.734,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -143122,6 +145435,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 57,
+    "of_g": 620,
+    "rel_assist_rate": 1.118,
+    "years_used": [
+     1935,
+     1936,
+     1937,
+     1940,
+     1941
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -143391,7 +145717,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8685,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -143740,6 +146071,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -144439,6 +146774,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2465,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -144624,6 +146964,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 57,
+    "of_g": 664,
+    "rel_assist_rate": 0.967,
+    "years_used": [
+     1925,
+     1927,
+     1929,
+     1930,
+     1931
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -144726,7 +147079,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "CF",
      "range": "B"
@@ -144886,7 +147239,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8735,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -144968,6 +147326,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 82,
+    "of_g": 597,
+    "rel_assist_rate": 1.035,
+    "years_used": [
+     1912,
+     1913,
+     1915,
+     1916,
+     1917
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -145077,7 +147448,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "CF",
      "range": "B"
@@ -145237,7 +147608,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4225,
+     "set_file_letter": "F"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -145588,7 +147964,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0392,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -145878,6 +148259,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 55,
+    "of_g": 772,
+    "rel_assist_rate": 1.323,
+    "years_used": [
+     1999,
+     2000,
+     2001,
+     2002,
+     2004
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -146141,7 +148535,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5511,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -146591,7 +148990,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0347,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -146673,6 +149077,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 59,
+    "of_g": 715,
+    "rel_assist_rate": 1.125,
+    "years_used": [
+     1948,
+     1951,
+     1954,
+     1955,
+     1958
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -146942,6 +149359,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2369,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -147286,7 +149708,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.621,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -147781,7 +150208,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9967,
+     "set_file_letter": "B"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -147863,6 +150295,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 95,
+    "of_g": 546,
+    "rel_assist_rate": 1.181,
+    "years_used": [
+     1893,
+     1895,
+     1896,
+     1899,
+     1901
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -148132,6 +150577,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -148424,6 +150873,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 77,
+    "of_g": 609,
+    "rel_assist_rate": 0.793,
+    "years_used": [
+     1891,
+     1892,
+     1893,
+     1894,
+     1895
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -148533,7 +150995,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "CF",
      "range": "A"
@@ -148693,6 +151155,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "L"
@@ -149038,7 +151504,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0349,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -149389,7 +151860,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7615,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -149471,6 +151947,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 125,
+    "of_g": 759,
+    "rel_assist_rate": 1.884,
+    "years_used": [
+     1929,
+     1930,
+     1931,
+     1932,
+     1933
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -149580,7 +152069,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 3,
      "pos": "RF",
      "range": "B"
@@ -149734,6 +152223,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -150530,7 +153023,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2659,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -151093,6 +153591,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1561,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -151441,7 +153944,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.8292,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -151894,7 +154402,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1435,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -152350,7 +154863,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2102,
+     "set_file_letter": "B"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -152538,6 +155056,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 50,
+    "of_g": 731,
+    "rel_assist_rate": 1.275,
+    "years_used": [
+     1988,
+     1989,
+     1990,
+     1991,
+     1992
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -152807,7 +155338,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7768,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -152996,6 +155532,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 130,
+    "of_g": 745,
+    "rel_assist_rate": 1.532,
+    "years_used": [
+     1916,
+     1917,
+     1922,
+     1923,
+     1925
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -153105,7 +155654,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 3,
      "pos": "CF",
      "range": "A"
@@ -153265,7 +155814,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.9919,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -153617,7 +156171,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8622,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -154533,7 +157092,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.277,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -154615,6 +157179,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 46,
+    "of_g": 702,
+    "rel_assist_rate": 0.849,
+    "years_used": [
+     1947,
+     1948,
+     1949,
+     1950,
+     1951
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -154724,7 +157301,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -154878,7 +157455,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.808,
+     "set_file_letter": "B"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -155229,6 +157811,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -155684,6 +158270,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6322,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -156127,7 +158718,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2576,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -156314,6 +158910,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 72,
+    "of_g": 738,
+    "rel_assist_rate": 1.489,
+    "years_used": [
+     1975,
+     1976,
+     1977,
+     1978,
+     1979
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -156423,7 +159032,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 2,
      "pos": "RF",
      "range": "C"
@@ -156583,7 +159192,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2424,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -156969,7 +159583,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8066,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -157420,6 +160039,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6253,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -157875,6 +160499,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1379,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -158223,6 +160852,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -158574,6 +161207,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -158656,6 +161293,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 85,
+    "of_g": 703,
+    "rel_assist_rate": 1.294,
+    "years_used": [
+     1926,
+     1927,
+     1928,
+     1934,
+     1936
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -158925,6 +161575,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "L"
@@ -159580,7 +162234,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0475,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -160134,7 +162793,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4484,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -160473,6 +163137,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8849,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "L"
@@ -160815,6 +163484,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6215,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -161273,7 +163947,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3729,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -161832,7 +164511,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5745,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -162276,7 +164960,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8424,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -162617,6 +165306,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0822,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -162969,7 +165663,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3387,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -163458,7 +166157,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1797,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -163806,7 +166510,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8425,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -164247,7 +166956,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6278,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -164595,7 +167309,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2351,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -164979,7 +167698,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7478,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -165430,7 +168154,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3396,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -165772,6 +168501,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1211,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -166120,7 +168854,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0484,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -166471,6 +169210,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5494,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -166819,6 +169563,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6164,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -167109,6 +169858,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 54,
+    "of_g": 684,
+    "rel_assist_rate": 1.416,
+    "years_used": [
+     1991,
+     1993,
+     1994,
+     1996,
+     1997
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -167218,7 +169980,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 3,
      "pos": "CF",
      "range": "B"
@@ -167378,6 +170140,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2146,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "L"
@@ -167567,6 +170334,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 46,
+    "of_g": 653,
+    "rel_assist_rate": 1.404,
+    "years_used": [
+     2004,
+     2006,
+     2007,
+     2008,
+     2013
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -167676,7 +170456,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 5,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -167833,6 +170613,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5932,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -168391,7 +171176,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7732,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -169151,6 +171941,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6232,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -169640,6 +172435,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9206,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -169991,7 +172791,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.8221,
+     "set_file_letter": "D"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -170445,7 +173250,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.507,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -170793,7 +173603,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6634,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -171244,7 +174059,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8518,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -171326,6 +174146,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 41,
+    "of_g": 762,
+    "rel_assist_rate": 1.036,
+    "years_used": [
+     2001,
+     2002,
+     2004,
+     2007,
+     2009
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -171428,7 +174261,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "RF",
      "range": "B"
@@ -171585,7 +174418,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.556,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -171968,6 +174806,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8051,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -172409,6 +175252,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0158,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "L"
@@ -172789,7 +175637,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.8234,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -173196,7 +176049,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0116,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -173572,7 +176430,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8879,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -173948,7 +176811,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8861,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -174289,6 +177157,10 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -174668,7 +177540,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.598,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -175009,6 +177886,18 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 29,
+    "of_g": 402,
+    "rel_assist_rate": 0.935,
+    "years_used": [
+     1950,
+     1951,
+     1953,
+     1954
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -175118,7 +178007,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "LF",
      "range": "B"
@@ -175278,6 +178167,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9232,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -175624,7 +178518,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9781,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -176575,6 +179474,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1413,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -176951,6 +179855,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7106,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -177330,6 +180239,10 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -177541,6 +180454,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 46,
+    "of_g": 538,
+    "rel_assist_rate": 1.042,
+    "years_used": [
+     1932,
+     1936,
+     1938,
+     1939,
+     1944
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -177650,7 +180576,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "RF",
      "range": "C"
@@ -177807,6 +180733,10 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -178347,7 +181277,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6279,
+     "set_file_letter": "D"
+    },
+    "rating": "F"
    },
    "throws": "R"
   },
@@ -178954,6 +181889,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7163,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -179330,7 +182270,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8224,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -179959,7 +182904,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.414,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -180564,7 +183514,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8396,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -180937,6 +183892,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6985,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -181528,7 +184488,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8589,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -182113,7 +185078,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6947,
+     "set_file_letter": "B"
+    },
+    "rating": "F"
    },
    "throws": "R"
   },
@@ -182193,6 +185163,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 55,
+    "of_g": 758,
+    "rel_assist_rate": 0.881,
+    "years_used": [
+     1935,
+     1936,
+     1937,
+     1938,
+     1939
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -182302,7 +185285,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 4,
      "pos": "LF",
      "range": "B"
@@ -182462,6 +185445,10 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -182837,6 +185824,10 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -183214,6 +186205,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8454,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -183323,6 +186319,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 52,
+    "of_g": 599,
+    "rel_assist_rate": 1.083,
+    "years_used": [
+     1943,
+     1946,
+     1948,
+     1949,
+     1951
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -183592,7 +186601,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9096,
+     "set_file_letter": "B"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -183958,6 +186972,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9232,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -184333,6 +187352,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8146,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -184722,6 +187746,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5744,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -184828,6 +187857,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 47,
+    "of_g": 687,
+    "rel_assist_rate": 0.889,
+    "years_used": [
+     1940,
+     1941,
+     1942,
+     1948,
+     1949
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -184937,7 +187979,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 7,
      "e": 3,
      "pos": "RF",
      "range": "B"
@@ -185094,6 +188136,10 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "note": "kept set-file letter: no caught-stealing data in the window",
+     "set_file_letter": "B"
+    },
     "rating": "B"
    },
    "throws": "R"
@@ -185469,7 +188515,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.703,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -186309,7 +189360,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.557,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -186682,7 +189738,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4739,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -187047,6 +190108,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8542,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -187517,7 +190583,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.2791,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "L"
   },
@@ -187889,6 +190960,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.694,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -188415,6 +191491,11 @@
    "steal": {
     "jump": null,
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5805,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -189020,7 +192101,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7907,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -189597,7 +192683,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.4697,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -189978,6 +193069,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9347,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -190356,7 +193452,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0192,
+     "set_file_letter": "B"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -190987,6 +194088,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7267,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "L"
@@ -191745,7 +194851,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.9277,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -192113,7 +195224,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2083,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -192218,6 +195334,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 18,
+    "of_g": 275,
+    "rel_assist_rate": 1.349,
+    "years_used": [
+     2009,
+     2011,
+     2012,
+     2013,
+     2014
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -192484,7 +195613,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1396,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -192859,6 +195993,11 @@
    "steal": {
     "jump": null,
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.65,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -193223,7 +196362,12 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7578,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -193562,7 +196706,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7035,
+     "set_file_letter": "D"
+    },
+    "rating": "F"
    },
    "throws": "R"
   },
@@ -194119,7 +197268,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7572,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -194471,6 +197625,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8046,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "L"
@@ -194820,6 +197979,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0404,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "L"
@@ -195276,6 +198440,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6416,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -195833,7 +199002,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5236,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -196279,6 +199453,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.886,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "L"
@@ -196731,6 +199910,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1285,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -197113,6 +200297,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1893,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -197764,7 +200953,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8074,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -197846,6 +201040,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 41,
+    "of_g": 654,
+    "rel_assist_rate": 1.146,
+    "years_used": [
+     1989,
+     1990,
+     1991,
+     1992,
+     2001
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -198112,6 +201319,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1031,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -198498,6 +201710,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6222,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -198846,7 +202063,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7788,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -199299,7 +202521,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9137,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -199750,7 +202977,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.8925,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -200096,7 +203328,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.0418,
+     "set_file_letter": "F"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -200448,6 +203685,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9416,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -200800,7 +204042,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.046,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -200882,6 +204129,19 @@
    "dp": 7,
    "fielding": "Derived",
    "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "of_arm_basis": {
+    "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+    "of_a": 41,
+    "of_g": 656,
+    "rel_assist_rate": 1.112,
+    "years_used": [
+     1991,
+     1992,
+     1993,
+     1994,
+     1996
+    ]
+   },
    "out_table": [
     {
      "range": [
@@ -201148,7 +204408,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1873,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -201590,6 +204855,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7459,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -201941,7 +205211,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8742,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -202490,6 +205765,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9177,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -202841,7 +206121,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.2948,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -203611,6 +206896,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8164,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -204093,7 +207383,12 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.6948,
+     "set_file_letter": "B"
+    },
+    "rating": "F"
    },
    "throws": "R"
   },
@@ -204441,6 +207736,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8517,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "L"
@@ -204791,7 +208091,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.7754,
+     "set_file_letter": "C"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -205563,7 +208868,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.6619,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -205949,7 +209259,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7443,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -206300,7 +209615,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.0319,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -207204,7 +210524,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.048,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -207707,7 +211032,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "F"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7995,
+     "set_file_letter": "F"
+    },
+    "rating": "D"
    },
    "throws": "L"
   },
@@ -208082,6 +211412,11 @@
      "set_file_jump": 2
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7665,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -208422,6 +211757,11 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.7961,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"
@@ -208815,6 +212155,11 @@
    "steal": {
     "jump": null,
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.5894,
+     "set_file_letter": "F"
+    },
     "rating": "F"
    },
    "throws": "R"
@@ -209299,6 +212644,11 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9994,
+     "set_file_letter": "C"
+    },
     "rating": "C"
    },
    "throws": "R"
@@ -209676,7 +213026,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.5726,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -210048,7 +213403,12 @@
      "set_file_jump": 3
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8517,
+     "set_file_letter": "C"
+    },
+    "rating": "D"
    },
    "throws": "R"
   },
@@ -210519,7 +213879,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.9419,
+     "set_file_letter": "D"
+    },
+    "rating": "C"
    },
    "throws": "L"
   },
@@ -210894,7 +214259,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "C"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.483,
+     "set_file_letter": "C"
+    },
+    "rating": "B"
    },
    "throws": "L"
   },
@@ -211620,7 +214990,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 2.1123,
+     "set_file_letter": "B"
+    },
+    "rating": "A"
    },
    "throws": "R"
   },
@@ -211993,7 +215368,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "B"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.1119,
+     "set_file_letter": "B"
+    },
+    "rating": "C"
    },
    "throws": "R"
   },
@@ -212342,7 +215722,12 @@
      "set_file_jump": 5
     },
     "jump_mod": null,
-    "rating": "D"
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 1.3267,
+     "set_file_letter": "D"
+    },
+    "rating": "B"
    },
    "throws": "R"
   },
@@ -212807,6 +216192,11 @@
      "set_file_jump": 4
     },
     "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)",
+     "score": 0.8589,
+     "set_file_letter": "D"
+    },
     "rating": "D"
    },
    "throws": "R"

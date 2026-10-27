@@ -2,6 +2,18 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — PHA stand-in park, steal letters, Derived OF arms; error and Coors audit
+
+**PHA park (stand-in).** No Shibe Park / Connie Mack Stadium card exists in the 1986 or 2024 sets, so Philadelphia A's home games use the 1986 Veterans Stadium card, labelled a stand-in: the game log header says "STAND-IN for PHA", the note is logged as a gap, and the game report carries `park_stand_in`. All 2,976 stress games now run (93 PHA games failed before). The site does not display park names.
+
+**Steal letters.** The set-file letters ran about one grade harsh against the 1986 cards (real window SB% by set-file letter B .87, C .79, D .71, F .56 vs 1986 A .79, B .74, C .69, D .65, F .59; no A at all vs 11% A in 1986). `scripts/fix_steal_letter.py` sets the letter from shrunk SB% plus attempt rate with cut points fitted to the 1986 cards (305 matched; exact 32%, within one grade 68% — single letters are uncertain). 482 cards, 301 changed (e.g. Henderson, Raines, Brock, Wills A; Ortiz D); 23 cards with no caught-stealing data keep the set-file letter. Set-file letter and score are kept in `letter_basis`. Catcher arms were already fitted to 1986 (70/74 reproduced) and are unchanged.
+
+**Derived OF arms.** 78 Derived-fielding cards had the engine default OF arm 6. `scripts/derive_of_arm.py` rates them from OF assists per game vs league over the card window (Lahman), fitted to 1986 printed OF arms (104 matched; exact 21%, within one 65%). 50 changed (5:10, 6:28, 7:34, 8:6); 2 flagged. Report: `historical-cards/accuracy/derived_of_arms.json`.
+
+**Errors (audit, no rule change).** The engine reads the DEFENSE result, the FAC defense lines, the park error bands and the error digit as the rulebook prints them. The high error rate comes from the pitcher 2d6 tables: DEFENSE is 19.9% of our pitchers' 2d6 weight vs 4.6% on the printed 1986 cards, because the pitcher solver uses a no-error placeholder for DEFENSE. Not changed here (it would re-solve every pitcher card).
+
+**Coors.** Transcription re-checked against the page image; no misread. Coors plays as the highest-scoring park. Sample game: steal letters in the log change only. Cache v82.
+
 ## 2026-10-27 — Outfield arms, 2024 park cards, injuries, steal jump
 
 **Outfield arm.** Rulebook page 8 rates OF Arm 3 (best) to 10 (worst), and the page 16 extra-base check (safe on 2d6 <= ARM) already reads it that way. 70 set-file cards stored it reversed (Elite/Great 8, Poor 4); `scripts/fix_of_arm_scale.py` mirrors them (12 − arm; 52 arms change, e.g. Clemente RF 4, Mays CF 4, Poor arms now 8). Catchers, infield rows and Derived cards are unchanged; `build_cards.py` applies it on a rebuild.

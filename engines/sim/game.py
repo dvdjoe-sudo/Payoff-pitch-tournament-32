@@ -196,7 +196,27 @@ def load_club(code, rosters=None, cards=None):
     }
 
 
+# No official park card exists for these clubs. A labelled stand-in is used
+# and every game log names it as a stand-in.
+STAND_IN_PARK = {
+    "PHA": ("VETERANS STADIUM", "Stand-in: no Shibe Park / Connie Mack Stadium card exists in the 1986 or 2024 sets; the 1986 Philadelphia (N) Veterans Stadium card is used."),
+}
+
+
 def park_for(code):
+    if code in STAND_IN_PARK and code not in HOME_PARK:
+        base_name, note = STAND_IN_PARK[code]
+        HOME_PARK[code] = base_name
+        try:
+            park = park_for(code)
+        finally:
+            del HOME_PARK[code]
+        if park is None:
+            return None
+        park = dict(park)
+        park["season"] = "%s (STAND-IN for %s)" % (park.get("season", ""), code)
+        park["stand_in"] = note
+        return park
     name = HOME_PARK.get(code)
     if not name:
         return None
@@ -339,6 +359,9 @@ class Game:
                 self.park.get("season", ""), self.seed, self.opts["running"],
             )
         )
+        if self.park.get("stand_in"):
+            self.say(self.park["stand_in"])
+            self.gap(self.park["stand_in"])
         self.say(
             "The rulebook never defines a designated hitter. Any lineup hitter may be the DH and the pitcher does not bat, because these rosters list nine hitters."
         )
@@ -2682,6 +2705,7 @@ class Game:
             "innings": self.inning if self.inning < 90 else self.inning,
             "seed": self.seed,
             "park": self.park["name"],
+            "park_stand_in": self.park.get("stand_in"),
             "log": self.log,
             "gaps": self.gaps,
             "box": self.box,
