@@ -792,6 +792,16 @@ def apply_rays_roster_amendment(cards, rosters):
         cards["TB|" + huff_id]["spots"] = [
             {"group": "bench", "slot": 6, "pos": "OF", "kind": "hitter"},
         ]
+    # The surviving long/left-handed reliever moves from old RP7 to RP6.
+    howell = [p for p in players if p["id"] == "howeljp01"]
+    if len(howell) != 1 or howell[0]["group"] != "bullpen":
+        raise SystemExit("Rays missing J.P. Howell in active bullpen")
+    howell[0]["slot"] = 6
+    if "TB|howeljp01" in cards:
+        card = cards["TB|howeljp01"]
+        card["spots"] = [
+            {"group": "bullpen", "kind": "pitcher", "pos": "RP", "slot": 6},
+        ]
     # Do NOT remove TB|kellyke02 from the archive or create an
     # unconverted card for Huff. User handles original card conversion.
     order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
