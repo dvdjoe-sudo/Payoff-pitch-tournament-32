@@ -1017,13 +1017,13 @@ def check_seattle_roster_amendment(check: Check) -> None:
                  "Adrián Beltré playable Hitter v0.5 either genuine or explicitly pending")
     peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["SEA"]
     peak = peaks.get("IF2 Adrián Beltré 3B (SEA 2005-2009)") or {}
-    if peak:
-        check.expect(peak.get("lahman_id") == "beltrad01"
-                     and peak.get("status") == "ok"
-                     and peak.get("years") == [2005, 2006, 2007, 2008, 2009],
-                     "Seattle-only Beltré 2005-09 Peak 162 verified")
-        check.expect("LR Mike Moore 7" not in peaks,
-                     "Inactive Moore absent from current Seattle peak")
+    check.expect(peak.get("lahman_id") == "beltrad01"
+                 and peak.get("status") == "ok"
+                 and peak.get("years") == [2005, 2006, 2007, 2008, 2009]
+                 and (peak.get("text") or "").startswith("Peak 162 with Seattle Mariners"),
+                 "Seattle-only Beltré 2005-09 Peak 162 verified")
+    check.expect("LR Mike Moore 7" not in peaks,
+                 "Inactive Moore absent from current Seattle peak")
     published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Adrián Beltré (`beltrad01`) joins the **Seattle Mariners**" in published,
                  "Seattle change appears in published roster")

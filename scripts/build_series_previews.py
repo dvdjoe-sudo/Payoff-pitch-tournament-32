@@ -11,7 +11,6 @@ The starter leader is the rotation arm with the lowest ERA on his peak line.
 
 from __future__ import annotations
 
-import base64
 import json
 import re
 from pathlib import Path
@@ -263,14 +262,6 @@ def main() -> None:
         image = render(series, teams, rosters, peak_clubs)
         dest = OUT / (series["id"] + ".png")
         image.save(dest, "PNG", optimize=True)
-        # Temporary CI capture of exact deterministic Seattle-CWS preview
-        # for synchronization. This block is removed before merging.
-        if series["id"] == "R1-14":
-            encoded = base64.b64encode(dest.read_bytes()).decode("ascii")
-            print("PREVIEW_B64_BEGIN")
-            for offset in range(0, len(encoded), 4000):
-                print("PREVIEW_B64:" + encoded[offset:offset + 4000])
-            print("PREVIEW_B64_END")
         keep.add(dest.name)
         print("wrote", dest.relative_to(ROOT))
     for old in OUT.glob("*.png"):
