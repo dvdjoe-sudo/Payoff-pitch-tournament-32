@@ -1853,6 +1853,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "allendi01",
+    "kind": "hitter",
+    "name": "Dick Allen",
+    "pos": "1B",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "walshed01",
     "kind": "pitcher",
@@ -1926,19 +1934,11 @@
    },
    {
     "group": "bullpen",
-    "id": "lockebo02",
-    "kind": "pitcher",
-    "name": "Bob Locker",
-    "pos": "RP",
-    "slot": 5
-   },
-   {
-    "group": "bullpen",
     "id": "marteda01",
     "kind": "pitcher",
     "name": "Dámaso Marte",
     "pos": "RP",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "bullpen",
@@ -1946,7 +1946,7 @@
     "kind": "pitcher",
     "name": "Eddie Cicotte",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 14

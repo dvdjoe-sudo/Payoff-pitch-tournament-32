@@ -2348,6 +2348,16 @@
      2012
     ]
    },
+   "BAT2 Dick Allen 1B/DH (1972-1974)": {
+    "lahman_id": "allendi01",
+    "status": "ok",
+    "text": "Peak 162 with Chicago White Sox (1972–1974). Three franchise seasons; best 3. 162 G, 662 PA, 567 AB, 99 R, 174 H, 33 2B, 4 3B, 40 HR, 113 RBI, 15 SB, 88 BB, 124 SO, .307/.398/.589/.987",
+    "years": [
+     1972,
+     1973,
+     1974
+    ]
+   },
    "C2 Ray Schalk (Veteran C/Defense)": {
     "lahman_id": "schalra01",
     "status": "ok",
@@ -2416,18 +2426,6 @@
      2000,
      2001,
      2002
-    ]
-   },
-   "MR2 Bob Locker": {
-    "lahman_id": "lockebo02",
-    "status": "ok",
-    "text": "Peak 162 with Chicago White Sox (1965–1969): 65 G, 7-5, 12 SV, 101.2 IP, 84 H, 30 ER, 26 BB, 71 SO, 2.68 ERA, 1.08 WHIP, 6.3 K/9",
-    "years": [
-     1965,
-     1966,
-     1967,
-     1968,
-     1969
     ]
    },
    "OF4 Chet Lemon (OF/CF Defense)": {

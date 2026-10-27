@@ -928,6 +928,53 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_white_sox_roster_amendment(check: Check) -> None:
+    """White Sox owner approval: Allen active and Locker archived."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["CWS"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["CWS"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Chicago has 26 unique active players, 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Chicago active roles are sequential")
+    allen = [p for p in players if p["id"] == "allendi01"]
+    check.expect(len(allen) == 1 and allen[0]["group"] == "bench"
+                 and allen[0]["kind"] == "hitter" and allen[0]["slot"] == 6
+                 and allen[0]["pos"] == "1B",
+                 "Dick Allen is the sixth Chicago bench hitter")
+    check.expect("lockebo02" not in ids, "Bob Locker is not active")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["thigpbo01", "wilheho01", "jenksbo01",
+                     "foulkke01", "marteda01", "cicoted01"],
+                 "Chicago bullpen retains the six approved pitchers")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and any("Dick Allen" in s for s in announced["bench"])
+                 and not any("Bob Locker" in s for s in announced["bullpen"]),
+                 "Owner Chicago source agrees with converted active 26")
+    check.expect("CWS|lockebo02" in cards,
+                 "Original Bob Locker pitcher card remains archived")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["CWS"]
+    allen_peak = peaks.get("BAT2 Dick Allen 1B/DH (1972-1974)") or {}
+    check.expect(allen_peak.get("lahman_id") == "allendi01"
+                 and allen_peak.get("years") == [1972, 1973, 1974]
+                 and allen_peak.get("status") == "ok",
+                 "Dick Allen three-season White Sox-only Peak 162 is active")
+    check.expect("MR2 Bob Locker" not in peaks,
+                 "Inactive Bob Locker removed from current CWS Peak 162 display")
+    roster_doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Dick Allen (`allendi01`) joins Chicago" in roster_doc,
+                 "Chicago owner change appears in published roster")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_white_sox_roster_amendment(cards, rosters)" in builder,
+                 "Chicago change survives future full rebuilds")
+
+
 def check_twins_roster_amendment(check: Check) -> None:
     """Owner-approved Bob Allison for Firpo Marberry active Minnesota 26."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1001,6 +1048,7 @@ def main() -> int:
     check_pirates_roster_amendment(check)
     check_phillies_roster_amendment(check)
     check_twins_roster_amendment(check)
+    check_white_sox_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 
