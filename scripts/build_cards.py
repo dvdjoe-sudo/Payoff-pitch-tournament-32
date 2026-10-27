@@ -580,6 +580,7 @@ def build():
     apply_pirates_roster_amendment(cards, rosters)
     apply_phillies_roster_amendment(cards, rosters)
     apply_twins_roster_amendment(cards, rosters)
+    apply_white_sox_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -1173,6 +1174,44 @@ def apply_phillies_roster_amendment(cards, rosters):
         raise SystemExit("Phillies approved roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Phillies approved roster needs 26 distinct active players")
+
+
+def apply_white_sox_roster_amendment(cards, rosters):
+    """Owner-approved Chicago Dick Allen / Bob Locker 9/6/5/6."""
+    roster = rosters.get("CWS")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "lockebo02"]
+    matching = [p for p in players if p["id"] == "allendi01"]
+    if not matching:
+        players.append({"group": "bench", "id": "allendi01", "kind": "hitter",
+                        "name": "Dick Allen", "pos": "1B", "slot": 6})
+    elif len(matching) != 1:
+        raise SystemExit("duplicate Chicago Dick Allen roster entry")
+    else:
+        matching[0].update(group="bench", kind="hitter", pos="1B", slot=6)
+    for pid, group, slot, pos, kind in (
+        ("allendi01", "bench", 6, "1B", "hitter"),
+        ("marteda01", "bullpen", 5, "RP", "pitcher"),
+        ("cicoted01", "bullpen", 6, "RP", "pitcher"),
+    ):
+        found = [p for p in players if p["id"] == pid]
+        if len(found) != 1:
+            raise SystemExit("Chicago active role missing: " + pid)
+        found[0].update(group=group, slot=slot, pos=pos, kind=kind)
+        card = cards.get("CWS|" + pid)
+        if card:
+            card["spots"] = [{"group": group, "slot": slot,
+                              "pos": pos, "kind": kind}]
+    # The original CWS|lockebo02 pitching card remains archived and intact.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Chicago active roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Chicago must have 26 distinct active players")
 
 
 def apply_twins_roster_amendment(cards, rosters):

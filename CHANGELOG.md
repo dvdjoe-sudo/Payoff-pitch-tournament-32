@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Chicago White Sox Dick Allen for Bob Locker (owner-approved)
+
+Dick Allen joins Chicago as RH 1B/DH bench #6, replacing Bob Locker on the active 26. Dámaso Marte shifts to bullpen slot 5 and Eddie Cicotte remains the long/swing option at slot 6; all existing lineup and starting rotation roles are unchanged. Chicago's official, active and generated rosters follow 9/6/5/6. All original conversions, including Locker's, historical games, outcomes, box scores and dice/FAC archives are preserved. Allen's genuine Chicago-only Hitter v0.5 playable conversion is pending and no card ratings are fabricated.
+
 ## 2026-10-27 — Minnesota Twins Bob Allison for Firpo Marberry (Joe-approved)
 
 Bob Allison becomes active Minnesota bench #6 (OF/1B RH power); Firpo Marberry leaves the active bullpen while his original converted card remains historical. Duran, Rogers and Perry shift to bullpen #4–6. The 26-player active team now follows 9/6/5/6, aligned in the official owner roster, active JSON, generated roster page, full-build adapter and validators. All original player cards, played games, box scores and original dice/FAC records remain intact. Allison's playable original Hitter v0.5 card remains pending a Senators/Twins-only conversion.

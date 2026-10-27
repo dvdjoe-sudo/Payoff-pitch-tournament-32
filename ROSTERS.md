@@ -875,6 +875,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - IF Nellie Fox (2B/Elite Defense)
 - OF4 Chet Lemon (OF/CF Defense)
 - BAT Paul Konerko (RH Power/1B)
+- BAT2 Dick Allen 1B/DH (1972-1974)
 
 ### Rotation
 
@@ -890,9 +891,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 - SU1 Hoyt Wilhelm
 - SU2 Bobby Jenks
 - MR Keith Foulke
-- MR2 Bob Locker
 - LHS Dámaso Marte
 - LR/SP6 Eddie Cicotte
+
+### Approved active roster amendment (2026-10-27)
+
+Dick Allen (`allendi01`) joins Chicago's active bench as BAT2 / RH 1B-DH #6. Bob Locker (`lockebo02`) is inactive from the bullpen. The White Sox now carry 9 lineup hitters, 6 bench hitters, 5 starting pitchers and 6 relievers: 26 unique active players.
+
+Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaining their original specialist and long/swing responsibilities. This amendment is for future games only. All historical converted cards (including Locker), original FAC/dice rolls, box scores, recorded games, tournament results and earlier decisions remain untouched. Allen requires a genuine White Sox-franchise-only Hitter v0.5 playable conversion, which has not been invented.
 
 ## 15. Baltimore Orioles (BAL)
 

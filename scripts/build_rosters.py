@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "CWS":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Dick Allen (`allendi01`) joins Chicago's active bench as BAT2 / RH 1B-DH #6. Bob Locker (`lockebo02`) is inactive from the bullpen. The White Sox now carry 9 lineup hitters, 6 bench hitters, 5 starting pitchers and 6 relievers: 26 unique active players.",
+            "",
+            "Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaining their original specialist and long/swing responsibilities. This amendment is for future games only. All historical converted cards (including Locker), original FAC/dice rolls, box scores, recorded games, tournament results and earlier decisions remain untouched. Allen requires a genuine White Sox-franchise-only Hitter v0.5 playable conversion, which has not been invented.",
+            "",
+        ]
+
     if code == "MIN":
         lines += [
             "### Approved active roster amendment (2026-10-27)",
