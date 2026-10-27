@@ -133,6 +133,10 @@ The current **converted-club count and club list are derived from** [`data/roste
 
 The owner's 101-page *R1-03 FAC and Dice Rolls* record was supplied on 2026-10-26. Every FAC flip and the full play-by-play for Boston–Tampa Bay is transcribed in the linked game files: [Game 1](games/R1-03-G1.fac.md) · [Game 2](games/R1-03-G2.fac.md) · [Game 3](games/R1-03-G3.fac.md) · [Game 4](games/R1-03-G4.fac.md) · [Game 5](games/R1-03-G5.fac.md) · [Game 6](games/R1-03-G6.fac.md) · [Game 7](games/R1-03-G7.fac.md). The game pages also display the ordered FAC history. Games 3–7 now have their actual FAC sequences in the per-game JSON record, checked against the owner-provided transcript; the original Games 1–2 sequences match it exactly. The official box scores, standings, and series results were not changed. The source record preserves hand-resolved rare-play notes and the full narration; no missing manager log was invented.
 
+## 2026-10-26 San Diego Padres approved 6/6 roster
+
+Brian Giles (left-handed OF) was added as sixth bench player, and Craig Lefferts was removed from the active 26. The active roster is 9 lineup / 6 bench / 5 SP / 6 RP. Lefferts' previously converted card stays in `data/cards.json` as archived historical source data and must not be confused with an active roster spot. Giles' original Hitter v0.5 conversion has **not** been produced in this change: he is marked as awaiting conversion on his roster/player page, and no simulated card ratings were invented. The franchise Peak 162 display is Padres-only; his stats from other franchises must never be included.
+
 ## 2026-10-26 Philadelphia Athletics converted-set alignment
 
 Joe approved reconciling the staged Philadelphia Athletics player-card roster to the official 26-man owner roster. Ferris Fain is lineup/DH (slot 9), Max Bishop is a bench infielder (slot 6), Elmer Valo is the left-handed outfielder/bat on the bench (slot 7), and George Earnshaw was removed from this club's converted roster and card listing. No completed tournament game, opponent, or official result was changed.
