@@ -82,6 +82,20 @@ def main():
             ys[k].append(card[k])
         ws.append(t["bf"])
     lines = {k: fit(xs[k], ys[k], ws) for k in solver.STATS}
+    # Hand offset: the printed tables are evaluated against the 1986 hitters'
+    # vsLHP / vsRHP sections, and left-handed batters print a large split. A
+    # pooled line overstates a left-hander's card rate (h -.008, hr -.0015
+    # mean residual for the 67 matched LHP) and understates a right-hander's.
+    # The offset is the BF-weighted mean residual by hand, slope shared.
+    hands = ["L" if p.get("throws") == "L" else "R" for p, t in good]
+    for k in solver.STATS:
+        a, b = lines[k]["a"], lines[k]["b"]
+        off = {}
+        for h in ("L", "R"):
+            idx = [i for i, x in enumerate(hands) if x == h]
+            sw = sum(ws[i] for i in idx)
+            off[h] = round(sum(ws[i] * (ys[k][i] - a - b * xs[k][i]) for i in idx) / sw, 5)
+        lines[k]["hand_offset"] = off
     out = {"pitchers_60ip": len(pairs), "matched_lahman_1986": len(good), "lines": lines, "shares": shares,
            "lambda": 0.2, "league_1986": {k: round(v, 4) for k, v in lg.items()}}
     json.dump(out, open(solver.CALIB, "w"), indent=1)

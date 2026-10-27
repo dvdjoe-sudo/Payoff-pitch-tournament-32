@@ -22,7 +22,7 @@ The rate harness in `pa_sim.py` is a different tool. It is unchanged. Its error 
 - **Page 39 +10 / +20.** Implemented on a plain TOUGH result, on by default, because it is a printed rating. 00 is not shifted. A sum over 99 keeps the original face. **Ambiguous:** the addendum names TOUGH and does not name TOUGH-OUT. The shift is not applied to TOUGH-OUT.
 - **BALLPARK (pages 2 and 9).** Implemented. The home park’s wheelhouse column follows the batter’s stance (left column `wh_l`, right column `wh_r`). Inside that range, the re-roll is read on WHEELHOUSE. Otherwise it is read on IN-PLAY. **Ambiguous:** page 9 says re-roll the dice. Page 2 and the FAC instructions (page 13) name the percentile. This game re-rolls the percentile and keeps the 2d6.
 - **/IN-PLAY/ (page 3).** Toggle `slash_in_play`. `normal` (the default) always reads IN-PLAY, which is the cross-era option. `first_inning` uses the printed first-inning / later-inning split. `out_section` uses the batter’s OUT section. These cards do not contain `/IN-PLAY/`, and they do not store the out printed beside it. **Missing data** if that mode is turned on.
-- **Supplemental strikeout band (page 11).** Toggle `supplemental_so`, default off. The band starts at 50 or 90. **Missing data:** these cards store +10 or +20, which is the page 39 TOUGH shift, not that band. Turning the toggle on does not change an out.
+- **Supplemental strikeout band (page 11, optional rule).** Toggle `supplemental_so`, default off (`stress_sim.py --supplemental-so`). When a batter-card out falls in the pitcher's SO range, it is a strikeout. The 2024 set prints the band from 50 (e.g. Mason Miller 50-73); the 1986 set leaves it blank. 34 cards carry `card_pit.so_band`. **Derived, not printed:** the band is sized from the gap between the pitcher's real SO rate and what his solved table can give (gaps under 0.015 per BF get none), starting at 50 like the 2024 set. Pitchers with no band are unaffected. Stress effect: SO 7.59 → 7.72 per team-game, runs 5.05 → 5.06.
 - **Optional 00 home run (page 39).** Toggle `zero_hr`, default off. It applies only when the HR range is blank or 0.
 
 ## Baserunning
@@ -114,9 +114,9 @@ Lasting sentences that are coded only in part: the extra out on a dropped third 
 
 `engines/sim/samples/tor-at-bos-seed1.txt`
 
-Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Toronto 7, Boston 3, nine innings. Pedro Martinez 8 innings, 4 runs, 34 batters; Babe Ruth pitched the ninth (3 runs). Dave Stieb 8 innings, 3 runs, 34 batters; Tom Henke pitched the ninth.
+Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Toronto 7, Boston 1, nine innings. Pedro Martinez 6 innings, 5 runs, 24 batters; Babe Ruth pitched the last three (2 runs). Dave Stieb pitched all nine, 1 run, 33 batters.
 
-The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
+Before the platoon re-split and per-hand pitcher calibration (2026-10-27), it was Toronto 7, Boston 3. The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
 
 `WP?` on this seed: thirteen marked cards drawn, none fired. Five came up with the bases empty. Eight missed the pitcher’s rating (Pedro Martinez and Dave Stieb are rated 30). No drawn card met a pitcher who has no WP rating.
 

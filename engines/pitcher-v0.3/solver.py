@@ -148,11 +148,12 @@ def load_calibration():
     return json.load(open(CALIB))
 
 
-def target_from(rel, calib):
+def target_from(rel, calib, hand="R"):
     t = {}
     for k in STATS:
-        a, b = calib["lines"][k]["a"], calib["lines"][k]["b"]
-        t[k] = max(0.0, a + b * rel[k])
+        line = calib["lines"][k]
+        off = (line.get("hand_offset") or {}).get("L" if hand == "L" else "R", 0.0)
+        t[k] = max(0.0, line["a"] + line["b"] * rel[k] + off)
     return t
 
 
@@ -200,6 +201,34 @@ def solve(target, hand="R", bump=0, calib=None, lam=None, restarts=12, iters=150
     return {"table": dict(sorted(tbl.items(), key=lambda t: int(t[0]))), "objective": round(e, 4),
             "card_rates": {k: round(v, 4) for k, v in evaluate(tbl, hand, bump).items()},
             "target": {k: round(v, 4) for k, v in target.items()}}
+
+
+def batter_card_out_rate(table, hand="R", bump=0):
+    """Per batter faced: outs read off the batter's card (any result but DEFENSE)."""
+    vec = vectors(hand, bump)
+    return sum(D6_W[int(r)] / 36.0 * vec[o]["OUT"] for r, o in table.items() if o != "DEFENSE")
+
+
+SUPP_SO_START = 50   # rulebook page 11: the band starts at 50 or 90 by set; the 2024 set prints 50 - nn
+SUPP_SO_MIN_GAP = 0.015  # about 0.6 K per 9 IP; smaller gaps are fit noise
+
+
+def supplemental_so_band(table, target_so, hand="R", bump=0):
+    """Rulebook page 11 optional Supplemental Strikeout band, sized to the
+    card's strikeout shortfall. When a batter makes an out on his card and the
+    percentile falls in the band, it is a strikeout. Each face of the band
+    turns 1/100 of those outs into strikeouts. None when the table already
+    reaches the target."""
+    gap = target_so - evaluate(table, hand, bump)["so"]
+    if gap < SUPP_SO_MIN_GAP:
+        return None
+    outs = batter_card_out_rate(table, hand, bump)
+    if outs <= 0:
+        return None
+    width = min(100 - SUPP_SO_START, int(round(gap / outs * 100)))
+    if width < 1:
+        return None
+    return [SUPP_SO_START, SUPP_SO_START + width - 1]
 
 
 def bump_of(mod):

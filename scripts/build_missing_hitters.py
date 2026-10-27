@@ -756,6 +756,8 @@ def main():
     for key in expected_keys:
         if not ((cards.get(key) or {}).get("card_bat") or {}).get("sections"):
             raise SystemExit("missing playable card %s" % key)
+    import card_postpass
+    card_postpass.finalize(cards, expected_keys)
     dump(cards, CARDS)
     report = {
         "lahman_sha256": peak.LAHMAN_SHA256,

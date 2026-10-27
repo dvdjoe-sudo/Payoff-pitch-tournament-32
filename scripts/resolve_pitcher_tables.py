@@ -37,7 +37,7 @@ def apply(entry, key=None):
     totals["bf"] = peak["bf"]
     rel = solver.relative(totals, years)
     seed = zlib.crc32((key or entry.get("id", "")).encode())
-    res = solver.solve(solver.target_from(rel, _CAL), hand, bump, _CAL, seed=seed)
+    res = solver.solve(solver.target_from(rel, _CAL, hand), hand, bump, _CAL, seed=seed)
     old = cp.get("table_2d6")
     prev = (cp.get("table_basis") or {}).get("previous_table", old)
     cp["table_2d6"] = res["table"]
@@ -55,6 +55,15 @@ def apply(entry, key=None):
         flags.append("thin window: %d BF" % peak["bf"])
     if flags:
         basis["flag"] = "; ".join(flags)
+    band = solver.supplemental_so_band(res["table"], res["target"]["so"], hand, bump)
+    # Page 11 optional rule; the engine reads it only with supplemental_so on.
+    if band:
+        cp["so_band"] = band
+        basis["so_band_note"] = ("derived, not printed: page 11 optional Supplemental Strikeout band, "
+                                 "starts at 50 as the 2024 set prints it, sized to the card's SO shortfall %.4f/BF"
+                                 % (res["target"]["so"] - res["card_rates"]["so"]))
+    else:
+        cp.pop("so_band", None)
     cp["table_basis"] = basis
     cp["special"] = []
     return prev, res["table"]

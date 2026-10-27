@@ -13,13 +13,17 @@ score (305 cards: exact 32%, within one grade 68%). The 1986 letter is
 only loosely tied to one season's SB% and rate, so single letters are
 uncertain; the grade distribution is what the calibration fixes.
 Cards whose window kept no caught stealing keep their letter (flagged).
+
+Recalibrated 2026-10-27 on the real 1986 season (the 1986 set prints 1986
+stats, not 1985): cut points come from historical-cards/reference/
+steal_calibration_1986.json, written by scripts/calibrate_steal_1986.py.
 """
 import json
 import os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CARDS = os.path.join(ROOT, "data", "cards.json")
-CUTS = [0.7389, 0.8882, 1.2619, 1.7526]   # F | D | C | B | A
+CUTS = json.load(open(os.path.join(ROOT, "historical-cards", "reference", "steal_calibration_1986.json")))["letter"]["cuts_FDCBA"]
 LETTERS = "FDCBA"
 
 
@@ -49,7 +53,7 @@ def apply(card):
         return steal["rating"], steal["rating"], None
     old = steal["rating"]
     steal["rating"] = new
-    basis.update({"score": score, "calibration": "1986 printed letters vs 1985 SB%/attempt rate (scripts/fix_steal_letter.py)"})
+    basis.update({"score": score, "calibration": "1986 printed letters vs 1986 SB%/attempt rate (scripts/calibrate_steal_1986.py) (scripts/fix_steal_letter.py)"})
     return old, new, score
 
 

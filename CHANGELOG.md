@@ -2,6 +2,21 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Platoon splits, per-hand pitcher calibration, 1986 steal/arm calibration, optional SO band
+
+**Lefty pitchers allowed ~25% more runs than righties (stress RA9 6.21 vs 4.95; real 3.01 vs 2.93).** Two causes, both fixed:
+- **Hitter platoon split.** The hitter solver picked comps by stats only, so left-handed batters lost the 1986 platoon split (1986 L batters print WHEELHOUSE HR about half as wide vs LHP as vs RHP; ours were near even). `scripts/platoon_resplit.py` re-splits every hitter card (482) to the same-side L:R ratio on qualified printed 1986 cards, keeping the 0.28/0.72 weighted total per section and result, so each hitter's expected line moves by rounding only (≤ .005 AVG). The out table is rebuilt over the moved holes. Previous sections and out table are kept in `card_bat.platoon_basis`.
+- **Pitcher calibration by hand.** The printed-1986 calibration line pooled both hands; residuals split by hand (LHP H −.009/BF, SO +.005). `calibrate.py` now fits a per-hand intercept (`hand_offset`), and all 377 tables were re-solved.
+- Result: LHP 6.21 → 4.91, RHP 4.95 → 5.24.
+
+**Steal ratings and OF arms recalibrated to 1986.** The 1986 set prints 1986 stats, but the Jump, steal letter and OF arm cuts had been fitted on 1985. Refit on 1986 Lahman (`scripts/calibrate_steal_1986.py`, `reference/steal_calibration_1986.json`): Jump exact match 92% (was 49%), letter 40% exact / 79% within one, Derived OF arm 35% exact (was 21%). Re-applied: Jump changed on 95 cards, letter on 28, OF arm on 15. Jumps 7-9 rest on few 1986 cards.
+
+**One post-pass for every builder.** `scripts/card_postpass.py` (platoon split, Jump/letter, pitcher v0.3 table, Derived OF arm) now runs in `build_cards.py`, `build_sixth_bench_cards.py`, `build_empty_team_cards.py` and `build_missing_hitters.py`, so sixth-bench and derived cards get the same treatment on a rebuild. Running it on the current cards changes nothing.
+
+**Optional page 11 Supplemental Strikeout band (off by default).** The rulebook (page 11) has an optional SO band; the 2024 set prints it from 50, the 1986 set leaves it blank. 34 high-K pitchers whose real SO rate is beyond their table get a derived band (`card_pit.so_band`, marked not printed). Toggle `supplemental_so`. Stress: SO 7.59 → 7.72, runs unchanged.
+
+Stress (2,976 games), before → after: R 5.07 → 5.05, H 8.72 → 8.68, HR 1.27 → 1.27, BB 2.87 → 2.91, SO 7.67 → 7.59, DP .62 → .60, SB% .621 → .643, AVG/OBP/SLG .256/.316/.430 → .256/.317/.430. Sample game reseeded (Toronto 7, Boston 1). Cache v84.
+
 ## 2026-10-27 — Pitcher 2d6 tables re-solved (solver v0.3), owner-approved
 
 Every pitcher card's 2d6 table (377 cards) is re-solved by `engines/pitcher-v0.3` through `scripts/resolve_pitcher_tables.py` (also called by `build_cards.py`, seeded per card so rebuilds match).

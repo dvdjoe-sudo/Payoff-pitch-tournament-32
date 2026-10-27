@@ -111,6 +111,7 @@ class Checked(G.Game):
 
 
 PROXY_PARK = None
+OPTS = {}
 
 
 def one(job):
@@ -123,7 +124,7 @@ def one(job):
     signal.alarm(TIMEOUT)
     t0 = time.time()
     try:
-        g = Checked(G.load_club(home, ROSTERS, CARDS), G.load_club(away, ROSTERS, CARDS), seed=seed)
+        g = Checked(G.load_club(home, ROSTERS, CARDS), G.load_club(away, ROSTERS, CARDS), seed=seed, **OPTS)
         rep = g.play()
     except Timeout:
         return {"job": job, "fail": "timeout"}
@@ -186,7 +187,11 @@ def main():
     ap.add_argument("--out", default="/tmp/stress_results.json")
     ap.add_argument("--proxy-park", default=None,
                     help="stand-in park name for clubs with no 1986 park card (stress only)")
+    ap.add_argument("--supplemental-so", action="store_true",
+                    help="turn on the page 11 optional Supplemental Strikeout band")
     args = ap.parse_args()
+    if args.supplemental_so:
+        OPTS["supplemental_so"] = True
     global PROXY_PARK
     PROXY_PARK = args.proxy_park
     codes = sorted(ROSTERS)

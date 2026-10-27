@@ -169,6 +169,7 @@ def _player(roster_row, card):
         "stamina": pit.get("stamina") or {},
         "addendum": pit.get("addendum") or {},
         "so_modifier": pit.get("so_modifier") or "NONE",
+        "so_band": pit.get("so_band"),
         "removed": False,
     }
 
@@ -2660,9 +2661,7 @@ class Game:
             return False
         band = pitcher.get("so_band")
         if not band:
-            self.gap(
-                "Page 11's optional strikeout band starts at 50 or 90. These cards store +10 or +20, which page 39 applies to a TOUGH result. The optional band is not on the card, so the out stands."
-            )
+            # Page 11: only "some pitchers" carry the band. No band, no change.
             return False
         return band[0] <= pct <= band[1]
 

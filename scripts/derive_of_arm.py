@@ -7,7 +7,8 @@ rulebook page 8 scale (3 best .. 10 worst) from outfield assists per
 outfield game over the card's window seasons, relative to the league
 outfield rate in each season (Lahman Fielding POS=OF, all clubs that
 season). Cut points are fitted to the printed 1986 outfield arms
-matched to each player's 1985 line, keeping the 1986 share of each arm.
+matched to each player's 1986 line (the 1986 set prints 1986 stats;
+an earlier fit used 1985), keeping the 1986 share of each arm.
 Only Derived cards with an outfield row change, only the arm. Fewer than
 THIN outfield games in the window is flagged thin; fewer than MIN keeps 6.
 Runner-advance (hold/kill) data is not in Lahman, so it is not used.
@@ -55,7 +56,7 @@ def fit(per, lg):
            for r in csv.DictReader(open(LAHMAN + "People.csv", encoding="latin1"))}
     byname = defaultdict(list)
     for (pid, y), (g, a) in per.items():
-        if y == 1985 and g >= 40:
+        if y == 1986 and g >= 40:
             byname[ppl.get(pid, "")].append(pid)
     ref = json.load(open(REF))
     pts = []
@@ -66,7 +67,7 @@ def fit(per, lg):
             arms = [q.get("arm") for q in p.get("positions") or [] if q.get("pos") in OF and q.get("arm")]
             ids = byname.get(p.get("name"), [])
             if arms and len(ids) == 1:
-                r = rel(per, lg, ids[0], [1985])[0]
+                r = rel(per, lg, ids[0], [1986])[0]
                 if r is not None:
                     pts.append((r, min(arms)))
     pts.sort(key=lambda t: -t[0])            # strongest arm first
@@ -82,12 +83,20 @@ def fit(per, lg):
                                  "shares": dict(sorted(share.items()))}
 
 
-def main():
-    per, lg = load()
-    arms, cuts, fitinfo = fit(per, lg)
-    cards = json.load(open(CARDS, encoding="utf-8"))
+_FIT = None
+
+
+def apply_all(cards, keys=None):
+    """Rate OF arms on Derived cards in place. keys limits which cards."""
+    global _FIT
+    if _FIT is None:
+        per, lg = load()
+        _FIT = (per, lg) + fit(per, lg)
+    per, lg, arms, cuts, fitinfo = _FIT
     out = []
     for key, c in cards.items():
+        if keys is not None and key not in keys:
+            continue
         bat = c.get("card_bat") or {}
         if bat.get("fielding") != "Derived":
             continue
@@ -113,6 +122,12 @@ def main():
             bat["of_arm_basis"] = {k: rec[k] for k in ("of_g", "of_a", "rel_assist_rate", "years_used")}
             bat["of_arm_basis"]["method"] = "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms"
         out.append(rec)
+    return out, arms, cuts, fitinfo
+
+
+def main():
+    cards = json.load(open(CARDS, encoding="utf-8"))
+    out, arms, cuts, fitinfo = apply_all(cards)
     with open(CARDS, "w", encoding="utf-8") as h:
         h.write(json.dumps(cards, indent=1, sort_keys=True, ensure_ascii=False) + "\n")
     json.dump({"fit": fitinfo, "cuts_rel": [round(x, 3) for x in cuts], "arms": arms, "cards": out},

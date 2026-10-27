@@ -1327,6 +1327,8 @@ def main(argv=None):
             continue
         if json.dumps(rosters[code], sort_keys=True) != text:
             raise SystemExit("existing roster changed: " + code)
+    import card_postpass
+    card_postpass.finalize(cards, [player["key"] for player in players])
     write_json(cards, CARDS)
     write_json(rosters, ROSTERS)
     hit_rows = [row for row in reports if row["kind"] == "hitter"]

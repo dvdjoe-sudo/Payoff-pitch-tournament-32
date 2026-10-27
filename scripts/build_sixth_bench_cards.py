@@ -141,6 +141,8 @@ def main() -> int:
             print("%s %s %s fit %s" % (player["key"], status, list(years), fit_error))
     if json.dumps(rosters, sort_keys=True) != before_rosters:
         raise SystemExit("rosters changed")
+    import card_postpass
+    card_postpass.finalize(cards, [p["key"] for p in players])
     empty.write_json(cards, CARDS)
     empty.write_json({"summary": {
         "players": [r["key"] for r in reports], "lahman_max_year": bat_max,

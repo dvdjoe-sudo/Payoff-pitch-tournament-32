@@ -1,23 +1,23 @@
 {
  "fit": {
-  "matched": 104,
-  "exact": 0.212,
-  "within_one": 0.654,
+  "matched": 119,
+  "exact": 0.345,
+  "within_one": 0.681,
   "shares": {
-   "4": 2,
-   "5": 18,
-   "6": 26,
-   "7": 30,
-   "8": 20,
-   "9": 8
+   "4": 3,
+   "5": 22,
+   "6": 33,
+   "7": 36,
+   "8": 19,
+   "9": 6
   }
  },
  "cuts_rel": [
-  2.288,
-  1.391,
-  1.064,
-  0.697,
-  0.281
+  2.229,
+  1.421,
+  1.0,
+  0.485,
+  0.0
  ],
  "arms": [
   4,
@@ -48,8 +48,8 @@
    "of_g": 562,
    "of_a": 15,
    "rel_assist_rate": 0.576,
-   "old_arm": 6,
-   "new_arm": 8
+   "old_arm": 8,
+   "new_arm": 7
   },
   {
    "key": "ARI|uptonju01",
@@ -71,8 +71,8 @@
    "of_g": 673,
    "of_a": 22,
    "rel_assist_rate": 0.665,
-   "old_arm": 6,
-   "new_arm": 8
+   "old_arm": 8,
+   "new_arm": 7
   },
   {
    "key": "ATL|murphda05",
@@ -94,8 +94,8 @@
    "of_g": 802,
    "of_a": 48,
    "rel_assist_rate": 1.006,
-   "old_arm": 6,
-   "new_arm": 7
+   "old_arm": 7,
+   "new_arm": 6
   },
   {
    "key": "BAL|anderbr01",
@@ -117,7 +117,7 @@
    "of_g": 701,
    "of_a": 32,
    "rel_assist_rate": 0.818,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -163,7 +163,7 @@
    "of_g": 620,
    "of_a": 28,
    "rel_assist_rate": 0.761,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -180,7 +180,7 @@
    "of_g": 170,
    "of_a": 22,
    "rel_assist_rate": 0.971,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -203,7 +203,7 @@
    "of_g": 651,
    "of_a": 40,
    "rel_assist_rate": 0.822,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -226,7 +226,7 @@
    "of_g": 787,
    "of_a": 40,
    "rel_assist_rate": 0.923,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -249,7 +249,7 @@
    "of_g": 734,
    "of_a": 58,
    "rel_assist_rate": 0.811,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -272,7 +272,7 @@
    "of_g": 656,
    "of_a": 82,
    "rel_assist_rate": 0.971,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -295,8 +295,8 @@
    "of_g": 637,
    "of_a": 50,
    "rel_assist_rate": 1.399,
-   "old_arm": 6,
-   "new_arm": 5
+   "old_arm": 5,
+   "new_arm": 6
   },
   {
    "key": "CLE|jacksjo01",
@@ -341,7 +341,7 @@
    "of_g": 643,
    "of_a": 59,
    "rel_assist_rate": 1.626,
-   "old_arm": 6,
+   "old_arm": 5,
    "new_arm": 5
   },
   {
@@ -364,7 +364,7 @@
    "of_g": 737,
    "of_a": 25,
    "rel_assist_rate": 0.703,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -479,8 +479,8 @@
    "of_g": 675,
    "of_a": 49,
    "rel_assist_rate": 0.675,
-   "old_arm": 6,
-   "new_arm": 8
+   "old_arm": 8,
+   "new_arm": 7
   },
   {
    "key": "DET|veachbo01",
@@ -502,7 +502,7 @@
    "of_g": 743,
    "of_a": 85,
    "rel_assist_rate": 0.893,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -543,7 +543,7 @@
    "of_g": 515,
    "of_a": 26,
    "rel_assist_rate": 0.955,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7,
    "flag": "window seasons missing from Lahman: [2008]"
   },
@@ -567,8 +567,8 @@
    "of_g": 686,
    "of_a": 47,
    "rel_assist_rate": 1.039,
-   "old_arm": 6,
-   "new_arm": 7
+   "old_arm": 7,
+   "new_arm": 6
   },
   {
    "key": "HOU|cruzjo01",
@@ -590,7 +590,7 @@
    "of_g": 752,
    "of_a": 45,
    "rel_assist_rate": 0.951,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -612,7 +612,7 @@
    "of_g": 565,
    "of_a": 49,
    "rel_assist_rate": 1.78,
-   "old_arm": 6,
+   "old_arm": 5,
    "new_arm": 5,
    "flag": "window seasons missing from Lahman: [2008]"
   },
@@ -636,7 +636,7 @@
    "of_g": 704,
    "of_a": 40,
    "rel_assist_rate": 0.895,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -659,7 +659,7 @@
    "of_g": 680,
    "of_a": 33,
    "rel_assist_rate": 0.768,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -728,8 +728,8 @@
    "of_g": 614,
    "of_a": 19,
    "rel_assist_rate": 0.675,
-   "old_arm": 6,
-   "new_arm": 8
+   "old_arm": 8,
+   "new_arm": 7
   },
   {
    "key": "LAD|wheatza01",
@@ -751,7 +751,7 @@
    "of_g": 667,
    "of_a": 62,
    "rel_assist_rate": 0.753,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -816,8 +816,8 @@
    "of_g": 572,
    "of_a": 19,
    "rel_assist_rate": 0.669,
-   "old_arm": 6,
-   "new_arm": 8
+   "old_arm": 8,
+   "new_arm": 7
   },
   {
    "key": "MIL|gomezca01",
@@ -862,7 +862,7 @@
    "of_g": 630,
    "of_a": 55,
    "rel_assist_rate": 1.645,
-   "old_arm": 6,
+   "old_arm": 5,
    "new_arm": 5
   },
   {
@@ -908,7 +908,7 @@
    "of_g": 458,
    "of_a": 15,
    "rel_assist_rate": 0.76,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -931,7 +931,7 @@
    "of_g": 617,
    "of_a": 34,
    "rel_assist_rate": 0.936,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -977,7 +977,7 @@
    "of_g": 712,
    "of_a": 37,
    "rel_assist_rate": 0.907,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1046,7 +1046,7 @@
    "of_g": 643,
    "of_a": 33,
    "rel_assist_rate": 0.848,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1069,7 +1069,7 @@
    "of_g": 691,
    "of_a": 35,
    "rel_assist_rate": 0.916,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1113,7 +1113,7 @@
    "of_g": 492,
    "of_a": 21,
    "rel_assist_rate": 0.771,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1136,7 +1136,7 @@
    "of_g": 555,
    "of_a": 18,
    "rel_assist_rate": 0.79,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1159,8 +1159,8 @@
    "of_g": 700,
    "of_a": 31,
    "rel_assist_rate": 0.687,
-   "old_arm": 6,
-   "new_arm": 8
+   "old_arm": 8,
+   "new_arm": 7
   },
   {
    "key": "OAK|henderi01",
@@ -1182,7 +1182,7 @@
    "of_g": 598,
    "of_a": 33,
    "rel_assist_rate": 0.956,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1205,8 +1205,8 @@
    "of_g": 702,
    "of_a": 46,
    "rel_assist_rate": 1.051,
-   "old_arm": 6,
-   "new_arm": 7
+   "old_arm": 7,
+   "new_arm": 6
   },
   {
    "key": "OAK|murphdw01",
@@ -1251,7 +1251,7 @@
    "of_g": 721,
    "of_a": 85,
    "rel_assist_rate": 1.501,
-   "old_arm": 6,
+   "old_arm": 5,
    "new_arm": 5
   },
   {
@@ -1297,7 +1297,7 @@
    "of_g": 664,
    "of_a": 57,
    "rel_assist_rate": 0.967,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1320,8 +1320,8 @@
    "of_g": 597,
    "of_a": 82,
    "rel_assist_rate": 1.035,
-   "old_arm": 6,
-   "new_arm": 7
+   "old_arm": 7,
+   "new_arm": 6
   },
   {
    "key": "PHI|abreubo01",
@@ -1412,7 +1412,7 @@
    "of_g": 609,
    "of_a": 77,
    "rel_assist_rate": 0.793,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1435,7 +1435,7 @@
    "of_g": 759,
    "of_a": 125,
    "rel_assist_rate": 1.884,
-   "old_arm": 6,
+   "old_arm": 5,
    "new_arm": 5
   },
   {
@@ -1481,7 +1481,7 @@
    "of_g": 745,
    "of_a": 130,
    "rel_assist_rate": 1.532,
-   "old_arm": 6,
+   "old_arm": 5,
    "new_arm": 5
   },
   {
@@ -1504,7 +1504,7 @@
    "of_g": 702,
    "of_a": 46,
    "rel_assist_rate": 0.849,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1527,7 +1527,7 @@
    "of_g": 738,
    "of_a": 72,
    "rel_assist_rate": 1.489,
-   "old_arm": 6,
+   "old_arm": 5,
    "new_arm": 5
   },
   {
@@ -1573,8 +1573,8 @@
    "of_g": 684,
    "of_a": 54,
    "rel_assist_rate": 1.416,
-   "old_arm": 6,
-   "new_arm": 5
+   "old_arm": 5,
+   "new_arm": 6
   },
   {
    "key": "SEA|ibanera01",
@@ -1596,8 +1596,8 @@
    "of_g": 653,
    "of_a": 46,
    "rel_assist_rate": 1.404,
-   "old_arm": 6,
-   "new_arm": 5
+   "old_arm": 5,
+   "new_arm": 6
   },
   {
    "key": "SEA|suzukic01",
@@ -1619,8 +1619,8 @@
    "of_g": 762,
    "of_a": 41,
    "rel_assist_rate": 1.036,
-   "old_arm": 6,
-   "new_arm": 7
+   "old_arm": 7,
+   "new_arm": 6
   },
   {
    "key": "SF|irvinmo01",
@@ -1640,7 +1640,7 @@
    "of_g": 402,
    "of_a": 29,
    "rel_assist_rate": 0.935,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1663,8 +1663,8 @@
    "of_g": 538,
    "of_a": 46,
    "rel_assist_rate": 1.042,
-   "old_arm": 6,
-   "new_arm": 7
+   "old_arm": 7,
+   "new_arm": 6
   },
   {
    "key": "STL|medwijo01",
@@ -1686,7 +1686,7 @@
    "of_g": 758,
    "of_a": 55,
    "rel_assist_rate": 0.881,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
@@ -1732,7 +1732,7 @@
    "of_g": 687,
    "of_a": 47,
    "rel_assist_rate": 0.889,
-   "old_arm": 6,
+   "old_arm": 7,
    "new_arm": 7
   },
   {
