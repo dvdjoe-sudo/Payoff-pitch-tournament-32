@@ -1,0 +1,23 @@
+{
+ "method": "Measure what a DEFENSE result does in the game engine.",
+ "plate_appearances": 88739,
+ "counts": {
+  "OUT": 43115,
+  "ROE": 24074,
+  "1B": 14565,
+  "FC": 3958,
+  "REROLL": 444,
+  "2B": 2350,
+  "3B": 677
+ },
+ "vector": {
+  "1B": 0.16413,
+  "2B": 0.02648,
+  "3B": 0.00763,
+  "HR": 0.0,
+  "ROE": 0.27129,
+  "FC": 0.0446,
+  "OUT": 0.48586,
+  "RARE": 0.0
+ }
+}
