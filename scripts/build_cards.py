@@ -568,6 +568,7 @@ def build():
 
     apply_owner_roster_amendments(cards, rosters)
     apply_padres_roster_amendment(cards, rosters)
+    apply_expos_roster_amendment(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -682,6 +683,43 @@ def apply_padres_roster_amendment(cards, rosters):
         raise SystemExit("Padres owner roster must be 9/6/5/6: " + str(groups))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Padres owner roster requires 26 distinct players")
+
+
+
+def apply_expos_roster_amendment(cards, rosters):
+    """Owner-approved Montreal Alou/Fassero swap; no invented hitter card.
+
+    The original set may still list Fassero. Keep that existing pitcher
+    card for historical inspection, but not among the active 26.
+    """
+    roster = rosters.get("MON")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "fasseje01"]
+    alou_id = "aloumo01"
+    matching = [p for p in players if p["id"] == alou_id]
+    if not matching:
+        players.append({
+            "group": "bench", "id": alou_id, "kind": "hitter",
+            "name": "Moises Alou", "pos": "OF", "slot": 6,
+        })
+    else:
+        if len(matching) != 1:
+            raise SystemExit("duplicate Expos Moises Alou roster entries")
+        matching[0].update(group="bench", kind="hitter", pos="OF", slot=6)
+    if "MON|" + alou_id in cards:
+        cards["MON|" + alou_id]["spots"] = [
+            {"group": "bench", "kind": "hitter", "pos": "OF", "slot": 6},
+        ]
+    # Do not create a fake card. Joe will perform the Hitter v0.5 conversion.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {group: sum(p["group"] == group for p in players) for group in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Expos owner roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Expos owner roster requires 26 distinct players")
 
 
 
