@@ -567,6 +567,7 @@ def build():
         }
 
     apply_owner_roster_amendments(cards, rosters)
+    apply_padres_roster_amendment(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -639,6 +640,49 @@ def apply_owner_roster_amendments(cards, rosters):
         raise SystemExit("PHA owner roster slot mismatch: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("PHA owner roster requires 26 distinct players")
+
+
+def apply_padres_roster_amendment(cards, rosters):
+    """Owner-approved San Diego 6 bench / 6 relievers roster amendment.
+
+    Brian Giles replaces Craig Lefferts on the ACTIVE 26, but Joe is
+    handling the frozen Hitter v0.5 conversion. Do not invent a playable
+    Giles card. Preserve the already-converted Lefferts card data as a
+    historical record, without listing him as active; his archival card
+    can still be inspected by id from the source collection.
+    """
+    roster = rosters.get("SD")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "leffecr01"]
+    giles_id = "gilesbr02"
+    existing = [p for p in players if p["id"] == giles_id]
+    if not existing:
+        players.append({
+            "group": "bench", "id": giles_id, "kind": "hitter",
+            "name": "Brian Giles", "pos": "OF", "slot": 6,
+        })
+    else:
+        if len(existing) != 1:
+            raise SystemExit("duplicate Padres Brian Giles roster entries")
+        existing[0].update(group="bench", slot=6, pos="OF", kind="hitter")
+    if "SD|" + giles_id in cards:
+        card = cards["SD|" + giles_id]
+        card["spots"] = [
+            {"group": "bench", "slot": 6, "pos": "OF", "kind": "hitter"},
+        ]
+        # Never assert card validity without original frozen-engine output.
+    # Lefferts stays in cards if present as archived source data, but no
+    # longer occupies an active roster slot. No data is destroyed here.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    groups = {name: sum(p["group"] == name for p in players) for name in order}
+    if groups != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Padres owner roster must be 9/6/5/6: " + str(groups))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Padres owner roster requires 26 distinct players")
+
 
 
 def dump(obj, path):
