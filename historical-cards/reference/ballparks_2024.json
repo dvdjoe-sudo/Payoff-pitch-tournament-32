@@ -1,0 +1,107 @@
+[
+ {
+  "name": "CHASE FIELD",
+  "season": "2024 Arizona (N)",
+  "wh_l": 35,
+  "wh_r": 58,
+  "range_hit_hi": {
+   "A": 34,
+   "B": 49,
+   "C": 58,
+   "D": 66,
+   "F": 79
+  },
+  "error_hi": {
+   "5": 28,
+   "4": 39,
+   "3": 47,
+   "2": 53,
+   "1": 60
+  },
+  "source": "2024 Season PDF (Payoff Pitch, ©2024), ballpark cards, p.233-234"
+ },
+ {
+  "name": "COORS FIELD",
+  "season": "2024 Colorado (N)",
+  "wh_l": 52,
+  "wh_r": 59,
+  "range_hit_hi": {
+   "A": 32,
+   "B": 49,
+   "C": 61,
+   "D": 75,
+   "F": 89
+  },
+  "error_hi": {
+   "5": 29,
+   "4": 39,
+   "3": 50,
+   "2": 59,
+   "1": 65
+  },
+  "source": "2024 Season PDF (Payoff Pitch, ©2024), ballpark cards, p.233-234"
+ },
+ {
+  "name": "LOANDEPOT PARK",
+  "season": "2024 Miami (N)",
+  "wh_l": 51,
+  "wh_r": 44,
+  "range_hit_hi": {
+   "A": 31,
+   "B": 43,
+   "C": 53,
+   "D": 60,
+   "F": 66
+  },
+  "error_hi": {
+   "5": 30,
+   "4": 38,
+   "3": 50,
+   "2": 58,
+   "1": 69
+  },
+  "source": "2024 Season PDF (Payoff Pitch, ©2024), ballpark cards, p.233-234"
+ },
+ {
+  "name": "TROPICANA FIELD",
+  "season": "2024 Tampa Bay (A)",
+  "wh_l": 41,
+  "wh_r": 52,
+  "range_hit_hi": {
+   "A": 29,
+   "B": 34,
+   "C": 46,
+   "D": 54,
+   "F": 62
+  },
+  "error_hi": {
+   "5": 27,
+   "4": 39,
+   "3": 46,
+   "2": 57,
+   "1": 68
+  },
+  "source": "2024 Season PDF (Payoff Pitch, ©2024), ballpark cards, p.233-234"
+ },
+ {
+  "name": "NATIONALS PARK",
+  "season": "2024 Washington (N)",
+  "wh_l": 42,
+  "wh_r": 40,
+  "range_hit_hi": {
+   "A": 29,
+   "B": 43,
+   "C": 51,
+   "D": 60,
+   "F": 74
+  },
+  "error_hi": {
+   "5": 29,
+   "4": 43,
+   "3": 55,
+   "2": 62,
+   "1": 74
+  },
+  "source": "2024 Season PDF (Payoff Pitch, ©2024), ballpark cards, p.233-234"
+ }
+]

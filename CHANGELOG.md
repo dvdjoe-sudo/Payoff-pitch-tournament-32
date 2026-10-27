@@ -2,6 +2,22 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Outfield arms, 2024 park cards, injuries, steal jump
+
+**Outfield arm.** Rulebook page 8 rates OF Arm 3 (best) to 10 (worst), and the page 16 extra-base check (safe on 2d6 <= ARM) already reads it that way. 70 set-file cards stored it reversed (Elite/Great 8, Poor 4); `scripts/fix_of_arm_scale.py` mirrors them (12 − arm; 52 arms change, e.g. Clemente RF 4, Mays CF 4, Poor arms now 8). Catchers, infield rows and Derived cards are unchanged; `build_cards.py` applies it on a rebuild.
+
+**Parks.** The 2024 Season PDF's park cards for Chase Field (ARI), Coors Field (COL), loanDepot park (MIA), Tropicana Field (TB) and Nationals Park (WSH) are transcribed exactly into `historical-cards/reference/ballparks_2024.json`. No 1986 card exists for those clubs. Philadelphia A's (PHA) still has no park card. Cleveland keeps its chart.
+
+**Injuries.** A removed or injured player is replaced for the rest of that game only (bench player at his position, else same side of the field; pitchers from the bullpen). Clubs load fresh each game, so he is back next game. A pitcher who leaves cannot return in the same game (relievers had been re-entering).
+
+**Steals.** The auto-steal logic matches page 7. A 2d6 of 12 pickoff is now scored as a pickoff, not caught stealing. Jump numbers were capped at 5 on the set files, so slow non-runners went as often as base stealers; `scripts/fix_jump_from_attempts.py` sets Jump from each card's window (SB+CS) per time on first, with cut points fit to the printed 1986 cards (477 cards, 446 changed; 23 pre-CS-era cards estimated as SB/0.7 and flagged in `jump_basis`). Steal letters are unchanged. Sample game reseeded (Toronto 0, Boston 4). Cache v81.
+
+## 2026-10-27 — Error ratings on the rulebook direction; engine stress test
+
+**Error digit.** Page 2 of the rulebook rates the batter's error 1 (worst) to 5 (best); the printed park cards and 1986 cards agree, and the engine reads the digit as printed. 166 hitter cards whose fielding came from the set files stored it the other way round (Elite A/1, Great A/2, Above Average B/3, Below Average D/5, Poor F/5), so Elite fielders drew the largest error band. Their digit is flipped (6 − e) by `scripts/fix_error_scale.py` (e.g. Ozzie Smith A/4, matching his 1986 card; Willie Mays A/5; David Ortiz D/1). Range, arm, labels, Derived cards, pitcher fielding, rosters and played results are unchanged. `scripts/build_cards.py` applies the same flip on a rebuild.
+
+**Engine fixes from a 2,418-game stress run** (`scripts/stress_sim.py`; results are not tournament stats): a restarted at-bat (dropped foul, rare-play replay, delay) no longer counts as a batter faced; the FAC bunt result `E?` is now played (it used to do nothing and the batter's plate appearance vanished); safe on a dropped third strike is one at-bat, not two; the page 22 "reaches second, out at third" liner is one at-bat, not two; a batter whose hit ends the inning because a runner is thrown out keeps his at-bat and hit; a starter tired at the end of a half is replaced when his side next takes the field, so a game that ends first no longer lists a reliever with no batters faced. Sample game reseeded (Toronto 1, Boston 4). Cache v80.
+
 ## 2026-10-27 — Derived hitter range and error
 
 313 hitter cards that carried the engine Average fielding default (range C, error 4) now carry range and error derived from franchise-window fielding stats (Lahman; 2026 from the MLB Stats API), calibrated per position to the printed 1986 cards (`scripts/derive_hitter_fielding.py`, `engines/sim/hitter_fielding_method.json`). Their fielding label reads Derived. Arms, cards with set-file fielding, 2d6 and result tables, rosters and played results are unchanged. Biggio (HOU, C) and Ohtani (LAA, LAD) keep the default: no usable games at the card position.

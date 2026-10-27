@@ -89,6 +89,12 @@ HOME_PARK = {
     "STL": "BUSCH STADIUM",
     "TEX": "ARLINGTON STADIUM",
     "TOR": "EXHIBITION STADIUM",
+    # No 1986 card exists for these clubs; the 2024 Season PDF park cards are used.
+    "ARI": "CHASE FIELD",
+    "COL": "COORS FIELD",
+    "MIA": "LOANDEPOT PARK",
+    "TB": "TROPICANA FIELD",
+    "WSH": "NATIONALS PARK",
 }
 
 
@@ -197,10 +203,13 @@ def park_for(code):
     for park in PARKS:
         if park["name"] == name:
             return park
-    path = os.path.join(ROOT, "historical-cards", "reference", "ballparks.json")
-    for park in json.load(open(path)):
-        if park["name"] == name:
-            return park
+    # 1986 cards first; ballparks_2024.json holds the 2024 Season PDF cards
+    # for clubs that have no 1986 park (ARI, COL, MIA, TB, WSH).
+    for fname in ("ballparks.json", "ballparks_2024.json"):
+        path = os.path.join(ROOT, "historical-cards", "reference", fname)
+        for park in json.load(open(path)):
+            if park["name"] == name:
+                return park
     return None
 
 
@@ -411,6 +420,7 @@ class Game:
 
     def _half(self):
         while self.outs < 3:
+            self._substitute_removed()
             self._maybe_change_pitcher(before_batter=True)
             self._plate()
         state = self.pitcher[self.fielding["code"]]
@@ -484,6 +494,15 @@ class Game:
             self._hit_and_run(batter, pitcher, reading, pct, one, two, total)
             return
         self._apply_reading(batter, pitcher, reading, pct, one, two, total, False)
+
+    def _restart_at_bat(self):
+        """The at-bat starts over (dropped foul, rare-play replay, delay).
+        The same batter comes up again, so the first try is not a batter faced."""
+        self.order_index[self.batting["code"]] -= 1
+        state = self.pitcher.get(self.fielding["code"])
+        if state:
+            state["batters"] -= 1
+        self._pitch_line(bf=-1)
 
     def _fmt(self, one, two, total):
         if one is None:
@@ -572,9 +591,25 @@ class Game:
             reason = "The pitcher was removed by a play."
         if not before_batter and self._no_more_batters():
             return
+        code = self.fielding["code"]
+        pending = getattr(self, "_pending_change", {})
+        self._pending_change = pending
+        if not remove and before_batter and code in pending:
+            remove, reason = True, pending[code]
         if not remove:
             return
-        pen = [p for p in self.fielding["bullpen"] if not p["removed"] and p is not player]
+        if not before_batter:
+            # Decided at the end of the half. The reliever is brought in when
+            # his side next takes the field, so a game that ends first does
+            # not give him an appearance with no batter faced.
+            pending[code] = reason
+            return
+        pending.pop(code, None)
+        # A pitcher who has left cannot come back in the same game.
+        self._pitched = getattr(self, "_pitched", {})
+        gone = self._pitched.setdefault(code, set())
+        gone.add(player["id"])
+        pen = [p for p in self.fielding["bullpen"] if not p["removed"] and p["id"] not in gone]
         if not pen:
             self.gap("%s stays in. The bullpen has no remaining arm. The book does not name a replacement." % player["name"])
             return
@@ -586,6 +621,62 @@ class Game:
         }
         self._pitch_line()
         self.say("Pitching change: %s replaces %s. %s" % (nxt["name"], player["name"], reason))
+
+    INFIELD = {"1B", "2B", "3B", "SS"}
+    OUTFIELD = {"LF", "CF", "RF", "OF"}
+
+    def _bench_choice(self, club, pos):
+        """Same position first, then the same side of the field, then anyone.
+        The book names no replacement rule; this is a usage choice."""
+        used = self._used_bench.setdefault(club["code"], set())
+        bench = [p for p in club["bench"] if not p["removed"] and p["id"] not in used]
+        if not bench:
+            return None
+
+        def plays(player, group):
+            spots = {player.get("pos")} | {r.get("pos") for r in player.get("positions") or []}
+            return bool(spots & group)
+
+        if pos and pos != "DH":
+            for group in ({pos}, self.INFIELD if pos in self.INFIELD else
+                          self.OUTFIELD if pos in self.OUTFIELD else {pos}):
+                for player in bench:
+                    if plays(player, group):
+                        return player
+            # A catcher must be replaced; anyone else catches if no C is left.
+        return bench[0]
+
+    def _substitute_removed(self):
+        """An injured or removed player leaves for the rest of this game only.
+        Each game loads its clubs fresh, so he is back the next game.
+        Batters come off the bench; pitchers come from the bullpen
+        (_maybe_change_pitcher)."""
+        self._used_bench = getattr(self, "_used_bench", {})
+        for club in (self.batting, self.fielding):
+            changed = False
+            for i, player in enumerate(club["lineup"]):
+                if not player["removed"]:
+                    continue
+                pos = player["pos"]
+                sub = self._bench_choice(club, pos)
+                if sub is None:
+                    if not player.get("_no_sub_noted"):
+                        player["_no_sub_noted"] = True
+                        self.gap("%s cannot be replaced. The bench is used up. He stays in." % player["name"])
+                    continue
+                self._used_bench[club["code"]].add(sub["id"])
+                self.box.setdefault(club["code"] + "|" + sub["id"], _empty_line(sub))
+                sub["pos"] = pos
+                sub["slot"] = player["slot"]
+                club["lineup"][i] = sub
+                for b, runner in enumerate(self.bases):
+                    if runner is player:
+                        self.bases[b] = sub
+                changed = True
+                self.say("Substitution: %s replaces %s (%s) for the rest of this game." % (
+                    sub["name"], player["name"], pos))
+            if changed:
+                self._align(club)
 
     def _no_more_batters(self):
         if self.half == "top" and self.inning >= 9 and self.score[self.home["code"]] > self.score[self.away["code"]]:
@@ -639,6 +730,9 @@ class Game:
             fielder = {1: "P", 2: "C", 3: "1B", 4: "P", 5: "3B", 6: "C"}[fielder_die]
             result = sac_result(letter, pct)
             self.say("Bunt roll %s. Fielder %s (page 19 1d6 key). Chart %s." % (", ".join(rolls), fielder, result))
+        # The page 19 chart and the FAC print the error result as "E?".
+        if result == "E?":
+            result = "E"
         if result == "MISS":
             self.say("First miss. Page 19 says the second miss is a strikeout. The bunt is rolled again.")
             if self.deck:
@@ -652,6 +746,8 @@ class Game:
                 pct = self.dice.pct()
                 result = sac_result(letter, pct)
                 self.say("Second bunt percentile %02d -> %s. Rolls %s." % (pct, result, ", ".join(self.dice.take())))
+            if result == "E?":
+                result = "E"
             if result == "MISS":
                 self._record_out(batter, "SO", "Second bunt miss is a strikeout (page 19).")
                 return
@@ -1657,7 +1753,7 @@ class Game:
         outcome = ERR_BY_D6[total][group]
         if outcome == "FOUL":
             self.say("Dropped foul. The at-bat restarts (page 20).")
-            self.order_index[self.batting["code"]] -= 1
+            self._restart_at_bat()
             return
         if outcome == "SINGLE+":
             self.say("SINGLE+error is a hit, and the runners take one extra base (page 20). The rate harness does not play it this way.")
@@ -1680,7 +1776,7 @@ class Game:
             self.say("Rare-play fielder card: %s. Rolls %s." % (named.get("text"), ", ".join(self.deck.take())))
             if named.get("check") == "RARE" or not named.get("pos"):
                 self.gap("The card drawn for the rare-play fielder does not name a position. The at-bat is replayed. The book does not say to replay it.")
-                self.order_index[self.batting["code"]] -= 1
+                self._restart_at_bat()
                 return
             pct_card = self.deck.draw("rare-pct")
             self.say("Defense rare-play percentile %02d. Rolls %s." % (pct_card["pct"], ", ".join(self.deck.take())))
@@ -1747,7 +1843,7 @@ class Game:
                 return
             if outcome == "FOUL":
                 self.say("Dropped foul. The at-bat restarts (page 20).")
-                self.order_index[self.batting["code"]] -= 1
+                self._restart_at_bat()
                 return
             if outcome == "SINGLE+":
                 self.say("SINGLE+error is a hit, and the runners take one extra base (page 20). The FAC error cell states that advance, so a SINGLE card is not also drawn.")
@@ -1870,13 +1966,13 @@ class Game:
         self.say(cell["note"])
         if not cell["coded"]:
             self.gap(cell["note"])
-            self.order_index[self.batting["code"]] -= 1
+            self._restart_at_bat()
             return
         event = cell["event"]
         if event == "NO_PLAY":
             self._injury(pitcher, "Normal")
             pitcher["removed"] = True
-            self.order_index[self.batting["code"]] -= 1
+            self._restart_at_bat()
             return
         if event == "CATCHER_FOUL":
             catcher = self._fielder("C")
@@ -1884,7 +1980,7 @@ class Game:
                 self._injury(catcher, "Normal")
             else:
                 self.gap("The foul ball hits the catcher (page 22). Nobody is playing catcher, so the injury check cannot be read.")
-            self.order_index[self.batting["code"]] -= 1
+            self._restart_at_bat()
             return
         if event == "OUT_REMOVE":
             self._record_out(batter, "RARE", cell["note"])
@@ -1896,11 +1992,12 @@ class Game:
                 self._reach(batter, 1, 1, "RUN 5 or less. Single (page 22).", hit=True)
             else:
                 self.say("RUN 6 or more reaches second, then is thrown out at third (page 22).")
-                self._line(batter, ab=1, h=1, tb=2)
+                # _record_out charges the at-bat.
+                self._line(batter, h=1, tb=2)
                 self._record_out(batter, "RARE", "Out at third.")
             return
         if event == "REROLL":
-            self.order_index[self.batting["code"]] -= 1
+            self._restart_at_bat()
             return
         if event == "WEATHER":
             die = self.dice.d6()
@@ -1919,7 +2016,7 @@ class Game:
                 other = self.pitcher[self.batting["code"]]["player"]
                 other["removed"] = True
                 self.say("Both pitchers must leave after the delay (page 22).")
-            self.order_index[self.batting["code"]] -= 1
+            self._restart_at_bat()
             return
         if event == "RUN6_OUT_OR_1B":
             if (batter["run"] or 0) <= 6:
@@ -1948,7 +2045,8 @@ class Game:
             if batter["run"] is not None and total <= batter["run"]:
                 self._reach(batter, 1, 1, "Safe at first on the drop. Still a strikeout, and the side needs four outs. The extra out is not added; that lasting effect is unmodeled.", hit=False)
                 self.gap("Page 23 gives the batting team an extra out on this drop. This game does not change the number of outs in the inning.")
-                self._charge_so(batter)
+                # _reach already charged the at-bat; add only the strikeout.
+                self._line(batter, so=1)
             else:
                 self._record_out(batter, "SO", "Strikeout, catcher throws him out.")
             return
@@ -1968,7 +2066,7 @@ class Game:
             self._reach(batter, 2, 2, cell["note"], hit=True)
             return
         self.gap("Rare event %s has no applier." % event)
-        self.order_index[self.batting["code"]] -= 1
+        self._restart_at_bat()
 
     def _injury(self, player, default):
         rating = None
@@ -1992,6 +2090,16 @@ class Game:
 
     def _reach(self, batter, batter_bases, runner_bases, text, hit, error=False, hold_lead=False):
         if self.outs >= 3:
+            # A runner made the third out on the play (e.g. trying for an
+            # extra base). The batter still has his at-bat and his hit.
+            if hit:
+                bases = min(batter_bases, 4)
+                self._line(batter, ab=1, h=1, hr=1 if bases == 4 else 0, tb=bases)
+                self.say("%s The inning ended on the bases; the batter is credited with the hit." % text)
+            else:
+                self._line(batter, ab=1)
+                if error:
+                    self._line_field(self.fielding["code"], e=1)
             return
         self.say(text)
         if batter_bases >= 4:
@@ -2390,7 +2498,7 @@ class Game:
         self.dice.take()
         if result == "CAUGHT":
             self._out_runner(base, "picked off")
-            self._line_id(self.batting["code"], runner["id"], cs=1)
+            self._line_id(self.batting["code"], runner["id"], po=1)
         elif result == "BALK":
             self.say("Balk. Runners advance 1 (page 18).")
             self._runners_advance(1)
@@ -2411,10 +2519,16 @@ class Game:
         self.say("Pickoff. Hold %s, percentile %02d -> %s (page 18)." % (hold, pct, result))
         self.dice.take()
         if result == "CAUGHT":
-            base = 0 if self.bases[0] and self.bases[0]["id"] == batter["id"] else self._lead_base()
+            base = next((b for b in (0, 1, 2) if self.bases[b] and self.bases[b]["id"] == batter["id"]), None)
+            if base is None:
+                base = self._lead_base()
             if base is not None:
+                picked = self.bases[base]
                 self._out_runner(base, "picked off")
-                self._line_id(self.batting["code"], batter["id"], cs=1)
+                # A pickoff is not a caught stealing unless he was running.
+                # The auto-steal pickoff fires before the jump check, so it is
+                # scored as a pickoff (po), not cs.
+                self._line_id(self.batting["code"], picked["id"], po=1)
         elif result == "BALK":
             self.say("Balk. Runners advance 1 (page 18).")
             self._runners_advance(1)
@@ -2552,7 +2666,7 @@ class Game:
             row[key] = row.get(key, 0) + amount
 
     def _line_id(self, code, pid, **add):
-        row = self.box.setdefault(code + "|" + pid, {"id": pid, "name": pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "sf": 0, "sh": 0, "tb": 0})
+        row = self.box.setdefault(code + "|" + pid, {"id": pid, "name": pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0})
         for key, amount in add.items():
             row[key] = row.get(key, 0) + amount
 
@@ -2589,7 +2703,7 @@ def _empty_line(batter):
     return {
         "id": batter["id"], "name": batter["name"], "pos": batter["pos"],
         "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0,
-        "hbp": 0, "sb": 0, "cs": 0, "sf": 0, "sh": 0, "tb": 0,
+        "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0,
     }
 
 
