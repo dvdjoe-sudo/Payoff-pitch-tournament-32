@@ -974,6 +974,67 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_angels_roster_amendment(check: Check) -> None:
+    """Owner-approved LAA Carew for Doug Corbett, Ohtani DH unchanged."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    owner = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["LAA"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["LAA"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Angels have 26 unique players with a 9/6/5/6 structure")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Angels lineup and reserve slots are contiguous")
+    carew = [p for p in players if p["id"] == "carewro01"]
+    check.expect(len(carew) == 1 and carew[0]["group"] == "bench"
+                 and carew[0]["slot"] == 6 and carew[0]["pos"] == "1B"
+                 and carew[0]["kind"] == "hitter",
+                 "Rod Carew occupies sixth Angels bench slot as backup 1B")
+    check.expect("corbedo01" not in ids,
+                 "Doug Corbett is no longer on the Angels active roster")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["percitr01", "rodrifr03", "shielsc01",
+                     "harvebr01", "downssc01", "oliveda02"],
+                 "Angels six remaining pitchers and bullpen order are preserved")
+    dh = [p for p in players if p["group"] == "lineup" and p["slot"] == 1]
+    check.expect(len(dh) == 1 and dh[0]["id"] == "ohtansh01" and dh[0]["pos"] == "DH"
+                 and owner["lineup"][0] == "1 Shohei Ohtani DH L 6",
+                 "Shohei Ohtani remains starting DH batting first")
+    check.expect(len(owner["bench"]) == 6 and len(owner["bullpen"]) == 6
+                 and owner["bench"][-1] == "BAT2 Rod Carew 1B (California Angels 1979-1985)"
+                 and not any("Doug Corbett" in line for line in owner["bullpen"]),
+                 "Angels official lineup/bench/bullpen sources synchronized")
+    check.expect("LAA|corbedo01" in cards,
+                 "Doug Corbett's original converted pitching card preserved")
+    carew_card = cards.get("LAA|carewro01")
+    check.expect(not carew_card or bool(carew_card.get("card_bat"))
+                 or bool(carew_card.get("conversion_status")),
+                 "Carew playable hitter conversion genuine or pending, not invented")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["LAA"]
+    line = peaks.get("BAT2 Rod Carew 1B (California Angels 1979-1985)") or {}
+    check.expect(line.get("lahman_id") == "carewro01"
+                 and line.get("status") == "ok"
+                 and line.get("years") == [1979, 1980, 1981, 1982, 1983]
+                 and (line.get("text") or "").startswith("Peak 162 with California Angels"),
+                 "Rod Carew genuinely compiled 1979-83 California-only Peak 162")
+    check.expect("MR Doug Corbett 3" not in peaks,
+                 "Inactive Corbett excluded from Angels current Peak 162")
+    doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Rod Carew (`carewro01`) joins the Angels' bench" in doc,
+                 "The approved Carew transaction appears in published Angels roster")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_angels_roster_amendment(cards, rosters)" in builder,
+                 "Future full set rebuild preserves Angels approved 9/6/5/6")
+    peak_script = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "LAA" and pid == "carewro01"' in peak_script
+                 and 'carew_california_years = {1979, 1980, 1981, 1982, 1983, 1984, 1985}' in peak_script,
+                 "Future Carew Peak 162 compilation excludes all Twins seasons")
+
+
 def check_seattle_roster_amendment(check: Check) -> None:
     """Owner-approved Seattle Beltré / Moore change, Edgar DH unaffected."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1340,6 +1401,7 @@ def main() -> int:
     check_astros_roster_amendment(check)
     check_kansas_city_roster_amendment(check)
     check_seattle_roster_amendment(check)
+    check_angels_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

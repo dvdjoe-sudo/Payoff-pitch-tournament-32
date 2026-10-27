@@ -804,6 +804,14 @@ def main() -> None:
             pid = person["id"]
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
+            if club == "LAA" and pid == "carewro01":
+                # Rod Carew played for Minnesota and California. Only the
+                # 1979-1985 California Angels franchise seasons count here.
+                carew_california_years = {1979, 1980, 1981, 1982, 1983, 1984, 1985}
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in carew_california_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in carew_california_years}
             if club == "SEA" and pid == "beltrad01":
                 # Owner-approved Seattle-only Beltré, excluding every
                 # Dodgers / Boston / Texas year from his prime and card.
@@ -859,7 +867,9 @@ def main() -> None:
                     unavailable.append((club, line, club_out[line]["reason"]))
                     continue
                 _, chosen, stats, size, total = found
-                peak_team_name = ("St. Louis Browns"
+                peak_team_name = ("California Angels"
+                                  if club == "LAA" and pid == "carewro01"
+                                  else "St. Louis Browns"
                                   if club == "BAL" and pid == "sislege01"
                                   else team_name)
                 text = side_text(peak_team_name, chosen, stats, size, total, kind)
@@ -921,6 +931,7 @@ def main() -> None:
         ("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)", "aloumo01"),
         ("KC", "BAT2 John Mayberry 1B (KC 1972-1977)", "maybejo01"),
         ("SEA", "IF2 Adrián Beltré 3B (SEA 2005-2009)", "beltrad01"),
+        ("LAA", "BAT2 Rod Carew 1B (California Angels 1979-1985)", "carewro01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -941,6 +952,12 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    california_carew = row("LAA", "BAT2 Rod Carew 1B (California Angels 1979-1985)")
+    if (california_carew.get("status") != "ok"
+            or california_carew.get("lahman_id") != "carewro01"
+            or not all(1979 <= year <= 1985 for year in california_carew.get("years", []))
+            or "Peak 162 with California Angels" not in california_carew.get("text", "")):
+        raise SystemExit("Carew must use ONLY California Angels seasons 1979-1985")
     seattle_beltre = row("SEA", "IF2 Adrián Beltré 3B (SEA 2005-2009)")
     if (seattle_beltre.get("status") != "ok" or seattle_beltre.get("lahman_id") != "beltrad01"
             or seattle_beltre.get("years") != [2005, 2006, 2007, 2008, 2009]):

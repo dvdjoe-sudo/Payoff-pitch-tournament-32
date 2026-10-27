@@ -1195,6 +1195,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - 4TH OF Jim Edmonds 7
 - DEF IF Andrelton Simmons 5
 - BAT/OF Tim Salmon 15
+- BAT2 Rod Carew 1B (California Angels 1979-1985)
 
 ### Rotation
 
@@ -1210,9 +1211,16 @@ Official roster provided by the tournament owner. The lines are copied from that
 - RH SET Francisco Rodríguez 7
 - FIRE Scot Shields 10
 - MR Bryan Harvey 6
-- MR Doug Corbett 3
 - LH Scott Downs 4
 - LR Darren Oliver 3
+
+### Approved active roster amendment (2026-10-27)
+
+Rod Carew (`carewro01`) joins the Angels' bench in **slot 6**, as a left-handed contact / pinch hitter and **backup first baseman**. Only his **1979–1985 California Angels seasons** count for the franchise-specific Peak 162 and eventual frozen Hitter v0.5 card. His Minnesota Twins seasons and accomplishments do **not** count.
+
+Doug Corbett (`corbedo01`) leaves the active bullpen, but his original converted pitcher card remains preserved in the historical catalog. The other six relievers retain their identities and responsibilities: Troy Percival (RP1), Francisco Rodríguez (RP2), Scot Shields (RP3), Bryan Harvey (RP4), Scott Downs (RP5), Darren Oliver (RP6). All nine starters and five rotation pitchers remain unchanged; **Shohei Ohtani is still the starting DH batting first**. The Angels' roster totals **9 lineup / 6 bench / 5 starting pitchers / 6 relievers**, exactly 26 different players.
+
+Existing original cards and played games, results, box scores, scoresheets, FAC and dice-roll logs are unchanged. Carew's authentic California Angels-only playable Hitter v0.5 conversion is **pending**; do not invent ratings or dice-chart results.
 
 ## 21. New York Mets (NYM)
 
