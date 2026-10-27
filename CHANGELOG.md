@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Window-card dice refit
+
+The 215 cards whose peak window changed have new dice and pitching charts. Doubles and triples follow the 1986 card shapes, and a DEFENSE roll is a position check against a neutral fielder and the 1986 park charts rather than an automatic out. A reached-on-error is an at-bat and not a hit. Fielding, stamina, and peak lines stay as they were. A game import still refreshes only the tournament block on each card. The service worker cache is payoff-pitch-v47. No game result was changed.
+
 ## 2026-10-27 — Card repairs kept after Game 2
 
 R1-05 Game 2 rebuilt the converted cards from the set files and put the old windows and dice back. The repairs are on the cards again, and the Game 2 tournament lines stay. DH slots are labeled again. The service worker cache is payoff-pitch-v41. No game result was changed.
