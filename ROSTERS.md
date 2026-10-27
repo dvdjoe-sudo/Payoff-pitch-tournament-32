@@ -1550,7 +1550,7 @@ Bracket: winners. Series losses: 0. Full 26 Index: 543.2.
 
 The Full 26 Index stored for this club is a calibrated estimate. See TOURNAMENT_SEEDS.md.
 
-Manager: Felipe Alou.
+Manager: Dick Williams.
 
 Official roster provided by the tournament owner. The lines are copied from that card. No tournament stats were added. Peak 162 franchise lines are on the club page.
 
