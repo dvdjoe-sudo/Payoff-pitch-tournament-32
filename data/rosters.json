@@ -117,6 +117,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "peralda01",
+    "kind": "hitter",
+    "name": "David Peralta",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "johnsra05",
     "kind": "pitcher",
@@ -203,14 +211,6 @@
     "name": "Andrew Chafin",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "cruzju02",
-    "kind": "pitcher",
-    "name": "Juan Cruz",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 29
