@@ -4,7 +4,7 @@ Dated rulings and repo history. The rules, seeds, and bracket in force are [TOUR
 
 ## 2026-10-27 — Old-method dice refit (sandbox)
 
-The 252 converted-roster cards whose windows did not change now use the same solver as the 215. That is 120 hitters and 132 pitchers, 251 cards, because Babe Ruth is both. Windows, peak lines, fielding, stamina, and the tournament block stay. Hitter dice include doubles and triples in the objective, and a DEFENSE roll uses the rulebook position check. Pitcher charts use the page-39 shift on TOUGH only. The four missing hitters and Elmer Valo's placeholder were not filled. No game result was changed. The per-card comparison is `historical-cards/accuracy/rebuild_252.json`.
+The 252 converted-roster cards whose windows did not change now use the same solver as the 215. That is 120 hitters and 132 pitchers, 251 cards, because Babe Ruth is both. Windows, peak lines, fielding, stamina, and the tournament block stay. Hitter dice include doubles and triples in the objective, and a DEFENSE roll uses the rulebook position check. Pitcher charts use the page-39 shift on TOUGH only. The four missing hitters and Elmer Valo's placeholder were not filled. No game result was changed. The per-card comparison is `historical-cards/accuracy/rebuild_252.json`. The service worker cache is payoff-pitch-v48.
 
 ## 2026-10-27 — Window-card dice refit
 
