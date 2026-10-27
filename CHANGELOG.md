@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — New York Mets Howard Johnson for Sid Fernandez (owner-approved)
+
+Howard Johnson is added as sixth Mets bench hitter and switch-hitting 3B/IF reserve using ONLY his 1985–1993 New York Mets performance, excluding every non-Mets season. Sid Fernandez is removed from the active bullpen with his historical genuine pitcher card preserved. Six remaining relievers stay unchanged: Billy Wagner, Edwin Díaz, Armando Benítez, Tug McGraw, John Franco and Jesse Orosco. The entire nine-hitter lineup (including Pete Alonso DH #6 and John Olerud bench #5) and five starting pitchers are unchanged. 9/6/5/6 = 26 unique active people. Every historical converted card, completed game, original FAC/dice log, score and box score remains untouched. Howard Johnson's genuine Hitter v0.5 conversion is pending; never invent playable card values.
+
 ## 2026-10-27 — Angels Rod Carew / Doug Corbett (owner-approved)
 
 Rod Carew joins the Angels' active bench #6 as left-handed first-base reserve/pinch hitter, counting **only California Angels 1979–1985**, never Minnesota. Doug Corbett is inactive; his authentic historical converted card remains intact. Remaining six relievers: Troy Percival, Francisco Rodríguez, Scot Shields, Bryan Harvey, Scott Downs and Darren Oliver (RP1–RP6). All starting hitters, five SPs and **Shohei Ohtani at DH batting first** are unchanged. Canonical and announced sources now carry 9 lineup/6 bench/5 SP/6 RP, exactly 26 distinct players. Every original card, tournament result, played game, box score, and FAC/dice log remains unchanged. Carew's authentic Hitter v0.5 playable card remains pending conversion; no values fabricated.

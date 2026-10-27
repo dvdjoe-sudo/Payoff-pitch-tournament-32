@@ -4013,6 +4013,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "johnsho01",
+    "kind": "hitter",
+    "name": "Howard Johnson",
+    "pos": "3B",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "seaveto01",
     "kind": "pitcher",
@@ -4099,14 +4107,6 @@
     "name": "Jesse Orosco",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "fernasi01",
-    "kind": "pitcher",
-    "name": "Sid Fernandez",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 21

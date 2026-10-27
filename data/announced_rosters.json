@@ -498,7 +498,8 @@
    "UTIL Jeff McNeil (Multi-Position)",
    "IF José Reyes (SS/Speed/PR)",
    "OF4 Mookie Wilson (OF/Pinch-Runner)",
-   "BAT John Olerud (LH Power/PH)"
+   "BAT John Olerud (LH Power/PH)",
+   "BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)"
   ],
   "rotation": [
    "SP1 Tom Seaver R",
@@ -513,8 +514,7 @@
    "SU2 Armando Benítez R",
    "MR1 Tug McGraw L",
    "MR2 John Franco L",
-   "LHS Jesse Orosco L",
-   "LR/SP6 Sid Fernandez L"
+   "LHS Jesse Orosco L"
   ],
   "headers": {
    "lineup": "Lineup (bats)",
