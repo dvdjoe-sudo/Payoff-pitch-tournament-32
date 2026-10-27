@@ -804,6 +804,15 @@ def main() -> None:
             pid = person["id"]
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
+            if club == "HOU" and pid == "aloumo01":
+                # Owner approved ONLY these three Astros seasons. No Montreal,
+                # Florida, Chicago, San Francisco or Mets years count, and
+                # Alou did not play in 1999.
+                allowed_houston_years = {1998, 2000, 2001}
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in allowed_houston_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in allowed_houston_years}
             if club == "BAL" and pid == "sislege01":
                 # Baltimore franchise history includes the St. Louis Browns.
                 # Owner authorized *only* Sisler's Browns seasons, never any
@@ -890,6 +899,7 @@ def main() -> None:
         ("MON", "1 Tim Raines LF S 13", "raineti01"),
         ("CWS", "5 Joe Jackson DH", "jacksjo01"),
         ("BAL", "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)", "sislege01"),
+        ("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)", "aloumo01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -907,6 +917,9 @@ def main() -> None:
         raise SystemExit("Lefty Grove peak is outside the Philadelphia Athletics")
     if any(year < 1969 or year > 2004 for year in row("MON", "1 Tim Raines LF S 13")["years"]):
         raise SystemExit("Tim Raines peak is outside the Expos")
+    houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
+    if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
+        raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
     sisler = row("BAL", "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)")
     if (not all(1915 <= year <= 1927 for year in sisler["years"])
             or "Peak 162 with St. Louis Browns" not in sisler["text"]):

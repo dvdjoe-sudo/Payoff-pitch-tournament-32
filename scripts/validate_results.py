@@ -928,6 +928,61 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_astros_roster_amendment(check: Check) -> None:
+    """Owner-approved Moisés Alou (Houston 1998, 2000, 2001) / Dotel."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["HOU"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["HOU"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Houston active 26 follows 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Houston active roster slots are consecutive")
+    alou = [p for p in players if p["id"] == "aloumo01"]
+    check.expect(len(alou) == 1 and alou[0]["group"] == "bench"
+                 and alou[0]["kind"] == "hitter" and alou[0]["slot"] == 6
+                 and alou[0]["pos"] == "LF",
+                 "Moisés Alou is the active sixth Houston bench hitter")
+    check.expect("doteloc01" not in ids, "Octavio Dotel is not active for Houston")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["wagnebi02", "lidgebr01", "haderjo01",
+                     "pressry01", "sambijo01", "smithda02"],
+                 "Houston retains six relievers in the approved order")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and any("Moisés Alou" in line and "1998, 2000, 2001" in line
+                         for line in announced["bench"])
+                 and not any("Octavio Dotel" in line for line in announced["bullpen"]),
+                 "Official owner Houston roster synchronized with approved change")
+    check.expect("HOU|doteloc01" in cards,
+                 "Octavio Dotel's historical authentic pitching card remains")
+    check.expect("MON|aloumo01" in cards,
+                 "Moisés Alou's Montreal historical card remains separate")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["HOU"]
+    alou_peak = peaks.get("BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)") or {}
+    check.expect(alou_peak.get("lahman_id") == "aloumo01"
+                 and alou_peak.get("years") == [1998, 2000, 2001]
+                 and alou_peak.get("status") == "ok"
+                 and (alou_peak.get("text") or "").startswith("Peak 162 with Houston Astros"),
+                 "Moisés Alou's authentic peak is Houston 1998, 2000 and 2001 only")
+    check.expect("FIRE Octavio Dotel 5" not in peaks,
+                 "Inactive Dotel excluded from Houston active Peak 162")
+    script = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "HOU" and pid == "aloumo01"' in script
+                 and 'allowed_houston_years = {1998, 2000, 2001}' in script,
+                 "Rebuilt Houston Peak 162 remains confined to approved seasons")
+    published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Moisés Alou (`aloumo01`) becomes Houston" in published,
+                 "Houston dated approval included in published roster")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_astros_roster_amendment(cards, rosters)" in builder,
+                 "Future full set rebuild preserves approved Houston 26")
+
+
 def check_orioles_roster_amendment(check: Check) -> None:
     """Owner-approved Browns George Sisler for Sammy Stewart on active 26."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1103,6 +1158,7 @@ def main() -> int:
     check_twins_roster_amendment(check)
     check_white_sox_roster_amendment(check)
     check_orioles_roster_amendment(check)
+    check_astros_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

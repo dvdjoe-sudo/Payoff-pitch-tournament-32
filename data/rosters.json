@@ -2285,6 +2285,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "aloumo01",
+    "kind": "hitter",
+    "name": "Moisés Alou",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "verlaju01",
     "kind": "pitcher",
@@ -2358,19 +2366,11 @@
    },
    {
     "group": "bullpen",
-    "id": "doteloc01",
-    "kind": "pitcher",
-    "name": "Octavio Dotel",
-    "pos": "RP",
-    "slot": 5
-   },
-   {
-    "group": "bullpen",
     "id": "sambijo01",
     "kind": "pitcher",
     "name": "Joe Sambito",
     "pos": "RP",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "bullpen",
@@ -2378,7 +2378,7 @@
     "kind": "pitcher",
     "name": "Dave Smith",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 16

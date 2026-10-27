@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Houston Astros Moisés Alou for Octavio Dotel (owner-approved)
+
+Houston adds Moisés Alou as its sixth bench bat (RH LF/RF), strictly using his **1998, 2000 and 2001 Houston Astros seasons**; Dotel leaves the active bullpen. Joe Sambito and Dave Smith move into relief positions 5 and 6, retaining their existing pitching functions. Houston now has 9 lineup hitters, 6 bench players, 5 starters, 6 relievers: 26 distinct active players. All original player card bodies, including Dotel's and Alou's unrelated Montreal card, and historical scores, games, box scores and original dice/FAC logs remain unchanged. No Hitter v0.5 ratings are invented; Astros Alou's playable conversion is pending.
+
 ## 2026-10-27 — Baltimore Orioles George Sisler for Sammy Stewart (owner-approved)
 
 George Sisler is Baltimore's active sixth bench bat (LH 1B), based exclusively on his St. Louis Browns franchise seasons, 1915–1927. Sammy Stewart leaves the active bullpen; Olson, Britton, Bautista, Miller, Hall and Tippy Martinez remain in their existing slots. The active and official rosters and generated outputs are now 9/6/5/6, 26 unique active people. All original converted cards (including Stewart), earlier games, results, box scores and original dice/FAC records remain intact. Sisler's authentic Hitter v0.5 playable conversion is still pending; no invented ratings.
