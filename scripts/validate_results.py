@@ -974,6 +974,76 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_kansas_city_roster_amendment(check: Check) -> None:
+    """Owner-approved Royals Tartabull DH, McRae bench, Mayberry for Leibrandt."""
+    active = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))["KC"]
+    owner = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["KC"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = active["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Kansas City 26 unique active players, 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Kansas City roles have contiguous lineup and reserve slots")
+    by_id = {p["id"]: p for p in players}
+    for pid, group, slot, pos in (
+        ("tartada01", "lineup", 2, "DH"),
+        ("mcraeha01", "bench", 5, "DH"),
+        ("maybejo01", "bench", 6, "1B"),
+    ):
+        p = by_id.get(pid, {})
+        check.expect((p.get("group"), p.get("slot"), p.get("pos")) == (group, slot, pos),
+                     "Royals approved DH / bench position: " + pid)
+    check.expect("leibrch01" not in ids, "Charlie Leibrandt no longer active")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["quiseda01", "montgje01", "soriajo01", "hollagr01",
+                     "herreke01", "mingost01"],
+                 "Kansas City retains the six approved relief pitchers")
+    check.expect(owner["lineup"][1] == "2 Danny Tartabull DH 5"
+                 and owner["bench"][4] == "BAT Hal McRae DH 15"
+                 and owner["bench"][5] == "BAT2 John Mayberry 1B (KC 1972-1977)"
+                 and len(owner["bullpen"]) == 6
+                 and not any("Leibrandt" in x for x in owner["bullpen"]),
+                 "Kansas City owner lineup, bench and bullpen synchronized")
+    check.expect("KC|leibrch01" in cards,
+                 "Charlie Leibrandt original converted historical card preserved")
+    check.expect("KC|tartada01" in cards and "KC|mcraeha01" in cards,
+                 "Original Tartabull and McRae cards kept intact")
+    mayberry_card = cards.get("KC|maybejo01")
+    check.expect(not mayberry_card or bool(mayberry_card.get("card_bat"))
+                 or bool(mayberry_card.get("conversion_status")),
+                 "Mayberry playable Hitter v0.5 card is genuine or explicitly pending")
+    # The repo's stored Peak162 dataset follows the generated announced
+    # roster; the CI build checks the derived stats for consistency.
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["KC"]
+    mayberry = peaks.get("BAT2 John Mayberry 1B (KC 1972-1977)") or {}
+    if mayberry:
+        check.expect(mayberry.get("lahman_id") == "maybejo01"
+                     and mayberry.get("status") == "ok"
+                     and all(1972 <= y <= 1977 for y in mayberry.get("years", [])),
+                     "Mayberry Peak 162 uses only the Kansas City 1972-77 seasons")
+        check.expect("LR/SP Charlie Leibrandt 6" not in peaks,
+                     "Leibrandt removed from active Royals Peak 162")
+        check.expect("2 Danny Tartabull DH 5" in peaks
+                     and "BAT Hal McRae DH 15" in peaks,
+                     "Kansas City Peak 162 synchronized to approved DH switch")
+    doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Danny Tartabull (`tartada01`) becomes the **starting designated hitter" in doc
+                 and "John Mayberry (`maybejo01`) joins Kansas City's bench" in doc,
+                 "Kansas City published roster describes both approved amendments")
+    script = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "KC" and pid == "maybejo01"' in script
+                 and "kc_mayberry_years = {1972, 1973, 1974, 1975, 1976, 1977}" in script,
+                 "Kansas City Peak 162 generator keeps only Mayberry's KC years")
+    build = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_kansas_city_roster_amendment(cards, rosters)" in build,
+                 "Royals roster amendment persists through full card rebuild")
+
+
 def check_astros_roster_amendment(check: Check) -> None:
     """Owner-approved Moisés Alou (Houston 1998, 2000, 2001) / Dotel."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1205,6 +1275,7 @@ def main() -> int:
     check_white_sox_roster_amendment(check)
     check_orioles_roster_amendment(check)
     check_astros_roster_amendment(check)
+    check_kansas_city_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

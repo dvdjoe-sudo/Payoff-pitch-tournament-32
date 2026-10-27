@@ -1071,7 +1071,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 ### Lineup
 
 - 1 Willie Wilson CF 15
-- 2 Hal McRae DH 15
+- 2 Danny Tartabull DH 5
 - 3 George Brett 3B 21
 - 4 Bobby Witt Jr. SS 5
 - 5 Mike Sweeney 1B 13
@@ -1086,7 +1086,8 @@ Official roster provided by the tournament owner. The lines are copied from that
 - UTIL Whit Merrifield 2B 7
 - OF4 Carlos Beltrán OF 7
 - IF2 Freddie Patek INF 9
-- BAT Danny Tartabull OF 5
+- BAT Hal McRae DH 15
+- BAT2 John Mayberry 1B (KC 1972-1977)
 
 ### Rotation
 
@@ -1104,7 +1105,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MR1 Greg Holland 8
 - MR2 Kelvin Herrera 8
 - LHS Steve Mingori 7
-- LR/SP Charlie Leibrandt 6
+
+### Approved active roster amendments (2026-10-27)
+
+Danny Tartabull (`tartada01`) becomes the **starting designated hitter batting second**, replacing Hal McRae (`mcraeha01`) in lineup slot 2. McRae takes Tartabull's former bench slot 5 as the veteran right-handed DH/pinch-hit option. The remaining eight lineup spots and the entire five-man starting rotation are unchanged.
+
+John Mayberry (`maybejo01`) joins Kansas City's bench as sixth reserve (left-handed 1B / pinch hitter), and Charlie Leibrandt (`leibrch01`) moves off the active bullpen. Mayberry's conversion and franchise peak use **only Kansas City Royals seasons 1972–1977**, excluding the rest of his career. The Royals now have **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 unique players; Steve Mingori remains the left-handed relief specialist at RP6.
+
+These approvals are prospective only. All genuine original card bodies, including Leibrandt's existing converted pitching card and the original McRae/Tartabull cards, remain historical and unaltered. Every completed tournament game, result, box score and FAC/dice log remains unchanged. Mayberry's authentic frozen Hitter v0.5 playable conversion is pending; no guessed percentile bands, ratings or dice charts have been created.
 
 ## 19. Seattle Mariners (SEA)
 

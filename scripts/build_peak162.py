@@ -804,6 +804,14 @@ def main() -> None:
             pid = person["id"]
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
+            if club == "KC" and pid == "maybejo01":
+                # Owner approved only Mayberry's KC seasons (1972-1977),
+                # never Houston, Toronto or New York.
+                kc_mayberry_years = {1972, 1973, 1974, 1975, 1976, 1977}
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in kc_mayberry_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in kc_mayberry_years}
             if club == "HOU" and pid == "aloumo01":
                 # Owner approved ONLY these three Astros seasons. No Montreal,
                 # Florida, Chicago, San Francisco or Mets years count, and
@@ -903,6 +911,7 @@ def main() -> None:
         ("CWS", "5 Joe Jackson DH", "jacksjo01"),
         ("BAL", "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)", "sislege01"),
         ("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)", "aloumo01"),
+        ("KC", "BAT2 John Mayberry 1B (KC 1972-1977)", "maybejo01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -923,6 +932,10 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    kc_mayberry = row("KC", "BAT2 John Mayberry 1B (KC 1972-1977)")
+    if (kc_mayberry.get("status") != "ok" or kc_mayberry.get("lahman_id") != "maybejo01"
+            or not all(1972 <= year <= 1977 for year in kc_mayberry.get("years", []))):
+        raise SystemExit("John Mayberry's Kansas City Peak 162 must use 1972-1977 only")
     shantz = row("PHA", "LHS/LONG Bobby Shantz 1949-1954 (Philadelphia only)")
     if (shantz.get("status") != "ok" or shantz.get("lahman_id") != "shantbo01"
             or not all(1949 <= year <= 1954 for year in shantz.get("years", []))

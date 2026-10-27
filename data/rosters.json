@@ -2398,9 +2398,9 @@
    },
    {
     "group": "lineup",
-    "id": "mcraeha01",
+    "id": "tartada01",
     "kind": "hitter",
-    "name": "Hal McRae",
+    "name": "Danny Tartabull",
     "pos": "DH",
     "slot": 2
    },
@@ -2494,11 +2494,19 @@
    },
    {
     "group": "bench",
-    "id": "tartada01",
+    "id": "mcraeha01",
     "kind": "hitter",
-    "name": "Danny Tartabull",
-    "pos": "OF",
+    "name": "Hal McRae",
+    "pos": "DH",
     "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "maybejo01",
+    "kind": "hitter",
+    "name": "John Mayberry",
+    "pos": "1B",
+    "slot": 6
    },
    {
     "group": "rotation",
@@ -2587,14 +2595,6 @@
     "name": "Steve Mingori",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "leibrch01",
-    "kind": "pitcher",
-    "name": "Charlie Leibrandt",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 18
