@@ -588,6 +588,7 @@ def build():
     apply_mariners_roster_amendment(cards, rosters)
     apply_angels_roster_amendment(cards, rosters)
     apply_mets_roster_amendment(cards, rosters)
+    apply_oakland_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -605,6 +606,7 @@ AUTHORIZED_HITTERS = (
     "SEA|beltrad01",
     "LAA|carewro01",
     "NYM|johnsho01",
+    "OAK|chaveer01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -673,6 +675,53 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+
+
+def apply_oakland_roster_amendment(cards, rosters):
+    """Owner-approved Oakland Chavez for Gene Nelson; maintain DH untouched.
+
+    Only Eric Chavez's Oakland Athletics (1998–2010) statistics qualify.
+    Never remove archived Nelson conversion or fabricate Chavez's Hitter v0.5.
+    PED decisions are separate and no starter may be changed here.
+    """
+    roster = rosters.get("OAK")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "nelsoge01"]
+    chavez_id = "chaveer01"
+    matches = [p for p in players if p["id"] == chavez_id]
+    if not matches:
+        players.append({"group": "bench", "id": chavez_id,
+                        "kind": "hitter", "name": "Eric Chavez",
+                        "pos": "3B", "slot": 6})
+    elif len(matches) != 1:
+        raise SystemExit("Oakland Eric Chavez appears more than once")
+    else:
+        matches[0].update(group="bench", kind="hitter", pos="3B", slot=6)
+    card = cards.get("OAK|" + chavez_id)
+    if card:
+        card["spots"] = [{"group": "bench", "slot": 6,
+                          "pos": "3B", "kind": "hitter"}]
+    honey = [p for p in players if p["id"] == "honeyri01" and p["group"] == "bullpen"]
+    if len(honey) != 1:
+        raise SystemExit("Rick Honeycutt missing from Oakland bullpen")
+    honey[0]["slot"] = 6
+    historical_honey = cards.get("OAK|honeyri01")
+    if historical_honey:
+        historical_honey["spots"] = [{"group": "bullpen", "slot": 6,
+                                      "pos": "RP", "kind": "pitcher"}]
+    # OAK|nelsoge01 stays in historical converted card catalog unchanged.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {group: sum(p["group"] == group for p in players) for group in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Oakland requires exactly 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Oakland has duplicate or missing active players")
+    if not any(p["group"] == "lineup" and p["slot"] == 5
+               and p["id"] == "cansejo01" and p["pos"] == "DH" for p in players):
+        raise SystemExit("Oakland DH changed without PED review approval")
 
 
 def apply_mets_roster_amendment(cards, rosters):

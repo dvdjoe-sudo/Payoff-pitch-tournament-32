@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Oakland Athletics Eric Chavez for Gene Nelson (owner-approved)
+
+Eric Chavez joins Oakland's active bench as sixth hitter and left-handed defensive reserve 3B; only 1998–2010 Oakland Athletics franchise seasons may count. Gene Nelson leaves the active bullpen but his original authentic converted pitcher card remains historically archived. Honeycutt moves to relief slot 6; other relievers, starting pitchers and all nine starting hitters, including José Canseco batting fifth as DH, remain unchanged. Active 26 is 9 lineup/6 bench/5 SP/6 RP, 26 unique people. No PED eligibility changes authorized in this transaction; separate review remains pending. Original player cards, every previously played game, results, box scores, dice/FAC logs and archive are untouched. Chavez's genuine frozen Hitter v0.5 playable card remains pending without invented ratings.
+
 ## 2026-10-27 — New York Mets Howard Johnson for Sid Fernandez (owner-approved)
 
 Howard Johnson is added as sixth Mets bench hitter and switch-hitting 3B/IF reserve using ONLY his 1985–1993 New York Mets performance, excluding every non-Mets season. Sid Fernandez is removed from the active bullpen with his historical genuine pitcher card preserved. Six remaining relievers stay unchanged: Billy Wagner, Edwin Díaz, Armando Benítez, Tug McGraw, John Franco and Jesse Orosco. The entire nine-hitter lineup (including Pete Alonso DH #6 and John Olerud bench #5) and five starting pitchers are unchanged. 9/6/5/6 = 26 unique active people. Every historical converted card, completed game, original FAC/dice log, score and box score remains untouched. Howard Johnson's genuine Hitter v0.5 conversion is pending; never invent playable card values.

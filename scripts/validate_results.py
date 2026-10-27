@@ -974,6 +974,67 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_oakland_roster_amendment(check: Check) -> None:
+    """Approved Oakland Chavez/Nelson transaction; PED review remains separate."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    owner = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["OAK"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["OAK"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Oakland 26 distinct active players across 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Oakland active slots sequential")
+    chavez = [p for p in players if p["id"] == "chaveer01"]
+    check.expect(len(chavez) == 1 and chavez[0]["group"] == "bench"
+                 and chavez[0]["slot"] == 6 and chavez[0]["pos"] == "3B"
+                 and chavez[0]["kind"] == "hitter",
+                 "Eric Chavez joins Oakland bench #6 as reserve third baseman")
+    check.expect("nelsoge01" not in ids,
+                 "Gene Nelson removed from active Oakland bullpen")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["eckerde01", "fingero01", "bailean01",
+                     "doolise01", "hendrli01", "honeyri01"],
+                 "Oakland six relievers preserve sequence and Honeycutt RP6")
+    dh = [p for p in players if p["group"] == "lineup" and p["slot"] == 5]
+    check.expect(len(dh) == 1 and dh[0]["id"] == "cansejo01" and dh[0]["pos"] == "DH"
+                 and owner["lineup"][4] == "5 José Canseco DH R",
+                 "Oakland owner-approved DH remains Canseco in slot five")
+    check.expect(owner["bench"][-1] == "IF2 Eric Chavez 3B (Oakland 1998-2010)"
+                 and len(owner["bench"]) == 6 and len(owner["bullpen"]) == 6
+                 and not any("Gene Nelson" in row for row in owner["bullpen"]),
+                 "Oakland official bench and bullpen reflect approved change")
+    check.expect("OAK|nelsoge01" in cards,
+                 "Historical Gene Nelson authentic converted card preserved")
+    chavez_card = cards.get("OAK|chaveer01")
+    check.expect(not chavez_card or bool(chavez_card.get("card_bat"))
+                 or bool(chavez_card.get("conversion_status")),
+                 "Chavez playable card either genuine or pending, never fabricated")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["OAK"]
+    peak = peaks.get("IF2 Eric Chavez 3B (Oakland 1998-2010)") or {}
+    if peak:
+        check.expect(peak.get("status") == "ok"
+                     and peak.get("lahman_id") == "chaveer01"
+                     and all(1998 <= year <= 2010 for year in peak.get("years", [])),
+                     "Chavez Oakland-only Peak 162 correctly sourced")
+        check.expect("MID Gene Nelson" not in peaks,
+                     "Nelson no longer appears in active Oakland Peak 162")
+    docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Eric Chavez (`chaveer01`) joins the **Oakland Athletics**" in docs,
+                 "Oakland approved roster amendment published")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_oakland_roster_amendment(cards, rosters)" in builder,
+                 "Future full rebuild preserves approved Oakland roster")
+    peakgen = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "OAK" and pid == "chaveer01"' in peakgen
+                 and "chavez_oakland_years = set(range(1998, 2011))" in peakgen,
+                 "Chavez franchise-only eligibility enforced in stat generator")
+
+
 def check_mets_roster_amendment(check: Check) -> None:
     """Owner-approved Mets Johnson/Fernandez with Alonso DH unchanged."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1468,6 +1529,7 @@ def main() -> int:
     check_seattle_roster_amendment(check)
     check_angels_roster_amendment(check)
     check_mets_roster_amendment(check)
+    check_oakland_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

@@ -4445,6 +4445,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "chaveer01",
+    "kind": "hitter",
+    "name": "Eric Chavez",
+    "pos": "3B",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "hunteca01",
     "kind": "pitcher",
@@ -4526,19 +4534,11 @@
    },
    {
     "group": "bullpen",
-    "id": "nelsoge01",
-    "kind": "pitcher",
-    "name": "Gene Nelson",
-    "pos": "RP",
-    "slot": 6
-   },
-   {
-    "group": "bullpen",
     "id": "honeyri01",
     "kind": "pitcher",
     "name": "Rick Honeycutt",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 22
