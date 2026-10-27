@@ -1644,7 +1644,7 @@ Carlos González (`gonzaca01`) replaces Ian Desmond (`desmoia01`) as **Colorado 
 
 Colorado keeps the entire nine-man starting batting order, including Andrés Galarraga **starting at DH batting ninth**, all five rotation pitchers, all six bullpen pitchers and the other five bench hitters. The active roster stays **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct players. All prior game results, scores, standings, original box scores, FAC/dice roll logs and historical converted cards remain unchanged.
 
-González's verified Colorado-only Peak 162 display is awaiting a Lahman generator rebuild and his genuine frozen **Hitter v0.5** playable conversion remains pending; **no fabricated dice ratings or statistics** are published.
+González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 162 G, 185 H, 32 HR, 105 RBI, 28 SB, .307/.368/.552/.920. His genuine frozen **Hitter v0.5** playable card conversion remains pending; **no fabricated dice ratings** are published.
 
 ### Players in the results file
 

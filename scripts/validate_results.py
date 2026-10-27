@@ -1061,10 +1061,10 @@ def check_colorado_roster_amendment(check: Check) -> None:
     peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["COL"]
     cargo_peak = peak.get("BAT Carlos González OF L (Colorado 2009-2018)") or {}
     check.expect(cargo_peak.get("lahman_id") == "gonzaca01"
-                 and (cargo_peak.get("status") != "ok"
-                      or (cargo_peak.get("years")
-                          and all(2009 <= y <= 2018 for y in cargo_peak["years"]))),
-                 "CarGo Colorado-only Peak 162 verified or explicitly pending")
+                 and cargo_peak.get("status") == "ok"
+                 and cargo_peak.get("years") == [2009, 2010, 2011, 2012, 2013]
+                 and cargo_peak.get("text", "").startswith("Peak 162 with Colorado Rockies"),
+                 "CarGo verified Rockies-only five-year Peak 162 preserved")
     check.expect("BAT Ian Desmond OF R 5" not in peak,
                  "Inactive Desmond Peak 162 does not display in active Rockies")
     docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")

@@ -2034,9 +2034,15 @@
    },
    "BAT Carlos González OF L (Colorado 2009-2018)": {
     "lahman_id": "gonzaca01",
-    "status": "unavailable",
-    "text": "Peak stats unavailable",
-    "reason": "Awaiting verified Colorado Rockies-only Lahman Peak 162 rebuild for 2009-2018; no invented statistics"
+    "status": "ok",
+    "text": "Peak 162 with Colorado Rockies (2009–2013): 162 G, 671 PA, 603 AB, 111 R, 185 H, 34 2B, 8 3B, 32 HR, 105 RBI, 28 SB, 57 BB, 145 SO, .307/.368/.552/.920",
+    "years": [
+     2009,
+     2010,
+     2011,
+     2012,
+     2013
+    ]
    },
    "C2 Yorvit Torrealba C R 10": {
     "lahman_id": "torreyo01",
