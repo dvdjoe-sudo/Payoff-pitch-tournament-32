@@ -7009,6 +7009,18 @@
      1979
     ]
    },
+   "BAT2 Paul Waner RF/LF (LH Contact)": {
+    "lahman_id": "wanerpa01",
+    "status": "ok",
+    "text": "Peak 162 with Pittsburgh Pirates (1926–1930): 162 G, 736 PA, 639 AB, 131 R, 229 H, 44 2B, 20 3B, 10 HR, 103 RBI, 12 SB, 76 BB, 20 SO, .359/.430/.537/.967",
+    "years": [
+     1926,
+     1927,
+     1928,
+     1929,
+     1930
+    ]
+   },
    "C2 Jason Kendall": {
     "lahman_id": "kendaja01",
     "status": "ok",
@@ -7077,18 +7089,6 @@
      2013,
      2014,
      2015
-    ]
-   },
-   "MR2 Al McBean R": {
-    "lahman_id": "mcbeaal01",
-    "status": "ok",
-    "text": "Peak 162 with Pittsburgh Pirates (1962–1966): 65 G, 12-6, 14 SV, 153.2 IP, 151 H, 49 ER, 48 BB, 87 SO, 2.87 ERA, 1.30 WHIP, 5.1 K/9",
-    "years": [
-     1962,
-     1963,
-     1964,
-     1965,
-     1966
     ]
    },
    "OF4 Max Carey": {

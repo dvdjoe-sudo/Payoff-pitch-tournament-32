@@ -866,6 +866,13 @@ def check_pirates_roster_amendment(check: Check) -> None:
                  "Published Pittsburgh owner roster matches approved 6/6")
     check.expect("PIT|mcbeaal01" in cards,
                  "Al McBean's converted historical pitcher card is retained")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["PIT"]
+    waner_peak = peaks.get("BAT2 Paul Waner RF/LF (LH Contact)") or {}
+    check.expect(waner_peak.get("lahman_id") == "wanerpa01"
+                 and waner_peak.get("years") == [1926, 1927, 1928, 1929, 1930],
+                 "Paul Waner's 1926-1930 Pirates-only Peak 162 display is active")
+    check.expect("MR2 Al McBean R" not in peaks,
+                 "Inactive Al McBean is absent from active Pirates Peak 162 display")
     doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Paul Waner (`wanerpa01`) joins Pittsburgh" in doc,
                  "Pittsburgh owner roster amendment is published")
