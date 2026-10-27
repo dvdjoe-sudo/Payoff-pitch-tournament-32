@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Angels Rod Carew / Doug Corbett (owner-approved)
+
+Rod Carew joins the Angels' active bench #6 as left-handed first-base reserve/pinch hitter, counting **only California Angels 1979–1985**, never Minnesota. Doug Corbett is inactive; his authentic historical converted card remains intact. Remaining six relievers: Troy Percival, Francisco Rodríguez, Scot Shields, Bryan Harvey, Scott Downs and Darren Oliver (RP1–RP6). All starting hitters, five SPs and **Shohei Ohtani at DH batting first** are unchanged. Canonical and announced sources now carry 9 lineup/6 bench/5 SP/6 RP, exactly 26 distinct players. Every original card, tournament result, played game, box score, and FAC/dice log remains unchanged. Carew's authentic Hitter v0.5 playable card remains pending conversion; no values fabricated.
+
 ## 2026-10-27 — Seattle Mariners Adrián Beltré for Mike Moore (owner-approved)
 
 Seattle adds Adrián Beltré as sixth bench hitter / reserve 3B. Only 2005–2009 Seattle Mariners performance qualifies; no years with any other franchise are used. Mike Moore leaves the active bullpen but keeps his original archived pitching card. J.J. Putz, Andrés Muñoz, Edwin Díaz, Jeff Nelson, Arthur Rhodes, Kazuhiro Sasaki become relief slots 1–6 without changing their pitching responsibilities. The entire starting batting order and rotation are unchanged, including Edgar Martínez at DH batting fourth. 26 unique active players, with 9/6/5/6. Original cards and completed tournament games, FAC/dice logs, scores, box scores and results all remain intact; Beltré's frozen playable Hitter v0.5 conversion is pending, never invented.

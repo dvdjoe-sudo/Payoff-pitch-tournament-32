@@ -2717,6 +2717,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "carewro01",
+    "kind": "hitter",
+    "name": "Rod Carew",
+    "pos": "1B",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "finlech01",
     "kind": "pitcher",
@@ -2790,19 +2798,11 @@
    },
    {
     "group": "bullpen",
-    "id": "corbedo01",
-    "kind": "pitcher",
-    "name": "Doug Corbett",
-    "pos": "RP",
-    "slot": 5
-   },
-   {
-    "group": "bullpen",
     "id": "downssc01",
     "kind": "pitcher",
     "name": "Scott Downs",
     "pos": "RP",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "bullpen",
@@ -2810,7 +2810,7 @@
     "kind": "pitcher",
     "name": "Darren Oliver",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 20

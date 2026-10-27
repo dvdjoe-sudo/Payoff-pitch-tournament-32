@@ -586,6 +586,7 @@ def build():
     apply_astros_roster_amendment(cards, rosters)
     apply_kansas_city_roster_amendment(cards, rosters)
     apply_mariners_roster_amendment(cards, rosters)
+    apply_angels_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -601,6 +602,7 @@ AUTHORIZED_HITTERS = (
     "HOU|aloumo01",
     "KC|maybejo01",
     "SEA|beltrad01",
+    "LAA|carewro01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -669,6 +671,54 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+
+
+def apply_angels_roster_amendment(cards, rosters):
+    """Owner approved Rod Carew (California 1979-1985) for Doug Corbett.
+
+    Keep Ohtani leading off at DH and all other starting nine unchanged.
+    Preserve Corbett's historical genuine card; Carew's Hitter v0.5
+    conversion must be authentic and Angels-only, never fabricated.
+    """
+    roster = rosters.get("LAA")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "corbedo01"]
+    carew_id = "carewro01"
+    carew = [p for p in players if p["id"] == carew_id]
+    if not carew:
+        players.append({"group": "bench", "id": carew_id,
+                        "kind": "hitter", "name": "Rod Carew",
+                        "pos": "1B", "slot": 6})
+    elif len(carew) != 1:
+        raise SystemExit("Duplicate California Angels Rod Carew roster entries")
+    else:
+        carew[0].update(group="bench", slot=6, pos="1B", kind="hitter")
+    card = cards.get("LAA|" + carew_id)
+    if card:
+        card["spots"] = [{"group": "bench", "slot": 6,
+                          "pos": "1B", "kind": "hitter"}]
+    for pid, slot in (("downssc01", 5), ("oliveda02", 6)):
+        matches = [p for p in players if p["id"] == pid and p["group"] == "bullpen"]
+        if len(matches) != 1:
+            raise SystemExit("Angels missing remaining reliever: " + pid)
+        matches[0]["slot"] = slot
+        card = cards.get("LAA|" + pid)
+        if card:
+            card["spots"] = [{"group": "bullpen", "slot": slot,
+                              "pos": "RP", "kind": "pitcher"}]
+    # LAA|corbedo01 remains a historical genuine converted pitcher card.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Angels owner-approved active roster not 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Angels must have exactly 26 unique active players")
+    if not any(p["group"] == "lineup" and p["slot"] == 1
+               and p["id"] == "ohtansh01" and p["pos"] == "DH" for p in players):
+        raise SystemExit("Shohei Ohtani must remain starting DH batting first")
 
 
 def apply_mariners_roster_amendment(cards, rosters):
