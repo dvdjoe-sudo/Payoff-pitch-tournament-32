@@ -3797,6 +3797,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "werthja01",
+    "kind": "hitter",
+    "name": "Jayson Werth",
+    "pos": "OF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "scherma01",
     "kind": "pitcher",
@@ -3883,14 +3891,6 @@
     "name": "Sean Doolittle",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "stammcr01",
-    "kind": "pitcher",
-    "name": "Craig Stammen",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 31

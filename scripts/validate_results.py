@@ -556,6 +556,30 @@ def check_rays_roster_amendment(check: Check) -> None:
 
 
 
+def check_nationals_roster_amendment(check: Check) -> None:
+    """Joe-approved Washington roster, effective after its completed R1-02."""
+    players = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))["WSH"]["players"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26, "Nationals have 26 distinct active players")
+    counts = {g: sum(p["group"] == g for p in players)
+              for g in ("lineup", "bench", "rotation", "bullpen")}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Nationals active roster has 9/6/5/6")
+    werth = [p for p in players if p["id"] == "werthja01"]
+    check.expect(len(werth) == 1 and werth[0]["group"] == "bench" and
+                 werth[0]["slot"] == 6 and werth[0]["pos"] == "OF",
+                 "Jayson Werth is sixth Nationals bench OF")
+    check.expect("stammcr01" not in ids, "Craig Stammen is off the active Nationals roster")
+    check.expect(sorted(p["slot"] for p in players if p["group"] == "bullpen") == [1, 2, 3, 4, 5, 6],
+                 "Nationals active bullpen slots are 1-6")
+    check.expect("WSH|stammcr01" in cards,
+                 "Craig Stammen historical converted card remains in archive")
+    text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Jayson Werth (`werthja01`) joins Washington" in text,
+                 "Nationals dated amendment published in roster record")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -572,6 +596,7 @@ def main() -> int:
     check_expos_roster_amendment(check)
     check_arizona_roster_amendment(check)
     check_rays_roster_amendment(check)
+    check_nationals_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

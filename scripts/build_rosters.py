@@ -318,6 +318,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "WSH":
+        lines += [
+            "### Approved active roster amendment (2026-10-26)",
+            "",
+            "Jayson Werth (`werthja01`) joins Washington as bench OF6 (RF/LF/DH). Craig Stammen (`stammcr01`) leaves the active bullpen. The Nationals now carry 9 lineup players, 6 bench players, 5 starting pitchers, and 6 relievers, 26 total.",
+            "",
+            "The roster change applies only after R1-02. Stammen's original converted card (if on file), historical pitching appearances, box scores, dice/FAC records, series results and all other completed games remain unchanged. Werth's original frozen Hitter v0.5 card conversion is still pending, using **Washington franchise seasons only**. Current roster spots are in `data/rosters.json`.",
+            "",
+        ]
+
     if appeared["lineup"] or appeared["rotation"] or appeared["bullpen"] or appeared["subs"]:
         lines += ["### Players in the results file", ""]
         if not canonical and code not in announced:

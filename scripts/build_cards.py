@@ -571,6 +571,7 @@ def build():
     apply_expos_roster_amendment(cards, rosters)
     apply_diamondbacks_roster_amendment(cards, rosters)
     apply_rays_roster_amendment(cards, rosters)
+    apply_nationals_roster_amendment(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -812,6 +813,44 @@ def apply_rays_roster_amendment(cards, rosters):
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Rays owner roster requires 26 distinct players")
 
+
+
+def apply_nationals_roster_amendment(cards, rosters):
+    """Joe-approved 2026-10-26 Washington roster change, future games only.
+
+    Jayson Werth replaces Craig Stammen in the active 26 after R1-02.
+    Preserve Stammen's original converted card and all archived series
+    results. Never invent a Hitter v0.5 card for Werth.
+    """
+    roster = rosters.get("WSH")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "stammcr01"]
+    werth_id = "werthja01"
+    existing = [p for p in players if p["id"] == werth_id]
+    if not existing:
+        players.append({
+            "group": "bench", "id": werth_id, "kind": "hitter",
+            "name": "Jayson Werth", "pos": "OF", "slot": 6,
+        })
+    else:
+        if len(existing) != 1:
+            raise SystemExit("duplicate Nationals Jayson Werth roster entries")
+        existing[0].update(group="bench", kind="hitter", pos="OF", slot=6)
+    if "WSH|" + werth_id in cards:
+        cards["WSH|" + werth_id]["spots"] = [{
+            "group": "bench", "kind": "hitter", "pos": "OF", "slot": 6,
+        }]
+    # Stammen's original card remains in cards as historical data;
+    # the roster membership is the only removal performed.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Nationals owner roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Nationals owner roster requires 26 distinct players")
 
 
 def dump(obj, path):
