@@ -9,691 +9,643 @@ GAP: Three cards say to use the previous card's 1d6 (1-3 out, check the runner; 
 GAP: Every card has a HOME line. Pages 12-15 do not say when to read it. A play at home uses the page 19 chart, and the next card supplies the 2d6 and the percentile.
 — top 1. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
 Roberto Alomar (2B) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=3 -> BALLPARK. Rolls FAC p69 r0 c1 pitch 2d6=3 1d6=3 pct=11.
-BALLPARK. The home chart is checked (page 9).
-FAC ballpark percentile 60. Rolls FAC p71 r1 c2 park 2d6=8 1d6=3 pct=60. (page 13)
-BALLPARK. Roberto Alomar bats L. FENWAY PARK wheelhouse runs through 28 (page 9).
-Re-roll percentile 00 onto IN-PLAY. Rolls FAC p48 r0 c2 pct 2d6=12 1d6=6 pct=00. Page 2 names the percentile. Page 9 says re-roll the dice.
-GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
-Percentile 00. Rare play. Re-roll percentile 99. Rolls FAC p62 r1 c3 pct 2d6=9 1d6=3 pct=99. (page 4)
-Rare-play cell is not transcribed. Pages 22-30. Section IN-PLAY, percentile 99, bases empty. The at-bat is rolled again, which the book does not say to do.
-GAP: Rare-play cell is not transcribed. Pages 22-30. Section IN-PLAY, percentile 99, bases empty. The at-bat is rolled again, which the book does not say to do.
-Roberto Alomar (2B) vs Pedro Martinez. 0 out, bases empty.
+FAC pitch. 2d6=3 -> DEFENSE. Rolls FAC p69 r0 c1 pitch 2d6=3 1d6=3 pct=11.
+DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
+FAC defense. DEFENSE RANGE? SS. Rolls FAC p71 r1 c2 defense 2d6=8 1d6=3 pct=60. (page 13)
+Park check percentile 00. Rolls FAC p48 r0 c2 park 2d6=12 1d6=6 pct=00.
+Park range C hits through 57 at FENWAY PARK.
+Park check is OUT. Symbols on the park card are ignored (page 13).
+FAC OUT row. Rolls FAC p62 r1 c3 defense-play 2d6=9 1d6=3 pct=99.
+FAC OUT cell GB-DP-A (page 20).
+No runner on first. Batter out.
+Tony Fernandez (SS) vs Pedro Martinez. 1 out, bases empty.
 FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p41 r1 c3 pitch 2d6=7 1d6=1 pct=99.
 FAC percentile 61. This card's 2d6 is 7. Rolls FAC p66 r0 c3 batter 2d6=7 1d6=6 pct=61.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 61 is an out: G5.
-Groundout G5 (page 17).
-Tony Fernandez (SS) vs Pedro Martinez. 1 out, bases empty.
+TOUGH section percentile 61 is an out: F9.
+Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
+Josh Donaldson (3B) vs Pedro Martinez. 2 out, bases empty.
 FAC p69 r0 c2 WP? percentile 38. Bases are empty, so page 10 does not call a wild pitch.
 FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p69 r0 c2 pitch 2d6=9 1d6=6 WP? pct=38.
 FAC percentile 92. This card's 2d6 is 6. Rolls FAC p67 r1 c2 batter 2d6=6 1d6=6 pct=92.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 92 is an out: G6.
-Groundout G6 (page 17).
-Josh Donaldson (3B) vs Pedro Martinez. 2 out, bases empty.
-FAC pitch. 2d6=5 -> PATIENT. Rolls FAC p54 r1 c3 pitch 2d6=5 1d6=2 pct=08.
-FAC percentile 88. This card's 2d6 is 7. Rolls FAC p63 r0 c3 batter 2d6=7 1d6=4 pct=88.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 88 is an out: G6.
-Groundout G6 (page 17).
+TOUGH section percentile 92 is an out: F7.
+Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
+Third out on the catch. A runner does not score after the third out.
+GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
 — bottom 1. BOS bats. Dave Stieb pitches. Score TOR 0, BOS 0.
 Tris Speaker (CF) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p54 r1 c3 pitch 2d6=5 1d6=2 pct=08.
+FAC percentile 88. This card's 2d6 is 7. Rolls FAC p63 r0 c3 batter 2d6=7 1d6=4 pct=88.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 88 is an out: G4.
+Groundout G4 (page 17).
+Dustin Pedroia (2B) vs Dave Stieb. 1 out, bases empty.
 FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p62 r0 c0 pitch 2d6=6 1d6=3 pct=56.
 FAC percentile 27. This card's 2d6 is 11. Rolls FAC p59 r1 c3 batter 2d6=11 1d6=5 pct=27.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 27 is 1B.
-1B.
-Tris Speaker to first.
-Auto steal uses 2d6=11 on the card that resolved the play (page 13).
-Auto-steal check 2d6=11 against jump 4.
-No steal.
-Dustin Pedroia (2B) vs Dave Stieb. 0 out, Tris Speaker on 1st.
+TOUGH section percentile 27 is SO.
+Strikeout. Runners hold (page 5).
+Ted Williams (LF) vs Dave Stieb. 2 out, bases empty.
 FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p42 r0 c3 pitch 2d6=5 1d6=1 pct=07.
 FAC percentile 38. This card's 2d6 is 3. Rolls FAC p56 r1 c2 batter 2d6=3 1d6=2 WP? pct=38.
-FAC p56 r1 c2 WP? percentile 38 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
+FAC p56 r1 c2 WP? percentile 38. Bases are empty, so page 10 does not call a wild pitch.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 38 is an out: P4.
-P4. Runners hold (pages 5 and 17).
-Ted Williams (LF) vs Dave Stieb. 1 out, Tris Speaker on 1st.
+TOUGH section percentile 38 is an out: P6.
+P6. Runners hold (pages 5 and 17).
+— top 2. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
+Carlos Delgado (1B) vs Pedro Martinez. 0 out, bases empty.
 FAC pitch. 2d6=3 -> DEFENSE. Rolls FAC p42 r0 c1 pitch 2d6=3 1d6=2 pct=10.
 DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
 FAC defense. DEFENSE RANGE? SS. Rolls FAC p44 r1 c0 defense 2d6=6 1d6=1 pct=21. (page 13)
 Park check percentile 76. Rolls FAC p64 r0 c1 park 2d6=4 1d6=4 pct=76.
-Park range B hits through 44 at FENWAY PARK.
+Park range C hits through 57 at FENWAY PARK.
 Park check is OUT. Symbols on the park card are ignored (page 13).
 FAC OUT row. Rolls FAC p42 r0 c2 defense-play 2d6=10 1d6=1 pct=20.
 FAC OUT cell POP (page 20).
 Defense out. Runners hold.
-David Ortiz (1B) vs Dave Stieb. 2 out, Tris Speaker on 1st.
-FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p68 r0 c1 pitch 2d6=8 1d6=1 pct=61.
-FAC percentile 19. This card's 2d6 is 6. Rolls FAC p52 r1 c1 batter 2d6=6 1d6=5 pct=19.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 19 is 1B.
-FAC single. Opposite field liner into LF/RF. Runner on 1st advances 2 bases; Runner on 2nd scores. 1d6=5 on this card. Rolls FAC p62 r1 c0 advance 2d6=8 1d6=5 pct=70. (pages 13-14)
-Tris Speaker RUN 10 with two outs takes the automatic extra base (page 14).
-Tris Speaker to third (FAC).
-1B.
-David Ortiz to first.
-Auto steal uses 2d6=6 on the card that resolved the play (page 13).
-Auto-steal check 2d6=6 against jump 2.
-No steal.
-Jimmie Foxx (1B) vs Dave Stieb. 2 out, David Ortiz on 1st, Tris Speaker on 3rd.
-FAC p59 r0 c0 WP? percentile 32 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
-FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p59 r0 c0 pitch 2d6=8 1d6=6 WP? pct=32.
-FAC percentile 65. This card's 2d6 is 7. Rolls FAC p45 r0 c0 batter 2d6=7 1d6=2 pct=65.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 65 is an out: F7.
-Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
-Third out on the catch. A runner does not score after the third out.
-GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
-— top 2. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
-Carlos Delgado (1B) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p64 r1 c1 pitch 2d6=6 1d6=5 pct=55.
-FAC percentile 97. This card's 2d6 is 8. Rolls FAC p51 r1 c0 batter 2d6=8 1d6=1 pct=97.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 97 is an out: F7.
-Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
 Jose Bautista (DH) vs Pedro Martinez. 1 out, bases empty.
-FAC pitch. 2d6=10 -> TOUGH. Rolls FAC p70 r1 c1 pitch 2d6=10 1d6=2 pct=04.
-FAC percentile 05. This card's 2d6 is 10. Rolls FAC p50 r0 c0 batter 2d6=10 1d6=3 pct=05.
+FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p68 r0 c1 pitch 2d6=8 1d6=1 pct=61.
+FAC percentile 19. This card's 2d6 is 6. Rolls FAC p52 r1 c1 batter 2d6=6 1d6=5 pct=19.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 05 is SO.
+TOUGH section percentile 19 is SO.
 Strikeout. Runners hold (page 5).
 George Bell (LF) vs Pedro Martinez. 2 out, bases empty.
-FAC pitch. 2d6=11 -> DEFENSE. Rolls FAC p49 r0 c1 pitch 2d6=11 1d6=5 pct=99.
-DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
-FAC defense. DEFENSE ERROR? SS. Rolls FAC p54 r1 c2 defense 2d6=5 1d6=3 pct=81. (page 13)
-FAC p50 r1 c0 WP? percentile 39. Bases are empty, so page 10 does not call a wild pitch.
-Park check percentile 39. Rolls FAC p50 r1 c0 park 2d6=10 1d6=1 WP? pct=39.
-Park error 3 is an error through 42.
-Park check is ERR. Symbols on the park card are ignored (page 13).
+FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p62 r1 c0 pitch 2d6=8 1d6=5 pct=70.
+FAC percentile 32. This card's 2d6 is 8. Rolls FAC p59 r0 c0 batter 2d6=8 1d6=6 WP? pct=32.
+FAC p59 r0 c0 WP? percentile 32. Bases are empty, so page 10 does not call a wild pitch.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 32 is SO.
+Strikeout. Runners hold (page 5).
+— bottom 2. BOS bats. Dave Stieb pitches. Score TOR 0, BOS 0.
+David Ortiz (1B) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p45 r0 c0 pitch 2d6=7 1d6=2 pct=65.
+FAC percentile 55. This card's 2d6 is 6. Rolls FAC p64 r1 c1 batter 2d6=6 1d6=5 pct=55.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 55 is an out: G5.
+Groundout G5 (page 17).
+Jimmie Foxx (1B) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p51 r1 c0 pitch 2d6=8 1d6=1 pct=97.
+FAC percentile 04. This card's 2d6 is 10. Rolls FAC p70 r1 c1 batter 2d6=10 1d6=2 pct=04.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 04 is 2B.
+2B.
+Jimmie Foxx to second.
+Auto steal uses 2d6=10 on the card that resolved the play (page 13).
+Auto-steal check 2d6=10 against jump 2.
+GAP: Stealing third needs doubles. A Fast Action Card prints the 2d6 total and not the two dice (pages 12-13). Two dice are rolled for that check. Page 15 allows dice with the deck.
+Doubles check 3 and 1. Rolls d6=3, d6=1.
+Stealing third needs doubles (page 7). He does not go.
+Dwight Evans (RF) vs Dave Stieb. 1 out, Jimmie Foxx on 2nd.
+FAC pitch. 2d6=10 -> PATIENT. Rolls FAC p50 r0 c0 pitch 2d6=10 1d6=3 pct=05.
+FAC percentile 99. This card's 2d6 is 11. Rolls FAC p49 r0 c1 batter 2d6=11 1d6=5 pct=99.
+Read the batter's PATIENT section (page 4).
+PATIENT section percentile 99 is an out: F7.
+Fly F7 to LF. The pitcher result is deep for the out chart (page 17).
+F7: the runner on second may try, with RUN reduced by 2 (page 17).
+Send Jimmie Foxx? 2d6=5 against RUN 8. He goes when the roll is less than RUN (page 16). Rolls FAC p54 r1 c2 2d6 2d6=5 1d6=3 pct=81.
+FAC p50 r1 c0 WP? percentile 39 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
+Extra base. 2d6=10, RUN 8, ARM 8. Rolls FAC p50 r1 c0 2d6 2d6=10 1d6=1 WP? pct=39.
+Jimmie Foxx is out trying for the extra base. 2 out.
+— top 3. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
+Jesse Barfield (RF) vs Pedro Martinez. 0 out, bases empty.
 FAC p65 r0 c3 WP? percentile 34. Bases are empty, so page 10 does not call a wild pitch.
-FAC ERR row. Rolls FAC p65 r0 c3 defense-play 2d6=8 1d6=2 WP? pct=34.
-1-base error (page 20). The batter reaches on the error, which is not a hit.
-George Bell to first.
+FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p65 r0 c3 pitch 2d6=8 1d6=2 WP? pct=34.
+FAC percentile 72. This card's 2d6 is 8. Rolls FAC p63 r0 c2 batter 2d6=8 1d6=6 pct=72.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 72 is 1B.
+1B.
+Jesse Barfield to first.
 Auto steal uses 2d6=8 on the card that resolved the play (page 13).
 Auto-steal check 2d6=8 against jump 3.
 No steal.
-Jesse Barfield (RF) vs Pedro Martinez. 2 out, George Bell on 1st.
-FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p63 r0 c2 pitch 2d6=8 1d6=6 pct=72.
-FAC percentile 09. This card's 2d6 is 2. Rolls FAC p46 r1 c2 batter 2d6=2 1d6=1 pct=09.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 09 is SO.
-Strikeout. Runners hold (page 5).
-— bottom 2. BOS bats. Dave Stieb pitches. Score TOR 0, BOS 0.
-Dwight Evans (RF) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p63 r1 c0 pitch 2d6=6 1d6=6 pct=50.
+Devon White (CF) vs Pedro Martinez. 0 out, Jesse Barfield on 1st.
+Sacrifice bunt called (usage choice, page 9 option 1). Devon White bunt letter F. The card has no auto-bunt 2d6 numbers, so option 2 cannot fire.
+FAC bunt F -> DP. 1d6=1 names the fielder (pages 13-14 and 19). Rolls FAC p46 r1 c2 bunt 2d6=2 1d6=1 pct=09.
+Jesse Barfield is lead runner out on the bunt. 1 out.
+Batter out. Double play (page 19).
+Ernie Whitt (C) vs Pedro Martinez. 2 out, bases empty.
+FAC pitch. 2d6=6 -> PATIENT. Rolls FAC p63 r1 c0 pitch 2d6=6 1d6=6 pct=50.
 FAC percentile 73. This card's 2d6 is 9. Rolls FAC p59 r0 c1 batter 2d6=9 1d6=5 pct=73.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 73 is an out: F8.
-Fly F8 to CF. The pitcher result is ordinary for the out chart (page 17).
-Wade Boggs (3B) vs Dave Stieb. 1 out, bases empty.
-FAC pitch. 2d6=10 -> IN-PLAY. Rolls FAC p65 r0 c2 pitch 2d6=10 1d6=3 pct=95.
+Read the batter's PATIENT section (page 4).
+PATIENT section percentile 73 is an out: G6.
+Groundout G6 (page 17).
+— bottom 3. BOS bats. Dave Stieb pitches. Score TOR 0, BOS 0.
+Wade Boggs (3B) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=10 -> PATIENT. Rolls FAC p65 r0 c2 pitch 2d6=10 1d6=3 pct=95.
 FAC percentile 90. This card's 2d6 is 7. Rolls FAC p60 r1 c1 batter 2d6=7 1d6=6 pct=90.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 90 is an out: G4.
+Read the batter's PATIENT section (page 4).
+PATIENT section percentile 90 is an out: G4.
 Groundout G4 (page 17).
-Nomar Garciaparra (SS) vs Dave Stieb. 2 out, bases empty.
+Nomar Garciaparra (SS) vs Dave Stieb. 1 out, bases empty.
 FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p59 r1 c2 pitch 2d6=7 1d6=1 pct=19.
 FAC percentile 03. This card's 2d6 is 3. Rolls FAC p62 r0 c1 batter 2d6=3 1d6=3 pct=03.
 Read the batter's TOUGH section (page 4).
 TOUGH section percentile 03 is SO.
 Strikeout. Runners hold (page 5).
-— top 3. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
-Devon White (CF) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=4 -> IN-PLAY. Rolls FAC p48 r1 c3 pitch 2d6=4 1d6=6 pct=06.
-FAC percentile 34. This card's 2d6 is 3. Rolls FAC p57 r0 c3 batter 2d6=3 1d6=3 WP? pct=34.
+Carlton Fisk (C) vs Dave Stieb. 2 out, bases empty.
+FAC pitch. 2d6=4 -> BALLPARK. Rolls FAC p48 r1 c3 pitch 2d6=4 1d6=6 pct=06.
+BALLPARK. The home chart is checked (page 9).
 FAC p57 r0 c3 WP? percentile 34. Bases are empty, so page 10 does not call a wild pitch.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 34 is an out: P2.
-P2. Runners hold (pages 5 and 17).
-Ernie Whitt (C) vs Pedro Martinez. 1 out, bases empty.
-FAC pitch. 2d6=11 -> DEFENSE. Rolls FAC p68 r0 c3 pitch 2d6=11 1d6=5 pct=79.
-DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
-FAC defense. DEFENSE RANGE? 3B. Rolls FAC p43 r1 c0 defense 2d6=9 1d6=5 pct=16. (page 13)
-Park check percentile 80. Rolls FAC p51 r0 c1 park 2d6=9 1d6=4 pct=80.
-Park range C hits through 57 at FENWAY PARK.
-Park check is OUT. Symbols on the park card are ignored (page 13).
-FAC OUT row. Rolls FAC p57 r0 c0 defense-play 2d6=10 1d6=2 pct=76.
-FAC OUT cell POP (page 20).
-Defense out. Runners hold.
-Roberto Alomar (2B) vs Pedro Martinez. 2 out, bases empty.
-FAC pitch. 2d6=5 -> PATIENT. Rolls FAC p65 r1 c3 pitch 2d6=5 1d6=4 pct=54.
-FAC percentile 71. This card's 2d6 is 9. Rolls FAC p55 r0 c1 batter 2d6=9 1d6=3 pct=71.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 71 is 1B.
-1B.
-Roberto Alomar to first.
-Auto steal uses 2d6=9 on the card that resolved the play (page 13).
-Auto-steal check 2d6=9 against jump 4.
-No steal.
-Tony Fernandez (SS) vs Pedro Martinez. 2 out, Roberto Alomar on 1st.
-FAC pitch. 2d6=12 -> TOUGH. Rolls FAC p46 r0 c1 pitch 2d6=12 1d6=6 pct=29.
-FAC percentile 02. This card's 2d6 is 3. Rolls FAC p71 r0 c1 batter 2d6=3 1d6=2 pct=02.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 02 is SO.
-Strikeout. Runners hold (page 5).
-— bottom 3. BOS bats. Dave Stieb pitches. Score TOR 0, BOS 0.
-Carlton Fisk (C) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p51 r0 c3 pitch 2d6=8 1d6=5 pct=05.
-FAC percentile 48. This card's 2d6 is 6. Rolls FAC p59 r1 c1 batter 2d6=6 1d6=6 pct=48.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 48 is an out: L6.
-L6. Runners hold (pages 5 and 17).
-Tris Speaker (CF) vs Dave Stieb. 1 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p44 r1 c2 pitch 2d6=7 1d6=2 pct=20.
-FAC percentile 01. This card's 2d6 is 9. Rolls FAC p41 r1 c1 batter 2d6=9 1d6=5 pct=01.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 01 is SO.
-Strikeout. Runners hold (page 5).
-Dustin Pedroia (2B) vs Dave Stieb. 2 out, bases empty.
-FAC pitch. 2d6=4 -> PATIENT. Rolls FAC p69 r0 c3 pitch 2d6=4 1d6=6 pct=14.
-FAC percentile 94. This card's 2d6 is 8. Rolls FAC p69 r1 c2 batter 2d6=8 1d6=4 pct=94.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 94 is an out: F7.
-Fly F7 to LF. The pitcher result is deep for the out chart (page 17).
+FAC ballpark percentile 34. Rolls FAC p57 r0 c3 park 2d6=3 1d6=3 WP? pct=34. (page 13)
+BALLPARK. Carlton Fisk bats R. FENWAY PARK wheelhouse runs through 46 (page 9).
+Re-roll percentile 79 onto WHEELHOUSE. Rolls FAC p68 r0 c3 pct 2d6=11 1d6=5 pct=79. Page 2 names the percentile. Page 9 says re-roll the dice.
+GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
+WHEELHOUSE section percentile 79 is an out: F8.
+Fly F8 to CF. The pitcher result is deep for the out chart (page 17).
 Third out on the catch. A runner does not score after the third out.
 GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
 Recommended reshuffle after three full innings (page 12). Inning 3 is complete.
 — top 4. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
-Josh Donaldson (3B) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p64 r0 c0 pitch 2d6=8 1d6=1 pct=74.
+Roberto Alomar (2B) vs Pedro Martinez. 0 out, bases empty.
+FAC pitch. 2d6=4 -> IN-PLAY. Rolls FAC p45 r0 c2 pitch 2d6=4 1d6=4 pct=84.
 FAC percentile 90. This card's 2d6 is 7. Rolls FAC p60 r1 c1 batter 2d6=7 1d6=6 pct=90.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 90 is an out: G6.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 90 is an out: G6.
 Groundout G6 (page 17).
-Carlos Delgado (1B) vs Pedro Martinez. 1 out, bases empty.
-FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p44 r1 c0 pitch 2d6=6 1d6=1 pct=21.
-FAC percentile 98. This card's 2d6 is 11. Rolls FAC p47 r0 c0 batter 2d6=11 1d6=4 pct=98.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 98 is an out: F7.
-Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
-Jose Bautista (DH) vs Pedro Martinez. 2 out, bases empty.
+Tony Fernandez (SS) vs Pedro Martinez. 1 out, bases empty.
+FAC pitch. 2d6=6 -> PATIENT. Rolls FAC p44 r1 c0 pitch 2d6=6 1d6=1 pct=21.
+FAC percentile 20. This card's 2d6 is 6. Rolls FAC p62 r0 c2 batter 2d6=6 1d6=6 pct=20.
+Read the batter's PATIENT section (page 4).
+PATIENT section percentile 20 is BB.
+BB. Forced runners advance (page 5).
+Tony Fernandez to first.
+Auto steal uses 2d6=6 on the card that resolved the play (page 13).
+Auto-steal check 2d6=6 against jump 4.
+No steal.
+Josh Donaldson (3B) vs Pedro Martinez. 1 out, Tony Fernandez on 1st.
 FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p44 r1 c3 pitch 2d6=7 1d6=6 pct=54.
-FAC percentile 58. This card's 2d6 is 7. Rolls FAC p53 r0 c2 batter 2d6=7 1d6=4 pct=58.
+FAC percentile 87. This card's 2d6 is 6. Rolls FAC p67 r0 c2 batter 2d6=6 1d6=3 pct=87.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 58 is an out: G5.
-Groundout G5 (page 17).
+TOUGH section percentile 87 is an out: G6.
+Double-play check. Lower DP 5. 2d6 2d6=5. At-bat percentile 87. Rolls FAC p66 r0 c1 2d6 2d6=5 1d6=4 pct=47. (pages 6 and 17)
+Double play.
+Tony Fernandez is forced at second. 2 out.
+Batter out at first. Other runners advance 1 (page 17).
 — bottom 4. BOS bats. Dave Stieb pitches. Score TOR 0, BOS 0.
-Ted Williams (LF) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p68 r1 c3 pitch 2d6=5 1d6=2 pct=16.
+Tris Speaker (CF) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=9 -> PATIENT. Rolls FAC p68 r1 c0 pitch 2d6=9 1d6=3 pct=27.
+FAC percentile 92. This card's 2d6 is 6. Rolls FAC p67 r1 c2 batter 2d6=6 1d6=6 pct=92.
+Read the batter's PATIENT section (page 4).
+PATIENT section percentile 92 is an out: G4.
+Groundout G4 (page 17).
+Dustin Pedroia (2B) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=4 -> BALLPARK. Rolls FAC p41 r0 c1 pitch 2d6=4 1d6=6 pct=40.
+BALLPARK. The home chart is checked (page 9).
+FAC ballpark percentile 29. Rolls FAC p46 r0 c1 park 2d6=12 1d6=6 pct=29. (page 13)
+BALLPARK. Dustin Pedroia bats R. FENWAY PARK wheelhouse runs through 46 (page 9).
+Re-roll percentile 52 onto WHEELHOUSE. Rolls FAC p66 r1 c0 pct 2d6=6 1d6=1 pct=52. Page 2 names the percentile. Page 9 says re-roll the dice.
+GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
+WHEELHOUSE section percentile 52 is 1B.
+1B.
+Dustin Pedroia to first.
+Auto steal uses 2d6=6 on the card that resolved the play (page 13).
+Auto-steal check 2d6=6 against jump 3.
+No steal.
+Ted Williams (LF) vs Dave Stieb. 1 out, Dustin Pedroia on 1st.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p61 r0 c2 pitch 2d6=6 1d6=3 pct=51.
 FAC percentile 75. This card's 2d6 is 10. Rolls FAC p44 r1 c1 batter 2d6=10 1d6=1 pct=75.
 Read the batter's TOUGH section (page 4).
 TOUGH section percentile 75 is an out: F8.
 Fly F8 to CF. The pitcher result is ordinary for the out chart (page 17).
-David Ortiz (1B) vs Dave Stieb. 1 out, bases empty.
-FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p67 r1 c2 pitch 2d6=6 1d6=6 pct=92.
-FAC percentile 49. This card's 2d6 is 6. Rolls FAC p41 r0 c2 batter 2d6=6 1d6=1 pct=49.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 49 is 1B.
+David Ortiz (1B) vs Dave Stieb. 2 out, Dustin Pedroia on 1st.
+FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p65 r0 c1 pitch 2d6=8 1d6=4 pct=69.
+FAC percentile 26. This card's 2d6 is 7. Rolls FAC p58 r1 c1 batter 2d6=7 1d6=6 pct=26.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 26 is 1B.
+FAC p56 r1 c2 WP? percentile 38 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
+FAC single. Opposite field liner into LF/RF. Runner on 1st advances 2 bases; Runner on 2nd scores. 1d6=2 on this card. Rolls FAC p56 r1 c2 advance 2d6=3 1d6=2 WP? pct=38. (pages 13-14)
+Dustin Pedroia RUN 10 with two outs takes the automatic extra base (page 14).
+Dustin Pedroia to third (FAC).
 1B.
 David Ortiz to first.
-Auto steal uses 2d6=6 on the card that resolved the play (page 13).
-Auto-steal check 2d6=6 against jump 2.
-No steal.
-Jimmie Foxx (1B) vs Dave Stieb. 1 out, David Ortiz on 1st.
-FAC pitch. 2d6=12 -> IN-PLAY. Rolls FAC p46 r0 c1 pitch 2d6=12 1d6=6 pct=29.
-FAC percentile 87. This card's 2d6 is 6. Rolls FAC p67 r0 c2 batter 2d6=6 1d6=3 pct=87.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 87 is an out: G4.
-Double-play check. Lower DP 6. 2d6 2d6=8. At-bat percentile 87. Rolls FAC p50 r1 c2 2d6 2d6=8 1d6=1 pct=25. (pages 6 and 17)
-David Ortiz is forced at second. 2 out.
-Fielder's choice. Batter safe at first (page 6).
-Jimmie Foxx to first.
-Auto steal uses 2d6=6 on the card that resolved the play (page 13).
-Auto-steal check 2d6=6 against jump 2.
-No steal.
-Dwight Evans (RF) vs Dave Stieb. 2 out, Jimmie Foxx on 1st.
-FAC pitch. 2d6=9 -> PATIENT. Rolls FAC p61 r0 c1 pitch 2d6=9 1d6=3 pct=63.
-FAC percentile 14. This card's 2d6 is 4. Rolls FAC p69 r0 c3 batter 2d6=4 1d6=6 pct=14.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 14 is BB.
-BB. Forced runners advance (page 5).
-Jimmie Foxx forced to second.
-Dwight Evans to first.
-Wade Boggs (3B) vs Dave Stieb. 2 out, Dwight Evans on 1st, Jimmie Foxx on 2nd.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p57 r1 c2 pitch 2d6=7 1d6=4 pct=60.
-FAC percentile 38. This card's 2d6 is 3. Rolls FAC p56 r1 c2 batter 2d6=3 1d6=2 WP? pct=38.
-FAC p56 r1 c2 WP? percentile 38 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 38 is an out: P4.
-P4. Runners hold (pages 5 and 17).
-— top 5. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
-George Bell (LF) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p48 r0 c0 pitch 2d6=9 1d6=4 pct=28.
-FAC percentile 15. This card's 2d6 is 5. Rolls FAC p66 r0 c2 batter 2d6=5 1d6=1 pct=15.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 15 is SO.
-Strikeout. Runners hold (page 5).
-Jesse Barfield (RF) vs Pedro Martinez. 1 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p43 r1 c1 pitch 2d6=7 1d6=3 pct=67.
-FAC percentile 41. This card's 2d6 is 5. Rolls FAC p63 r1 c3 batter 2d6=5 1d6=1 pct=41.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 41 is SO.
-Strikeout. Runners hold (page 5).
-Devon White (CF) vs Pedro Martinez. 2 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p70 r1 c3 pitch 2d6=7 1d6=1 pct=63.
-FAC percentile 59. This card's 2d6 is 6. Rolls FAC p58 r1 c2 batter 2d6=6 1d6=3 pct=59.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 59 is 1B.
-1B.
-Devon White to first.
-Auto steal uses 2d6=6 on the card that resolved the play (page 13).
-Auto-steal check 2d6=6 against jump 4.
-No steal.
-Ernie Whitt (C) vs Pedro Martinez. 2 out, Devon White on 1st.
-FAC pitch. 2d6=11 -> DEFENSE. Rolls FAC p60 r1 c0 pitch 2d6=11 1d6=4 pct=42.
-DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
-FAC defense. DEFENSE ERROR? 1B. Rolls FAC p40 r1 c2 defense 2d6=2 1d6=1 pct=45. (page 13)
-Park check percentile 25. Rolls FAC p46 r0 c2 park 2d6=11 1d6=4 pct=25.
-Park error 1 is an error through 55.
-Park check is ERR. Symbols on the park card are ignored (page 13).
-FAC ERR row. Rolls FAC p60 r0 c1 defense-play 2d6=10 1d6=2 pct=68.
-1-base error (page 20). The batter reaches on the error, which is not a hit.
-Devon White to second.
-Ernie Whitt to first.
-Roberto Alomar (2B) vs Pedro Martinez. 2 out, Ernie Whitt on 1st, Devon White on 2nd.
-FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p68 r1 c0 pitch 2d6=9 1d6=3 pct=27.
-FAC percentile 48. This card's 2d6 is 4. Rolls FAC p63 r0 c1 batter 2d6=4 1d6=4 pct=48.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 48 is an out: G1.
-Pitcher looks the runner back and throws to first. Runners hold (page 17).
-— bottom 5. BOS bats. Dave Stieb pitches. Score TOR 0, BOS 0.
-Nomar Garciaparra (SS) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p62 r1 c2 pitch 2d6=8 1d6=4 pct=22.
-FAC percentile 98. This card's 2d6 is 8. Rolls FAC p47 r1 c0 batter 2d6=8 1d6=2 pct=98.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 98 is an out: F7.
-Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
-Carlton Fisk (C) vs Dave Stieb. 1 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p43 r0 c2 pitch 2d6=7 1d6=3 pct=29.
-FAC percentile 67. This card's 2d6 is 8. Rolls FAC p67 r0 c0 batter 2d6=8 1d6=5 pct=67.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 67 is an out: G6.
-Groundout G6 (page 17).
-Tris Speaker (CF) vs Dave Stieb. 2 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p52 r0 c2 pitch 2d6=7 1d6=4 pct=24.
-FAC percentile 26. This card's 2d6 is 7. Rolls FAC p58 r1 c1 batter 2d6=7 1d6=6 pct=26.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 26 is 1B.
-1B.
-Tris Speaker to first.
-Auto steal uses 2d6=7 on the card that resolved the play (page 13).
-Auto-steal check 2d6=7 against jump 4.
-No steal.
-Dustin Pedroia (2B) vs Dave Stieb. 2 out, Tris Speaker on 1st.
-FAC pitch. 2d6=4 -> PATIENT. Rolls FAC p52 r1 c3 pitch 2d6=4 1d6=4 pct=12.
-FAC percentile 64. This card's 2d6 is 9. Rolls FAC p53 r1 c1 batter 2d6=9 1d6=4 pct=64.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 64 is 1B.
-FAC single. Hard grounder into RF/LF. Runner on 1st advances 2 bases; Runner on 2nd scores. 1d6=5 on this card. Rolls FAC p59 r0 c3 advance 2d6=6 1d6=5 pct=83. (pages 13-14)
-Tris Speaker RUN 10 with two outs takes the automatic extra base (page 14).
-Tris Speaker to third (FAC).
-1B.
-Dustin Pedroia to first.
-Auto steal uses 2d6=9 on the card that resolved the play (page 13).
-Auto-steal check 2d6=9 against jump 3.
-No steal.
-Ted Williams (LF) vs Dave Stieb. 2 out, Dustin Pedroia on 1st, Tris Speaker on 3rd.
-FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p71 r0 c0 pitch 2d6=8 1d6=2 pct=62.
-FAC percentile 95. This card's 2d6 is 8. Rolls FAC p61 r1 c1 batter 2d6=8 1d6=5 pct=95.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 95 is an out: F7.
-Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
-Third out on the catch. A runner does not score after the third out.
-GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
-— top 6. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
-Tony Fernandez (SS) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=5 -> PATIENT. Rolls FAC p42 r1 c2 pitch 2d6=5 1d6=3 pct=17.
-FAC percentile 76. This card's 2d6 is 10. Rolls FAC p57 r0 c0 batter 2d6=10 1d6=2 pct=76.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 76 is 1B.
-1B.
-Tony Fernandez to first.
-Auto steal uses 2d6=10 on the card that resolved the play (page 13).
-Auto-steal check 2d6=10 against jump 4.
-No steal.
-Josh Donaldson (3B) vs Pedro Martinez. 0 out, Tony Fernandez on 1st.
-FAC pitch. 2d6=5 -> PATIENT. Rolls FAC p67 r0 c1 pitch 2d6=5 1d6=1 pct=79.
-FAC percentile 81. This card's 2d6 is 2. Rolls FAC p51 r1 c3 batter 2d6=2 1d6=1 pct=81.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 81 is 1B.
-FAC single. Long single into the gap to CF. Runner on 1st advances 1 base; Runner on 2nd 1 base. 1d6=2 on this card. Rolls FAC p49 r1 c1 advance 2d6=5 1d6=2 pct=88. (pages 13-14)
-Tony Fernandez to second (FAC).
-1B.
-Josh Donaldson to first.
-Carlos Delgado (1B) vs Pedro Martinez. 0 out, Josh Donaldson on 1st, Tony Fernandez on 2nd.
-FAC p69 r0 c2 WP? percentile 38 is outside Pedro Martinez's WP rating 30. No wild pitch (page 10).
-FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p69 r0 c2 pitch 2d6=9 1d6=6 WP? pct=38.
-FAC percentile 88. This card's 2d6 is 7. Rolls FAC p63 r0 c3 batter 2d6=7 1d6=4 pct=88.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 88 is an out: G6.
-FAC p65 r0 c3 WP? percentile 34 is outside Pedro Martinez's WP rating 30. No wild pitch (page 10).
-Double-play check. Lower DP 5. 2d6 2d6=8. At-bat percentile 88. Rolls FAC p65 r0 c3 2d6 2d6=8 1d6=2 WP? pct=34. (pages 6 and 17)
-Josh Donaldson is forced at second. 1 out.
-Tony Fernandez to third.
-Fielder's choice. Batter safe at first (page 6).
-Carlos Delgado to first.
-Carlos Delgado has Jump 1. Page 39 uses 2 this time and does not check him again.
+David Ortiz has Jump 1. Page 39 uses 2 this time and does not check him again.
 Auto steal uses 2d6=7 on the card that resolved the play (page 13).
 Auto-steal check 2d6=7 against jump 2.
 No steal.
-Jose Bautista (DH) vs Pedro Martinez. 1 out, Carlos Delgado on 1st, Tony Fernandez on 3rd.
-FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p44 r0 c1 pitch 2d6=8 1d6=1 pct=69.
-FAC percentile 65. This card's 2d6 is 7. Rolls FAC p45 r0 c0 batter 2d6=7 1d6=2 pct=65.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 65 is an out: F9.
-Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
-TOUGH fly: RUN reduced by 2 before the attempt (page 17).
-Tony Fernandez RUN 7 or higher scores from third.
-F9 is a sacrifice fly. It is not an at-bat.
-George Bell (LF) vs Pedro Martinez. 2 out, Carlos Delgado on 1st.
-FAC pitch. 2d6=2 -> WHEELHOUSE. Rolls FAC p63 r1 c2 pitch 2d6=2 1d6=1 pct=73.
-FAC percentile 72. This card's 2d6 is 9. Rolls FAC p67 r1 c3 batter 2d6=9 1d6=4 pct=72.
-Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 72 is 3B.
-3B.
-Carlos Delgado scores from first.
-George Bell to third.
-Jesse Barfield (RF) vs Pedro Martinez. 2 out, George Bell on 3rd.
-FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p61 r1 c3 pitch 2d6=8 1d6=6 pct=24.
-FAC percentile 11. This card's 2d6 is 3. Rolls FAC p69 r0 c1 batter 2d6=3 1d6=3 pct=11.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 11 is SO.
-Strikeout. Runners hold (page 5).
-— bottom 6. BOS bats. Dave Stieb pitches. Score TOR 2, BOS 0.
-David Ortiz (1B) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=2 -> WHEELHOUSE. Rolls FAC p58 r0 c0 pitch 2d6=2 1d6=1 pct=01.
-FAC percentile 58. This card's 2d6 is 8. Rolls FAC p63 r1 c1 batter 2d6=8 1d6=4 pct=58.
-Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 58 is HR.
-HR.
-David Ortiz scores.
-Jimmie Foxx (1B) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=4 -> PATIENT. Rolls FAC p45 r0 c2 pitch 2d6=4 1d6=4 pct=84.
-FAC percentile 21. This card's 2d6 is 7. Rolls FAC p52 r1 c0 batter 2d6=7 1d6=3 pct=21.
+Jimmie Foxx (1B) vs Dave Stieb. 2 out, David Ortiz on 1st, Dustin Pedroia on 3rd.
+FAC pitch. 2d6=9 -> PATIENT. Rolls FAC p48 r0 c0 pitch 2d6=9 1d6=4 pct=28.
+FAC percentile 63. This card's 2d6 is 9. Rolls FAC p61 r0 c1 batter 2d6=9 1d6=3 pct=63.
 Read the batter's PATIENT section (page 4).
-PATIENT section percentile 21 is BB.
+PATIENT section percentile 63 is BB.
 BB. Forced runners advance (page 5).
+David Ortiz forced to second.
 Jimmie Foxx to first.
-Auto steal uses 2d6=7 on the card that resolved the play (page 13).
-Auto-steal check 2d6=7 against jump 2.
-No steal.
-Dwight Evans (RF) vs Dave Stieb. 0 out, Jimmie Foxx on 1st.
-FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p69 r1 c3 pitch 2d6=8 1d6=1 pct=09.
-FAC percentile 58. This card's 2d6 is 6. Rolls FAC p50 r1 c3 batter 2d6=6 1d6=2 pct=58.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 58 is an out: G5.
-Double-play check. Lower DP 6. 2d6 2d6=5. At-bat percentile 58. Rolls FAC p54 r1 c1 2d6 2d6=5 1d6=1 pct=87. (pages 6 and 17)
-Double play.
-Jimmie Foxx is forced at second. 1 out.
-Batter out at first. Other runners advance 1 (page 17).
-Wade Boggs (3B) vs Dave Stieb. 2 out, bases empty.
-FAC pitch. 2d6=10 -> IN-PLAY. Rolls FAC p42 r0 c2 pitch 2d6=10 1d6=1 pct=20.
-FAC percentile 98. This card's 2d6 is 7. Rolls FAC p71 r0 c3 batter 2d6=7 1d6=6 pct=98.
-Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 98 is an out: F9.
-Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
-Third out on the catch. A runner does not score after the third out.
-GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
-Recommended reshuffle after three full innings (page 12). Inning 6 is complete.
-— top 7. TOR bats. Pedro Martinez pitches. Score TOR 2, BOS 1.
-Devon White (CF) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=3 -> BALLPARK. Rolls FAC p45 r0 c1 pitch 2d6=3 1d6=2 pct=74.
-BALLPARK. The home chart is checked (page 9).
-FAC ballpark percentile 87. Rolls FAC p67 r0 c2 park 2d6=6 1d6=3 pct=87. (page 13)
-BALLPARK. Devon White bats L. FENWAY PARK wheelhouse runs through 28 (page 9).
-Re-roll percentile 69 onto IN-PLAY. Rolls FAC p55 r0 c3 pct 2d6=10 1d6=3 pct=69. Page 2 names the percentile. Page 9 says re-roll the dice.
-GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
-IN-PLAY section percentile 69 is an out: G6.
-Groundout G6 (page 17).
-Ernie Whitt (C) vs Pedro Martinez. 1 out, bases empty.
-FAC pitch. 2d6=11 -> DEFENSE. Rolls FAC p50 r1 c1 pitch 2d6=11 1d6=5 pct=71.
-DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
-FAC defense. DEFENSE ERROR? 1B. Rolls FAC p41 r1 c2 defense 2d6=3 1d6=2 pct=46. (page 13)
-Park check percentile 92. Rolls FAC p67 r1 c2 park 2d6=6 1d6=6 pct=92.
-Park error 1 is an error through 55.
-Park check is OUT. Symbols on the park card are ignored (page 13).
-FAC OUT row. Rolls FAC p66 r0 c0 defense-play 2d6=7 1d6=4 pct=96.
-FAC OUT cell GB-FC (page 20).
-Nobody to force. Batter out.
-Roberto Alomar (2B) vs Pedro Martinez. 2 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p67 r1 c0 pitch 2d6=7 1d6=1 pct=27.
+Dwight Evans (RF) vs Dave Stieb. 2 out, Jimmie Foxx on 1st, David Ortiz on 2nd, Dustin Pedroia on 3rd.
+FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p65 r1 c2 pitch 2d6=5 1d6=3 pct=45.
 FAC percentile 78. This card's 2d6 is 9. Rolls FAC p46 r0 c0 batter 2d6=9 1d6=3 pct=78.
 Read the batter's TOUGH section (page 4).
 TOUGH section percentile 78 is an out: F8.
 Fly F8 to CF. The pitcher result is ordinary for the out chart (page 17).
 Third out on the catch. A runner does not score after the third out.
 GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
-— bottom 7. BOS bats. Dave Stieb pitches. Score TOR 2, BOS 1.
-Nomar Garciaparra (SS) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p53 r0 c1 pitch 2d6=7 1d6=3 pct=65.
-FAC percentile 66. This card's 2d6 is 9. Rolls FAC p64 r1 c0 batter 2d6=9 1d6=6 pct=66.
+— top 5. TOR bats. Pedro Martinez pitches. Score TOR 0, BOS 0.
+Carlos Delgado (1B) vs Pedro Martinez. 0 out, bases empty.
+FAC p54 r0 c0 WP? percentile 38. Bases are empty, so page 10 does not call a wild pitch.
+FAC pitch. 2d6=4 -> IN-PLAY. Rolls FAC p54 r0 c0 pitch 2d6=4 1d6=5 WP? pct=38.
+FAC percentile 08. This card's 2d6 is 12. Rolls FAC p61 r0 c0 batter 2d6=12 1d6=6 pct=08.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 08 is 2B.
+2B.
+Carlos Delgado to second.
+Carlos Delgado has Jump 1. Page 39 uses 2 this time and does not check him again.
+Auto steal uses 2d6=12 on the card that resolved the play (page 13).
+Auto-steal check 2d6=12 against jump 2.
+Pickoff. Hold 7, percentile 47 -> SAFE (page 18).
+Pickoff throw is late. Runner is safe.
+Jose Bautista (DH) vs Pedro Martinez. 0 out, Carlos Delgado on 2nd.
+FAC pitch. 2d6=11 -> BALLPARK. Rolls FAC p66 r1 c1 pitch 2d6=11 1d6=4 pct=70.
+BALLPARK. The home chart is checked (page 9).
+FAC ballpark percentile 25. Rolls FAC p46 r0 c2 park 2d6=11 1d6=4 pct=25. (page 13)
+BALLPARK. Jose Bautista bats R. FENWAY PARK wheelhouse runs through 46 (page 9).
+Re-roll percentile 57 onto WHEELHOUSE. Rolls FAC p40 r0 c1 pct 2d6=7 1d6=3 pct=57. Page 2 names the percentile. Page 9 says re-roll the dice.
+GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
+WHEELHOUSE section percentile 57 is HR.
+HR.
+Carlos Delgado scores from second.
+Jose Bautista scores.
+George Bell (LF) vs Pedro Martinez. 0 out, bases empty.
+FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p71 r1 c3 pitch 2d6=9 1d6=5 pct=83.
+FAC percentile 43. This card's 2d6 is 5. Rolls FAC p50 r0 c3 batter 2d6=5 1d6=1 pct=43.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 43 is 1B.
+1B.
+George Bell to first.
+Auto steal uses 2d6=5 on the card that resolved the play (page 13).
+Auto-steal check 2d6=5 against jump 3.
+No steal.
+Jesse Barfield (RF) vs Pedro Martinez. 0 out, George Bell on 1st.
+FAC pitch. 2d6=11 -> BALLPARK. Rolls FAC p47 r0 c0 pitch 2d6=11 1d6=4 pct=98.
+BALLPARK. The home chart is checked (page 9).
+FAC ballpark percentile 98. Rolls FAC p47 r1 c0 park 2d6=8 1d6=2 pct=98. (page 13)
+BALLPARK. Jesse Barfield bats R. FENWAY PARK wheelhouse runs through 46 (page 9).
+Re-roll percentile 02 onto IN-PLAY. Rolls FAC p64 r0 c3 pct 2d6=9 1d6=6 pct=02. Page 2 names the percentile. Page 9 says re-roll the dice.
+GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
+IN-PLAY section percentile 02 is 2B.
+FAC double. Line drive into the alley CF. All Runners score. 1d6=5 on this card. Rolls FAC p41 r1 c1 advance 2d6=9 1d6=5 pct=01. (pages 13-14)
+George Bell scores from first (FAC).
+2B.
+Jesse Barfield to second.
+Auto steal uses 2d6=9 on the card that resolved the play (page 13).
+Auto-steal check 2d6=9 against jump 3.
+GAP: Stealing third needs doubles. A Fast Action Card prints the 2d6 total and not the two dice (pages 12-13). Two dice are rolled for that check. Page 15 allows dice with the deck.
+Doubles check 1 and 4. Rolls d6=1, d6=4.
+Stealing third needs doubles (page 7). He does not go.
+Devon White (CF) vs Pedro Martinez. 0 out, Jesse Barfield on 2nd.
+FAC pitch. 2d6=4 -> IN-PLAY. Rolls FAC p58 r0 c3 pitch 2d6=4 1d6=5 pct=13.
+FAC percentile 56. This card's 2d6 is 6. Rolls FAC p68 r0 c2 batter 2d6=6 1d6=6 pct=56.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 56 is an out: F7.
+Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
+Ernie Whitt (C) vs Pedro Martinez. 1 out, Jesse Barfield on 2nd.
+FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p47 r1 c2 pitch 2d6=7 1d6=3 pct=01.
+FAC percentile 01. This card's 2d6 is 2. Rolls FAC p58 r0 c0 batter 2d6=2 1d6=1 pct=01.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 01 is SO.
+Strikeout. Runners hold (page 5).
+Roberto Alomar (2B) vs Pedro Martinez. 2 out, Jesse Barfield on 2nd.
+FAC p56 r0 c1 WP? percentile 33 is outside Pedro Martinez's WP rating 30. No wild pitch (page 10).
+FAC pitch. 2d6=10 -> TOUGH. Rolls FAC p56 r0 c1 pitch 2d6=10 1d6=3 WP? pct=33.
+FAC percentile 25. This card's 2d6 is 7. Rolls FAC p70 r0 c2 batter 2d6=7 1d6=5 pct=25.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 25 is SO.
+Strikeout. Runners hold (page 5).
+— bottom 5. BOS bats. Dave Stieb pitches. Score TOR 3, BOS 0.
+Wade Boggs (3B) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=4 -> BALLPARK. Rolls FAC p70 r0 c1 pitch 2d6=4 1d6=5 pct=41.
+BALLPARK. The home chart is checked (page 9).
+FAC ballpark percentile 81. Rolls FAC p51 r1 c3 park 2d6=2 1d6=1 pct=81. (page 13)
+BALLPARK. Wade Boggs bats L. FENWAY PARK wheelhouse runs through 28 (page 9).
+Re-roll percentile 76 onto IN-PLAY. Rolls FAC p57 r0 c0 pct 2d6=10 1d6=2 pct=76. Page 2 names the percentile. Page 9 says re-roll the dice.
+GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
+IN-PLAY section percentile 76 is an out: G6.
+Groundout G6 (page 17).
+Nomar Garciaparra (SS) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p67 r0 c1 pitch 2d6=5 1d6=1 pct=79.
+FAC percentile 32. This card's 2d6 is 10. Rolls FAC p57 r1 c0 batter 2d6=10 1d6=2 WP? pct=32.
+FAC p57 r1 c0 WP? percentile 32. Bases are empty, so page 10 does not call a wild pitch.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 32 is 1B.
+1B.
+Nomar Garciaparra to first.
+Auto steal uses 2d6=10 on the card that resolved the play (page 13).
+Auto-steal check 2d6=10 against jump 3.
+No steal.
+Carlton Fisk (C) vs Dave Stieb. 1 out, Nomar Garciaparra on 1st.
+Sacrifice bunt called (usage choice, page 9 option 1). Carlton Fisk bunt letter F. The card has no auto-bunt 2d6 numbers, so option 2 cannot fire.
+FAC p59 r0 c2 WP? percentile 39 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
+FAC bunt F -> SH. 1d6=3 names the fielder (pages 13-14 and 19). Rolls FAC p59 r0 c2 bunt 2d6=3 1d6=3 WP? pct=39.
+Nomar Garciaparra to second.
+Sacrifice. Batter out, runners advance 1 (page 19).
+Tris Speaker (CF) vs Dave Stieb. 2 out, Nomar Garciaparra on 2nd.
+FAC p69 r0 c2 WP? percentile 38 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
+FAC pitch. 2d6=9 -> PATIENT. Rolls FAC p69 r0 c2 pitch 2d6=9 1d6=6 WP? pct=38.
+FAC percentile 88. This card's 2d6 is 7. Rolls FAC p63 r0 c3 batter 2d6=7 1d6=4 pct=88.
+Read the batter's PATIENT section (page 4).
+PATIENT section percentile 88 is HBP.
+HBP. Forced runners advance (page 5).
+Tris Speaker to first.
+Dustin Pedroia (2B) vs Dave Stieb. 2 out, Tris Speaker on 1st, Nomar Garciaparra on 2nd.
+FAC p65 r0 c3 WP? percentile 34 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
+FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p65 r0 c3 pitch 2d6=8 1d6=2 WP? pct=34.
+FAC percentile 24. This card's 2d6 is 7. Rolls FAC p52 r0 c2 batter 2d6=7 1d6=4 pct=24.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 24 is 1B.
+FAC single. Opposite field liner into LF/RF. Runner on 1st advances 1 base +?; Runner on 2nd scores. 1d6=2 on this card. Rolls FAC p45 r0 c0 advance 2d6=7 1d6=2 pct=65. (pages 13-14)
+Tris Speaker RUN 10 with two outs takes the automatic extra base (page 14).
+Nomar Garciaparra RUN 10 with two outs takes the automatic extra base (page 14).
+Nomar Garciaparra scores from second (FAC).
+Tris Speaker to third (FAC).
+1B.
+Dustin Pedroia to first.
+Auto steal uses 2d6=7 on the card that resolved the play (page 13).
+Auto-steal check 2d6=7 against jump 3.
+No steal.
+Ted Williams (LF) vs Dave Stieb. 2 out, Dustin Pedroia on 1st, Tris Speaker on 3rd.
+FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p70 r0 c0 pitch 2d6=5 1d6=3 pct=89.
+FAC percentile 66. This card's 2d6 is 8. Rolls FAC p56 r0 c2 batter 2d6=8 1d6=4 pct=66.
 Read the batter's TOUGH section (page 4).
 TOUGH section percentile 66 is an out: F9.
 Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
-Carlton Fisk (C) vs Dave Stieb. 1 out, bases empty.
-FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p62 r0 c0 pitch 2d6=6 1d6=3 pct=56.
-FAC percentile 94. This card's 2d6 is 8. Rolls FAC p69 r1 c2 batter 2d6=8 1d6=4 pct=94.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 94 is an out: F9.
-Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
-Tris Speaker (CF) vs Dave Stieb. 2 out, bases empty.
-FAC p56 r1 c2 WP? percentile 38. Bases are empty, so page 10 does not call a wild pitch.
-FAC pitch. 2d6=3 -> DEFENSE. Rolls FAC p56 r1 c2 pitch 2d6=3 1d6=2 WP? pct=38.
-DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
-FAC defense. DEFENSE ERROR? 2B. Rolls FAC p57 r0 c1 defense 2d6=7 1d6=1 pct=55. (page 13)
-Park check percentile 73. Rolls FAC p63 r1 c2 park 2d6=2 1d6=1 pct=73.
-Park error 1 is an error through 55.
-Park check is OUT. Symbols on the park card are ignored (page 13).
-FAC OUT row. Rolls FAC p60 r0 c0 defense-play 2d6=8 1d6=5 pct=23.
-FAC OUT cell GB-ADV (page 20).
-Batter out. Runners advance 1.
-— top 8. TOR bats. Pedro Martinez pitches. Score TOR 2, BOS 1.
-Tony Fernandez (SS) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=2 -> WHEELHOUSE. Rolls FAC p46 r1 c2 pitch 2d6=2 1d6=1 pct=09.
-FAC percentile 05. This card's 2d6 is 8. Rolls FAC p51 r0 c3 batter 2d6=8 1d6=5 pct=05.
-Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 05 is HR.
-HR.
-Tony Fernandez scores.
+Third out on the catch. A runner does not score after the third out.
+GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
+— top 6. TOR bats. Pedro Martinez pitches. Score TOR 3, BOS 1.
 Pedro Martinez reached inning 6 of his Start rating with 3 runs and is fatigued (pages 10-11).
-Josh Donaldson (3B) vs Pedro Martinez. 0 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p40 r0 c1 pitch 2d6=7 1d6=3 pct=57.
-FAC percentile 89. This card's 2d6 is 7. Rolls FAC p61 r1 c0 batter 2d6=7 1d6=5 pct=89.
-Fatigue chart reads TOUGH as WHEELHOUSE (page 21, SP).
-Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 89 is 1B.
-1B.
-Josh Donaldson to first.
-Auto steal uses 2d6=7 on the card that resolved the play (page 13).
-Auto-steal check 2d6=7 against jump 2.
-No steal.
-Carlos Delgado (1B) vs Pedro Martinez. 0 out, Josh Donaldson on 1st.
-FAC pitch. 2d6=10 -> TOUGH. Rolls FAC p50 r0 c0 pitch 2d6=10 1d6=3 pct=05.
-FAC percentile 75. This card's 2d6 is 10. Rolls FAC p44 r1 c1 batter 2d6=10 1d6=1 pct=75.
-Fatigue chart reads TOUGH as WHEELHOUSE (page 21, SP).
-Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 75 is 2B.
-FAC double. Deep drive off LF wall. All Runners score. 1d6=2 on this card. Rolls FAC p44 r0 c0 advance 2d6=10 1d6=2 pct=40. (pages 13-14)
-Josh Donaldson scores from first (FAC).
-2B.
-Carlos Delgado to second.
-Carlos Delgado used a Jump of 1 earlier. Page 39 says he is not checked again.
-Jose Bautista (DH) vs Pedro Martinez. 0 out, Carlos Delgado on 2nd.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p66 r0 c3 pitch 2d6=7 1d6=6 pct=61.
-FAC percentile 18. This card's 2d6 is 7. Rolls FAC p69 r0 c0 batter 2d6=7 1d6=6 pct=18.
+Tony Fernandez (SS) vs Pedro Martinez. 0 out, bases empty.
+FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p49 r1 c1 pitch 2d6=5 1d6=2 pct=88.
+FAC percentile 11. This card's 2d6 is 3. Rolls FAC p69 r0 c1 batter 2d6=3 1d6=3 pct=11.
 Fatigue chart reads TOUGH as TOUGH (page 21, SP).
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 18 is SO.
+TOUGH section percentile 11 is SO.
 Strikeout. Runners hold (page 5).
-George Bell (LF) vs Pedro Martinez. 1 out, Carlos Delgado on 2nd.
-FAC pitch. 2d6=5 -> PATIENT. Rolls FAC p53 r1 c0 pitch 2d6=5 1d6=3 pct=53.
-FAC percentile 95. This card's 2d6 is 10. Rolls FAC p65 r0 c2 batter 2d6=10 1d6=3 pct=95.
-Fatigue chart reads PATIENT as WHEELHOUSE (page 21, SP).
+Josh Donaldson (3B) vs Pedro Martinez. 1 out, bases empty.
+FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p45 r1 c3 pitch 2d6=9 1d6=3 pct=12.
+FAC percentile 69. This card's 2d6 is 8. Rolls FAC p44 r0 c1 batter 2d6=8 1d6=1 pct=69.
+Fatigue chart reads TOUGH as WHEELHOUSE (page 21, SP).
 Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 95 is an out: F7.
-Fly F7 to LF. The pitcher result is deep for the out chart (page 17).
-F7: the runner on second may try, with RUN reduced by 2 (page 17).
-Send Carlos Delgado? 2d6=6 against RUN 4. He goes when the roll is less than RUN (page 16). Rolls FAC p64 r1 c1 2d6 2d6=6 1d6=5 pct=55.
-He holds.
-Jesse Barfield (RF) vs Pedro Martinez. 2 out, Carlos Delgado on 2nd.
-FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p53 r0 c3 pitch 2d6=6 1d6=1 pct=13.
-FAC percentile 63. This card's 2d6 is 7. Rolls FAC p52 r0 c3 batter 2d6=7 1d6=1 pct=63.
+WHEELHOUSE section percentile 69 is HR.
+HR.
+Josh Donaldson scores.
+Carlos Delgado (1B) vs Pedro Martinez. 1 out, bases empty.
+FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p40 r0 c3 pitch 2d6=9 1d6=5 pct=65.
+FAC percentile 67. This card's 2d6 is 7. Rolls FAC p43 r1 c1 batter 2d6=7 1d6=3 pct=67.
+Fatigue chart reads TOUGH as WHEELHOUSE (page 21, SP).
+Read the batter's WHEELHOUSE section (page 4).
+WHEELHOUSE section percentile 67 is HR.
+HR.
+Carlos Delgado scores.
+Jose Bautista (DH) vs Pedro Martinez. 1 out, bases empty.
+FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p69 r1 c3 pitch 2d6=8 1d6=1 pct=09.
+FAC percentile 58. This card's 2d6 is 6. Rolls FAC p50 r1 c3 batter 2d6=6 1d6=2 pct=58.
 Fatigue chart reads TOUGH as IN-PLAY (page 21, SP).
 Read the batter's IN-PLAY section (page 4).
-IN-PLAY section percentile 63 is an out: F9.
+IN-PLAY section percentile 58 is an out: G5.
+Groundout G5 (page 17).
+George Bell (LF) vs Pedro Martinez. 2 out, bases empty.
+FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p57 r1 c2 pitch 2d6=7 1d6=4 pct=60.
+FAC percentile 20. This card's 2d6 is 10. Rolls FAC p42 r0 c2 batter 2d6=10 1d6=1 pct=20.
+Fatigue chart reads TOUGH as TOUGH (page 21, SP).
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 20 is SO.
+Strikeout. Runners hold (page 5).
+— bottom 6. BOS bats. Dave Stieb pitches. Score TOR 5, BOS 1.
+David Ortiz (1B) vs Dave Stieb. 0 out, bases empty.
+FAC p53 r1 c2 WP? percentile 30. Bases are empty, so page 10 does not call a wild pitch.
+FAC pitch. 2d6=8 -> IN-PLAY. Rolls FAC p53 r1 c2 pitch 2d6=8 1d6=4 WP? pct=30.
+FAC percentile 85. This card's 2d6 is 4. Rolls FAC p68 r1 c1 batter 2d6=4 1d6=5 pct=85.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 85 is an out: G4.
+Groundout G4 (page 17).
+Jimmie Foxx (1B) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=9 -> PATIENT. Rolls FAC p47 r1 c3 pitch 2d6=9 1d6=6 pct=86.
+FAC percentile 00. This card's 2d6 is 12. Rolls FAC p48 r0 c2 batter 2d6=12 1d6=6 pct=00.
+Percentile 00. Rare play. Re-roll percentile 81. Rolls FAC p54 r1 c2 pct 2d6=5 1d6=3 pct=81. (page 4)
+Rare-play cell is not transcribed. Pages 22-30. Section PATIENT, percentile 81, bases empty. The at-bat is rolled again, which the book does not say to do.
+GAP: Rare-play cell is not transcribed. Pages 22-30. Section PATIENT, percentile 81, bases empty. The at-bat is rolled again, which the book does not say to do.
+Jimmie Foxx (1B) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p52 r0 c3 pitch 2d6=7 1d6=1 pct=63.
+FAC percentile 78. This card's 2d6 is 11. Rolls FAC p43 r1 c2 batter 2d6=11 1d6=4 pct=78.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 78 is an out: F8.
+Fly F8 to CF. The pitcher result is ordinary for the out chart (page 17).
+Dwight Evans (RF) vs Dave Stieb. 2 out, bases empty.
+FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p42 r1 c2 pitch 2d6=5 1d6=3 pct=17.
+FAC percentile 07. This card's 2d6 is 5. Rolls FAC p42 r0 c3 batter 2d6=5 1d6=1 pct=07.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 07 is SO.
+Strikeout. Runners hold (page 5).
+Recommended reshuffle after three full innings (page 12). Inning 6 is complete.
+— top 7. TOR bats. Pedro Martinez pitches. Score TOR 5, BOS 1.
+Pitching change: Babe Ruth replaces Pedro Martinez. Starter is fatigued at the end of a half-inning. The book lets him stay on the fatigue card. This game brings in a reliever.
+Jesse Barfield (RF) vs Babe Ruth. 0 out, bases empty.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p46 r0 c3 pitch 2d6=6 1d6=5 pct=91.
+FAC percentile 52. This card's 2d6 is 6. Rolls FAC p66 r1 c0 batter 2d6=6 1d6=1 pct=52.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 52 is SO.
+Strikeout. Runners hold (page 5).
+Devon White (CF) vs Babe Ruth. 1 out, bases empty.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p62 r0 c0 pitch 2d6=6 1d6=3 pct=56.
+FAC percentile 96. This card's 2d6 is 7. Rolls FAC p66 r0 c0 batter 2d6=7 1d6=4 pct=96.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 96 is an out: F9.
+Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
+Ernie Whitt (C) vs Babe Ruth. 2 out, bases empty.
+FAC p46 r1 c0 WP? percentile 36. Bases are empty, so page 10 does not call a wild pitch.
+FAC pitch. 2d6=12 -> TOUGH. Rolls FAC p46 r1 c0 pitch 2d6=12 1d6=6 WP? pct=36.
+FAC percentile 92. This card's 2d6 is 6. Rolls FAC p67 r1 c2 batter 2d6=6 1d6=6 pct=92.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 92 is an out: F9.
 Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
 Third out on the catch. A runner does not score after the third out.
 GAP: Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
-— bottom 8. BOS bats. Dave Stieb pitches. Score TOR 4, BOS 1.
-Dustin Pedroia (2B) vs Dave Stieb. 0 out, bases empty.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p69 r1 c1 pitch 2d6=7 1d6=4 pct=16.
-FAC percentile 03. This card's 2d6 is 8. Rolls FAC p42 r0 c0 batter 2d6=8 1d6=4 pct=03.
+— bottom 7. BOS bats. Dave Stieb pitches. Score TOR 5, BOS 1.
+Wade Boggs (3B) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p48 r1 c1 pitch 2d6=7 1d6=4 pct=52.
+FAC percentile 86. This card's 2d6 is 4. Rolls FAC p70 r1 c2 batter 2d6=4 1d6=6 pct=86.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 03 is SO.
-Strikeout. Runners hold (page 5).
-Ted Williams (LF) vs Dave Stieb. 1 out, bases empty.
-FAC pitch. 2d6=9 -> PATIENT. Rolls FAC p68 r1 c0 pitch 2d6=9 1d6=3 pct=27.
-FAC percentile 95. This card's 2d6 is 6. Rolls FAC p51 r0 c0 batter 2d6=6 1d6=3 pct=95.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 95 is BB.
-BB. Forced runners advance (page 5).
-Ted Williams to first.
-Auto steal uses 2d6=6 on the card that resolved the play (page 13).
-Auto-steal check 2d6=6 against jump 2.
-No steal.
-David Ortiz (1B) vs Dave Stieb. 1 out, Ted Williams on 1st.
-FAC pitch. 2d6=3 -> DEFENSE. Rolls FAC p50 r0 c1 pitch 2d6=3 1d6=3 pct=47.
-DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
-FAC p71 r1 c0 WP? percentile 31 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
-FAC defense. DEFENSE ERROR? SS. Rolls FAC p71 r1 c0 defense 2d6=7 1d6=4 WP? pct=31. (page 13)
-Park check percentile 22. Rolls FAC p60 r1 c3 park 2d6=6 1d6=2 pct=22.
-Park error 3 is an error through 42.
-Park check is ERR. Symbols on the park card are ignored (page 13).
-FAC ERR row. Rolls FAC p58 r0 c1 defense-play 2d6=4 1d6=5 pct=49.
-2-base error (page 20). The batter reaches on the error, which is not a hit.
-Ted Williams to third.
-David Ortiz to second.
-Jimmie Foxx (1B) vs Dave Stieb. 1 out, David Ortiz on 2nd, Ted Williams on 3rd.
-FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p47 r1 c2 pitch 2d6=7 1d6=3 pct=01.
-FAC percentile 85. This card's 2d6 is 4. Rolls FAC p68 r1 c1 batter 2d6=4 1d6=5 pct=85.
+TOUGH section percentile 86 is an out: F8.
+Fly F8 to CF. The pitcher result is ordinary for the out chart (page 17).
+Nomar Garciaparra (SS) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p67 r0 c2 pitch 2d6=6 1d6=3 pct=87.
+FAC percentile 64. This card's 2d6 is 7. Rolls FAC p57 r0 c2 batter 2d6=7 1d6=2 pct=64.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 85 is an out: G4.
-Ted Williams scores from third on a grounder to 2B (page 17).
-David Ortiz second to third on a grounder to 2B (page 17).
+TOUGH section percentile 64 is an out: F9.
+Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
+Carlton Fisk (C) vs Dave Stieb. 2 out, bases empty.
+FAC pitch. 2d6=5 -> TOUGH. Rolls FAC p52 r1 c2 pitch 2d6=5 1d6=2 pct=80.
+FAC percentile 89. This card's 2d6 is 10. Rolls FAC p41 r1 c0 batter 2d6=10 1d6=1 pct=89.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 89 is an out: G4.
 Groundout G4 (page 17).
-Dwight Evans (RF) vs Dave Stieb. 2 out, David Ortiz on 3rd.
-FAC pitch. 2d6=4 -> PATIENT. Rolls FAC p63 r0 c1 pitch 2d6=4 1d6=4 pct=48.
-FAC percentile 80. This card's 2d6 is 9. Rolls FAC p51 r0 c1 batter 2d6=9 1d6=4 pct=80.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 80 is 1B.
-FAC single. Line drive into LF. Runner on 1st advances 1 base; Runner on 2nd 1 base. 1d6=3 on this card. Rolls FAC p43 r1 c1 advance 2d6=7 1d6=3 pct=67. (pages 13-14)
-David Ortiz RUN 7 with two outs takes the automatic extra base (page 14).
-David Ortiz scores from third (FAC).
-1B.
-Dwight Evans to first.
-Auto steal uses 2d6=9 on the card that resolved the play (page 13).
-Auto-steal check 2d6=9 against jump 2.
-No steal.
-Dave Stieb reached inning 7 of his Start rating with 3 runs and is fatigued (pages 10-11).
-Wade Boggs (3B) vs Dave Stieb. 2 out, Dwight Evans on 1st.
-FAC p59 r0 c2 WP? percentile 39 is outside Dave Stieb's WP rating 30. No wild pitch (page 10).
-FAC pitch. 2d6=3 -> DEFENSE. Rolls FAC p59 r0 c2 pitch 2d6=3 1d6=3 WP? pct=39.
-DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
-FAC defense. DEFENSE RANGE? SS. Rolls FAC p40 r1 c0 defense 2d6=6 1d6=3 pct=23. (page 13)
-Park check percentile 45. Rolls FAC p65 r1 c2 park 2d6=5 1d6=3 pct=45.
-Park range B hits through 44 at FENWAY PARK.
-Park check is OUT. Symbols on the park card are ignored (page 13).
-FAC OUT row. Rolls FAC p62 r1 c2 defense-play 2d6=8 1d6=4 pct=22.
-FAC OUT cell GB-ADV (page 20).
-Dwight Evans to second.
-Batter out. Runners advance 1.
-— top 9. TOR bats. Pedro Martinez pitches. Score TOR 4, BOS 3.
-Pitching change: Babe Ruth replaces Pedro Martinez. Starter is fatigued at the end of a half-inning. The book lets him stay on the fatigue card. This game brings in a reliever.
-Devon White (CF) vs Babe Ruth. 0 out, bases empty.
-FAC pitch. 2d6=4 -> TOUGH. Rolls FAC p44 r0 c3 pitch 2d6=4 1d6=6 pct=78.
-FAC percentile 05. This card's 2d6 is 4. Rolls FAC p64 r1 c2 batter 2d6=4 1d6=5 pct=05.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 05 is SO.
-Strikeout. Runners hold (page 5).
-Ernie Whitt (C) vs Babe Ruth. 1 out, bases empty.
-FAC p50 r1 c0 WP? percentile 39. Bases are empty, so page 10 does not call a wild pitch.
-FAC pitch. 2d6=10 -> PATIENT. Rolls FAC p50 r1 c0 pitch 2d6=10 1d6=1 WP? pct=39.
-FAC percentile 60. This card's 2d6 is 8. Rolls FAC p71 r1 c2 batter 2d6=8 1d6=3 pct=60.
-Read the batter's PATIENT section (page 4).
-PATIENT section percentile 60 is 2B.
+— top 8. TOR bats. Babe Ruth pitches. Score TOR 5, BOS 1.
+Roberto Alomar (2B) vs Babe Ruth. 0 out, bases empty.
+FAC pitch. 2d6=4 -> BALLPARK. Rolls FAC p69 r0 c3 pitch 2d6=4 1d6=6 pct=14.
+BALLPARK. The home chart is checked (page 9).
+FAC p56 r1 c2 WP? percentile 38. Bases are empty, so page 10 does not call a wild pitch.
+FAC ballpark percentile 38. Rolls FAC p56 r1 c2 park 2d6=3 1d6=2 WP? pct=38. (page 13)
+BALLPARK. Roberto Alomar bats R. FENWAY PARK wheelhouse runs through 46 (page 9).
+Re-roll percentile 26 onto WHEELHOUSE. Rolls FAC p50 r0 c2 pct 2d6=8 1d6=2 pct=26. Page 2 names the percentile. Page 9 says re-roll the dice.
+GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
+WHEELHOUSE section percentile 26 is 2B.
 2B.
-Ernie Whitt to second.
+Roberto Alomar to second.
 Auto steal uses 2d6=8 on the card that resolved the play (page 13).
-Auto-steal check 2d6=8 against jump 2.
+Auto-steal check 2d6=8 against jump 5.
 GAP: Stealing third needs doubles. A Fast Action Card prints the 2d6 total and not the two dice (pages 12-13). Two dice are rolled for that check. Page 15 allows dice with the deck.
 Doubles check 3 and 4. Rolls d6=3, d6=4.
 Stealing third needs doubles (page 7). He does not go.
-Roberto Alomar (2B) vs Babe Ruth. 1 out, Ernie Whitt on 2nd.
-FAC pitch. 2d6=7 -> PATIENT. Rolls FAC p63 r0 c3 pitch 2d6=7 1d6=4 pct=88.
-FAC percentile 62. This card's 2d6 is 8. Rolls FAC p71 r0 c0 batter 2d6=8 1d6=2 pct=62.
+Tony Fernandez (SS) vs Babe Ruth. 0 out, Roberto Alomar on 2nd.
+FAC pitch. 2d6=5 -> PATIENT. Rolls FAC p70 r0 c0 pitch 2d6=5 1d6=3 pct=89.
+FAC percentile 21. This card's 2d6 is 10. Rolls FAC p61 r1 c2 batter 2d6=10 1d6=2 pct=21.
 Read the batter's PATIENT section (page 4).
-PATIENT section percentile 62 is 1B.
-FAC single. Hard grounder into RF/LF. Runner on 1st advances 2 bases; Runner on 2nd scores. 1d6=2 on this card. Rolls FAC p58 r1 c3 advance 2d6=7 1d6=2 pct=92. (pages 13-14)
-Ernie Whitt scores from second (FAC).
-1B.
-Roberto Alomar to first.
+PATIENT section percentile 21 is BB.
+BB. Forced runners advance (page 5).
+Tony Fernandez to first.
+Josh Donaldson (3B) vs Babe Ruth. 0 out, Tony Fernandez on 1st, Roberto Alomar on 2nd.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p48 r1 c0 pitch 2d6=6 1d6=2 pct=86.
+FAC percentile 70. This card's 2d6 is 8. Rolls FAC p49 r0 c3 batter 2d6=8 1d6=2 pct=70.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 70 is an out: G4.
+FAC p48 r0 c3 WP? percentile 31 is outside Babe Ruth's WP rating 30. No wild pitch (page 10).
+Double-play check. Lower DP 7. 2d6 2d6=8. At-bat percentile 70. Rolls FAC p48 r0 c3 2d6 2d6=8 1d6=5 WP? pct=31. (pages 6 and 17)
+Tony Fernandez is forced at second. 1 out.
+Roberto Alomar to third.
+Fielder's choice. Batter safe at first (page 6).
+Josh Donaldson to first.
 Auto steal uses 2d6=8 on the card that resolved the play (page 13).
-Auto-steal check 2d6=8 against jump 4.
+Auto-steal check 2d6=8 against jump 2.
 No steal.
-Tony Fernandez (SS) vs Babe Ruth. 1 out, Roberto Alomar on 1st.
-FAC pitch. 2d6=11 -> BALLPARK. Rolls FAC p43 r1 c2 pitch 2d6=11 1d6=4 pct=78.
-Hit and run called (optional, page 10). The moment it is called is a usage choice.
+Carlos Delgado (1B) vs Babe Ruth. 1 out, Josh Donaldson on 1st, Roberto Alomar on 3rd.
+FAC pitch. 2d6=7 -> IN-PLAY. Rolls FAC p67 r1 c0 pitch 2d6=7 1d6=1 pct=27.
+FAC percentile 17. This card's 2d6 is 7. Rolls FAC p41 r0 c0 batter 2d6=7 1d6=5 pct=17.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 17 is 1B.
+FAC single. Opposite field liner into LF/RF. Runner on 1st advances 2 bases; Runner on 2nd scores. 1d6=3 on this card. Rolls FAC p68 r1 c0 advance 2d6=9 1d6=3 pct=27. (pages 13-14)
+Roberto Alomar scores from third (FAC).
+Josh Donaldson to third (FAC).
+1B.
+Carlos Delgado to first.
+Carlos Delgado used a Jump of 1 earlier. Page 39 says he is not checked again.
+Jose Bautista (DH) vs Babe Ruth. 1 out, Carlos Delgado on 1st, Josh Donaldson on 3rd.
+FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p42 r0 c0 pitch 2d6=8 1d6=4 pct=03.
+FAC percentile 54. This card's 2d6 is 6. Rolls FAC p54 r0 c3 batter 2d6=6 1d6=2 pct=54.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 54 is an out: G5.
+FAC p59 r0 c0 WP? percentile 32 is outside Babe Ruth's WP rating 30. No wild pitch (page 10).
+Double-play check. Lower DP 7. 2d6 2d6=8. At-bat percentile 54. Rolls FAC p59 r0 c0 2d6 2d6=8 1d6=6 WP? pct=32. (pages 6 and 17)
+Carlos Delgado is forced at second. 2 out.
+Josh Donaldson scores from third.
+Fielder's choice. Batter safe at first (page 6).
+Jose Bautista to first.
+Auto steal uses 2d6=6 on the card that resolved the play (page 13).
+Auto-steal check 2d6=6 against jump 3.
+No steal.
+George Bell (LF) vs Babe Ruth. 2 out, Jose Bautista on 1st.
+FAC p42 r1 c1 WP? percentile 31 is outside Babe Ruth's WP rating 30. No wild pitch (page 10).
+FAC pitch. 2d6=10 -> IN-PLAY. Rolls FAC p42 r1 c1 pitch 2d6=10 1d6=1 WP? pct=31.
+FAC percentile 83. This card's 2d6 is 9. Rolls FAC p55 r1 c1 batter 2d6=9 1d6=5 pct=83.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 83 is an out: G6.
+Groundout G6 (page 17).
+— bottom 8. BOS bats. Dave Stieb pitches. Score TOR 7, BOS 1.
+Tris Speaker (CF) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p45 r1 c0 pitch 2d6=6 1d6=5 pct=11.
+FAC percentile 13. This card's 2d6 is 6. Rolls FAC p53 r0 c3 batter 2d6=6 1d6=1 pct=13.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 13 is SO.
+Strikeout. Runners hold (page 5).
+Dustin Pedroia (2B) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=7 -> TOUGH. Rolls FAC p51 r0 c2 pitch 2d6=7 1d6=5 pct=53.
+FAC percentile 20. This card's 2d6 is 7. Rolls FAC p44 r1 c2 batter 2d6=7 1d6=2 pct=20.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 20 is SO.
+Strikeout. Runners hold (page 5).
+Ted Williams (LF) vs Dave Stieb. 2 out, bases empty.
+FAC pitch. 2d6=3 -> DEFENSE. Rolls FAC p41 r1 c2 pitch 2d6=3 1d6=2 pct=46.
+DEFENSE. The defense chart uses this percentile, then all four dice are re-rolled (pages 2 and 20).
+FAC defense. DEFENSE ERROR? 3B. Rolls FAC p71 r1 c3 defense 2d6=9 1d6=5 pct=83. (page 13)
+Park check percentile 44. Rolls FAC p62 r1 c1 park 2d6=12 1d6=6 pct=44.
+Park error 4 is an error through 32.
+Park check is OUT. Symbols on the park card are ignored (page 13).
+FAC OUT row. Rolls FAC p43 r1 c0 defense-play 2d6=9 1d6=5 pct=16.
+FAC OUT cell GB-DP-A (page 20).
+No runner on first. Batter out.
+— top 9. TOR bats. Babe Ruth pitches. Score TOR 7, BOS 1.
+Jesse Barfield (RF) vs Babe Ruth. 0 out, bases empty.
+FAC pitch. 2d6=8 -> TOUGH. Rolls FAC p47 r0 c3 pitch 2d6=8 1d6=2 pct=10.
+FAC percentile 61. This card's 2d6 is 8. Rolls FAC p68 r0 c1 batter 2d6=8 1d6=1 pct=61.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 61 is SO.
+Strikeout. Runners hold (page 5).
+Devon White (CF) vs Babe Ruth. 1 out, bases empty.
+FAC pitch. 2d6=7 -> IN-PLAY. Rolls FAC p59 r1 c0 pitch 2d6=7 1d6=2 pct=00.
+FAC percentile 68. This card's 2d6 is 8. Rolls FAC p55 r0 c2 batter 2d6=8 1d6=6 pct=68.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 68 is an out: G6.
+Groundout G6 (page 17).
+Ernie Whitt (C) vs Babe Ruth. 2 out, bases empty.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p59 r0 c3 pitch 2d6=6 1d6=5 pct=83.
+FAC percentile 43. This card's 2d6 is 5. Rolls FAC p50 r0 c3 batter 2d6=5 1d6=1 pct=43.
+Read the batter's TOUGH section (page 4).
+TOUGH section percentile 43 is SO.
+Strikeout. Runners hold (page 5).
+Babe Ruth (Long relief) has finished a third inning and is fatigued (page 11).
+— bottom 9. BOS bats. Dave Stieb pitches. Score TOR 7, BOS 1.
+David Ortiz (1B) vs Dave Stieb. 0 out, bases empty.
+FAC pitch. 2d6=4 -> BALLPARK. Rolls FAC p63 r0 c1 pitch 2d6=4 1d6=4 pct=48.
 BALLPARK. The home chart is checked (page 9).
-FAC ballpark percentile 72. Rolls FAC p63 r0 c2 park 2d6=8 1d6=6 pct=72. (page 13)
-BALLPARK. Tony Fernandez bats R. FENWAY PARK wheelhouse runs through 46 (page 9).
-BALLPARK during a hit and run is IN-PLAY before the wheelhouse rule (page 10).
-FAC ballpark percentile 99. Rolls FAC p62 r1 c3 park 2d6=9 1d6=3 pct=99. (page 13)
-BALLPARK. Tony Fernandez bats R. FENWAY PARK wheelhouse runs through 46 (page 9).
-Re-roll percentile 50 onto IN-PLAY. Rolls FAC p64 r0 c2 pct 2d6=4 1d6=6 pct=50. Page 2 names the percentile. Page 9 says re-roll the dice.
+FAC ballpark percentile 45. Rolls FAC p65 r1 c2 park 2d6=5 1d6=3 pct=45. (page 13)
+BALLPARK. David Ortiz bats L. FENWAY PARK wheelhouse runs through 28 (page 9).
+Re-roll percentile 41 onto IN-PLAY. Rolls FAC p63 r1 c3 pct 2d6=5 1d6=1 pct=41. Page 2 names the percentile. Page 9 says re-roll the dice.
 GAP: BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
-IN-PLAY section percentile 50 is an out: G3.
-Hit and run groundout chart. 2d6 2d6=5. Rolls FAC p54 r1 c1 2d6 2d6=5 1d6=1 pct=87.
-Roberto Alomar to second.
-Hit and run: batter out, runners advance 1 (page 18).
-Josh Donaldson (3B) vs Babe Ruth. 2 out, Roberto Alomar on 2nd.
-FAC pitch. 2d6=2 -> WHEELHOUSE. Rolls FAC p40 r1 c2 pitch 2d6=2 1d6=1 pct=45.
-FAC percentile 09. This card's 2d6 is 8. Rolls FAC p69 r1 c3 batter 2d6=8 1d6=1 pct=09.
-Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 09 is HR.
-HR.
-Roberto Alomar scores from second.
-Josh Donaldson scores.
-Babe Ruth reached inning 8 of his Start rating with 3 runs and is fatigued (pages 10-11).
-Carlos Delgado (1B) vs Babe Ruth. 2 out, bases empty.
-FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p66 r1 c2 pitch 2d6=6 1d6=2 pct=50.
-FAC percentile 14. This card's 2d6 is 4. Rolls FAC p69 r0 c3 batter 2d6=4 1d6=6 pct=14.
-Fatigue chart reads TOUGH as TOUGH (page 21, RP).
+IN-PLAY section percentile 41 is an out: G1.
+Groundout G1 (page 17).
+Jimmie Foxx (1B) vs Dave Stieb. 1 out, bases empty.
+FAC pitch. 2d6=6 -> TOUGH. Rolls FAC p58 r1 c2 pitch 2d6=6 1d6=3 pct=59.
+FAC percentile 95. This card's 2d6 is 8. Rolls FAC p61 r1 c1 batter 2d6=8 1d6=5 pct=95.
 Read the batter's TOUGH section (page 4).
-TOUGH section percentile 14 is SO.
-Strikeout. Runners hold (page 5).
-— bottom 9. BOS bats. Dave Stieb pitches. Score TOR 7, BOS 3.
-Pitching change: Tom Henke replaces Dave Stieb. Starter is fatigued at the end of a half-inning. The book lets him stay on the fatigue card. This game brings in a reliever.
-Nomar Garciaparra (SS) vs Tom Henke. 0 out, bases empty.
-FAC pitch. 2d6=10 -> TOUGH. Rolls FAC p47 r0 c1 pitch 2d6=10 1d6=3 pct=41.
-FAC percentile 96. This card's 2d6 is 8. Rolls FAC p62 r0 c3 batter 2d6=8 1d6=6 pct=96.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 96 is an out: F7.
-Fly F7 to LF. The pitcher result is ordinary for the out chart (page 17).
-Carlton Fisk (C) vs Tom Henke. 1 out, bases empty.
-FAC pitch. 2d6=9 -> TOUGH. Rolls FAC p67 r1 c3 pitch 2d6=9 1d6=4 pct=72.
-FAC percentile 18. This card's 2d6 is 5. Rolls FAC p55 r1 c2 batter 2d6=5 1d6=4 pct=18.
-Read the batter's TOUGH section (page 4).
-TOUGH section percentile 18 is SO.
-Strikeout. Runners hold (page 5).
-Tris Speaker (CF) vs Tom Henke. 2 out, bases empty.
-FAC p40 r1 c3 WP? percentile 31. Bases are empty, so page 10 does not call a wild pitch.
-FAC pitch. 2d6=2 -> WHEELHOUSE. Rolls FAC p40 r1 c3 pitch 2d6=2 1d6=1 WP? pct=31.
-FAC percentile 64. This card's 2d6 is 7. Rolls FAC p57 r0 c2 batter 2d6=7 1d6=2 pct=64.
-Read the batter's WHEELHOUSE section (page 4).
-WHEELHOUSE section percentile 64 is an out: G5.
-Groundout G5 (page 17).
-WP? drawn 14. Fired 0. Missed the rating 7. Bases empty 7. No WP rating 0. Page-10 wild pitches on a card with no WP? mark 0.
-Final TOR 7, BOS 3.
+TOUGH section percentile 95 is an out: F9.
+Fly F9 to RF. The pitcher result is ordinary for the out chart (page 17).
+Dwight Evans (RF) vs Dave Stieb. 2 out, bases empty.
+FAC pitch. 2d6=11 -> IN-PLAY. Rolls FAC p47 r0 c0 pitch 2d6=11 1d6=4 pct=98.
+FAC percentile 29. This card's 2d6 is 7. Rolls FAC p43 r0 c2 batter 2d6=7 1d6=3 pct=29.
+Read the batter's IN-PLAY section (page 4).
+IN-PLAY section percentile 29 is an out: P4.
+P4. Runners hold (pages 5 and 17).
+WP? drawn 19. Fired 0. Missed the rating 9. Bases empty 10. No WP rating 0. Page-10 wild pitches on a card with no WP? mark 0.
+Final TOR 7, BOS 1.
+
+Pitching
+BOS|martipe02 Pedro Martinez IP 6.0 R 5 BF 24
+BOS|ruthba01 Babe Ruth IP 3.0 R 2 BF 12
+TOR|stiebda01 Dave Stieb IP 9.0 R 1 BF 33
+
+Box
+BOS|boggswa01 Wade Boggs AB 3 R 0 H 0 HR 0 BB 0 SO 0 SB 0 CS 0
+BOS|evansdw01 Dwight Evans AB 4 R 0 H 0 HR 0 BB 0 SO 1 SB 0 CS 0
+BOS|fiskca01 Carlton Fisk AB 2 R 0 H 0 HR 0 BB 0 SO 0 SB 0 CS 0
+BOS|foxxji01 Jimmie Foxx AB 3 R 0 H 1 HR 0 BB 1 SO 0 SB 0 CS 0
+BOS|garcino01 Nomar Garciaparra AB 3 R 1 H 1 HR 0 BB 0 SO 1 SB 0 CS 0
+BOS|ortizda01 David Ortiz AB 4 R 0 H 1 HR 0 BB 0 SO 0 SB 0 CS 0
+BOS|pedrodu01 Dustin Pedroia AB 4 R 0 H 2 HR 0 BB 0 SO 2 SB 0 CS 0
+BOS|speaktr01 Tris Speaker AB 3 R 0 H 0 HR 0 BB 0 SO 1 SB 0 CS 0
+BOS|willite01 Ted Williams AB 4 R 0 H 0 HR 0 BB 0 SO 0 SB 0 CS 0
+TOR|alomaro01 Roberto Alomar AB 4 R 1 H 1 HR 0 BB 0 SO 1 SB 0 CS 0
+TOR|barfije01 Jesse Barfield AB 4 R 0 H 2 HR 0 BB 0 SO 2 SB 0 CS 0
+TOR|bautijo02 Jose Bautista AB 4 R 1 H 1 HR 1 BB 0 SO 1 SB 0 CS 0
+TOR|bellge02 George Bell AB 4 R 1 H 1 HR 0 BB 0 SO 2 SB 0 CS 0
+TOR|delgaca01 Carlos Delgado AB 4 R 2 H 3 HR 1 BB 0 SO 0 SB 0 CS 0
+TOR|donaljo02 Josh Donaldson AB 4 R 2 H 1 HR 1 BB 0 SO 0 SB 0 CS 0
+TOR|fernato01 Tony Fernandez AB 2 R 0 H 0 HR 0 BB 2 SO 1 SB 0 CS 0
+TOR|whitede03 Devon White AB 4 R 0 H 0 HR 0 BB 0 SO 0 SB 0 CS 0
+TOR|whitter01 Ernie Whitt AB 4 R 0 H 0 HR 0 BB 0 SO 2 SB 0 CS 0
+
+Gaps named during the game
+- Jimmie Foxx is listed at 1B and so is David Ortiz. The rulebook does not say who fields. Jimmie Foxx does not field.
+- WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain.
+- Three cards say to use the previous card's 1d6 (1-3 out, check the runner; 4-6 safe, check the fielder). Their HOME line is only a position letter, so it is not read as a play.
+- Every card has a HOME line. Pages 12-15 do not say when to read it. A play at home uses the page 19 chart, and the next card supplies the 2d6 and the percentile.
+- Page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count that run.
+- Stealing third needs doubles. A Fast Action Card prints the 2d6 total and not the two dice (pages 12-13). Two dice are rolled for that check. Page 15 allows dice with the deck.
+- BALLPARK tells the reader to re-roll the dice (page 9) and to re-roll the percentile (page 2). This game re-rolls the percentile and keeps the 2d6.
+- Rare-play cell is not transcribed. Pages 22-30. Section PATIENT, percentile 81, bases empty. The at-bat is rolled again, which the book does not say to do.

@@ -79,9 +79,7 @@ writes byte-identical files.
 
 import csv
 import json
-import fix_jump_from_attempts as jump_fix
-import fix_steal_letter as steal_fix
-import resolve_pitcher_tables as pitcher_resolve
+import card_postpass  # platoon split, Jump/letter, pitcher v0.3 table, Derived OF arm
 import math
 import os
 import sys
@@ -560,9 +558,6 @@ def build():
                     "arm": line.get("Arm"),
                     "qa_status": hit_row["qa_status"],
                 }
-                # Jump from real attempt rate, calibrated to the 1986 cards.
-                jump_fix.apply(entry)
-                steal_fix.apply(entry)
 
             if key in v2_by_name:
                 v2 = v2_by_name[key]
@@ -604,9 +599,6 @@ def build():
                         "inj": (ratings.get("inj") or {}).get("value"),
                     },
                 }
-                # 2d6 table re-solved with solver v0.3 (realistic DEFENSE,
-                # full target, 1986 result shares).
-                pitcher_resolve.apply(entry, "%s|%s" % (code, player_id))
 
             cards["%s|%s" % (code, player_id)] = entry
             for spot in person["spots"]:
@@ -1996,6 +1988,7 @@ def main():
     if os.path.exists(cards_path) and not rebuild:
         return preserve_existing_cards()
     cards, rosters, reconciliations, peak_notes = build()
+    card_postpass.finalize(cards)
     dump(rosters, os.path.join(ROOT, "data", "rosters.json"))
     dump(cards, os.path.join(ROOT, "data", "cards.json"))
     with_stats = sum(1 for c in cards.values() if c["tournament"])

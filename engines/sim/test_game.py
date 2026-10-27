@@ -318,16 +318,16 @@ def roster_rules_and_extra_innings():
 
 def sample_game_stays_out_of_the_tournament():
     report = play("BOS", "TOR", seed=1)
-    assert report["score"] == {"TOR": 7, "BOS": 3}
+    assert report["score"] == {"TOR": 7, "BOS": 1}
     assert report["innings"] == 9
     assert report["postponed"] is False
-    assert report["pitching"]["BOS|martipe02"]["outs"] == 24
-    assert report["pitching"]["TOR|stiebda01"]["outs"] == 24
+    assert report["pitching"]["BOS|martipe02"]["outs"] == 18
+    assert report["pitching"]["TOR|stiebda01"]["outs"] == 27
     assert report["wp"] == {
-        "seen": 14, "fired": 0, "miss": 7, "empty": 7, "no_rating": 0, "unmarked": 0,
+        "seen": 19, "fired": 0, "miss": 9, "empty": 10, "no_rating": 0, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
-    assert any("WP? drawn 14. Fired 0." in line for line in report["log"])
+    assert any("WP? drawn 19. Fired 0." in line for line in report["log"])
     # Catcher arms are on the page-8 1-5 scale, so steals resolve.
     # Seed 1 has no steal attempt since the v0.3 pitcher tables; seed 4 does.
     assert any("FAC steal." in line for line in play("BOS", "TOR", seed=4)["log"])

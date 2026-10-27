@@ -26,7 +26,7 @@ def run(lam, restarts=6, iters=800):
             continue
         hand = "L" if p.get("throws") == "L" else "R"
         rel = {k: t[k] / t["bf"] / lg[k] for k in solver.STATS}
-        res = solver.solve(solver.target_from(rel, calib), hand, 0, calib, lam, restarts, iters)
+        res = solver.solve(solver.target_from(rel, calib, hand), hand, 0, calib, lam, restarts, iters)
         printed = p["pitcher"]["results"]
         ps, ss = solver.shares(printed), solver.shares(res["table"])
         pr = solver.evaluate(printed, hand, 0)

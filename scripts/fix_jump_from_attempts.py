@@ -16,13 +16,17 @@ The rate uses the card's own window (peak_bat). Where CS was not kept
 (pre-1951, or 0 CS with more than 5 SB) attempts are estimated as SB/0.7
 and the card is flagged jump_basis "estimated". Steal letter, jump +/-,
 and cards with no Jump (no number on the card) are not changed.
+
+Recalibrated 2026-10-27 on the real 1986 season (the 1986 set prints 1986
+stats, not 1985): cut points come from historical-cards/reference/
+steal_calibration_1986.json, written by scripts/calibrate_steal_1986.py.
 """
 import json
 import os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CARDS = os.path.join(ROOT, "data", "cards.json")
-CUTS = [0.011, 0.06, 0.145, 0.293, 0.38, 0.55, 0.77, 0.95]
+CUTS = json.load(open(os.path.join(ROOT, "historical-cards", "reference", "steal_calibration_1986.json")))["jump"]["cuts"]
 
 
 def jump_from_window(peak):
@@ -50,7 +54,7 @@ def apply(card):
     old = steal["jump"]
     steal["jump"] = new
     steal["jump_basis"] = {"attempt_rate": rate, "attempts": basis, "set_file_jump": steal.get("jump_basis", {}).get("set_file_jump", old),
-                           "calibration": "1986 printed cards vs 1985 SB+CS per time on first (scripts/fix_jump_from_attempts.py)"}
+                           "calibration": "1986 printed cards vs 1986 SB+CS per time on first (scripts/calibrate_steal_1986.py) (scripts/fix_jump_from_attempts.py)"}
     return old, new, rate, basis
 
 
