@@ -771,17 +771,17 @@ Official roster provided by the tournament owner. The lines are copied from that
 - LHS Taylor Rogers 2016-2021, 2026 (7)
 - LR/SP Jim Perry 1963-1972 (10)
 
-### Approved active roster amendment (2026-10-27)
-
-Bob Allison (`allisbo01`) joins Minnesota's active 26 as sixth bench hitter (RH power, OF/1B). Firpo Marberry (`marbefi01`) leaves the active bullpen. The team now has 9 lineup players, 6 bench hitters, 5 starting pitchers and 6 relievers, 26 distinct players.
-
-Jhoan Duran, Taylor Rogers and Jim Perry move to bullpen slots 4, 5 and 6 respectively without changing their roles. This amendment affects future games only and does not edit any original player cards, archived Firpo Marberry conversion, FAC/dice rolls, box scores, completed games or historical tournament results. Bob Allison's genuine Hitter v0.5 card and Senators/Twins franchise-only peak line require an authentic conversion; no playable card ratings are invented.
-
 ### Honorable mentions (Christian request)
 
 These names are not on the active roster.
 
 - Mike Marshall, MIN 1978-1980 (3) — bullpen honorable mention (card stats shown: 2.99 ERA, 141 ERA+, 54 SV)
+
+### Approved active roster amendment (2026-10-27)
+
+Bob Allison (`allisbo01`) joins Minnesota's active 26 as sixth bench hitter (RH power, OF/1B). Firpo Marberry (`marbefi01`) leaves the active bullpen. The team now has 9 lineup players, 6 bench hitters, 5 starting pitchers and 6 relievers, 26 distinct players.
+
+Jhoan Duran, Taylor Rogers and Jim Perry move to bullpen slots 4, 5 and 6 respectively without changing their roles. This amendment affects future games only and does not edit any original player cards, archived Firpo Marberry conversion, FAC/dice rolls, box scores, completed games or historical tournament results. Bob Allison's genuine Hitter v0.5 card and Senators/Twins franchise-only peak line require an authentic conversion; no playable card ratings are invented.
 
 ## 13. Cleveland Guardians (CLE)
 
