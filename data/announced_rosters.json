@@ -963,19 +963,18 @@
    "1 Eddie Collins 2B 13",
    "2 Mickey Cochrane C 9",
    "3 Al Simmons CF 12",
-   "4 Jimmie Foxx 1B 11",
+   "4 Jimmie Foxx DH 11",
    "5 Bob Johnson LF 10",
    "6 Home Run Baker 3B 7",
    "7 Wally Moses RF 10",
    "8 Eddie Joost SS 8",
-   "9 Ferris Fain DH L 6"
+   "9 Ferris Fain 1B L 6"
   ],
   "bench": [
    "C2 Wally Schang 6",
    "OF2 Amos Strunk 11",
    "OF3 Danny Murphy 12",
    "UTIL Jimmy Dykes 15",
-   "IF2 Jack Barry 8",
    "2B/BAT Max Bishop 10",
    "LH BAT/OF Elmer Valo 13"
   ],
@@ -991,7 +990,8 @@
    "SU Russ Christopher 6",
    "LH FIRE Rube Walberg 11",
    "LONG Eddie Rommel 13",
-   "MULTI Jack Quinn 6"
+   "MULTI Jack Quinn 6",
+   "LHS/LONG Bobby Shantz 1949-1954 (Philadelphia only)"
   ]
  },
  "NYY": {

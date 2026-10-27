@@ -1019,12 +1019,12 @@ Official roster provided by the tournament owner. The lines are copied from that
 - 1 Eddie Collins 2B 13
 - 2 Mickey Cochrane C 9
 - 3 Al Simmons CF 12
-- 4 Jimmie Foxx 1B 11
+- 4 Jimmie Foxx DH 11
 - 5 Bob Johnson LF 10
 - 6 Home Run Baker 3B 7
 - 7 Wally Moses RF 10
 - 8 Eddie Joost SS 8
-- 9 Ferris Fain DH L 6
+- 9 Ferris Fain 1B L 6
 
 ### Bench
 
@@ -1032,7 +1032,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF2 Amos Strunk 11
 - OF3 Danny Murphy 12
 - UTIL Jimmy Dykes 15
-- IF2 Jack Barry 8
 - 2B/BAT Max Bishop 10
 - LH BAT/OF Elmer Valo 13
 
@@ -1051,6 +1050,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 - LH FIRE Rube Walberg 11
 - LONG Eddie Rommel 13
 - MULTI Jack Quinn 6
+- LHS/LONG Bobby Shantz 1949-1954 (Philadelphia only)
+
+### Approved active roster amendments (2026-10-27)
+
+Jimmie Foxx (`foxxji01`) is now the **designated hitter**, and Ferris Fain (`fainfe01`) plays **first base**; their original lineup slots (4 and 9), all nine hitters and all five starting pitchers remain the same. This is a position swap only, with no new batting figures, fielding values or invented card ratings.
+
+Bobby Shantz (`shantbo01`), a left-handed pitcher, joins the active bullpen as sixth arm in the **long/swing relief role**, replacing reserve shortstop Jack Barry (`barryja01`). **Only Shantz's Philadelphia Athletics seasons 1949–1954 count; no Kansas City or New York years qualify.** Max Bishop shifts to reserve slot 5 and Elmer Valo to slot 6. The active count is now **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 unique players.
+
+Barry's original converted card stays in the historical card catalog, and the original card bodies, scores, finished games, box scores, dice/FAC logs and tournament results are preserved unchanged. Shantz's genuine **Pitcher v0.2.3** playable conversion is pending; he may not be used in a game until the frozen-engine card is available. Because his Philadelphia peak includes substantial starting work, the display-only Peak 162 numbers are not a relief-only projection and must not be treated as an invented relief card.
 
 ## 18. Kansas City Royals (KC)
 

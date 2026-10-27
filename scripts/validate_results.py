@@ -369,38 +369,73 @@ def detail_for(game: dict, check: Check):
 
 
 def check_pha_roster_alignment(check: Check) -> None:
-    """Owner-approved card roster, without inventing Valo's frozen conversion."""
+    """Approved PHA Foxx/Fain defensive swap and Shantz for Barry 9/6/5/6."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
     cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
     announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["PHA"]
-    pha = rosters["PHA"]["players"]
-    count = lambda group: sum(p["group"] == group for p in pha)
-    check.expect(len(pha) == 26 and len({p["id"] for p in pha}) == 26, "PHA exactly 26 distinct players")
-    check.expect((count("lineup"), count("bench"), count("rotation"), count("bullpen")) == (9, 7, 5, 5),
-                 "PHA owner-approved 9/7/5/5 slot distribution")
-    by_id = {p["id"]: p for p in pha}
+    players = rosters["PHA"]["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "PHA approved roster has 26 distinct active people")
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "PHA approved 9/6/5/6 slot distribution")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "PHA lineup, bench, rotation and bullpen slots are sequential")
+    index = {p["id"]: p for p in players}
     for pid, group, slot, pos in (
-        ("fainfe01", "lineup", 9, "DH"),
-        ("bishoma01", "bench", 6, "2B"),
-        ("valoel01", "bench", 7, "OF"),
+        ("foxxji01", "lineup", 4, "DH"),
+        ("fainfe01", "lineup", 9, "1B"),
+        ("bishoma01", "bench", 5, "2B"),
+        ("valoel01", "bench", 6, "OF"),
+        ("shantbo01", "bullpen", 6, "RP"),
     ):
-        spot = by_id.get(pid, {})
-        check.expect((spot.get("group"), spot.get("slot"), spot.get("pos")) == (group, slot, pos),
-                     "PHA approved slot " + pid)
-        c = cards.get("PHA|" + pid, {})
-        check.expect(bool(c) and any(s.get("group") == group and s.get("slot") == slot for s in c.get("spots", [])),
-                     "PHA card spot matches roster for " + pid)
-    check.expect("earnsge01" not in by_id and "PHA|earnsge01" not in cards,
-                 "Earnshaw absent from PHA owner-approved cards")
-    check.expect({k.split("|", 1)[1] for k in cards if k.startswith("PHA|")} == set(by_id),
-                 "PHA roster and card catalog have identical player ids")
-    check.expect(any("Elmer Valo" in s for s in announced["bench"]) and
-                 any("Ferris Fain DH" in s for s in announced["lineup"]) and
-                 any("Max Bishop" in s for s in announced["bench"]),
-                 "PHA owner-announced card amendments remain present")
+        p = index.get(pid, {})
+        check.expect((p.get("group"), p.get("slot"), p.get("pos")) == (group, slot, pos),
+                     "PHA active player position/slot approved: " + pid)
+    check.expect("barryja01" not in index,
+                 "Jack Barry no longer occupies an active bench slot")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["berryjo03", "chrisru01", "walberu01",
+                     "rommeed01", "quinnja01", "shantbo01"],
+                 "PHA retains five pitchers and adds Shantz as LH swing/long relief")
+    check.expect("PHA|barryja01" in cards,
+                 "Jack Barry original converted card preserved as historical")
+    check.expect("PHA|foxxji01" in cards and "PHA|fainfe01" in cards
+                 and "PHA|bishoma01" in cards and "PHA|valoel01" in cards,
+                 "All prior first-base, DH and reserve player card bodies preserved")
+    check.expect("earnsge01" not in index and "PHA|earnsge01" not in cards,
+                 "Older Earnshaw exclusion remains intact")
+    # The static card catalog preserves original player cards and historical
+    # spot metadata. Active assignments are authoritative in data/rosters.json
+    # and in announced_rosters.json, including before Shantz is converted.
+    available_ids = {key.split("|", 1)[1] for key in cards if key.startswith("PHA|")}
+    check.expect((set(ids) - {"shantbo01"}).issubset(available_ids),
+                 "Existing PHA active players still retain their original cards")
+    check.expect("PHA|shantbo01" not in cards
+                 or bool(cards["PHA|shantbo01"].get("card_pit"))
+                 or bool(cards["PHA|shantbo01"].get("conversion_status")),
+                 "Shantz is either authentically converted or explicitly pending")
+    check.expect(any("Ferris Fain 1B" in row for row in announced["lineup"])
+                 and any("Jimmie Foxx DH" in row for row in announced["lineup"])
+                 and len(announced["bench"]) == 6
+                 and len(announced["bullpen"]) == 6
+                 and any("Bobby Shantz" in row for row in announced["bullpen"])
+                 and not any("Jack Barry" in row for row in announced["bench"]),
+                 "PHA published/owner lineup and approved active 9/6/5/6 agree")
     valo = cards.get("PHA|valoel01", {})
     check.expect(bool(valo.get("card_bat")) or bool(valo.get("conversion_status")),
-                 "Valo has genuine converted card or explicit nonplayable status")
+                 "Valo remains authentically converted or pending")
+    published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Jimmie Foxx (`foxxji01`) is now the **designated hitter**" in published
+                 and "Bobby Shantz (`shantbo01`)" in published,
+                 "Approved PHA positions and Shantz are documented in published roster")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_philadelphia_athletics_2026_roster_amendment(cards, rosters)" in builder,
+                 "Full converted-card rebuild preserves the approved PHA active 26")
+
 
 
 def check_card_partitions(check: Check) -> None:

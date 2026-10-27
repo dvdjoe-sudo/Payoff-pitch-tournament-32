@@ -308,6 +308,18 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "PHA":
+        lines += [
+            "### Approved active roster amendments (2026-10-27)",
+            "",
+            "Jimmie Foxx (`foxxji01`) is now the **designated hitter**, and Ferris Fain (`fainfe01`) plays **first base**; their original lineup slots (4 and 9), all nine hitters and all five starting pitchers remain the same. This is a position swap only, with no new batting figures, fielding values or invented card ratings.",
+            "",
+            "Bobby Shantz (`shantbo01`), a left-handed pitcher, joins the active bullpen as sixth arm in the **long/swing relief role**, replacing reserve shortstop Jack Barry (`barryja01`). **Only Shantz's Philadelphia Athletics seasons 1949–1954 count; no Kansas City or New York years qualify.** Max Bishop shifts to reserve slot 5 and Elmer Valo to slot 6. The active count is now **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 unique players.",
+            "",
+            "Barry's original converted card stays in the historical card catalog, and the original card bodies, scores, finished games, box scores, dice/FAC logs and tournament results are preserved unchanged. Shantz's genuine **Pitcher v0.2.3** playable conversion is pending; he may not be used in a game until the frozen-engine card is available. Because his Philadelphia peak includes substantial starting work, the display-only Peak 162 numbers are not a relief-only projection and must not be treated as an invented relief card.",
+            "",
+        ]
+
     if code == "BAL":
         lines += [
             "### Approved active roster amendment (2026-10-27)",
