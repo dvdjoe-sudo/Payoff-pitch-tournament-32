@@ -6605,6 +6605,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "cartejo01",
+    "kind": "hitter",
+    "name": "Joe Carter",
+    "pos": "RF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "stiebda01",
     "kind": "pitcher",
@@ -6691,14 +6699,6 @@
     "name": "Paul Quantrill",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "clancji01",
-    "kind": "pitcher",
-    "name": "Jim Clancy",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 25

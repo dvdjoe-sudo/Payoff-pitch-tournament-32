@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Toronto Blue Jays Joe Carter for Jim Clancy (owner-approved)
+
+Toronto's owner-approved 26 adds **Joe Carter** (`cartejo01`) as bench #6, a right-handed RF/LF reserve and pinch-hit power bat using **Blue Jays 1991–1997 seasons exclusively**. Jim Clancy (`clancji01`) leaves the active bullpen, retaining his authentic historical pitcher card. Six original relievers remain: Henke, Eichhorn, Ward, Osuna, Downs and Quantrill. **All nine starting hitters, José Bautista batting fifth at DH, and the complete five-man rotation remain unchanged.** Active roster **9/6/5/6**, 26 unique people. All historical cards, game results, dice/FAC logs and box scores are untouched. Joe Carter's franchise-only Peak 162 is pending a verified Lahman generator rebuild, and the authentic playable Hitter v0.5 conversion is pending. No invented dice ratings or historical results.
+
 ## 2026-10-27 — Texas Rangers Rubén Sierra for Kenny Rogers (owner-approved)
 
 Texas adds switch-hitting outfielder **Rubén Sierra** (`sierrru01`) as sixth bench hitter and backup RF/OF using only Rangers seasons **1986–1992, 2000–2001 and 2003**, excluding all other franchise performance. Kenny Rogers (`rogerke01`) becomes inactive in the bullpen, retaining his original genuine historical converted pitcher card. Darold Knowles takes RP6; Wetteland, Feliz, Zimmerman, Kern and Jeff Russell remain. The original nine hitters, **Corey Seager batting ninth at DH**, and all five starters are unchanged. Active 26: **9 lineup / 6 bench / 5 starters / 6 relievers**. All historical cards, played games, box scores, results and dice/FAC logs are preserved. Sierra's Texas-only five-year Peak 162 display is verified from Lahman for **1989–1992 plus 2000**, normalized to .292/.338/.477/.815 with 22 HR and 106 RBI per 162 games. His authentic Hitter v0.5 playable conversion is still pending. PED matters remain separate.

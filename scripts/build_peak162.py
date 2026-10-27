@@ -806,6 +806,15 @@ def main() -> None:
             pitching_seasons = pit_rows[(club, pid)]
 
 
+
+            if club == "TOR" and pid == "cartejo01":
+                # Joe Carter's Toronto Blue Jays years only; never include
+                # his previous or later teams in the franchise peak.
+                carter_toronto_years = set(range(1991, 1998))
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in carter_toronto_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in carter_toronto_years}
             if club == "TEX" and pid == "sierrru01":
                 # Use Rangers stints only. The club-to-team map also excludes
                 # Sierra's seasons with every other MLB franchise.
@@ -970,6 +979,7 @@ def main() -> None:
         ("OAK", "IF2 Eric Chavez 3B (Oakland 1998-2010)", "chaveer01"),
         ("MIL", "OF2 Ben Oglivie LF (Milwaukee 1978-1986)", "oglivbe01"),
         ("TEX", "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)", "sierrru01"),
+        ("TOR", "OF2 Joe Carter RF/LF R (Toronto 1991-1997)", "cartejo01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -990,6 +1000,15 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    toronto_carter = row("TOR", "OF2 Joe Carter RF/LF R (Toronto 1991-1997)")
+    if (toronto_carter.get("status") != "ok"
+            or toronto_carter.get("lahman_id") != "cartejo01"
+            or not toronto_carter.get("years")
+            or not all(1991 <= y <= 1997 for y in toronto_carter["years"])
+            or not toronto_carter.get("text", "").startswith("Peak 162 with Toronto Blue Jays")):
+        raise SystemExit("Joe Carter Peak 162 must use Toronto-only 1991-1997")
+    if "LR/SP Jim Clancy 9" in clubs["TOR"]:
+        raise SystemExit("Inactive Jim Clancy may not appear in active Toronto Peak 162")
     rangers_sierra = row("TEX", "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)")
     if (rangers_sierra.get("status") != "ok"
             or rangers_sierra.get("lahman_id") != "sierrru01"

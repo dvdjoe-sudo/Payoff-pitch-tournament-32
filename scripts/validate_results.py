@@ -976,6 +976,76 @@ def check_phillies_roster_amendment(check: Check) -> None:
 
 
 
+
+def check_toronto_roster_amendment(check: Check) -> None:
+    """Approved Joe Carter for Jim Clancy, with Bautista and history preserved."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["TOR"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["TOR"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Toronto 26 distinct active players exactly 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Toronto all four role groups have consecutive slots")
+    carter = [p for p in players if p["id"] == "cartejo01"]
+    check.expect(len(carter) == 1 and carter[0]["group"] == "bench"
+                 and carter[0]["slot"] == 6 and carter[0]["pos"] == "RF"
+                 and carter[0]["kind"] == "hitter",
+                 "Toronto has Joe Carter as bench #6 and backup corner OF")
+    check.expect("clancji01" not in ids,
+                 "Jim Clancy removed from Toronto active bullpen")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["henketo01", "eichhma01", "warddu01",
+                     "osunaro01", "downssc01", "quantpa01"],
+                 "Toronto six specialist relievers remain unchanged")
+    check.expect([p["id"] for p in players if p["group"] == "lineup"]
+                 == ["alomaro01", "fernato01", "donaljo02", "delgaca01",
+                     "bautijo02", "bellge02", "barfije01", "whitede03",
+                     "whitter01"],
+                 "Toronto original nine starting hitters and order preserved")
+    check.expect([p["id"] for p in players if p["group"] == "rotation"]
+                 == ["stiebda01", "hallaro01", "keyji01", "hentgpa01",
+                     "gausmke01"],
+                 "Toronto original five starters unchanged")
+    check.expect(players[4]["id"] == "bautijo02" and players[4]["pos"] == "DH"
+                 and announced["lineup"][4] == "5 José Bautista DH 10",
+                 "José Bautista retains Toronto DH at batting position five")
+    check.expect(announced["bench"][-1]
+                 == "OF2 Joe Carter RF/LF R (Toronto 1991-1997)"
+                 and len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and not any("Jim Clancy" in row for row in announced["bullpen"]),
+                 "Official Toronto roster agrees with owner-approved swap")
+    check.expect("TOR|clancji01" in cards,
+                 "Authentic Jim Clancy original pitcher card stays archived")
+    joe_card = cards.get("TOR|cartejo01")
+    check.expect(not joe_card or bool(joe_card.get("card_bat"))
+                 or bool(joe_card.get("conversion_status")),
+                 "Joe Carter frozen Hitter v0.5 card is genuine or pending")
+    peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["TOR"]
+    carter_peak = peak.get("OF2 Joe Carter RF/LF R (Toronto 1991-1997)") or {}
+    check.expect(carter_peak.get("lahman_id") == "cartejo01"
+                 and (carter_peak.get("status") != "ok"
+                      or (carter_peak.get("years")
+                          and all(1991 <= y <= 1997 for y in carter_peak["years"]))),
+                 "Carter's Peak 162 from Toronto years only or explicitly pending")
+    check.expect("LR/SP Jim Clancy 9" not in peak,
+                 "Inactive Clancy absent from Toronto active Peak 162")
+    doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Joe Carter (`cartejo01`) joins the **Toronto Blue Jays**" in doc,
+                 "Owner-approved Toronto amendment documented")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_toronto_roster_amendment(cards, rosters)" in builder,
+                 "Toronto change persists in future full roster rebuilds")
+    peakgen = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "TOR" and pid == "cartejo01"' in peakgen,
+                 "Future Toronto Carter stat generator enforces franchise years")
+
+
 def check_texas_roster_amendment(check: Check) -> None:
     """Approved Sierra/Rogers exchange; preserve Texas DH and history."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1665,6 +1735,7 @@ def main() -> int:
     check_oakland_roster_amendment(check)
     check_milwaukee_roster_amendment(check)
     check_texas_roster_amendment(check)
+    check_toronto_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

@@ -591,6 +591,7 @@ def build():
     apply_oakland_roster_amendment(cards, rosters)
     apply_milwaukee_roster_amendment(cards, rosters)
     apply_texas_roster_amendment(cards, rosters)
+    apply_toronto_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -611,6 +612,7 @@ AUTHORIZED_HITTERS = (
     "OAK|chaveer01",
     "MIL|oglivbe01",
     "TEX|sierrru01",
+    "TOR|cartejo01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -681,6 +683,46 @@ def retain_empty_team_cards(cards, rosters):
             entry.pop("conversion_status", None)
 
 
+
+
+
+def apply_toronto_roster_amendment(cards, rosters):
+    """Owner approved Joe Carter for Jim Clancy, Toronto 1991-1997 only.
+
+    Keep all historical pitcher cards, original 9/5 starting lineup and
+    five-man rotation, especially José Bautista batting fifth at DH.
+    """
+    roster = rosters.get("TOR")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "clancji01"]
+    carter_id = "cartejo01"
+    matches = [p for p in players if p["id"] == carter_id]
+    if not matches:
+        players.append({"group": "bench", "id": carter_id,
+                        "kind": "hitter", "name": "Joe Carter",
+                        "pos": "RF", "slot": 6})
+    elif len(matches) != 1:
+        raise SystemExit("Duplicate active Toronto Joe Carter")
+    else:
+        matches[0].update(group="bench", kind="hitter", pos="RF", slot=6)
+    card = cards.get("TOR|" + carter_id)
+    if card:
+        card["spots"] = [{"group": "bench", "slot": 6,
+                          "pos": "RF", "kind": "hitter"}]
+    # The original authentic TOR|clancji01 historical card is retained.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Toronto approved active roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Toronto must retain 26 unique active players")
+    if len([p for p in players if p["group"] == "lineup"
+            and p["slot"] == 5 and p["id"] == "bautijo02"
+            and p["pos"] == "DH"]) != 1:
+        raise SystemExit("Toronto José Bautista starting DH altered")
 
 
 def apply_texas_roster_amendment(cards, rosters):

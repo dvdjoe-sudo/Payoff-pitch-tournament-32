@@ -8564,18 +8564,6 @@
      2001
     ]
    },
-   "LR/SP Jim Clancy 9": {
-    "lahman_id": "clancji01",
-    "status": "ok",
-    "text": "Peak 162 with Toronto Blue Jays (1980–1984): 65 G, 25-27, 0 SV, 425.0 IP, 423 H, 193 ER, 164 BB, 221 SO, 4.08 ERA, 1.38 WHIP, 4.7 K/9",
-    "years": [
-     1980,
-     1981,
-     1982,
-     1983,
-     1984
-    ]
-   },
    "MR1 Roberto Osuna 5": {
     "lahman_id": "osunaro01",
     "status": "ok",
@@ -8597,6 +8585,12 @@
      2009,
      2010
     ]
+   },
+   "OF2 Joe Carter RF/LF R (Toronto 1991-1997)": {
+    "lahman_id": "cartejo01",
+    "status": "unavailable",
+    "text": "Peak stats unavailable",
+    "reason": "Toronto-only 1991-1997 peak awaiting verified Lahman build; no guessed statistics."
    },
    "OF4 Lloyd Moseby OF 10": {
     "lahman_id": "mosebll01",

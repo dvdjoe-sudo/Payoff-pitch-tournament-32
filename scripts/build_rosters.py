@@ -308,6 +308,17 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "TOR":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Joe Carter (`cartejo01`) joins the **Toronto Blue Jays** active 26 as **sixth bench hitter**, a right-handed pinch-hit power option and **RF/LF outfield reserve**. His franchise-specific Peak 162 and future authentic Hitter v0.5 card must count **only Toronto seasons 1991–1997**, excluding his earlier Cleveland, San Diego and subsequent Baltimore and San Francisco years.",
+            "",
+            "Jim Clancy (`clancji01`) leaves the active bullpen, while his authentic converted pitcher card remains in the historical card archive. The six relief pitchers remain in their previous order: **Tom Henke, Mark Eichhorn, Duane Ward, Roberto Osuna, Scott Downs and Paul Quantrill**. All **nine starting hitters and five rotation pitchers are unchanged**, including **José Bautista starting at DH batting fifth**. Toronto has **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct active players.",
+            "",
+            "All historical cards, prior box scores, completed games, FAC/dice logs and tournament results remain unchanged. Carter's Toronto-only five-year Peak 162 display requires a verified Lahman generator build and his frozen authentic **Hitter v0.5** playable card conversion is pending; no simulated card ratings or stats have been invented.",
+            "",
+        ]
     if code == "TEX":
         lines += [
             "### Approved active roster amendment (2026-10-27)",
