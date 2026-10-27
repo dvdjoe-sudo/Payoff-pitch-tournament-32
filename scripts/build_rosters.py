@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "DET":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Kirk Gibson (`gibsoki01`) joins Detroit's sixth active bench spot as OF/pinch-runner. Tyler Holton (`holtoty01`) moves off the active bullpen. The Tigers now have 9 lineup players, 6 bench players, 5 starting pitchers and 6 relief pitchers: 26 distinct active players.",
+            "",
+            "The amendment takes effect only after the completed R1-04 Detroit–Arizona series. All six original games, results, box scores, dice/FAC and manager logs, and all existing player cards (including Holton's converted card) remain historical records. Gibson's playable frozen Hitter v0.5 card requires an authentic Tigers-franchise-only conversion; no unverified card ratings or prime-window figures are generated. Dizzy Trout and Denny McLain move to bullpen slots 5 and 6 without changing their pitching roles.",
+            "",
+        ]
+
     if code == "SF":
         lines += [
             "### Approved active roster amendment (2026-10-27)",

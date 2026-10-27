@@ -2069,6 +2069,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "gibsoki01",
+    "kind": "hitter",
+    "name": "Kirk Gibson",
+    "pos": "OF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "newhoha01",
     "kind": "pitcher",
@@ -2142,19 +2150,11 @@
    },
    {
     "group": "bullpen",
-    "id": "holtoty01",
-    "kind": "pitcher",
-    "name": "Tyler Holton",
-    "pos": "RP",
-    "slot": 5
-   },
-   {
-    "group": "bullpen",
     "id": "troutdi01",
     "kind": "pitcher",
     "name": "Dizzy Trout",
     "pos": "RP",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "bullpen",
@@ -2162,7 +2162,7 @@
     "kind": "pitcher",
     "name": "Denny McLain",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 4

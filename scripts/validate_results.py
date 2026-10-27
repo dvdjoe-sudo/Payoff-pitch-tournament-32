@@ -741,6 +741,43 @@ def check_unique_player_roster_limit(check: Check) -> None:
                  "Boston has 27 role entries describing 26 distinct players")
 
 
+def check_tigers_roster_amendment(check: Check) -> None:
+    """Approved Detroit 6 bench / 6 RP for games after R1-04 only."""
+    roster = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))["DET"]
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["DET"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = roster["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26 and
+                 counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Detroit approved active roster is 26 players at 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Detroit slots remain unique and sequential")
+    gibson = [p for p in players if p["id"] == "gibsoki01"]
+    check.expect(len(gibson) == 1 and gibson[0]["group"] == "bench"
+                 and gibson[0]["slot"] == 6 and gibson[0]["pos"] == "OF",
+                 "Kirk Gibson occupies Detroit bench OF6")
+    check.expect("holtoty01" not in ids, "Tyler Holton has no active Tigers roster spot")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen" and p["slot"] in (5, 6)]
+                 == ["troutdi01", "mclaide01"],
+                 "Dizzy Trout and Denny McLain retain the last two bullpen spots")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and "OF6 Kirk Gibson OF/PR" in announced["bench"]
+                 and not any("Tyler Holton" in x for x in announced["bullpen"]),
+                 "Detroit announced owner roster aligns with active 6/6")
+    check.expect("DET|holtoty01" in cards,
+                 "Tyler Holton's genuine converted card remains in historic archive")
+    text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Kirk Gibson (`gibsoki01`) joins Detroit" in text,
+                 "Detroit owner-approved amendment is in published roster")
+    script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_tigers_roster_amendment(cards, rosters)" in script,
+                 "Future set rebuilds preserve the Detroit personnel change")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -762,6 +799,7 @@ def main() -> int:
     check_yankees_roster_amendment(check)
     check_giants_roster_amendment(check)
     check_unique_player_roster_limit(check)
+    check_tigers_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

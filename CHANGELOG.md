@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Detroit Tigers Kirk Gibson for Tyler Holton (Joe-approved)
+
+Kirk Gibson (OF/PR) becomes Detroit's bench6 hitter, Tyler Holton becomes inactive and the two surviving later relief roles are renumbered to RP5 Dizzy Trout / RP6 Denny McLain. Active 26: 9/6/5/6. Detroit's owner roster, converted active roster, rebuild adapter, website and validation are synchronized. Every R1-04 Detroit–Arizona game, authentic earlier card (including Holton), archived box score, manager log and dice/FAC sequence remains unchanged. Gibson's genuine Detroit-franchise-only Hitter v0.5 conversion remains pending, without fabricated card ratings.
+
 ## 2026-10-27 — Two-way players count once toward the active 26 (Joe-approved)
 
 A player rostered as both hitter and pitcher counts **one unique person**, not two roster slots. Boston Babe Ruth remains bench hitter #6 and bullpen pitching option #7: the 27 entries in the team roster describe exactly 26 active distinct players. Both real hitter and pitcher roles remain available, subject to normal gameplay and fatigue rules. No Boston personnel changes, new ratings, historic cards, box scores, R1-03 results, or dice/FAC logs were touched. The roster schema, published rules, UI and validation now distinguish role entries from unique players.

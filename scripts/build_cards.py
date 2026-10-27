@@ -575,6 +575,7 @@ def build():
     apply_rays_roster_amendment(cards, rosters)
     apply_nationals_roster_amendment(cards, rosters)
     apply_giants_roster_amendment(cards, rosters)
+    apply_tigers_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -591,6 +592,7 @@ AUTHORIZED_HITTERS = (
     "TB|huffau01",
     "PHA|valoel01",
     "SF|irvinmo01",
+    "DET|gibsoki01",
 )
 
 
@@ -968,6 +970,55 @@ def apply_giants_roster_amendment(cards, rosters):
         raise SystemExit("Giants owner roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Giants owner roster requires 26 distinct players")
+
+
+def apply_tigers_roster_amendment(cards, rosters):
+    """Joe-approved 2026-10-27 active Detroit 6/6 after completed R1-04.
+
+    Add Kirk Gibson OF/PR at bench6, inactivate Tyler Holton. Preserve
+    all original converted cards, including Holton's, and played games.
+    Keep existing authentic Kirk Gibson cards if one was already stored;
+    never generate placeholder dice or fictional franchise peak ratings.
+    """
+    roster = rosters.get("DET")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "holtoty01"]
+    gibson_id = "gibsoki01"
+    matching = [p for p in players if p["id"] == gibson_id]
+    if not matching:
+        players.append({
+            "group": "bench", "id": gibson_id, "kind": "hitter",
+            "name": "Kirk Gibson", "pos": "OF", "slot": 6,
+        })
+    else:
+        if len(matching) != 1:
+            raise SystemExit("duplicate Detroit Kirk Gibson roster entries")
+        matching[0].update(group="bench", kind="hitter", pos="OF", slot=6)
+    # Existing cards can point at updated roster spots; never remove
+    # or rewrite Holton's archived chart or historical pitching stats.
+    for player_id, group, slot, pos, kind in (
+        (gibson_id, "bench", 6, "OF", "hitter"),
+        ("troutdi01", "bullpen", 5, "RP", "pitcher"),
+        ("mclaide01", "bullpen", 6, "RP", "pitcher"),
+    ):
+        found = [p for p in players if p["id"] == player_id]
+        if len(found) != 1:
+            raise SystemExit("Detroit missing active role: " + player_id)
+        found[0].update(group=group, slot=slot, pos=pos, kind=kind)
+        card = cards.get("DET|" + player_id)
+        if card:
+            card["spots"] = [{
+                "group": group, "slot": slot, "pos": pos, "kind": kind,
+            }]
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Detroit approved 26 must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Detroit must carry 26 unique active players")
 
 
 def dump(obj, path):

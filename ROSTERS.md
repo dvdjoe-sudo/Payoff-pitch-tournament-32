@@ -257,6 +257,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - IF Lou Whitaker 19
 - OF Sam Crawford 15
 - BAT Harry Heilmann 16
+- OF6 Kirk Gibson OF/PR
 
 ### Rotation
 
@@ -272,9 +273,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 - FIRE John Hiller 15
 - RH SET Mike Henneman 9
 - RH FIRE Aurelio López 7
-- LH SPEC Tyler Holton 4
 - LONG/SWING Dizzy Trout 14
 - EMER SP Denny McLain 8
+
+### Approved active roster amendment (2026-10-27)
+
+Kirk Gibson (`gibsoki01`) joins Detroit's sixth active bench spot as OF/pinch-runner. Tyler Holton (`holtoty01`) moves off the active bullpen. The Tigers now have 9 lineup players, 6 bench players, 5 starting pitchers and 6 relief pitchers: 26 distinct active players.
+
+The amendment takes effect only after the completed R1-04 Detroit–Arizona series. All six original games, results, box scores, dice/FAC and manager logs, and all existing player cards (including Holton's converted card) remain historical records. Gibson's playable frozen Hitter v0.5 card requires an authentic Tigers-franchise-only conversion; no unverified card ratings or prime-window figures are generated. Dizzy Trout and Denny McLain move to bullpen slots 5 and 6 without changing their pitching roles.
 
 ### Players in the results file
 
