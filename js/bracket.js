@@ -1832,6 +1832,9 @@
     if (code === "SD") {
       body.appendChild(el("p", { class: "note", text: "Approved Padres 26: Brian Giles is bench OF6 and will be playable after his frozen Hitter v0.5 conversion. Craig Lefferts is off the active roster; his previous card remains preserved as historical data." }));
     }
+    if (code === "MON") {
+      body.appendChild(el("p", { class: "note", text: "Approved Expos 26: Moisés Alou is bench OF6, pending his original Hitter v0.5 card conversion. Jeff Fassero is inactive; his existing card is preserved as historical data." }));
+    }
     if (code === "PHA") body.appendChild(el("p", { class: "note", text: "Owner-approved 26-man roster: Ferris Fain is DH, Max Bishop is on the bench, and George Earnshaw is not on the roster. Elmer Valo is on the bench; his Hitter v0.5 card is awaiting original frozen-engine conversion and is not yet playable." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
       var rows = roster.players.filter(function (spot) { return spot.group === group; })
