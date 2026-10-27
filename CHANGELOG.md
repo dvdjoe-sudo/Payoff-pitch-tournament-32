@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Pittsburgh Pirates Paul Waner for Al McBean (Joe-approved)
+
+Paul Waner becomes the sixth bench bat (RF/LF, LH contact) while Al McBean moves off the active bullpen. Grant Jackson now occupies bullpen #5 and Sam Leever remains the long/swing option at bullpen #6. The Pirates active 26 are 9/6/5/6, synchronized in both current roster sources, generated roster output, rebuild adapter and validator. No historical cards (including McBean), games, box scores, original results or FAC/dice logs were edited. Paul Waner's genuine Pirates-only Hitter v0.5 conversion is pending; active roster inclusion does not invent a playable card.
+
 ## 2026-10-27 — Atlanta Braves Bob Horner for Mark Wohlers (Joe-approved)
 
 Bob Horner becomes bench hitter #6 (RH power, third and first base coverage); Mark Wohlers becomes inactive. Phil Niekro remains in the long/emergency relief role at bullpen #6, with Jonny Venters moved to bullpen #5. Atlanta's active roster becomes 9/6/5/6, with only 26 distinct players. The original Braves cards, including Wohlers's converted pitching chart, remain stored unchanged; all completed games, box scores, scores and FAC/dice records remain unchanged. A genuine Braves-only Horner Hitter v0.5 conversion remains pending. Update is synchronized to all active roster sources and to the full-rebuild procedure.

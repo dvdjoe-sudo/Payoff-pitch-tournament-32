@@ -1838,6 +1838,9 @@
     if (code === "MON") {
       body.appendChild(el("p", { class: "note", text: "Approved Expos 26: Moisés Alou is bench OF6, pending his original Hitter v0.5 card conversion. Jeff Fassero is inactive; his existing card is preserved as historical data." }));
     }
+    if (code === "PIT") {
+      body.appendChild(el("p", { class: "note", text: "Approved Pirates 26: Paul Waner is sixth bench hitter (left-handed RF/LF), Al McBean is inactive, while Grant Jackson and Sam Leever occupy bullpen slots 5 and 6. The original McBean card is archived; Waner's genuine card conversion is pending. Previously played games are unchanged." }));
+    }
     if (code === "ATL") {
       body.appendChild(el("p", { class: "note", text: "Approved Braves 26: Bob Horner is bench BAT2/3B/1B6, Mark Wohlers is inactive and Phil Niekro remains the long/emergency relief pitcher. Genuine Horner playable-card conversion is pending, while existing pitcher cards and historical records stay unchanged." }));
     }
@@ -2309,7 +2312,7 @@
         "Approved 26-man roster member. The original frozen Payoff Pitch hitter conversion has not been added yet; no ratings or percentile bands have been invented."
       }));
       pending.appendChild(el("p", { text:
-        code === "WSH" ? "Jayson Werth: original Hitter v0.5 conversion and Nationals-only five-season peak line are pending. No playable ratings or simulated card were fabricated." : code === "ATL" ? "Bob Horner: genuine Braves-only Hitter v0.5 card conversion is pending. No fabricated playable rating or card ranges have been added." : code === "DET" ? "Kirk Gibson: authentic Payoff Pitch Hitter v0.5 card and Detroit-only peak line are pending. No guessed playable ratings have been generated." : code === "SF" ? "Monte Irvin: the original Hitter v0.5 conversion and Giants-franchise-only peak window are pending. No unverified ratings have been created." : code === "ARI" ? "David Peralta: the original Hitter v0.5 conversion and Arizona-only five-season peak line are pending. No unverified card ratings were added." : code === "TB" ? "Aubrey Huff: his original Hitter v0.5 conversion and Rays-only five-season peak line are pending. No playable ratings were invented." : "The club's franchise-only Peak 162 display is available on the team page. The playable card will be added when converted."
+        code === "WSH" ? "Jayson Werth: original Hitter v0.5 conversion and Nationals-only five-season peak line are pending. No playable ratings or simulated card were fabricated." : code === "PIT" ? "Paul Waner: genuine Pittsburgh-franchise-only Hitter v0.5 card is pending. No invented dice bands or playable ratings have been supplied." : code === "ATL" ? "Bob Horner: genuine Braves-only Hitter v0.5 card conversion is pending. No fabricated playable rating or card ranges have been added." : code === "DET" ? "Kirk Gibson: authentic Payoff Pitch Hitter v0.5 card and Detroit-only peak line are pending. No guessed playable ratings have been generated." : code === "SF" ? "Monte Irvin: the original Hitter v0.5 conversion and Giants-franchise-only peak window are pending. No unverified ratings have been created." : code === "ARI" ? "David Peralta: the original Hitter v0.5 conversion and Arizona-only five-season peak line are pending. No unverified card ratings were added." : code === "TB" ? "Aubrey Huff: his original Hitter v0.5 conversion and Rays-only five-season peak line are pending. No playable ratings were invented." : "The club's franchise-only Peak 162 display is available on the team page. The playable card will be added when converted."
       }));
       view.appendChild(pending);
       return;

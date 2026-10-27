@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "PIT":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Paul Waner (`wanerpa01`) joins Pittsburgh's active bench as BAT2 / left-handed RF-LF #6. Al McBean (`mcbeaal01`) is removed from the active bullpen. The Pirates now carry 9 lineup hitters, 6 bench hitters, 5 starters and 6 relief pitchers, 26 distinct active players.",
+            "",
+            "Grant Jackson shifts to bullpen slot 5 and Sam Leever to bullpen slot 6, preserving their left-handed-specialist and long-relief roles. This owner-approved roster switch applies to future tournament games only. All original player cards (including Al McBean's), previous games, box scores, FAC/dice logs and recorded results are unchanged. Waner's genuine Hitter v0.5 playable card requires a Pittsburgh-franchise-only conversion; no chart or card ratings have been invented.",
+            "",
+        ]
+
     if code == "ATL":
         lines += [
             "### Approved active roster amendment (2026-10-27)",

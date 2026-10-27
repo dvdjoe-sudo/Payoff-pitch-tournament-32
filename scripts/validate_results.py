@@ -832,6 +832,48 @@ def check_braves_roster_amendment(check: Check) -> None:
                  "Atlanta amendment persists across full set rebuilding")
 
 
+def check_pirates_roster_amendment(check: Check) -> None:
+    """Joe-approved Pittsburgh Paul Waner for Al McBean, 26 active."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["PIT"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26 and
+                 counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Pittsburgh's active 26 is 9 lineup / 6 bench / 5 SP / 6 RP")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Pittsburgh active roster slots remain sequential")
+    waner = [p for p in players if p["id"] == "wanerpa01"]
+    check.expect(len(waner) == 1 and waner[0]["group"] == "bench"
+                 and waner[0]["slot"] == 6 and waner[0]["pos"] == "RF"
+                 and waner[0]["kind"] == "hitter",
+                 "Paul Waner is Pittsburgh's sixth active bench hitter")
+    check.expect("mcbeaal01" not in ids,
+                 "Al McBean has been inactivated, not deleted from history")
+    check.expect(any(p["id"] == "jacksgr01" and p["group"] == "bullpen" and p["slot"] == 5
+                     for p in players) and
+                 any(p["id"] == "leevesa01" and p["group"] == "bullpen" and p["slot"] == 6
+                     for p in players),
+                 "Grant Jackson and Sam Leever retain final bullpen roles")
+    official = announced["PIT"]
+    check.expect(len(official["bench"]) == 6 and len(official["bullpen"]) == 6
+                 and any("Paul Waner" in line for line in official["bench"])
+                 and not any("Al McBean" in line for line in official["bullpen"]),
+                 "Published Pittsburgh owner roster matches approved 6/6")
+    check.expect("PIT|mcbeaal01" in cards,
+                 "Al McBean's converted historical pitcher card is retained")
+    doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Paul Waner (`wanerpa01`) joins Pittsburgh" in doc,
+                 "Pittsburgh owner roster amendment is published")
+    script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_pirates_roster_amendment(cards, rosters)" in script,
+                 "Full card rebuild keeps Pittsburgh owner-approved roster")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -855,6 +897,7 @@ def main() -> int:
     check_unique_player_roster_limit(check)
     check_tigers_roster_amendment(check)
     check_braves_roster_amendment(check)
+    check_pirates_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

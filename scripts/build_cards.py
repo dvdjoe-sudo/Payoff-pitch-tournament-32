@@ -577,6 +577,7 @@ def build():
     apply_giants_roster_amendment(cards, rosters)
     apply_tigers_roster_amendment(cards, rosters)
     apply_braves_roster_amendment(cards, rosters)
+    apply_pirates_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -595,6 +596,7 @@ AUTHORIZED_HITTERS = (
     "SF|irvinmo01",
     "DET|gibsoki01",
     "ATL|hornebo01",
+    "PIT|wanerpa01",
 )
 
 
@@ -1070,6 +1072,53 @@ def apply_braves_roster_amendment(cards, rosters):
         raise SystemExit("Atlanta approved 26 must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Atlanta requires 26 unique active players")
+
+
+def apply_pirates_roster_amendment(cards, rosters):
+    """Joe-approved Pittsburgh Waner-for-McBean active 6/6 amendment.
+
+    Active roster for future games only: bench6 Paul Waner, remove
+    Al McBean; preserve every original converted card (including the
+    inactive McBean card), completed game and FAC/dice archive.
+    Waner's genuine Pittsburgh-only Hitter v0.5 conversion is pending.
+    """
+    roster = rosters.get("PIT")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "mcbeaal01"]
+    waner_id = "wanerpa01"
+    matching = [p for p in players if p["id"] == waner_id]
+    if not matching:
+        players.append({
+            "group": "bench", "id": waner_id, "kind": "hitter",
+            "name": "Paul Waner", "pos": "RF", "slot": 6,
+        })
+    elif len(matching) != 1:
+        raise SystemExit("Duplicate Paul Waner roster entries for Pirates")
+    else:
+        matching[0].update(group="bench", kind="hitter", pos="RF", slot=6)
+    for player_id, group, slot, pos, kind in (
+        (waner_id, "bench", 6, "RF", "hitter"),
+        ("jacksgr01", "bullpen", 5, "RP", "pitcher"),
+        ("leevesa01", "bullpen", 6, "RP", "pitcher"),
+    ):
+        role = [p for p in players if p["id"] == player_id]
+        if len(role) != 1:
+            raise SystemExit("Pirates missing roster role: " + player_id)
+        role[0].update(group=group, slot=slot, pos=pos, kind=kind)
+        if "PIT|" + player_id in cards:
+            cards["PIT|" + player_id]["spots"] = [{
+                "group": group, "slot": slot, "pos": pos, "kind": kind,
+            }]
+    # Never delete PIT|mcbeaal01: its pitching chart is historical.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Pirates must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Pirates must have 26 unique active players")
 
 
 def dump(obj, path):
