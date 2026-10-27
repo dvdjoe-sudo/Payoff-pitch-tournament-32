@@ -1,0 +1,1095 @@
+{
+ "lahman_max_batting_year": 2025,
+ "lahman_sha256": "48d05d6ffafb977846b14cfb273d2faf21b5519604cbb337792cb3ec8d25dd31",
+ "pa_definition": "AB + BB + HBP + SF; sacrifice hits excluded",
+ "pa_floor": 300,
+ "players": [
+  {
+   "best_possible": 0.0007,
+   "card": {
+    "1b": 0.1638,
+    "2b": 0.0497,
+    "3b": 0.013,
+    "avg": 0.2846,
+    "bb": 0.0708,
+    "hr": 0.036,
+    "obp": 0.3405,
+    "slg": 0.4838,
+    "so": 0.2049
+   },
+   "counting": {
+    "2B": 111,
+    "3B": 29,
+    "AB": 2011,
+    "BB": 170,
+    "CS": 9,
+    "G": 569,
+    "GIDP": 45,
+    "H": 576,
+    "HBP": 16,
+    "HR": 79,
+    "IBB": 13,
+    "PA": 2211,
+    "R": 253,
+    "RBI": 299,
+    "SB": 20,
+    "SF": 14,
+    "SO": 452
+   },
+   "delta": {
+    "1b": 0.0023,
+    "2b": -0.0005,
+    "3b": -0.0001,
+    "avg": -0.0018,
+    "hr": 0.0002,
+    "obp_real": -0.0041,
+    "obp_ubb": 0.0017,
+    "slg": -0.0045,
+    "so": 0.0004
+   },
+   "fit_error": 0.0007,
+   "fit_lines": [
+    "  avg error: -1.80",
+    "  obp error: +1.73",
+    "  slg error: -4.54",
+    "  bbp error: -0.02",
+    "  sop error: +0.04",
+    "  hrp error: +0.02",
+    "  hbpp error: +0.01"
+   ],
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "2019 is the last included season at OPS+ 113.2. 2017 is next at OPS+ 113.1, 0.1 behind.",
+    "2022 also has a TBA stint. Only the ARI line is in the window.",
+    "No 2025 or 2026 season is on the card. Lahman in this repo stops at 2025, and Peralta has no 2025 batting row. AP reported on 2026-02-04 that he retired after 11 seasons and did not play in 2025 (https://apnews.com/article/peralta-retires-diamondbacks-padres-b7812bda15fbd8e2f1b535e23590dbd9). MLB.com posted a Diamondbacks retirement video dated 2026-02-06.",
+    "AP and ESPN record a 2019 Gold Glove. That was not turned into a range grade. The card stays Average.",
+    "Run is 10, the formula's cap. It is not a separate measured grade."
+   ],
+   "key": "ARI|peralda01",
+   "name": "David Peralta",
+   "nulls": [],
+   "qa_reason": "within tolerance",
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1615,
+    "2b": 0.0502,
+    "3b": 0.0131,
+    "avg": 0.2864,
+    "bb": 0.0769,
+    "hr": 0.0357,
+    "obp": 0.3446,
+    "obp_ubb": 0.3388,
+    "slg": 0.4883,
+    "so": 0.2044,
+    "ubb": 0.071
+   },
+   "seasons": [
+    {
+     "g": 88,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "120.2",
+     "other_clubs": [],
+     "pa": 347,
+     "pa_with_sh": 348,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2014
+    },
+    {
+     "g": 149,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "149.0",
+     "other_clubs": [],
+     "pa": 517,
+     "pa_with_sh": 517,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2015
+    },
+    {
+     "g": 48,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "96.6",
+     "other_clubs": [],
+     "pa": 183,
+     "pa_with_sh": 183,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2016
+    },
+    {
+     "g": 140,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "113.1",
+     "other_clubs": [],
+     "pa": 577,
+     "pa_with_sh": 577,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2017
+    },
+    {
+     "g": 146,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "138.5",
+     "other_clubs": [],
+     "pa": 614,
+     "pa_with_sh": 614,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2018
+    },
+    {
+     "g": 99,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "113.2",
+     "other_clubs": [],
+     "pa": 423,
+     "pa_with_sh": 423,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2019
+    },
+    {
+     "g": 54,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "107.3",
+     "other_clubs": [],
+     "pa": 218,
+     "pa_with_sh": 218,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2020
+    },
+    {
+     "g": 150,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "101.1",
+     "other_clubs": [],
+     "pa": 538,
+     "pa_with_sh": 538,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2021
+    },
+    {
+     "g": 87,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "116.5",
+     "other_clubs": [
+      "TBA"
+     ],
+     "pa": 310,
+     "pa_with_sh": 310,
+     "teams": [
+      "ARI"
+     ],
+     "year": 2022
+    }
+   ],
+   "target_obp": 0.3388,
+   "window_years": [
+    2014,
+    2015,
+    2018,
+    2019,
+    2022
+   ]
+  },
+  {
+   "best_possible": 0.0025,
+   "card": {
+    "1b": 0.1665,
+    "2b": 0.059,
+    "3b": 0.0062,
+    "avg": 0.2885,
+    "bb": 0.0643,
+    "hr": 0.0359,
+    "obp": 0.3398,
+    "slg": 0.4816,
+    "so": 0.1276
+   },
+   "counting": {
+    "2B": 138,
+    "3B": 15,
+    "AB": 2129,
+    "BB": 183,
+    "CS": 21,
+    "G": 594,
+    "GIDP": 45,
+    "H": 623,
+    "HBP": 19,
+    "HR": 84,
+    "IBB": 32,
+    "PA": 2359,
+    "R": 339,
+    "RBI": 373,
+    "SB": 53,
+    "SF": 28,
+    "SO": 301
+   },
+   "delta": {
+    "1b": 0.0029,
+    "2b": 0.0005,
+    "3b": -0.0001,
+    "avg": -0.0041,
+    "hr": 0.0003,
+    "obp_real": -0.01,
+    "obp_ubb": 0.0036,
+    "slg": -0.0083,
+    "so": 0.0
+   },
+   "fit_error": 0.0025,
+   "fit_lines": [
+    "  avg error: -4.15",
+    "  obp error: +3.60",
+    "  slg error: -8.30",
+    "  bbp error: +0.03",
+    "  sop error: +0.00",
+    "  hrp error: +0.03",
+    "  hbpp error: -0.03"
+   ],
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1990 is the documented Expos cameo: 14 games and 15 plate appearances (16 if sacrifice hits are counted). It stays out.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the engine's tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Card OBP is -0.010 against the real on-base percentage. The solver target leaves intentional walks out, and the card is 0.004 from that target.",
+    "Run is 10, the formula's cap. It is not a separate measured grade."
+   ],
+   "key": "MON|aloumo01",
+   "name": "Moises Alou",
+   "nulls": [],
+   "qa_reason": "Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1636,
+    "2b": 0.0585,
+    "3b": 0.0064,
+    "avg": 0.2926,
+    "bb": 0.0776,
+    "hr": 0.0356,
+    "obp": 0.3497,
+    "obp_ubb": 0.3362,
+    "slg": 0.4899,
+    "so": 0.1276,
+    "ubb": 0.064
+   },
+   "seasons": [
+    {
+     "g": 14,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "49.3",
+     "other_clubs": [
+      "PIT"
+     ],
+     "pa": 15,
+     "pa_with_sh": 16,
+     "teams": [
+      "MON"
+     ],
+     "year": 1990
+    },
+    {
+     "g": 115,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "127.5",
+     "other_clubs": [],
+     "pa": 372,
+     "pa_with_sh": 377,
+     "teams": [
+      "MON"
+     ],
+     "year": 1992
+    },
+    {
+     "g": 136,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "125.2",
+     "other_clubs": [],
+     "pa": 532,
+     "pa_with_sh": 535,
+     "teams": [
+      "MON"
+     ],
+     "year": 1993
+    },
+    {
+     "g": 107,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "162.3",
+     "other_clubs": [],
+     "pa": 471,
+     "pa_with_sh": 471,
+     "teams": [
+      "MON"
+     ],
+     "year": 1994
+    },
+    {
+     "g": 93,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "115.9",
+     "other_clubs": [],
+     "pa": 386,
+     "pa_with_sh": 386,
+     "teams": [
+      "MON"
+     ],
+     "year": 1995
+    },
+    {
+     "g": 143,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "114.9",
+     "other_clubs": [],
+     "pa": 598,
+     "pa_with_sh": 598,
+     "teams": [
+      "MON"
+     ],
+     "year": 1996
+    }
+   ],
+   "target_obp": 0.3362,
+   "window_years": [
+    1992,
+    1993,
+    1994,
+    1995,
+    1996
+   ]
+  },
+  {
+   "best_possible": 0.0053,
+   "card": {
+    "1b": 0.1604,
+    "2b": 0.0521,
+    "3b": 0.0061,
+    "avg": 0.2806,
+    "bb": 0.132,
+    "hr": 0.0234,
+    "obp": 0.3793,
+    "slg": 0.4368,
+    "so": 0.0963
+   },
+   "counting": {
+    "2B": 175,
+    "3B": 22,
+    "AB": 2800,
+    "BB": 463,
+    "CS": 20,
+    "G": 743,
+    "GIDP": 70,
+    "H": 798,
+    "HBP": 17,
+    "HR": 77,
+    "IBB": 28,
+    "PA": 3307,
+    "R": 429,
+    "RBI": 374,
+    "SB": 38,
+    "SF": 27,
+    "SO": 317
+   },
+   "delta": {
+    "1b": 0.002,
+    "2b": -0.0008,
+    "3b": -0.0005,
+    "avg": -0.0044,
+    "hr": 0.0002,
+    "obp_real": -0.0071,
+    "obp_ubb": 0.0013,
+    "slg": -0.0089,
+    "so": 0.0004
+   },
+   "fit_error": 0.0053,
+   "fit_lines": [
+    "  avg error: -4.36",
+    "  obp error: +1.35",
+    "  slg error: -8.93",
+    "  bbp error: +0.05",
+    "  sop error: +0.04",
+    "  hrp error: +0.02",
+    "  hbpp error: +0.00"
+   ],
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "2003 has 128 plate appearances and OPS+ 142.3. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "2009 has 253 plate appearances, under the 300 floor. OPS+ 50.0 would not enter the five.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the engine's tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Run is 10, the formula's cap. It is not a separate measured grade."
+   ],
+   "key": "SD|gilesbr02",
+   "name": "Brian Giles",
+   "nulls": [],
+   "qa_reason": "Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1585,
+    "2b": 0.0529,
+    "3b": 0.0067,
+    "avg": 0.285,
+    "bb": 0.14,
+    "hr": 0.0233,
+    "obp": 0.3865,
+    "obp_ubb": 0.378,
+    "slg": 0.4457,
+    "so": 0.0959,
+    "ubb": 0.1315
+   },
+   "seasons": [
+    {
+     "g": 29,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "142.3",
+     "other_clubs": [
+      "PIT"
+     ],
+     "pa": 128,
+     "pa_with_sh": 128,
+     "teams": [
+      "SDN"
+     ],
+     "year": 2003
+    },
+    {
+     "g": 159,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "124.6",
+     "other_clubs": [],
+     "pa": 711,
+     "pa_with_sh": 711,
+     "teams": [
+      "SDN"
+     ],
+     "year": 2004
+    },
+    {
+     "g": 158,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "144.5",
+     "other_clubs": [],
+     "pa": 674,
+     "pa_with_sh": 674,
+     "teams": [
+      "SDN"
+     ],
+     "year": 2005
+    },
+    {
+     "g": 158,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "104.9",
+     "other_clubs": [],
+     "pa": 717,
+     "pa_with_sh": 717,
+     "teams": [
+      "SDN"
+     ],
+     "year": 2006
+    },
+    {
+     "g": 121,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "106.4",
+     "other_clubs": [],
+     "pa": 552,
+     "pa_with_sh": 552,
+     "teams": [
+      "SDN"
+     ],
+     "year": 2007
+    },
+    {
+     "g": 147,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "130.8",
+     "other_clubs": [],
+     "pa": 653,
+     "pa_with_sh": 653,
+     "teams": [
+      "SDN"
+     ],
+     "year": 2008
+    },
+    {
+     "g": 61,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "50.0",
+     "other_clubs": [],
+     "pa": 253,
+     "pa_with_sh": 253,
+     "teams": [
+      "SDN"
+     ],
+     "year": 2009
+    }
+   ],
+   "target_obp": 0.378,
+   "window_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ]
+  },
+  {
+   "best_possible": 0.002,
+   "card": {
+    "1b": 0.1705,
+    "2b": 0.0511,
+    "3b": 0.003,
+    "avg": 0.2831,
+    "bb": 0.0592,
+    "hr": 0.0397,
+    "obp": 0.3305,
+    "slg": 0.472,
+    "so": 0.126
+   },
+   "counting": {
+    "2B": 150,
+    "3B": 8,
+    "AB": 2676,
+    "BB": 218,
+    "CS": 15,
+    "G": 697,
+    "GIDP": 75,
+    "H": 770,
+    "HBP": 20,
+    "HR": 116,
+    "IBB": 45,
+    "PA": 2937,
+    "R": 362,
+    "RBI": 407,
+    "SB": 20,
+    "SF": 23,
+    "SO": 369
+   },
+   "delta": {
+    "1b": 0.0017,
+    "2b": 0.0001,
+    "3b": 0.0003,
+    "avg": -0.0046,
+    "hr": 0.0003,
+    "obp_real": -0.0127,
+    "obp_ubb": 0.0026,
+    "slg": -0.0078,
+    "so": 0.0003
+   },
+   "fit_error": 0.002,
+   "fit_lines": [
+    "  avg error: -4.61",
+    "  obp error: +2.60",
+    "  slg error: -7.83",
+    "  bbp error: +0.03",
+    "  sop error: +0.03",
+    "  hrp error: +0.03",
+    "  hbpp error: +0.00"
+   ],
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "2000 has 129 plate appearances and OPS+ 91.0. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "2006 has 256 plate appearances and OPS+ 107.9. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "QA status ARCHITECTURE-LIMITED. The shipped card is the solver's best legal card and sits just outside the engine's tight slash tolerance. Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+    "Card OBP is -0.013 against the real on-base percentage. The solver target leaves intentional walks out, and the card is 0.003 from that target."
+   ],
+   "key": "TB|huffau01",
+   "name": "Aubrey Huff",
+   "nulls": [],
+   "qa_reason": "Format cannot simultaneously reproduce all target event rates. Solver found the best legal card.",
+   "qa_status": "ARCHITECTURE-LIMITED",
+   "real": {
+    "1b": 0.1689,
+    "2b": 0.0511,
+    "3b": 0.0027,
+    "avg": 0.2877,
+    "bb": 0.0742,
+    "hr": 0.0395,
+    "obp": 0.3432,
+    "obp_ubb": 0.3279,
+    "slg": 0.4798,
+    "so": 0.1256,
+    "ubb": 0.0589
+   },
+   "seasons": [
+    {
+     "g": 39,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "91.0",
+     "other_clubs": [],
+     "pa": 129,
+     "pa_with_sh": 129,
+     "teams": [
+      "TBA"
+     ],
+     "year": 2000
+    },
+    {
+     "g": 111,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "73.3",
+     "other_clubs": [],
+     "pa": 434,
+     "pa_with_sh": 434,
+     "teams": [
+      "TBA"
+     ],
+     "year": 2001
+    },
+    {
+     "g": 113,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "132.6",
+     "other_clubs": [],
+     "pa": 494,
+     "pa_with_sh": 494,
+     "teams": [
+      "TBA"
+     ],
+     "year": 2002
+    },
+    {
+     "g": 162,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "139.8",
+     "other_clubs": [],
+     "pa": 706,
+     "pa_with_sh": 706,
+     "teams": [
+      "TBA"
+     ],
+     "year": 2003
+    },
+    {
+     "g": 157,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "120.4",
+     "other_clubs": [],
+     "pa": 667,
+     "pa_with_sh": 667,
+     "teams": [
+      "TBA"
+     ],
+     "year": 2004
+    },
+    {
+     "g": 154,
+     "included": true,
+     "nulls": [],
+     "ops_plus": "97.9",
+     "other_clubs": [],
+     "pa": 636,
+     "pa_with_sh": 636,
+     "teams": [
+      "TBA"
+     ],
+     "year": 2005
+    },
+    {
+     "g": 63,
+     "included": false,
+     "nulls": [],
+     "ops_plus": "107.9",
+     "other_clubs": [
+      "HOU"
+     ],
+     "pa": 256,
+     "pa_with_sh": 256,
+     "teams": [
+      "TBA"
+     ],
+     "year": 2006
+    }
+   ],
+   "target_obp": 0.3279,
+   "window_years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ]
+  },
+  {
+   "best_possible": 0.0024,
+   "card": {
+    "1b": 0.1819,
+    "2b": 0.045,
+    "3b": 0.0125,
+    "avg": 0.2996,
+    "bb": 0.163,
+    "hr": 0.0091,
+    "obp": 0.4189,
+    "slg": 0.4169,
+    "so": 0.0379
+   },
+   "counting": {
+    "2B": 103,
+    "3B": 28,
+    "AB": 1933,
+    "BB": 381,
+    "CS": 34,
+    "G": 585,
+    "GIDP": 40,
+    "H": 578,
+    "HBP": 17,
+    "HR": 21,
+    "IBB": 0,
+    "PA": 2331,
+    "R": 335,
+    "RBI": 215,
+    "SB": 53,
+    "SF": 0,
+    "SO": 88
+   },
+   "delta": {
+    "1b": -0.0008,
+    "2b": 0.0008,
+    "3b": 0.0005,
+    "avg": 0.0005,
+    "hr": 0.0001,
+    "obp_real": 0.0002,
+    "obp_ubb": 0.0002,
+    "slg": 0.003,
+    "so": 0.0002
+   },
+   "fit_error": 0.0024,
+   "fit_lines": [
+    "  avg error: +0.54",
+    "  obp error: +0.19",
+    "  slg error: +3.03",
+    "  bbp error: -0.04",
+    "  sop error: +0.02",
+    "  hrp error: +0.01",
+    "  hbpp error: +0.00"
+   ],
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1941 has 54 plate appearances and OPS+ 185.6. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "1943 has 285 plate appearances, under the 300 floor. OPS+ 87.2 would not enter the five.",
+    "1954 has 278 plate appearances, under the 300 floor. OPS+ 96.2 would not enter the five.",
+    "IBB and SF are null in every window season. Lahman had not started recording them. The card stores zero, so every walk is unintentional and the on-base denominator has no sacrifice flies. HBP is recorded.",
+    "Lahman nulls treated as zero, the file's own recording: IBB [1946, 1947, 1948, 1951, 1952]; SF [1946, 1947, 1948, 1951, 1952]",
+    "Run is 10, the formula's cap. It is not a separate measured grade."
+   ],
+   "key": "PHA|valoel01",
+   "name": "Elmer Valo",
+   "nulls": [
+    {
+     "field": "IBB",
+     "year": 1946
+    },
+    {
+     "field": "SF",
+     "year": 1946
+    },
+    {
+     "field": "IBB",
+     "year": 1947
+    },
+    {
+     "field": "SF",
+     "year": 1947
+    },
+    {
+     "field": "IBB",
+     "year": 1948
+    },
+    {
+     "field": "SF",
+     "year": 1948
+    },
+    {
+     "field": "IBB",
+     "year": 1951
+    },
+    {
+     "field": "SF",
+     "year": 1951
+    },
+    {
+     "field": "IBB",
+     "year": 1952
+    },
+    {
+     "field": "SF",
+     "year": 1952
+    }
+   ],
+   "qa_reason": "within tolerance",
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1828,
+    "2b": 0.0442,
+    "3b": 0.012,
+    "avg": 0.299,
+    "bb": 0.1634,
+    "hr": 0.009,
+    "obp": 0.4187,
+    "obp_ubb": 0.4187,
+    "slg": 0.4139,
+    "so": 0.0378,
+    "ubb": 0.1634
+   },
+   "seasons": [
+    {
+     "g": 6,
+     "included": false,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "109.7",
+     "other_clubs": [],
+     "pa": 26,
+     "pa_with_sh": 26,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1940
+    },
+    {
+     "g": 15,
+     "included": false,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "185.6",
+     "other_clubs": [],
+     "pa": 54,
+     "pa_with_sh": 54,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1941
+    },
+    {
+     "g": 133,
+     "included": false,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "102.6",
+     "other_clubs": [],
+     "pa": 533,
+     "pa_with_sh": 542,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1942
+    },
+    {
+     "g": 77,
+     "included": false,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "87.2",
+     "other_clubs": [],
+     "pa": 285,
+     "pa_with_sh": 287,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1943
+    },
+    {
+     "g": 108,
+     "included": true,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "138.9",
+     "other_clubs": [],
+     "pa": 409,
+     "pa_with_sh": 411,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1946
+    },
+    {
+     "g": 112,
+     "included": true,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "133.8",
+     "other_clubs": [],
+     "pa": 436,
+     "pa_with_sh": 450,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1947
+    },
+    {
+     "g": 113,
+     "included": true,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "127.7",
+     "other_clubs": [],
+     "pa": 468,
+     "pa_with_sh": 475,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1948
+    },
+    {
+     "g": 150,
+     "included": false,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "124.4",
+     "other_clubs": [],
+     "pa": 668,
+     "pa_with_sh": 680,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1949
+    },
+    {
+     "g": 129,
+     "included": false,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "114.1",
+     "other_clubs": [],
+     "pa": 535,
+     "pa_with_sh": 542,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1950
+    },
+    {
+     "g": 123,
+     "included": true,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "138.6",
+     "other_clubs": [],
+     "pa": 527,
+     "pa_with_sh": 530,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1951
+    },
+    {
+     "g": 129,
+     "included": true,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "143.7",
+     "other_clubs": [],
+     "pa": 491,
+     "pa_with_sh": 495,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1952
+    },
+    {
+     "g": 50,
+     "included": false,
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "82.7",
+     "other_clubs": [],
+     "pa": 107,
+     "pa_with_sh": 107,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1953
+    },
+    {
+     "g": 95,
+     "included": false,
+     "nulls": [
+      "IBB"
+     ],
+     "ops_plus": "96.2",
+     "other_clubs": [],
+     "pa": 278,
+     "pa_with_sh": 281,
+     "teams": [
+      "PHA"
+     ],
+     "year": 1954
+    }
+   ],
+   "target_obp": 0.4187,
+   "window_years": [
+    1946,
+    1947,
+    1948,
+    1951,
+    1952
+   ]
+  }
+ ],
+ "rank": "league OPS+ rounded half up to one decimal, no park factor"
+}
