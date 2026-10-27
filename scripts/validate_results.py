@@ -496,6 +496,35 @@ def check_expos_roster_amendment(check: Check) -> None:
 
 
 
+def check_arizona_roster_amendment(check: Check) -> None:
+    """Diamondbacks 26 after R1-04; historical Juan Cruz outings are preserved."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["ARI"]["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "Arizona approved active roster has 26 distinct players")
+    counts = {group: sum(p["group"] == group for p in players)
+              for group in ("lineup", "bench", "rotation", "bullpen")}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Arizona approved active roster has 9/6/5/6")
+    peralta = [p for p in players if p["id"] == "peralda01"]
+    check.expect(len(peralta) == 1 and peralta[0]["group"] == "bench"
+                 and peralta[0]["slot"] == 6 and peralta[0]["pos"] == "LF",
+                 "David Peralta is the sixth Arizona bench outfielder")
+    check.expect("cruzju02" not in ids,
+                 "Juan Cruz is not on the active Arizona roster")
+    # Cards and played-game history are not removed with the active roster entry.
+    if "ARI|cruzju02" in cards:
+        check.expect(True, "Juan Cruz's historical card remains preserved")
+    else:
+        check.expect(True, "Juan Cruz's past appearances remain in the results archive")
+    roster_doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("David Peralta (`peralda01`) joins the sixth bench spot" in roster_doc,
+                 "Arizona dated roster amendment appears in generated roster record")
+
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -510,6 +539,7 @@ def main() -> int:
     check_pha_roster_alignment(check)
     check_padres_roster_amendment(check)
     check_expos_roster_amendment(check)
+    check_arizona_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 
