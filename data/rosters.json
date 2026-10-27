@@ -3149,6 +3149,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "huffau01",
+    "kind": "hitter",
+    "name": "Aubrey Huff",
+    "pos": "OF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "priceda01",
     "kind": "pitcher",
@@ -3227,14 +3235,6 @@
     "name": "Diego Castillo",
     "pos": "RP",
     "slot": 5
-   },
-   {
-    "group": "bullpen",
-    "id": "kellyke02",
-    "kind": "pitcher",
-    "name": "Kevin Kelly",
-    "pos": "RP",
-    "slot": 6
    },
    {
     "group": "bullpen",
