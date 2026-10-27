@@ -1437,6 +1437,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF4 Marquis Grissom 6
 - IF2 Chris Speier 8
 - BAT Rusty Staub 4
+- OF5 Moisés Alou OF R 6
 
 ### Rotation
 
@@ -1454,7 +1455,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MR1 Mel Rojas 7
 - MR2 Andy McGaffigan 5
 - LHP Woodie Fryman 8
-- LR/SP6 Jeff Fassero 6
 
 ## 28. Colorado Rockies (COL)
 
