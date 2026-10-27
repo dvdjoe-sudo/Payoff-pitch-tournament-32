@@ -2,6 +2,20 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Late bullpen usage: closer re-check, tired relievers
+
+These came out of the test series Game 2.
+- **Closer call is re-checked on the current score.** The 9th-inning closer call is decided at the end of a half. It is now re-checked against the score when the change is made. If the lead is no longer a save spot (lead 1-3, or the tying run on base, at bat or on deck), the starter stays in. In Game 2, Sean Marshall came in with a 5-run lead after the call was made at 5-4.
+- **Tired relievers come out mid-inning.** A reliever who reaches page 11 fatigue (Short: 2 runs; Long: 3 runs) is pulled before the next batter, like a starter. Once-per-game is kept. If the bullpen has no unused arm, he stays in.
+- **Stress (2,976 games, before → after):**
+  - starter IP 4.86 → 4.87;
+  - complete games 6.7% → 7.4%;
+  - relievers 3.02 → 3.23 per team-game;
+  - runs per relief appearance 0.80 → 0.72;
+  - relief outings with 4+ runs 5.1% → 3.0%;
+  - R 5.12 → 5.03 per team-game; AVG/SLG .255/.425 → .253/.419.
+- Tests in `test_game.late_bullpen_usage`.
+
 ## 2026-10-27 — Box score scoring, responsible pitcher, manager bullpen
 
 These came out of the test series Game 1 (Montreal at Chicago).

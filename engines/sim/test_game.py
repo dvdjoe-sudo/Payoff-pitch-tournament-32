@@ -626,6 +626,37 @@ def supplemental_strikeout_is_on_by_default():
     assert not off._supplemental_strikeout(pitcher, 55)
 
 
+def late_bullpen_usage():
+    """A 9th-inning closer call is re-checked on the current score, and a tired
+    reliever comes out before the next batter while the pen has an arm."""
+    f = game()
+    f.batting, f.fielding = f.away, f.home
+    f.inning, f.half, f.outs, f.bases = 9, "top", 0, [None, None, None]
+    starter = f.pitcher["BOS"]["player"]
+    f.score = {"TOR": 4, "BOS": 9}
+    f._pending_change = {"BOS": f.SAVE_CALL + " 9; the closer comes in."}
+    f._maybe_change_pitcher(before_batter=True)
+    assert f.pitcher["BOS"]["player"] is starter and "BOS" not in f._pending_change
+    assert any("save situation is gone" in l for l in f.log)
+    f.score = {"TOR": 4, "BOS": 5}
+    f._pending_change = {"BOS": f.SAVE_CALL + " 9; the closer comes in."}
+    f._maybe_change_pitcher(before_batter=True)
+    closer = f.pitcher["BOS"]["player"]
+    assert closer is not starter and closer in f.home["bullpen"]
+    # Tired reliever: Short man with 2 runs is pulled mid-inning.
+    st = f.pitcher["BOS"]
+    st["runs"], st["batters"] = 2, 1
+    f._maybe_change_pitcher(before_batter=True)
+    nxt = f.pitcher["BOS"]["player"]
+    assert nxt not in (starter, closer) and any("reliever is fatigued" in l for l in f.log)
+    # Pen exhausted: the tired man stays and no error is raised.
+    f._pitched["BOS"] |= {p["id"] for p in f.home["bullpen"] if p is not nxt}
+    st = f.pitcher["BOS"]
+    st["runs"], st["batters"], st["fatigued"] = 3, 1, True
+    f._maybe_change_pitcher(before_batter=True)
+    assert f.pitcher["BOS"]["player"] is nxt
+
+
 def official_scoring_and_bullpen():
     walk = 0
     for seed in range(1, 80):
@@ -726,6 +757,7 @@ def official_scoring_and_bullpen():
 
 
 if __name__ == "__main__":
+    late_bullpen_usage()
     official_scoring_and_bullpen()
     supplemental_strikeout_is_on_by_default()
     chart_faces()

@@ -661,6 +661,12 @@ class Game:
         self._pending_change = pending
         if not remove and before_batter and code in pending:
             remove, reason = True, pending[code]
+            if reason.startswith(self.SAVE_CALL) and not self._save_spot_now():
+                pending.pop(code, None)
+                self.say("Manager: the save situation is gone (score %s %d, %s %d). %s stays in." % (
+                    self.away["code"], self.score[self.away["code"]], self.home["code"],
+                    self.score[self.home["code"]], player["name"]))
+                return
         if not remove:
             return
         if not before_batter:
@@ -805,6 +811,10 @@ class Game:
         stamina = player["stamina"] or {}
         starter = bool(self._entries) and [e for e in self._entries if e["code"] == code][0]["key"] == self._pkey()
         if not starter:
+            if before_batter and not state["fatigued"] and state["batters"] > 0:
+                self._mark_fatigue(state, end_of_half=False)
+            if before_batter and state["fatigued"] and state["batters"] > 0 and self._pen_left():
+                return "Manager: the reliever is fatigued (page 11), so he is pulled before the next batter."
             return None
         if before_batter:
             if state["fatigued"]:
@@ -821,6 +831,20 @@ class Game:
         if nxt >= 9 and 1 <= lead <= 3 and done >= 7:
             return "Manager: save situation in inning %d; the closer comes in." % nxt
         return None
+
+    SAVE_CALL = "Manager: save situation in inning"
+
+    def _pen_left(self):
+        gone = getattr(self, "_pitched", {}).get(self.fielding["code"], set())
+        me = self.pitcher[self.fielding["code"]]["player"]["id"]
+        return any(not p["removed"] and p["id"] not in gone and p["id"] != me for p in self.fielding["bullpen"])
+
+    def _save_spot_now(self):
+        """Re-check the save situation with the current score when the change is made."""
+        code = self.fielding["code"]
+        lead = self.score[code] - self.score[self.batting["code"]]
+        on = sum(1 for b in self.bases if b)
+        return lead >= 1 and (lead <= 3 or lead <= on + 2)
 
     def _pick_reliever(self, pen):
         code = self.fielding["code"]

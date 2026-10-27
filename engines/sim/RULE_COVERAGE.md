@@ -78,6 +78,7 @@ The rate harness in `pa_sim.py` is a different tool. It is unchanged. Its error 
   - A starter goes his Start rating in innings, then comes out at the end of a half. He may continue only while leading with 1 run or fewer allowed.
   - From the 9th, a lead of 1-3 brings the closer, the first unused Short man in roster order, for a starter who has gone 7.
   - The reliever is a Short man (roster order) from the 7th inning with the score from -1 to +3, a Long man before the 7th, and otherwise the last Short man.
+  - The closer call is re-checked on the score at the moment of the change. A reliever who is fatigued (page 11) comes out before the next batter if the pen has an unused arm.
   - A Short man still comes out after one inning and a Long man after three. A pitcher who leaves cannot return.
   - `bullpen="book"` keeps the old behaviour: a fatigued starter comes out only at the end of a half, and the next name in the bullpen comes in.
 - **Official scoring (not in the book; MLB rules 9.04, 9.16-9.19).**
