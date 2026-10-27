@@ -3153,6 +3153,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "lowelmi01",
+    "kind": "hitter",
+    "name": "Mike Lowell",
+    "pos": "3B",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "johnsjo09",
     "kind": "pitcher",
@@ -3239,14 +3247,6 @@
     "name": "Antonio Alfonseca",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "burneaj01",
-    "kind": "pitcher",
-    "name": "A.J. Burnett",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 32
@@ -4233,6 +4233,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "henderi01",
+    "kind": "hitter",
+    "name": "Rickey Henderson",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "fordwh01",
     "kind": "pitcher",
@@ -4319,14 +4327,6 @@
     "name": "Mike Stanton",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "reynoal01",
-    "kind": "pitcher",
-    "name": "Allie Reynolds",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 1

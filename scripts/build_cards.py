@@ -595,6 +595,7 @@ def build():
     apply_colorado_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
+    apply_remaining_six_bench_swaps(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -615,6 +616,8 @@ AUTHORIZED_HITTERS = (
     "TEX|sierrru01",
     "TOR|cartejo01",
     "COL|gonzaca01",
+    "NYY|henderi01",
+    "MIA|lowelmi01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -683,10 +686,46 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+    # Preserve the two retired bullpen cards as immutable historical cards.
+    # Neither pitched card may vanish after the active roster swaps.
+    for frozen_key in ("NYY|reynoal01", "MIA|burneaj01"):
+        if frozen_key in old_cards:
+            cards[frozen_key] = old_cards[frozen_key]
 
 
 
 
+
+
+
+def apply_remaining_six_bench_swaps(cards, rosters):
+    """Approved Yankees / Marlins changes, after historical R1-01 games."""
+    swaps = [
+        ("NYY", "henderi01", "Rickey Henderson", "LF", "reynoal01"),
+        ("MIA", "lowelmi01", "Mike Lowell", "3B", "burneaj01"),
+    ]
+    for code, player_id, name, pos, inactive_id in swaps:
+        roster = rosters.get(code)
+        if roster is None:
+            continue
+        players = roster["players"]
+        players[:] = [p for p in players if p["id"] != inactive_id]
+        found = [p for p in players if p["id"] == player_id]
+        if not found:
+            players.append({"group": "bench", "slot": 6, "id": player_id,
+                            "name": name, "kind": "hitter", "pos": pos})
+        elif len(found) != 1:
+            raise SystemExit(code + " duplicate approved bench hitter")
+        else:
+            found[0].update(group="bench", slot=6, kind="hitter", pos=pos)
+        order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+        players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+        counts = {g: sum(p["group"] == g for p in players) for g in order}
+        if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+            raise SystemExit(code + " must remain 9/6/5/6")
+        if len({p["id"] for p in players}) != 26:
+            raise SystemExit(code + " must retain 26 unique active people")
+        # Keep frozen original card contents, scores and recorded dice untouched.
 
 
 def apply_colorado_roster_amendment(cards, rosters):

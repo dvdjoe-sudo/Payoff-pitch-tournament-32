@@ -42,6 +42,7 @@ CANONICAL = {
             ("Mattingly", "Don Mattingly (1B/BAT)"),
             ("Williams", "Bernie Williams (OF)"),
             ("Jackson", "Reggie Jackson (OF/BAT)"),
+            ("Henderson", "Rickey Henderson (OF6; Yankees 1985–1989)"),
         ],
         "rotation": [
             ("Ford", "Whitey Ford"),
@@ -57,7 +58,6 @@ CANONICAL = {
             ("Robertson", "David Robertson (RH SET)"),
             ("Righetti", "Dave Righetti (LATE/MULTI)"),
             ("Stanton", "Mike Stanton (LH SPEC)"),
-            ("Reynolds", "Allie Reynolds (LONG/SWING)"),
         ],
     },
     "MIA": {
@@ -79,6 +79,7 @@ CANONICAL = {
             ("Uggla", "Dan Uggla (INF/POWER)"),
             ("Ozuna", "Marcell Ozuna (OF4)"),
             ("Lee", "Derrek Lee (1B/POWER)"),
+            ("Lowell", "Mike Lowell (IF2/3B; Marlins 1999–2005)"),
         ],
         "rotation": [
             ("Johnson", "Josh Johnson"),
@@ -94,7 +95,6 @@ CANONICAL = {
             ("Scott", "Tanner Scott (LH)"),
             ("Bender", "Anthony Bender (MR)"),
             ("Alfonseca", "Antonio Alfonseca (MR)"),
-            ("Burnett", "A.J. Burnett (LR/EMER SP)"),
         ],
     },
 }
@@ -556,7 +556,7 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
         lines += [
             "### Franchise cards (2026-10-27)",
             "",
-            "The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. Mike Stanton (`stantmi02`) is the left-handed specialist. Rickey Henderson is not on the active roster. Played R1-01 results are unchanged.",
+            "Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`henderi01`) replaces Allie Reynolds (`reynoal01`) as the **sixth bench hitter**, a right-handed LF/CF reserve, elite pinch runner and Yankees-only **1985–1989** card candidate (including just the NYY portion of 1989). Allie Reynolds leaves the active bullpen but his authentic pitching card remains archived. The nine original batting slots, Babe Ruth DH, full five-man rotation and six relief specialists Rivera, Gossage, Lyle, Robertson, Righetti and Mike Stanton stay unchanged. Yankees 26 now **9/6/5/6**. Four previously completed R1-01 games and their box scores, dice/FAC logs and played records remain untouched; Rickey's authentic Hitter v0.5 conversion is pending.",
             "",
         ]
 
@@ -564,7 +564,7 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
         lines += [
             "### Franchise cards (2026-10-27)",
             "",
-            "The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. A.J. Burnett (`burneaj01`) is the long/emergency starter. Otto Lopez (`lopezot01`) is the utility bench player. Juan Pierre is not on the active roster. Played R1-01 results are unchanged.",
+            "Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelmi01`) replaces A.J. Burnett (`burneaj01`) as the **sixth bench hitter**, a right-handed 3B reserve counting only **Florida/Miami 1999–2005** performance. A.J. Burnett leaves the active bullpen but his genuine historical converted pitching card and previous appearances remain archived. The nine original batting slots, Gary Sheffield DH, full five-man rotation, six other relievers Nen, Cishek, Ramos, Scott, Bender and Alfonseca remain unchanged. Marlins 26 now **9/6/5/6**. All four previously played R1-01 games, scores, dice/FAC records and box scores are preserved; Lowell's genuine Hitter v0.5 card remains pending.",
             "",
         ]
 

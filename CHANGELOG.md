@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Final Yankees/Marlins six-bench approvals
+
+All **32 teams** now have six bench hitters. **New York Yankees #1:** Rickey Henderson is the new sixth reserve (Yankees-only 1985–1989), replacing active long reliever Allie Reynolds. **Miami Marlins #32:** Mike Lowell joins as sixth reserve (Florida/Miami-only 1999–2005), replacing active long reliever A.J. Burnett. Both 26-player clubs are now **9 lineup / 6 bench / 5 SP / 6 RP**. Original nine starting hitters, DH assignments, rotations, six other relievers, all historical converted cards and all four previously completed R1-01 games, box scores, FAC/dice records remain untouched. The genuine playable Hitter v0.5 conversions are still pending; new franchise-only Peak 162 is computed from Lahman, not guessed.
+
 ## 2026-10-27 — Arizona Christian Walker starting DH, 1B eligible (owner-approved)
 
 Approved Arizona Diamondbacks #29 metadata correction: **Christian Walker (`walkech02`) starts at DH, batting fifth, but remains eligible at 1B/DH**. **Paul Goldschmidt (`goldspa01`) stays at first base, batting second.** Same nine starting hitters, all 26 active players and original batting order, rotation, bench and bullpen. Exactly **9/6/5/6**; the changed starting defensive assignment applies only after the six recorded R1-04 games. Preserve original cards and spots, scores, FAC/dice data, box scores, play-by-play and all completed tournament history. Missing Arizona owner-announced roster and Peak 162 data will be addressed separately; no fabricated statistics.

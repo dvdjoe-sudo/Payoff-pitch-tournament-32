@@ -1012,7 +1012,8 @@
    "IF/BAT Tony Lazzeri",
    "1B/BAT Don Mattingly",
    "OF Bernie Williams",
-   "OF/BAT Reggie Jackson"
+   "OF/BAT Reggie Jackson",
+   "OF6 Rickey Henderson LF/CF R (Yankees 1985-1989)"
   ],
   "rotation": [
    "SP1 Whitey Ford",
@@ -1027,8 +1028,7 @@
    "LH Sparky Lyle",
    "RH SET David Robertson",
    "LATE/MULTI Dave Righetti",
-   "LH SPEC Mike Stanton",
-   "LONG/SWING Allie Reynolds"
+   "LH SPEC Mike Stanton"
   ]
  },
  "MIA": {
@@ -1049,7 +1049,8 @@
    "UTIL Otto Lopez",
    "INF/POWER Dan Uggla",
    "OF4 Marcell Ozuna",
-   "1B/POWER Derrek Lee"
+   "1B/POWER Derrek Lee",
+   "IF2 Mike Lowell 3B R (Florida/Miami 1999-2005)"
   ],
   "rotation": [
    "SP1 Josh Johnson",
@@ -1064,8 +1065,7 @@
    "SU A.J. Ramos",
    "LH Tanner Scott",
    "MR Anthony Bender",
-   "MR Antonio Alfonseca",
-   "LR/EMER SP A.J. Burnett"
+   "MR Antonio Alfonseca"
   ]
  }
 }

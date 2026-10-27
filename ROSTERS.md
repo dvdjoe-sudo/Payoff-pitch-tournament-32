@@ -77,6 +77,7 @@ This roster text is the one previously published in the tournament rules. Positi
 - Don Mattingly (1B/BAT)
 - Bernie Williams (OF)
 - Reggie Jackson (OF/BAT)
+- Rickey Henderson (OF6; Yankees 1985–1989)
 
 ### Rotation
 
@@ -94,7 +95,6 @@ This roster text is the one previously published in the tournament rules. Positi
 - David Robertson (RH SET)
 - Dave Righetti (LATE/MULTI)
 - Mike Stanton (LH SPEC)
-- Allie Reynolds (LONG/SWING)
 
 Recorded on that roster and not yet in a box score:
 
@@ -103,11 +103,11 @@ Recorded on that roster and not yet in a box score:
 - Reggie Jackson (OF/BAT)
 - Andy Pettitte
 - Sparky Lyle (LH FIRE)
-- Allie Reynolds (LONG/SWING)
+- Rickey Henderson (OF6; Yankees 1985–1989)
 
 ### Franchise cards (2026-10-27)
 
-The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. Mike Stanton (`stantmi02`) is the left-handed specialist. Rickey Henderson is not on the active roster. Played R1-01 results are unchanged.
+Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`henderi01`) replaces Allie Reynolds (`reynoal01`) as the **sixth bench hitter**, a right-handed LF/CF reserve, elite pinch runner and Yankees-only **1985–1989** card candidate (including just the NYY portion of 1989). Allie Reynolds leaves the active bullpen but his authentic pitching card remains archived. The nine original batting slots, Babe Ruth DH, full five-man rotation and six relief specialists Rivera, Gossage, Lyle, Robertson, Righetti and Mike Stanton stay unchanged. Yankees 26 now **9/6/5/6**. Four previously completed R1-01 games and their box scores, dice/FAC logs and played records remain untouched; Rickey's authentic Hitter v0.5 conversion is pending.
 
 ### Players in the results file
 
@@ -1846,6 +1846,7 @@ This roster text is the one previously published in the tournament rules. Positi
 - Dan Uggla (INF/POWER)
 - Marcell Ozuna (OF4)
 - Derrek Lee (1B/POWER)
+- Mike Lowell (IF2/3B; Marlins 1999–2005)
 
 ### Rotation
 
@@ -1863,7 +1864,6 @@ This roster text is the one previously published in the tournament rules. Positi
 - Tanner Scott (LH)
 - Anthony Bender (MR)
 - Antonio Alfonseca (MR)
-- A.J. Burnett (LR/EMER SP)
 
 Recorded on that roster and not yet in a box score:
 
@@ -1871,10 +1871,11 @@ Recorded on that roster and not yet in a box score:
 - Marcell Ozuna (OF4)
 - Derrek Lee (1B/POWER)
 - Jose Fernandez
+- Mike Lowell (IF2/3B; Marlins 1999–2005)
 
 ### Franchise cards (2026-10-27)
 
-The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. A.J. Burnett (`burneaj01`) is the long/emergency starter. Otto Lopez (`lopezot01`) is the utility bench player. Juan Pierre is not on the active roster. Played R1-01 results are unchanged.
+Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelmi01`) replaces A.J. Burnett (`burneaj01`) as the **sixth bench hitter**, a right-handed 3B reserve counting only **Florida/Miami 1999–2005** performance. A.J. Burnett leaves the active bullpen but his genuine historical converted pitching card and previous appearances remain archived. The nine original batting slots, Gary Sheffield DH, full five-man rotation, six other relievers Nen, Cishek, Ramos, Scott, Bender and Alfonseca remain unchanged. Marlins 26 now **9/6/5/6**. All four previously played R1-01 games, scores, dice/FAC records and box scores are preserved; Lowell's genuine Hitter v0.5 card remains pending.
 
 ### Players in the results file
 

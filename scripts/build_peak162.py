@@ -808,6 +808,19 @@ def main() -> None:
 
 
 
+
+            if club == "NYY" and pid == "henderi01":
+                # NYY Rickey split 1989 season: Yankees part only.
+                batting_seasons = {y: row for y, row in batting_seasons.items()
+                                   if 1985 <= y <= 1989}
+                pitching_seasons = {y: row for y, row in pitching_seasons.items()
+                                    if 1985 <= y <= 1989}
+            if club == "MIA" and pid == "lowelmi01":
+                # Florida/Miami Mike Lowell 1999-2005, never NYY/BOS.
+                batting_seasons = {y: row for y, row in batting_seasons.items()
+                                   if 1999 <= y <= 2005}
+                pitching_seasons = {y: row for y, row in pitching_seasons.items()
+                                    if 1999 <= y <= 2005}
             if club == "COL" and pid == "gonzaca01":
                 # Carlos González: use ONLY the Colorado Rockies 2009-2018,
                 # never Oakland or Cleveland; this is his franchise peak.
@@ -990,6 +1003,8 @@ def main() -> None:
         ("TEX", "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)", "sierrru01"),
         ("TOR", "OF2 Joe Carter RF/LF R (Toronto 1991-1997)", "cartejo01"),
         ("COL", "BAT Carlos González OF L (Colorado 2009-2018)", "gonzaca01"),
+        ("NYY", "OF6 Rickey Henderson LF/CF R (Yankees 1985-1989)", "henderi01"),
+        ("MIA", "IF2 Mike Lowell 3B R (Florida/Miami 1999-2005)", "lowelmi01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -1010,6 +1025,20 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+
+    for club, label, pid, lo, hi, oldlabel in [
+        ("NYY", "OF6 Rickey Henderson LF/CF R (Yankees 1985-1989)",
+         "henderi01", 1985, 1989, "LONG/SWING Allie Reynolds"),
+        ("MIA", "IF2 Mike Lowell 3B R (Florida/Miami 1999-2005)",
+         "lowelmi01", 1999, 2005, "LR/EMER SP A.J. Burnett"),
+    ]:
+        row_data = row(club, label)
+        if (row_data.get("lahman_id") != pid or row_data.get("status") != "ok"
+                or not row_data.get("years")
+                or any(not lo <= year <= hi for year in row_data["years"])):
+            raise SystemExit(club + " approved new hitter Peak 162 not franchise-only")
+        if oldlabel in clubs[club]:
+            raise SystemExit(club + " retired seventh reliever must be inactive")
     colorado_gonzalez = row("COL", "BAT Carlos González OF L (Colorado 2009-2018)")
     if (colorado_gonzalez.get("status") != "ok"
             or colorado_gonzalez.get("lahman_id") != "gonzaca01"

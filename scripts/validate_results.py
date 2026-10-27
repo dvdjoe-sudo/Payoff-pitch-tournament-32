@@ -709,89 +709,89 @@ def _active_cards_playable(check: Check, code: str, players: list) -> None:
     check.expect(not missing, code + " active 26 all have playable cards")
 
 
-def check_marlins_roster_amendment(check: Check) -> None:
-    """Approved Miami franchise cards. Played R1-01 results stay frozen."""
+
+def check_final_six_bench_team(check: Check, code: str,
+                              new_id: str, old_id: str, label: str,
+                              lineup: list[str], rotation: list[str],
+                              relief: list[str]) -> None:
+    """Preserve prior game cards; only the new sixth hitter may be unconverted."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
-    players = rosters["MIA"]["players"]
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"][code]
+    club = rosters[code]
+    players = club["players"]
     ids = [p["id"] for p in players]
-    check.expect(len(players) == len(set(ids)) == 26,
-                 "Miami has 26 distinct active players")
     groups = ("lineup", "bench", "rotation", "bullpen")
     counts = {g: sum(p["group"] == g for p in players) for g in groups}
-    check.expect(counts == {"lineup": 9, "bench": 5, "rotation": 5, "bullpen": 7},
-                 "Miami active roster is 9/5/5/7")
-    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g) ==
-                     list(range(1, counts[g] + 1)) for g in groups),
-                 "Miami active slots are unique and consecutive")
-    lopez = [p for p in players if p["id"] == "lopezot01"]
-    check.expect(len(lopez) == 1 and lopez[0]["group"] == "bench" and
-                 lopez[0]["slot"] == 2 and lopez[0]["pos"] == "UT",
-                 "Otto Lopez is the Miami utility bench player")
-    johnson = [p for p in players if p["id"] == "johnsjo09"]
-    check.expect(len(johnson) == 1 and johnson[0]["group"] == "rotation" and
-                 johnson[0]["slot"] == 1,
-                 "Josh Johnson is the Miami rotation ace")
-    burnett = [p for p in players if p["id"] == "burneaj01"]
-    check.expect(len(burnett) == 1 and burnett[0]["group"] == "bullpen" and
-                 burnett[0]["slot"] == 7,
-                 "A.J. Burnett is the Miami long reliever")
-    check.expect("pierrju01" not in ids,
-                 "Juan Pierre is not on the active Miami roster")
-    check.expect(rosters["MIA"]["played"] is True and rosters["MIA"]["seed"] == 32,
-                 "Miami stays the played bracket seed 32")
-    bios = json.loads((ROOT / "data" / "bios.json").read_text(encoding="utf-8"))
-    check.expect("MIA|burneaj01" in bios,
-                 "A.J. Burnett historical participant remains in bios")
-    text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
-    check.expect("Otto Lopez (UTIL)" in text and "A.J. Burnett (LR/EMER SP)" in text,
-                 "Miami converted roster names Otto Lopez and A.J. Burnett")
-    check.expect("Juan Pierre is not on the active roster" in text,
-                 "Miami roster notes that Juan Pierre is not active")
+    check.expect(len(players) == len(set(ids)) == 26 and
+                 counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 code + " has 26 distinct players split 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 code + " four role groups all have sequential slots")
+    sixth = [p for p in players if p["id"] == new_id]
+    check.expect(len(sixth) == 1 and sixth[0]["group"] == "bench"
+                 and sixth[0]["slot"] == 6 and sixth[0]["kind"] == "hitter",
+                 code + " approved sixth bench hitter present")
+    check.expect(old_id not in ids and code + "|" + old_id in cards,
+                 code + " former seventh pitcher archived, no longer active")
+    check.expect([p["id"] for p in players if p["group"] == "lineup"] == lineup,
+                 code + " exact original batting order stays unchanged")
+    check.expect([p["id"] for p in players if p["group"] == "rotation"] == rotation,
+                 code + " all five original rotation pitchers stay unchanged")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"] == relief,
+                 code + " all six original relievers remain unchanged")
+    owner = announced[code]
+    check.expect(len(owner["bench"]) == 6 and len(owner["bullpen"]) == 6
+                 and owner["bench"][-1] == label,
+                 code + " announced active roster reflects 6/6")
+    newpeak = peak.get(label) or {}
+    lo, hi = (1985, 1989) if code == "NYY" else (1999, 2005)
+    check.expect(newpeak.get("lahman_id") == new_id
+                 and (newpeak.get("status") != "ok"
+                      or newpeak.get("years") and
+                      all(lo <= y <= hi for y in newpeak["years"])),
+                 code + " new five-year peak franchise-only or pending")
+    check.expect(("LONG/SWING Allie Reynolds" if code == "NYY"
+                  else "LR/EMER SP A.J. Burnett") not in peak,
+                 code + " removed seventh pitcher not active in Peak 162")
+    # The six-man bench conversion doesn't invent frozen Hitter v0.5 dice.
+    missing = []
+    for p in players:
+        c = cards.get(code + "|" + p["id"]) or {}
+        if not ((c.get("card_bat") or {}).get("sections") or
+                (c.get("card_pit") or {}).get("table_2d6")):
+            missing.append(p["id"])
+    check.expect(not missing or missing == [new_id],
+                 code + " original 25 active cards stay playable; one new pending card allowed")
     script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
-    check.expect('"MIA"' in script.split("EMPTY_TEAM_CODES =", 1)[1].split("\n", 1)[0],
-                 "Full card rebuild preserves the Miami roster")
-    _active_cards_playable(check, "MIA", players)
+    check.expect("apply_remaining_six_bench_swaps(cards, rosters)" in script,
+                 code + " six-bench roster persists across rebuilds")
+    check.expect(club["played"] is True and club["seed"] == (1 if code == "NYY" else 32),
+                 code + " already played games and seed preserved")
+
+
+def check_marlins_roster_amendment(check: Check) -> None:
+    check_final_six_bench_team(
+        check, "MIA", "lowelmi01", "burneaj01",
+        "IF2 Mike Lowell 3B R (Florida/Miami 1999-2005)",
+        ["castilu01", "yelicch01", "sheffga01", "stantmi03", "cabremi01",
+         "ramirha01", "floydcl01", "coninje01", "realmjt01"],
+        ["johnsjo09", "alcansa01", "willido03", "beckejo02", "fernajo02"],
+        ["nenro01", "cishest01", "ramosaj01", "scottta01",
+         "bendean01", "alfonan01"])
 
 
 def check_yankees_roster_amendment(check: Check) -> None:
-    """Approved Yankees franchise cards. Played R1-01 results stay frozen."""
-    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
-    players = rosters["NYY"]["players"]
-    ids = [p["id"] for p in players]
-    check.expect(len(players) == len(set(ids)) == 26,
-                 "Yankees have 26 distinct active players")
-    groups = ("lineup", "bench", "rotation", "bullpen")
-    counts = {g: sum(p["group"] == g for p in players) for g in groups}
-    check.expect(counts == {"lineup": 9, "bench": 5, "rotation": 5, "bullpen": 7},
-                 "Yankees have 9/5/5/7 active players")
-    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
-                     == list(range(1, counts[g] + 1)) for g in groups),
-                 "Yankees active slots are unique and sequential")
-    jeter = [p for p in players if p["id"] == "jeterde01"]
-    judge = [p for p in players if p["id"] == "judgeaa01"]
-    check.expect(len(jeter) == 1 and jeter[0]["group"] == "lineup" and jeter[0]["slot"] == 1,
-                 "Derek Jeter is the Yankees' first lineup spot")
-    check.expect(len(judge) == 1 and judge[0]["group"] == "lineup" and judge[0]["slot"] == 2,
-                 "Aaron Judge is the Yankees' second lineup spot")
-    stanton = [p for p in players if p["id"] == "stantmi02"]
-    check.expect(len(stanton) == 1 and stanton[0]["group"] == "bullpen" and
-                 stanton[0]["slot"] == 6,
-                 "Mike Stanton is the Yankees left-handed specialist")
-    check.expect("henderi01" not in ids,
-                 "Rickey Henderson is not on the active Yankees roster")
-    check.expect(rosters["NYY"]["played"] is True and rosters["NYY"]["seed"] == 1,
-                 "Yankees active roster retains seed 1 and played status")
-    bios = json.loads((ROOT / "data" / "bios.json").read_text(encoding="utf-8"))
-    check.expect("NYY|stantmi02" in bios,
-                 "Mike Stanton remains recorded in historical Yankee bios")
-    text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
-    check.expect("Mike Stanton (LH SPEC)" in text and
-                 "Rickey Henderson is not on the active roster" in text,
-                 "Yankees converted roster keeps Mike Stanton active")
-    script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
-    check.expect('"NYY"' in script.split("EMPTY_TEAM_CODES =", 1)[1].split("\n", 1)[0],
-                 "Full set rebuild preserves the Yankees roster")
-    _active_cards_playable(check, "NYY", players)
+    check_final_six_bench_team(
+        check, "NYY", "henderi01", "reynoal01",
+        "OF6 Rickey Henderson LF/CF R (Yankees 1985-1989)",
+        ["jeterde01", "judgeaa01", "ruthba01", "gehrilo01", "mantlmi01",
+         "dimagjo01", "rodrial01", "berrayo01", "randowi01"],
+        ["fordwh01", "ruffire01", "gomezle01", "guidrro01", "pettian01"],
+        ["riverma01", "gossari01", "lylesp01", "roberda08",
+         "righeda01", "stantmi02"])
 
 
 def check_giants_roster_amendment(check: Check) -> None:

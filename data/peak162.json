@@ -4232,6 +4232,12 @@
      1997
     ]
    },
+   "IF2 Mike Lowell 3B R (Florida/Miami 1999-2005)": {
+    "lahman_id": "lowelmi01",
+    "status": "unavailable",
+    "text": "Peak stats unavailable",
+    "reason": "Pending verified Florida/Miami Marlins 1999–2005 five-year Lahman calculation; no estimated stats"
+   },
    "INF/POWER Dan Uggla": {
     "lahman_id": "ugglada01",
     "status": "ok",
@@ -4252,18 +4258,6 @@
      2022,
      2023,
      2024
-    ]
-   },
-   "LR/EMER SP A.J. Burnett": {
-    "lahman_id": "burneaj01",
-    "status": "ok",
-    "text": "Peak 162 with Miami Marlins (2001–2005): 65 G, 24-23, 0 SV, 416.0 IP, 343 H, 168 ER, 176 BB, 378 SO, 3.63 ERA, 1.25 WHIP, 8.2 K/9",
-    "years": [
-     2001,
-     2002,
-     2003,
-     2004,
-     2005
     ]
    },
    "MR Anthony Bender": {
@@ -5843,18 +5837,6 @@
      1977
     ]
    },
-   "LONG/SWING Allie Reynolds": {
-    "lahman_id": "reynoal01",
-    "status": "ok",
-    "text": "Peak 162 with New York Yankees (1948–1952): 65 G, 30-14, 7 SV, 408.1 IP, 360 H, 150 ER, 201 BB, 230 SO, 3.31 ERA, 1.37 WHIP, 5.1 K/9",
-    "years": [
-     1948,
-     1949,
-     1950,
-     1951,
-     1952
-    ]
-   },
    "OF Bernie Williams": {
     "lahman_id": "willibe02",
     "status": "ok",
@@ -5878,6 +5860,12 @@
      1980,
      1981
     ]
+   },
+   "OF6 Rickey Henderson LF/CF R (Yankees 1985-1989)": {
+    "lahman_id": "henderi01",
+    "status": "unavailable",
+    "text": "Peak stats unavailable",
+    "reason": "Pending verified New York Yankees 1985–1989 five-year Lahman calculation; no estimated stats"
    },
    "RH SET David Robertson": {
     "lahman_id": "roberda08",
