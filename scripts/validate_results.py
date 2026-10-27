@@ -1021,16 +1021,17 @@ def check_kansas_city_roster_amendment(check: Check) -> None:
     # roster; the CI build checks the derived stats for consistency.
     peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["KC"]
     mayberry = peaks.get("BAT2 John Mayberry 1B (KC 1972-1977)") or {}
-    if mayberry:
-        check.expect(mayberry.get("lahman_id") == "maybejo01"
-                     and mayberry.get("status") == "ok"
-                     and all(1972 <= y <= 1977 for y in mayberry.get("years", [])),
-                     "Mayberry Peak 162 uses only the Kansas City 1972-77 seasons")
-        check.expect("LR/SP Charlie Leibrandt 6" not in peaks,
-                     "Leibrandt removed from active Royals Peak 162")
-        check.expect("2 Danny Tartabull DH 5" in peaks
-                     and "BAT Hal McRae DH 15" in peaks,
-                     "Kansas City Peak 162 synchronized to approved DH switch")
+    check.expect(mayberry.get("lahman_id") == "maybejo01"
+                 and mayberry.get("status") == "ok"
+                 and mayberry.get("years") == [1972, 1973, 1974, 1975, 1976],
+                 "Mayberry genuine Royals-only 1972-1976 Peak 162 is present")
+    check.expect("LR/SP Charlie Leibrandt 6" not in peaks,
+                 "Leibrandt removed from active Royals Peak 162")
+    check.expect("2 Danny Tartabull DH 5" in peaks
+                 and "BAT Hal McRae DH 15" in peaks
+                 and "BAT Danny Tartabull OF 5" not in peaks
+                 and "2 Hal McRae DH 15" not in peaks,
+                 "Kansas City Peak 162 synchronized to approved DH switch")
     doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Danny Tartabull (`tartada01`) becomes the **starting designated hitter" in doc
                  and "John Mayberry (`maybejo01`) joins Kansas City's bench" in doc,
