@@ -1,0 +1,1082 @@
+{
+ "window_hitters": 139,
+ "window_pitchers": 76,
+ "unique": 215,
+ "rebuilt_hitters": 139,
+ "rebuilt_pitchers": 76,
+ "failures": [],
+ "modifier_changes": [],
+ "hitter_sim_mae": {
+  "avg": 0.0779,
+  "obp": 0.0932,
+  "slg": 0.1488,
+  "hr": 0.0136,
+  "bb": 0.0326,
+  "so": 0.0353
+ },
+ "pitcher_sim_mae": {
+  "k": 0.0373,
+  "bb": 0.0208,
+  "hr": 0.0136,
+  "h": 0.0209
+ },
+ "showcase": {
+  "COL|heltoto01": {
+   "before": {
+    "name": "Todd Helton",
+    "sections": {
+     "IN-PLAY": {
+      "vsLHP": {
+       "1B": [
+        1,
+        14
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        9,
+        47
+       ],
+       "3B": [
+        1,
+        8
+       ]
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "1B": [
+        53,
+        81
+       ],
+       "BB": [
+        1,
+        50
+       ],
+       "HBP": [
+        91,
+        99
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        83,
+        99
+       ],
+       "2B": [
+        62,
+        67
+       ],
+       "3B": [
+        68,
+        82
+       ],
+       "BB": [
+        1,
+        61
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "SO": [
+        1,
+        46
+       ]
+      },
+      "vsRHP": {
+       "SO": [
+        1,
+        31
+       ]
+      }
+     },
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "1B": [
+        75,
+        99
+       ],
+       "HR": [
+        1,
+        74
+       ]
+      },
+      "vsRHP": {
+       "HR": [
+        1,
+        68
+       ]
+      }
+     }
+    },
+    "table": null,
+    "so_modifier": null,
+    "bat_years": [
+     2000,
+     2001,
+     2002,
+     2003,
+     2004
+    ],
+    "pit_years": []
+   },
+   "after": {
+    "name": "Todd Helton",
+    "sections": {
+     "IN-PLAY": {
+      "vsLHP": {
+       "1B": [
+        1,
+        14
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        9,
+        47
+       ],
+       "3B": [
+        1,
+        8
+       ]
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "1B": [
+        53,
+        81
+       ],
+       "BB": [
+        1,
+        50
+       ],
+       "HBP": [
+        91,
+        99
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        83,
+        99
+       ],
+       "2B": [
+        62,
+        67
+       ],
+       "3B": [
+        68,
+        82
+       ],
+       "BB": [
+        1,
+        61
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "SO": [
+        1,
+        46
+       ]
+      },
+      "vsRHP": {
+       "SO": [
+        1,
+        31
+       ]
+      }
+     },
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "1B": [
+        75,
+        99
+       ],
+       "HR": [
+        1,
+        74
+       ]
+      },
+      "vsRHP": {
+       "HR": [
+        1,
+        68
+       ]
+      }
+     }
+    },
+    "table": null,
+    "so_modifier": null
+   }
+  },
+  "BOS|willite01": {
+   "before": {
+    "name": "Ted Williams",
+    "sections": {
+     "IN-PLAY": {
+      "vsLHP": {
+       "1B": [
+        8,
+        37
+       ],
+       "2B": [
+        1,
+        7
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        10,
+        40
+       ],
+       "2B": [
+        1,
+        9
+       ]
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "1B": [
+        75,
+        91
+       ],
+       "2B": [
+        65,
+        70
+       ],
+       "3B": [
+        71,
+        74
+       ],
+       "BB": [
+        1,
+        64
+       ],
+       "HBP": [
+        92,
+        99
+       ]
+      },
+      "vsRHP": {
+       "2B": [
+        97,
+        99
+       ],
+       "BB": [
+        1,
+        96
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "1B": [
+        25,
+        37
+       ],
+       "2B": [
+        21,
+        24
+       ],
+       "SO": [
+        1,
+        20
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        23,
+        34
+       ],
+       "2B": [
+        19,
+        22
+       ],
+       "SO": [
+        1,
+        18
+       ]
+      }
+     },
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "1B": [
+        82,
+        93
+       ],
+       "2B": [
+        68,
+        73
+       ],
+       "3B": [
+        74,
+        81
+       ],
+       "HR": [
+        1,
+        67
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        90,
+        99
+       ],
+       "2B": [
+        79,
+        85
+       ],
+       "3B": [
+        86,
+        89
+       ],
+       "HR": [
+        1,
+        78
+       ]
+      }
+     }
+    },
+    "table": null,
+    "so_modifier": null,
+    "bat_years": [
+     1941,
+     1942,
+     1946,
+     1955,
+     1957
+    ],
+    "pit_years": []
+   },
+   "after": {
+    "name": "Ted Williams",
+    "sections": {
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "HR": [
+        1,
+        67
+       ],
+       "2B": [
+        68,
+        73
+       ],
+       "3B": [
+        74,
+        81
+       ],
+       "1B": [
+        82,
+        93
+       ]
+      },
+      "vsRHP": {
+       "HR": [
+        1,
+        78
+       ],
+       "2B": [
+        79,
+        85
+       ],
+       "3B": [
+        86,
+        89
+       ],
+       "1B": [
+        90,
+        99
+       ]
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "BB": [
+        1,
+        63
+       ],
+       "2B": [
+        64,
+        69
+       ],
+       "3B": [
+        70,
+        73
+       ],
+       "1B": [
+        74,
+        91
+       ],
+       "HBP": [
+        92,
+        99
+       ]
+      },
+      "vsRHP": {
+       "BB": [
+        1,
+        95
+       ],
+       "2B": [
+        96,
+        99
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "SO": [
+        1,
+        20
+       ],
+       "2B": [
+        21,
+        24
+       ],
+       "1B": [
+        25,
+        37
+       ]
+      },
+      "vsRHP": {
+       "SO": [
+        1,
+        18
+       ],
+       "2B": [
+        19,
+        21
+       ],
+       "1B": [
+        22,
+        33
+       ]
+      }
+     },
+     "IN-PLAY": {
+      "vsLHP": {
+       "2B": [
+        1,
+        7
+       ],
+       "1B": [
+        8,
+        38
+       ]
+      },
+      "vsRHP": {
+       "2B": [
+        1,
+        8
+       ],
+       "1B": [
+        9,
+        41
+       ]
+      }
+     }
+    },
+    "table": null,
+    "so_modifier": null
+   }
+  },
+  "COL|tulowtr01": {
+   "before": {
+    "name": "Troy Tulowitzki",
+    "sections": {
+     "IN-PLAY": {
+      "vsLHP": {
+       "1B": [
+        9,
+        31
+       ],
+       "2B": [
+        1,
+        8
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        7,
+        32
+       ],
+       "2B": [
+        1,
+        6
+       ]
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "1B": [
+        45,
+        60
+       ],
+       "2B": [
+        36,
+        41
+       ],
+       "3B": [
+        42,
+        44
+       ],
+       "BB": [
+        1,
+        35
+       ],
+       "HBP": [
+        61,
+        62
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        56,
+        75
+       ],
+       "2B": [
+        46,
+        53
+       ],
+       "3B": [
+        54,
+        55
+       ],
+       "BB": [
+        1,
+        45
+       ],
+       "HBP": [
+        76,
+        79
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "1B": [
+        49,
+        57
+       ],
+       "2B": [
+        45,
+        48
+       ],
+       "SO": [
+        1,
+        44
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        48,
+        57
+       ],
+       "2B": [
+        46,
+        47
+       ],
+       "SO": [
+        1,
+        45
+       ]
+      }
+     },
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "1B": [
+        62,
+        74
+       ],
+       "2B": [
+        54,
+        61
+       ],
+       "HR": [
+        1,
+        53
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        78,
+        92
+       ],
+       "2B": [
+        69,
+        76
+       ],
+       "3B": [
+        77,
+        77
+       ],
+       "HR": [
+        1,
+        68
+       ]
+      }
+     }
+    },
+    "table": null,
+    "so_modifier": null,
+    "bat_years": [
+     2009,
+     2010,
+     2011,
+     2013,
+     2014
+    ],
+    "pit_years": []
+   },
+   "after": {
+    "name": "Troy Tulowitzki",
+    "sections": {
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "HR": [
+        1,
+        62
+       ],
+       "2B": [
+        63,
+        70
+       ],
+       "1B": [
+        71,
+        83
+       ]
+      },
+      "vsRHP": {
+       "HR": [
+        1,
+        64
+       ],
+       "2B": [
+        65,
+        72
+       ],
+       "3B": [
+        73,
+        73
+       ],
+       "1B": [
+        74,
+        88
+       ]
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "BB": [
+        1,
+        48
+       ],
+       "2B": [
+        49,
+        54
+       ],
+       "3B": [
+        55,
+        56
+       ],
+       "1B": [
+        57,
+        72
+       ],
+       "HBP": [
+        73,
+        74
+       ]
+      },
+      "vsRHP": {
+       "BB": [
+        1,
+        40
+       ],
+       "2B": [
+        41,
+        48
+       ],
+       "3B": [
+        49,
+        50
+       ],
+       "1B": [
+        51,
+        69
+       ],
+       "HBP": [
+        70,
+        73
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "SO": [
+        1,
+        52
+       ],
+       "2B": [
+        53,
+        56
+       ],
+       "1B": [
+        57,
+        65
+       ]
+      },
+      "vsRHP": {
+       "SO": [
+        1,
+        42
+       ],
+       "2B": [
+        43,
+        44
+       ],
+       "1B": [
+        45,
+        54
+       ]
+      }
+     },
+     "IN-PLAY": {
+      "vsLHP": {
+       "2B": [
+        1,
+        7
+       ],
+       "1B": [
+        8,
+        28
+       ]
+      },
+      "vsRHP": {
+       "2B": [
+        1,
+        6
+       ],
+       "1B": [
+        7,
+        30
+       ]
+      }
+     }
+    },
+    "table": null,
+    "so_modifier": null
+   }
+  }
+ },
+ "hitter_outliers": [
+  {
+   "key": "SF|bondsba01",
+   "name": "Barry Bonds",
+   "sim": {
+    "avg": 0.233,
+    "obp": 0.339,
+    "slg": 0.493,
+    "hr": 0.06,
+    "bb": 0.132,
+    "so": 0.131
+   },
+   "real": {
+    "avg": 0.346,
+    "obp": 0.537,
+    "slg": 0.776,
+    "hr": 0.082,
+    "bb": 0.283,
+    "so": 0.102
+   }
+  },
+  {
+   "key": "SD|gwynnto01",
+   "name": "Tony Gwynn",
+   "sim": {
+    "avg": 0.262,
+    "obp": 0.303,
+    "slg": 0.346,
+    "hr": 0.006,
+    "bb": 0.053,
+    "so": 0.046
+   },
+   "real": {
+    "avg": 0.368,
+    "obp": 0.423,
+    "slg": 0.51,
+    "hr": 0.016,
+    "bb": 0.089,
+    "so": 0.041
+   }
+  },
+  {
+   "key": "STL|pujolal01",
+   "name": "Albert Pujols",
+   "sim": {
+    "avg": 0.238,
+    "obp": 0.312,
+    "slg": 0.424,
+    "hr": 0.039,
+    "bb": 0.087,
+    "so": 0.108
+   },
+   "real": {
+    "avg": 0.341,
+    "obp": 0.438,
+    "slg": 0.661,
+    "hr": 0.066,
+    "bb": 0.141,
+    "so": 0.085
+   }
+  },
+  {
+   "key": "BOS|willite01",
+   "name": "Ted Williams",
+   "sim": {
+    "avg": 0.266,
+    "obp": 0.374,
+    "slg": 0.458,
+    "hr": 0.039,
+    "bb": 0.142,
+    "so": 0.081
+   },
+   "real": {
+    "avg": 0.369,
+    "obp": 0.514,
+    "slg": 0.694,
+    "hr": 0.061,
+    "bb": 0.226,
+    "so": 0.065
+   }
+  },
+  {
+   "key": "LAD|robinja02",
+   "name": "Jackie Robinson",
+   "sim": {
+    "avg": 0.229,
+    "obp": 0.327,
+    "slg": 0.319,
+    "hr": 0.011,
+    "bb": 0.118,
+    "so": 0.052
+   },
+   "real": {
+    "avg": 0.329,
+    "obp": 0.43,
+    "slg": 0.505,
+    "hr": 0.026,
+    "bb": 0.136,
+    "so": 0.047
+   }
+  },
+  {
+   "key": "LAD|snidedu01",
+   "name": "Duke Snider",
+   "sim": {
+    "avg": 0.211,
+    "obp": 0.283,
+    "slg": 0.414,
+    "hr": 0.043,
+    "bb": 0.09,
+    "so": 0.194
+   },
+   "real": {
+    "avg": 0.311,
+    "obp": 0.407,
+    "slg": 0.618,
+    "hr": 0.064,
+    "bb": 0.138,
+    "so": 0.148
+   }
+  },
+  {
+   "key": "CHC|hartnga01",
+   "name": "Gabby Hartnett",
+   "sim": {
+    "avg": 0.229,
+    "obp": 0.296,
+    "slg": 0.358,
+    "hr": 0.021,
+    "bb": 0.084,
+    "so": 0.124
+   },
+   "real": {
+    "avg": 0.328,
+    "obp": 0.403,
+    "slg": 0.559,
+    "hr": 0.041,
+    "bb": 0.107,
+    "so": 0.086
+   }
+  },
+  {
+   "key": "ATL|jonesch06",
+   "name": "Chipper Jones",
+   "sim": {
+    "avg": 0.236,
+    "obp": 0.312,
+    "slg": 0.387,
+    "hr": 0.029,
+    "bb": 0.098,
+    "so": 0.172
+   },
+   "real": {
+    "avg": 0.334,
+    "obp": 0.439,
+    "slg": 0.592,
+    "hr": 0.05,
+    "bb": 0.158,
+    "so": 0.126
+   }
+  }
+ ],
+ "pitcher_outliers": [
+  {
+   "key": "TB|castidi01",
+   "name": "Diego Castillo",
+   "modifier": "NONE",
+   "sim": {
+    "k": 0.181,
+    "bb": 0.112,
+    "hr": 0.035,
+    "h": 0.231
+   },
+   "real": {
+    "k": 0.297,
+    "bb": 0.082,
+    "hr": 0.029,
+    "h": 0.184
+   }
+  },
+  {
+   "key": "SF|romose01",
+   "name": "Sergio Romo",
+   "modifier": "NONE",
+   "sim": {
+    "k": 0.195,
+    "bb": 0.063,
+    "hr": 0.026,
+    "h": 0.201
+   },
+   "real": {
+    "k": 0.297,
+    "bb": 0.046,
+    "hr": 0.019,
+    "h": 0.193
+   }
+  },
+  {
+   "key": "SF|linceti01",
+   "name": "Tim Lincecum",
+   "modifier": "NONE",
+   "sim": {
+    "k": 0.162,
+    "bb": 0.101,
+    "hr": 0.026,
+    "h": 0.202
+   },
+   "real": {
+    "k": 0.262,
+    "bb": 0.087,
+    "hr": 0.017,
+    "h": 0.202
+   }
+  },
+  {
+   "key": "LAD|kershcl01",
+   "name": "Clayton Kershaw",
+   "modifier": "NONE",
+   "sim": {
+    "k": 0.199,
+    "bb": 0.076,
+    "hr": 0.023,
+    "h": 0.188
+   },
+   "real": {
+    "k": 0.298,
+    "bb": 0.047,
+    "hr": 0.014,
+    "h": 0.184
+   }
+  },
+  {
+   "key": "ARI|bradlar01",
+   "name": "Archie Bradley",
+   "modifier": "NONE",
+   "sim": {
+    "k": 0.154,
+    "bb": 0.116,
+    "hr": 0.03,
+    "h": 0.224
+   },
+   "real": {
+    "k": 0.239,
+    "bb": 0.098,
+    "hr": 0.022,
+    "h": 0.22
+   }
+  },
+  {
+   "key": "ARI|cruzju02",
+   "name": "Juan Cruz",
+   "modifier": "NONE",
+   "sim": {
+    "k": 0.193,
+    "bb": 0.121,
+    "hr": 0.023,
+    "h": 0.208
+   },
+   "real": {
+    "k": 0.276,
+    "bb": 0.124,
+    "hr": 0.021,
+    "h": 0.179
+   }
+  },
+  {
+   "key": "TEX|felizne01",
+   "name": "Neftali Feliz",
+   "modifier": "+10",
+   "sim": {
+    "k": 0.154,
+    "bb": 0.123,
+    "hr": 0.028,
+    "h": 0.22
+   },
+   "real": {
+    "k": 0.237,
+    "bb": 0.096,
+    "hr": 0.022,
+    "h": 0.156
+   }
+  },
+  {
+   "key": "STL|deandi01",
+   "name": "Dizzy Dean",
+   "modifier": "NONE",
+   "sim": {
+    "k": 0.232,
+    "bb": 0.066,
+    "hr": 0.023,
+    "h": 0.203
+   },
+   "real": {
+    "k": 0.152,
+    "bb": 0.058,
+    "hr": 0.012,
+    "h": 0.233
+   }
+  }
+ ],
+ "notes": [
+  "Fielding, stamina, and peak lines were not rewritten.",
+  "Pitcher search used the page-39 shift. TOUGH-OUT was not shifted. Face 00 was not shifted.",
+  "The sim draws the other converted cards and the 26 official 1986 parks. League-average defense is an assumption (range C, error 3). Reached-on-error is an at-bat and not a hit."
+ ]
+}

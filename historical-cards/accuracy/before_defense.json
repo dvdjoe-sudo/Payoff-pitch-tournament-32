@@ -1,0 +1,3712 @@
+{
+ "sample": {
+  "hitters": [
+   {
+    "name": "Rob Deer",
+    "role": "slugger"
+   },
+   {
+    "name": "Jesse Barfield",
+    "role": "slugger"
+   },
+   {
+    "name": "Lance Parrish",
+    "role": "slugger"
+   },
+   {
+    "name": "Dave Kingman",
+    "role": "slugger"
+   },
+   {
+    "name": "Mike Schmidt",
+    "role": "slugger"
+   },
+   {
+    "name": "Eric Davis",
+    "role": "slugger"
+   },
+   {
+    "name": "Cory Snyder",
+    "role": "slugger"
+   },
+   {
+    "name": "Ken Phelps",
+    "role": "slugger"
+   },
+   {
+    "name": "Kirk Gibson",
+    "role": "slugger"
+   },
+   {
+    "name": "Larry Parrish",
+    "role": "slugger"
+   },
+   {
+    "name": "Ron Roenicke",
+    "role": "walker"
+   },
+   {
+    "name": "Reggie Jackson",
+    "role": "walker"
+   },
+   {
+    "name": "Willie Randolph",
+    "role": "walker"
+   },
+   {
+    "name": "Dwight Evans",
+    "role": "walker"
+   },
+   {
+    "name": "George Brett",
+    "role": "walker"
+   },
+   {
+    "name": "Wade Boggs",
+    "role": "walker"
+   },
+   {
+    "name": "Darrell Evans",
+    "role": "walker"
+   },
+   {
+    "name": "Ozzie Virgil",
+    "role": "walker"
+   },
+   {
+    "name": "Tim Raines",
+    "role": "contact"
+   },
+   {
+    "name": "Steve Sax",
+    "role": "contact"
+   },
+   {
+    "name": "Tony Gwynn",
+    "role": "contact"
+   },
+   {
+    "name": "Pat Tabler",
+    "role": "contact"
+   },
+   {
+    "name": "Ron Hassey (Combined Totals)",
+    "role": "contact"
+   },
+   {
+    "name": "Wally Backman",
+    "role": "contact"
+   },
+   {
+    "name": "Chris Brown",
+    "role": "contact"
+   },
+   {
+    "name": "Gary Ward",
+    "role": "contact"
+   },
+   {
+    "name": "Pete Incaviglia",
+    "role": "whiff"
+   },
+   {
+    "name": "John Russell",
+    "role": "whiff"
+   },
+   {
+    "name": "Gorman Thomas (Combined Totals)",
+    "role": "whiff"
+   },
+   {
+    "name": "Danny Tartabull",
+    "role": "whiff"
+   },
+   {
+    "name": "Ron Kittle (Combined Totals)",
+    "role": "whiff"
+   },
+   {
+    "name": "Jim Presley",
+    "role": "whiff"
+   },
+   {
+    "name": "Jose Canseco",
+    "role": "whiff"
+   },
+   {
+    "name": "Steve Balboni",
+    "role": "whiff"
+   },
+   {
+    "name": "Alan Ashby",
+    "role": "regular"
+   },
+   {
+    "name": "Chet Lemon",
+    "role": "regular"
+   },
+   {
+    "name": "Gary Carter",
+    "role": "regular"
+   },
+   {
+    "name": "Jose Cruz",
+    "role": "regular"
+   },
+   {
+    "name": "Mike Marshall",
+    "role": "regular"
+   },
+   {
+    "name": "Roy Smalley",
+    "role": "regular"
+   }
+  ],
+  "pitchers": [
+   {
+    "name": "Jack Morris",
+    "role": "morris"
+   },
+   {
+    "name": "Bobby Witt",
+    "role": "range50"
+   },
+   {
+    "name": "Tom Henke",
+    "role": "range50"
+   },
+   {
+    "name": "Randy Myers",
+    "role": "range50"
+   },
+   {
+    "name": "Mark Clear",
+    "role": "range50"
+   },
+   {
+    "name": "Jose DeLeon (Chicago)",
+    "role": "range50"
+   },
+   {
+    "name": "Eric Plunk",
+    "role": "range50"
+   },
+   {
+    "name": "Dwayne Henry",
+    "role": "range50"
+   },
+   {
+    "name": "Mike Scott",
+    "role": "ace"
+   },
+   {
+    "name": "Roger Clemens",
+    "role": "ace"
+   },
+   {
+    "name": "Sid Fernandez",
+    "role": "ace"
+   },
+   {
+    "name": "Mark Langston",
+    "role": "ace"
+   },
+   {
+    "name": "Floyd Youmans",
+    "role": "ace"
+   },
+   {
+    "name": "Fernando Valenzuela",
+    "role": "ace"
+   },
+   {
+    "name": "Mark Eichhorn",
+    "role": "reliever"
+   },
+   {
+    "name": "Lee Smith",
+    "role": "reliever"
+   },
+   {
+    "name": "Ken Howell",
+    "role": "reliever"
+   },
+   {
+    "name": "Ron Robinson",
+    "role": "reliever"
+   },
+   {
+    "name": "Doyle Alexander (Combined Totals)",
+    "role": "control"
+   },
+   {
+    "name": "Bret Saberhagen",
+    "role": "control"
+   },
+   {
+    "name": "Ron Guidry",
+    "role": "control"
+   },
+   {
+    "name": "Dennis Eckersley",
+    "role": "control"
+   },
+   {
+    "name": "John Butcher (Combined Totals)",
+    "role": "contact-against"
+   },
+   {
+    "name": "Mike Smithson",
+    "role": "contact-against"
+   },
+   {
+    "name": "Chris Welsh",
+    "role": "contact-against"
+   },
+   {
+    "name": "Juan Nieves",
+    "role": "contact-against"
+   }
+  ]
+ },
+ "hitters": {
+  "n": 40,
+  "bands": {
+   "mae": 1.882,
+   "bias_engine_minus_official": 0.065,
+   "by_outcome": {
+    "HR": {
+     "mae": 2.897,
+     "bias": -0.241
+    },
+    "3B": {
+     "mae": 0.516,
+     "bias": 0.072
+    },
+    "2B": {
+     "mae": 1.128,
+     "bias": 0.047
+    },
+    "1B": {
+     "mae": 3.638,
+     "bias": 0.188
+    },
+    "BB": {
+     "mae": 2.209,
+     "bias": 0.066
+    },
+    "HBP": {
+     "mae": 0.694,
+     "bias": -0.694
+    },
+    "SO": {
+     "mae": 2.091,
+     "bias": 1.016
+    }
+   }
+  },
+  "out_table_label_rate": 0.502,
+  "sim_gap_vs_official_card": {
+   "avg": 0.014,
+   "obp": 0.0155,
+   "slg": 0.0214,
+   "hr": 0.0035,
+   "bb": 0.0133,
+   "so": 0.0138
+  },
+  "players": [
+   {
+    "name": "Rob Deer",
+    "role": "slugger",
+    "pa": 538,
+    "out_agreement": 0.275,
+    "width_mae": 2.18,
+    "sim_official": {
+     "avg": 0.244,
+     "obp": 0.36,
+     "slg": 0.521,
+     "hr": 0.064,
+     "bb": 0.147,
+     "so": 0.304
+    },
+    "sim_engine": {
+     "avg": 0.253,
+     "obp": 0.352,
+     "slg": 0.554,
+     "hr": 0.071,
+     "bb": 0.132,
+     "so": 0.326
+    },
+    "real": {
+     "avg": 0.232,
+     "obp": 0.335,
+     "slg": 0.494,
+     "hr": 0.061,
+     "bb": 0.134,
+     "so": 0.333
+    },
+    "comp": "Mike Laga (St. Louis)"
+   },
+   {
+    "name": "Jesse Barfield",
+    "role": "slugger",
+    "pa": 658,
+    "out_agreement": 0.689,
+    "width_mae": 1.43,
+    "sim_official": {
+     "avg": 0.295,
+     "obp": 0.383,
+     "slg": 0.529,
+     "hr": 0.049,
+     "bb": 0.114,
+     "so": 0.194
+    },
+    "sim_engine": {
+     "avg": 0.294,
+     "obp": 0.371,
+     "slg": 0.565,
+     "hr": 0.06,
+     "bb": 0.109,
+     "so": 0.228
+    },
+    "real": {
+     "avg": 0.289,
+     "obp": 0.363,
+     "slg": 0.559,
+     "hr": 0.061,
+     "bb": 0.105,
+     "so": 0.222
+    },
+    "comp": "Larry Parrish"
+   },
+   {
+    "name": "Lance Parrish",
+    "role": "slugger",
+    "pa": 365,
+    "out_agreement": 0.592,
+    "width_mae": 2.52,
+    "sim_official": {
+     "avg": 0.258,
+     "obp": 0.343,
+     "slg": 0.482,
+     "hr": 0.058,
+     "bb": 0.1,
+     "so": 0.214
+    },
+    "sim_engine": {
+     "avg": 0.265,
+     "obp": 0.341,
+     "slg": 0.479,
+     "hr": 0.054,
+     "bb": 0.104,
+     "so": 0.223
+    },
+    "real": {
+     "avg": 0.257,
+     "obp": 0.334,
+     "slg": 0.483,
+     "hr": 0.06,
+     "bb": 0.104,
+     "so": 0.227
+    },
+    "comp": "Larry Parrish"
+   },
+   {
+    "name": "Dave Kingman",
+    "role": "slugger",
+    "pa": 594,
+    "out_agreement": 0.838,
+    "width_mae": 1.98,
+    "sim_official": {
+     "avg": 0.234,
+     "obp": 0.278,
+     "slg": 0.465,
+     "hr": 0.062,
+     "bb": 0.052,
+     "so": 0.203
+    },
+    "sim_engine": {
+     "avg": 0.208,
+     "obp": 0.252,
+     "slg": 0.405,
+     "hr": 0.051,
+     "bb": 0.055,
+     "so": 0.208
+    },
+    "real": {
+     "avg": 0.21,
+     "obp": 0.254,
+     "slg": 0.431,
+     "hr": 0.059,
+     "bb": 0.056,
+     "so": 0.212
+    },
+    "comp": "George Foster (Combined Totals)"
+   },
+   {
+    "name": "Mike Schmidt",
+    "role": "slugger",
+    "pa": 641,
+    "out_agreement": 0.259,
+    "width_mae": 2.62,
+    "sim_official": {
+     "avg": 0.302,
+     "obp": 0.382,
+     "slg": 0.585,
+     "hr": 0.067,
+     "bb": 0.105,
+     "so": 0.124
+    },
+    "sim_engine": {
+     "avg": 0.303,
+     "obp": 0.402,
+     "slg": 0.571,
+     "hr": 0.061,
+     "bb": 0.142,
+     "so": 0.137
+    },
+    "real": {
+     "avg": 0.29,
+     "obp": 0.388,
+     "slg": 0.547,
+     "hr": 0.058,
+     "bb": 0.139,
+     "so": 0.131
+    },
+    "comp": "Fred Lynn"
+   },
+   {
+    "name": "Eric Davis",
+    "role": "slugger",
+    "pa": 483,
+    "out_agreement": 0.36,
+    "width_mae": 1.86,
+    "sim_official": {
+     "avg": 0.284,
+     "obp": 0.401,
+     "slg": 0.556,
+     "hr": 0.06,
+     "bb": 0.16,
+     "so": 0.205
+    },
+    "sim_engine": {
+     "avg": 0.299,
+     "obp": 0.399,
+     "slg": 0.57,
+     "hr": 0.061,
+     "bb": 0.142,
+     "so": 0.197
+    },
+    "real": {
+     "avg": 0.277,
+     "obp": 0.379,
+     "slg": 0.523,
+     "hr": 0.056,
+     "bb": 0.141,
+     "so": 0.207
+    },
+    "comp": "Kirk Gibson"
+   },
+   {
+    "name": "Cory Snyder",
+    "role": "slugger",
+    "pa": 432,
+    "out_agreement": 0.458,
+    "width_mae": 1.91,
+    "sim_official": {
+     "avg": 0.291,
+     "obp": 0.323,
+     "slg": 0.548,
+     "hr": 0.065,
+     "bb": 0.045,
+     "so": 0.263
+    },
+    "sim_engine": {
+     "avg": 0.288,
+     "obp": 0.315,
+     "slg": 0.543,
+     "hr": 0.064,
+     "bb": 0.037,
+     "so": 0.296
+    },
+    "real": {
+     "avg": 0.272,
+     "obp": 0.299,
+     "slg": 0.5,
+     "hr": 0.056,
+     "bb": 0.037,
+     "so": 0.285
+    },
+    "comp": "Ron Washington"
+   },
+   {
+    "name": "Ken Phelps",
+    "role": "slugger",
+    "pa": 432,
+    "out_agreement": 0.412,
+    "width_mae": 3.0,
+    "sim_official": {
+     "avg": 0.24,
+     "obp": 0.392,
+     "slg": 0.514,
+     "hr": 0.049,
+     "bb": 0.19,
+     "so": 0.205
+    },
+    "sim_engine": {
+     "avg": 0.257,
+     "obp": 0.414,
+     "slg": 0.527,
+     "hr": 0.053,
+     "bb": 0.211,
+     "so": 0.226
+    },
+    "real": {
+     "avg": 0.247,
+     "obp": 0.4,
+     "slg": 0.526,
+     "hr": 0.056,
+     "bb": 0.204,
+     "so": 0.222
+    },
+    "comp": "Darren Daulton"
+   },
+   {
+    "name": "Kirk Gibson",
+    "role": "slugger",
+    "pa": 509,
+    "out_agreement": 0.36,
+    "width_mae": 2.34,
+    "sim_official": {
+     "avg": 0.288,
+     "obp": 0.39,
+     "slg": 0.506,
+     "hr": 0.052,
+     "bb": 0.13,
+     "so": 0.193
+    },
+    "sim_engine": {
+     "avg": 0.277,
+     "obp": 0.377,
+     "slg": 0.496,
+     "hr": 0.052,
+     "bb": 0.137,
+     "so": 0.209
+    },
+    "real": {
+     "avg": 0.268,
+     "obp": 0.365,
+     "slg": 0.492,
+     "hr": 0.055,
+     "bb": 0.134,
+     "so": 0.21
+    },
+    "comp": "Eric Davis"
+   },
+   {
+    "name": "Larry Parrish",
+    "role": "slugger",
+    "pa": 516,
+    "out_agreement": 0.525,
+    "width_mae": 2.09,
+    "sim_official": {
+     "avg": 0.294,
+     "obp": 0.362,
+     "slg": 0.54,
+     "hr": 0.057,
+     "bb": 0.091,
+     "so": 0.204
+    },
+    "sim_engine": {
+     "avg": 0.295,
+     "obp": 0.364,
+     "slg": 0.557,
+     "hr": 0.061,
+     "bb": 0.097,
+     "so": 0.226
+    },
+    "real": {
+     "avg": 0.276,
+     "obp": 0.349,
+     "slg": 0.509,
+     "hr": 0.054,
+     "bb": 0.101,
+     "so": 0.221
+    },
+    "comp": "Lance Parrish"
+   },
+   {
+    "name": "Ron Roenicke",
+    "role": "walker",
+    "pa": 336,
+    "out_agreement": 0.208,
+    "width_mae": 1.96,
+    "sim_official": {
+     "avg": 0.228,
+     "obp": 0.37,
+     "slg": 0.329,
+     "hr": 0.014,
+     "bb": 0.184,
+     "so": 0.147
+    },
+    "sim_engine": {
+     "avg": 0.265,
+     "obp": 0.395,
+     "slg": 0.379,
+     "hr": 0.015,
+     "bb": 0.178,
+     "so": 0.163
+    },
+    "real": {
+     "avg": 0.247,
+     "obp": 0.384,
+     "slg": 0.356,
+     "hr": 0.015,
+     "bb": 0.182,
+     "so": 0.155
+    },
+    "comp": "Gary Roenicke"
+   },
+   {
+    "name": "Reggie Jackson",
+    "role": "walker",
+    "pa": 511,
+    "out_agreement": 0.308,
+    "width_mae": 2.32,
+    "sim_official": {
+     "avg": 0.246,
+     "obp": 0.374,
+     "slg": 0.396,
+     "hr": 0.03,
+     "bb": 0.161,
+     "so": 0.223
+    },
+    "sim_engine": {
+     "avg": 0.252,
+     "obp": 0.386,
+     "slg": 0.414,
+     "hr": 0.034,
+     "bb": 0.178,
+     "so": 0.235
+    },
+    "real": {
+     "avg": 0.241,
+     "obp": 0.378,
+     "slg": 0.408,
+     "hr": 0.035,
+     "bb": 0.18,
+     "so": 0.225
+    },
+    "comp": "Jack Clark"
+   },
+   {
+    "name": "Willie Randolph",
+    "role": "walker",
+    "pa": 586,
+    "out_agreement": 0.188,
+    "width_mae": 1.75,
+    "sim_official": {
+     "avg": 0.259,
+     "obp": 0.4,
+     "slg": 0.326,
+     "hr": 0.007,
+     "bb": 0.184,
+     "so": 0.078
+    },
+    "sim_engine": {
+     "avg": 0.303,
+     "obp": 0.404,
+     "slg": 0.382,
+     "hr": 0.009,
+     "bb": 0.144,
+     "so": 0.085
+    },
+    "real": {
+     "avg": 0.276,
+     "obp": 0.392,
+     "slg": 0.346,
+     "hr": 0.009,
+     "bb": 0.16,
+     "so": 0.084
+    },
+    "comp": "Ken Oberkfell"
+   },
+   {
+    "name": "Dwight Evans",
+    "role": "walker",
+    "pa": 626,
+    "out_agreement": 0.295,
+    "width_mae": 1.27,
+    "sim_official": {
+     "avg": 0.266,
+     "obp": 0.391,
+     "slg": 0.489,
+     "hr": 0.042,
+     "bb": 0.163,
+     "so": 0.176
+    },
+    "sim_engine": {
+     "avg": 0.268,
+     "obp": 0.378,
+     "slg": 0.474,
+     "hr": 0.039,
+     "bb": 0.15,
+     "so": 0.201
+    },
+    "real": {
+     "avg": 0.259,
+     "obp": 0.374,
+     "slg": 0.476,
+     "hr": 0.042,
+     "bb": 0.155,
+     "so": 0.187
+    },
+    "comp": "Darrell Evans"
+   },
+   {
+    "name": "George Brett",
+    "role": "walker",
+    "pa": 521,
+    "out_agreement": 0.157,
+    "width_mae": 1.77,
+    "sim_official": {
+     "avg": 0.284,
+     "obp": 0.384,
+     "slg": 0.473,
+     "hr": 0.034,
+     "bb": 0.134,
+     "so": 0.086
+    },
+    "sim_engine": {
+     "avg": 0.302,
+     "obp": 0.412,
+     "slg": 0.484,
+     "hr": 0.028,
+     "bb": 0.157,
+     "so": 0.093
+    },
+    "real": {
+     "avg": 0.29,
+     "obp": 0.399,
+     "slg": 0.481,
+     "hr": 0.031,
+     "bb": 0.154,
+     "so": 0.086
+    },
+    "comp": "Davey Lopes (Chicago)"
+   },
+   {
+    "name": "Wade Boggs",
+    "role": "walker",
+    "pa": 685,
+    "out_agreement": 0.179,
+    "width_mae": 1.82,
+    "sim_official": {
+     "avg": 0.376,
+     "obp": 0.46,
+     "slg": 0.504,
+     "hr": 0.011,
+     "bb": 0.135,
+     "so": 0.065
+    },
+    "sim_engine": {
+     "avg": 0.352,
+     "obp": 0.454,
+     "slg": 0.497,
+     "hr": 0.011,
+     "bb": 0.157,
+     "so": 0.065
+    },
+    "real": {
+     "avg": 0.357,
+     "obp": 0.455,
+     "slg": 0.486,
+     "hr": 0.012,
+     "bb": 0.153,
+     "so": 0.064
+    },
+    "comp": "Ron Hassey (Chicago)"
+   },
+   {
+    "name": "Darrell Evans",
+    "role": "walker",
+    "pa": 598,
+    "out_agreement": 0.325,
+    "width_mae": 2.0,
+    "sim_official": {
+     "avg": 0.253,
+     "obp": 0.378,
+     "slg": 0.477,
+     "hr": 0.054,
+     "bb": 0.166,
+     "so": 0.178
+    },
+    "sim_engine": {
+     "avg": 0.257,
+     "obp": 0.374,
+     "slg": 0.457,
+     "hr": 0.05,
+     "bb": 0.157,
+     "so": 0.186
+    },
+    "real": {
+     "avg": 0.241,
+     "obp": 0.356,
+     "slg": 0.442,
+     "hr": 0.048,
+     "bb": 0.152,
+     "so": 0.176
+    },
+    "comp": "Dwight Evans"
+   },
+   {
+    "name": "Ozzie Virgil",
+    "role": "walker",
+    "pa": 422,
+    "out_agreement": 0.975,
+    "width_mae": 2.48,
+    "sim_official": {
+     "avg": 0.241,
+     "obp": 0.37,
+     "slg": 0.417,
+     "hr": 0.041,
+     "bb": 0.159,
+     "so": 0.169
+    },
+    "sim_engine": {
+     "avg": 0.233,
+     "obp": 0.347,
+     "slg": 0.377,
+     "hr": 0.035,
+     "bb": 0.149,
+     "so": 0.172
+    },
+    "real": {
+     "avg": 0.223,
+     "obp": 0.339,
+     "slg": 0.373,
+     "hr": 0.036,
+     "bb": 0.149,
+     "so": 0.173
+    },
+    "comp": "Bill Almon"
+   },
+   {
+    "name": "Tim Raines",
+    "role": "contact",
+    "pa": 658,
+    "out_agreement": 0.452,
+    "width_mae": 0.95,
+    "sim_official": {
+     "avg": 0.346,
+     "obp": 0.42,
+     "slg": 0.495,
+     "hr": 0.015,
+     "bb": 0.11,
+     "so": 0.09
+    },
+    "sim_engine": {
+     "avg": 0.346,
+     "obp": 0.428,
+     "slg": 0.494,
+     "hr": 0.015,
+     "bb": 0.125,
+     "so": 0.091
+    },
+    "real": {
+     "avg": 0.334,
+     "obp": 0.413,
+     "slg": 0.476,
+     "hr": 0.014,
+     "bb": 0.119,
+     "so": 0.091
+    },
+    "comp": "Ron Hassey (Combined Totals)"
+   },
+   {
+    "name": "Steve Sax",
+    "role": "contact",
+    "pa": 692,
+    "out_agreement": 0.632,
+    "width_mae": 1.12,
+    "sim_official": {
+     "avg": 0.368,
+     "obp": 0.433,
+     "slg": 0.487,
+     "hr": 0.01,
+     "bb": 0.099,
+     "so": 0.091
+    },
+    "sim_engine": {
+     "avg": 0.336,
+     "obp": 0.392,
+     "slg": 0.452,
+     "hr": 0.009,
+     "bb": 0.083,
+     "so": 0.091
+    },
+    "real": {
+     "avg": 0.332,
+     "obp": 0.389,
+     "slg": 0.441,
+     "hr": 0.009,
+     "bb": 0.085,
+     "so": 0.084
+    },
+    "comp": "Chris Brown"
+   },
+   {
+    "name": "Tony Gwynn",
+    "role": "contact",
+    "pa": 694,
+    "out_agreement": 0.459,
+    "width_mae": 1.3,
+    "sim_official": {
+     "avg": 0.325,
+     "obp": 0.374,
+     "slg": 0.466,
+     "hr": 0.023,
+     "bb": 0.067,
+     "so": 0.059
+    },
+    "sim_engine": {
+     "avg": 0.362,
+     "obp": 0.416,
+     "slg": 0.516,
+     "hr": 0.02,
+     "bb": 0.085,
+     "so": 0.051
+    },
+    "real": {
+     "avg": 0.329,
+     "obp": 0.379,
+     "slg": 0.467,
+     "hr": 0.02,
+     "bb": 0.075,
+     "so": 0.05
+    },
+    "comp": "Denny Walling"
+   },
+   {
+    "name": "Pat Tabler",
+    "role": "contact",
+    "pa": 502,
+    "out_agreement": 0.385,
+    "width_mae": 1.14,
+    "sim_official": {
+     "avg": 0.343,
+     "obp": 0.384,
+     "slg": 0.465,
+     "hr": 0.013,
+     "bb": 0.056,
+     "so": 0.132
+    },
+    "sim_engine": {
+     "avg": 0.338,
+     "obp": 0.378,
+     "slg": 0.452,
+     "hr": 0.011,
+     "bb": 0.059,
+     "so": 0.153
+    },
+    "real": {
+     "avg": 0.326,
+     "obp": 0.365,
+     "slg": 0.433,
+     "hr": 0.012,
+     "bb": 0.058,
+     "so": 0.149
+    },
+    "comp": "Gary Ward"
+   },
+   {
+    "name": "Ron Hassey (Combined Totals)",
+    "role": "contact",
+    "pa": 387,
+    "out_agreement": 0.415,
+    "width_mae": 2.23,
+    "sim_official": {
+     "avg": 0.33,
+     "obp": 0.407,
+     "slg": 0.479,
+     "hr": 0.018,
+     "bb": 0.106,
+     "so": 0.078
+    },
+    "sim_engine": {
+     "avg": 0.341,
+     "obp": 0.426,
+     "slg": 0.504,
+     "hr": 0.025,
+     "bb": 0.129,
+     "so": 0.076
+    },
+    "real": {
+     "avg": 0.323,
+     "obp": 0.403,
+     "slg": 0.481,
+     "hr": 0.023,
+     "bb": 0.119,
+     "so": 0.07
+    },
+    "comp": "Tim Raines"
+   },
+   {
+    "name": "Wally Backman",
+    "role": "contact",
+    "pa": 423,
+    "out_agreement": 0.627,
+    "width_mae": 2.88,
+    "sim_official": {
+     "avg": 0.3,
+     "obp": 0.37,
+     "slg": 0.374,
+     "hr": 0.003,
+     "bb": 0.101,
+     "so": 0.106
+    },
+    "sim_engine": {
+     "avg": 0.325,
+     "obp": 0.377,
+     "slg": 0.394,
+     "hr": 0.003,
+     "bb": 0.077,
+     "so": 0.08
+    },
+    "real": {
+     "avg": 0.32,
+     "obp": 0.378,
+     "slg": 0.385,
+     "hr": 0.002,
+     "bb": 0.085,
+     "so": 0.076
+    },
+    "comp": "Johnny Ray"
+   },
+   {
+    "name": "Chris Brown",
+    "role": "contact",
+    "pa": 449,
+    "out_agreement": 0.878,
+    "width_mae": 1.88,
+    "sim_official": {
+     "avg": 0.318,
+     "obp": 0.383,
+     "slg": 0.437,
+     "hr": 0.018,
+     "bb": 0.075,
+     "so": 0.09
+    },
+    "sim_engine": {
+     "avg": 0.332,
+     "obp": 0.38,
+     "slg": 0.433,
+     "hr": 0.014,
+     "bb": 0.071,
+     "so": 0.097
+    },
+    "real": {
+     "avg": 0.317,
+     "obp": 0.367,
+     "slg": 0.421,
+     "hr": 0.016,
+     "bb": 0.073,
+     "so": 0.096
+    },
+    "comp": "Ray Knight"
+   },
+   {
+    "name": "Gary Ward",
+    "role": "contact",
+    "pa": 411,
+    "out_agreement": 0.435,
+    "width_mae": 1.91,
+    "sim_official": {
+     "avg": 0.318,
+     "obp": 0.376,
+     "slg": 0.42,
+     "hr": 0.013,
+     "bb": 0.072,
+     "so": 0.168
+    },
+    "sim_engine": {
+     "avg": 0.328,
+     "obp": 0.38,
+     "slg": 0.421,
+     "hr": 0.017,
+     "bb": 0.077,
+     "so": 0.178
+    },
+    "real": {
+     "avg": 0.316,
+     "obp": 0.367,
+     "slg": 0.405,
+     "hr": 0.012,
+     "bb": 0.075,
+     "so": 0.175
+    },
+    "comp": "Ivan Calderon (Chicago)"
+   },
+   {
+    "name": "Pete Incaviglia",
+    "role": "whiff",
+    "pa": 595,
+    "out_agreement": 0.641,
+    "width_mae": 2.11,
+    "sim_official": {
+     "avg": 0.266,
+     "obp": 0.348,
+     "slg": 0.49,
+     "hr": 0.051,
+     "bb": 0.107,
+     "so": 0.278
+    },
+    "sim_engine": {
+     "avg": 0.261,
+     "obp": 0.324,
+     "slg": 0.486,
+     "hr": 0.054,
+     "bb": 0.085,
+     "so": 0.317
+    },
+    "real": {
+     "avg": 0.25,
+     "obp": 0.319,
+     "slg": 0.463,
+     "hr": 0.05,
+     "bb": 0.092,
+     "so": 0.311
+    },
+    "comp": "Jose Canseco"
+   },
+   {
+    "name": "John Russell",
+    "role": "whiff",
+    "pa": 340,
+    "out_agreement": 0.227,
+    "width_mae": 2.12,
+    "sim_official": {
+     "avg": 0.267,
+     "obp": 0.332,
+     "slg": 0.488,
+     "hr": 0.043,
+     "bb": 0.08,
+     "so": 0.296
+    },
+    "sim_engine": {
+     "avg": 0.252,
+     "obp": 0.309,
+     "slg": 0.464,
+     "hr": 0.038,
+     "bb": 0.076,
+     "so": 0.31
+    },
+    "real": {
+     "avg": 0.241,
+     "obp": 0.297,
+     "slg": 0.444,
+     "hr": 0.038,
+     "bb": 0.074,
+     "so": 0.303
+    },
+    "comp": "Ron Kittle (New York)"
+   },
+   {
+    "name": "Gorman Thomas (Combined Totals)",
+    "role": "whiff",
+    "pa": 369,
+    "out_agreement": 0.795,
+    "width_mae": 1.29,
+    "sim_official": {
+     "avg": 0.202,
+     "obp": 0.328,
+     "slg": 0.386,
+     "hr": 0.044,
+     "bb": 0.156,
+     "so": 0.272
+    },
+    "sim_engine": {
+     "avg": 0.198,
+     "obp": 0.312,
+     "slg": 0.379,
+     "hr": 0.042,
+     "bb": 0.143,
+     "so": 0.289
+    },
+    "real": {
+     "avg": 0.187,
+     "obp": 0.306,
+     "slg": 0.371,
+     "hr": 0.043,
+     "bb": 0.146,
+     "so": 0.285
+    },
+    "comp": "Gorman Thomas (Seattle)"
+   },
+   {
+    "name": "Danny Tartabull",
+    "role": "whiff",
+    "pa": 572,
+    "out_agreement": 0.73,
+    "width_mae": 1.59,
+    "sim_official": {
+     "avg": 0.308,
+     "obp": 0.389,
+     "slg": 0.543,
+     "hr": 0.048,
+     "bb": 0.117,
+     "so": 0.246
+    },
+    "sim_engine": {
+     "avg": 0.277,
+     "obp": 0.356,
+     "slg": 0.495,
+     "hr": 0.043,
+     "bb": 0.11,
+     "so": 0.273
+    },
+    "real": {
+     "avg": 0.27,
+     "obp": 0.348,
+     "slg": 0.489,
+     "hr": 0.044,
+     "bb": 0.107,
+     "so": 0.274
+    },
+    "comp": "Dave Henderson (Seattle)"
+   },
+   {
+    "name": "Ron Kittle (Combined Totals)",
+    "role": "whiff",
+    "pa": 410,
+    "out_agreement": 0.793,
+    "width_mae": 1.89,
+    "sim_official": {
+     "avg": 0.24,
+     "obp": 0.311,
+     "slg": 0.459,
+     "hr": 0.056,
+     "bb": 0.085,
+     "so": 0.233
+    },
+    "sim_engine": {
+     "avg": 0.23,
+     "obp": 0.296,
+     "slg": 0.45,
+     "hr": 0.056,
+     "bb": 0.086,
+     "so": 0.264
+    },
+    "real": {
+     "avg": 0.218,
+     "obp": 0.283,
+     "slg": 0.42,
+     "hr": 0.051,
+     "bb": 0.083,
+     "so": 0.268
+    },
+    "comp": "Ron Kittle (Chicago)"
+   },
+   {
+    "name": "Jim Presley",
+    "role": "whiff",
+    "pa": 648,
+    "out_agreement": 0.389,
+    "width_mae": 1.32,
+    "sim_official": {
+     "avg": 0.284,
+     "obp": 0.327,
+     "slg": 0.485,
+     "hr": 0.038,
+     "bb": 0.055,
+     "so": 0.251
+    },
+    "sim_engine": {
+     "avg": 0.27,
+     "obp": 0.309,
+     "slg": 0.46,
+     "hr": 0.036,
+     "bb": 0.053,
+     "so": 0.252
+    },
+    "real": {
+     "avg": 0.265,
+     "obp": 0.301,
+     "slg": 0.463,
+     "hr": 0.042,
+     "bb": 0.049,
+     "so": 0.265
+    },
+    "comp": "Ron Washington"
+   },
+   {
+    "name": "Jose Canseco",
+    "role": "whiff",
+    "pa": 665,
+    "out_agreement": 0.6,
+    "width_mae": 1.79,
+    "sim_official": {
+     "avg": 0.253,
+     "obp": 0.335,
+     "slg": 0.461,
+     "hr": 0.045,
+     "bb": 0.098,
+     "so": 0.236
+    },
+    "sim_engine": {
+     "avg": 0.254,
+     "obp": 0.326,
+     "slg": 0.485,
+     "hr": 0.051,
+     "bb": 0.097,
+     "so": 0.264
+    },
+    "real": {
+     "avg": 0.24,
+     "obp": 0.314,
+     "slg": 0.457,
+     "hr": 0.05,
+     "bb": 0.098,
+     "so": 0.263
+    },
+    "comp": "Tim Laudner"
+   },
+   {
+    "name": "Steve Balboni",
+    "role": "whiff",
+    "pa": 555,
+    "out_agreement": 0.8,
+    "width_mae": 2.39,
+    "sim_official": {
+     "avg": 0.252,
+     "obp": 0.324,
+     "slg": 0.473,
+     "hr": 0.051,
+     "bb": 0.095,
+     "so": 0.249
+    },
+    "sim_engine": {
+     "avg": 0.238,
+     "obp": 0.295,
+     "slg": 0.466,
+     "hr": 0.055,
+     "bb": 0.074,
+     "so": 0.268
+    },
+    "real": {
+     "avg": 0.229,
+     "obp": 0.288,
+     "slg": 0.451,
+     "hr": 0.052,
+     "bb": 0.077,
+     "so": 0.263
+    },
+    "comp": "Mike Marshall"
+   },
+   {
+    "name": "Alan Ashby",
+    "role": "regular",
+    "pa": 354,
+    "out_agreement": 0.389,
+    "width_mae": 1.12,
+    "sim_official": {
+     "avg": 0.246,
+     "obp": 0.315,
+     "slg": 0.364,
+     "hr": 0.021,
+     "bb": 0.09,
+     "so": 0.167
+    },
+    "sim_engine": {
+     "avg": 0.269,
+     "obp": 0.353,
+     "slg": 0.388,
+     "hr": 0.021,
+     "bb": 0.114,
+     "so": 0.163
+    },
+    "real": {
+     "avg": 0.257,
+     "obp": 0.339,
+     "slg": 0.371,
+     "hr": 0.02,
+     "bb": 0.11,
+     "so": 0.158
+    },
+    "comp": "Jerry Royster"
+   },
+   {
+    "name": "Chet Lemon",
+    "role": "regular",
+    "pa": 442,
+    "out_agreement": 0.849,
+    "width_mae": 2.09,
+    "sim_official": {
+     "avg": 0.274,
+     "obp": 0.354,
+     "slg": 0.433,
+     "hr": 0.025,
+     "bb": 0.085,
+     "so": 0.117
+    },
+    "sim_engine": {
+     "avg": 0.258,
+     "obp": 0.323,
+     "slg": 0.411,
+     "hr": 0.027,
+     "bb": 0.087,
+     "so": 0.13
+    },
+    "real": {
+     "avg": 0.251,
+     "obp": 0.317,
+     "slg": 0.407,
+     "hr": 0.027,
+     "bb": 0.088,
+     "so": 0.12
+    },
+    "comp": "Dick Schofield"
+   },
+   {
+    "name": "Gary Carter",
+    "role": "regular",
+    "pa": 552,
+    "out_agreement": 0.613,
+    "width_mae": 1.77,
+    "sim_official": {
+     "avg": 0.276,
+     "obp": 0.358,
+     "slg": 0.482,
+     "hr": 0.05,
+     "bb": 0.096,
+     "so": 0.107
+    },
+    "sim_engine": {
+     "avg": 0.264,
+     "obp": 0.348,
+     "slg": 0.453,
+     "hr": 0.046,
+     "bb": 0.114,
+     "so": 0.112
+    },
+    "real": {
+     "avg": 0.255,
+     "obp": 0.339,
+     "slg": 0.439,
+     "hr": 0.043,
+     "bb": 0.112,
+     "so": 0.114
+    },
+    "comp": "Rickey Henderson"
+   },
+   {
+    "name": "Jose Cruz",
+    "role": "regular",
+    "pa": 534,
+    "out_agreement": 0.552,
+    "width_mae": 1.64,
+    "sim_official": {
+     "avg": 0.305,
+     "obp": 0.358,
+     "slg": 0.445,
+     "hr": 0.023,
+     "bb": 0.076,
+     "so": 0.159
+    },
+    "sim_engine": {
+     "avg": 0.285,
+     "obp": 0.354,
+     "slg": 0.413,
+     "hr": 0.018,
+     "bb": 0.098,
+     "so": 0.172
+    },
+    "real": {
+     "avg": 0.278,
+     "obp": 0.352,
+     "slg": 0.403,
+     "hr": 0.019,
+     "bb": 0.103,
+     "so": 0.161
+    },
+    "comp": "Randy Bush"
+   },
+   {
+    "name": "Mike Marshall",
+    "role": "regular",
+    "pa": 357,
+    "out_agreement": 0.81,
+    "width_mae": 1.75,
+    "sim_official": {
+     "avg": 0.24,
+     "obp": 0.307,
+     "slg": 0.449,
+     "hr": 0.054,
+     "bb": 0.074,
+     "so": 0.252
+    },
+    "sim_engine": {
+     "avg": 0.244,
+     "obp": 0.298,
+     "slg": 0.442,
+     "hr": 0.051,
+     "bb": 0.072,
+     "so": 0.255
+    },
+    "real": {
+     "avg": 0.233,
+     "obp": 0.291,
+     "slg": 0.439,
+     "hr": 0.053,
+     "bb": 0.076,
+     "so": 0.252
+    },
+    "comp": "Steve Balboni"
+   },
+   {
+    "name": "Roy Smalley",
+    "role": "regular",
+    "pa": 527,
+    "out_agreement": 0.213,
+    "width_mae": 1.68,
+    "sim_official": {
+     "avg": 0.24,
+     "obp": 0.353,
+     "slg": 0.436,
+     "hr": 0.038,
+     "bb": 0.148,
+     "so": 0.142
+    },
+    "sim_engine": {
+     "avg": 0.261,
+     "obp": 0.355,
+     "slg": 0.46,
+     "hr": 0.042,
+     "bb": 0.128,
+     "so": 0.142
+    },
+    "real": {
+     "avg": 0.246,
+     "obp": 0.343,
+     "slg": 0.438,
+     "hr": 0.038,
+     "bb": 0.129,
+     "so": 0.152
+    },
+    "comp": "Cliff Johnson"
+   }
+  ]
+ },
+ "pitchers": {
+  "n": 26,
+  "slot_rate_widening": 0.252,
+  "slot_rate_printed": 0.294,
+  "sim_gap_widening": {
+   "k": 0.0608,
+   "bb": 0.0247,
+   "hr": 0.0047,
+   "h": 0.0222
+  },
+  "sim_gap_printed": {
+   "k": 0.0271,
+   "bb": 0.0247,
+   "hr": 0.003,
+   "h": 0.0154
+  },
+  "players": [
+   {
+    "name": "Jack Morris",
+    "role": "morris",
+    "bf_estimate": 1112.0,
+    "printed_so": {
+     "kind": "roll",
+     "bump": 10
+    },
+    "widening_modifier": "+10",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 6
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 4
+    },
+    "real": {
+     "h_bf": 0.206,
+     "bb_bf": 0.074,
+     "so_bf": 0.201,
+     "hr_bf": 0.036
+    },
+    "sim_official": {
+     "k": 0.216,
+     "bb": 0.076,
+     "hr": 0.028,
+     "h": 0.195
+    },
+    "sim_widening": {
+     "k": 0.215,
+     "bb": 0.078,
+     "hr": 0.03,
+     "h": 0.229
+    },
+    "sim_printed": {
+     "k": 0.216,
+     "bb": 0.073,
+     "hr": 0.023,
+     "h": 0.194
+    },
+    "official_table": {
+     "2": "DEFENSE",
+     "3": "IN-PLAY",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "BALLPARK",
+     "11": "WHEELHOUSE",
+     "12": "PATIENT"
+    },
+    "widening_table": {
+     "2": "BALLPARK",
+     "3": "IN-PLAY",
+     "4": "TOUGH",
+     "5": "IN-PLAY",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "TOUGH",
+     "11": "BALLPARK",
+     "12": "PATIENT"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "DEFENSE",
+     "4": "TOUGH-OUT",
+     "5": "DEFENSE",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "TOUGH",
+     "11": "BALLPARK",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Bobby Witt",
+    "role": "range50",
+    "bf_estimate": 744.0,
+    "printed_so": {
+     "kind": "range",
+     "lo": 50,
+     "hi": 67
+    },
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 1
+    },
+    "real": {
+     "h_bf": 0.175,
+     "bb_bf": 0.192,
+     "so_bf": 0.234,
+     "hr_bf": 0.024
+    },
+    "sim_official": {
+     "k": 0.265,
+     "bb": 0.188,
+     "hr": 0.022,
+     "h": 0.217
+    },
+    "sim_widening": {
+     "k": 0.185,
+     "bb": 0.107,
+     "hr": 0.02,
+     "h": 0.192
+    },
+    "sim_printed": {
+     "k": 0.247,
+     "bb": 0.111,
+     "hr": 0.015,
+     "h": 0.19
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "PATIENT",
+     "4": "BALLPARK",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "TOUGH",
+     "4": "TOUGH-OUT",
+     "5": "PATIENT",
+     "6": "BALLPARK",
+     "7": "TOUGH",
+     "8": "DEFENSE",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "DEFENSE",
+     "12": "PATIENT"
+    },
+    "printed_table": {
+     "2": "PATIENT",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "BALLPARK",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "PATIENT",
+     "11": "PATIENT",
+     "12": "BALLPARK"
+    }
+   },
+   {
+    "name": "Tom Henke",
+    "role": "range50",
+    "bf_estimate": 369.0,
+    "printed_so": {
+     "kind": "range",
+     "lo": 50,
+     "hi": 62
+    },
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 5
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 5
+    },
+    "real": {
+     "h_bf": 0.171,
+     "bb_bf": 0.087,
+     "so_bf": 0.32,
+     "hr_bf": 0.016
+    },
+    "sim_official": {
+     "k": 0.379,
+     "bb": 0.072,
+     "hr": 0.009,
+     "h": 0.155
+    },
+    "sim_widening": {
+     "k": 0.212,
+     "bb": 0.092,
+     "hr": 0.017,
+     "h": 0.187
+    },
+    "sim_printed": {
+     "k": 0.297,
+     "bb": 0.088,
+     "hr": 0.012,
+     "h": 0.162
+    },
+    "official_table": {
+     "2": "DEFENSE",
+     "3": "PATIENT",
+     "4": "PATIENT",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "BALLPARK",
+     "11": "PATIENT",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "TOUGH",
+     "4": "PATIENT",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "BALLPARK",
+     "11": "DEFENSE",
+     "12": "BALLPARK"
+    },
+    "printed_table": {
+     "2": "PATIENT",
+     "3": "PATIENT",
+     "4": "DEFENSE",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "WHEELHOUSE",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Randy Myers",
+    "role": "range50",
+    "bf_estimate": 52.0,
+    "printed_so": {
+     "kind": "range",
+     "lo": 50,
+     "hi": 69
+    },
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 2
+    },
+    "real": {
+     "h_bf": 0.212,
+     "bb_bf": 0.173,
+     "so_bf": 0.25,
+     "hr_bf": 0.019
+    },
+    "sim_official": {
+     "k": 0.3,
+     "bb": 0.134,
+     "hr": 0.015,
+     "h": 0.204
+    },
+    "sim_widening": {
+     "k": 0.183,
+     "bb": 0.123,
+     "hr": 0.012,
+     "h": 0.195
+    },
+    "sim_printed": {
+     "k": 0.262,
+     "bb": 0.123,
+     "hr": 0.017,
+     "h": 0.185
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "TOUGH",
+     "4": "DEFENSE",
+     "5": "PATIENT",
+     "6": "PATIENT",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "TOUGH"
+    },
+    "widening_table": {
+     "2": "DEFENSE",
+     "3": "DEFENSE",
+     "4": "DEFENSE",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "WHEELHOUSE",
+     "11": "PATIENT",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "WHEELHOUSE",
+     "11": "PATIENT",
+     "12": "TOUGH"
+    }
+   },
+   {
+    "name": "Mark Clear",
+    "role": "range50",
+    "bf_estimate": 310.0,
+    "printed_so": {
+     "kind": "range",
+     "lo": 50,
+     "hi": 60
+    },
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 5
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 3
+    },
+    "real": {
+     "h_bf": 0.171,
+     "bb_bf": 0.116,
+     "so_bf": 0.274,
+     "hr_bf": 0.013
+    },
+    "sim_official": {
+     "k": 0.326,
+     "bb": 0.104,
+     "hr": 0.009,
+     "h": 0.165
+    },
+    "sim_widening": {
+     "k": 0.208,
+     "bb": 0.1,
+     "hr": 0.015,
+     "h": 0.201
+    },
+    "sim_printed": {
+     "k": 0.281,
+     "bb": 0.096,
+     "hr": 0.014,
+     "h": 0.174
+    },
+    "official_table": {
+     "2": "DEFENSE",
+     "3": "TOUGH",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "BALLPARK",
+     "11": "PATIENT",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "DEFENSE",
+     "3": "TOUGH",
+     "4": "PATIENT",
+     "5": "DEFENSE",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "TOUGH",
+     "11": "DEFENSE",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "PATIENT",
+     "11": "TOUGH",
+     "12": "TOUGH"
+    }
+   },
+   {
+    "name": "Jose DeLeon (Chicago)",
+    "role": "range50",
+    "bf_estimate": 328.0,
+    "printed_so": {
+     "kind": "range",
+     "lo": 50,
+     "hi": 52
+    },
+    "widening_modifier": "NONE",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 4
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 6
+    },
+    "real": {
+     "h_bf": 0.149,
+     "bb_bf": 0.128,
+     "so_bf": 0.207,
+     "hr_bf": 0.021
+    },
+    "sim_official": {
+     "k": 0.268,
+     "bb": 0.131,
+     "hr": 0.017,
+     "h": 0.182
+    },
+    "sim_widening": {
+     "k": 0.259,
+     "bb": 0.099,
+     "hr": 0.019,
+     "h": 0.185
+    },
+    "sim_printed": {
+     "k": 0.236,
+     "bb": 0.1,
+     "hr": 0.013,
+     "h": 0.183
+    },
+    "official_table": {
+     "2": "BALLPARK",
+     "3": "DEFENSE",
+     "4": "PATIENT",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "WHEELHOUSE",
+     "12": "PATIENT"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "TOUGH",
+     "4": "IN-PLAY",
+     "5": "TOUGH",
+     "6": "BALLPARK",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "PATIENT",
+     "11": "TOUGH",
+     "12": "PATIENT"
+    },
+    "printed_table": {
+     "2": "PATIENT-OUT",
+     "3": "TOUGH",
+     "4": "PATIENT",
+     "5": "PATIENT",
+     "6": "BALLPARK",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "IN-PLAY",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Eric Plunk",
+    "role": "range50",
+    "bf_estimate": 553.0,
+    "printed_so": {
+     "kind": "range",
+     "lo": 50,
+     "hi": 53
+    },
+    "widening_modifier": "NONE",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 3
+    },
+    "real": {
+     "h_bf": 0.165,
+     "bb_bf": 0.184,
+     "so_bf": 0.177,
+     "hr_bf": 0.025
+    },
+    "sim_official": {
+     "k": 0.213,
+     "bb": 0.182,
+     "hr": 0.021,
+     "h": 0.209
+    },
+    "sim_widening": {
+     "k": 0.233,
+     "bb": 0.102,
+     "hr": 0.018,
+     "h": 0.201
+    },
+    "sim_printed": {
+     "k": 0.222,
+     "bb": 0.112,
+     "hr": 0.018,
+     "h": 0.184
+    },
+    "official_table": {
+     "2": "DEFENSE",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "PATIENT",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "WHEELHOUSE",
+     "12": "BALLPARK"
+    },
+    "widening_table": {
+     "2": "TOUGH-OUT",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "PATIENT",
+     "7": "TOUGH",
+     "8": "BALLPARK",
+     "9": "IN-PLAY",
+     "10": "PATIENT",
+     "11": "TOUGH",
+     "12": "TOUGH-OUT"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "BALLPARK",
+     "4": "BALLPARK",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "DEFENSE",
+     "10": "TOUGH-OUT",
+     "11": "TOUGH",
+     "12": "TOUGH"
+    }
+   },
+   {
+    "name": "Dwayne Henry",
+    "role": "range50",
+    "bf_estimate": 94.0,
+    "printed_so": {
+     "kind": "range",
+     "lo": 50,
+     "hi": 65
+    },
+    "widening_modifier": "NONE",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 5
+    },
+    "real": {
+     "h_bf": 0.149,
+     "bb_bf": 0.234,
+     "so_bf": 0.181,
+     "hr_bf": 0.011
+    },
+    "sim_official": {
+     "k": 0.211,
+     "bb": 0.24,
+     "hr": 0.006,
+     "h": 0.201
+    },
+    "sim_widening": {
+     "k": 0.222,
+     "bb": 0.107,
+     "hr": 0.014,
+     "h": 0.196
+    },
+    "sim_printed": {
+     "k": 0.216,
+     "bb": 0.107,
+     "hr": 0.009,
+     "h": 0.172
+    },
+    "official_table": {
+     "2": "BALLPARK",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "PATIENT",
+     "7": "PATIENT",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "PATIENT",
+     "12": "BALLPARK"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "TOUGH",
+     "4": "PATIENT",
+     "5": "PATIENT",
+     "6": "IN-PLAY",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "BALLPARK",
+     "11": "PATIENT",
+     "12": "IN-PLAY"
+    },
+    "printed_table": {
+     "2": "BALLPARK",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "DEFENSE",
+     "6": "PATIENT",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "BALLPARK",
+     "12": "PATIENT-OUT"
+    }
+   },
+   {
+    "name": "Mike Scott",
+    "role": "ace",
+    "bf_estimate": 1079.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 5
+    },
+    "real": {
+     "h_bf": 0.169,
+     "bb_bf": 0.067,
+     "so_bf": 0.284,
+     "hr_bf": 0.016
+    },
+    "sim_official": {
+     "k": 0.303,
+     "bb": 0.068,
+     "hr": 0.018,
+     "h": 0.167
+    },
+    "sim_widening": {
+     "k": 0.207,
+     "bb": 0.074,
+     "hr": 0.013,
+     "h": 0.196
+    },
+    "sim_printed": {
+     "k": 0.281,
+     "bb": 0.07,
+     "hr": 0.017,
+     "h": 0.167
+    },
+    "official_table": {
+     "2": "DEFENSE",
+     "3": "IN-PLAY",
+     "4": "TOUGH",
+     "5": "BALLPARK",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "TOUGH"
+    },
+    "widening_table": {
+     "2": "TOUGH",
+     "3": "WHEELHOUSE",
+     "4": "PATIENT",
+     "5": "DEFENSE",
+     "6": "DEFENSE",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "PATIENT",
+     "11": "DEFENSE",
+     "12": "PATIENT"
+    },
+    "printed_table": {
+     "2": "WHEELHOUSE",
+     "3": "BALLPARK",
+     "4": "TOUGH",
+     "5": "DEFENSE",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "PATIENT",
+     "12": "TOUGH"
+    }
+   },
+   {
+    "name": "Roger Clemens",
+    "role": "ace",
+    "bf_estimate": 1008.0,
+    "printed_so": null,
+    "widening_modifier": "+10",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 4
+    },
+    "real": {
+     "h_bf": 0.178,
+     "bb_bf": 0.066,
+     "so_bf": 0.236,
+     "hr_bf": 0.021
+    },
+    "sim_official": {
+     "k": 0.305,
+     "bb": 0.064,
+     "hr": 0.011,
+     "h": 0.154
+    },
+    "sim_widening": {
+     "k": 0.211,
+     "bb": 0.073,
+     "hr": 0.018,
+     "h": 0.183
+    },
+    "sim_printed": {
+     "k": 0.24,
+     "bb": 0.078,
+     "hr": 0.021,
+     "h": 0.19
+    },
+    "official_table": {
+     "2": "PATIENT",
+     "3": "IN-PLAY",
+     "4": "BALLPARK",
+     "5": "TOUGH",
+     "6": "PATIENT",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "DEFENSE",
+     "12": "TOUGH"
+    },
+    "widening_table": {
+     "2": "BALLPARK",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "BALLPARK",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "PATIENT",
+     "11": "PATIENT",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "DEFENSE",
+     "3": "TOUGH",
+     "4": "BALLPARK",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "DEFENSE",
+     "11": "BALLPARK",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Sid Fernandez",
+    "role": "ace",
+    "bf_estimate": 864.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 3
+    },
+    "real": {
+     "h_bf": 0.186,
+     "bb_bf": 0.105,
+     "so_bf": 0.231,
+     "hr_bf": 0.015
+    },
+    "sim_official": {
+     "k": 0.276,
+     "bb": 0.106,
+     "hr": 0.013,
+     "h": 0.167
+    },
+    "sim_widening": {
+     "k": 0.193,
+     "bb": 0.105,
+     "hr": 0.009,
+     "h": 0.198
+    },
+    "sim_printed": {
+     "k": 0.236,
+     "bb": 0.099,
+     "hr": 0.013,
+     "h": 0.179
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "BALLPARK",
+     "11": "DEFENSE",
+     "12": "PATIENT"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "TOUGH",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "DEFENSE",
+     "7": "PATIENT",
+     "8": "BALLPARK",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "DEFENSE",
+     "12": "TOUGH"
+    },
+    "printed_table": {
+     "2": "WHEELHOUSE",
+     "3": "TOUGH",
+     "4": "PATIENT",
+     "5": "DEFENSE",
+     "6": "PATIENT",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "PATIENT",
+     "11": "BALLPARK",
+     "12": "BALLPARK"
+    }
+   },
+   {
+    "name": "Mark Langston",
+    "role": "ace",
+    "bf_estimate": 1074.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 6
+    },
+    "real": {
+     "h_bf": 0.218,
+     "bb_bf": 0.115,
+     "so_bf": 0.228,
+     "hr_bf": 0.028
+    },
+    "sim_official": {
+     "k": 0.269,
+     "bb": 0.1,
+     "hr": 0.016,
+     "h": 0.183
+    },
+    "sim_widening": {
+     "k": 0.179,
+     "bb": 0.099,
+     "hr": 0.022,
+     "h": 0.195
+    },
+    "sim_printed": {
+     "k": 0.243,
+     "bb": 0.099,
+     "hr": 0.017,
+     "h": 0.183
+    },
+    "official_table": {
+     "2": "BALLPARK",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "PATIENT",
+     "11": "WHEELHOUSE",
+     "12": "BALLPARK"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "BALLPARK",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "PATIENT",
+     "7": "TOUGH",
+     "8": "DEFENSE",
+     "9": "BALLPARK",
+     "10": "PATIENT",
+     "11": "PATIENT",
+     "12": "WHEELHOUSE"
+    },
+    "printed_table": {
+     "2": "BALLPARK",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "BALLPARK",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "BALLPARK",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Floyd Youmans",
+    "role": "ace",
+    "bf_estimate": 920.0,
+    "printed_so": null,
+    "widening_modifier": "+10",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 3
+    },
+    "real": {
+     "h_bf": 0.158,
+     "bb_bf": 0.128,
+     "so_bf": 0.22,
+     "hr_bf": 0.015
+    },
+    "sim_official": {
+     "k": 0.23,
+     "bb": 0.115,
+     "hr": 0.017,
+     "h": 0.192
+    },
+    "sim_widening": {
+     "k": 0.195,
+     "bb": 0.091,
+     "hr": 0.011,
+     "h": 0.196
+    },
+    "sim_printed": {
+     "k": 0.255,
+     "bb": 0.097,
+     "hr": 0.015,
+     "h": 0.181
+    },
+    "official_table": {
+     "2": "PATIENT",
+     "3": "IN-PLAY",
+     "4": "PATIENT",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "PATIENT",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "TOUGH",
+     "3": "WHEELHOUSE",
+     "4": "PATIENT",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "IN-PLAY",
+     "11": "PATIENT",
+     "12": "TOUGH-OUT"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "WHEELHOUSE",
+     "4": "PATIENT",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Fernando Valenzuela",
+    "role": "ace",
+    "bf_estimate": 1118.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 1
+    },
+    "real": {
+     "h_bf": 0.202,
+     "bb_bf": 0.076,
+     "so_bf": 0.216,
+     "hr_bf": 0.016
+    },
+    "sim_official": {
+     "k": 0.253,
+     "bb": 0.061,
+     "hr": 0.013,
+     "h": 0.175
+    },
+    "sim_widening": {
+     "k": 0.169,
+     "bb": 0.08,
+     "hr": 0.016,
+     "h": 0.212
+    },
+    "sim_printed": {
+     "k": 0.236,
+     "bb": 0.093,
+     "hr": 0.02,
+     "h": 0.182
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "IN-PLAY",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "BALLPARK",
+     "11": "DEFENSE",
+     "12": "PATIENT"
+    },
+    "widening_table": {
+     "2": "WHEELHOUSE",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "DEFENSE",
+     "9": "BALLPARK",
+     "10": "DEFENSE",
+     "11": "PATIENT",
+     "12": "PATIENT"
+    },
+    "printed_table": {
+     "2": "BALLPARK",
+     "3": "WHEELHOUSE",
+     "4": "PATIENT",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "PATIENT",
+     "12": "BALLPARK"
+    }
+   },
+   {
+    "name": "Mark Eichhorn",
+    "role": "reliever",
+    "bf_estimate": 621.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 6
+    },
+    "real": {
+     "h_bf": 0.169,
+     "bb_bf": 0.072,
+     "so_bf": 0.267,
+     "hr_bf": 0.013
+    },
+    "sim_official": {
+     "k": 0.335,
+     "bb": 0.056,
+     "hr": 0.009,
+     "h": 0.152
+    },
+    "sim_widening": {
+     "k": 0.191,
+     "bb": 0.074,
+     "hr": 0.021,
+     "h": 0.197
+    },
+    "sim_printed": {
+     "k": 0.267,
+     "bb": 0.08,
+     "hr": 0.017,
+     "h": 0.176
+    },
+    "official_table": {
+     "2": "IN-PLAY",
+     "3": "TOUGH",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "BALLPARK",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "DEFENSE",
+     "4": "BALLPARK",
+     "5": "DEFENSE",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "DEFENSE",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "BALLPARK"
+    },
+    "printed_table": {
+     "2": "DEFENSE",
+     "3": "PATIENT",
+     "4": "BALLPARK",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "DEFENSE",
+     "11": "TOUGH",
+     "12": "BALLPARK"
+    }
+   },
+   {
+    "name": "Lee Smith",
+    "role": "reliever",
+    "bf_estimate": 382.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 3
+    },
+    "real": {
+     "h_bf": 0.181,
+     "bb_bf": 0.11,
+     "so_bf": 0.243,
+     "hr_bf": 0.018
+    },
+    "sim_official": {
+     "k": 0.279,
+     "bb": 0.086,
+     "hr": 0.012,
+     "h": 0.159
+    },
+    "sim_widening": {
+     "k": 0.178,
+     "bb": 0.096,
+     "hr": 0.018,
+     "h": 0.211
+    },
+    "sim_printed": {
+     "k": 0.27,
+     "bb": 0.082,
+     "hr": 0.012,
+     "h": 0.16
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "TOUGH",
+     "4": "DEFENSE",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "PATIENT",
+     "11": "BALLPARK",
+     "12": "IN-PLAY"
+    },
+    "widening_table": {
+     "2": "BALLPARK",
+     "3": "IN-PLAY",
+     "4": "BALLPARK",
+     "5": "DEFENSE",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "DEFENSE",
+     "11": "PATIENT",
+     "12": "PATIENT"
+    },
+    "printed_table": {
+     "2": "BALLPARK",
+     "3": "TOUGH-OUT",
+     "4": "BALLPARK",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "DEFENSE",
+     "11": "PATIENT",
+     "12": "DEFENSE"
+    }
+   },
+   {
+    "name": "Ken Howell",
+    "role": "reliever",
+    "bf_estimate": 442.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 3
+    },
+    "real": {
+     "h_bf": 0.195,
+     "bb_bf": 0.143,
+     "so_bf": 0.235,
+     "hr_bf": 0.016
+    },
+    "sim_official": {
+     "k": 0.238,
+     "bb": 0.14,
+     "hr": 0.013,
+     "h": 0.194
+    },
+    "sim_widening": {
+     "k": 0.183,
+     "bb": 0.102,
+     "hr": 0.017,
+     "h": 0.203
+    },
+    "sim_printed": {
+     "k": 0.271,
+     "bb": 0.096,
+     "hr": 0.011,
+     "h": 0.176
+    },
+    "official_table": {
+     "2": "PATIENT",
+     "3": "PATIENT",
+     "4": "PATIENT",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "TOUGH",
+     "11": "PATIENT",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "DEFENSE",
+     "3": "TOUGH",
+     "4": "DEFENSE",
+     "5": "BALLPARK",
+     "6": "DEFENSE",
+     "7": "TOUGH",
+     "8": "PATIENT",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "TOUGH"
+    },
+    "printed_table": {
+     "2": "DEFENSE",
+     "3": "WHEELHOUSE",
+     "4": "DEFENSE",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "PATIENT",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    }
+   },
+   {
+    "name": "Ron Robinson",
+    "role": "reliever",
+    "bf_estimate": 501.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 3
+    },
+    "real": {
+     "h_bf": 0.22,
+     "bb_bf": 0.086,
+     "so_bf": 0.234,
+     "hr_bf": 0.02
+    },
+    "sim_official": {
+     "k": 0.262,
+     "bb": 0.077,
+     "hr": 0.015,
+     "h": 0.171
+    },
+    "sim_widening": {
+     "k": 0.186,
+     "bb": 0.076,
+     "hr": 0.017,
+     "h": 0.203
+    },
+    "sim_printed": {
+     "k": 0.251,
+     "bb": 0.084,
+     "hr": 0.018,
+     "h": 0.183
+    },
+    "official_table": {
+     "2": "DEFENSE",
+     "3": "IN-PLAY",
+     "4": "PATIENT",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "TOUGH",
+     "10": "IN-PLAY",
+     "11": "BALLPARK",
+     "12": "WHEELHOUSE"
+    },
+    "widening_table": {
+     "2": "TOUGH",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "BALLPARK",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "TOUGH",
+     "4": "DEFENSE",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "BALLPARK",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    }
+   },
+   {
+    "name": "Doyle Alexander (Combined Totals)",
+    "role": "control",
+    "bf_estimate": 976.0,
+    "printed_so": null,
+    "widening_modifier": "+10",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 2
+    },
+    "real": {
+     "h_bf": 0.261,
+     "bb_bf": 0.038,
+     "so_bf": 0.142,
+     "hr_bf": 0.028
+    },
+    "sim_official": {
+     "k": 0.172,
+     "bb": 0.046,
+     "hr": 0.024,
+     "h": 0.226
+    },
+    "sim_widening": {
+     "k": 0.159,
+     "bb": 0.057,
+     "hr": 0.022,
+     "h": 0.206
+    },
+    "sim_printed": {
+     "k": 0.179,
+     "bb": 0.053,
+     "hr": 0.022,
+     "h": 0.203
+    },
+    "official_table": {
+     "2": "IN-PLAY",
+     "3": "TOUGH",
+     "4": "IN-PLAY",
+     "5": "IN-PLAY",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "IN-PLAY",
+     "9": "PATIENT",
+     "10": "BALLPARK",
+     "11": "WHEELHOUSE",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "WHEELHOUSE",
+     "3": "PATIENT",
+     "4": "PATIENT",
+     "5": "TOUGH-OUT",
+     "6": "IN-PLAY",
+     "7": "DEFENSE",
+     "8": "TOUGH",
+     "9": "DEFENSE",
+     "10": "TOUGH",
+     "11": "WHEELHOUSE",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "PATIENT",
+     "4": "IN-PLAY",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "DEFENSE",
+     "9": "TOUGH",
+     "10": "WHEELHOUSE",
+     "11": "PATIENT",
+     "12": "PATIENT-OUT"
+    }
+   },
+   {
+    "name": "Bret Saberhagen",
+    "role": "control",
+    "bf_estimate": 662.0,
+    "printed_so": null,
+    "widening_modifier": "NONE",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 5
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 2
+    },
+    "real": {
+     "h_bf": 0.249,
+     "bb_bf": 0.044,
+     "so_bf": 0.169,
+     "hr_bf": 0.023
+    },
+    "sim_official": {
+     "k": 0.206,
+     "bb": 0.045,
+     "hr": 0.017,
+     "h": 0.205
+    },
+    "sim_widening": {
+     "k": 0.201,
+     "bb": 0.062,
+     "hr": 0.016,
+     "h": 0.194
+    },
+    "sim_printed": {
+     "k": 0.212,
+     "bb": 0.061,
+     "hr": 0.021,
+     "h": 0.2
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "IN-PLAY",
+     "8": "TOUGH",
+     "9": "BALLPARK",
+     "10": "TOUGH",
+     "11": "IN-PLAY",
+     "12": "DEFENSE"
+    },
+    "widening_table": {
+     "2": "WHEELHOUSE",
+     "3": "DEFENSE",
+     "4": "DEFENSE",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "DEFENSE",
+     "10": "BALLPARK",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "DEFENSE",
+     "6": "TOUGH",
+     "7": "TOUGH",
+     "8": "BALLPARK",
+     "9": "PATIENT",
+     "10": "DEFENSE",
+     "11": "DEFENSE",
+     "12": "TOUGH"
+    }
+   },
+   {
+    "name": "Ron Guidry",
+    "role": "control",
+    "bf_estimate": 816.0,
+    "printed_so": null,
+    "widening_modifier": "NONE",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 1
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 2
+    },
+    "real": {
+     "h_bf": 0.248,
+     "bb_bf": 0.047,
+     "so_bf": 0.172,
+     "hr_bf": 0.034
+    },
+    "sim_official": {
+     "k": 0.196,
+     "bb": 0.039,
+     "hr": 0.014,
+     "h": 0.204
+    },
+    "sim_widening": {
+     "k": 0.212,
+     "bb": 0.07,
+     "hr": 0.024,
+     "h": 0.208
+    },
+    "sim_printed": {
+     "k": 0.213,
+     "bb": 0.068,
+     "hr": 0.018,
+     "h": 0.2
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "TOUGH",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "IN-PLAY",
+     "8": "IN-PLAY",
+     "9": "TOUGH",
+     "10": "BALLPARK",
+     "11": "DEFENSE",
+     "12": "WHEELHOUSE"
+    },
+    "widening_table": {
+     "2": "PATIENT",
+     "3": "PATIENT",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "DEFENSE",
+     "7": "BALLPARK",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "TOUGH",
+     "11": "BALLPARK",
+     "12": "BALLPARK"
+    },
+    "printed_table": {
+     "2": "PATIENT",
+     "3": "TOUGH",
+     "4": "WHEELHOUSE",
+     "5": "DEFENSE",
+     "6": "PATIENT",
+     "7": "TOUGH",
+     "8": "DEFENSE",
+     "9": "TOUGH",
+     "10": "TOUGH",
+     "11": "BALLPARK",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Dennis Eckersley",
+    "role": "control",
+    "bf_estimate": 872.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 1
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 2
+    },
+    "real": {
+     "h_bf": 0.259,
+     "bb_bf": 0.049,
+     "so_bf": 0.157,
+     "hr_bf": 0.024
+    },
+    "sim_official": {
+     "k": 0.179,
+     "bb": 0.04,
+     "hr": 0.016,
+     "h": 0.215
+    },
+    "sim_widening": {
+     "k": 0.143,
+     "bb": 0.065,
+     "hr": 0.024,
+     "h": 0.214
+    },
+    "sim_printed": {
+     "k": 0.188,
+     "bb": 0.068,
+     "hr": 0.016,
+     "h": 0.201
+    },
+    "official_table": {
+     "2": "IN-PLAY",
+     "3": "DEFENSE",
+     "4": "IN-PLAY",
+     "5": "IN-PLAY",
+     "6": "IN-PLAY",
+     "7": "TOUGH",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "BALLPARK",
+     "11": "TOUGH",
+     "12": "WHEELHOUSE"
+    },
+    "widening_table": {
+     "2": "BALLPARK",
+     "3": "TOUGH",
+     "4": "TOUGH",
+     "5": "BALLPARK",
+     "6": "DEFENSE",
+     "7": "DEFENSE",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "DEFENSE",
+     "11": "TOUGH",
+     "12": "PATIENT-OUT"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "TOUGH",
+     "4": "DEFENSE",
+     "5": "BALLPARK",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "TOUGH",
+     "9": "DEFENSE",
+     "10": "DEFENSE",
+     "11": "TOUGH",
+     "12": "BALLPARK"
+    }
+   },
+   {
+    "name": "John Butcher (Combined Totals)",
+    "role": "contact-against",
+    "bf_estimate": 565.0,
+    "printed_so": null,
+    "widening_modifier": "NONE",
+    "printed_modifier": "+10",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 2
+    },
+    "real": {
+     "h_bf": 0.297,
+     "bb_bf": 0.065,
+     "so_bf": 0.08,
+     "hr_bf": 0.03
+    },
+    "sim_official": {
+     "k": 0.084,
+     "bb": 0.063,
+     "hr": 0.026,
+     "h": 0.257
+    },
+    "sim_widening": {
+     "k": 0.12,
+     "bb": 0.077,
+     "hr": 0.024,
+     "h": 0.21
+    },
+    "sim_printed": {
+     "k": 0.131,
+     "bb": 0.07,
+     "hr": 0.025,
+     "h": 0.212
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "DEFENSE",
+     "4": "IN-PLAY",
+     "5": "IN-PLAY",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "IN-PLAY",
+     "9": "IN-PLAY",
+     "10": "BALLPARK",
+     "11": "TOUGH",
+     "12": "WHEELHOUSE"
+    },
+    "widening_table": {
+     "2": "TOUGH-OUT",
+     "3": "DEFENSE",
+     "4": "IN-PLAY",
+     "5": "TOUGH-OUT",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "BALLPARK",
+     "9": "PATIENT",
+     "10": "PATIENT",
+     "11": "DEFENSE",
+     "12": "BALLPARK"
+    },
+    "printed_table": {
+     "2": "WHEELHOUSE",
+     "3": "PATIENT",
+     "4": "DEFENSE",
+     "5": "BALLPARK",
+     "6": "TOUGH",
+     "7": "IN-PLAY",
+     "8": "TOUGH",
+     "9": "PATIENT",
+     "10": "DEFENSE",
+     "11": "TOUGH-OUT",
+     "12": "PATIENT"
+    }
+   },
+   {
+    "name": "Mike Smithson",
+    "role": "contact-against",
+    "bf_estimate": 885.0,
+    "printed_so": null,
+    "widening_modifier": "NONE",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 3
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 1
+    },
+    "real": {
+     "h_bf": 0.264,
+     "bb_bf": 0.064,
+     "so_bf": 0.129,
+     "hr_bf": 0.029
+    },
+    "sim_official": {
+     "k": 0.156,
+     "bb": 0.056,
+     "hr": 0.025,
+     "h": 0.233
+    },
+    "sim_widening": {
+     "k": 0.191,
+     "bb": 0.07,
+     "hr": 0.019,
+     "h": 0.202
+    },
+    "sim_printed": {
+     "k": 0.181,
+     "bb": 0.072,
+     "hr": 0.024,
+     "h": 0.2
+    },
+    "official_table": {
+     "2": "BALLPARK",
+     "3": "WHEELHOUSE",
+     "4": "TOUGH",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "IN-PLAY",
+     "8": "PATIENT",
+     "9": "IN-PLAY",
+     "10": "IN-PLAY",
+     "11": "DEFENSE",
+     "12": "BALLPARK"
+    },
+    "widening_table": {
+     "2": "IN-PLAY",
+     "3": "PATIENT",
+     "4": "IN-PLAY",
+     "5": "TOUGH",
+     "6": "TOUGH",
+     "7": "BALLPARK",
+     "8": "PATIENT",
+     "9": "TOUGH",
+     "10": "DEFENSE",
+     "11": "IN-PLAY",
+     "12": "TOUGH"
+    },
+    "printed_table": {
+     "2": "TOUGH",
+     "3": "TOUGH",
+     "4": "DEFENSE",
+     "5": "DEFENSE",
+     "6": "TOUGH",
+     "7": "PATIENT",
+     "8": "DEFENSE",
+     "9": "TOUGH",
+     "10": "WHEELHOUSE",
+     "11": "TOUGH",
+     "12": "PATIENT-OUT"
+    }
+   },
+   {
+    "name": "Chris Welsh",
+    "role": "contact-against",
+    "bf_estimate": 620.0,
+    "printed_so": null,
+    "widening_modifier": "NONE",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 1
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 1
+    },
+    "real": {
+     "h_bf": 0.263,
+     "bb_bf": 0.065,
+     "so_bf": 0.065,
+     "hr_bf": 0.015
+    },
+    "sim_official": {
+     "k": 0.084,
+     "bb": 0.052,
+     "hr": 0.013,
+     "h": 0.216
+    },
+    "sim_widening": {
+     "k": 0.115,
+     "bb": 0.075,
+     "hr": 0.015,
+     "h": 0.19
+    },
+    "sim_printed": {
+     "k": 0.11,
+     "bb": 0.078,
+     "hr": 0.013,
+     "h": 0.192
+    },
+    "official_table": {
+     "2": "PATIENT",
+     "3": "DEFENSE",
+     "4": "IN-PLAY",
+     "5": "IN-PLAY",
+     "6": "IN-PLAY",
+     "7": "TOUGH",
+     "8": "PATIENT",
+     "9": "IN-PLAY",
+     "10": "IN-PLAY",
+     "11": "BALLPARK",
+     "12": "WHEELHOUSE"
+    },
+    "widening_table": {
+     "2": "DEFENSE",
+     "3": "TOUGH",
+     "4": "PATIENT",
+     "5": "DEFENSE",
+     "6": "BALLPARK",
+     "7": "TOUGH-OUT",
+     "8": "PATIENT",
+     "9": "DEFENSE",
+     "10": "DEFENSE",
+     "11": "DEFENSE",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "DEFENSE",
+     "3": "TOUGH",
+     "4": "PATIENT",
+     "5": "DEFENSE",
+     "6": "BALLPARK",
+     "7": "TOUGH-OUT",
+     "8": "PATIENT",
+     "9": "DEFENSE",
+     "10": "DEFENSE",
+     "11": "DEFENSE",
+     "12": "IN-PLAY"
+    }
+   },
+   {
+    "name": "Juan Nieves",
+    "role": "contact-against",
+    "bf_estimate": 853.0,
+    "printed_so": null,
+    "widening_modifier": "+20",
+    "printed_modifier": "NONE",
+    "slot_widening": {
+     "slots": 11,
+     "same": 2
+    },
+    "slot_printed": {
+     "slots": 11,
+     "same": 6
+    },
+    "real": {
+     "h_bf": 0.263,
+     "bb_bf": 0.09,
+     "so_bf": 0.136,
+     "hr_bf": 0.02
+    },
+    "sim_official": {
+     "k": 0.16,
+     "bb": 0.085,
+     "hr": 0.017,
+     "h": 0.211
+    },
+    "sim_widening": {
+     "k": 0.131,
+     "bb": 0.101,
+     "hr": 0.016,
+     "h": 0.207
+    },
+    "sim_printed": {
+     "k": 0.182,
+     "bb": 0.097,
+     "hr": 0.018,
+     "h": 0.198
+    },
+    "official_table": {
+     "2": "WHEELHOUSE",
+     "3": "DEFENSE",
+     "4": "BALLPARK",
+     "5": "PATIENT",
+     "6": "PATIENT",
+     "7": "IN-PLAY",
+     "8": "TOUGH",
+     "9": "IN-PLAY",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "TOUGH"
+    },
+    "widening_table": {
+     "2": "BALLPARK",
+     "3": "DEFENSE",
+     "4": "PATIENT",
+     "5": "PATIENT",
+     "6": "TOUGH",
+     "7": "DEFENSE",
+     "8": "BALLPARK",
+     "9": "TOUGH",
+     "10": "PATIENT",
+     "11": "DEFENSE",
+     "12": "DEFENSE"
+    },
+    "printed_table": {
+     "2": "PATIENT",
+     "3": "DEFENSE",
+     "4": "TOUGH",
+     "5": "PATIENT",
+     "6": "PATIENT",
+     "7": "BALLPARK",
+     "8": "TOUGH",
+     "9": "DEFENSE",
+     "10": "TOUGH",
+     "11": "TOUGH",
+     "12": "DEFENSE"
+    }
+   }
+  ]
+ },
+ "notes": [
+  "Hitter plate appearances are AB+BB. The 1986 card does not print HBP, IBB, or SF.",
+  "Pitcher batters faced is IP*3 + H + BB. The card does not print BF or HBP.",
+  "Own card excluded from hitter comps. A pitcher is not in the hitter pool.",
+  "Page 39 shift is not applied to TOUGH-OUT, and face 00 is not shifted.",
+  "Page 11 range is applied only when simulating an official card that prints one.",
+  "Tracker widening is unchanged. The printed column is a separate search."
+ ]
+}
