@@ -8294,9 +8294,15 @@
    },
    "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)": {
     "lahman_id": "sierrru01",
-    "status": "unavailable",
-    "text": "Peak stats unavailable",
-    "reason": "Awaiting verified Texas Rangers-only Lahman Peak 162 rebuild; no invented statistics"
+    "status": "ok",
+    "text": "Peak 162 with Texas Rangers (1989–2000). Years away from the franchise inside this span are not in the totals. 162 G, 695 PA, 637 AB, 91 R, 186 H, 38 2B, 7 3B, 22 HR, 106 RBI, 12 SB, 47 BB, 85 SO, .292/.338/.477/.815",
+    "years": [
+     1989,
+     1990,
+     1991,
+     1992,
+     2000
+    ]
    },
    "OF4 Rusty Greer 9": {
     "lahman_id": "greerru01",

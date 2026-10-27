@@ -1436,7 +1436,7 @@ Rubén Sierra (`sierrru01`) joins the **Texas Rangers** active 26 as **sixth ben
 
 Kenny Rogers (`rogerke01`) leaves the **active bullpen** but keeps any existing original historical converted pitcher card. Darold Knowles advances from RP7 to **RP6**; the other five active relievers stay **John Wetteland, Neftalí Feliz, Jeff Zimmerman, Jim Kern and Jeff Russell**. **The entire starting nine and five-man rotation remain unchanged, including Corey Seager starting at DH batting ninth**. The Rangers now have **9 lineup / 6 bench / 5 rotation / 6 bullpen** with 26 unique players.
 
-All original historical player cards, completed games, box scores, FAC/dice logs and tournament results remain unchanged. Sierra's verified Texas-only Peak 162 display is awaiting a Lahman generator rebuild and his genuine frozen **Hitter v0.5** playable card conversion remains pending; **no invented card ratings or statistics** have been supplied. PED eligibility questions remain separate.
+All original historical player cards, completed games, box scores, FAC/dice logs and tournament results remain unchanged. Sierra's verified Texas Rangers-only **Peak 162** uses seasons **1989–1992 and 2000** (Lahman): 162 G, 186 H, 22 HR, 106 RBI, .292/.338/.477/.815. His genuine frozen **Hitter v0.5** playable card remains pending authentic conversion; **no invented dice ratings** have been supplied. PED eligibility questions remain separate.
 
 ## 25. Toronto Blue Jays (TOR)
 

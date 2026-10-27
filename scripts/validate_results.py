@@ -1028,11 +1028,10 @@ def check_texas_roster_amendment(check: Check) -> None:
     peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["TEX"]
     sierra_peak = peak.get("OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)") or {}
     check.expect(sierra_peak.get("lahman_id") == "sierrru01"
-                 and (sierra_peak.get("status") != "ok"
-                      or (sierra_peak.get("years")
-                          and all(y in (set(range(1986, 1993)) | {2000, 2001, 2003})
-                                  for y in sierra_peak["years"]))),
-                 "Sierra Texas-only Peak 162 must be verified or clearly pending")
+                 and sierra_peak.get("status") == "ok"
+                 and sierra_peak.get("years") == [1989, 1990, 1991, 1992, 2000]
+                 and sierra_peak.get("text", "").startswith("Peak 162 with Texas Rangers"),
+                 "Sierra verified Texas-only five-season Peak 162 present")
     check.expect("LONG/SWING Kenny Rogers 13" not in peak,
                  "Inactive Kenny Rogers absent from Rangers active Peak 162")
     doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
