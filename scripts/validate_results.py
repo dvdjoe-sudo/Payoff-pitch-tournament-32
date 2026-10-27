@@ -525,6 +525,37 @@ def check_arizona_roster_amendment(check: Check) -> None:
 
 
 
+def check_rays_roster_amendment(check: Check) -> None:
+    """Joe's approved post-R1-03 6-bench/6-reliever Rays roster."""
+    roster = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))["TB"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = roster["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "Rays have 26 distinct active players")
+    counts = {group: sum(p["group"] == group for p in players)
+              for group in ("lineup", "bench", "rotation", "bullpen")}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Rays active roster has 9/6/5/6 players")
+    huff = [p for p in players if p["id"] == "huffau01"]
+    check.expect(len(huff) == 1 and huff[0]["group"] == "bench" and
+                 huff[0]["slot"] == 6 and huff[0]["pos"] == "OF",
+                 "Aubrey Huff is sixth bench OF")
+    check.expect("kellyke02" not in ids,
+                 "Kevin Kelly moved off the active Rays roster")
+    bullpen = sorted(p["slot"] for p in players if p["group"] == "bullpen")
+    check.expect(bullpen == [1, 2, 3, 4, 5, 6],
+                 "Rays bullpen slots run consecutively from 1 to 6")
+    check.expect(any(p["id"] == "howeljp01" and p["slot"] == 6 for p in players),
+                 "J.P. Howell moves to sixth reliever slot")
+    check.expect("TB|kellyke02" in cards,
+                 "Kevin Kelly historical converted card is preserved")
+    roster_md = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Aubrey Huff (`huffau01`) joins the active roster" in roster_md,
+                 "Rays dated amendment is present in generated roster history")
+
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -540,6 +571,7 @@ def main() -> int:
     check_padres_roster_amendment(check)
     check_expos_roster_amendment(check)
     check_arizona_roster_amendment(check)
+    check_rays_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 
