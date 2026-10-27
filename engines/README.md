@@ -46,8 +46,10 @@ spans, calibrated to the printed 1986 cards.
 - `engine_v2.py`: the card_version 2 resolution path. The v2 refit of
   all 157 library pitchers was completed 2026-10-24 and adopted the
   same day; the tournament's converted sets play on v2 pitcher cards.
-  The one change from v1 semantics is the TOUGH-band widening rule
-  described at the top of the file.
+  The tracker widens the TOUGH strikeout band by the bump. The printed
+  rulebook instead adds +10 or +20 to the percentile on a TOUGH result
+  (and keeps the original face when that sum exceeds 99). The
+  rules-accurate plate-appearance simulator is `engines/sim/`.
 
 See the Engines page on the tournament site for the plain-language
 version of how a conversion runs.

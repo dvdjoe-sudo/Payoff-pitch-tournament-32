@@ -19,26 +19,29 @@ PARKS = None
 
 
 def section_events(section, hand):
-    """Compute event probabilities for a hitter section.
-    Returns dict: 1B, 2B, 3B, HR, BB, HBP, SO, OUT (probabilities sum to 1.0).
-    Percentile 00 (100) is RARE_PLAY, tracked separately.
+    """Event probabilities for one hitter section. The 100 faces are 00-99.
+
+    Face 00 is a rare play (rulebook p.4), not an out. Each printed face
+    from 01-99 has probability 1/100. A face in that span that misses every
+    result band is an out. Probabilities sum to 1.0 when the bands do not
+    overlap and stay inside 01-99.
     """
     tbl = section.get(hand, {})
     events = {'1B': 0, '2B': 0, '3B': 0, 'HR': 0, 'BB': 0,
               'HBP': 0, 'SO': 0, 'OUT': 0, 'RARE_PLAY': 0}
-    covered = 0
+    covered_faces = 0
     for outcome, rng in tbl.items():
-        if not rng or len(rng) < 2:
+        if not rng or len(rng) < 2 or rng[1] < rng[0]:
             continue
-        w = (rng[1] - rng[0] + 1) / 100.0  # 1-100 scale (00=100)
-        covered += w
-        # Map outcome names to events
+        faces = int(rng[1]) - int(rng[0]) + 1
+        covered_faces += faces
+        share = faces / 100.0
         if outcome in ('1B', '2B', '3B', 'HR', 'BB', 'HBP', 'SO'):
-            events[outcome] += w
+            events[outcome] += share
         elif outcome == 'RARE':
-            events['RARE_PLAY'] += w
-        # OUT, etc. go to OUT bucket via remainder
-    events['OUT'] = max(0, 1.0 - covered - events['RARE_PLAY'])
+            events['RARE_PLAY'] += share
+    events['RARE_PLAY'] += 0.01
+    events['OUT'] = max(0, 99 - covered_faces) / 100.0
     return events
 
 
@@ -72,28 +75,36 @@ def build_category_vectors(pitcher_hand='R'):
                 agg[k] /= n
         vectors[cat] = agg
     # Special categories
-    # PATIENT-OUT: preserves BB/HBP, else OUT
-    po = vectors['PATIENT'].copy()
-    po_out = po['BB'] + po['HBP']
+    # PATIENT-OUT (rulebook p.2): BB and HBP count. Every other PATIENT
+    # face is an out. Face 00 stays a rare play.
+    po = vectors['PATIENT']
+    po_keep = po['BB'] + po['HBP']
     vectors['PATIENT-OUT'] = {
         '1B': 0, '2B': 0, '3B': 0, 'HR': 0,
         'BB': po['BB'], 'HBP': po['HBP'], 'SO': 0,
-        'OUT': 1.0 - po_out, 'RARE_PLAY': 0,
+        'OUT': max(0.0, 1.0 - po_keep - po['RARE_PLAY']),
+        'RARE_PLAY': po['RARE_PLAY'],
     }
-    # TOUGH-OUT: preserves SO, else OUT
-    to = vectors['TOUGH'].copy()
+    # TOUGH-OUT: a face in the SO band is a strikeout. The book sends every
+    # face above that band to the out section, so hits in this vector are
+    # removed. Face 00 stays a rare play.
+    to = vectors['TOUGH']
     vectors['TOUGH-OUT'] = {
         '1B': 0, '2B': 0, '3B': 0, 'HR': 0, 'BB': 0, 'HBP': 0,
-        'SO': to['SO'], 'OUT': 1.0 - to['SO'], 'RARE_PLAY': 0,
+        'SO': to['SO'],
+        'OUT': max(0.0, 1.0 - to['SO'] - to['RARE_PLAY']),
+        'RARE_PLAY': to['RARE_PLAY'],
     }
-    # BALLPARK: mixture of WHEELHOUSE and IN-PLAY vectors
-    # v0.1.1: use 50/50 as placeholder; v0.2 will use actual park cards
-    # Actually, per Joe: use park's WH/IP probability. For now, neutral.
+    # BALLPARK and DEFENSE below are the frozen solver placeholders.
+    # The rulebook reads BALLPARK off the home park chart (not a 50/50
+    # mix) and reads DEFENSE off the position chart plus that park's
+    # range or error band (not a 25% single). engines/sim uses the
+    # printed charts. These two vectors stay as the v0.2.3 fit saw them,
+    # because the 1986 reference files are not in this repo and the
+    # converted cards were not rebuilt.
     wh = vectors['WHEELHOUSE']
     ip = vectors['IN-PLAY']
     vectors['BALLPARK'] = {k: 0.5 * wh[k] + 0.5 * ip[k] for k in wh}
-    # DEFENSE: league-average defensive outcome (placeholder v0.1.1)
-    # Per rules: routes through defensive check. Use fixed vector.
     vectors['DEFENSE'] = {
         '1B': 0.25, '2B': 0.02, '3B': 0.005, 'HR': 0, 'BB': 0,
         'HBP': 0, 'SO': 0, 'OUT': 0.725, 'RARE_PLAY': 0,
@@ -102,9 +113,8 @@ def build_category_vectors(pitcher_hand='R'):
 
 
 # The 1986 cards are loaded on first use. Importing this module does
-# not open them and does not print. Uncertain: section_events still
-# divides a band by 100, while the site die is faces 01-99. That scale
-# is unchanged here.
+# not open them and does not print. section_events gives face 00 to
+# RARE_PLAY and divides each 01-99 face by 100.
 _VECTORS = {}
 _PLAYERS = None
 

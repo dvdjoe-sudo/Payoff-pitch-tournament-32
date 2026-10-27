@@ -1,0 +1,1561 @@
+{
+ "seed": 20261027,
+ "pa_per_card": 10000,
+ "hitters_rated": 259,
+ "hitters_skipped_no_line": 0,
+ "pitchers_rated": 209,
+ "pitchers_skipped_no_line": 0,
+ "pool_gap_summary": {
+  "avg": {
+   "mean_gap": -0.0615,
+   "median_gap": -0.0589,
+   "sd_gap": 0.0227
+  },
+  "obp": {
+   "mean_gap": -0.084,
+   "median_gap": -0.0817,
+   "sd_gap": 0.0248
+  },
+  "slg": {
+   "mean_gap": -0.1372,
+   "median_gap": -0.1352,
+   "sd_gap": 0.0493
+  },
+  "hr": {
+   "mean_gap": -0.0193,
+   "median_gap": -0.0195,
+   "sd_gap": 0.0102
+  },
+  "bb": {
+   "mean_gap": -0.0366,
+   "median_gap": -0.0344,
+   "sd_gap": 0.0158
+  },
+  "so": {
+   "mean_gap": 0.049,
+   "median_gap": 0.0448,
+   "sd_gap": 0.0317
+  }
+ },
+ "solver_mix_gap_summary": {
+  "avg": {
+   "mean_gap": -0.0019,
+   "median_gap": 0.0031,
+   "sd_gap": 0.0198
+  },
+  "obp": {
+   "mean_gap": -0.0096,
+   "median_gap": -0.0047,
+   "sd_gap": 0.02
+  },
+  "slg": {
+   "mean_gap": -0.001,
+   "median_gap": 0.0024,
+   "sd_gap": 0.0239
+  },
+  "hr": {
+   "mean_gap": -0.0005,
+   "median_gap": -0.0002,
+   "sd_gap": 0.0031
+  },
+  "bb": {
+   "mean_gap": -0.0111,
+   "median_gap": -0.0096,
+   "sd_gap": 0.0126
+  },
+  "so": {
+   "mean_gap": 0.0004,
+   "median_gap": 0.0004,
+   "sd_gap": 0.0071
+  }
+ },
+ "pitcher_gap_summary": {
+  "k": {
+   "mean_gap": -0.0174,
+   "median_gap": -0.019,
+   "sd_gap": 0.0781
+  },
+  "bb": {
+   "mean_gap": -0.0049,
+   "median_gap": -0.0046,
+   "sd_gap": 0.0086
+  },
+  "hr": {
+   "mean_gap": -0.0002,
+   "median_gap": -0.0016,
+   "sd_gap": 0.0078
+  },
+  "h": {
+   "mean_gap": 0.0111,
+   "median_gap": 0.0103,
+   "sd_gap": 0.025
+  }
+ },
+ "pitcher_k_gap_by_modifier": {
+  "+10": {
+   "n": 57,
+   "mean_k_gap": -0.0576
+  },
+  "+20": {
+   "n": 33,
+   "mean_k_gap": -0.0921
+  },
+  "NONE": {
+   "n": 119,
+   "mean_k_gap": 0.0225
+  }
+ },
+ "hitter_outliers_vs_pitcher_pool": [
+  {
+   "card": "STL|mcgwima01",
+   "name": "Mark McGwire",
+   "flags": [
+    {
+     "rate": "obp",
+     "sim": 0.2795,
+     "source": 0.4328,
+     "gap": -0.1533,
+     "residual": -0.0716
+    },
+    {
+     "rate": "slg",
+     "sim": 0.366,
+     "source": 0.6831,
+     "gap": -0.3171,
+     "residual": -0.1819
+    },
+    {
+     "rate": "hr",
+     "sim": 0.0339,
+     "source": 0.0975,
+     "gap": -0.0636,
+     "residual": -0.0441
+    },
+    {
+     "rate": "bb",
+     "sim": 0.1269,
+     "source": 0.2124,
+     "gap": -0.0855,
+     "residual": -0.0511
+    }
+   ]
+  },
+  {
+   "card": "SF|bondsba01",
+   "name": "Barry Bonds",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2345,
+     "source": 0.3457,
+     "gap": -0.1112,
+     "residual": -0.0524
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3408,
+     "source": 0.5398,
+     "gap": -0.199,
+     "residual": -0.1173
+    },
+    {
+     "rate": "slg",
+     "sim": 0.4729,
+     "source": 0.7762,
+     "gap": -0.3034,
+     "residual": -0.1682
+    },
+    {
+     "rate": "hr",
+     "sim": 0.0364,
+     "source": 0.0822,
+     "gap": -0.0458,
+     "residual": -0.0263
+    },
+    {
+     "rate": "bb",
+     "sim": 0.1335,
+     "source": 0.2841,
+     "gap": -0.1506,
+     "residual": -0.1162
+    }
+   ]
+  },
+  {
+   "card": "COL|heltoto01",
+   "name": "Todd Helton",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1971,
+     "source": 0.3488,
+     "gap": -0.1517,
+     "residual": -0.0928
+    },
+    {
+     "rate": "obp",
+     "sim": 0.2786,
+     "source": 0.4552,
+     "gap": -0.1766,
+     "residual": -0.0949
+    },
+    {
+     "rate": "slg",
+     "sim": 0.3697,
+     "source": 0.6428,
+     "gap": -0.2731,
+     "residual": -0.1379
+    }
+   ]
+  },
+  {
+   "card": "CHC|tinkejo01",
+   "name": "Joe Tinker",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.079,
+     "source": 0.2752,
+     "gap": -0.1961,
+     "residual": -0.1373
+    },
+    {
+     "rate": "obp",
+     "sim": 0.1239,
+     "source": 0.3157,
+     "gap": -0.1918,
+     "residual": -0.1101
+    }
+   ]
+  },
+  {
+   "card": "ATL|matheed01",
+   "name": "Eddie Mathews",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1801,
+     "source": 0.2934,
+     "gap": -0.1133,
+     "residual": -0.0545
+    },
+    {
+     "rate": "obp",
+     "sim": 0.2764,
+     "source": 0.408,
+     "gap": -0.1316,
+     "residual": -0.0499
+    },
+    {
+     "rate": "slg",
+     "sim": 0.3278,
+     "source": 0.595,
+     "gap": -0.2671,
+     "residual": -0.132
+    }
+   ]
+  },
+  {
+   "card": "TB|zuninmi01",
+   "name": "Mike Zunino",
+   "flags": [
+    {
+     "rate": "slg",
+     "sim": 0.306,
+     "source": 0.5586,
+     "gap": -0.2525,
+     "residual": -0.1174
+    },
+    {
+     "rate": "hr",
+     "sim": 0.0402,
+     "source": 0.0882,
+     "gap": -0.048,
+     "residual": -0.0285
+    },
+    {
+     "rate": "so",
+     "sim": 0.5258,
+     "source": 0.3529,
+     "gap": 0.1729,
+     "residual": 0.1281
+    }
+   ]
+  },
+  {
+   "card": "BOS|willite01",
+   "name": "Ted Williams",
+   "flags": [
+    {
+     "rate": "slg",
+     "sim": 0.4441,
+     "source": 0.6935,
+     "gap": -0.2494,
+     "residual": -0.1142
+    },
+    {
+     "rate": "bb",
+     "sim": 0.157,
+     "source": 0.2264,
+     "gap": -0.0694,
+     "residual": -0.035
+    }
+   ]
+  },
+  {
+   "card": "PIT|mazerbi01",
+   "name": "Bill Mazeroski",
+   "flags": [
+    {
+     "rate": "slg",
+     "sim": 0.374,
+     "source": 0.3963,
+     "gap": -0.0224,
+     "residual": 0.1128
+    }
+   ]
+  },
+  {
+   "card": "LAD|willsma01",
+   "name": "Maury Wills",
+   "flags": [
+    {
+     "rate": "slg",
+     "sim": 0.3273,
+     "source": 0.3515,
+     "gap": -0.0242,
+     "residual": 0.1109
+    }
+   ]
+  },
+  {
+   "card": "ARI|reynoma01",
+   "name": "Mark Reynolds",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.4936,
+     "source": 0.3388,
+     "gap": 0.1548,
+     "residual": 0.1101
+    }
+   ]
+  },
+  {
+   "card": "WSH|woodja03",
+   "name": "James Wood",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.4458,
+     "source": 0.3029,
+     "gap": 0.1429,
+     "residual": 0.0982
+    }
+   ]
+  },
+  {
+   "card": "SD|templga01",
+   "name": "Garry Templeton",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1034,
+     "source": 0.2587,
+     "gap": -0.1553,
+     "residual": -0.0964
+    },
+    {
+     "rate": "obp",
+     "sim": 0.1261,
+     "source": 0.3017,
+     "gap": -0.1756,
+     "residual": -0.0939
+    }
+   ]
+  },
+  {
+   "card": "CHC|hackst01",
+   "name": "Stan Hack",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1656,
+     "source": 0.3158,
+     "gap": -0.1502,
+     "residual": -0.0914
+    },
+    {
+     "rate": "obp",
+     "sim": 0.2607,
+     "source": 0.4092,
+     "gap": -0.1485,
+     "residual": -0.0668
+    }
+   ]
+  },
+  {
+   "card": "TB|lowebr01",
+   "name": "Brandon Lowe",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.4175,
+     "source": 0.2819,
+     "gap": 0.1356,
+     "residual": 0.0908
+    }
+   ]
+  },
+  {
+   "card": "COL|storytr01",
+   "name": "Trevor Story",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.4076,
+     "source": 0.2803,
+     "gap": 0.1273,
+     "residual": 0.0825
+    }
+   ]
+  },
+  {
+   "card": "LAD|muncyma01",
+   "name": "Max Muncy",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.3559,
+     "source": 0.2398,
+     "gap": 0.1161,
+     "residual": 0.0713
+    }
+   ]
+  },
+  {
+   "card": "COL|reynoma01",
+   "name": "Mark Reynolds",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.3934,
+     "source": 0.2789,
+     "gap": 0.1145,
+     "residual": 0.0697
+    }
+   ]
+  },
+  {
+   "card": "TB|uptonbj01",
+   "name": "B.J. Upton",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.3668,
+     "source": 0.2579,
+     "gap": 0.1089,
+     "residual": 0.0641
+    }
+   ]
+  },
+  {
+   "card": "LAD|ohtansh01",
+   "name": "Shohei Ohtani",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.3523,
+     "source": 0.2436,
+     "gap": 0.1087,
+     "residual": 0.064
+    }
+   ]
+  },
+  {
+   "card": "STL|boyerke01",
+   "name": "Ken Boyer",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1831,
+     "source": 0.3042,
+     "gap": -0.121,
+     "residual": -0.0622
+    },
+    {
+     "rate": "obp",
+     "sim": 0.2421,
+     "source": 0.3765,
+     "gap": -0.1344,
+     "residual": -0.0527
+    }
+   ]
+  },
+  {
+   "card": "CHC|wilsoha01",
+   "name": "Hack Wilson",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2127,
+     "source": 0.3313,
+     "gap": -0.1186,
+     "residual": -0.0598
+    },
+    {
+     "rate": "obp",
+     "sim": 0.2877,
+     "source": 0.4191,
+     "gap": -0.1314,
+     "residual": -0.0497
+    }
+   ]
+  },
+  {
+   "card": "PHA|moseswa01",
+   "name": "Wally Moses",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2053,
+     "source": 0.3211,
+     "gap": -0.1157,
+     "residual": -0.0569
+    }
+   ]
+  },
+  {
+   "card": "SF|mizejo01",
+   "name": "Johnny Mize",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1847,
+     "source": 0.2989,
+     "gap": -0.1143,
+     "residual": -0.0554
+    }
+   ]
+  },
+  {
+   "card": "DET|crawfsa01",
+   "name": "Sam Crawford",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.214,
+     "source": 0.328,
+     "gap": -0.1139,
+     "residual": -0.0551
+    }
+   ]
+  },
+  {
+   "card": "SF|mccovwi01",
+   "name": "Willie McCovey",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0862,
+     "source": 0.1748,
+     "gap": -0.0886,
+     "residual": -0.0541
+    }
+   ]
+  },
+  {
+   "card": "WSH|sotoju01",
+   "name": "Juan Soto",
+   "flags": [
+    {
+     "rate": "obp",
+     "sim": 0.2891,
+     "source": 0.424,
+     "gap": -0.1349,
+     "residual": -0.0532
+    }
+   ]
+  },
+  {
+   "card": "PIT|bondsba01",
+   "name": "Barry Bonds",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0858,
+     "source": 0.1573,
+     "gap": -0.0715,
+     "residual": -0.0371
+    }
+   ]
+  },
+  {
+   "card": "STL|pujolal01",
+   "name": "Albert Pujols",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0723,
+     "source": 0.1428,
+     "gap": -0.0705,
+     "residual": -0.0361
+    }
+   ]
+  },
+  {
+   "card": "CIN|vottojo01",
+   "name": "Joey Votto",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.1093,
+     "source": 0.1792,
+     "gap": -0.0699,
+     "residual": -0.0354
+    }
+   ]
+  },
+  {
+   "card": "SD|tenacge01",
+   "name": "Gene Tenace",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.1373,
+     "source": 0.2039,
+     "gap": -0.0666,
+     "residual": -0.0321
+    }
+   ]
+  },
+  {
+   "card": "CHC|sosasa01",
+   "name": "Sammy Sosa",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0394,
+     "source": 0.0839,
+     "gap": -0.0445,
+     "residual": -0.025
+    }
+   ]
+  }
+ ],
+ "hitter_outliers_vs_solver_mix": [
+  {
+   "card": "CHC|tinkejo01",
+   "name": "Joe Tinker",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1224,
+     "source": 0.2752,
+     "gap": -0.1527,
+     "residual": -0.1558
+    },
+    {
+     "rate": "obp",
+     "sim": 0.1843,
+     "source": 0.3157,
+     "gap": -0.1314,
+     "residual": -0.1267
+    },
+    {
+     "rate": "slg",
+     "sim": 0.2471,
+     "source": 0.3861,
+     "gap": -0.139,
+     "residual": -0.1414
+    }
+   ]
+  },
+  {
+   "card": "SD|templga01",
+   "name": "Garry Templeton",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.1361,
+     "source": 0.2587,
+     "gap": -0.1226,
+     "residual": -0.1257
+    },
+    {
+     "rate": "obp",
+     "sim": 0.1688,
+     "source": 0.3017,
+     "gap": -0.1329,
+     "residual": -0.1282
+    },
+    {
+     "rate": "slg",
+     "sim": 0.2516,
+     "source": 0.3518,
+     "gap": -0.1002,
+     "residual": -0.1026
+    },
+    {
+     "rate": "so",
+     "sim": 0.1711,
+     "source": 0.1453,
+     "gap": 0.0258,
+     "residual": 0.0254
+    }
+   ]
+  },
+  {
+   "card": "ATL|matheed01",
+   "name": "Eddie Mathews",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.222,
+     "source": 0.2934,
+     "gap": -0.0714,
+     "residual": -0.0745
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3497,
+     "source": 0.408,
+     "gap": -0.0583,
+     "residual": -0.0536
+    },
+    {
+     "rate": "slg",
+     "sim": 0.4745,
+     "source": 0.595,
+     "gap": -0.1205,
+     "residual": -0.1229
+    }
+   ]
+  },
+  {
+   "card": "CHC|hackst01",
+   "name": "Stan Hack",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2193,
+     "source": 0.3158,
+     "gap": -0.0965,
+     "residual": -0.0996
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3379,
+     "source": 0.4092,
+     "gap": -0.0713,
+     "residual": -0.0666
+    },
+    {
+     "rate": "slg",
+     "sim": 0.3143,
+     "source": 0.4227,
+     "gap": -0.1083,
+     "residual": -0.1107
+    }
+   ]
+  },
+  {
+   "card": "SF|bondsba01",
+   "name": "Barry Bonds",
+   "flags": [
+    {
+     "rate": "obp",
+     "sim": 0.4505,
+     "source": 0.5398,
+     "gap": -0.0893,
+     "residual": -0.0846
+    },
+    {
+     "rate": "bb",
+     "sim": 0.177,
+     "source": 0.2841,
+     "gap": -0.1071,
+     "residual": -0.0975
+    }
+   ]
+  },
+  {
+   "card": "STL|boyerke01",
+   "name": "Ken Boyer",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2367,
+     "source": 0.3042,
+     "gap": -0.0675,
+     "residual": -0.0705
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3106,
+     "source": 0.3765,
+     "gap": -0.0659,
+     "residual": -0.0612
+    },
+    {
+     "rate": "slg",
+     "sim": 0.436,
+     "source": 0.5076,
+     "gap": -0.0716,
+     "residual": -0.074
+    }
+   ]
+  },
+  {
+   "card": "LAD|guerrpe01",
+   "name": "Pedro Guerrero",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2623,
+     "source": 0.3125,
+     "gap": -0.0501,
+     "residual": -0.0532
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3347,
+     "source": 0.3951,
+     "gap": -0.0604,
+     "residual": -0.0558
+    },
+    {
+     "rate": "slg",
+     "sim": 0.4696,
+     "source": 0.5335,
+     "gap": -0.0639,
+     "residual": -0.0663
+    }
+   ]
+  },
+  {
+   "card": "WSH|sotoju01",
+   "name": "Juan Soto",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2255,
+     "source": 0.2861,
+     "gap": -0.0606,
+     "residual": -0.0637
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3674,
+     "source": 0.424,
+     "gap": -0.0566,
+     "residual": -0.0519
+    },
+    {
+     "rate": "slg",
+     "sim": 0.4613,
+     "source": 0.525,
+     "gap": -0.0637,
+     "residual": -0.0661
+    }
+   ]
+  },
+  {
+   "card": "STL|mcgwima01",
+   "name": "Mark McGwire",
+   "flags": [
+    {
+     "rate": "obp",
+     "sim": 0.3862,
+     "source": 0.4328,
+     "gap": -0.0466,
+     "residual": -0.042
+    },
+    {
+     "rate": "slg",
+     "sim": 0.6203,
+     "source": 0.6831,
+     "gap": -0.0628,
+     "residual": -0.0652
+    },
+    {
+     "rate": "hr",
+     "sim": 0.0798,
+     "source": 0.0975,
+     "gap": -0.0177,
+     "residual": -0.0175
+    },
+    {
+     "rate": "bb",
+     "sim": 0.1772,
+     "source": 0.2124,
+     "gap": -0.0352,
+     "residual": -0.0257
+    }
+   ]
+  },
+  {
+   "card": "DET|parrila02",
+   "name": "Lance Parrish",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2148,
+     "source": 0.275,
+     "gap": -0.0602,
+     "residual": -0.0633
+    },
+    {
+     "rate": "obp",
+     "sim": 0.2655,
+     "source": 0.3298,
+     "gap": -0.0643,
+     "residual": -0.0596
+    },
+    {
+     "rate": "slg",
+     "sim": 0.4391,
+     "source": 0.4944,
+     "gap": -0.0554,
+     "residual": -0.0578
+    }
+   ]
+  },
+  {
+   "card": "SD|gonzaad01",
+   "name": "Adrian Gonzalez",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2372,
+     "source": 0.2877,
+     "gap": -0.0506,
+     "residual": -0.0537
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3152,
+     "source": 0.3764,
+     "gap": -0.0612,
+     "residual": -0.0565
+    },
+    {
+     "rate": "slg",
+     "sim": 0.4581,
+     "source": 0.5139,
+     "gap": -0.0559,
+     "residual": -0.0583
+    }
+   ]
+  },
+  {
+   "card": "SF|mccovwi01",
+   "name": "Willie McCovey",
+   "flags": [
+    {
+     "rate": "obp",
+     "sim": 0.3704,
+     "source": 0.4217,
+     "gap": -0.0513,
+     "residual": -0.0466
+    },
+    {
+     "rate": "bb",
+     "sim": 0.1148,
+     "source": 0.1748,
+     "gap": -0.06,
+     "residual": -0.0504
+    }
+   ]
+  },
+  {
+   "card": "TEX|gonzaju03",
+   "name": "Juan Gonzalez",
+   "flags": [
+    {
+     "rate": "slg",
+     "sim": 0.5731,
+     "source": 0.6195,
+     "gap": -0.0464,
+     "residual": -0.0488
+    }
+   ]
+  },
+  {
+   "card": "BOS|foxxji01",
+   "name": "Jimmie Foxx",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2891,
+     "source": 0.3291,
+     "gap": -0.04,
+     "residual": -0.0431
+    },
+    {
+     "rate": "slg",
+     "sim": 0.5787,
+     "source": 0.6247,
+     "gap": -0.0459,
+     "residual": -0.0483
+    }
+   ]
+  },
+  {
+   "card": "SF|mizejo01",
+   "name": "Johnny Mize",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.2548,
+     "source": 0.2989,
+     "gap": -0.0442,
+     "residual": -0.0473
+    }
+   ]
+  },
+  {
+   "card": "ATL|murphda05",
+   "name": "Dale Murphy",
+   "flags": [
+    {
+     "rate": "avg",
+     "sim": 0.256,
+     "source": 0.2937,
+     "gap": -0.0376,
+     "residual": -0.0407
+    },
+    {
+     "rate": "obp",
+     "sim": 0.3419,
+     "source": 0.3921,
+     "gap": -0.0502,
+     "residual": -0.0456
+    }
+   ]
+  },
+  {
+   "card": "SF|clarkwi02",
+   "name": "Will Clark",
+   "flags": [
+    {
+     "rate": "obp",
+     "sim": 0.3362,
+     "source": 0.3864,
+     "gap": -0.0502,
+     "residual": -0.0455
+    }
+   ]
+  },
+  {
+   "card": "STL|pujolal01",
+   "name": "Albert Pujols",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0997,
+     "source": 0.1428,
+     "gap": -0.0431,
+     "residual": -0.0335
+    }
+   ]
+  },
+  {
+   "card": "ATL|aaronha01",
+   "name": "Hank Aaron",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0742,
+     "source": 0.1161,
+     "gap": -0.0419,
+     "residual": -0.0323
+    }
+   ]
+  },
+  {
+   "card": "PHA|dykesji01",
+   "name": "Jimmy Dykes",
+   "flags": [
+    {
+     "rate": "so",
+     "sim": 0.1196,
+     "source": 0.0871,
+     "gap": 0.0325,
+     "residual": 0.0321
+    }
+   ]
+  },
+  {
+   "card": "STL|simmote01",
+   "name": "Ted Simmons",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0764,
+     "source": 0.1166,
+     "gap": -0.0402,
+     "residual": -0.0306
+    }
+   ]
+  },
+  {
+   "card": "DET|cabremi01",
+   "name": "Miguel Cabrera",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0967,
+     "source": 0.1355,
+     "gap": -0.0388,
+     "residual": -0.0292
+    }
+   ]
+  },
+  {
+   "card": "TB|longoev01",
+   "name": "Evan Longoria",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0749,
+     "source": 0.1135,
+     "gap": -0.0386,
+     "residual": -0.0291
+    }
+   ]
+  },
+  {
+   "card": "CIN|robinfr02",
+   "name": "Frank Robinson",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0806,
+     "source": 0.118,
+     "gap": -0.0374,
+     "residual": -0.0278
+    }
+   ]
+  },
+  {
+   "card": "PIT|clemero01",
+   "name": "Roberto Clemente",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0413,
+     "source": 0.0786,
+     "gap": -0.0373,
+     "residual": -0.0277
+    }
+   ]
+  },
+  {
+   "card": "MON|guerrvl01",
+   "name": "Vladimir Guerrero",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0595,
+     "source": 0.0959,
+     "gap": -0.0364,
+     "residual": -0.0268
+    }
+   ]
+  }
+ ],
+ "pitcher_outliers": [
+  {
+   "card": "ATL|kimbrcr01",
+   "name": "Craig Kimbrel",
+   "flags": [
+    {
+     "rate": "k",
+     "sim": 0.2822,
+     "source": 0.4196,
+     "gap": -0.1374,
+     "residual": -0.1598
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "STL|gibsobo01",
+   "name": "Bob Gibson",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0291,
+     "source": 0.0119,
+     "gap": 0.0172,
+     "residual": 0.0188
+    },
+    {
+     "rate": "h",
+     "sim": 0.2706,
+     "source": 0.195,
+     "gap": 0.0756,
+     "residual": 0.0653
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "+10"
+  },
+  {
+   "card": "TOR|quantpa01",
+   "name": "Paul Quantrill",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.2156,
+     "source": 0.2698,
+     "gap": -0.0542,
+     "residual": -0.0645
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "CIN|rixeyep01",
+   "name": "Eppa Rixey",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.2051,
+     "source": 0.2577,
+     "gap": -0.0526,
+     "residual": -0.0629
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "PHA|quinnja01",
+   "name": "Jack Quinn",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.2168,
+     "source": 0.2643,
+     "gap": -0.0475,
+     "residual": -0.0578
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "+10"
+  },
+  {
+   "card": "MON|wettejo01",
+   "name": "John Wetteland",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.2421,
+     "source": 0.1765,
+     "gap": 0.0656,
+     "residual": 0.0553
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "+20"
+  },
+  {
+   "card": "LAD|breweji01",
+   "name": "Jim Brewer",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.2423,
+     "source": 0.1777,
+     "gap": 0.0646,
+     "residual": 0.0543
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "+20"
+  },
+  {
+   "card": "TB|fairbpe01",
+   "name": "Pete Fairbanks",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.2461,
+     "source": 0.1833,
+     "gap": 0.0628,
+     "residual": 0.0525
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "+10"
+  },
+  {
+   "card": "BOS|martipe02",
+   "name": "Pedro Martinez",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.247,
+     "source": 0.1853,
+     "gap": 0.0617,
+     "residual": 0.0514
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "+20"
+  },
+  {
+   "card": "TB|mcgeeja01",
+   "name": "Jake McGee",
+   "flags": [
+    {
+     "rate": "h",
+     "sim": 0.2396,
+     "source": 0.1792,
+     "gap": 0.0604,
+     "residual": 0.0501
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "+10"
+  },
+  {
+   "card": "LAD|koufasa01",
+   "name": "Sandy Koufax",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0439,
+     "source": 0.018,
+     "gap": 0.0259,
+     "residual": 0.0275
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "SF|wilheho01",
+   "name": "Hoyt Wilhelm",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0739,
+     "source": 0.1042,
+     "gap": -0.0303,
+     "residual": -0.0256
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "LAD|kershcl01",
+   "name": "Clayton Kershaw",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0646,
+     "source": 0.0475,
+     "gap": 0.0171,
+     "residual": 0.0218
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "TEX|kernji01",
+   "name": "Jim Kern",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.1028,
+     "source": 0.1285,
+     "gap": -0.0257,
+     "residual": -0.021
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "CIN|hahnno01",
+   "name": "Noodles Hahn",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0228,
+     "source": 0.0036,
+     "gap": 0.0192,
+     "residual": 0.0208
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "+10"
+  },
+  {
+   "card": "PHA|grovele01",
+   "name": "Lefty Grove",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0267,
+     "source": 0.0078,
+     "gap": 0.0189,
+     "residual": 0.0205
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "STL|mcdanli01",
+   "name": "Lindy McDaniel",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.037,
+     "source": 0.0185,
+     "gap": 0.0185,
+     "residual": 0.0201
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "PHA|chrisru01",
+   "name": "Russ Christopher",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0702,
+     "source": 0.0945,
+     "gap": -0.0243,
+     "residual": -0.0196
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "SF|lavelga01",
+   "name": "Gary Lavelle",
+   "flags": [
+    {
+     "rate": "bb",
+     "sim": 0.0667,
+     "source": 0.0907,
+     "gap": -0.024,
+     "residual": -0.0193
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "CHC|vaughhi01",
+   "name": "Hippo Vaughn",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0197,
+     "source": 0.0031,
+     "gap": 0.0166,
+     "residual": 0.0181
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "+20"
+  },
+  {
+   "card": "BOS|woodjo02",
+   "name": "Smoky Joe Wood",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0181,
+     "source": 0.0018,
+     "gap": 0.0163,
+     "residual": 0.0179
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "+20"
+  },
+  {
+   "card": "PHA|wadderu01",
+   "name": "Rube Waddell",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0198,
+     "source": 0.0035,
+     "gap": 0.0163,
+     "residual": 0.0179
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "+20"
+  },
+  {
+   "card": "PHA|planked01",
+   "name": "Eddie Plank",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.018,
+     "source": 0.0026,
+     "gap": 0.0154,
+     "residual": 0.017
+    }
+   ],
+   "throws": "L",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "STL|deandi01",
+   "name": "Dizzy Dean",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0264,
+     "source": 0.0119,
+     "gap": 0.0145,
+     "residual": 0.016
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "NONE"
+  },
+  {
+   "card": "BOS|youngcy01",
+   "name": "Cy Young",
+   "flags": [
+    {
+     "rate": "hr",
+     "sim": 0.0177,
+     "source": 0.0037,
+     "gap": 0.014,
+     "residual": 0.0156
+    }
+   ],
+   "throws": "R",
+   "so_modifier": "+20"
+  }
+ ],
+ "environment": {
+  "pool": "uniform draw from converted cards; page-39 shift on TOUGH",
+  "solver_mix": "frozen PITCHER_MIX, hand 0.28/0.72, no SO shift, real park and defense charts",
+  "parks": "12 stadium charts on rulebook pages 109-110, uniform",
+  "defense": "Range C, Error 3",
+  "rare_play": "00 counted and excluded from rates",
+  "fatigue": "not applied",
+  "outlier": "residual from the median gap (pitcher K: median inside the SO-modifier group) at least max(tolerance, 2 sd), and past sampling noise"
+ }
+}

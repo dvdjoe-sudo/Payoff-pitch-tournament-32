@@ -50,18 +50,19 @@ SO_MODIFIERS = {
 }
 
 def apply_so_modifier(vector, modifier):
-    """Adjust the TOUGH vector the way pitcher v2 reads a bump.
+    """Adjust the TOUGH vector the way the tournament's v2 tracker reads a bump.
 
-    v2 widens the printed SO band by `bump` faces above its hi. Those
-    faces become strikeouts. The older percentile shift moved the roll
-    up, away from a low SO band, and suppressed strikeouts. This
-    function follows the v2 direction: SO goes up, other TOUGH events
-    give up the faces.
+    The printed rulebook (ratings addendum) does something else. A card
+    marked %roll +10 or +20 adds that amount to the percentile on a TOUGH
+    result, and if the sum is greater than 99 the original face is used.
+    Strikeout bands sit at the low end of TOUGH, so that shift produces
+    fewer strikeouts. engines/sim/pa_sim.py follows the printed shift.
 
-    Uncertain: the real gain depends on where each hitter's SO band
-    ends and what is printed just above it. This population vector
-    moves bump/99 of the non-SO mass into SO, and does not push SO
-    past the rest of the section.
+    This function follows engines/pitcher-v2/engine_v2.py, which is what
+    the converted tournament cards were fit to play: the SO band widens by
+    `bump` faces and strikeouts go up. It is the tracker rule. It is not
+    the rulebook rule. The gain depends on where each hitter's SO band
+    ends. This population vector moves bump/99 of the non-SO mass into SO.
     """
     v = dict(vector)
     bump = SO_MODIFIERS.get(modifier, 0)

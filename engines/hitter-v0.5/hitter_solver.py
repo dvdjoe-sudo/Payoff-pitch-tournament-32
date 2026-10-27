@@ -41,8 +41,14 @@ def reference():
     return _REFERENCE
 
 # ---- section model ----
-# BALLPARK (8.98% of pitcher rolls) resolves via the park chart to WHEELHOUSE
-# or IN-PLAY; mean P(WH|BALLPARK) across 26 parks:
+# Frozen 2026-10-08 fit constants. The rulebook does not use these numbers.
+# BALLPARK is the home park's own WHEELHOUSE / IN-PLAY split (rulebook p.9),
+# and the 12 stadium charts printed on rulebook pp.109-110 average about
+# 0.52 for both hands. DEFENSE is a position roll plus a park range or error
+# check (rulebook p.20). It is not an automatic out. DEFO below is the
+# frozen solver's stand-in for that branch: the whole share is charged as
+# an at-bat with no hit. The plate-appearance simulator in engines/sim
+# follows the printed charts instead of these constants.
 P_WH_GIVEN_BP = {'L': 0.519, 'R': 0.504, 'S': 0.5115}
 PITCHER_MIX = {'TOUGH': 0.3429, 'IN-PLAY': 0.2514, 'PATIENT': 0.2287,
                'WHEELHOUSE': 0.0341, 'BALLPARK': 0.0898, 'DEFO': 0.0506}
@@ -66,6 +72,12 @@ TEAMS = {
     'San Diego Padres': 'SD', 'San Francisco Giants': 'SF', 'St. Louis Cardinals': 'STL',
 }
 
+# Stored card numbers. The rulebook (p.3, p.8) grades error 1 as the worst
+# and 5 as the best, and an outfield arm 3 as the best and 10 as the worst.
+# This map writes the other direction: a great fielder is stored as a low
+# error number (Ozzie Smith is E 2) and a strong arm is stored as 8.
+# Range letters match the book (A best, then B C D F). The map is what the
+# converted cards already print. It is not reapplied here.
 FIELDING_MAP = {  # text -> (range, E)
     'elite': ('A', 1), 'great': ('A', 2), 'excellent': ('A', 2),
     'above average': ('B', 3), 'slightly above average': ('B', 3),

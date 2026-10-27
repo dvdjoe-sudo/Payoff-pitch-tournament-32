@@ -7,6 +7,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 from calibration import apply_so_modifier
+from event_vectors import section_events
 from pitcher_solver import evaluate_vs_hitters, optimize
 
 
@@ -28,7 +29,19 @@ def vectors():
     return {name: dict(tough if name.startswith('TOUGH') else other) for name in names}
 
 
+def test_face_00_is_a_rare_play_not_an_out():
+    """Rulebook: 00 is a rare play. Holes in 01-99 are the outs."""
+    section = {'vsRHP': {'SO': [1, 40], '1B': [41, 50]}}
+    ev = section_events(section, 'vsRHP')
+    assert abs(ev['SO'] - 0.40) < 1e-9
+    assert abs(ev['1B'] - 0.10) < 1e-9
+    assert abs(ev['RARE_PLAY'] - 0.01) < 1e-9
+    assert abs(ev['OUT'] - 0.49) < 1e-9
+    assert abs(sum(ev.values()) - 1.0) < 1e-9
+
+
 def test_so_modifier_increases_strikeouts():
+    """Locks the tournament v2 widening. The printed +10/+20 shift is the other direction; engines/sim tests that."""
     raw = base_vector()
     bumped = apply_so_modifier(raw, '+10')
     assert bumped['SO'] > raw['SO']
@@ -67,6 +80,7 @@ def test_optimize_is_seeded_and_uses_hand():
 
 
 if __name__ == '__main__':
+    test_face_00_is_a_rare_play_not_an_out()
     test_so_modifier_increases_strikeouts()
     test_optimize_is_seeded_and_uses_hand()
     print('pitcher solver tests passed')
