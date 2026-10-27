@@ -387,7 +387,8 @@
    "MIF Larry Bowa SS R 12",
    "DEF IF Scott Rolen 3B R 7",
    "BAT/CI Dick Allen 1B R 9",
-   "4TH OF Richie Ashburn CF L 12"
+   "4TH OF Richie Ashburn CF L 12",
+   "BAT2 Chuck Klein RF/LF L (Contact/Power)"
   ],
   "rotation": [
    "SP1 Steve Carlton 15",
@@ -399,7 +400,6 @@
   "bullpen": [
    "CL Jonathan Papelbon 4",
    "RH SET Gene Garber 5",
-   "SET/MULTI Ryan Madson 9",
    "LH FIRE Tug McGraw 10",
    "MR/MULTI Ron Reed 8",
    "HIGH LEV Brad Lidge 4",

@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Philadelphia Phillies Chuck Klein for Ryan Madson (Joe-approved)
+
+Chuck Klein joins the active 26 as RF/LF bench hitter #6 and Ryan Madson leaves active relief duty. Papelbon, Garber, McGraw, Reed, Lidge and Suárez remain, now numbered 1-6 in the bullpen. Starting lineup and rotation are untouched. The canonical roster, official owner roster, generator, roster document and validator now agree on 9/6/5/6. Madson's authentic original card remains in archived cards; no existing cards, tournament results, played games, FAC/dice logs or box scores were altered. Klein requires a genuine Phillies-franchise-only Hitter v0.5 card conversion; roster inclusion is not a playable card.
+
 ## 2026-10-27 — Pittsburgh Pirates Paul Waner for Al McBean (Joe-approved)
 
 Paul Waner becomes the sixth bench bat (RF/LF, LH contact) while Al McBean moves off the active bullpen. Grant Jackson now occupies bullpen #5 and Sam Leever remains the long/swing option at bullpen #6. The Pirates active 26 are 9/6/5/6, synchronized in both current roster sources, generated roster output, rebuild adapter and validator. No historical cards (including McBean), games, box scores, original results or FAC/dice logs were edited. Paul Waner's genuine Pirates-only Hitter v0.5 conversion is pending; active roster inclusion does not invent a playable card.

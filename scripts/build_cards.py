@@ -578,6 +578,7 @@ def build():
     apply_tigers_roster_amendment(cards, rosters)
     apply_braves_roster_amendment(cards, rosters)
     apply_pirates_roster_amendment(cards, rosters)
+    apply_phillies_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -597,6 +598,7 @@ AUTHORIZED_HITTERS = (
     "DET|gibsoki01",
     "ATL|hornebo01",
     "PIT|wanerpa01",
+    "PHI|kleinch01",
 )
 
 
@@ -1119,6 +1121,56 @@ def apply_pirates_roster_amendment(cards, rosters):
         raise SystemExit("Pirates must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Pirates must have 26 unique active players")
+
+
+def apply_phillies_roster_amendment(cards, rosters):
+    """Joe-approved Phillies Chuck Klein/Ryan Madson 9/6/5/6 active 26.
+
+    Keep all original converted player cards (including Ryan Madson)
+    and historical games unchanged. Klein's authentic Phillies-only
+    Hitter v0.5 card must be converted later without invented values.
+    """
+    roster = rosters.get("PHI")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "madsory01"]
+    klein_id = "kleinch01"
+    matches = [p for p in players if p["id"] == klein_id]
+    if not matches:
+        players.append({
+            "group": "bench", "id": klein_id, "kind": "hitter",
+            "name": "Chuck Klein", "pos": "RF", "slot": 6,
+        })
+    elif len(matches) != 1:
+        raise SystemExit("duplicate Chuck Klein Phillies roster entries")
+    else:
+        matches[0].update(group="bench", kind="hitter", pos="RF", slot=6)
+    # Genuine historic converted cards remain, including PHI|madsory01.
+    # All existing active late-bullpen pitchers shift up one slot.
+    for player_id, group, slot, pos, kind in (
+        (klein_id, "bench", 6, "RF", "hitter"),
+        ("mcgratu01", "bullpen", 3, "RP", "pitcher"),
+        ("reedro01", "bullpen", 4, "RP", "pitcher"),
+        ("lidgebr01", "bullpen", 5, "RP", "pitcher"),
+        ("suarera01", "bullpen", 6, "RP", "pitcher"),
+    ):
+        found = [p for p in players if p["id"] == player_id]
+        if len(found) != 1:
+            raise SystemExit("Phillies active role missing: " + player_id)
+        found[0].update(group=group, slot=slot, pos=pos, kind=kind)
+        card = cards.get("PHI|" + player_id)
+        if card:
+            card["spots"] = [{
+                "group": group, "slot": slot, "pos": pos, "kind": kind,
+            }]
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Phillies approved roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Phillies approved roster needs 26 distinct active players")
 
 
 def dump(obj, path):

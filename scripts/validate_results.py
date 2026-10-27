@@ -881,6 +881,46 @@ def check_pirates_roster_amendment(check: Check) -> None:
                  "Full card rebuild keeps Pittsburgh owner-approved roster")
 
 
+def check_phillies_roster_amendment(check: Check) -> None:
+    """Owner-approved 9/6/5/6 Phillies Chuck Klein for Ryan Madson."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    official = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["PHI"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["PHI"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26 and
+                 counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Phillies have 26 unique active players (9/6/5/6)")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Phillies role slots are consecutive and nonduplicated")
+    klein = [p for p in players if p["id"] == "kleinch01"]
+    check.expect(len(klein) == 1 and klein[0]["group"] == "bench"
+                 and klein[0]["slot"] == 6 and klein[0]["pos"] == "RF"
+                 and klein[0]["kind"] == "hitter",
+                 "Chuck Klein is the Phillies sixth bench hitter")
+    check.expect("madsory01" not in ids,
+                 "Ryan Madson is inactive, not deleted from historical cards")
+    relief_ids = [p["id"] for p in players if p["group"] == "bullpen"]
+    check.expect(relief_ids == ["papeljo01", "garbege01", "mcgratu01",
+                                "reedro01", "lidgebr01", "suarera01"],
+                 "Remaining Phillies relief pitchers are in approved order")
+    check.expect(len(official["bench"]) == 6 and len(official["bullpen"]) == 6
+                 and any("Chuck Klein" in s for s in official["bench"])
+                 and not any("Ryan Madson" in s for s in official["bullpen"]),
+                 "Phillies official owner roster matches active 6/6")
+    check.expect("PHI|madsory01" in cards,
+                 "Ryan Madson original converted card remains archived")
+    text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Chuck Klein (`kleinch01`) is Philadelphia" in text,
+                 "Phillies dated amendment is documented in published roster")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_phillies_roster_amendment(cards, rosters)" in builder,
+                 "Phillies owner change persists through full roster rebuild")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -905,6 +945,7 @@ def main() -> int:
     check_tigers_roster_amendment(check)
     check_braves_roster_amendment(check)
     check_pirates_roster_amendment(check)
+    check_phillies_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

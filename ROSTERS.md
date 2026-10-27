@@ -700,6 +700,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - DEF IF Scott Rolen 3B R 7
 - BAT/CI Dick Allen 1B R 9
 - 4TH OF Richie Ashburn CF L 12
+- BAT2 Chuck Klein RF/LF L (Contact/Power)
 
 ### Rotation
 
@@ -713,11 +714,16 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 - CL Jonathan Papelbon 4
 - RH SET Gene Garber 5
-- SET/MULTI Ryan Madson 9
 - LH FIRE Tug McGraw 10
 - MR/MULTI Ron Reed 8
 - HIGH LEV Brad Lidge 4
 - LR/EMER SP Ranger Suárez 8
+
+### Approved active roster amendment (2026-10-27)
+
+Chuck Klein (`kleinch01`) is Philadelphia's approved sixth bench bat (left-handed RF/LF). Ryan Madson (`madsory01`) is inactive. The current Phillies roster is 9 starting hitters, 6 bench players, 5 starting pitchers and 6 relievers, 26 unique active players.
+
+Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4, 5 and 6 respectively, without changing their pitching roles. This amendment applies to future games only. Every earlier original converted card, including Madson's, and all tournament games, results, box scores and dice/FAC logs remain untouched. Klein's playable frozen Hitter v0.5 conversion will use Phillies-franchise seasons only and remains pending; no card numbers or ratings are invented.
 
 ## 12. Minnesota Twins (MIN)
 
