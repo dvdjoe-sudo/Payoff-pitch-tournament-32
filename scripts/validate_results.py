@@ -509,6 +509,40 @@ def check_padres_roster_amendment(check: Check) -> None:
     check.expect("SD|leffecr01" in cards,
                  "Lefferts' historical converted card is retained in archive data")
 
+    caminiti = [p for p in players if p["id"] == "caminke01"]
+    machado = [p for p in players if p["id"] == "machama01"]
+    check.expect(len(caminiti) == 1
+                 and caminiti[0]["group"] == "lineup"
+                 and caminiti[0]["slot"] == 4
+                 and caminiti[0]["pos"] == "DH"
+                 and caminiti[0].get("eligible_positions") == ["3B", "DH"],
+                 "Caminiti starts at DH batting fourth and is also eligible 3B")
+    check.expect(len(machado) == 1
+                 and machado[0]["group"] == "lineup"
+                 and machado[0]["slot"] == 6
+                 and machado[0]["pos"] == "3B",
+                 "Machado remains starting 3B batting sixth")
+    check.expect(announced["lineup"][3] == "4 Ken Caminiti DH S 4"
+                 and announced["lineup"][5] == "6 Manny Machado 3B R 7",
+                 "Padres official original batting order and DH stay unchanged")
+    check.expect([p["id"] for p in players if p["group"] == "lineup"]
+                 == ["tatisfe02", "gwynnto01", "winfida01", "caminke01",
+                     "gonzaad01", "machama01", "tenacge01",
+                     "finlest01", "loretma01"],
+                 "San Diego all nine original batters retain batting order")
+    check.expect([p["id"] for p in players if p["group"] == "rotation"]
+                 == ["peavyja01", "jonesra01", "whitsed01",
+                     "ashbyan01", "shower01"],
+                 "San Diego all five rotation pitchers unchanged")
+    check.expect("SD|caminke01" in cards,
+                 "Caminiti frozen historical converted card stays archived")
+    check.expect("Ken Caminiti (`caminke01`) is the **starting DH" in
+                 (ROOT / "ROSTERS.md").read_text(encoding="utf-8"),
+                 "Approved Caminiti DH/3B ruling documented")
+    check.expect("caminiti[0][\"eligible_positions\"] = [\"3B\", \"DH\"]"
+                 in (ROOT / "scripts/build_cards.py").read_text(encoding="utf-8"),
+                 "Caminiti DH/3B eligibility persists across future roster builds")
+
 
 
 def check_expos_roster_amendment(check: Check) -> None:

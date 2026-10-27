@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Padres Ken Caminiti starting DH with 3B eligibility (owner-approved)
+
+The original San Diego Padres #26 batting order remains untouched. **Ken Caminiti (`caminke01`) starts at DH batting fourth**, and is **eligible at both 3B and DH**; **Manny Machado (`machama01`) starts at 3B batting sixth**. The active roster stores Caminiti's starting position as `DH`, with `eligible_positions: ["3B", "DH"]`. Future roster rebuilding and the club's player-card roster display keep both positions visible. The owner-announced lineup already showed Caminiti DH. All 26 players remain 9/6/5/6, with unchanged bench, rotation and bullpen. Original converted cards, tournament games, box scores and dice/FAC history remain untouched.
+
 ## 2026-10-27 — Toronto Blue Jays Joe Carter for Jim Clancy (owner-approved)
 
 Toronto's owner-approved 26 adds **Joe Carter** (`cartejo01`) as bench #6, a right-handed RF/LF reserve and pinch-hit power bat using **Blue Jays 1991–1997 seasons exclusively**. Jim Clancy (`clancji01`) leaves the active bullpen, retaining his authentic historical pitcher card. Six original relievers remain: Henke, Eichhorn, Ward, Osuna, Downs and Quantrill. **All nine starting hitters, José Bautista batting fifth at DH, and the complete five-man rotation remain unchanged.** Active roster **9/6/5/6**, 26 unique people. All historical cards, game results, dice/FAC logs and box scores are untouched. Joe Carter's Toronto-only five-year Peak 162 was verified from Lahman using **1991–1995**: 34 HR, 118 RBI and .802 OPS per 162 games. His genuine playable Hitter v0.5 conversion remains pending. No invented dice ratings or historical results.

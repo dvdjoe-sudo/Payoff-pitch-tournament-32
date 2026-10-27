@@ -1209,6 +1209,19 @@ def apply_padres_roster_amendment(cards, rosters):
         card["spots"] = [
             {"group": "bench", "slot": 6, "pos": "OF", "kind": "hitter"},
         ]
+    # Approved lineup semantics: Ken Caminiti starts at DH, while 3B
+    # remains an eligible alternative. Machado is the starting third baseman.
+    # Only active roster metadata changes; frozen historical card is retained.
+    caminiti = [p for p in players if p["id"] == "caminke01"
+                and p["group"] == "lineup" and p["slot"] == 4]
+    machado = [p for p in players if p["id"] == "machama01"
+               and p["group"] == "lineup" and p["slot"] == 6]
+    if len(caminiti) != 1 or len(machado) != 1 or machado[0]["pos"] != "3B":
+        raise SystemExit("San Diego original fourth and sixth batting slots were altered")
+    caminiti[0]["pos"] = "DH"
+    caminiti[0]["eligible_positions"] = ["3B", "DH"]
+    # Do not rewrite SD|caminke01's historical card spots/dice source.
+
     # Lefferts stays in cards if present as archived source data, but no
     # longer occupies an active roster slot. No data is destroyed here.
     order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}

@@ -5225,8 +5225,12 @@
     "id": "caminke01",
     "kind": "hitter",
     "name": "Ken Caminiti",
-    "pos": "3B",
-    "slot": 4
+    "pos": "DH",
+    "slot": 4,
+    "eligible_positions": [
+     "3B",
+     "DH"
+    ]
    },
    {
     "group": "lineup",

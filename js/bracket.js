@@ -1571,7 +1571,12 @@
     });
     var spots = active && active.length ? active : (card.spots || []);
     return spots.map(function (spot) {
-      return (GROUP_TITLES[spot.group] || spot.group) + " " + spot.slot + " · " + spot.pos;
+      var activePosition = (GROUP_TITLES[spot.group] || spot.group) + " " + spot.slot + " · " + spot.pos;
+      var eligible = spot.eligible_positions;
+      if (Array.isArray(eligible) && eligible.length > 1) {
+        activePosition += " (eligible: " + eligible.join("/") + ")";
+      }
+      return activePosition;
     }).join("; ");
   }
 
@@ -1841,7 +1846,7 @@
       body.appendChild(el("p", { class: "note", text: "Two-way roster rule: Babe Ruth counts as one of Boston's 26 active players. Bench hitter #6 and bullpen pitcher #7 are two roles for the same player, not a 27th roster place. Both real card roles remain eligible under the normal pitching and fatigue rules." }));
     }
     if (code === "SD") {
-      body.appendChild(el("p", { class: "note", text: "Approved Padres 26: Brian Giles is bench OF6 and will be playable after his frozen Hitter v0.5 conversion. Craig Lefferts is off the active roster; his previous card remains preserved as historical data." }));
+      body.appendChild(el("p", { class: "note", text: "Approved Padres 26: Brian Giles is bench OF6 and will be playable after his frozen Hitter v0.5 conversion. Craig Lefferts is off the active roster; his previous card remains preserved as historical data. Position eligibility correction: Ken Caminiti starts as DH batting fourth, but may also play 3B; Manny Machado starts at 3B batting sixth. The active roster records Caminiti as DH with 3B/DH eligibility; no change to the starting nine, other roster roles or historical card/game data." }));
     }
     if (code === "MON") {
       body.appendChild(el("p", { class: "note", text: "Approved Expos 26: Moisés Alou is bench OF6, pending his original Hitter v0.5 card conversion. Jeff Fassero is inactive; his existing card is preserved as historical data." }));

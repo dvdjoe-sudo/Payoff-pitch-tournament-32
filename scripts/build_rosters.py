@@ -308,6 +308,15 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "SD":
+        lines += [
+            "### Approved Padres DH and 3B position eligibility correction (2026-10-27)",
+            "",
+            "Ken Caminiti (`caminke01`) is the **starting DH in batting-order slot 4**, with **eligible positions 3B/DH** (third base and designated hitter). Manny Machado (`machama01`) remains the **starting third baseman batting sixth**. Caminiti may be assigned to play 3B when needed; his starting role on this announced roster remains DH. The owner-announced original lineup card already lists Caminiti as DH.",
+            "",
+            "No personnel, batting-order, rotation, bench or bullpen changes were authorized: San Diego remains **9 lineup / 6 bench / 5 starting pitchers / 6 relievers** with **26 distinct active players**. This is position metadata only. All original historical cards, previously played games, box scores, scores, FAC/dice rolls and tournament results are unchanged.",
+            "",
+        ]
     if code == "TOR":
         lines += [
             "### Approved active roster amendment (2026-10-27)",
