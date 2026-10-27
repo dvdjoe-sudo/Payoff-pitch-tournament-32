@@ -9,6 +9,14 @@ import json, sys
 
 def qa_warnings(card, exp, tgt, row):
     w = []
+    import os
+    import sys
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    from partition import validate_solver_card
+    for problem in validate_solver_card(card):
+        w.append('Partition: ' + problem)
     secs = card['sections']
 
     # 1. Extreme ranges: any single outcome covering 90+ of a section

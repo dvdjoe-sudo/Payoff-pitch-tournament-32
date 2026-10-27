@@ -656,13 +656,20 @@ def dump(obj) -> str:
 
 
 def regenerate() -> None:
-    """Rewrite every file the site workflow checks with git diff --exit-code."""
+    """Rewrite every file the site workflow checks with git diff --exit-code.
+
+    build_cards.py runs in its preserve mode: the tournament block on
+    each existing card is refreshed from tournament_results.json, and
+    the repaired windows, dice, and pitching charts are not rebuilt
+    from the set archive.
+    """
     scripts = (
         "build_peak162.py",
         "build_rosters.py",
         "build_leaders.py",
         "build_series_previews.py",
         "build_bracket_image.py",
+        "build_cards.py",
     )
     for name in scripts:
         completed = subprocess.run([sys.executable, str(ROOT / "scripts" / name)], cwd=ROOT)

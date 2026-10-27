@@ -50,35 +50,32 @@ SO_MODIFIERS = {
 }
 
 def apply_so_modifier(vector, modifier):
-    """Adjust TOUGH vector for supplemental SO modifier.
-    
-    Per rules: +10/+20 INCREASES the percentile roll before checking TOUGH.
-    Since SO ranges occupy the LOW end of TOUGH, increasing the roll moves
-    away from SO -> FEWER strikeouts, not more.
-    
-    If adjusted roll exceeds 99, original roll is used (cap the effect).
-    
-    This is a strikeout SUPPRESSION tool: useful when the 2d6 table needs
-    lots of TOUGH to suppress hits but would otherwise generate too many SO.
+    """Adjust the TOUGH vector the way pitcher v2 reads a bump.
+
+    v2 widens the printed SO band by `bump` faces above its hi. Those
+    faces become strikeouts. The older percentile shift moved the roll
+    up, away from a low SO band, and suppressed strikeouts. This
+    function follows the v2 direction: SO goes up, other TOUGH events
+    give up the faces.
+
+    Uncertain: the real gain depends on where each hitter's SO band
+    ends and what is printed just above it. This population vector
+    moves bump/99 of the non-SO mass into SO, and does not push SO
+    past the rest of the section.
     """
-    if modifier == 'NONE':
-        return vector
-    v = vector.copy()
-    # +10/+20 shifts percentile up, away from low-end SO ranges
-    # Model as: SO decreases, OUT increases (hits stay roughly same)
-    bonus = SO_MODIFIERS[modifier] / 100.0
-    # Damping: +10 ~ 15% SO reduction, +20 ~ 25% SO reduction
-    # (capped because rolls >99 revert to original)
-    reduction = bonus * 1.5
-    reduction = min(reduction, 0.4)  # Cap at 40% reduction
-    so_loss = v['SO'] * reduction
-    v['SO'] = max(0, v['SO'] - so_loss)
-    v['OUT'] = v['OUT'] + so_loss
-    # Renormalize (should already sum to 1, but be safe)
-    total = sum(v[k] for k in v if k != 'RARE_PLAY')
-    for k in v:
-        if k != 'RARE_PLAY':
-            v[k] /= total
+    v = dict(vector)
+    bump = SO_MODIFIERS.get(modifier, 0)
+    if not bump:
+        return v
+    non = [key for key in v if key not in ('SO', 'RARE_PLAY')]
+    pool = sum(v.get(key, 0.0) for key in non)
+    take = min(pool, bump / 99.0)
+    if pool <= 0 or take <= 0:
+        return v
+    keep = (pool - take) / pool
+    for key in non:
+        v[key] = v.get(key, 0.0) * keep
+    v['SO'] = v.get('SO', 0.0) + take
     return v
 
 

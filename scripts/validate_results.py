@@ -403,6 +403,40 @@ def check_pha_roster_alignment(check: Check) -> None:
                  "Valo has genuine converted card or explicit nonplayable status")
 
 
+def check_card_partitions(check: Check) -> None:
+    """Every hitter hand resolves 01-99 once, and every 2d6 chart is complete.
+
+    The resolved reading gives a result band the face when the shared
+    out table also lists it, and requires the out table to cover every
+    hole. Face 00 is outside the partition. A pending card with no
+    sections is skipped.
+    """
+    path = ROOT / "engines" / "hitter-v0.5" / "partition.py"
+    spec = importlib.util.spec_from_file_location("card_partition", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    failures = []
+    checked = 0
+    for key, card in cards.items():
+        bat = card.get("card_bat") or {}
+        if bat.get("sections"):
+            checked += 1
+            for problem in module.validate_hitter_card(bat, exact=False):
+                failures.append("%s: %s" % (key, problem))
+        table = (card.get("card_pit") or {}).get("table_2d6")
+        if table:
+            checked += 1
+            for problem in module.validate_pitcher_table(table):
+                failures.append("%s: %s" % (key, problem))
+    check.expect(checked > 0, "card partition check found no cards")
+    if failures:
+        preview = "; ".join(failures[:6])
+        check.expect(False, "card partitions failed %d: %s" % (len(failures), preview))
+    else:
+        check.expect(True, "card partitions")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -415,6 +449,7 @@ def main() -> int:
         reconcile(data, details, check)
     documents(check)
     check_pha_roster_alignment(check)
+    check_card_partitions(check)
     return check.done()
 
 

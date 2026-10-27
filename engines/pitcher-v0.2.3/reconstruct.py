@@ -2,14 +2,19 @@
 """v0.1.1 pitcher reconstruction: 30 pitchers, actual vs generated."""
 import csv, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from event_vectors import VECTORS_RHP, VECTORS_LHP
-from pitcher_solver import evaluate_vs_hitters, optimize, table_to_probs, D6_W
+from pitcher_solver import evaluate_vs_hitters, optimize, table_to_probs, D6_W, load_1986
 
 HIST = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = os.path.join(os.path.dirname(HIST), 'historical-cards', 'reference')
-with open(os.path.join(REF, 'cards_1986.json')) as f:
-    ALL = json.load(f)['players']
-PITCHERS = {p['name']: p for p in ALL if p.get('pitcher')}
+PITCHERS = None
+
+
+def load_pitchers():
+    global PITCHERS
+    if PITCHERS is None:
+        _all, _hitters, pitchers = load_1986()
+        PITCHERS = {p['name']: p for p in pitchers}
+    return PITCHERS
 
 
 def run_reconstruction(csv_path):
@@ -20,14 +25,15 @@ def run_reconstruction(csv_path):
         name = r['pitcher']
         throws = r['throws']
         hand = 'R' if throws == 'R' else 'L'
-        if name not in PITCHERS:
+        if name not in load_pitchers():
             print(f"{name}: NOT FOUND in 1986 set")
             continue
-        actual_card = PITCHERS[name]['pitcher']['results']
+        actual_card = load_pitchers()[name]['pitcher']['results']
         # Target: actual card's event vector
         target = evaluate_vs_hitters(actual_card, hand)
-        # Optimize to reconstruct
-        gen_table, best_err, diag = optimize(target, restarts=10, iters=300)
+        # Optimize to reconstruct. Seeded so a rerun can be compared.
+        gen_table, best_err, diag = optimize(
+            target, restarts=10, iters=300, hand=hand, seed=0)
         gen_events = evaluate_vs_hitters(gen_table, hand)
         # Compare
         print(f"\n{name} ({throws})")
