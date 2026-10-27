@@ -4880,18 +4880,6 @@
      1980
     ]
    },
-   "LR/SP6 Jeff Fassero 6": {
-    "lahman_id": "fasseje01",
-    "status": "ok",
-    "text": "Peak 162 with Montreal Expos (1992–1996): 65 G, 17-13, 1 SV, 244.2 IP, 229 H, 88 ER, 79 BB, 218 SO, 3.25 ERA, 1.26 WHIP, 8.0 K/9",
-    "years": [
-     1992,
-     1993,
-     1994,
-     1995,
-     1996
-    ]
-   },
    "MR1 Mel Rojas 7": {
     "lahman_id": "rojasme01",
     "status": "ok",
@@ -4926,6 +4914,18 @@
      1991,
      1992,
      1993
+    ]
+   },
+   "OF5 Moisés Alou OF R 6": {
+    "lahman_id": "aloumo01",
+    "status": "ok",
+    "text": "Peak 162 with Montreal Expos (1992–1996): 162 G, 646 PA, 581 AB, 92 R, 170 H, 38 2B, 4 3B, 23 HR, 102 RBI, 14 SB, 50 BB, 82 SO, .293/.350/.490/.840",
+    "years": [
+     1992,
+     1993,
+     1994,
+     1995,
+     1996
     ]
    },
    "SP1 Steve Rogers 13": {
