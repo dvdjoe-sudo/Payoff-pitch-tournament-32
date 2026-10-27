@@ -9,7 +9,9 @@ Output: ~/workspace/custom-cards/<slug>/<slug>-card.json
 Method: section-specific comps from the 596 digitized 1986 cards, then an
 analytical coordinate-descent tuner aligns the card's expected AVG/OBP/SLG/
 BB%/SO%/HR%/HBP% and the 1B/2B/3B rates with the stat line. Doubles and
-triples keep the comp cards' section mix. No hand tuning.
+triples keep the comp cards' section mix. DEFENSE is the rulebook position
+roll against a neutral fielder and the 1986 park charts, not an automatic
+out. A reached-on-error is an at-bat and not a hit. No hand tuning.
 """
 import csv, json, os, re, sys, copy
 
@@ -50,9 +52,8 @@ def reference():
     return _REFERENCE
 
 # ---- section model ----
-# BALLPARK (8.98% of pitcher rolls) resolves via the park chart to WHEELHOUSE
-# or IN-PLAY; mean P(WH|BALLPARK) across 26 parks:
-P_WH_GIVEN_BP = {'L': 0.519, 'R': 0.504, 'S': 0.5115}
+# BALLPARK resolves through the official 1986 park cards (wh/99). DEFO is
+# resolved by pa_sim.defense_distribution, not counted as an automatic out.
 PITCHER_MIX = {'TOUGH': 0.3429, 'IN-PLAY': 0.2514, 'PATIENT': 0.2287,
                'WHEELHOUSE': 0.0341, 'BALLPARK': 0.0898, 'DEFO': 0.0506}
 CANON = {
@@ -103,9 +104,28 @@ def parse_name(raw):
     return raw.strip(), None
 
 
+def _sim():
+    """Import the plate-appearance module without opening it at import time."""
+    try:
+        import pa_sim
+    except ImportError:
+        sim_dir = os.path.join(ROOT, 'engines', 'sim')
+        if sim_dir not in sys.path:
+            sys.path.insert(0, sim_dir)
+        import pa_sim
+    return pa_sim
+
+
 def section_probs(bats):
+    """Four section probabilities plus DEFO.
+
+    BALLPARK is folded into WHEELHOUSE and IN-PLAY with the 1986 park
+    cards. DEFO stays in the dict so a caller can see it. prescale reads
+    only the four sections. expected() pops DEFO and resolves it.
+    """
     p = dict(PITCHER_MIX)
-    bp, wh = p.pop('BALLPARK'), P_WH_GIVEN_BP.get(bats, 0.5115)
+    bp = p.pop('BALLPARK')
+    wh = _sim().ballpark_wheel_share(bats)
     p['WHEELHOUSE'] += bp * wh
     p['IN-PLAY'] += bp * (1 - wh)
     return p
@@ -403,14 +423,20 @@ def lay_out(widths):
     return sections
 
 
-def expected(sections, bats):
+def expected(sections, bats, run=None):
+    """Completed-PA rates. run >= 8 turns a dagger double into a triple.
+
+    DEFENSE uses a neutral Range C, Error 3 fielder and the 1986 parks.
+    A reached-on-error adds an at-bat and not a hit. A dropped foul is
+    removed from the denominator. Section and BALLPARK face 00 stay rare
+    and are already outside this /99 model. A defense park-00 is an out
+    inside the plate appearance.
+    """
     p_sec = section_probs(bats)
+    defo = p_sec.pop('DEFO', 0.0)
     ph = {'vsLHP': 0.28, 'vsRHP': 0.72}
     acc = {k: 0.0 for k in ('BB', 'HBP', 'SO', 'HR', '3B', '2B', '1B', 'AB')}
     for sec, ps in p_sec.items():
-        if sec == 'DEFO':
-            acc['AB'] += ps
-            continue
         for hand, h in ph.items():
             tbl = sections[sec][hand]
             w = {k: ((tbl[k][1]-tbl[k][0]+1)/99) if tbl.get(k) else 0.0
@@ -420,6 +446,21 @@ def expected(sections, bats):
                 acc[k] += f * w[k]
             acc['AB'] += f * (w['SO']+w['HR']+w['3B']+w['2B']+w['1B'])
             acc['AB'] += f * max(0.0, 1 - sum(w.values()))
+    dist = _sim().defense_distribution()
+    side = dist['high'] if run is not None and run >= 8 else dist['low']
+    p_reroll = defo * side.get('REROLL', 0.0)
+    for event, share in side.items():
+        if event == 'REROLL':
+            continue
+        mass = defo * share
+        if event in ('OUT', 'ROE'):
+            acc['AB'] += mass
+        elif event in acc:
+            acc[event] += mass
+            acc['AB'] += mass
+    scale = 1.0 / (1.0 - p_reroll) if p_reroll < 1.0 else 1.0
+    for key in acc:
+        acc[key] *= scale
     h = acc['HR']+acc['3B']+acc['2B']+acc['1B']
     pa = acc['AB']+acc['BB']+acc['HBP']
     return {'avg': h/acc['AB'], 'obp': (h+acc['BB']+acc['HBP'])/pa,
@@ -475,7 +516,7 @@ def err(exp, tgt):
     return total
 
 
-def irreducible_error(build_fn, tgt, bats, restarts=3):
+def irreducible_error(build_fn, tgt, bats, restarts=3, run=None):
     """Best error from independent tuner restarts.
 
     build_fn(seed=) owns its own RNG. The returned error is a probe,
@@ -485,7 +526,7 @@ def irreducible_error(build_fn, tgt, bats, restarts=3):
     best_err, best_secs = float('inf'), None
     for i in range(restarts):
         _widths, secs = build_fn(seed=i)
-        e = err(expected(secs, bats), tgt)
+        e = err(expected(secs, bats, run), tgt)
         if e < best_err:
             best_err, best_secs = e, secs
     return best_err, best_secs
@@ -534,9 +575,9 @@ TUNE_CELLS = [
 ]
 
 
-def tune(widths, tgt, bats, shares=None):
+def tune(widths, tgt, bats, shares=None, run=None):
     W = project_shaped(widths, shares) if shares else dict(widths)
-    best = err(expected(lay_out(W), bats), tgt)
+    best = err(expected(lay_out(W), bats, run), tgt)
     step = 8
     while step >= 1:
         improved = True
@@ -551,7 +592,7 @@ def tune(widths, tgt, bats, shares=None):
                         W2[key] = max(0, W2.get(key, 0) + delta)
                     if shares:
                         W2 = project_shaped(W2, shares)
-                    e = err(expected(lay_out(W2), bats), tgt)
+                    e = err(expected(lay_out(W2), bats, run), tgt)
                     if e < best - 1e-10:
                         best, W, improved = e, W2, True
                         break
@@ -597,7 +638,7 @@ def fit_report(exp, tgt):
     return lines, fit, status
 
 
-def build_one(row, exclude=None):
+def build_one(row, exclude=None, run=None):
     """Build a card from a CSV row. Returns (card, exp, tgt, best_comp).
 
     exclude keeps those profile names out of the comp pool and out of
@@ -619,6 +660,8 @@ def build_one(row, exclude=None):
            'bbp': ubb/pa, 'sop': so/pa, 'hrp': hr/pa, 'hbpp': hbp/pa,
            '1bp': singles/pa, '2bp': doubles/pa, '3bp': triples/pa}
     bats = row['Bats'].strip().upper()[0]
+    if run is None:
+        run = ratings(row)['run']
     comps = select_comps(tgt, exclude=exclude)
     # v0.4: multi-start optimization (10 restarts). Each restart has its
     # own Random so the process-wide RNG is left alone and a rerun with
@@ -654,7 +697,7 @@ def build_one(row, exclude=None):
         starts.append((f'random-{i}', jitter(1000 + i)))
     best_err, best_secs, best_idx, init_err = float('inf'), None, -1, None
     for idx, (label, w0) in enumerate(starts):
-        secs, e = tune(dict(w0), tgt, bats, shares)
+        secs, e = tune(dict(w0), tgt, bats, shares, run)
         if idx == 0:
             init_err = e
         if e < best_err:
@@ -680,27 +723,27 @@ def build_one(row, exclude=None):
                 if w2 == cur_widths:
                     continue
                 s2 = lay_out(w2)
-                e2 = err(expected(s2, bats), tgt)
+                e2 = err(expected(s2, bats, run), tgt)
                 if e2 < best_err - 1e-10:
                     best_err, best_secs, improved = e2, s2, True
                     break
             if improved:
                 break
     sections = repack_sections(best_secs)
-    search_err = err(expected(sections, bats), tgt)
+    search_err = err(expected(sections, bats, run), tgt)
 
     def probe(seed=0):
         rw = jitter(2000 + seed)
         secs, _e = tune(dict(rw), tgt, bats, shares)
         return rw, repack_sections(secs)
 
-    probe_err, probe_secs = irreducible_error(probe, tgt, bats, restarts=3)
+    probe_err, probe_secs = irreducible_error(probe, tgt, bats, restarts=3, run=run)
     if probe_secs is not None and probe_err < search_err:
         sections = probe_secs
         best_err = probe_err
     else:
         best_err = search_err
-    exp = expected(sections, bats)
+    exp = expected(sections, bats, run)
     actual_err = err(exp, tgt)
     # v0.4 diagnostics
     init_label = starts[0][0]
@@ -719,7 +762,7 @@ def build_one(row, exclude=None):
     # v0.5: audit trail
     import datetime
     audit = {
-        'solver_version': '0.6',
+        'solver_version': '0.7',
         'built_utc': datetime.datetime.utcnow().isoformat() + 'Z',
         'input_row': {k: row[k] for k in row},
         'ibb_treatment': f"BB={g('BB'):.0f} IBB={g('IBB'):.0f} "

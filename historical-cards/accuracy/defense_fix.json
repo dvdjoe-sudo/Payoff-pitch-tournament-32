@@ -1,0 +1,534 @@
+{
+ "gate": "1986 held-out accuracy improved versus real lines. The 215 were rebuilt after that check.",
+ "accuracy_1986": {
+  "scoring_before": "SINGLE+error counted as a hit",
+  "scoring_after": "ROE is an at-bat and not a hit",
+  "opponents": "every 1986 pitcher card",
+  "parks": "26 official 1986 charts",
+  "before": {
+   "n": 40,
+   "band_mae": 1.882,
+   "band_bias_engine_minus_official": 0.065,
+   "bands_by_outcome": {
+    "HR": {
+     "mae": 2.897,
+     "bias": -0.241
+    },
+    "3B": {
+     "mae": 0.516,
+     "bias": 0.072
+    },
+    "2B": {
+     "mae": 1.128,
+     "bias": 0.047
+    },
+    "1B": {
+     "mae": 3.638,
+     "bias": 0.188
+    },
+    "BB": {
+     "mae": 2.209,
+     "bias": 0.066
+    },
+    "HBP": {
+     "mae": 0.694,
+     "bias": -0.694
+    },
+    "SO": {
+     "mae": 2.091,
+     "bias": 1.016
+    }
+   },
+   "engine_minus_official": {
+    "avg": {
+     "mae": 0.014,
+     "bias": 0.0014
+    },
+    "obp": {
+     "mae": 0.0155,
+     "bias": -0.0039
+    },
+    "slg": {
+     "mae": 0.0214,
+     "bias": -0.0006
+    },
+    "hr": {
+     "mae": 0.0035,
+     "bias": -0.0003
+    },
+    "bb": {
+     "mae": 0.0133,
+     "bias": 0.0003
+    },
+    "so": {
+     "mae": 0.0138,
+     "bias": 0.0114
+    }
+   },
+   "engine_minus_real": {
+    "avg": {
+     "mae": 0.0121,
+     "bias": 0.0118
+    },
+    "obp": {
+     "mae": 0.011,
+     "bias": 0.0108
+    },
+    "slg": {
+     "mae": 0.0181,
+     "bias": 0.0163
+    },
+    "hr": {
+     "mae": 0.0027,
+     "bias": 0.0005
+    },
+    "bb": {
+     "mae": 0.0037,
+     "bias": 0.0001
+    },
+    "so": {
+     "mae": 0.0055,
+     "bias": 0.0026
+    }
+   },
+   "official_minus_real": {
+    "avg": {
+     "mae": 0.0149,
+     "bias": 0.0104
+    },
+    "obp": {
+     "mae": 0.0189,
+     "bias": 0.0147
+    },
+    "slg": {
+     "mae": 0.0236,
+     "bias": 0.017
+    },
+    "hr": {
+     "mae": 0.0034,
+     "bias": 0.0009
+    },
+    "bb": {
+     "mae": 0.0114,
+     "bias": -0.0001
+    },
+    "so": {
+     "mae": 0.012,
+     "bias": -0.0087
+    }
+   }
+  },
+  "after": {
+   "n": 40,
+   "band_mae": 1.861,
+   "band_bias_engine_minus_official": -0.092,
+   "bands_by_outcome": {
+    "HR": {
+     "mae": 2.991,
+     "bias": -0.359
+    },
+    "3B": {
+     "mae": 0.503,
+     "bias": 0.066
+    },
+    "2B": {
+     "mae": 1.109,
+     "bias": -0.203
+    },
+    "1B": {
+     "mae": 3.559,
+     "bias": -0.547
+    },
+    "BB": {
+     "mae": 2.237,
+     "bias": 0.144
+    },
+    "HBP": {
+     "mae": 0.694,
+     "bias": -0.694
+    },
+    "SO": {
+     "mae": 1.934,
+     "bias": 0.947
+    }
+   },
+   "engine_minus_official": {
+    "avg": {
+     "mae": 0.0165,
+     "bias": -0.0091
+    },
+    "obp": {
+     "mae": 0.02,
+     "bias": -0.0134
+    },
+    "slg": {
+     "mae": 0.0259,
+     "bias": -0.0151
+    },
+    "hr": {
+     "mae": 0.0038,
+     "bias": -0.0006
+    },
+    "bb": {
+     "mae": 0.0133,
+     "bias": 0.0005
+    },
+    "so": {
+     "mae": 0.0136,
+     "bias": 0.011
+    }
+   },
+   "engine_minus_real": {
+    "avg": {
+     "mae": 0.0056,
+     "bias": -0.0014
+    },
+    "obp": {
+     "mae": 0.0054,
+     "bias": -0.0009
+    },
+    "slg": {
+     "mae": 0.0133,
+     "bias": -0.0007
+    },
+    "hr": {
+     "mae": 0.0029,
+     "bias": 0.0002
+    },
+    "bb": {
+     "mae": 0.0037,
+     "bias": 0.0004
+    },
+    "so": {
+     "mae": 0.0056,
+     "bias": 0.0023
+    }
+   },
+   "official_minus_real": {
+    "avg": {
+     "mae": 0.0134,
+     "bias": 0.0077
+    },
+    "obp": {
+     "mae": 0.0176,
+     "bias": 0.0125
+    },
+    "slg": {
+     "mae": 0.0225,
+     "bias": 0.0144
+    },
+    "hr": {
+     "mae": 0.0034,
+     "bias": 0.0009
+    },
+    "bb": {
+     "mae": 0.0114,
+     "bias": -0.0001
+    },
+    "so": {
+     "mae": 0.012,
+     "bias": -0.0087
+    }
+   }
+  }
+ },
+ "window_hitters": {
+  "n": 139,
+  "card_implied_before_defo_as_out": {
+   "avg": {
+    "bias": -0.0034,
+    "mae": 0.0035
+   },
+   "obp": {
+    "bias": -0.0086,
+    "mae": 0.0088
+   },
+   "slg": {
+    "bias": -0.0057,
+    "mae": 0.0061
+   }
+  },
+  "card_implied_after": {
+   "avg": {
+    "bias": -0.0038,
+    "mae": 0.0039
+   },
+   "obp": {
+    "bias": -0.0089,
+    "mae": 0.0091
+   },
+   "slg": {
+    "bias": -0.0071,
+    "mae": 0.0074
+   }
+  },
+  "rulebook_sim_before_old_bands_new_resolution": {
+   "avg": {
+    "bias": -0.0693,
+    "mae": 0.0693
+   },
+   "obp": {
+    "bias": -0.0857,
+    "mae": 0.0857
+   },
+   "slg": {
+    "bias": -0.1366,
+    "mae": 0.1366
+   }
+  },
+  "rulebook_sim_after": {
+   "avg": {
+    "bias": -0.0779,
+    "mae": 0.0779
+   },
+   "obp": {
+    "bias": -0.0932,
+    "mae": 0.0932
+   },
+   "slg": {
+    "bias": -0.1488,
+    "mae": 0.1488
+   }
+  },
+  "sim_environment": "other converted cards as opponents, 26 official 1986 parks, range C error 3, 2500 PA, ROE not a hit"
+ },
+ "rebuild": {
+  "hitters": 139,
+  "pitchers": 76,
+  "failures": 0,
+  "pitcher_table_changes": 0,
+  "fielding_changes": 0,
+  "helton_sections_unchanged": true
+ },
+ "showcase": {
+  "BOS|foxxji01": {
+   "name": "Jimmie Foxx",
+   "run": 10,
+   "real": {
+    "avg": 0.3291,
+    "obp": 0.4385,
+    "slg": 0.6247
+   },
+   "card_implied_before_defo_as_out": {
+    "avg": 0.3291,
+    "obp": 0.4382,
+    "slg": 0.6254,
+    "hrp": 0.0577,
+    "bbp": 0.1619,
+    "sop": 0.1458,
+    "1bp": 0.1554,
+    "2bp": 0.05,
+    "3bp": 0.0125
+   },
+   "card_implied_after": {
+    "avg": 0.3301,
+    "obp": 0.4393,
+    "slg": 0.6259,
+    "2bp": 0.0496,
+    "3bp": 0.0126,
+    "hrp": 0.0576
+   },
+   "rulebook_sim_after": {
+    "avg": 0.2333,
+    "obp": 0.3268,
+    "slg": 0.4196
+   },
+   "rulebook_sim_before_same_resolution": {
+    "avg": 0.2392,
+    "obp": 0.3332,
+    "slg": 0.4309
+   },
+   "card_implied_old_bands_new_model": {
+    "avg": 0.3402,
+    "obp": 0.4475,
+    "slg": 0.6405
+   }
+  },
+  "BOS|willite01": {
+   "name": "Ted Williams",
+   "run": 10,
+   "real": {
+    "avg": 0.3692,
+    "obp": 0.5144,
+    "slg": 0.6935
+   },
+   "card_implied_before_defo_as_out": {
+    "avg": 0.3472,
+    "obp": 0.4822,
+    "slg": 0.6632,
+    "hrp": 0.0612,
+    "bbp": 0.2016,
+    "sop": 0.0644,
+    "1bp": 0.1539,
+    "2bp": 0.0535,
+    "3bp": 0.0068
+   },
+   "card_implied_after": {
+    "avg": 0.3613,
+    "obp": 0.4919,
+    "slg": 0.677,
+    "2bp": 0.0525,
+    "3bp": 0.007,
+    "hrp": 0.0616
+   },
+   "rulebook_sim_after": {
+    "avg": 0.2658,
+    "obp": 0.3736,
+    "slg": 0.458
+   },
+   "rulebook_sim_before_same_resolution": {
+    "avg": 0.2695,
+    "obp": 0.3776,
+    "slg": 0.4681
+   },
+   "card_implied_old_bands_new_model": {
+    "avg": 0.3588,
+    "obp": 0.4914,
+    "slg": 0.6792
+   }
+  },
+  "DET|heilmha01": {
+   "name": "Harry Heilmann",
+   "run": 10,
+   "real": {
+    "avg": 0.3896,
+    "obp": 0.4583,
+    "slg": 0.6036
+   },
+   "card_implied_before_defo_as_out": {
+    "avg": 0.3901,
+    "obp": 0.4584,
+    "slg": 0.6036,
+    "hrp": 0.0283,
+    "bbp": 0.1077,
+    "sop": 0.0481,
+    "1bp": 0.2321,
+    "2bp": 0.0673,
+    "3bp": 0.0187
+   },
+   "card_implied_after": {
+    "avg": 0.3903,
+    "obp": 0.4585,
+    "slg": 0.6078,
+    "2bp": 0.0694,
+    "3bp": 0.0189,
+    "hrp": 0.0286
+   },
+   "rulebook_sim_after": {
+    "avg": 0.3037,
+    "obp": 0.3664,
+    "slg": 0.4738
+   },
+   "rulebook_sim_before_same_resolution": {
+    "avg": 0.308,
+    "obp": 0.3692,
+    "slg": 0.4761
+   },
+   "card_implied_old_bands_new_model": {
+    "avg": 0.4004,
+    "obp": 0.4676,
+    "slg": 0.6171
+   }
+  },
+  "SF|bondsba01": {
+   "name": "Barry Bonds",
+   "run": 10,
+   "real": {
+    "avg": 0.3457,
+    "obp": 0.5371,
+    "slg": 0.7762
+   },
+   "card_implied_before_defo_as_out": {
+    "avg": 0.3071,
+    "obp": 0.4325,
+    "slg": 0.675,
+    "hrp": 0.0809,
+    "bbp": 0.1685,
+    "sop": 0.1036,
+    "1bp": 0.1167,
+    "2bp": 0.0493,
+    "3bp": 0.0046
+   },
+   "card_implied_after": {
+    "avg": 0.3046,
+    "obp": 0.4332,
+    "slg": 0.6717,
+    "2bp": 0.0489,
+    "3bp": 0.0031,
+    "hrp": 0.0814
+   },
+   "rulebook_sim_after": {
+    "avg": 0.2327,
+    "obp": 0.3392,
+    "slg": 0.4928
+   },
+   "rulebook_sim_before_same_resolution": {
+    "avg": 0.2356,
+    "obp": 0.342,
+    "slg": 0.5023
+   },
+   "card_implied_old_bands_new_model": {
+    "avg": 0.3185,
+    "obp": 0.4418,
+    "slg": 0.6909
+   }
+  },
+  "STL|pujolal01": {
+   "name": "Albert Pujols",
+   "run": 9,
+   "real": {
+    "avg": 0.3409,
+    "obp": 0.4376,
+    "slg": 0.6612
+   },
+   "card_implied_before_defo_as_out": {
+    "avg": 0.3278,
+    "obp": 0.4046,
+    "slg": 0.6353,
+    "hrp": 0.0674,
+    "bbp": 0.1038,
+    "sop": 0.0864,
+    "1bp": 0.1543,
+    "2bp": 0.0672,
+    "3bp": 0.0015
+   },
+   "card_implied_after": {
+    "avg": 0.3297,
+    "obp": 0.4063,
+    "slg": 0.6395,
+    "2bp": 0.0679,
+    "3bp": 0.0014,
+    "hrp": 0.0679
+   },
+   "rulebook_sim_after": {
+    "avg": 0.2379,
+    "obp": 0.312,
+    "slg": 0.4236
+   },
+   "rulebook_sim_before_same_resolution": {
+    "avg": 0.2385,
+    "obp": 0.3128,
+    "slg": 0.422
+   },
+   "card_implied_old_bands_new_model": {
+    "avg": 0.3382,
+    "obp": 0.4138,
+    "slg": 0.6498
+   }
+  }
+ },
+ "uncertain": [
+  "League-average defense (Range C, Error 3) is an assumption. The rulebook does not define it.",
+  "The 26 parks are drawn uniformly. The book does not define a league-average park.",
+  "TOUGH-OUT is not shifted. Face 00 is not shifted. Page 11 is not combined with page 39 and is not emitted on these cards.",
+  "A reached-on-error is an at-bat and not a hit. The two logged tournament DEFENSE plays are an out and a rare-play catcher's interference, so they do not show a SINGLE+error being scored as a hit.",
+  "Dropped fouls are renormalized out of the completed plate appearance. A defense park-percentile 00 is an out inside the plate appearance.",
+  "Card-implied rates use the frozen pitcher mix, not a sampled staff. The 215 rulebook sim uses the converted tournament pitchers, which is a different and lower-offense environment than the 1986 accuracy opponents.",
+  "Switch-hitter ballpark share uses the solver hand split 0.28/0.72.",
+  "Comp selection (8 qualified 1986 cards) is a judgment. IN-PLAY is the fallback when every comp printed none of an outcome.",
+  "Williams wheel triples stay 8 faces versus left-handers. The rate matches his window. The width is what that rare section requires.",
+  "Barry Bonds wheel is home runs on faces 1-99 both hands. There is no room left for a double in WHEELHOUSE.",
+  "Intentional walks are excluded from the walk target, so card-implied OBP sits under the real OBP that counts them.",
+  "1986 accuracy plate appearances are AB+BB. Batters faced are IP*3+H+BB."
+ ]
+}

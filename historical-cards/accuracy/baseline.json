@@ -272,70 +272,70 @@
  "hitters": {
   "n": 40,
   "bands": {
-   "mae": 3.819,
-   "bias_engine_minus_official": -0.391,
+   "mae": 1.861,
+   "bias_engine_minus_official": -0.092,
    "by_outcome": {
     "HR": {
-     "mae": 3.328,
-     "bias": -1.278
+     "mae": 2.991,
+     "bias": -0.359
     },
     "3B": {
-     "mae": 1.497,
-     "bias": 0.728
+     "mae": 0.503,
+     "bias": 0.066
     },
     "2B": {
-     "mae": 3.997,
-     "bias": -0.566
+     "mae": 1.109,
+     "bias": -0.203
     },
     "1B": {
-     "mae": 9.662,
-     "bias": 0.131
+     "mae": 3.559,
+     "bias": -0.547
     },
     "BB": {
-     "mae": 5.166,
-     "bias": -2.216
+     "mae": 2.237,
+     "bias": 0.144
     },
     "HBP": {
      "mae": 0.694,
      "bias": -0.694
     },
     "SO": {
-     "mae": 2.391,
-     "bias": 1.159
+     "mae": 1.934,
+     "bias": 0.947
     }
    }
   },
-  "out_table_label_rate": 0.521,
+  "out_table_label_rate": 0.515,
   "sim_gap_vs_official_card": {
-   "avg": 0.0133,
-   "obp": 0.0175,
-   "slg": 0.0236,
-   "hr": 0.004,
-   "bb": 0.0137,
-   "so": 0.0144
+   "avg": 0.0165,
+   "obp": 0.02,
+   "slg": 0.0259,
+   "hr": 0.0038,
+   "bb": 0.0133,
+   "so": 0.0136
   },
   "players": [
    {
     "name": "Rob Deer",
     "role": "slugger",
     "pa": 538,
-    "out_agreement": 0.263,
-    "width_mae": 4.89,
+    "out_agreement": 0.312,
+    "width_mae": 1.95,
     "sim_official": {
-     "avg": 0.244,
-     "obp": 0.36,
-     "slg": 0.521,
+     "avg": 0.241,
+     "obp": 0.358,
+     "slg": 0.518,
      "hr": 0.064,
      "bb": 0.147,
      "so": 0.304
     },
     "sim_engine": {
-     "avg": 0.253,
-     "obp": 0.347,
-     "slg": 0.542,
-     "hr": 0.069,
-     "bb": 0.126,
-     "so": 0.325
+     "avg": 0.241,
+     "obp": 0.34,
+     "slg": 0.54,
+     "hr": 0.072,
+     "bb": 0.13,
+     "so": 0.322
     },
     "real": {
      "avg": 0.232,
@@ -351,22 +351,22 @@
     "name": "Jesse Barfield",
     "role": "slugger",
     "pa": 658,
-    "out_agreement": 0.689,
-    "width_mae": 3.27,
+    "out_agreement": 0.703,
+    "width_mae": 1.38,
     "sim_official": {
-     "avg": 0.295,
-     "obp": 0.383,
-     "slg": 0.529,
+     "avg": 0.292,
+     "obp": 0.38,
+     "slg": 0.527,
      "hr": 0.049,
      "bb": 0.114,
      "so": 0.194
     },
     "sim_engine": {
-     "avg": 0.296,
-     "obp": 0.366,
-     "slg": 0.564,
+     "avg": 0.278,
+     "obp": 0.358,
+     "slg": 0.544,
      "hr": 0.06,
-     "bb": 0.1,
+     "bb": 0.112,
      "so": 0.23
     },
     "real": {
@@ -383,22 +383,22 @@
     "name": "Lance Parrish",
     "role": "slugger",
     "pa": 365,
-    "out_agreement": 0.539,
-    "width_mae": 2.89,
+    "out_agreement": 0.605,
+    "width_mae": 2.46,
     "sim_official": {
-     "avg": 0.258,
-     "obp": 0.343,
-     "slg": 0.482,
+     "avg": 0.255,
+     "obp": 0.34,
+     "slg": 0.479,
      "hr": 0.058,
      "bb": 0.1,
      "so": 0.214
     },
     "sim_engine": {
-     "avg": 0.256,
+     "avg": 0.255,
      "obp": 0.332,
-     "slg": 0.464,
-     "hr": 0.054,
-     "bb": 0.102,
+     "slg": 0.465,
+     "hr": 0.053,
+     "bb": 0.103,
      "so": 0.223
     },
     "real": {
@@ -416,22 +416,22 @@
     "role": "slugger",
     "pa": 594,
     "out_agreement": 0.838,
-    "width_mae": 4.98,
+    "width_mae": 1.91,
     "sim_official": {
-     "avg": 0.234,
-     "obp": 0.278,
-     "slg": 0.465,
+     "avg": 0.231,
+     "obp": 0.275,
+     "slg": 0.462,
      "hr": 0.062,
      "bb": 0.052,
      "so": 0.203
     },
     "sim_engine": {
-     "avg": 0.213,
-     "obp": 0.25,
-     "slg": 0.405,
-     "hr": 0.049,
-     "bb": 0.047,
-     "so": 0.21
+     "avg": 0.198,
+     "obp": 0.242,
+     "slg": 0.391,
+     "hr": 0.05,
+     "bb": 0.055,
+     "so": 0.208
     },
     "real": {
      "avg": 0.21,
@@ -447,23 +447,23 @@
     "name": "Mike Schmidt",
     "role": "slugger",
     "pa": 641,
-    "out_agreement": 0.235,
-    "width_mae": 5.43,
+    "out_agreement": 0.284,
+    "width_mae": 2.55,
     "sim_official": {
-     "avg": 0.302,
-     "obp": 0.382,
-     "slg": 0.585,
+     "avg": 0.299,
+     "obp": 0.379,
+     "slg": 0.582,
      "hr": 0.067,
      "bb": 0.105,
      "so": 0.124
     },
     "sim_engine": {
-     "avg": 0.304,
-     "obp": 0.392,
-     "slg": 0.57,
-     "hr": 0.059,
-     "bb": 0.126,
-     "so": 0.141
+     "avg": 0.286,
+     "obp": 0.387,
+     "slg": 0.551,
+     "hr": 0.061,
+     "bb": 0.142,
+     "so": 0.137
     },
     "real": {
      "avg": 0.29,
@@ -480,21 +480,21 @@
     "role": "slugger",
     "pa": 483,
     "out_agreement": 0.36,
-    "width_mae": 3.82,
+    "width_mae": 1.73,
     "sim_official": {
-     "avg": 0.284,
-     "obp": 0.401,
-     "slg": 0.556,
+     "avg": 0.283,
+     "obp": 0.4,
+     "slg": 0.555,
      "hr": 0.06,
      "bb": 0.16,
      "so": 0.205
     },
     "sim_engine": {
-     "avg": 0.297,
-     "obp": 0.394,
-     "slg": 0.544,
-     "hr": 0.057,
-     "bb": 0.138,
+     "avg": 0.287,
+     "obp": 0.388,
+     "slg": 0.547,
+     "hr": 0.06,
+     "bb": 0.141,
      "so": 0.197
     },
     "real": {
@@ -512,22 +512,22 @@
     "role": "slugger",
     "pa": 432,
     "out_agreement": 0.458,
-    "width_mae": 4.11,
+    "width_mae": 1.96,
     "sim_official": {
-     "avg": 0.291,
-     "obp": 0.323,
-     "slg": 0.548,
+     "avg": 0.289,
+     "obp": 0.322,
+     "slg": 0.546,
      "hr": 0.065,
      "bb": 0.045,
      "so": 0.263
     },
     "sim_engine": {
-     "avg": 0.287,
-     "obp": 0.311,
+     "avg": 0.277,
+     "obp": 0.304,
      "slg": 0.528,
-     "hr": 0.059,
-     "bb": 0.035,
-     "so": 0.295
+     "hr": 0.064,
+     "bb": 0.037,
+     "so": 0.296
     },
     "real": {
      "avg": 0.272,
@@ -543,23 +543,23 @@
     "name": "Ken Phelps",
     "role": "slugger",
     "pa": 432,
-    "out_agreement": 0.412,
-    "width_mae": 3.04,
+    "out_agreement": 0.438,
+    "width_mae": 2.91,
     "sim_official": {
-     "avg": 0.24,
-     "obp": 0.392,
-     "slg": 0.514,
+     "avg": 0.238,
+     "obp": 0.39,
+     "slg": 0.512,
      "hr": 0.049,
      "bb": 0.19,
      "so": 0.205
     },
     "sim_engine": {
-     "avg": 0.255,
-     "obp": 0.406,
-     "slg": 0.513,
-     "hr": 0.049,
-     "bb": 0.203,
-     "so": 0.228
+     "avg": 0.244,
+     "obp": 0.404,
+     "slg": 0.508,
+     "hr": 0.053,
+     "bb": 0.211,
+     "so": 0.226
     },
     "real": {
      "avg": 0.247,
@@ -575,23 +575,23 @@
     "name": "Kirk Gibson",
     "role": "slugger",
     "pa": 509,
-    "out_agreement": 0.333,
-    "width_mae": 2.86,
+    "out_agreement": 0.36,
+    "width_mae": 2.38,
     "sim_official": {
-     "avg": 0.288,
-     "obp": 0.39,
-     "slg": 0.506,
+     "avg": 0.286,
+     "obp": 0.388,
+     "slg": 0.504,
      "hr": 0.052,
      "bb": 0.13,
      "so": 0.193
     },
     "sim_engine": {
-     "avg": 0.27,
-     "obp": 0.361,
-     "slg": 0.473,
-     "hr": 0.049,
-     "bb": 0.125,
-     "so": 0.211
+     "avg": 0.264,
+     "obp": 0.365,
+     "slg": 0.475,
+     "hr": 0.051,
+     "bb": 0.137,
+     "so": 0.209
     },
     "real": {
      "avg": 0.268,
@@ -607,23 +607,23 @@
     "name": "Larry Parrish",
     "role": "slugger",
     "pa": 516,
-    "out_agreement": 0.588,
-    "width_mae": 4.89,
+    "out_agreement": 0.55,
+    "width_mae": 2.14,
     "sim_official": {
-     "avg": 0.294,
-     "obp": 0.362,
-     "slg": 0.54,
+     "avg": 0.291,
+     "obp": 0.359,
+     "slg": 0.537,
      "hr": 0.057,
      "bb": 0.091,
      "so": 0.204
     },
     "sim_engine": {
-     "avg": 0.297,
-     "obp": 0.363,
-     "slg": 0.551,
-     "hr": 0.059,
-     "bb": 0.094,
-     "so": 0.223
+     "avg": 0.283,
+     "obp": 0.353,
+     "slg": 0.541,
+     "hr": 0.06,
+     "bb": 0.097,
+     "so": 0.224
     },
     "real": {
      "avg": 0.276,
@@ -639,23 +639,23 @@
     "name": "Ron Roenicke",
     "role": "walker",
     "pa": 336,
-    "out_agreement": 0.143,
-    "width_mae": 3.54,
+    "out_agreement": 0.234,
+    "width_mae": 1.95,
     "sim_official": {
-     "avg": 0.228,
-     "obp": 0.37,
-     "slg": 0.329,
+     "avg": 0.223,
+     "obp": 0.367,
+     "slg": 0.325,
      "hr": 0.014,
      "bb": 0.184,
      "so": 0.147
     },
     "sim_engine": {
-     "avg": 0.254,
-     "obp": 0.383,
-     "slg": 0.365,
+     "avg": 0.248,
+     "obp": 0.382,
+     "slg": 0.356,
      "hr": 0.015,
-     "bb": 0.172,
-     "so": 0.164
+     "bb": 0.178,
+     "so": 0.163
     },
     "real": {
      "avg": 0.247,
@@ -671,23 +671,23 @@
     "name": "Reggie Jackson",
     "role": "walker",
     "pa": 511,
-    "out_agreement": 0.256,
-    "width_mae": 3.52,
+    "out_agreement": 0.346,
+    "width_mae": 2.3,
     "sim_official": {
-     "avg": 0.246,
-     "obp": 0.374,
-     "slg": 0.396,
+     "avg": 0.243,
+     "obp": 0.372,
+     "slg": 0.393,
      "hr": 0.03,
      "bb": 0.161,
      "so": 0.223
     },
     "sim_engine": {
-     "avg": 0.253,
-     "obp": 0.381,
-     "slg": 0.412,
-     "hr": 0.034,
-     "bb": 0.171,
-     "so": 0.234
+     "avg": 0.239,
+     "obp": 0.373,
+     "slg": 0.399,
+     "hr": 0.035,
+     "bb": 0.177,
+     "so": 0.235
     },
     "real": {
      "avg": 0.241,
@@ -703,23 +703,23 @@
     "name": "Willie Randolph",
     "role": "walker",
     "pa": 586,
-    "out_agreement": 0.287,
-    "width_mae": 3.54,
+    "out_agreement": 0.188,
+    "width_mae": 1.7,
     "sim_official": {
-     "avg": 0.259,
-     "obp": 0.4,
-     "slg": 0.326,
+     "avg": 0.256,
+     "obp": 0.398,
+     "slg": 0.323,
      "hr": 0.007,
      "bb": 0.184,
      "so": 0.078
     },
     "sim_engine": {
-     "avg": 0.299,
-     "obp": 0.396,
-     "slg": 0.375,
+     "avg": 0.288,
+     "obp": 0.391,
+     "slg": 0.358,
      "hr": 0.009,
-     "bb": 0.138,
-     "so": 0.086
+     "bb": 0.144,
+     "so": 0.085
     },
     "real": {
      "avg": 0.276,
@@ -735,23 +735,23 @@
     "name": "Dwight Evans",
     "role": "walker",
     "pa": 626,
-    "out_agreement": 0.256,
-    "width_mae": 4.79,
+    "out_agreement": 0.321,
+    "width_mae": 1.12,
     "sim_official": {
-     "avg": 0.266,
-     "obp": 0.391,
-     "slg": 0.489,
+     "avg": 0.262,
+     "obp": 0.388,
+     "slg": 0.485,
      "hr": 0.042,
      "bb": 0.163,
      "so": 0.176
     },
     "sim_engine": {
-     "avg": 0.267,
-     "obp": 0.374,
-     "slg": 0.481,
-     "hr": 0.039,
-     "bb": 0.146,
-     "so": 0.204
+     "avg": 0.256,
+     "obp": 0.367,
+     "slg": 0.461,
+     "hr": 0.04,
+     "bb": 0.15,
+     "so": 0.201
     },
     "real": {
      "avg": 0.259,
@@ -767,23 +767,23 @@
     "name": "George Brett",
     "role": "walker",
     "pa": 521,
-    "out_agreement": 0.157,
-    "width_mae": 2.89,
+    "out_agreement": 0.169,
+    "width_mae": 1.7,
     "sim_official": {
-     "avg": 0.284,
-     "obp": 0.384,
-     "slg": 0.473,
+     "avg": 0.281,
+     "obp": 0.382,
+     "slg": 0.47,
      "hr": 0.034,
      "bb": 0.134,
      "so": 0.086
     },
     "sim_engine": {
-     "avg": 0.295,
-     "obp": 0.397,
-     "slg": 0.461,
-     "hr": 0.024,
-     "bb": 0.144,
-     "so": 0.092
+     "avg": 0.288,
+     "obp": 0.4,
+     "slg": 0.467,
+     "hr": 0.028,
+     "bb": 0.157,
+     "so": 0.093
     },
     "real": {
      "avg": 0.29,
@@ -799,23 +799,23 @@
     "name": "Wade Boggs",
     "role": "walker",
     "pa": 685,
-    "out_agreement": 0.274,
-    "width_mae": 3.93,
+    "out_agreement": 0.179,
+    "width_mae": 1.86,
     "sim_official": {
-     "avg": 0.376,
-     "obp": 0.46,
-     "slg": 0.504,
+     "avg": 0.374,
+     "obp": 0.458,
+     "slg": 0.502,
      "hr": 0.011,
      "bb": 0.135,
      "so": 0.065
     },
     "sim_engine": {
-     "avg": 0.356,
-     "obp": 0.451,
-     "slg": 0.489,
+     "avg": 0.344,
+     "obp": 0.45,
+     "slg": 0.486,
      "hr": 0.011,
-     "bb": 0.148,
-     "so": 0.066
+     "bb": 0.161,
+     "so": 0.063
     },
     "real": {
      "avg": 0.357,
@@ -832,22 +832,22 @@
     "role": "walker",
     "pa": 598,
     "out_agreement": 0.325,
-    "width_mae": 3.91,
+    "width_mae": 1.91,
     "sim_official": {
-     "avg": 0.253,
-     "obp": 0.378,
-     "slg": 0.477,
+     "avg": 0.251,
+     "obp": 0.377,
+     "slg": 0.475,
      "hr": 0.054,
      "bb": 0.166,
      "so": 0.178
     },
     "sim_engine": {
-     "avg": 0.253,
-     "obp": 0.366,
-     "slg": 0.458,
+     "avg": 0.244,
+     "obp": 0.364,
+     "slg": 0.445,
      "hr": 0.05,
-     "bb": 0.151,
-     "so": 0.187
+     "bb": 0.158,
+     "so": 0.186
     },
     "real": {
      "avg": 0.241,
@@ -863,23 +863,23 @@
     "name": "Ozzie Virgil",
     "role": "walker",
     "pa": 422,
-    "out_agreement": 0.914,
-    "width_mae": 3.55,
+    "out_agreement": 1.0,
+    "width_mae": 2.43,
     "sim_official": {
-     "avg": 0.241,
-     "obp": 0.37,
-     "slg": 0.417,
+     "avg": 0.237,
+     "obp": 0.367,
+     "slg": 0.413,
      "hr": 0.041,
      "bb": 0.159,
      "so": 0.169
     },
     "sim_engine": {
-     "avg": 0.233,
-     "obp": 0.342,
-     "slg": 0.373,
-     "hr": 0.034,
-     "bb": 0.141,
-     "so": 0.174
+     "avg": 0.217,
+     "obp": 0.334,
+     "slg": 0.357,
+     "hr": 0.035,
+     "bb": 0.149,
+     "so": 0.172
     },
     "real": {
      "avg": 0.223,
@@ -895,23 +895,23 @@
     "name": "Tim Raines",
     "role": "contact",
     "pa": 658,
-    "out_agreement": 0.548,
-    "width_mae": 5.27,
+    "out_agreement": 0.452,
+    "width_mae": 1.02,
     "sim_official": {
-     "avg": 0.346,
-     "obp": 0.42,
-     "slg": 0.495,
+     "avg": 0.344,
+     "obp": 0.418,
+     "slg": 0.493,
      "hr": 0.015,
      "bb": 0.11,
      "so": 0.09
     },
     "sim_engine": {
-     "avg": 0.348,
-     "obp": 0.425,
-     "slg": 0.509,
+     "avg": 0.336,
+     "obp": 0.417,
+     "slg": 0.48,
      "hr": 0.015,
-     "bb": 0.119,
-     "so": 0.09
+     "bb": 0.123,
+     "so": 0.087
     },
     "real": {
      "avg": 0.334,
@@ -927,22 +927,22 @@
     "name": "Steve Sax",
     "role": "contact",
     "pa": 692,
-    "out_agreement": 0.776,
-    "width_mae": 3.23,
+    "out_agreement": 0.645,
+    "width_mae": 1.71,
     "sim_official": {
-     "avg": 0.368,
-     "obp": 0.433,
-     "slg": 0.487,
+     "avg": 0.365,
+     "obp": 0.431,
+     "slg": 0.484,
      "hr": 0.01,
      "bb": 0.099,
      "so": 0.091
     },
     "sim_engine": {
-     "avg": 0.328,
-     "obp": 0.382,
-     "slg": 0.434,
-     "hr": 0.008,
-     "bb": 0.08,
+     "avg": 0.321,
+     "obp": 0.378,
+     "slg": 0.426,
+     "hr": 0.01,
+     "bb": 0.084,
      "so": 0.092
     },
     "real": {
@@ -959,23 +959,23 @@
     "name": "Tony Gwynn",
     "role": "contact",
     "pa": 694,
-    "out_agreement": 0.624,
-    "width_mae": 3.32,
+    "out_agreement": 0.506,
+    "width_mae": 1.16,
     "sim_official": {
-     "avg": 0.325,
-     "obp": 0.374,
-     "slg": 0.466,
+     "avg": 0.322,
+     "obp": 0.371,
+     "slg": 0.464,
      "hr": 0.023,
      "bb": 0.067,
      "so": 0.059
     },
     "sim_engine": {
-     "avg": 0.343,
-     "obp": 0.396,
-     "slg": 0.483,
-     "hr": 0.02,
-     "bb": 0.081,
-     "so": 0.053
+     "avg": 0.347,
+     "obp": 0.404,
+     "slg": 0.504,
+     "hr": 0.021,
+     "bb": 0.087,
+     "so": 0.051
     },
     "real": {
      "avg": 0.329,
@@ -991,23 +991,23 @@
     "name": "Pat Tabler",
     "role": "contact",
     "pa": 502,
-    "out_agreement": 0.415,
-    "width_mae": 3.39,
+    "out_agreement": 0.385,
+    "width_mae": 1.18,
     "sim_official": {
-     "avg": 0.343,
-     "obp": 0.384,
-     "slg": 0.465,
+     "avg": 0.34,
+     "obp": 0.381,
+     "slg": 0.462,
      "hr": 0.013,
      "bb": 0.056,
      "so": 0.132
     },
     "sim_engine": {
-     "avg": 0.331,
-     "obp": 0.371,
-     "slg": 0.443,
+     "avg": 0.327,
+     "obp": 0.367,
+     "slg": 0.439,
      "hr": 0.011,
-     "bb": 0.06,
-     "so": 0.154
+     "bb": 0.059,
+     "so": 0.153
     },
     "real": {
      "avg": 0.326,
@@ -1023,23 +1023,23 @@
     "name": "Ron Hassey (Combined Totals)",
     "role": "contact",
     "pa": 387,
-    "out_agreement": 0.524,
-    "width_mae": 4.73,
+    "out_agreement": 0.427,
+    "width_mae": 2.2,
     "sim_official": {
-     "avg": 0.33,
-     "obp": 0.407,
-     "slg": 0.479,
+     "avg": 0.328,
+     "obp": 0.405,
+     "slg": 0.476,
      "hr": 0.018,
      "bb": 0.106,
      "so": 0.078
     },
     "sim_engine": {
-     "avg": 0.339,
-     "obp": 0.419,
-     "slg": 0.515,
+     "avg": 0.33,
+     "obp": 0.415,
+     "slg": 0.487,
      "hr": 0.025,
-     "bb": 0.121,
-     "so": 0.08
+     "bb": 0.127,
+     "so": 0.076
     },
     "real": {
      "avg": 0.323,
@@ -1055,23 +1055,23 @@
     "name": "Wally Backman",
     "role": "contact",
     "pa": 423,
-    "out_agreement": 0.843,
-    "width_mae": 4.79,
+    "out_agreement": 0.651,
+    "width_mae": 2.5,
     "sim_official": {
-     "avg": 0.3,
-     "obp": 0.37,
-     "slg": 0.374,
+     "avg": 0.298,
+     "obp": 0.368,
+     "slg": 0.373,
      "hr": 0.003,
      "bb": 0.101,
      "so": 0.106
     },
     "sim_engine": {
-     "avg": 0.327,
-     "obp": 0.378,
-     "slg": 0.399,
+     "avg": 0.316,
+     "obp": 0.372,
+     "slg": 0.373,
      "hr": 0.002,
-     "bb": 0.075,
-     "so": 0.076
+     "bb": 0.083,
+     "so": 0.08
     },
     "real": {
      "avg": 0.32,
@@ -1087,23 +1087,23 @@
     "name": "Chris Brown",
     "role": "contact",
     "pa": 449,
-    "out_agreement": 1.0,
-    "width_mae": 3.59,
+    "out_agreement": 0.905,
+    "width_mae": 1.84,
     "sim_official": {
-     "avg": 0.318,
-     "obp": 0.383,
-     "slg": 0.437,
+     "avg": 0.315,
+     "obp": 0.38,
+     "slg": 0.434,
      "hr": 0.018,
      "bb": 0.075,
      "so": 0.09
     },
     "sim_engine": {
-     "avg": 0.325,
-     "obp": 0.372,
-     "slg": 0.427,
+     "avg": 0.32,
+     "obp": 0.369,
+     "slg": 0.42,
      "hr": 0.014,
-     "bb": 0.069,
-     "so": 0.1
+     "bb": 0.071,
+     "so": 0.098
     },
     "real": {
      "avg": 0.317,
@@ -1120,22 +1120,22 @@
     "role": "contact",
     "pa": 411,
     "out_agreement": 0.435,
-    "width_mae": 5.16,
+    "width_mae": 1.89,
     "sim_official": {
-     "avg": 0.318,
-     "obp": 0.376,
-     "slg": 0.42,
+     "avg": 0.317,
+     "obp": 0.374,
+     "slg": 0.418,
      "hr": 0.013,
      "bb": 0.072,
      "so": 0.168
     },
     "sim_engine": {
-     "avg": 0.327,
-     "obp": 0.377,
-     "slg": 0.421,
-     "hr": 0.016,
-     "bb": 0.074,
-     "so": 0.18
+     "avg": 0.314,
+     "obp": 0.367,
+     "slg": 0.407,
+     "hr": 0.017,
+     "bb": 0.077,
+     "so": 0.178
     },
     "real": {
      "avg": 0.316,
@@ -1151,23 +1151,23 @@
     "name": "Pete Incaviglia",
     "role": "whiff",
     "pa": 595,
-    "out_agreement": 0.59,
-    "width_mae": 4.54,
+    "out_agreement": 0.679,
+    "width_mae": 1.95,
     "sim_official": {
-     "avg": 0.266,
-     "obp": 0.348,
-     "slg": 0.49,
+     "avg": 0.262,
+     "obp": 0.346,
+     "slg": 0.487,
      "hr": 0.051,
      "bb": 0.107,
      "so": 0.278
     },
     "sim_engine": {
-     "avg": 0.255,
-     "obp": 0.318,
-     "slg": 0.471,
-     "hr": 0.051,
-     "bb": 0.084,
-     "so": 0.318
+     "avg": 0.239,
+     "obp": 0.304,
+     "slg": 0.466,
+     "hr": 0.054,
+     "bb": 0.085,
+     "so": 0.313
     },
     "real": {
      "avg": 0.25,
@@ -1184,22 +1184,22 @@
     "role": "whiff",
     "pa": 340,
     "out_agreement": 0.227,
-    "width_mae": 3.0,
+    "width_mae": 1.66,
     "sim_official": {
-     "avg": 0.267,
-     "obp": 0.332,
-     "slg": 0.488,
+     "avg": 0.264,
+     "obp": 0.33,
+     "slg": 0.485,
      "hr": 0.043,
      "bb": 0.08,
      "so": 0.296
     },
     "sim_engine": {
-     "avg": 0.248,
-     "obp": 0.302,
-     "slg": 0.449,
-     "hr": 0.033,
-     "bb": 0.071,
-     "so": 0.313
+     "avg": 0.236,
+     "obp": 0.294,
+     "slg": 0.443,
+     "hr": 0.036,
+     "bb": 0.076,
+     "so": 0.314
     },
     "real": {
      "avg": 0.241,
@@ -1215,23 +1215,23 @@
     "name": "Gorman Thomas (Combined Totals)",
     "role": "whiff",
     "pa": 369,
-    "out_agreement": 0.761,
-    "width_mae": 2.93,
+    "out_agreement": 0.818,
+    "width_mae": 1.27,
     "sim_official": {
-     "avg": 0.202,
-     "obp": 0.328,
-     "slg": 0.386,
+     "avg": 0.197,
+     "obp": 0.324,
+     "slg": 0.381,
      "hr": 0.044,
      "bb": 0.156,
      "so": 0.272
     },
     "sim_engine": {
-     "avg": 0.197,
-     "obp": 0.305,
-     "slg": 0.373,
+     "avg": 0.177,
+     "obp": 0.296,
+     "slg": 0.345,
      "hr": 0.04,
-     "bb": 0.135,
-     "so": 0.285
+     "bb": 0.145,
+     "so": 0.287
     },
     "real": {
      "avg": 0.187,
@@ -1248,21 +1248,21 @@
     "role": "whiff",
     "pa": 572,
     "out_agreement": 0.73,
-    "width_mae": 3.05,
+    "width_mae": 1.48,
     "sim_official": {
-     "avg": 0.308,
+     "avg": 0.307,
      "obp": 0.389,
-     "slg": 0.543,
+     "slg": 0.542,
      "hr": 0.048,
      "bb": 0.117,
      "so": 0.246
     },
     "sim_engine": {
-     "avg": 0.278,
-     "obp": 0.346,
-     "slg": 0.486,
+     "avg": 0.266,
+     "obp": 0.344,
+     "slg": 0.479,
      "hr": 0.042,
-     "bb": 0.095,
+     "bb": 0.106,
      "so": 0.271
     },
     "real": {
@@ -1279,23 +1279,23 @@
     "name": "Ron Kittle (Combined Totals)",
     "role": "whiff",
     "pa": 410,
-    "out_agreement": 0.851,
-    "width_mae": 2.88,
+    "out_agreement": 0.816,
+    "width_mae": 2.14,
     "sim_official": {
-     "avg": 0.24,
-     "obp": 0.311,
-     "slg": 0.459,
+     "avg": 0.238,
+     "obp": 0.309,
+     "slg": 0.456,
      "hr": 0.056,
      "bb": 0.085,
      "so": 0.233
     },
     "sim_engine": {
-     "avg": 0.227,
-     "obp": 0.287,
-     "slg": 0.432,
-     "hr": 0.052,
-     "bb": 0.079,
-     "so": 0.265
+     "avg": 0.21,
+     "obp": 0.278,
+     "slg": 0.421,
+     "hr": 0.054,
+     "bb": 0.086,
+     "so": 0.264
     },
     "real": {
      "avg": 0.218,
@@ -1312,22 +1312,22 @@
     "role": "whiff",
     "pa": 648,
     "out_agreement": 0.389,
-    "width_mae": 2.8,
+    "width_mae": 1.3,
     "sim_official": {
-     "avg": 0.284,
-     "obp": 0.327,
-     "slg": 0.485,
+     "avg": 0.282,
+     "obp": 0.326,
+     "slg": 0.483,
      "hr": 0.038,
      "bb": 0.055,
      "so": 0.251
     },
     "sim_engine": {
-     "avg": 0.267,
-     "obp": 0.307,
-     "slg": 0.453,
-     "hr": 0.037,
-     "bb": 0.054,
-     "so": 0.255
+     "avg": 0.258,
+     "obp": 0.297,
+     "slg": 0.441,
+     "hr": 0.035,
+     "bb": 0.053,
+     "so": 0.253
     },
     "real": {
      "avg": 0.265,
@@ -1343,22 +1343,22 @@
     "name": "Jose Canseco",
     "role": "whiff",
     "pa": 665,
-    "out_agreement": 0.637,
-    "width_mae": 2.52,
+    "out_agreement": 0.625,
+    "width_mae": 1.84,
     "sim_official": {
-     "avg": 0.253,
-     "obp": 0.335,
-     "slg": 0.461,
+     "avg": 0.252,
+     "obp": 0.334,
+     "slg": 0.46,
      "hr": 0.045,
      "bb": 0.098,
      "so": 0.236
     },
     "sim_engine": {
      "avg": 0.243,
-     "obp": 0.316,
-     "slg": 0.472,
-     "hr": 0.052,
-     "bb": 0.096,
+     "obp": 0.317,
+     "slg": 0.473,
+     "hr": 0.051,
+     "bb": 0.097,
      "so": 0.264
     },
     "real": {
@@ -1376,21 +1376,21 @@
     "role": "whiff",
     "pa": 555,
     "out_agreement": 0.8,
-    "width_mae": 5.54,
+    "width_mae": 2.39,
     "sim_official": {
-     "avg": 0.252,
-     "obp": 0.324,
-     "slg": 0.473,
+     "avg": 0.247,
+     "obp": 0.32,
+     "slg": 0.468,
      "hr": 0.051,
      "bb": 0.095,
      "so": 0.249
     },
     "sim_engine": {
-     "avg": 0.232,
-     "obp": 0.285,
-     "slg": 0.454,
-     "hr": 0.053,
-     "bb": 0.069,
+     "avg": 0.227,
+     "obp": 0.284,
+     "slg": 0.45,
+     "hr": 0.054,
+     "bb": 0.074,
      "so": 0.268
     },
     "real": {
@@ -1408,22 +1408,22 @@
     "role": "regular",
     "pa": 354,
     "out_agreement": 0.389,
-    "width_mae": 2.91,
+    "width_mae": 1.25,
     "sim_official": {
-     "avg": 0.246,
-     "obp": 0.315,
-     "slg": 0.364,
+     "avg": 0.245,
+     "obp": 0.314,
+     "slg": 0.363,
      "hr": 0.021,
      "bb": 0.09,
      "so": 0.167
     },
     "sim_engine": {
-     "avg": 0.263,
-     "obp": 0.341,
-     "slg": 0.379,
-     "hr": 0.021,
-     "bb": 0.106,
-     "so": 0.166
+     "avg": 0.257,
+     "obp": 0.343,
+     "slg": 0.381,
+     "hr": 0.022,
+     "bb": 0.115,
+     "so": 0.164
     },
     "real": {
      "avg": 0.257,
@@ -1440,22 +1440,22 @@
     "role": "regular",
     "pa": 442,
     "out_agreement": 0.849,
-    "width_mae": 3.89,
+    "width_mae": 2.3,
     "sim_official": {
-     "avg": 0.274,
-     "obp": 0.354,
-     "slg": 0.433,
+     "avg": 0.271,
+     "obp": 0.352,
+     "slg": 0.431,
      "hr": 0.025,
      "bb": 0.085,
      "so": 0.117
     },
     "sim_engine": {
-     "avg": 0.264,
-     "obp": 0.323,
-     "slg": 0.415,
+     "avg": 0.251,
+     "obp": 0.317,
+     "slg": 0.406,
      "hr": 0.026,
-     "bb": 0.079,
-     "so": 0.131
+     "bb": 0.088,
+     "so": 0.127
     },
     "real": {
      "avg": 0.251,
@@ -1472,22 +1472,22 @@
     "role": "regular",
     "pa": 552,
     "out_agreement": 0.613,
-    "width_mae": 3.46,
+    "width_mae": 1.88,
     "sim_official": {
-     "avg": 0.276,
-     "obp": 0.358,
-     "slg": 0.482,
+     "avg": 0.273,
+     "obp": 0.356,
+     "slg": 0.48,
      "hr": 0.05,
      "bb": 0.096,
      "so": 0.107
     },
     "sim_engine": {
-     "avg": 0.259,
-     "obp": 0.337,
-     "slg": 0.448,
-     "hr": 0.044,
-     "bb": 0.105,
-     "so": 0.112
+     "avg": 0.249,
+     "obp": 0.336,
+     "slg": 0.434,
+     "hr": 0.045,
+     "bb": 0.116,
+     "so": 0.11
     },
     "real": {
      "avg": 0.255,
@@ -1504,22 +1504,22 @@
     "role": "regular",
     "pa": 534,
     "out_agreement": 0.552,
-    "width_mae": 3.57,
+    "width_mae": 1.68,
     "sim_official": {
-     "avg": 0.305,
-     "obp": 0.358,
-     "slg": 0.445,
+     "avg": 0.302,
+     "obp": 0.355,
+     "slg": 0.442,
      "hr": 0.023,
      "bb": 0.076,
      "so": 0.159
     },
     "sim_engine": {
-     "avg": 0.289,
-     "obp": 0.357,
-     "slg": 0.41,
+     "avg": 0.27,
+     "obp": 0.341,
+     "slg": 0.393,
      "hr": 0.018,
-     "bb": 0.096,
-     "so": 0.17
+     "bb": 0.098,
+     "so": 0.172
     },
     "real": {
      "avg": 0.278,
@@ -1536,21 +1536,21 @@
     "role": "regular",
     "pa": 357,
     "out_agreement": 0.81,
-    "width_mae": 4.0,
+    "width_mae": 1.7,
     "sim_official": {
-     "avg": 0.24,
-     "obp": 0.307,
-     "slg": 0.449,
+     "avg": 0.238,
+     "obp": 0.305,
+     "slg": 0.447,
      "hr": 0.054,
      "bb": 0.074,
      "so": 0.252
     },
     "sim_engine": {
-     "avg": 0.238,
-     "obp": 0.291,
-     "slg": 0.438,
+     "avg": 0.232,
+     "obp": 0.287,
+     "slg": 0.426,
      "hr": 0.05,
-     "bb": 0.069,
+     "bb": 0.072,
      "so": 0.255
     },
     "real": {
@@ -1567,23 +1567,23 @@
     "name": "Roy Smalley",
     "role": "regular",
     "pa": 527,
-    "out_agreement": 0.146,
-    "width_mae": 4.36,
+    "out_agreement": 0.225,
+    "width_mae": 1.77,
     "sim_official": {
-     "avg": 0.24,
-     "obp": 0.353,
-     "slg": 0.436,
+     "avg": 0.239,
+     "obp": 0.352,
+     "slg": 0.435,
      "hr": 0.038,
      "bb": 0.148,
      "so": 0.142
     },
     "sim_engine": {
-     "avg": 0.258,
-     "obp": 0.346,
-     "slg": 0.448,
-     "hr": 0.037,
-     "bb": 0.119,
-     "so": 0.15
+     "avg": 0.25,
+     "obp": 0.345,
+     "slg": 0.455,
+     "hr": 0.042,
+     "bb": 0.127,
+     "so": 0.144
     },
     "real": {
      "avg": 0.246,
@@ -1605,13 +1605,13 @@
    "k": 0.0608,
    "bb": 0.0247,
    "hr": 0.0047,
-   "h": 0.0222
+   "h": 0.0221
   },
   "sim_gap_printed": {
    "k": 0.0271,
    "bb": 0.0247,
    "hr": 0.003,
-   "h": 0.0154
+   "h": 0.0192
   },
   "players": [
    {
@@ -1642,7 +1642,7 @@
      "k": 0.216,
      "bb": 0.076,
      "hr": 0.028,
-     "h": 0.195
+     "h": 0.193
     },
     "sim_widening": {
      "k": 0.215,
@@ -1654,7 +1654,7 @@
      "k": 0.216,
      "bb": 0.073,
      "hr": 0.023,
-     "h": 0.194
+     "h": 0.185
     },
     "official_table": {
      "2": "DEFENSE",
@@ -1725,19 +1725,19 @@
      "k": 0.265,
      "bb": 0.188,
      "hr": 0.022,
-     "h": 0.217
+     "h": 0.216
     },
     "sim_widening": {
      "k": 0.185,
      "bb": 0.107,
      "hr": 0.02,
-     "h": 0.192
+     "h": 0.185
     },
     "sim_printed": {
      "k": 0.247,
      "bb": 0.111,
      "hr": 0.015,
-     "h": 0.19
+     "h": 0.188
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -1808,19 +1808,19 @@
      "k": 0.379,
      "bb": 0.072,
      "hr": 0.009,
-     "h": 0.155
+     "h": 0.152
     },
     "sim_widening": {
      "k": 0.212,
      "bb": 0.092,
      "hr": 0.017,
-     "h": 0.187
+     "h": 0.179
     },
     "sim_printed": {
      "k": 0.297,
      "bb": 0.088,
      "hr": 0.012,
-     "h": 0.162
+     "h": 0.159
     },
     "official_table": {
      "2": "DEFENSE",
@@ -1891,19 +1891,19 @@
      "k": 0.3,
      "bb": 0.134,
      "hr": 0.015,
-     "h": 0.204
+     "h": 0.2
     },
     "sim_widening": {
      "k": 0.183,
      "bb": 0.123,
      "hr": 0.012,
-     "h": 0.195
+     "h": 0.188
     },
     "sim_printed": {
      "k": 0.262,
      "bb": 0.123,
      "hr": 0.017,
-     "h": 0.185
+     "h": 0.181
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -1974,19 +1974,19 @@
      "k": 0.326,
      "bb": 0.104,
      "hr": 0.009,
-     "h": 0.165
+     "h": 0.162
     },
     "sim_widening": {
      "k": 0.208,
      "bb": 0.1,
      "hr": 0.015,
-     "h": 0.201
+     "h": 0.191
     },
     "sim_printed": {
      "k": 0.281,
      "bb": 0.096,
      "hr": 0.014,
-     "h": 0.174
+     "h": 0.173
     },
     "official_table": {
      "2": "DEFENSE",
@@ -2057,7 +2057,7 @@
      "k": 0.268,
      "bb": 0.131,
      "hr": 0.017,
-     "h": 0.182
+     "h": 0.178
     },
     "sim_widening": {
      "k": 0.259,
@@ -2140,7 +2140,7 @@
      "k": 0.213,
      "bb": 0.182,
      "hr": 0.021,
-     "h": 0.209
+     "h": 0.208
     },
     "sim_widening": {
      "k": 0.233,
@@ -2152,7 +2152,7 @@
      "k": 0.222,
      "bb": 0.112,
      "hr": 0.018,
-     "h": 0.184
+     "h": 0.18
     },
     "official_table": {
      "2": "DEFENSE",
@@ -2223,7 +2223,7 @@
      "k": 0.211,
      "bb": 0.24,
      "hr": 0.006,
-     "h": 0.201
+     "h": 0.198
     },
     "sim_widening": {
      "k": 0.222,
@@ -2235,7 +2235,7 @@
      "k": 0.216,
      "bb": 0.107,
      "hr": 0.009,
-     "h": 0.172
+     "h": 0.164
     },
     "official_table": {
      "2": "BALLPARK",
@@ -2302,19 +2302,19 @@
      "k": 0.303,
      "bb": 0.068,
      "hr": 0.018,
-     "h": 0.167
+     "h": 0.166
     },
     "sim_widening": {
      "k": 0.207,
      "bb": 0.074,
      "hr": 0.013,
-     "h": 0.196
+     "h": 0.181
     },
     "sim_printed": {
      "k": 0.281,
      "bb": 0.07,
      "hr": 0.017,
-     "h": 0.167
+     "h": 0.161
     },
     "official_table": {
      "2": "DEFENSE",
@@ -2381,19 +2381,19 @@
      "k": 0.305,
      "bb": 0.064,
      "hr": 0.011,
-     "h": 0.154
+     "h": 0.151
     },
     "sim_widening": {
      "k": 0.211,
      "bb": 0.073,
      "hr": 0.018,
-     "h": 0.183
+     "h": 0.173
     },
     "sim_printed": {
      "k": 0.24,
      "bb": 0.078,
      "hr": 0.021,
-     "h": 0.19
+     "h": 0.186
     },
     "official_table": {
      "2": "PATIENT",
@@ -2460,19 +2460,19 @@
      "k": 0.276,
      "bb": 0.106,
      "hr": 0.013,
-     "h": 0.167
+     "h": 0.165
     },
     "sim_widening": {
      "k": 0.193,
      "bb": 0.105,
      "hr": 0.009,
-     "h": 0.198
+     "h": 0.189
     },
     "sim_printed": {
      "k": 0.236,
      "bb": 0.099,
      "hr": 0.013,
-     "h": 0.179
+     "h": 0.174
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -2539,13 +2539,13 @@
      "k": 0.269,
      "bb": 0.1,
      "hr": 0.016,
-     "h": 0.183
+     "h": 0.181
     },
     "sim_widening": {
      "k": 0.179,
      "bb": 0.099,
      "hr": 0.022,
-     "h": 0.195
+     "h": 0.19
     },
     "sim_printed": {
      "k": 0.243,
@@ -2624,13 +2624,13 @@
      "k": 0.195,
      "bb": 0.091,
      "hr": 0.011,
-     "h": 0.196
+     "h": 0.187
     },
     "sim_printed": {
      "k": 0.255,
      "bb": 0.097,
      "hr": 0.015,
-     "h": 0.181
+     "h": 0.173
     },
     "official_table": {
      "2": "PATIENT",
@@ -2697,19 +2697,19 @@
      "k": 0.253,
      "bb": 0.061,
      "hr": 0.013,
-     "h": 0.175
+     "h": 0.17
     },
     "sim_widening": {
      "k": 0.169,
      "bb": 0.08,
      "hr": 0.016,
-     "h": 0.212
+     "h": 0.199
     },
     "sim_printed": {
      "k": 0.236,
      "bb": 0.093,
      "hr": 0.02,
-     "h": 0.182
+     "h": 0.175
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -2776,19 +2776,19 @@
      "k": 0.335,
      "bb": 0.056,
      "hr": 0.009,
-     "h": 0.152
+     "h": 0.151
     },
     "sim_widening": {
      "k": 0.191,
      "bb": 0.074,
      "hr": 0.021,
-     "h": 0.197
+     "h": 0.186
     },
     "sim_printed": {
      "k": 0.267,
      "bb": 0.08,
      "hr": 0.017,
-     "h": 0.176
+     "h": 0.172
     },
     "official_table": {
      "2": "IN-PLAY",
@@ -2855,19 +2855,19 @@
      "k": 0.279,
      "bb": 0.086,
      "hr": 0.012,
-     "h": 0.159
+     "h": 0.155
     },
     "sim_widening": {
      "k": 0.178,
      "bb": 0.096,
      "hr": 0.018,
-     "h": 0.211
+     "h": 0.202
     },
     "sim_printed": {
      "k": 0.27,
      "bb": 0.082,
      "hr": 0.012,
-     "h": 0.16
+     "h": 0.157
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -2934,19 +2934,19 @@
      "k": 0.238,
      "bb": 0.14,
      "hr": 0.013,
-     "h": 0.194
+     "h": 0.192
     },
     "sim_widening": {
      "k": 0.183,
      "bb": 0.102,
      "hr": 0.017,
-     "h": 0.203
+     "h": 0.193
     },
     "sim_printed": {
      "k": 0.271,
      "bb": 0.096,
      "hr": 0.011,
-     "h": 0.176
+     "h": 0.17
     },
     "official_table": {
      "2": "PATIENT",
@@ -3019,13 +3019,13 @@
      "k": 0.186,
      "bb": 0.076,
      "hr": 0.017,
-     "h": 0.203
+     "h": 0.194
     },
     "sim_printed": {
      "k": 0.251,
      "bb": 0.084,
      "hr": 0.018,
-     "h": 0.183
+     "h": 0.176
     },
     "official_table": {
      "2": "DEFENSE",
@@ -3098,13 +3098,13 @@
      "k": 0.159,
      "bb": 0.057,
      "hr": 0.022,
-     "h": 0.206
+     "h": 0.197
     },
     "sim_printed": {
      "k": 0.179,
      "bb": 0.053,
      "hr": 0.022,
-     "h": 0.203
+     "h": 0.192
     },
     "official_table": {
      "2": "IN-PLAY",
@@ -3171,19 +3171,19 @@
      "k": 0.206,
      "bb": 0.045,
      "hr": 0.017,
-     "h": 0.205
+     "h": 0.202
     },
     "sim_widening": {
      "k": 0.201,
      "bb": 0.062,
      "hr": 0.016,
-     "h": 0.194
+     "h": 0.18
     },
     "sim_printed": {
      "k": 0.212,
      "bb": 0.061,
      "hr": 0.021,
-     "h": 0.2
+     "h": 0.19
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -3250,19 +3250,19 @@
      "k": 0.196,
      "bb": 0.039,
      "hr": 0.014,
-     "h": 0.204
+     "h": 0.2
     },
     "sim_widening": {
      "k": 0.212,
      "bb": 0.07,
      "hr": 0.024,
-     "h": 0.208
+     "h": 0.201
     },
     "sim_printed": {
      "k": 0.213,
      "bb": 0.068,
      "hr": 0.018,
-     "h": 0.2
+     "h": 0.19
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -3329,19 +3329,19 @@
      "k": 0.179,
      "bb": 0.04,
      "hr": 0.016,
-     "h": 0.215
+     "h": 0.213
     },
     "sim_widening": {
      "k": 0.143,
      "bb": 0.065,
      "hr": 0.024,
-     "h": 0.214
+     "h": 0.197
     },
     "sim_printed": {
      "k": 0.188,
      "bb": 0.068,
      "hr": 0.016,
-     "h": 0.201
+     "h": 0.19
     },
     "official_table": {
      "2": "IN-PLAY",
@@ -3408,19 +3408,19 @@
      "k": 0.084,
      "bb": 0.063,
      "hr": 0.026,
-     "h": 0.257
+     "h": 0.255
     },
     "sim_widening": {
      "k": 0.12,
      "bb": 0.077,
      "hr": 0.024,
-     "h": 0.21
+     "h": 0.199
     },
     "sim_printed": {
      "k": 0.131,
      "bb": 0.07,
      "hr": 0.025,
-     "h": 0.212
+     "h": 0.203
     },
     "official_table": {
      "2": "WHEELHOUSE",
@@ -3487,19 +3487,19 @@
      "k": 0.156,
      "bb": 0.056,
      "hr": 0.025,
-     "h": 0.233
+     "h": 0.231
     },
     "sim_widening": {
      "k": 0.191,
      "bb": 0.07,
      "hr": 0.019,
-     "h": 0.202
+     "h": 0.2
     },
     "sim_printed": {
      "k": 0.181,
      "bb": 0.072,
      "hr": 0.024,
-     "h": 0.2
+     "h": 0.184
     },
     "official_table": {
      "2": "BALLPARK",
@@ -3566,19 +3566,19 @@
      "k": 0.084,
      "bb": 0.052,
      "hr": 0.013,
-     "h": 0.216
+     "h": 0.215
     },
     "sim_widening": {
      "k": 0.115,
      "bb": 0.075,
      "hr": 0.015,
-     "h": 0.19
+     "h": 0.172
     },
     "sim_printed": {
      "k": 0.11,
      "bb": 0.078,
      "hr": 0.013,
-     "h": 0.192
+     "h": 0.176
     },
     "official_table": {
      "2": "PATIENT",
@@ -3645,19 +3645,19 @@
      "k": 0.16,
      "bb": 0.085,
      "hr": 0.017,
-     "h": 0.211
+     "h": 0.209
     },
     "sim_widening": {
      "k": 0.131,
      "bb": 0.101,
      "hr": 0.016,
-     "h": 0.207
+     "h": 0.194
     },
     "sim_printed": {
      "k": 0.182,
      "bb": 0.097,
      "hr": 0.018,
-     "h": 0.198
+     "h": 0.191
     },
     "official_table": {
      "2": "WHEELHOUSE",

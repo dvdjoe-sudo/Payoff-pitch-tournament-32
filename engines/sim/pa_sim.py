@@ -21,8 +21,9 @@ What the book specifies and this simulator does
   to IN-PLAY.
 - DEFENSE: a percentile picks the position and whether RANGE or ERROR is
   checked, then a re-roll reads that park section. A range hit uses the
-  page-20 HIT chart. An error is not a hit unless the ERR chart says
-  SINGLE+error. A dropped foul restarts the at-bat.
+  page-20 HIT chart. The ERR chart's SINGLE+error is a reached-on-error:
+  an at-bat, not a hit, and not in AVG, OBP, or SLG. A dropped foul
+  restarts the at-bat.
 - %roll +10 or +20 (page 39) is added to the percentile on a plain TOUGH
   result before the TOUGH section is read. If the sum is greater than 99,
   the original face is used. The shift is not applied to TOUGH-OUT. The
@@ -158,7 +159,116 @@ def defense_event(check, pos, d6, pct, hit_hi, err_hi, run):
         return hit
     if pct > err_hi:
         return "OUT"
-    return ERR_BY_D6[d6][POS_ERR_GROUP[pos]]
+    event = ERR_BY_D6[d6][POS_ERR_GROUP[pos]]
+    # SINGLE+error reaches base without a hit. It is an at-bat, so it
+    # lowers AVG, and it is not in the OBP or SLG numerator.
+    if event == "1B":
+        return "ROE"
+    return event
+
+
+_PARKS_1986 = None
+_DEFENSE_DIST = {}
+_DEFENSE_EVENTS = ("1B", "2B", "3B", "HR", "OUT", "ROE", "REROLL")
+
+
+def parks_1986():
+    """The 26 park charts in the official 1986 card set.
+
+    charts.PARKS stays the 12 stadiums printed in the rulebook. This list
+    is the set the hitter engine and the 1986 accuracy check average over.
+    """
+    global _PARKS_1986
+    if _PARKS_1986 is None:
+        path = os.path.join(ROOT, "historical-cards", "reference", "ballparks.json")
+        _PARKS_1986 = json.load(open(path))
+    return _PARKS_1986
+
+
+def ballpark_wheel_share(bats, parks=None):
+    """P(WHEELHOUSE | BALLPARK) from park faces 1 through wh.
+
+    Percentile 00 is a rare play on the initial roll, so the wheel share
+    is wh/99. A switch hitter stands opposite the pitcher. The solver's
+    hand split is 0.28 left-handed pitching, which is the right-handed
+    column on the park card.
+    """
+    parks = parks_1986() if parks is None else parks
+    n = float(len(parks))
+    mean_l = sum(int(park["wh_l"]) for park in parks) / n / 99.0
+    mean_r = sum(int(park["wh_r"]) for park in parks) / n / 99.0
+    if bats == "L":
+        return mean_l
+    if bats == "R":
+        return mean_r
+    return 0.28 * mean_r + 0.72 * mean_l
+
+
+def _defense_pct_split(check, pos, d6, hit_hi, err_hi, run):
+    """Event shares over park percentiles 0-99. Percentile 0 is an out."""
+    hi = hit_hi if check == "RANGE" else err_hi
+    inside = max(0, min(99, int(hi)))
+    shares = {"OUT": (1 + (99 - inside)) / 100.0}
+    if inside:
+        event = defense_event(check, pos, d6, 1, hit_hi, err_hi, run)
+        shares[event] = shares.get(event, 0.0) + inside / 100.0
+    return shares
+
+
+def defense_distribution(parks=None, range_grade="C", error_grade="3"):
+    """P(event | DEFENSE) for a neutral fielder, averaged over the parks.
+
+    Position faces 1-99 are equal. The 2d6 weights are the 36 outcomes.
+    Park percentile 0 and a miss of the range or error band are outs.
+    'low' is run below 8. 'high' turns a dagger double into a triple.
+    The seven events sum to 1. Dropped fouls stay REROLL; the caller
+    renormalizes those out of a completed plate appearance.
+    """
+    parks = parks_1986() if parks is None else parks
+    error_grade = str(error_grade)
+    key = (
+        range_grade,
+        error_grade,
+        tuple(
+            (
+                park.get("name"),
+                int(park["wh_l"]),
+                int(park["wh_r"]),
+                int(park["range_hit_hi"][range_grade]),
+                int(park["error_hi"][error_grade]),
+            )
+            for park in parks
+        ),
+    )
+    cached = _DEFENSE_DIST.get(key)
+    if cached is not None:
+        return cached
+    counts = {}
+    for face in range(1, 100):
+        slot = CHART[face]
+        counts[slot] = counts.get(slot, 0) + 1
+    n_parks = float(len(parks))
+    low = {event: 0.0 for event in _DEFENSE_EVENTS}
+    high = {event: 0.0 for event in _DEFENSE_EVENTS}
+    for park in parks:
+        hit_hi = int(park["range_hit_hi"][range_grade])
+        err_hi = int(park["error_hi"][error_grade])
+        for (check, pos), npos in counts.items():
+            pos_p = npos / 99.0 / n_parks
+            for d6, weight in zip(range(2, 13), D6_WEIGHTS):
+                d6_p = weight / 36.0
+                for run, bucket in ((7, low), (8, high)):
+                    split = _defense_pct_split(check, pos, d6, hit_hi, err_hi, run)
+                    mass = pos_p * d6_p
+                    for event, share in split.items():
+                        bucket[event] += mass * share
+    for bucket in (low, high):
+        total = sum(bucket.values())
+        if abs(total - 1.0) > 1e-9:
+            raise RuntimeError("defense distribution summed to %s" % total)
+    result = {"low": low, "high": high}
+    _DEFENSE_DIST[key] = result
+    return result
 
 
 class Tally:
@@ -199,6 +309,8 @@ class Tally:
             return
         if event == "SO":
             self.so += 1
+            return
+        if event == "ROE":
             return
         self.h += 1
         if event == "1B":
@@ -480,8 +592,8 @@ def _se(p, n):
 
 
 # Frozen hitter-solver category frequencies (hitter_solver.PITCHER_MIX),
-# renormalized. The book does not define this mix. DEFO in that solver is
-# an automatic out; here the same share is resolved as a real DEFENSE check.
+# renormalized onto 10,000. The book does not define this mix. The same
+# DEFENSE share is resolved with the position chart and the park card.
 _SOLVER_WEIGHTS = (
     ("TOUGH", 3438),
     ("IN-PLAY", 2520),

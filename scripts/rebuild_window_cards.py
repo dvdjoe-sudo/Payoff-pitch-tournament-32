@@ -27,7 +27,7 @@ import hitter_solver as hs  # noqa: E402
 from calibration import full_pipeline  # noqa: E402
 from historical_solver import solve_historical  # noqa: E402
 from partition import validate_hitter_card, validate_pitcher_table  # noqa: E402
-from pa_sim import Batter, PARKS, Pitcher, Tally, resolve_pa  # noqa: E402
+from pa_sim import Batter, Pitcher, Tally, parks_1986, resolve_pa  # noqa: E402
 
 CARDS = os.path.join(ROOT, "data", "cards.json")
 REPORT = os.path.join(ROOT, "historical-cards", "accuracy", "rebuild_215.json")
@@ -112,7 +112,7 @@ def _rebuild_hitter(card):
     row = _hitter_row(card)
     if not row["PA"] or not row["AB"]:
         return None, "no plate appearances on the card"
-    built = hs.build_one(row)
+    built = hs.build_one(row, run=(card.get("card_bat") or {}).get("run"))
     if built is None:
         return None, "solver skipped the row"
     new_card = built[0]
@@ -193,22 +193,24 @@ def _real_pitcher(peak):
 def _sim_hitter(batter, pitchers, n, seed):
     rng = random.Random(seed)
     tally = Tally()
+    parks = parks_1986()
     guard = 0
     while tally.pa < n and guard < n * 4:
         guard += 1
         pitcher = pitchers[rng.randrange(len(pitchers))]
-        tally.add(resolve_pa(rng, batter, pitcher, parks=PARKS))
+        tally.add(resolve_pa(rng, batter, pitcher, parks=parks))
     return tally.rates()
 
 
 def _sim_pitcher(pitcher, batters, n, seed):
     rng = random.Random(seed)
     tally = Tally()
+    parks = parks_1986()
     guard = 0
     while tally.pa < n and guard < n * 4:
         guard += 1
         batter = batters[rng.randrange(len(batters))]
-        tally.add(resolve_pa(rng, batter, pitcher, parks=PARKS))
+        tally.add(resolve_pa(rng, batter, pitcher, parks=parks))
     rates = tally.rates()
     ab_share = (tally.ab / tally.pa) if tally.pa else 1
     return {"k": rates["so"], "bb": rates["bb"], "hr": rates["hr"], "h": rates["avg"] * ab_share}
@@ -344,7 +346,7 @@ def main():
         "notes": [
             "Fielding, stamina, and peak lines were not rewritten.",
             "Pitcher search used the page-39 shift. TOUGH-OUT was not shifted. Face 00 was not shifted.",
-            "The sim draws the other converted cards and the 12 rulebook parks. League-average defense is an assumption (range C, error 3).",
+            "The sim draws the other converted cards and the 26 official 1986 parks. League-average defense is an assumption (range C, error 3). Reached-on-error is an at-bat and not a hit.",
         ],
     }
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)

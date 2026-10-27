@@ -53,8 +53,9 @@ HIT_BY_D6 = {
 }
 
 # ERR chart by the same 2d6. Groups: 0 catcher, 1 pitcher and infield,
-# 2 outfield. SINGLE+error counts as a single. A dropped foul restarts
-# the plate appearance. Any other error is an at-bat that is not a hit.
+# 2 outfield. "1B" is the printed SINGLE+error. The simulator records
+# that result as ROE (pa_sim.defense_event), not a hit. A dropped foul
+# restarts the plate appearance. Any other error is an out.
 ERR_BY_D6 = {
     2: ("OUT", "OUT", "OUT"),
     3: ("OUT", "OUT", "OUT"),

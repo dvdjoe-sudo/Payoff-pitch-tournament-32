@@ -312,7 +312,7 @@ def main():
     out_rates = []
     for index, (player, role) in enumerate(hitter_sample, 1):
         row = _hitter_row(player)
-        built = hs.build_one(row, exclude={player["name"]})
+        built = hs.build_one(row, exclude={player["name"]}, run=player.get("run"))
         card = built[0]
         bands = _band_errors(player, card)
         band_rows.extend(bands)

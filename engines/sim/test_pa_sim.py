@@ -8,8 +8,14 @@ sys.path.insert(0, HERE)
 
 from charts import DEFENSE_BANDS, PARKS, defense_chart
 from pa_sim import (
+    CHART,
+    D6_FACES,
+    Tally,
     ballpark_target,
+    ballpark_wheel_share,
+    defense_distribution,
     defense_event,
+    parks_1986,
     read_patient_out,
     read_section,
     read_tough_out,
@@ -78,8 +84,8 @@ def defense_is_not_an_automatic_out():
     assert defense_event("RANGE", "1B", 3, 50, 99, 0, 5) == "1B"
     # A missed range check is an out.
     assert defense_event("RANGE", "1B", 3, 50, 10, 99, 5) == "OUT"
-    # SINGLE+error on the outfield, 2d6 = 7, counts as a single.
-    assert defense_event("ERROR", "LF", 7, 20, 0, 40, 5) == "1B"
+    # SINGLE+error on the outfield, 2d6 = 7, is a reached-on-error, not a hit.
+    assert defense_event("ERROR", "LF", 7, 20, 0, 40, 5) == "ROE"
     # A plain error is an at-bat that is not a hit.
     assert defense_event("ERROR", "SS", 5, 20, 0, 40, 5) == "OUT"
     # RANGE against the catcher is read at CF. 2d6 = 2 is a double in the outfield.
@@ -87,6 +93,58 @@ def defense_is_not_an_automatic_out():
     # Dagger double, run 8, becomes a triple.
     assert defense_event("RANGE", "LF", 12, 10, 99, 0, 8) == "3B"
     assert defense_event("RANGE", "LF", 12, 10, 99, 0, 7) == "2B"
+
+
+def reached_on_error_is_not_a_hit():
+    tally = Tally()
+    tally.add("ROE")
+    tally.add("1B")
+    rates = tally.rates()
+    assert tally.ab == 2 and tally.h == 1 and tally.tb == 1
+    assert rates["avg"] == 0.5
+    assert rates["obp"] == 0.5
+    assert rates["slg"] == 0.5
+
+
+def ballpark_share_uses_the_1986_charts():
+    parks = parks_1986()
+    assert len(parks) == 26
+    mean_l = sum(park["wh_l"] for park in parks) / len(parks) / 99.0
+    mean_r = sum(park["wh_r"] for park in parks) / len(parks) / 99.0
+    assert abs(ballpark_wheel_share("L", parks) - mean_l) < 1e-12
+    assert abs(ballpark_wheel_share("R", parks) - mean_r) < 1e-12
+    switch = 0.28 * mean_r + 0.72 * mean_l
+    assert abs(ballpark_wheel_share("S", parks) - switch) < 1e-12
+    assert len(PARKS) == 12
+
+
+def defense_distribution_matches_monte_carlo():
+    parks = parks_1986()
+    dist = defense_distribution(parks)
+    assert abs(sum(dist["low"].values()) - 1.0) < 1e-9
+    assert abs(sum(dist["high"].values()) - 1.0) < 1e-9
+    assert dist["low"]["ROE"] > 0.01
+    assert dist["low"]["REROLL"] > 0
+    assert dist["high"]["3B"] > dist["low"]["3B"]
+    rng = random.Random(7)
+    n = 40000
+    counts = {}
+    for _ in range(n):
+        park = parks[rng.randrange(len(parks))]
+        check, pos = CHART[rng.randrange(1, 100)]
+        d6 = D6_FACES[rng.randrange(36)]
+        pct = rng.randrange(100)
+        if pct == 0:
+            event = "OUT"
+        else:
+            event = defense_event(
+                check, pos, d6, pct,
+                park["range_hit_hi"]["C"], park["error_hi"]["3"], 5,
+            )
+        counts[event] = counts.get(event, 0) + 1
+    for event, share in dist["low"].items():
+        got = counts.get(event, 0) / n
+        assert abs(got - share) < 0.012, (event, got, share)
 
 
 def parks_are_the_twelve_printed_charts():
@@ -184,6 +242,9 @@ if __name__ == "__main__":
     ballpark_uses_the_park_split()
     defense_chart_covers_01_through_99()
     defense_is_not_an_automatic_out()
+    reached_on_error_is_not_a_hit()
+    ballpark_share_uses_the_1986_charts()
+    defense_distribution_matches_monte_carlo()
     parks_are_the_twelve_printed_charts()
     synthetic_card_runs()
     tough_shift_changes_a_live_pa()
