@@ -627,6 +627,16 @@ def supplemental_strikeout_is_on_by_default():
 
 
 def official_scoring_and_bullpen():
+    walk = 0
+    for seed in range(1, 80):
+        r = play("CHC", "MON", seed=seed)
+        marks = [i for i, l in enumerate(r["log"]) if "(walk-off)" in l]
+        if marks:
+            walk += 1
+            assert r["score"]["CHC"] > r["score"]["MON"]
+            tail = r["log"][marks[-1] + 1:]
+            assert not any(" vs " in l and " out, " in l for l in tail), "PA after a walk-off"
+    assert walk > 0, "no walk-off in 79 seeds"
     """RBI (9.04), responsible pitcher and earned runs (9.16), W/L/S (9.17-9.19),
     manager bullpen usage. Owner ruling 2026-10-27."""
     def pa_for(found, batter):

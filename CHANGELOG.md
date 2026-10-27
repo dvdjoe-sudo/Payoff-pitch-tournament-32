@@ -18,6 +18,7 @@ These came out of the test series Game 1 (Montreal at Chicago).
   `bullpen="book"` keeps the old behaviour. Once-per-game is unchanged.
 - **Stress (2,976 games).** Runs 5.28 → 5.15 per team-game, AVG .258 → .255, SLG .436 → .425. Starter IP 5.66 → 4.86, complete games 25.9% → 6.7%, relievers 2.59 → 3.02 per team-game.
   - 168-game check: a save in 33% of games, holds 0.14 per game, starter wins 63%.
+- **Walk-off.** The bottom of the 9th or an extra inning kept going after the home side took the lead (Game 1 replay: two extra batters after the winning run). The game now ends at once (rule 7.01(g)). Rate stats are unchanged in the stress run.
 - Tests in `test_game.official_scoring_and_bullpen`. Sample game: Boston 9, Toronto 1.
 
 ## 2026-10-27 — Intentional walks count as walks on hitter cards

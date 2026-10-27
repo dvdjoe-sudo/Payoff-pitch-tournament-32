@@ -464,10 +464,18 @@ class Game:
             self._substitute_removed()
             self._maybe_change_pitcher(before_batter=True)
             self._plate()
+            if self._walk_off():
+                self.say("Home team leads in the bottom of the %d. The game is over (walk-off)." % self.inning)
+                return
         state = self.pitcher[self.fielding["code"]]
         state["innings"].add(self.inning)
         self._mark_fatigue(state, end_of_half=True)
         self._maybe_change_pitcher(before_batter=False)
+
+    def _walk_off(self):
+        # Official rule 7.01(g): the game ends when the home side takes the lead in the bottom of the ninth or later.
+        return (self.half == "bottom" and self.inning >= 9
+                and self.score[self.home["code"]] > self.score[self.away["code"]])
 
     def _plate(self):
         batter = self.batting["lineup"][self.order_index[self.batting["code"]] % 9]
