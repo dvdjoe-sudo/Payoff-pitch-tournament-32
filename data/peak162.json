@@ -4821,6 +4821,18 @@
      2010
     ]
    },
+   "BAT2 Bob Allison OF/1B 1958-1970 (13)": {
+    "lahman_id": "allisbo01",
+    "status": "ok",
+    "text": "Peak 162 with Minnesota Twins (1963–1967): 162 G, 623 PA, 525 AB, 91 R, 136 H, 23 2B, 5 3B, 30 HR, 86 RBI, 9 SB, 89 BB, 116 SO, .260/.369/.495/.864",
+    "years": [
+     1963,
+     1964,
+     1965,
+     1966,
+     1967
+    ]
+   },
    "C2 Earl Battey C 1960-1967 (8)": {
     "lahman_id": "batteea01",
     "status": "ok",
@@ -4867,18 +4879,6 @@
      1968,
      1969,
      1970
-    ]
-   },
-   "MR1 Firpo Marberry 1923-1932, 1936 (11)": {
-    "lahman_id": "marbefi01",
-    "status": "ok",
-    "text": "Peak 162 with Minnesota Twins (1928–1932): 65 G, 20-11, 10 SV, 287.2 IP, 283 H, 116 ER, 85 BB, 116 SO, 3.64 ERA, 1.28 WHIP, 3.6 K/9",
-    "years": [
-     1928,
-     1929,
-     1930,
-     1931,
-     1932
     ]
    },
    "MR2 Jhoan Duran 2022-2025 (4)": {

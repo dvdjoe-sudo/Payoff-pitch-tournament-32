@@ -960,6 +960,13 @@ def check_twins_roster_amendment(check: Check) -> None:
                  "Minnesota owner roster agrees with active 9/6/5/6")
     check.expect("MIN|marbefi01" in cards,
                  "Firpo Marberry historic converted pitching card is preserved")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["MIN"]
+    allison_peak = peaks.get("BAT2 Bob Allison OF/1B 1958-1970 (13)") or {}
+    check.expect(allison_peak.get("lahman_id") == "allisbo01"
+                 and allison_peak.get("years") == [1963, 1964, 1965, 1966, 1967],
+                 "Bob Allison's genuine Minnesota franchise five-season Peak 162 is active")
+    check.expect("MR1 Firpo Marberry 1923-1932, 1936 (11)" not in peaks,
+                 "Inactive Marberry no longer appears in Twins current Peak 162")
     doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Bob Allison (`allisbo01`) joins Minnesota" in doc,
                  "Minnesota approval appears in published roster")
