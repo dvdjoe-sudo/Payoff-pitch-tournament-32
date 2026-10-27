@@ -1,17 +1,17 @@
 {
  "title": "Payoff Pitch Tournament 32",
  "site": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/",
- "games_played": 24,
+ "games_played": 25,
  "next_up": {
   "series_id": "R1-05",
-  "game_in_series": 3,
+  "game_in_series": 4,
   "home": "COL",
   "away": "STL",
   "home_name": "Colorado Rockies",
   "away_name": "St. Louis Cardinals",
   "starters": {
-   "STL": "Adam Wainwright",
-   "COL": "Aaron Cook"
+   "STL": "Harry Brecheen",
+   "COL": "German Marquez"
   }
  },
  "games": [
@@ -398,6 +398,22 @@
    "recap": "The St. Louis Cardinals beat the Colorado Rockies 8-3. The go-ahead run scored in the 5th inning. Albert Pujols led the St. Louis Cardinals offense with 3 hits and 1 RBI in 4 at-bats. Dizzy Dean earned the win, allowing 2 earned runs in 6.0 innings.",
    "rng_seed": 20261302,
    "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-05-G2"
+  },
+  {
+   "id": "R1-05-G3",
+   "series_id": "R1-05",
+   "game_in_series": 3,
+   "date": "2026-10-26",
+   "away": "STL",
+   "home": "COL",
+   "away_name": "St. Louis Cardinals",
+   "home_name": "Colorado Rockies",
+   "away_runs": 1,
+   "home_runs": 0,
+   "winner": "STL",
+   "recap": "The St. Louis Cardinals beat the Colorado Rockies 1-0. The go-ahead run scored in the 7th inning. Joe Medwick led the St. Louis Cardinals offense with 2 hits and 1 RBI in 3 at-bats. Adam Wainwright earned the win, allowing 0 earned runs in 8.0 innings.",
+   "rng_seed": 20261303,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-05-G3"
   }
  ]
 }

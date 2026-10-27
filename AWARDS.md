@@ -38,13 +38,13 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
+| Adam Wainwright | St. Louis Cardinals | 13.8 | 8.0 | 1 | 2 | 0 |
 | Mickey Lolich | Detroit Tigers | 13.4 | 7.0 | 1 | 8 | 1 |
 | David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
 | Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
 | Hal Newhouser | Detroit Tigers | 12.2 | 10.0 | 1 | 11 | 4 |
 | Dizzy Dean | St. Louis Cardinals | 11.7 | 6.0 | 1 | 10 | 2 |
 | Shane McClanahan | Tampa Bay Rays | 11.7 | 8.2 | 1 | 7 | 3 |
-| Jordan Zimmermann | Washington Nationals | 10.6 | 8.0 | 1 | 6 | 3 |
 
 ## Reliever
 
@@ -66,4 +66,4 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Mariano Rivera | New York Yankees | 7.4 | 1 | 1.0 | 1 | 0 |
 | Pete Fairbanks | Tampa Bay Rays | 7.1 | 1 | 2.1 | 1 | 2 |
 | Jake McGee | Tampa Bay Rays | 6.9 | 0 | 2.2 | 4 | 0 |
-| J.P. Howell | Tampa Bay Rays | 6.3 | 0 | 5.1 | 4 | 4 |
+| Ryan Helsley | St. Louis Cardinals | 6.8 | 1 | 1.2 | 0 | 1 |
