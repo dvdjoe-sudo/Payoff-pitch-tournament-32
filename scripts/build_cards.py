@@ -569,6 +569,7 @@ def build():
     apply_owner_roster_amendments(cards, rosters)
     apply_padres_roster_amendment(cards, rosters)
     apply_expos_roster_amendment(cards, rosters)
+    apply_diamondbacks_roster_amendment(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -720,6 +721,46 @@ def apply_expos_roster_amendment(cards, rosters):
         raise SystemExit("Expos owner roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Expos owner roster requires 26 distinct players")
+
+
+
+def apply_diamondbacks_roster_amendment(cards, rosters):
+    """Joe-approved Arizona 6/6 switch after R1-04.
+
+    The original converted set contains Juan Cruz. Keep that card and
+    any R1-04 results unchanged as historical data, but remove Cruz
+    from the active roster. David Peralta occupies bench LF6. His
+    original frozen Hitter v0.5 card must come from Joe; do not invent
+    percentile bands, attributes, or pitching/hitting data here.
+    """
+    roster = rosters.get("ARI")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "cruzju02"]
+    player_id = "peralda01"
+    matches = [p for p in players if p["id"] == player_id]
+    if not matches:
+        players.append({
+            "group": "bench", "id": player_id, "kind": "hitter",
+            "name": "David Peralta", "pos": "LF", "slot": 6,
+        })
+    else:
+        if len(matches) != 1:
+            raise SystemExit("duplicate Diamondbacks David Peralta roster entries")
+        matches[0].update(group="bench", kind="hitter", pos="LF", slot=6)
+    card = cards.get("ARI|" + player_id)
+    if card:
+        card["spots"] = [
+            {"group": "bench", "kind": "hitter", "pos": "LF", "slot": 6},
+        ]
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {group: sum(p["group"] == group for p in players) for group in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Arizona owner roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Arizona owner roster requires 26 distinct players")
 
 
 
