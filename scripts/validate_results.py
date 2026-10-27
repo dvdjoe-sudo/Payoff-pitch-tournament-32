@@ -1020,10 +1020,10 @@ def check_milwaukee_roster_amendment(check: Check) -> None:
     peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["MIL"]
     row = peak.get("OF2 Ben Oglivie LF (Milwaukee 1978-1986)") or {}
     check.expect(row.get("lahman_id") == "oglivbe01"
-                 and (row.get("status") != "ok" or (
-                      all(1978 <= y <= 1986 for y in row.get("years", []))
-                      and row.get("text", "").startswith("Peak 162 with Milwaukee Brewers"))),
-                 "Ben Oglivie peak must be verified or explicitly pending")
+                 and row.get("status") == "ok"
+                 and row.get("years") == [1978, 1979, 1980, 1981, 1982]
+                 and row.get("text", "").startswith("Peak 162 with Milwaukee Brewers"),
+                 "Ben Oglivie verified Brewers-only five-year Peak 162 is preserved")
     check.expect("LR/SP Freddy Peralta 2018-2025 (8)" not in peak,
                  "Inactive Peralta no longer in active Brewers peak display")
     docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")

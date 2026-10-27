@@ -316,7 +316,7 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
             "Freddy Peralta (`peralfr01`) leaves the active bullpen but keeps his original authentic historical converted pitcher card. The remaining six relievers are **Josh Hader, Devin Williams, Rollie Fingers, Dan Plesac, Ken Sanders and Jeremy Jeffress**, in the same RP1–RP6 order. The **entire starting nine, Prince Fielder at DH batting fourth, and five starting pitchers stay unchanged**. The active roster has **9 lineup / 6 bench / 5 rotation / 6 bullpen** and 26 unique players.",
             "",
-            "All historical cards, played games, box scores, results and FAC/dice logs remain unchanged. Oglivie's genuine Milwaukee-only **Hitter v0.5** card and verified five-year Peak 162 conversion are pending; **no fabricated dice ratings or statistics** are published. Any PED eligibility discussion is separate.",
+            "All historical cards, played games, box scores, results and FAC/dice logs remain unchanged. Oglivie's verified Milwaukee-only five-year Peak 162 display uses **1978–1982** (Lahman). His playable **Hitter v0.5** card remains pending authentic conversion; **no fabricated dice ratings** are published. Any PED eligibility discussion is separate.",
             "",
         ]
     if code == "OAK":

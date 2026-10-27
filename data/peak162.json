@@ -4601,6 +4601,18 @@
      2013
     ]
    },
+   "OF2 Ben Oglivie LF (Milwaukee 1978-1986)": {
+    "lahman_id": "oglivbe01",
+    "status": "ok",
+    "text": "Peak 162 with Milwaukee Brewers (1978–1982): 162 G, 679 PA, 606 AB, 94 R, 167 H, 29 2B, 3 3B, 32 HR, 105 RBI, 9 SB, 61 BB, 77 SO, .276/.343/.492/.835",
+    "years": [
+     1978,
+     1979,
+     1980,
+     1981,
+     1982
+    ]
+   },
    "SP1 Teddy Higuera 1985-1993 (9)": {
     "lahman_id": "higuete01",
     "status": "ok",
@@ -4682,12 +4694,6 @@
      1982,
      1984
     ]
-   },
-   "OF2 Ben Oglivie LF (Milwaukee 1978-1986)": {
-    "lahman_id": "oglivbe01",
-    "status": "unavailable",
-    "text": "Peak stats unavailable",
-    "reason": "Milwaukee-only 1978-1986 peak awaiting verified Lahman build; no guessed statistics."
    }
   },
   "MIN": {
