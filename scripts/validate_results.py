@@ -1016,13 +1016,13 @@ def check_oakland_roster_amendment(check: Check) -> None:
                  "Chavez playable card either genuine or pending, never fabricated")
     peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["OAK"]
     peak = peaks.get("IF2 Eric Chavez 3B (Oakland 1998-2010)") or {}
-    if peak:
-        check.expect(peak.get("status") == "ok"
-                     and peak.get("lahman_id") == "chaveer01"
-                     and all(1998 <= year <= 2010 for year in peak.get("years", [])),
-                     "Chavez Oakland-only Peak 162 correctly sourced")
-        check.expect("MID Gene Nelson" not in peaks,
-                     "Nelson no longer appears in active Oakland Peak 162")
+    check.expect(peak.get("status") == "ok"
+                 and peak.get("lahman_id") == "chaveer01"
+                 and peak.get("years") == [2000, 2001, 2002, 2003, 2004]
+                 and (peak.get("text") or "").startswith("Peak 162 with Oakland Athletics"),
+                 "Eric Chavez's authentic Oakland-only 2000-2004 five-year peak present")
+    check.expect("MID Gene Nelson" not in peaks,
+                 "Inactive Gene Nelson not present in active Oakland Peak 162")
     docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Eric Chavez (`chaveer01`) joins the **Oakland Athletics**" in docs,
                  "Oakland approved roster amendment published")

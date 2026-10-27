@@ -6107,6 +6107,18 @@
      1976
     ]
    },
+   "IF2 Eric Chavez 3B (Oakland 1998-2010)": {
+    "lahman_id": "chaveer01",
+    "status": "ok",
+    "text": "Peak 162 with Oakland Athletics (2000–2004): 162 G, 671 PA, 593 AB, 98 R, 166 H, 34 2B, 3 3B, 33 HR, 107 RBI, 7 SB, 71 BB, 110 SO, .280/.357/.513/.870",
+    "years": [
+     2000,
+     2001,
+     2002,
+     2003,
+     2004
+    ]
+   },
    "IF2/PR Bert Campaneris": {
     "lahman_id": "campabe01",
     "status": "ok",
@@ -6129,18 +6141,6 @@
      1990,
      1991,
      1992
-    ]
-   },
-   "MID Gene Nelson": {
-    "lahman_id": "nelsoge01",
-    "status": "ok",
-    "text": "Peak 162 with Oakland Athletics (1987–1991): 65 G, 6-6, 4 SV, 112.2 IP, 100 H, 44 ER, 37 BB, 75 SO, 3.51 ERA, 1.21 WHIP, 6.0 K/9",
-    "years": [
-     1987,
-     1988,
-     1989,
-     1990,
-     1991
     ]
    },
    "OF2 Joe Rudi": {
