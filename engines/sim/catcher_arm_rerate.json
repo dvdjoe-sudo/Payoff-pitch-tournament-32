@@ -1,0 +1,4340 @@
+{
+  "method": {
+    "scale": "rulebook page 8, 1 best to 5",
+    "metric": "relative catcher CS% = player CS/(CS+SB) / league CS% - 1",
+    "cuts_rel": [
+      0.44,
+      0.07,
+      -0.23,
+      -0.37
+    ],
+    "calibration": "Fitted to printed 1986 catcher arms. On seasons with >=15 attempts, 70/74 reproduced the printed arm.",
+    "min_attempts_confident": 25,
+    "min_attempts_assign": 15,
+    "no_cs_default": 3,
+    "outfield_arms": "unchanged",
+    "joe_approved": "2026-10-27: convert catcher arms to page-8 1-5 scale"
+  },
+  "catchers": [
+    {
+      "team": "ARI",
+      "group": "lineup",
+      "id": "morenga01",
+      "name": "Gabriel Moreno",
+      "key": "ARI|morenga01",
+      "window": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "years_used": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 2,
+      "cs": 62,
+      "sb": 159,
+      "att": 221,
+      "g": 376,
+      "cs_pct": 0.2805,
+      "lg_cs_pct": 0.2209,
+      "rel": 0.2698,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2023,
+          "CS": 22,
+          "SB": 35,
+          "G": 104,
+          "lg": 0.1982146944380865
+        },
+        {
+          "year": 2024,
+          "CS": 16,
+          "SB": 40,
+          "G": 93,
+          "lg": 0.20991699432066405
+        },
+        {
+          "year": 2025,
+          "CS": 10,
+          "SB": 42,
+          "G": 75,
+          "lg": 0.22330097087378642
+        },
+        {
+          "year": 2026,
+          "CS": 14,
+          "SB": 42,
+          "G": 104,
+          "lg": 0.2528604118993135
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv",
+        "MLB Stats API 2026 fielding"
+      ]
+    },
+    {
+      "team": "ARI",
+      "group": "bench",
+      "id": "montemi01",
+      "name": "Miguel Montero",
+      "key": "ARI|montemi01",
+      "window": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2014
+      ],
+      "years_used": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2014
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 134,
+      "sb": 270,
+      "att": 404,
+      "g": 594,
+      "cs_pct": 0.3317,
+      "lg_cs_pct": 0.2727,
+      "rel": 0.2165,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2009,
+          "CS": 23,
+          "SB": 67,
+          "G": 111,
+          "lg": 0.2761394101876676
+        },
+        {
+          "year": 2010,
+          "CS": 21,
+          "SB": 47,
+          "G": 79,
+          "lg": 0.27617416829745595
+        },
+        {
+          "year": 2011,
+          "CS": 32,
+          "SB": 48,
+          "G": 134,
+          "lg": 0.2777533039647577
+        },
+        {
+          "year": 2012,
+          "CS": 32,
+          "SB": 44,
+          "G": 139,
+          "lg": 0.2602520045819015
+        },
+        {
+          "year": 2014,
+          "CS": 26,
+          "SB": 64,
+          "G": 131,
+          "lg": 0.27244011581995264
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "ATL",
+      "group": "lineup",
+      "id": "torrejo01",
+      "name": "Joe Torre",
+      "key": "ATL|torrejo01",
+      "window": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "years_used": [
+        1963,
+        1964,
+        1965,
+        1966,
+        1967
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Above Average",
+      "old_arm_num": 7,
+      "new_arm": 2,
+      "cs": 138,
+      "sb": 184,
+      "att": 322,
+      "g": 529,
+      "cs_pct": 0.4286,
+      "lg_cs_pct": 0.3838,
+      "rel": 0.1167,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1963,
+          "CS": 21,
+          "SB": 28,
+          "G": 105,
+          "lg": 0.3810240963855422
+        },
+        {
+          "year": 1964,
+          "CS": 17,
+          "SB": 24,
+          "G": 96,
+          "lg": 0.3847769028871391
+        },
+        {
+          "year": 1965,
+          "CS": 24,
+          "SB": 49,
+          "G": 100,
+          "lg": 0.35137573297248537
+        },
+        {
+          "year": 1966,
+          "CS": 34,
+          "SB": 36,
+          "G": 114,
+          "lg": 0.388250319284802
+        },
+        {
+          "year": 1967,
+          "CS": 42,
+          "SB": 47,
+          "G": 114,
+          "lg": 0.40794066317626526
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "ATL",
+      "group": "bench",
+      "id": "crandde01",
+      "name": "Del Crandall",
+      "key": "ATL|crandde01",
+      "window": [
+        1956,
+        1958,
+        1959,
+        1960,
+        1962
+      ],
+      "years_used": [
+        1956,
+        1958,
+        1959,
+        1960,
+        1962
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Strong",
+      "old_arm_num": 8,
+      "new_arm": 2,
+      "cs": 116,
+      "sb": 126,
+      "att": 242,
+      "g": 610,
+      "cs_pct": 0.4793,
+      "lg_cs_pct": 0.3977,
+      "rel": 0.2053,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1956,
+          "CS": 7,
+          "SB": 9,
+          "G": 109,
+          "lg": 0.4219858156028369
+        },
+        {
+          "year": 1958,
+          "CS": 29,
+          "SB": 31,
+          "G": 124,
+          "lg": 0.4295774647887324
+        },
+        {
+          "year": 1959,
+          "CS": 32,
+          "SB": 28,
+          "G": 146,
+          "lg": 0.3902787705503931
+        },
+        {
+          "year": 1960,
+          "CS": 27,
+          "SB": 33,
+          "G": 141,
+          "lg": 0.40273259596616784
+        },
+        {
+          "year": 1962,
+          "CS": 21,
+          "SB": 25,
+          "G": 90,
+          "lg": 0.3507246376811594
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "BAL",
+      "group": "lineup",
+      "id": "dempsri01",
+      "name": "Rick Dempsey",
+      "key": "BAL|dempsri01",
+      "window": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1985
+      ],
+      "years_used": [
+        1978,
+        1980,
+        1982,
+        1984,
+        1985
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 180,
+      "sb": 300,
+      "att": 480,
+      "g": 610,
+      "cs_pct": 0.375,
+      "lg_cs_pct": 0.3329,
+      "rel": 0.1264,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1978,
+          "CS": 55,
+          "SB": 62,
+          "G": 135,
+          "lg": 0.3497835497835498
+        },
+        {
+          "year": 1980,
+          "CS": 45,
+          "SB": 53,
+          "G": 112,
+          "lg": 0.32830342577487764
+        },
+        {
+          "year": 1982,
+          "CS": 27,
+          "SB": 47,
+          "G": 124,
+          "lg": 0.3375052148518982
+        },
+        {
+          "year": 1984,
+          "CS": 23,
+          "SB": 59,
+          "G": 108,
+          "lg": 0.3325996037860445
+        },
+        {
+          "year": 1985,
+          "CS": 30,
+          "SB": 79,
+          "G": 131,
+          "lg": 0.31603356890459366
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "BAL",
+      "group": "bench",
+      "id": "hoilech01",
+      "name": "Chris Hoiles",
+      "key": "BAL|hoilech01",
+      "window": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1998
+      ],
+      "years_used": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1998
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 150,
+      "sb": 366,
+      "att": 516,
+      "g": 507,
+      "cs_pct": 0.2907,
+      "lg_cs_pct": 0.3197,
+      "rel": -0.0906,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1992,
+          "CS": 22,
+          "SB": 87,
+          "G": 95,
+          "lg": 0.32908530318602264
+        },
+        {
+          "year": 1993,
+          "CS": 46,
+          "SB": 67,
+          "G": 124,
+          "lg": 0.33719276863701
+        },
+        {
+          "year": 1994,
+          "CS": 24,
+          "SB": 50,
+          "G": 98,
+          "lg": 0.31367781155015195
+        },
+        {
+          "year": 1995,
+          "CS": 31,
+          "SB": 64,
+          "G": 107,
+          "lg": 0.3
+        },
+        {
+          "year": 1998,
+          "CS": 27,
+          "SB": 98,
+          "G": 83,
+          "lg": 0.3141186299081036
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "BOS",
+      "group": "lineup",
+      "id": "fiskca01",
+      "name": "Carlton Fisk",
+      "key": "BOS|fiskca01",
+      "window": [
+        1972,
+        1976,
+        1977,
+        1978,
+        1980
+      ],
+      "years_used": [
+        1972,
+        1976,
+        1977,
+        1978,
+        1980
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 215,
+      "sb": 383,
+      "att": 598,
+      "g": 684,
+      "cs_pct": 0.3595,
+      "lg_cs_pct": 0.3512,
+      "rel": 0.0238,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1972,
+          "CS": 36,
+          "SB": 56,
+          "G": 131,
+          "lg": 0.3790849673202614
+        },
+        {
+          "year": 1976,
+          "CS": 50,
+          "SB": 90,
+          "G": 133,
+          "lg": 0.33565368718729605
+        },
+        {
+          "year": 1977,
+          "CS": 50,
+          "SB": 60,
+          "G": 151,
+          "lg": 0.3711426188490409
+        },
+        {
+          "year": 1978,
+          "CS": 49,
+          "SB": 103,
+          "G": 154,
+          "lg": 0.3497835497835498
+        },
+        {
+          "year": 1980,
+          "CS": 30,
+          "SB": 74,
+          "G": 115,
+          "lg": 0.32830342577487764
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "BOS",
+      "group": "bench",
+      "id": "varitja01",
+      "name": "Jason Varitek",
+      "key": "BOS|varitja01",
+      "window": [
+        1999,
+        2003,
+        2004,
+        2005,
+        2007
+      ],
+      "years_used": [
+        1999,
+        2003,
+        2004,
+        2005,
+        2007
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 3,
+      "cs": 133,
+      "sb": 390,
+      "att": 523,
+      "g": 662,
+      "cs_pct": 0.2543,
+      "lg_cs_pct": 0.295,
+      "rel": -0.138,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1999,
+          "CS": 46,
+          "SB": 124,
+          "G": 140,
+          "lg": 0.30748987854251014
+        },
+        {
+          "year": 2003,
+          "CS": 23,
+          "SB": 61,
+          "G": 137,
+          "lg": 0.3055330634278003
+        },
+        {
+          "year": 2004,
+          "CS": 23,
+          "SB": 77,
+          "G": 130,
+          "lg": 0.2983739837398374
+        },
+        {
+          "year": 2005,
+          "CS": 21,
+          "SB": 65,
+          "G": 130,
+          "lg": 0.2941662080352229
+        },
+        {
+          "year": 2007,
+          "CS": 20,
+          "SB": 63,
+          "G": 125,
+          "lg": 0.2556122448979592
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "CHC",
+      "group": "lineup",
+      "id": "hartnga01",
+      "name": "Gabby Hartnett",
+      "key": "CHC|hartnga01",
+      "window": [
+        1924,
+        1928,
+        1930,
+        1935,
+        1937
+      ],
+      "years_used": [],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 0,
+      "sb": 0,
+      "att": 0,
+      "g": 0,
+      "cs_pct": null,
+      "lg_cs_pct": null,
+      "rel": null,
+      "defaulted": true,
+      "flags": [
+        "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+        "window years without CS tracking: 1924,1928,1930,1935,1937",
+        "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+      ],
+      "uncertain": true,
+      "year_rows": [],
+      "sources": []
+    },
+    {
+      "team": "CHC",
+      "group": "bench",
+      "id": "klingjo01",
+      "name": "Johnny Kling",
+      "key": "CHC|klingjo01",
+      "window": [
+        1902,
+        1903,
+        1906,
+        1907,
+        1908
+      ],
+      "years_used": [
+        1902,
+        1903,
+        1906,
+        1907,
+        1908
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Strong",
+      "old_arm_num": 8,
+      "new_arm": 2,
+      "cs": 542,
+      "sb": 528,
+      "att": 1070,
+      "g": 556,
+      "cs_pct": 0.5065,
+      "lg_cs_pct": 0.4488,
+      "rel": 0.1288,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1902,
+          "CS": 113,
+          "SB": 123,
+          "G": 113,
+          "lg": 0.4444674678823042
+        },
+        {
+          "year": 1903,
+          "CS": 150,
+          "SB": 148,
+          "G": 132,
+          "lg": 0.44796288826139574
+        },
+        {
+          "year": 1906,
+          "CS": 88,
+          "SB": 65,
+          "G": 96,
+          "lg": 0.4482441625298768
+        },
+        {
+          "year": 1907,
+          "CS": 79,
+          "SB": 92,
+          "G": 98,
+          "lg": 0.44768133174791913
+        },
+        {
+          "year": 1908,
+          "CS": 112,
+          "SB": 100,
+          "G": 117,
+          "lg": 0.4559028469042405
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "CIN",
+      "group": "lineup",
+      "id": "benchjo01",
+      "name": "Johnny Bench",
+      "key": "CIN|benchjo01",
+      "window": [
+        1969,
+        1970,
+        1972,
+        1974,
+        1975
+      ],
+      "years_used": [
+        1969,
+        1970,
+        1972,
+        1974,
+        1975
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Strong",
+      "old_arm_num": 8,
+      "new_arm": 2,
+      "cs": 163,
+      "sb": 155,
+      "att": 318,
+      "g": 673,
+      "cs_pct": 0.5126,
+      "lg_cs_pct": 0.3651,
+      "rel": 0.4041,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1969,
+          "CS": 40,
+          "SB": 30,
+          "G": 147,
+          "lg": 0.3771043771043771
+        },
+        {
+          "year": 1970,
+          "CS": 30,
+          "SB": 32,
+          "G": 139,
+          "lg": 0.360562437227988
+        },
+        {
+          "year": 1972,
+          "CS": 31,
+          "SB": 24,
+          "G": 129,
+          "lg": 0.3790849673202614
+        },
+        {
+          "year": 1974,
+          "CS": 35,
+          "SB": 37,
+          "G": 137,
+          "lg": 0.3570320579110651
+        },
+        {
+          "year": 1975,
+          "CS": 27,
+          "SB": 32,
+          "G": 121,
+          "lg": 0.352202868852459
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "CIN",
+      "group": "bench",
+      "id": "lombaer01",
+      "name": "Ernie Lombardi",
+      "key": "CIN|lombaer01",
+      "window": [
+        1932,
+        1935,
+        1936,
+        1938,
+        1940
+      ],
+      "years_used": [],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 0,
+      "sb": 0,
+      "att": 0,
+      "g": 0,
+      "cs_pct": null,
+      "lg_cs_pct": null,
+      "rel": null,
+      "defaulted": true,
+      "flags": [
+        "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+        "window years without CS tracking: 1932,1935,1936,1938,1940",
+        "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+      ],
+      "uncertain": true,
+      "year_rows": [],
+      "sources": []
+    },
+    {
+      "team": "CLE",
+      "group": "lineup",
+      "id": "martivi01",
+      "name": "Victor Martinez",
+      "key": "CLE|martivi01",
+      "window": [
+        2004,
+        2005,
+        2006,
+        2007,
+        2009
+      ],
+      "years_used": [
+        2004,
+        2005,
+        2006,
+        2007,
+        2009
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 123,
+      "sb": 411,
+      "att": 534,
+      "g": 613,
+      "cs_pct": 0.2303,
+      "lg_cs_pct": 0.2837,
+      "rel": -0.188,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2004,
+          "CS": 30,
+          "SB": 89,
+          "G": 132,
+          "lg": 0.2983739837398374
+        },
+        {
+          "year": 2005,
+          "CS": 29,
+          "SB": 96,
+          "G": 142,
+          "lg": 0.2941662080352229
+        },
+        {
+          "year": 2006,
+          "CS": 22,
+          "SB": 100,
+          "G": 133,
+          "lg": 0.28630384317771473
+        },
+        {
+          "year": 2007,
+          "CS": 33,
+          "SB": 70,
+          "G": 121,
+          "lg": 0.2556122448979592
+        },
+        {
+          "year": 2009,
+          "CS": 9,
+          "SB": 56,
+          "G": 85,
+          "lg": 0.2761394101876676
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "CLE",
+      "group": "bench",
+      "id": "santaca01",
+      "name": "Carlos Santana",
+      "key": "CLE|santaca01",
+      "window": [
+        2011,
+        2013,
+        2014,
+        2016,
+        2019
+      ],
+      "years_used": [
+        2011,
+        2013,
+        2014
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 33,
+      "sb": 115,
+      "att": 148,
+      "g": 190,
+      "cs_pct": 0.223,
+      "lg_cs_pct": 0.275,
+      "rel": -0.1891,
+      "defaulted": false,
+      "flags": [
+        "window years with no C fielding row: 2016,2019"
+      ],
+      "uncertain": true,
+      "year_rows": [
+        {
+          "year": 2011,
+          "CS": 18,
+          "SB": 56,
+          "G": 95,
+          "lg": 0.2777533039647577
+        },
+        {
+          "year": 2013,
+          "CS": 11,
+          "SB": 51,
+          "G": 84,
+          "lg": 0.27216216216216216
+        },
+        {
+          "year": 2014,
+          "CS": 4,
+          "SB": 8,
+          "G": 11,
+          "lg": 0.27244011581995264
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "COL",
+      "group": "lineup",
+      "id": "diazel01",
+      "name": "Elias Diaz",
+      "key": "COL|diazel01",
+      "window": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "years_used": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 2,
+      "cs": 71,
+      "sb": 190,
+      "att": 261,
+      "g": 407,
+      "cs_pct": 0.272,
+      "lg_cs_pct": 0.2192,
+      "rel": 0.241,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2021,
+          "CS": 16,
+          "SB": 22,
+          "G": 98,
+          "lg": 0.24316005471956223
+        },
+        {
+          "year": 2022,
+          "CS": 15,
+          "SB": 48,
+          "G": 104,
+          "lg": 0.245981195025781
+        },
+        {
+          "year": 2023,
+          "CS": 22,
+          "SB": 73,
+          "G": 126,
+          "lg": 0.1982146944380865
+        },
+        {
+          "year": 2024,
+          "CS": 18,
+          "SB": 47,
+          "G": 79,
+          "lg": 0.20991699432066405
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "COL",
+      "group": "bench",
+      "id": "torreyo01",
+      "name": "Yorvit Torrealba",
+      "key": "COL|torreyo01",
+      "window": [
+        2007
+      ],
+      "years_used": [
+        2007
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 3,
+      "cs": 15,
+      "sb": 61,
+      "att": 76,
+      "g": 112,
+      "cs_pct": 0.1974,
+      "lg_cs_pct": 0.2556,
+      "rel": -0.2279,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2007,
+          "CS": 15,
+          "SB": 61,
+          "G": 112,
+          "lg": 0.2556122448979592
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "CWS",
+      "group": "lineup",
+      "id": "fiskca01",
+      "name": "Carlton Fisk",
+      "key": "CWS|fiskca01",
+      "window": [
+        1981,
+        1983,
+        1985,
+        1989,
+        1990
+      ],
+      "years_used": [
+        1981,
+        1983,
+        1985,
+        1989,
+        1990
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 173,
+      "sb": 353,
+      "att": 526,
+      "g": 561,
+      "cs_pct": 0.3289,
+      "lg_cs_pct": 0.3246,
+      "rel": 0.0133,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1981,
+          "CS": 30,
+          "SB": 64,
+          "G": 92,
+          "lg": 0.35224358974358977
+        },
+        {
+          "year": 1983,
+          "CS": 31,
+          "SB": 77,
+          "G": 133,
+          "lg": 0.32746763754045305
+        },
+        {
+          "year": 1985,
+          "CS": 44,
+          "SB": 84,
+          "G": 130,
+          "lg": 0.31603356890459366
+        },
+        {
+          "year": 1989,
+          "CS": 26,
+          "SB": 57,
+          "G": 90,
+          "lg": 0.3162168093043669
+        },
+        {
+          "year": 1990,
+          "CS": 42,
+          "SB": 71,
+          "G": 116,
+          "lg": 0.3145833333333333
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "CWS",
+      "group": "bench",
+      "id": "schalra01",
+      "name": "Ray Schalk",
+      "key": "CWS|schalra01",
+      "window": [
+        1914,
+        1915,
+        1917,
+        1919,
+        1922
+      ],
+      "years_used": [],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 0,
+      "sb": 0,
+      "att": 0,
+      "g": 0,
+      "cs_pct": null,
+      "lg_cs_pct": null,
+      "rel": null,
+      "defaulted": true,
+      "flags": [
+        "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+        "window years without CS tracking: 1914,1915,1917,1919,1922",
+        "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+      ],
+      "uncertain": true,
+      "year_rows": [],
+      "sources": []
+    },
+    {
+      "team": "DET",
+      "group": "lineup",
+      "id": "freehbi01",
+      "name": "Bill Freehan",
+      "key": "DET|freehbi01",
+      "window": [
+        1964,
+        1967,
+        1968,
+        1971,
+        1974
+      ],
+      "years_used": [
+        1964,
+        1967,
+        1968,
+        1971,
+        1974
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 169,
+      "sb": 283,
+      "att": 452,
+      "g": 633,
+      "cs_pct": 0.3739,
+      "lg_cs_pct": 0.3792,
+      "rel": -0.0139,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1964,
+          "CS": 26,
+          "SB": 23,
+          "G": 141,
+          "lg": 0.3847769028871391
+        },
+        {
+          "year": 1967,
+          "CS": 33,
+          "SB": 59,
+          "G": 147,
+          "lg": 0.40794066317626526
+        },
+        {
+          "year": 1968,
+          "CS": 38,
+          "SB": 66,
+          "G": 138,
+          "lg": 0.3814907872696817
+        },
+        {
+          "year": 1971,
+          "CS": 36,
+          "SB": 67,
+          "G": 144,
+          "lg": 0.37085856786604915
+        },
+        {
+          "year": 1974,
+          "CS": 36,
+          "SB": 68,
+          "G": 63,
+          "lg": 0.3570320579110651
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "DET",
+      "group": "bench",
+      "id": "parrila02",
+      "name": "Lance Parrish",
+      "key": "DET|parrila02",
+      "window": [
+        1980,
+        1982,
+        1983,
+        1985,
+        1986
+      ],
+      "years_used": [
+        1980,
+        1982,
+        1983,
+        1985,
+        1986
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Above Average",
+      "old_arm_num": 7,
+      "new_arm": 2,
+      "cs": 204,
+      "sb": 268,
+      "att": 472,
+      "g": 589,
+      "cs_pct": 0.4322,
+      "lg_cs_pct": 0.3276,
+      "rel": 0.3195,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1980,
+          "CS": 36,
+          "SB": 58,
+          "G": 121,
+          "lg": 0.32830342577487764
+        },
+        {
+          "year": 1982,
+          "CS": 46,
+          "SB": 54,
+          "G": 132,
+          "lg": 0.3375052148518982
+        },
+        {
+          "year": 1983,
+          "CS": 54,
+          "SB": 57,
+          "G": 131,
+          "lg": 0.32746763754045305
+        },
+        {
+          "year": 1985,
+          "CS": 37,
+          "SB": 60,
+          "G": 120,
+          "lg": 0.31603356890459366
+        },
+        {
+          "year": 1986,
+          "CS": 31,
+          "SB": 39,
+          "G": 85,
+          "lg": 0.3284671532846715
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "HOU",
+      "group": "lineup",
+      "id": "biggicr01",
+      "name": "Craig Biggio",
+      "key": "HOU|biggicr01",
+      "window": [
+        1993,
+        1994,
+        1995,
+        1997,
+        1998
+      ],
+      "years_used": [
+        1988,
+        1989,
+        1990,
+        1991,
+        2007
+      ],
+      "basis": "career C (window lacked CS)",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 4,
+      "cs": 130,
+      "sb": 434,
+      "att": 564,
+      "g": 428,
+      "cs_pct": 0.2305,
+      "lg_cs_pct": 0.3194,
+      "rel": -0.2783,
+      "defaulted": false,
+      "flags": [
+        "franchise window had no usable catcher CS; used career C seasons 1988-2007"
+      ],
+      "uncertain": true,
+      "year_rows": [
+        {
+          "year": 1988,
+          "CS": 17,
+          "SB": 51,
+          "G": 50,
+          "lg": 0.3003391267486223
+        },
+        {
+          "year": 1989,
+          "CS": 29,
+          "SB": 140,
+          "G": 125,
+          "lg": 0.3162168093043669
+        },
+        {
+          "year": 1990,
+          "CS": 38,
+          "SB": 117,
+          "G": 113,
+          "lg": 0.3145833333333333
+        },
+        {
+          "year": 1991,
+          "CS": 46,
+          "SB": 126,
+          "G": 139,
+          "lg": 0.3343289950928099
+        },
+        {
+          "year": 2007,
+          "CS": 0,
+          "SB": 0,
+          "G": 1,
+          "lg": 0.2556122448979592
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "HOU",
+      "group": "bench",
+      "id": "ausmubr01",
+      "name": "Brad Ausmus",
+      "key": "HOU|ausmubr01",
+      "window": [
+        1997,
+        1998,
+        2002,
+        2005,
+        2007
+      ],
+      "years_used": [
+        1997,
+        1998,
+        2002,
+        2005,
+        2007
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 143,
+      "sb": 254,
+      "att": 397,
+      "g": 630,
+      "cs_pct": 0.3602,
+      "lg_cs_pct": 0.3044,
+      "rel": 0.1834,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1997,
+          "CS": 46,
+          "SB": 47,
+          "G": 129,
+          "lg": 0.32101806239737274
+        },
+        {
+          "year": 1998,
+          "CS": 31,
+          "SB": 56,
+          "G": 124,
+          "lg": 0.3141186299081036
+        },
+        {
+          "year": 2002,
+          "CS": 31,
+          "SB": 65,
+          "G": 129,
+          "lg": 0.3179563492063492
+        },
+        {
+          "year": 2005,
+          "CS": 18,
+          "SB": 39,
+          "G": 134,
+          "lg": 0.2941662080352229
+        },
+        {
+          "year": 2007,
+          "CS": 17,
+          "SB": 47,
+          "G": 114,
+          "lg": 0.2556122448979592
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "KC",
+      "group": "lineup",
+      "id": "perezsa02",
+      "name": "Salvador P\u00e9rez",
+      "key": "KC|perezsa02",
+      "window": [
+        2012,
+        2013,
+        2021,
+        2022,
+        2024
+      ],
+      "years_used": [
+        2012,
+        2013,
+        2021,
+        2022,
+        2024
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 82,
+      "sb": 150,
+      "att": 232,
+      "g": 503,
+      "cs_pct": 0.3534,
+      "lg_cs_pct": 0.2487,
+      "rel": 0.4213,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2012,
+          "CS": 18,
+          "SB": 25,
+          "G": 74,
+          "lg": 0.2602520045819015
+        },
+        {
+          "year": 2013,
+          "CS": 25,
+          "SB": 46,
+          "G": 137,
+          "lg": 0.27216216216216216
+        },
+        {
+          "year": 2021,
+          "CS": 18,
+          "SB": 23,
+          "G": 124,
+          "lg": 0.24316005471956223
+        },
+        {
+          "year": 2022,
+          "CS": 10,
+          "SB": 19,
+          "G": 77,
+          "lg": 0.245981195025781
+        },
+        {
+          "year": 2024,
+          "CS": 11,
+          "SB": 37,
+          "G": 91,
+          "lg": 0.20991699432066405
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "KC",
+      "group": "bench",
+      "id": "porteda02",
+      "name": "Darrell Porter",
+      "key": "KC|porteda02",
+      "window": [
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "years_used": [
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 172,
+      "sb": 233,
+      "att": 405,
+      "g": 492,
+      "cs_pct": 0.4247,
+      "lg_cs_pct": 0.3511,
+      "rel": 0.2094,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1977,
+          "CS": 42,
+          "SB": 57,
+          "G": 125,
+          "lg": 0.3711426188490409
+        },
+        {
+          "year": 1978,
+          "CS": 44,
+          "SB": 74,
+          "G": 145,
+          "lg": 0.3497835497835498
+        },
+        {
+          "year": 1979,
+          "CS": 57,
+          "SB": 64,
+          "G": 141,
+          "lg": 0.34876610613671105
+        },
+        {
+          "year": 1980,
+          "CS": 29,
+          "SB": 38,
+          "G": 81,
+          "lg": 0.32830342577487764
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "LAA",
+      "group": "lineup",
+      "id": "boonebo01",
+      "name": "Bob Boone",
+      "key": "LAA|boonebo01",
+      "window": [
+        1982,
+        1983,
+        1985,
+        1987,
+        1988
+      ],
+      "years_used": [
+        1982,
+        1983,
+        1985,
+        1987,
+        1988
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 1,
+      "cs": 237,
+      "sb": 271,
+      "att": 508,
+      "g": 680,
+      "cs_pct": 0.4665,
+      "lg_cs_pct": 0.3175,
+      "rel": 0.4693,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1982,
+          "CS": 64,
+          "SB": 46,
+          "G": 143,
+          "lg": 0.3375052148518982
+        },
+        {
+          "year": 1983,
+          "CS": 51,
+          "SB": 65,
+          "G": 142,
+          "lg": 0.32746763754045305
+        },
+        {
+          "year": 1985,
+          "CS": 45,
+          "SB": 57,
+          "G": 147,
+          "lg": 0.31603356890459366
+        },
+        {
+          "year": 1987,
+          "CS": 37,
+          "SB": 43,
+          "G": 127,
+          "lg": 0.29898318341806807
+        },
+        {
+          "year": 1988,
+          "CS": 40,
+          "SB": 60,
+          "G": 121,
+          "lg": 0.3003391267486223
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "LAA",
+      "group": "bench",
+      "id": "napolmi01",
+      "name": "Mike Napoli",
+      "key": "LAA|napolmi01",
+      "window": [
+        2006,
+        2009,
+        2010
+      ],
+      "years_used": [
+        2006,
+        2009,
+        2010
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 57,
+      "sb": 164,
+      "att": 221,
+      "g": 256,
+      "cs_pct": 0.2579,
+      "lg_cs_pct": 0.2787,
+      "rel": -0.0745,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2006,
+          "CS": 17,
+          "SB": 38,
+          "G": 94,
+          "lg": 0.28630384317771473
+        },
+        {
+          "year": 2009,
+          "CS": 21,
+          "SB": 74,
+          "G": 96,
+          "lg": 0.2761394101876676
+        },
+        {
+          "year": 2010,
+          "CS": 19,
+          "SB": 52,
+          "G": 66,
+          "lg": 0.27617416829745595
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "LAD",
+      "group": "lineup",
+      "id": "camparo01",
+      "name": "Roy Campanella",
+      "key": "LAD|camparo01",
+      "window": [
+        1949,
+        1950,
+        1951,
+        1953,
+        1955
+      ],
+      "years_used": [
+        1955
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Strong",
+      "old_arm_num": 8,
+      "new_arm": 2,
+      "cs": 23,
+      "sb": 21,
+      "att": 44,
+      "g": 121,
+      "cs_pct": 0.5227,
+      "lg_cs_pct": 0.456,
+      "rel": 0.1462,
+      "defaulted": false,
+      "flags": [
+        "window years without CS tracking: 1949,1950,1951,1953",
+        "1949-1953 seasons in window (Lahman has no catcher CS)"
+      ],
+      "uncertain": true,
+      "year_rows": [
+        {
+          "year": 1955,
+          "CS": 23,
+          "SB": 21,
+          "G": 121,
+          "lg": 0.45604395604395603
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "LAD",
+      "group": "bench",
+      "id": "piazzmi01",
+      "name": "Mike Piazza",
+      "key": "LAD|piazzmi01",
+      "window": [
+        1993,
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "years_used": [
+        1993,
+        1994,
+        1995,
+        1996,
+        1997
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 3,
+      "cs": 191,
+      "sb": 539,
+      "att": 730,
+      "g": 647,
+      "cs_pct": 0.2616,
+      "lg_cs_pct": 0.3131,
+      "rel": -0.1643,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1993,
+          "CS": 59,
+          "SB": 108,
+          "G": 146,
+          "lg": 0.33719276863701
+        },
+        {
+          "year": 1994,
+          "CS": 26,
+          "SB": 76,
+          "G": 104,
+          "lg": 0.31367781155015195
+        },
+        {
+          "year": 1995,
+          "CS": 29,
+          "SB": 88,
+          "G": 112,
+          "lg": 0.3
+        },
+        {
+          "year": 1996,
+          "CS": 34,
+          "SB": 155,
+          "G": 146,
+          "lg": 0.29310344827586204
+        },
+        {
+          "year": 1997,
+          "CS": 43,
+          "SB": 112,
+          "G": 139,
+          "lg": 0.32101806239737274
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "MIA",
+      "group": "lineup",
+      "id": "realmjt01",
+      "name": "J.T. Realmuto",
+      "key": "MIA|realmjt01",
+      "window": [
+        2015,
+        2016,
+        2017,
+        2018
+      ],
+      "years_used": [
+        2015,
+        2016,
+        2017,
+        2018
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 90,
+      "sb": 181,
+      "att": 271,
+      "g": 485,
+      "cs_pct": 0.3321,
+      "lg_cs_pct": 0.2817,
+      "rel": 0.1789,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2015,
+          "CS": 16,
+          "SB": 43,
+          "G": 118,
+          "lg": 0.29812272345194735
+        },
+        {
+          "year": 2016,
+          "CS": 28,
+          "SB": 51,
+          "G": 129,
+          "lg": 0.282928208027134
+        },
+        {
+          "year": 2017,
+          "CS": 25,
+          "SB": 53,
+          "G": 126,
+          "lg": 0.26986420109794856
+        },
+        {
+          "year": 2018,
+          "CS": 21,
+          "SB": 34,
+          "G": 112,
+          "lg": 0.27913752913752915
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "MIA",
+      "group": "bench",
+      "id": "johnsch04",
+      "name": "Charles Johnson",
+      "key": "MIA|johnsch04",
+      "window": [
+        1995,
+        1996,
+        1997,
+        2001
+      ],
+      "years_used": [
+        1995,
+        1996,
+        1997,
+        2001
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 1,
+      "cs": 171,
+      "sb": 209,
+      "att": 380,
+      "g": 465,
+      "cs_pct": 0.45,
+      "lg_cs_pct": 0.3078,
+      "rel": 0.4618,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1995,
+          "CS": 38,
+          "SB": 51,
+          "G": 97,
+          "lg": 0.3
+        },
+        {
+          "year": 1996,
+          "CS": 40,
+          "SB": 44,
+          "G": 120,
+          "lg": 0.29310344827586204
+        },
+        {
+          "year": 1997,
+          "CS": 56,
+          "SB": 62,
+          "G": 123,
+          "lg": 0.32101806239737274
+        },
+        {
+          "year": 2001,
+          "CS": 37,
+          "SB": 52,
+          "G": 125,
+          "lg": 0.31212591443138993
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "MIL",
+      "group": "lineup",
+      "id": "contrwi02",
+      "name": "William Contreras",
+      "key": "MIL|contrwi02",
+      "window": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "years_used": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 84,
+      "sb": 257,
+      "att": 341,
+      "g": 484,
+      "cs_pct": 0.2463,
+      "lg_cs_pct": 0.2191,
+      "rel": 0.1241,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2023,
+          "CS": 16,
+          "SB": 77,
+          "G": 108,
+          "lg": 0.1982146944380865
+        },
+        {
+          "year": 2024,
+          "CS": 21,
+          "SB": 72,
+          "G": 120,
+          "lg": 0.20991699432066405
+        },
+        {
+          "year": 2025,
+          "CS": 22,
+          "SB": 60,
+          "G": 128,
+          "lg": 0.22330097087378642
+        },
+        {
+          "year": 2026,
+          "CS": 25,
+          "SB": 48,
+          "G": 128,
+          "lg": 0.2528604118993135
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv",
+        "MLB Stats API 2026 fielding"
+      ]
+    },
+    {
+      "team": "MIL",
+      "group": "bench",
+      "id": "surhobj01",
+      "name": "B.J. Surhoff",
+      "key": "MIL|surhobj01",
+      "window": [
+        1987,
+        1990,
+        1991,
+        1993,
+        1995
+      ],
+      "years_used": [
+        1987,
+        1990,
+        1991,
+        1993,
+        1995
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 103,
+      "sb": 252,
+      "att": 355,
+      "g": 371,
+      "cs_pct": 0.2901,
+      "lg_cs_pct": 0.3164,
+      "rel": -0.0831,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1987,
+          "CS": 36,
+          "SB": 66,
+          "G": 98,
+          "lg": 0.29898318341806807
+        },
+        {
+          "year": 1990,
+          "CS": 31,
+          "SB": 89,
+          "G": 125,
+          "lg": 0.3145833333333333
+        },
+        {
+          "year": 1991,
+          "CS": 35,
+          "SB": 86,
+          "G": 127,
+          "lg": 0.3343289950928099
+        },
+        {
+          "year": 1993,
+          "CS": 1,
+          "SB": 0,
+          "G": 3,
+          "lg": 0.33719276863701
+        },
+        {
+          "year": 1995,
+          "CS": 0,
+          "SB": 11,
+          "G": 18,
+          "lg": 0.3
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "MIN",
+      "group": "lineup",
+      "id": "mauerjo01",
+      "name": "Joe Mauer",
+      "key": "MIN|mauerjo01",
+      "window": [
+        2006,
+        2009,
+        2010,
+        2012,
+        2013
+      ],
+      "years_used": [
+        2006,
+        2009,
+        2010,
+        2012,
+        2013
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 86,
+      "sb": 222,
+      "att": 308,
+      "g": 490,
+      "cs_pct": 0.2792,
+      "lg_cs_pct": 0.2742,
+      "rel": 0.0183,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2006,
+          "CS": 22,
+          "SB": 36,
+          "G": 120,
+          "lg": 0.28630384317771473
+        },
+        {
+          "year": 2009,
+          "CS": 19,
+          "SB": 54,
+          "G": 109,
+          "lg": 0.2761394101876676
+        },
+        {
+          "year": 2010,
+          "CS": 19,
+          "SB": 53,
+          "G": 112,
+          "lg": 0.27617416829745595
+        },
+        {
+          "year": 2012,
+          "CS": 9,
+          "SB": 56,
+          "G": 74,
+          "lg": 0.2602520045819015
+        },
+        {
+          "year": 2013,
+          "CS": 17,
+          "SB": 23,
+          "G": 75,
+          "lg": 0.27216216216216216
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "MIN",
+      "group": "bench",
+      "id": "batteea01",
+      "name": "Earl Battey",
+      "key": "MIN|batteea01",
+      "window": [
+        1960,
+        1961,
+        1963,
+        1964,
+        1965
+      ],
+      "years_used": [
+        1960,
+        1961,
+        1963,
+        1964,
+        1965
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 123,
+      "sb": 161,
+      "att": 284,
+      "g": 666,
+      "cs_pct": 0.4331,
+      "lg_cs_pct": 0.3794,
+      "rel": 0.1416,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1960,
+          "CS": 41,
+          "SB": 29,
+          "G": 136,
+          "lg": 0.40273259596616784
+        },
+        {
+          "year": 1961,
+          "CS": 19,
+          "SB": 33,
+          "G": 131,
+          "lg": 0.36981358989777513
+        },
+        {
+          "year": 1963,
+          "CS": 19,
+          "SB": 37,
+          "G": 146,
+          "lg": 0.3810240963855422
+        },
+        {
+          "year": 1964,
+          "CS": 18,
+          "SB": 34,
+          "G": 125,
+          "lg": 0.3847769028871391
+        },
+        {
+          "year": 1965,
+          "CS": 26,
+          "SB": 28,
+          "G": 128,
+          "lg": 0.35137573297248537
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "MON",
+      "group": "lineup",
+      "id": "cartega01",
+      "name": "Gary Carter",
+      "key": "MON|cartega01",
+      "window": [
+        1977,
+        1979,
+        1980,
+        1982,
+        1984
+      ],
+      "years_used": [
+        1977,
+        1979,
+        1980,
+        1982,
+        1984
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 304,
+      "sb": 492,
+      "att": 796,
+      "g": 729,
+      "cs_pct": 0.3819,
+      "lg_cs_pct": 0.3438,
+      "rel": 0.1108,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1977,
+          "CS": 55,
+          "SB": 113,
+          "G": 146,
+          "lg": 0.3711426188490409
+        },
+        {
+          "year": 1979,
+          "CS": 66,
+          "SB": 75,
+          "G": 138,
+          "lg": 0.34876610613671105
+        },
+        {
+          "year": 1980,
+          "CS": 63,
+          "SB": 94,
+          "G": 149,
+          "lg": 0.32830342577487764
+        },
+        {
+          "year": 1982,
+          "CS": 70,
+          "SB": 103,
+          "G": 153,
+          "lg": 0.3375052148518982
+        },
+        {
+          "year": 1984,
+          "CS": 50,
+          "SB": 107,
+          "G": 143,
+          "lg": 0.3325996037860445
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "MON",
+      "group": "bench",
+      "id": "schnebr01",
+      "name": "Brian Schneider",
+      "key": "MON|schnebr01",
+      "window": [
+        2003,
+        2004
+      ],
+      "years_used": [
+        2003,
+        2004
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Strong",
+      "old_arm_num": 8,
+      "new_arm": 1,
+      "cs": 63,
+      "sb": 60,
+      "att": 123,
+      "g": 231,
+      "cs_pct": 0.5122,
+      "lg_cs_pct": 0.3013,
+      "rel": 0.6997,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2003,
+          "CS": 27,
+          "SB": 24,
+          "G": 98,
+          "lg": 0.3055330634278003
+        },
+        {
+          "year": 2004,
+          "CS": 36,
+          "SB": 36,
+          "G": 133,
+          "lg": 0.2983739837398374
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "NYM",
+      "group": "lineup",
+      "id": "piazzmi01",
+      "name": "Mike Piazza",
+      "key": "NYM|piazzmi01",
+      "window": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "years_used": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 4,
+      "cs": 170,
+      "sb": 579,
+      "att": 749,
+      "g": 653,
+      "cs_pct": 0.227,
+      "lg_cs_pct": 0.3127,
+      "rel": -0.2742,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1998,
+          "CS": 41,
+          "SB": 115,
+          "G": 140,
+          "lg": 0.3141186299081036
+        },
+        {
+          "year": 1999,
+          "CS": 37,
+          "SB": 115,
+          "G": 137,
+          "lg": 0.30748987854251014
+        },
+        {
+          "year": 2000,
+          "CS": 32,
+          "SB": 110,
+          "G": 124,
+          "lg": 0.3116760828625235
+        },
+        {
+          "year": 2001,
+          "CS": 33,
+          "SB": 114,
+          "G": 131,
+          "lg": 0.31212591443138993
+        },
+        {
+          "year": 2002,
+          "CS": 27,
+          "SB": 125,
+          "G": 121,
+          "lg": 0.3179563492063492
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "NYM",
+      "group": "bench",
+      "id": "cartega01",
+      "name": "Gary Carter",
+      "key": "NYM|cartega01",
+      "window": [
+        1985,
+        1986,
+        1987,
+        1988
+      ],
+      "years_used": [
+        1985,
+        1986,
+        1987,
+        1988
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 173,
+      "sb": 471,
+      "att": 644,
+      "g": 519,
+      "cs_pct": 0.2686,
+      "lg_cs_pct": 0.3106,
+      "rel": -0.1351,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1985,
+          "CS": 51,
+          "SB": 99,
+          "G": 143,
+          "lg": 0.31603356890459366
+        },
+        {
+          "year": 1986,
+          "CS": 45,
+          "SB": 114,
+          "G": 122,
+          "lg": 0.3284671532846715
+        },
+        {
+          "year": 1987,
+          "CS": 46,
+          "SB": 122,
+          "G": 135,
+          "lg": 0.29898318341806807
+        },
+        {
+          "year": 1988,
+          "CS": 31,
+          "SB": 136,
+          "G": 119,
+          "lg": 0.3003391267486223
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "NYY",
+      "group": "lineup",
+      "id": "berrayo01",
+      "name": "Yogi Berra",
+      "key": "NYY|berrayo01",
+      "window": [
+        1950,
+        1952,
+        1953,
+        1954,
+        1956
+      ],
+      "years_used": [
+        1954,
+        1956
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 58,
+      "sb": 54,
+      "att": 112,
+      "g": 284,
+      "cs_pct": 0.5179,
+      "lg_cs_pct": 0.4515,
+      "rel": 0.1471,
+      "defaulted": false,
+      "flags": [
+        "window years without CS tracking: 1950,1952,1953",
+        "1949-1953 seasons in window (Lahman has no catcher CS)"
+      ],
+      "uncertain": true,
+      "year_rows": [
+        {
+          "year": 1954,
+          "CS": 34,
+          "SB": 28,
+          "G": 149,
+          "lg": 0.4752136752136752
+        },
+        {
+          "year": 1956,
+          "CS": 24,
+          "SB": 26,
+          "G": 135,
+          "lg": 0.4219858156028369
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "NYY",
+      "group": "bench",
+      "id": "munsoth01",
+      "name": "Thurman Munson",
+      "key": "NYY|munsoth01",
+      "window": [
+        1970,
+        1973,
+        1975,
+        1976,
+        1977
+      ],
+      "years_used": [
+        1970,
+        1973,
+        1975,
+        1976,
+        1977
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 240,
+      "sb": 307,
+      "att": 547,
+      "g": 654,
+      "cs_pct": 0.4388,
+      "lg_cs_pct": 0.357,
+      "rel": 0.2289,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1970,
+          "CS": 33,
+          "SB": 31,
+          "G": 125,
+          "lg": 0.360562437227988
+        },
+        {
+          "year": 1973,
+          "CS": 47,
+          "SB": 50,
+          "G": 142,
+          "lg": 0.37330456226880393
+        },
+        {
+          "year": 1975,
+          "CS": 60,
+          "SB": 59,
+          "G": 130,
+          "lg": 0.352202868852459
+        },
+        {
+          "year": 1976,
+          "CS": 50,
+          "SB": 91,
+          "G": 121,
+          "lg": 0.33565368718729605
+        },
+        {
+          "year": 1977,
+          "CS": 50,
+          "SB": 76,
+          "G": 136,
+          "lg": 0.3711426188490409
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "OAK",
+      "group": "lineup",
+      "id": "steinte01",
+      "name": "Terry Steinbach",
+      "key": "OAK|steinte01",
+      "window": [
+        1987,
+        1988,
+        1992,
+        1995,
+        1996
+      ],
+      "years_used": [
+        1987,
+        1988,
+        1992,
+        1995,
+        1996
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 201,
+      "sb": 322,
+      "att": 523,
+      "g": 563,
+      "cs_pct": 0.3843,
+      "lg_cs_pct": 0.305,
+      "rel": 0.2599,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1987,
+          "CS": 38,
+          "SB": 63,
+          "G": 107,
+          "lg": 0.29898318341806807
+        },
+        {
+          "year": 1988,
+          "CS": 37,
+          "SB": 48,
+          "G": 84,
+          "lg": 0.3003391267486223
+        },
+        {
+          "year": 1992,
+          "CS": 53,
+          "SB": 68,
+          "G": 124,
+          "lg": 0.32908530318602264
+        },
+        {
+          "year": 1995,
+          "CS": 39,
+          "SB": 60,
+          "G": 111,
+          "lg": 0.3
+        },
+        {
+          "year": 1996,
+          "CS": 34,
+          "SB": 83,
+          "G": 137,
+          "lg": 0.29310344827586204
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "OAK",
+      "group": "bench",
+      "id": "tenacge01",
+      "name": "Gene Tenace",
+      "key": "OAK|tenacge01",
+      "window": [
+        1973,
+        1974,
+        1975,
+        1976
+      ],
+      "years_used": [
+        1973,
+        1974,
+        1975,
+        1976
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 83,
+      "sb": 151,
+      "att": 234,
+      "g": 302,
+      "cs_pct": 0.3547,
+      "lg_cs_pct": 0.351,
+      "rel": 0.0106,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1973,
+          "CS": 7,
+          "SB": 13,
+          "G": 33,
+          "lg": 0.37330456226880393
+        },
+        {
+          "year": 1974,
+          "CS": 25,
+          "SB": 30,
+          "G": 79,
+          "lg": 0.3570320579110651
+        },
+        {
+          "year": 1975,
+          "CS": 34,
+          "SB": 66,
+          "G": 125,
+          "lg": 0.352202868852459
+        },
+        {
+          "year": 1976,
+          "CS": 17,
+          "SB": 42,
+          "G": 65,
+          "lg": 0.33565368718729605
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "PHA",
+      "group": "lineup",
+      "id": "cochrmi01",
+      "name": "Mickey Cochrane",
+      "key": "PHA|cochrmi01",
+      "window": [
+        1927,
+        1930,
+        1931,
+        1932,
+        1933
+      ],
+      "years_used": [],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 0,
+      "sb": 0,
+      "att": 0,
+      "g": 0,
+      "cs_pct": null,
+      "lg_cs_pct": null,
+      "rel": null,
+      "defaulted": true,
+      "flags": [
+        "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+        "window years without CS tracking: 1927,1930,1931,1932,1933",
+        "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+      ],
+      "uncertain": true,
+      "year_rows": [],
+      "sources": []
+    },
+    {
+      "team": "PHA",
+      "group": "bench",
+      "id": "schanwa01",
+      "name": "Wally Schang",
+      "key": "PHA|schanwa01",
+      "window": [
+        1914,
+        1915,
+        1916,
+        1917
+      ],
+      "years_used": [],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 0,
+      "sb": 0,
+      "att": 0,
+      "g": 0,
+      "cs_pct": null,
+      "lg_cs_pct": null,
+      "rel": null,
+      "defaulted": true,
+      "flags": [
+        "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+        "window years without CS tracking: 1914,1915,1916,1917",
+        "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+      ],
+      "uncertain": true,
+      "year_rows": [],
+      "sources": []
+    },
+    {
+      "team": "PHI",
+      "group": "lineup",
+      "id": "realmjt01",
+      "name": "J.T. Realmuto",
+      "key": "PHI|realmjt01",
+      "window": [
+        2019,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "years_used": [
+        2019,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 122,
+      "sb": 262,
+      "att": 384,
+      "g": 616,
+      "cs_pct": 0.3177,
+      "lg_cs_pct": 0.2302,
+      "rel": 0.3802,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2019,
+          "CS": 43,
+          "SB": 49,
+          "G": 133,
+          "lg": 0.26735218508997427
+        },
+        {
+          "year": 2021,
+          "CS": 10,
+          "SB": 28,
+          "G": 118,
+          "lg": 0.24316005471956223
+        },
+        {
+          "year": 2022,
+          "CS": 30,
+          "SB": 38,
+          "G": 133,
+          "lg": 0.245981195025781
+        },
+        {
+          "year": 2023,
+          "CS": 23,
+          "SB": 81,
+          "G": 133,
+          "lg": 0.1982146944380865
+        },
+        {
+          "year": 2024,
+          "CS": 16,
+          "SB": 66,
+          "G": 99,
+          "lg": 0.20991699432066405
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "PHI",
+      "group": "bench",
+      "id": "daultda01",
+      "name": "Darren Daulton",
+      "key": "PHI|daultda01",
+      "window": [
+        1990,
+        1992,
+        1993,
+        1995,
+        1997
+      ],
+      "years_used": [
+        1990,
+        1992,
+        1993,
+        1995
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 163,
+      "sb": 329,
+      "att": 492,
+      "g": 521,
+      "cs_pct": 0.3313,
+      "lg_cs_pct": 0.3218,
+      "rel": 0.0296,
+      "defaulted": false,
+      "flags": [
+        "window years with no C fielding row: 1997"
+      ],
+      "uncertain": true,
+      "year_rows": [
+        {
+          "year": 1990,
+          "CS": 42,
+          "SB": 78,
+          "G": 139,
+          "lg": 0.3145833333333333
+        },
+        {
+          "year": 1992,
+          "CS": 49,
+          "SB": 88,
+          "G": 141,
+          "lg": 0.32908530318602264
+        },
+        {
+          "year": 1993,
+          "CS": 45,
+          "SB": 89,
+          "G": 146,
+          "lg": 0.33719276863701
+        },
+        {
+          "year": 1995,
+          "CS": 27,
+          "SB": 74,
+          "G": 95,
+          "lg": 0.3
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "PIT",
+      "group": "lineup",
+      "id": "sanguma01",
+      "name": "Manny Sanguillen",
+      "key": "PIT|sanguma01",
+      "window": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1975
+      ],
+      "years_used": [
+        1969,
+        1970,
+        1971,
+        1972,
+        1975
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 159,
+      "sb": 237,
+      "att": 396,
+      "g": 632,
+      "cs_pct": 0.4015,
+      "lg_cs_pct": 0.3672,
+      "rel": 0.0935,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1969,
+          "CS": 36,
+          "SB": 46,
+          "G": 113,
+          "lg": 0.3771043771043771
+        },
+        {
+          "year": 1970,
+          "CS": 33,
+          "SB": 43,
+          "G": 125,
+          "lg": 0.360562437227988
+        },
+        {
+          "year": 1971,
+          "CS": 36,
+          "SB": 36,
+          "G": 135,
+          "lg": 0.37085856786604915
+        },
+        {
+          "year": 1972,
+          "CS": 29,
+          "SB": 42,
+          "G": 127,
+          "lg": 0.3790849673202614
+        },
+        {
+          "year": 1975,
+          "CS": 25,
+          "SB": 70,
+          "G": 132,
+          "lg": 0.352202868852459
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "PIT",
+      "group": "bench",
+      "id": "kendaja01",
+      "name": "Jason Kendall",
+      "key": "PIT|kendaja01",
+      "window": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2003
+      ],
+      "years_used": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2003
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 179,
+      "sb": 367,
+      "att": 546,
+      "g": 654,
+      "cs_pct": 0.3278,
+      "lg_cs_pct": 0.3133,
+      "rel": 0.0465,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1997,
+          "CS": 56,
+          "SB": 95,
+          "G": 142,
+          "lg": 0.32101806239737274
+        },
+        {
+          "year": 1998,
+          "CS": 32,
+          "SB": 83,
+          "G": 144,
+          "lg": 0.3141186299081036
+        },
+        {
+          "year": 1999,
+          "CS": 30,
+          "SB": 39,
+          "G": 75,
+          "lg": 0.30748987854251014
+        },
+        {
+          "year": 2000,
+          "CS": 38,
+          "SB": 87,
+          "G": 147,
+          "lg": 0.3116760828625235
+        },
+        {
+          "year": 2003,
+          "CS": 23,
+          "SB": 63,
+          "G": 146,
+          "lg": 0.3055330634278003
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "SD",
+      "group": "lineup",
+      "id": "tenacge01",
+      "name": "Gene Tenace",
+      "key": "SD|tenacge01",
+      "window": [
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "years_used": [
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 150,
+      "sb": 237,
+      "att": 387,
+      "g": 368,
+      "cs_pct": 0.3876,
+      "lg_cs_pct": 0.3498,
+      "rel": 0.1082,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1977,
+          "CS": 50,
+          "SB": 73,
+          "G": 99,
+          "lg": 0.3711426188490409
+        },
+        {
+          "year": 1978,
+          "CS": 23,
+          "SB": 42,
+          "G": 71,
+          "lg": 0.3497835497835498
+        },
+        {
+          "year": 1979,
+          "CS": 38,
+          "SB": 42,
+          "G": 94,
+          "lg": 0.34876610613671105
+        },
+        {
+          "year": 1980,
+          "CS": 39,
+          "SB": 80,
+          "G": 104,
+          "lg": 0.32830342577487764
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "SD",
+      "group": "bench",
+      "id": "santibe01",
+      "name": "Benito Santiago",
+      "key": "SD|santibe01",
+      "window": [
+        1987,
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "years_used": [
+        1987,
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 213,
+      "sb": 376,
+      "att": 589,
+      "g": 625,
+      "cs_pct": 0.3616,
+      "lg_cs_pct": 0.3186,
+      "rel": 0.135,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1987,
+          "CS": 50,
+          "SB": 104,
+          "G": 146,
+          "lg": 0.29898318341806807
+        },
+        {
+          "year": 1989,
+          "CS": 32,
+          "SB": 46,
+          "G": 127,
+          "lg": 0.3162168093043669
+        },
+        {
+          "year": 1990,
+          "CS": 31,
+          "SB": 60,
+          "G": 98,
+          "lg": 0.3145833333333333
+        },
+        {
+          "year": 1991,
+          "CS": 58,
+          "SB": 93,
+          "G": 151,
+          "lg": 0.3343289950928099
+        },
+        {
+          "year": 1992,
+          "CS": 42,
+          "SB": 73,
+          "G": 103,
+          "lg": 0.32908530318602264
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "SEA",
+      "group": "lineup",
+      "id": "raleica01",
+      "name": "Cal Raleigh",
+      "key": "SEA|raleica01",
+      "window": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "years_used": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 126,
+      "sb": 366,
+      "att": 492,
+      "g": 603,
+      "cs_pct": 0.2561,
+      "lg_cs_pct": 0.2243,
+      "rel": 0.1418,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2022,
+          "CS": 25,
+          "SB": 53,
+          "G": 115,
+          "lg": 0.245981195025781
+        },
+        {
+          "year": 2023,
+          "CS": 27,
+          "SB": 78,
+          "G": 128,
+          "lg": 0.1982146944380865
+        },
+        {
+          "year": 2024,
+          "CS": 32,
+          "SB": 81,
+          "G": 135,
+          "lg": 0.20991699432066405
+        },
+        {
+          "year": 2025,
+          "CS": 21,
+          "SB": 78,
+          "G": 121,
+          "lg": 0.22330097087378642
+        },
+        {
+          "year": 2026,
+          "CS": 21,
+          "SB": 76,
+          "G": 104,
+          "lg": 0.2528604118993135
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv",
+        "MLB Stats API 2026 fielding"
+      ]
+    },
+    {
+      "team": "SEA",
+      "group": "bench",
+      "id": "wilsoda01",
+      "name": "Dan Wilson",
+      "key": "SEA|wilsoda01",
+      "window": [
+        1995,
+        1996,
+        1997,
+        2001,
+        2002
+      ],
+      "years_used": [
+        1995,
+        1996,
+        1997,
+        2001,
+        2002
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 169,
+      "sb": 291,
+      "att": 460,
+      "g": 633,
+      "cs_pct": 0.3674,
+      "lg_cs_pct": 0.3085,
+      "rel": 0.191,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1995,
+          "CS": 39,
+          "SB": 67,
+          "G": 119,
+          "lg": 0.3
+        },
+        {
+          "year": 1996,
+          "CS": 39,
+          "SB": 61,
+          "G": 135,
+          "lg": 0.29310344827586204
+        },
+        {
+          "year": 1997,
+          "CS": 56,
+          "SB": 74,
+          "G": 144,
+          "lg": 0.32101806239737274
+        },
+        {
+          "year": 2001,
+          "CS": 18,
+          "SB": 46,
+          "G": 122,
+          "lg": 0.31212591443138993
+        },
+        {
+          "year": 2002,
+          "CS": 17,
+          "SB": 43,
+          "G": 113,
+          "lg": 0.3179563492063492
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "SF",
+      "group": "lineup",
+      "id": "poseybu01",
+      "name": "Buster Posey",
+      "key": "SF|poseybu01",
+      "window": [
+        2010,
+        2012,
+        2014,
+        2015,
+        2021
+      ],
+      "years_used": [
+        2010,
+        2012,
+        2014,
+        2015,
+        2021
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 122,
+      "sb": 255,
+      "att": 377,
+      "g": 513,
+      "cs_pct": 0.3236,
+      "lg_cs_pct": 0.2697,
+      "rel": 0.2,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2010,
+          "CS": 23,
+          "SB": 39,
+          "G": 76,
+          "lg": 0.27617416829745595
+        },
+        {
+          "year": 2012,
+          "CS": 38,
+          "SB": 87,
+          "G": 114,
+          "lg": 0.2602520045819015
+        },
+        {
+          "year": 2014,
+          "CS": 25,
+          "SB": 59,
+          "G": 111,
+          "lg": 0.27244011581995264
+        },
+        {
+          "year": 2015,
+          "CS": 22,
+          "SB": 39,
+          "G": 106,
+          "lg": 0.29812272345194735
+        },
+        {
+          "year": 2021,
+          "CS": 14,
+          "SB": 31,
+          "G": 106,
+          "lg": 0.24316005471956223
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "SF",
+      "group": "bench",
+      "id": "brenlbo01",
+      "name": "Bob Brenly",
+      "key": "SF|brenlbo01",
+      "window": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "years_used": [
+        1983,
+        1984,
+        1985,
+        1986,
+        1987
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 230,
+      "sb": 396,
+      "att": 626,
+      "g": 536,
+      "cs_pct": 0.3674,
+      "lg_cs_pct": 0.3205,
+      "rel": 0.1464,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1983,
+          "CS": 42,
+          "SB": 60,
+          "G": 90,
+          "lg": 0.32746763754045305
+        },
+        {
+          "year": 1984,
+          "CS": 56,
+          "SB": 103,
+          "G": 127,
+          "lg": 0.3325996037860445
+        },
+        {
+          "year": 1985,
+          "CS": 39,
+          "SB": 89,
+          "G": 110,
+          "lg": 0.31603356890459366
+        },
+        {
+          "year": 1986,
+          "CS": 42,
+          "SB": 61,
+          "G": 101,
+          "lg": 0.3284671532846715
+        },
+        {
+          "year": 1987,
+          "CS": 51,
+          "SB": 83,
+          "G": 108,
+          "lg": 0.29898318341806807
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "STL",
+      "group": "lineup",
+      "id": "molinya01",
+      "name": "Yadier Molina",
+      "key": "STL|molinya01",
+      "window": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2016
+      ],
+      "years_used": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2016
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Above Average",
+      "old_arm_num": 7,
+      "new_arm": 2,
+      "cs": 113,
+      "sb": 200,
+      "att": 313,
+      "g": 657,
+      "cs_pct": 0.361,
+      "lg_cs_pct": 0.2735,
+      "rel": 0.32,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2011,
+          "CS": 19,
+          "SB": 46,
+          "G": 137,
+          "lg": 0.2777533039647577
+        },
+        {
+          "year": 2012,
+          "CS": 35,
+          "SB": 38,
+          "G": 136,
+          "lg": 0.2602520045819015
+        },
+        {
+          "year": 2013,
+          "CS": 20,
+          "SB": 26,
+          "G": 131,
+          "lg": 0.27216216216216216
+        },
+        {
+          "year": 2014,
+          "CS": 21,
+          "SB": 23,
+          "G": 107,
+          "lg": 0.27244011581995264
+        },
+        {
+          "year": 2016,
+          "CS": 18,
+          "SB": 67,
+          "G": 146,
+          "lg": 0.282928208027134
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "STL",
+      "group": "bench",
+      "id": "simmote01",
+      "name": "Ted Simmons",
+      "key": "STL|simmote01",
+      "window": [
+        1975,
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "years_used": [
+        1975,
+        1977,
+        1978,
+        1979,
+        1980
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 245,
+      "sb": 532,
+      "att": 777,
+      "g": 682,
+      "cs_pct": 0.3153,
+      "lg_cs_pct": 0.3495,
+      "rel": -0.0978,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1975,
+          "CS": 33,
+          "SB": 96,
+          "G": 154,
+          "lg": 0.352202868852459
+        },
+        {
+          "year": 1977,
+          "CS": 54,
+          "SB": 97,
+          "G": 143,
+          "lg": 0.3711426188490409
+        },
+        {
+          "year": 1978,
+          "CS": 65,
+          "SB": 125,
+          "G": 134,
+          "lg": 0.3497835497835498
+        },
+        {
+          "year": 1979,
+          "CS": 40,
+          "SB": 98,
+          "G": 122,
+          "lg": 0.34876610613671105
+        },
+        {
+          "year": 1980,
+          "CS": 53,
+          "SB": 116,
+          "G": 129,
+          "lg": 0.32830342577487764
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "TB",
+      "group": "lineup",
+      "id": "hallto02",
+      "name": "Toby Hall",
+      "key": "TB|hallto02",
+      "window": [
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "years_used": [
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 114,
+      "sb": 174,
+      "att": 288,
+      "g": 467,
+      "cs_pct": 0.3958,
+      "lg_cs_pct": 0.3035,
+      "rel": 0.3042,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2002,
+          "CS": 24,
+          "SB": 40,
+          "G": 83,
+          "lg": 0.3179563492063492
+        },
+        {
+          "year": 2003,
+          "CS": 34,
+          "SB": 44,
+          "G": 130,
+          "lg": 0.3055330634278003
+        },
+        {
+          "year": 2004,
+          "CS": 23,
+          "SB": 44,
+          "G": 119,
+          "lg": 0.2983739837398374
+        },
+        {
+          "year": 2005,
+          "CS": 33,
+          "SB": 46,
+          "G": 135,
+          "lg": 0.2941662080352229
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "TB",
+      "group": "bench",
+      "id": "zuninmi01",
+      "name": "Mike Zunino",
+      "key": "TB|zuninmi01",
+      "window": [
+        2021
+      ],
+      "years_used": [
+        2021
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 3,
+      "cs": 13,
+      "sb": 47,
+      "att": 60,
+      "g": 105,
+      "cs_pct": 0.2167,
+      "lg_cs_pct": 0.2432,
+      "rel": -0.109,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2021,
+          "CS": 13,
+          "SB": 47,
+          "G": 105,
+          "lg": 0.24316005471956223
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "TEX",
+      "group": "lineup",
+      "id": "rodriiv01",
+      "name": "Ivan Rodriguez",
+      "key": "TEX|rodriiv01",
+      "window": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "years_used": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Strong",
+      "old_arm_num": 8,
+      "new_arm": 1,
+      "cs": 159,
+      "sb": 141,
+      "att": 300,
+      "g": 573,
+      "cs_pct": 0.53,
+      "lg_cs_pct": 0.3123,
+      "rel": 0.6972,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1998,
+          "CS": 49,
+          "SB": 38,
+          "G": 139,
+          "lg": 0.3141186299081036
+        },
+        {
+          "year": 1999,
+          "CS": 41,
+          "SB": 34,
+          "G": 141,
+          "lg": 0.30748987854251014
+        },
+        {
+          "year": 2000,
+          "CS": 19,
+          "SB": 20,
+          "G": 87,
+          "lg": 0.3116760828625235
+        },
+        {
+          "year": 2001,
+          "CS": 35,
+          "SB": 23,
+          "G": 106,
+          "lg": 0.31212591443138993
+        },
+        {
+          "year": 2002,
+          "CS": 15,
+          "SB": 26,
+          "G": 100,
+          "lg": 0.3179563492063492
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "TEX",
+      "group": "bench",
+      "id": "sundbji01",
+      "name": "Jim Sundberg",
+      "key": "TEX|sundbji01",
+      "window": [
+        1974,
+        1977,
+        1978,
+        1980,
+        1981
+      ],
+      "years_used": [
+        1974,
+        1977,
+        1978,
+        1980,
+        1981
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Above Average",
+      "old_arm_num": 7,
+      "new_arm": 2,
+      "cs": 258,
+      "sb": 328,
+      "att": 586,
+      "g": 678,
+      "cs_pct": 0.4403,
+      "lg_cs_pct": 0.3494,
+      "rel": 0.2601,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1974,
+          "CS": 43,
+          "SB": 67,
+          "G": 132,
+          "lg": 0.3570320579110651
+        },
+        {
+          "year": 1977,
+          "CS": 55,
+          "SB": 43,
+          "G": 149,
+          "lg": 0.3711426188490409
+        },
+        {
+          "year": 1978,
+          "CS": 70,
+          "SB": 75,
+          "G": 148,
+          "lg": 0.3497835497835498
+        },
+        {
+          "year": 1980,
+          "CS": 52,
+          "SB": 102,
+          "G": 151,
+          "lg": 0.32830342577487764
+        },
+        {
+          "year": 1981,
+          "CS": 38,
+          "SB": 41,
+          "G": 98,
+          "lg": 0.35224358974358977
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "TOR",
+      "group": "lineup",
+      "id": "whitter01",
+      "name": "Ernie Whitt",
+      "key": "TOR|whitter01",
+      "window": [
+        1983,
+        1985,
+        1986,
+        1988,
+        1989
+      ],
+      "years_used": [
+        1983,
+        1985,
+        1986,
+        1988,
+        1989
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 3,
+      "cs": 156,
+      "sb": 329,
+      "att": 485,
+      "g": 620,
+      "cs_pct": 0.3216,
+      "lg_cs_pct": 0.3166,
+      "rel": 0.0161,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 1983,
+          "CS": 33,
+          "SB": 54,
+          "G": 119,
+          "lg": 0.32746763754045305
+        },
+        {
+          "year": 1985,
+          "CS": 28,
+          "SB": 60,
+          "G": 134,
+          "lg": 0.31603356890459366
+        },
+        {
+          "year": 1986,
+          "CS": 33,
+          "SB": 63,
+          "G": 129,
+          "lg": 0.3284671532846715
+        },
+        {
+          "year": 1988,
+          "CS": 34,
+          "SB": 90,
+          "G": 123,
+          "lg": 0.3003391267486223
+        },
+        {
+          "year": 1989,
+          "CS": 28,
+          "SB": 62,
+          "G": 115,
+          "lg": 0.3162168093043669
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "TOR",
+      "group": "bench",
+      "id": "kirkal01",
+      "name": "Alejandro Kirk",
+      "key": "TOR|kirkal01",
+      "window": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "years_used": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 3,
+      "cs": 86,
+      "sb": 312,
+      "att": 398,
+      "g": 460,
+      "cs_pct": 0.2161,
+      "lg_cs_pct": 0.2249,
+      "rel": -0.0391,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2022,
+          "CS": 12,
+          "SB": 35,
+          "G": 78,
+          "lg": 0.245981195025781
+        },
+        {
+          "year": 2023,
+          "CS": 15,
+          "SB": 68,
+          "G": 99,
+          "lg": 0.1982146944380865
+        },
+        {
+          "year": 2024,
+          "CS": 27,
+          "SB": 60,
+          "G": 93,
+          "lg": 0.20991699432066405
+        },
+        {
+          "year": 2025,
+          "CS": 17,
+          "SB": 69,
+          "G": 118,
+          "lg": 0.22330097087378642
+        },
+        {
+          "year": 2026,
+          "CS": 15,
+          "SB": 80,
+          "G": 72,
+          "lg": 0.2528604118993135
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv",
+        "MLB Stats API 2026 fielding"
+      ]
+    },
+    {
+      "team": "WSH",
+      "group": "lineup",
+      "id": "ramoswi01",
+      "name": "Wilson Ramos",
+      "key": "WSH|ramoswi01",
+      "window": [
+        2011,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
+      "years_used": [
+        2011,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Average",
+      "old_arm_num": 6,
+      "new_arm": 2,
+      "cs": 98,
+      "sb": 174,
+      "att": 272,
+      "g": 525,
+      "cs_pct": 0.3603,
+      "lg_cs_pct": 0.2808,
+      "rel": 0.2829,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2011,
+          "CS": 23,
+          "SB": 48,
+          "G": 108,
+          "lg": 0.2777533039647577
+        },
+        {
+          "year": 2013,
+          "CS": 14,
+          "SB": 34,
+          "G": 77,
+          "lg": 0.27216216216216216
+        },
+        {
+          "year": 2014,
+          "CS": 18,
+          "SB": 30,
+          "G": 87,
+          "lg": 0.27244011581995264
+        },
+        {
+          "year": 2015,
+          "CS": 24,
+          "SB": 30,
+          "G": 125,
+          "lg": 0.29812272345194735
+        },
+        {
+          "year": 2016,
+          "CS": 19,
+          "SB": 32,
+          "G": 128,
+          "lg": 0.282928208027134
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv"
+      ]
+    },
+    {
+      "team": "WSH",
+      "group": "bench",
+      "id": "ruizke01",
+      "name": "Keibert Ruiz",
+      "key": "WSH|ruizke01",
+      "window": [
+        2022,
+        2023,
+        2024,
+        2026
+      ],
+      "years_used": [
+        2022,
+        2023,
+        2024,
+        2026
+      ],
+      "basis": "franchise window",
+      "old_arm_word": "Below Average",
+      "old_arm_num": 5,
+      "new_arm": 3,
+      "cs": 81,
+      "sb": 325,
+      "att": 406,
+      "g": 441,
+      "cs_pct": 0.1995,
+      "lg_cs_pct": 0.2211,
+      "rel": -0.0976,
+      "defaulted": false,
+      "flags": [],
+      "uncertain": false,
+      "year_rows": [
+        {
+          "year": 2022,
+          "CS": 20,
+          "SB": 51,
+          "G": 106,
+          "lg": 0.245981195025781
+        },
+        {
+          "year": 2023,
+          "CS": 21,
+          "SB": 119,
+          "G": 117,
+          "lg": 0.1982146944380865
+        },
+        {
+          "year": 2024,
+          "CS": 22,
+          "SB": 89,
+          "G": 116,
+          "lg": 0.20991699432066405
+        },
+        {
+          "year": 2026,
+          "CS": 18,
+          "SB": 66,
+          "G": 102,
+          "lg": 0.2528604118993135
+        }
+      ],
+      "sources": [
+        "Lahman Fielding.csv",
+        "MLB Stats API 2026 fielding"
+      ]
+    }
+  ]
+}

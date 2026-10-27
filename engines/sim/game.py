@@ -2263,7 +2263,7 @@ class Game:
         arm = self._arm_of(catcher)
         if arm is None or not 1 <= int(arm) <= 5:
             self.gap(
-                "Catcher arm is %s. Page 8 rates a catcher from 1 to 5, 1 the best. The 1986 cards print catcher arms on that scale (Gedman 1, Whitt 2, Fisk 3, Tony Pena 2) and a separate outfield arm on the same player (Fisk's 1986 LF arm is 8). These roster cards store the hitter solver's words instead: weak 4, below average 5, average 6, above average 7, strong 8. The book does not say how to turn 6, 7, or 8 into a 1-5 catcher arm. The steal chart is not used and the runner holds."
+                "Catcher arm is %s. Page 8 rates a catcher from 1 to 5, 1 the best. Roster catcher arms were re-rated onto that scale from caught-stealing rates (see engines/sim/catcher_arm_rerate.json). An arm outside 1-5 is not on the steal chart, so the runner holds."
                 % arm
             )
             return

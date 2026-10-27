@@ -185,6 +185,7 @@ def steal_defense_and_pitch_quality():
     assert found.box["TOR|thief"]["cs"] == 1
 
     found = game()
+    arm(found, "BOS", "C", 6)  # out of page-8 1-5: hold path
     who = runner("thief", 8)
     found.bases = [who, None, None]
     feed(found, [1, 1])
@@ -317,16 +318,18 @@ def roster_rules_and_extra_innings():
 
 def sample_game_stays_out_of_the_tournament():
     report = play("BOS", "TOR", seed=1)
-    assert report["score"] == {"TOR": 0, "BOS": 4}
+    assert report["score"] == {"TOR": 0, "BOS": 2}
     assert report["innings"] == 9
     assert report["postponed"] is False
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
-    assert report["pitching"]["TOR|stiebda01"]["outs"] == 21
+    assert report["pitching"]["TOR|stiebda01"]["outs"] == 24
     assert report["wp"] == {
-        "seen": 11, "fired": 0, "miss": 7, "empty": 4, "no_rating": 0, "unmarked": 0,
+        "seen": 14, "fired": 0, "miss": 3, "empty": 11, "no_rating": 0, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
-    assert any("WP? drawn 11. Fired 0." in line for line in report["log"])
+    assert any("WP? drawn 14. Fired 0." in line for line in report["log"])
+    # Catcher arms are on the page-8 1-5 scale, so steals resolve.
+    assert any("FAC steal." in line for line in report["log"])
     blob = subprocess.check_output(["git", "hash-object", "tournament_results.json"], cwd=ROOT, text=True).strip()
     assert blob == "c355ca75cf71d179e8d2fa4c01a8d8756d5e58c4"
     diff = subprocess.check_output(["git", "diff", "--", "sw.js"], cwd=ROOT, text=True)
@@ -377,11 +380,12 @@ def fac_deck_and_scripted_plays():
     assert found.box["TOR|" + batter["id"]]["sh"] == 1
 
     found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    arm(found, "BOS", "C", 6)  # out of page-8 1-5: hold path
     who = runner("thief", 8)
     found.bases = [who, None, None]
     found._resolve_steal(0, "A", who)
     assert found.bases[0]["id"] == "thief"
-    assert any("does not say how to turn 6, 7, or 8" in gap for gap in found.gaps)
+    assert any("outside 1-5 is not on the steal chart" in gap for gap in found.gaps)
 
 
 def _fac_index(cards, page, row, col):
