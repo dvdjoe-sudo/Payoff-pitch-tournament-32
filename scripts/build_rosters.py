@@ -308,6 +308,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "TB":
+        lines += [
+            "### Approved active roster amendment (2026-10-26)",
+            "",
+            "Aubrey Huff (`huffau01`) joins the active roster as bench OF6 (corner infield/outfield/DH). Kevin Kelly (`kellyke02`) moves off the active bullpen. This makes the active club 9 lineup / 6 bench / 5 starting pitchers / 6 relievers, 26 total.",
+            "",
+            "This approval applies only after R1-03. Previous game results, box scores, FAC/dice records and historical converted Kevin Kelly card are preserved. Huff's frozen Hitter v0.5 Payoff Pitch card remains pending user conversion; use Tampa Bay franchise seasons only. Active slots are in `data/rosters.json`.",
+            "",
+        ]
+
     if appeared["lineup"] or appeared["rotation"] or appeared["bullpen"] or appeared["subs"]:
         lines += ["### Players in the results file", ""]
         if not canonical and code not in announced:
