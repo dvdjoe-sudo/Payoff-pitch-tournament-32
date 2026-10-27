@@ -1538,6 +1538,12 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 Bracket: losers. Series losses: 1. Full 26 Index: 442.8.
 
+### Approved active roster amendment (2026-10-26)
+
+David Peralta (`peralda01`) joins the sixth bench spot as a left-handed outfielder (LF). Juan Cruz (`cruzju02`) leaves the active bullpen. The active 26 now have 9 lineup players, 6 bench players, 5 starting pitchers, and 6 relievers.
+
+The amendment is for games after R1-04 only. Cruz's appearances below, original converted card (if on file), and all game results remain historical records. Peralta's frozen Hitter v0.5 conversion is pending and no card ratings are assumed. Active personnel are listed in `data/rosters.json`.
+
 ### Players in the results file
 
 Positions are not in the results file. TODO for Joe: positions, manager, and anyone who has not appeared.
