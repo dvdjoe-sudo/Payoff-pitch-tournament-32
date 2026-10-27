@@ -913,6 +913,13 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies official owner roster matches active 6/6")
     check.expect("PHI|madsory01" in cards,
                  "Ryan Madson original converted card remains archived")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["PHI"]
+    klein_peak = peaks.get("BAT2 Chuck Klein RF/LF L (Contact/Power)") or {}
+    check.expect(klein_peak.get("lahman_id") == "kleinch01"
+                 and klein_peak.get("years") == [1929, 1930, 1931, 1932, 1933],
+                 "Phillies-only Chuck Klein 1929-1933 Peak 162 matches approved bench")
+    check.expect("SET/MULTI Ryan Madson 9" not in peaks,
+                 "Inactive Ryan Madson absent from active Phillies Peak 162")
     text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Chuck Klein (`kleinch01`) is Philadelphia" in text,
                  "Phillies dated amendment is documented in published roster")

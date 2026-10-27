@@ -6711,6 +6711,18 @@
      1969
     ]
    },
+   "BAT2 Chuck Klein RF/LF L (Contact/Power)": {
+    "lahman_id": "kleinch01",
+    "status": "ok",
+    "text": "Peak 162 with Philadelphia Phillies (1929–1933): 162 G, 733 PA, 665 AB, 140 R, 239 H, 50 2B, 10 3B, 38 HR, 148 RBI, 11 SB, 60 BB, 52 SO, .359/.414/.636/1.050",
+    "years": [
+     1929,
+     1930,
+     1931,
+     1932,
+     1933
+    ]
+   },
    "C2 Darren Daulton C L 14": {
     "lahman_id": "daultda01",
     "status": "ok",
@@ -6813,18 +6825,6 @@
      1976,
      1977,
      1978
-    ]
-   },
-   "SET/MULTI Ryan Madson 9": {
-    "lahman_id": "madsory01",
-    "status": "ok",
-    "text": "Peak 162 with Philadelphia Phillies (2004–2008): 65 G, 7-5, 1 SV, 96.2 IP, 101 H, 42 ER, 31 BB, 76 SO, 3.95 ERA, 1.36 WHIP, 7.1 K/9",
-    "years": [
-     2004,
-     2005,
-     2006,
-     2007,
-     2008
     ]
    },
    "SP1 Steve Carlton 15": {
