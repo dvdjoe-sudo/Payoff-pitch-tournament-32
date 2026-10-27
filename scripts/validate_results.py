@@ -1016,14 +1016,13 @@ def check_angels_roster_amendment(check: Check) -> None:
                  "Carew playable hitter conversion genuine or pending, not invented")
     peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["LAA"]
     line = peaks.get("BAT2 Rod Carew 1B (California Angels 1979-1985)") or {}
-    if line:
-        check.expect(line.get("lahman_id") == "carewro01"
-                     and line.get("status") == "ok"
-                     and all(1979 <= y <= 1985 for y in line.get("years", []))
-                     and (line.get("text") or "").startswith("Peak 162 with California Angels"),
-                     "Rod Carew uses only his California Angels 1979-1985 seasons")
-        check.expect("MR Doug Corbett 3" not in peaks,
-                     "Inactive Corbett excluded from Angels current Peak 162")
+    check.expect(line.get("lahman_id") == "carewro01"
+                 and line.get("status") == "ok"
+                 and line.get("years") == [1979, 1980, 1981, 1982, 1983]
+                 and (line.get("text") or "").startswith("Peak 162 with California Angels"),
+                 "Rod Carew genuinely compiled 1979-83 California-only Peak 162")
+    check.expect("MR Doug Corbett 3" not in peaks,
+                 "Inactive Corbett excluded from Angels current Peak 162")
     doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Rod Carew (`carewro01`) joins the Angels' bench" in doc,
                  "The approved Carew transaction appears in published Angels roster")
