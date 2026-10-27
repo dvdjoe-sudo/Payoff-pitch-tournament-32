@@ -928,6 +928,59 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_orioles_roster_amendment(check: Check) -> None:
+    """Owner-approved Browns George Sisler for Sammy Stewart on active 26."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["BAL"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["BAL"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26 and
+                 counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Baltimore active 26 follows 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Baltimore active slots are sequential")
+    sisler = [p for p in players if p["id"] == "sislege01"]
+    check.expect(len(sisler) == 1 and sisler[0]["group"] == "bench"
+                 and sisler[0]["kind"] == "hitter" and sisler[0]["slot"] == 6
+                 and sisler[0]["pos"] == "1B",
+                 "George Sisler occupies Baltimore bench #6")
+    check.expect("stewasa01" not in ids, "Sammy Stewart no longer on active BAL 26")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["olsongr01", "brittza01", "bautife01",
+                     "millest01", "halldi01", "martiti01"],
+                 "Baltimore approved six relievers preserve order and roles")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and any("George Sisler" in line and "St. Louis Browns" in line
+                         for line in announced["bench"])
+                 and not any("Sammy Stewart" in line for line in announced["bullpen"]),
+                 "Baltimore announced roster is synced and limits Sisler to Browns")
+    check.expect("BAL|stewasa01" in cards,
+                 "Original Sammy Stewart pitcher card remains historical")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["BAL"]
+    sisler_peak = peaks.get("BAT2 George Sisler 1B (St. Louis Browns 1915-1927)") or {}
+    check.expect(sisler_peak.get("lahman_id") == "sislege01"
+                 and sisler_peak.get("years") == [1918, 1919, 1920, 1921, 1922]
+                 and sisler_peak.get("status") == "ok"
+                 and (sisler_peak.get("text") or "").startswith("Peak 162 with St. Louis Browns"),
+                 "George Sisler's Browns-only 1918-1922 franchise peak is active")
+    check.expect("LR/SP6 Sammy Stewart 8" not in peaks,
+                 "Inactive Sammy Stewart removed from current Baltimore Peak 162")
+    peak_builder = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "BAL" and pid == "sislege01"' in peak_builder
+                 and 'if 1915 <= year <= 1927' in peak_builder,
+                 "Future Peak 162 rebuild limits Sisler to St. Louis Browns seasons")
+    published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("George Sisler (`sislege01`) joins Baltimore" in published,
+                 "Baltimore owner approval appears in published roster")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_orioles_roster_amendment(cards, rosters)" in builder,
+                 "Future full rebuild retains approved Baltimore active 26")
+
+
 def check_white_sox_roster_amendment(check: Check) -> None:
     """White Sox owner approval: Allen active and Locker archived."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1049,6 +1102,7 @@ def main() -> int:
     check_phillies_roster_amendment(check)
     check_twins_roster_amendment(check)
     check_white_sox_roster_amendment(check)
+    check_orioles_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

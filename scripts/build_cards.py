@@ -581,6 +581,7 @@ def build():
     apply_phillies_roster_amendment(cards, rosters)
     apply_twins_roster_amendment(cards, rosters)
     apply_white_sox_roster_amendment(cards, rosters)
+    apply_orioles_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -1174,6 +1175,41 @@ def apply_phillies_roster_amendment(cards, rosters):
         raise SystemExit("Phillies approved roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Phillies approved roster needs 26 distinct active players")
+
+
+def apply_orioles_roster_amendment(cards, rosters):
+    """Owner-approved Browns George Sisler replaces Sammy Stewart, BAL 9/6/5/6.
+
+    Keep all genuine prior conversions and original played-game archives.
+    Sisler's Hitter v0.5 card needs authentic Browns-only input; never
+    invent dice values or silently discard Stewart's historical card.
+    """
+    roster = rosters.get("BAL")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "stewasa01"]
+    sisler_id = "sislege01"
+    matches = [p for p in players if p["id"] == sisler_id]
+    if not matches:
+        players.append({"group": "bench", "id": sisler_id, "kind": "hitter",
+                        "name": "George Sisler", "pos": "1B", "slot": 6})
+    elif len(matches) != 1:
+        raise SystemExit("duplicate BAL George Sisler roster entries")
+    else:
+        matches[0].update(group="bench", kind="hitter", pos="1B", slot=6)
+    card = cards.get("BAL|" + sisler_id)
+    if card:
+        card["spots"] = [{"group": "bench", "kind": "hitter",
+                          "pos": "1B", "slot": 6}]
+    # BAL|stewasa01 remains an original archived historical conversion.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Baltimore approved roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Baltimore needs exactly 26 distinct active players")
 
 
 def apply_white_sox_roster_amendment(cards, rosters):

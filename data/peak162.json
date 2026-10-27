@@ -431,6 +431,18 @@
      1981
     ]
    },
+   "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)": {
+    "lahman_id": "sislege01",
+    "status": "ok",
+    "text": "Peak 162 with St. Louis Browns (1918–1922): 162 G, 726 PA, 658 AB, 134 R, 251 H, 43 2B, 19 3B, 12 HR, 108 RBI, 48 SB, 47 BB, 23 SO, .381/.426/.559/.985. Pitching (1915–1925). Years away from the franchise inside this span are not in the totals. 34 GS, 14-17, 6 SV, 306.0 IP, 258 H, 82 ER, 139 BB, 170 SO, 2.42 ERA, 1.30 WHIP, 5.0 K/9",
+    "years": [
+     1918,
+     1919,
+     1920,
+     1921,
+     1922
+    ]
+   },
    "C2 Chris Hoiles 10": {
     "lahman_id": "hoilech01",
     "status": "ok",
@@ -495,18 +507,6 @@
     "lahman_id": "martiti01",
     "status": "ok",
     "text": "Peak 162 with Baltimore Orioles (1979–1983): 65 G, 8-5, 15 SV, 100.0 IP, 80 H, 32 ER, 41 BB, 81 SO, 2.90 ERA, 1.21 WHIP, 7.3 K/9",
-    "years": [
-     1979,
-     1980,
-     1981,
-     1982,
-     1983
-    ]
-   },
-   "LR/SP6 Sammy Stewart 8": {
-    "lahman_id": "stewasa01",
-    "status": "ok",
-    "text": "Peak 162 with Baltimore Orioles (1979–1983): 65 G, 13-11, 7 SV, 217.1 IP, 195 H, 84 ER, 109 BB, 127 SO, 3.47 ERA, 1.40 WHIP, 5.3 K/9",
     "years": [
      1979,
      1980,

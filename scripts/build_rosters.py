@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "BAL":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "George Sisler (`sislege01`) joins Baltimore franchise bench #6 (LH first baseman and pinch-hitting option) in place of Sammy Stewart (`stewasa01`), who becomes inactive. Sisler's qualifying and peak statistics use **only his St. Louis Browns seasons (1915–1927)**, not any years with Washington or the Boston Braves. The Orioles' current active 26 are 9 lineup hitters, 6 bench players, 5 rotation starters and 6 bullpen pitchers.",
+            "",
+            "The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu Miller, Dick Hall and Tippy Martinez. Their roles and slots do not change. The original Sammy Stewart converted pitcher card, archived cards for all players, previous games, scores, dice/FAC records and box scores remain historical and unchanged. Sisler's genuine frozen Hitter v0.5 playable conversion remains pending; no dice-chart ratings are invented.",
+            "",
+        ]
+
     if code == "CWS":
         lines += [
             "### Approved active roster amendment (2026-10-27)",
