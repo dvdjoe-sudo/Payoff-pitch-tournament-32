@@ -233,7 +233,7 @@
     "id": "jonesch06",
     "kind": "hitter",
     "name": "Chipper Jones",
-    "pos": "3B",
+    "pos": "DH",
     "slot": 2
    },
    {
@@ -713,7 +713,7 @@
     "id": "wilsoha01",
     "kind": "hitter",
     "name": "Hack Wilson",
-    "pos": "CF",
+    "pos": "DH",
     "slot": 7
    },
    {
@@ -929,7 +929,7 @@
     "id": "perezto01",
     "kind": "hitter",
     "name": "Tony Perez",
-    "pos": "3B",
+    "pos": "DH",
     "slot": 7
    },
    {
@@ -1161,7 +1161,7 @@
     "id": "galaran01",
     "kind": "hitter",
     "name": "Andres Galarraga",
-    "pos": "1B",
+    "pos": "DH",
     "slot": 9
    },
    {
@@ -1345,7 +1345,7 @@
     "id": "cabremi01",
     "kind": "hitter",
     "name": "Miguel Cabrera",
-    "pos": "1B",
+    "pos": "DH",
     "slot": 5
    },
    {
@@ -1553,7 +1553,7 @@
     "id": "ohtansh01",
     "kind": "hitter",
     "name": "Shohei Ohtani",
-    "pos": "RF",
+    "pos": "DH",
     "slot": 4
    },
    {
@@ -1769,7 +1769,7 @@
     "id": "guerrvl01",
     "kind": "hitter",
     "name": "Vladimir Guerrero",
-    "pos": "RF",
+    "pos": "DH",
     "slot": 4
    },
    {
@@ -2217,7 +2217,7 @@
     "id": "kinerra01",
     "kind": "hitter",
     "name": "Ralph Kiner",
-    "pos": "LF",
+    "pos": "DH",
     "slot": 6
    },
    {
@@ -2417,7 +2417,7 @@
     "id": "caminke01",
     "kind": "hitter",
     "name": "Ken Caminiti",
-    "pos": "3B",
+    "pos": "DH",
     "slot": 4
    },
    {
@@ -2873,7 +2873,7 @@
     "id": "slaugen01",
     "kind": "hitter",
     "name": "Enos Slaughter",
-    "pos": "RF",
+    "pos": "DH",
     "slot": 7
    },
    {
@@ -3321,7 +3321,7 @@
     "id": "seageco01",
     "kind": "hitter",
     "name": "Corey Seager",
-    "pos": "SS",
+    "pos": "DH",
     "slot": 9
    },
    {
@@ -3505,7 +3505,7 @@
     "id": "bautijo02",
     "kind": "hitter",
     "name": "Jose Bautista",
-    "pos": "RF",
+    "pos": "DH",
     "slot": 5
    },
    {
