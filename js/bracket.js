@@ -1829,6 +1829,9 @@
     if (!roster) return;
     var body = el("div");
     body.appendChild(el("p", { class: "note", text: "The converted set, in set order. Open a player for his card and his tournament line." }));
+    if (code === "SD") {
+      body.appendChild(el("p", { class: "note", text: "Approved Padres 26: Brian Giles is bench OF6 and will be playable after his frozen Hitter v0.5 conversion. Craig Lefferts is off the active roster; his previous card remains preserved as historical data." }));
+    }
     if (code === "PHA") body.appendChild(el("p", { class: "note", text: "Owner-approved 26-man roster: Ferris Fain is DH, Max Bishop is on the bench, and George Earnshaw is not on the roster. Elmer Valo is on the bench; his Hitter v0.5 card is awaiting original frozen-engine conversion and is not yet playable." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
       var rows = roster.players.filter(function (spot) { return spot.group === group; })
@@ -1883,11 +1886,11 @@
     clubs.forEach(function (roster) {
       var ids = {};
       var withLines = 0;
-      Object.keys(state.cards || {}).forEach(function (key) {
-        var card = state.cards[key];
-        if (card.team !== roster.code) return;
-        ids[card.id] = true;
-        if (card.tournament) withLines += 1;
+      roster.players.forEach(function (spot) {
+        if (ids[spot.id]) return;
+        ids[spot.id] = true;
+        var card = cardFor(roster.code, spot.id);
+        if (card && card.tournament) withLines += 1;
       });
       var team = state.byCode[roster.code];
       var panel = el("section", { class: "panel" });
@@ -2261,7 +2264,26 @@
     markNav("standings");
     var player = playerRecord(code, id);
     var card = cardFor(code, id);
+    var roster = state.rosters && state.rosters[code];
+    var currentSpot = roster && roster.players && roster.players.filter(function (spot) {
+      return spot.id === id;
+    })[0];
     clear(view);
+    if (!player && !card && currentSpot) {
+      var pending = el("article", { class: "panel" });
+      var currentTeam = state.byCode[code];
+      if (currentTeam) pending.appendChild(logo(currentTeam));
+      pending.appendChild(el("h2", { text: currentSpot.name }));
+      pending.appendChild(el("p", { class: "meta" }, linkTeam(code), " · Bench " + currentSpot.slot + " · " + currentSpot.pos));
+      pending.appendChild(el("p", { class: "note", text:
+        "Approved 26-man roster member. The original frozen Payoff Pitch hitter conversion has not been added yet; no ratings or percentile bands have been invented."
+      }));
+      pending.appendChild(el("p", { text:
+        "The club's franchise-only Peak 162 display is available on the team page. The playable card will be added when converted."
+      }));
+      view.appendChild(pending);
+      return;
+    }
     if (!player && card) {
       var onlyPage = el("article", { class: "panel" });
       var onlyTeam = state.byCode[code];
@@ -2272,9 +2294,12 @@
         el("p", { class: "meta" }, linkTeam(code), " · " + id)
       ));
       onlyPage.appendChild(onlyHero);
-      if (spotsText(card)) onlyPage.appendChild(el("p", { class: "meta", text: spotsText(card) }));
+      if (roster && !currentSpot) {
+        onlyPage.appendChild(el("p", { class: "note", text: "Historical converted card — no longer on this club's active 26-man roster." }));
+      } else if (spotsText(card)) {
+        onlyPage.appendChild(el("p", { class: "meta", text: spotsText(card) }));
+      }
       onlyPage.appendChild(el("h3", { text: "Tournament" }));
-      var roster = state.rosters && state.rosters[code];
       onlyPage.appendChild(el("p", { text: card.conversion_status
         ? "Official roster member; Payoff Pitch card not yet available."
         : roster && !roster.played
