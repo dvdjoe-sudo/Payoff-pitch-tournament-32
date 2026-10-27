@@ -4144,6 +4144,47 @@
     view.appendChild(page);
   }
 
+  function engineFile(href, name, blurb) {
+    return el("p", null, el("a", { href: href, text: name }), ": " + blurb);
+  }
+
+  function renderEngines() {
+    markNav("engines");
+    clear(view);
+    var page = el("article", { class: "panel" });
+    page.appendChild(el("h2", { text: "Card engines" }));
+    page.appendChild(el("p", { text: "No card in this tournament was typed by hand. Every converted Payoff Pitch card was built by one of the two solvers on this page. An engine starts from a player's prime window, the five best seasons he played for that club, and works backward: it searches for the printed card whose expected results match that stat line. What it fits is the whole card: the outcome table for each dice section, the fielding label, the range letter, the error number, and the throwing arm." }));
+    page.appendChild(el("p", { text: "The fit is judged against the line itself. A card whose expected rates land inside the tolerance is a PASS. A card the game's printed architecture cannot quite express is marked architecture-limited and kept, with the shortfall on the record. Nothing is hand tuned after the solver runs." }));
+    page.appendChild(el("h3", { text: "Hitter engine v0.5" }));
+    page.appendChild(el("p", { text: "Frozen on October 8, 2026. The hitter engine builds a card in two passes: it starts from comparable sections of the 596 digitized 1986 cards, then a coordinate-descent tuner adjusts the card until its expected batting average, on-base percentage, slugging, walk rate, strikeout rate, home-run rate, and hit-by-pitch rate align with the player's line. Its quality threshold is a fit error of 0.00085. In the Release 1.0 library it built 184 hitter cards: 99 PASS and 85 architecture-limited." }));
+    page.appendChild(el("h3", { text: "Pitcher engine v0.2.3" }));
+    page.appendChild(el("p", { text: "Frozen for production on October 8, 2026. The pitcher engine optimizes three rates against batters faced: strikeouts, walks, and home runs. Hits are diagnostic only and carry no weight in the fit. Rates are normalized for era over each pitcher's actual career span and calibrated to the printed 1986 cards, a 324-pitcher calibration. In the Release 1.0 library it built 157 pitcher cards: 82 PASS and 75 architecture-limited. The two libraries together hold 341 cards." }));
+    page.appendChild(el("h3", { text: "Pitcher cards, version 2" }));
+    page.appendChild(el("p", { text: "On October 24, 2026, all 157 library pitchers were refit as card version 2, an accuracy pass on the strikeout bands, and version 2 was adopted the same day. The tournament's converted sets play on version 2 pitcher cards. The one rule change is in how a TOUGH read converts near the top of a hitter's strikeout band: the band widens by the bump instead of the percentile shifting. Version 1 cards stay on file, unchanged. A new engine version always creates a new card version; it never overwrites the old one." }));
+    page.appendChild(el("h3", { text: "Take the code" }));
+    page.appendChild(el("p", { text: "The engine source is in this repository under engines/, free to download. The engines are frozen, so what you download is exactly what built the cards on the club pages. The engines read input files from their home projects (stat lines in, card JSON out); the files below are the complete solver code." }));
+    page.appendChild(el("p", { class: "note", text: "Hitter engine v0.5 (engines/hitter-v0.5/)" }));
+    page.appendChild(engineFile("engines/hitter-v0.5/hitter_solver.py", "hitter_solver.py", "the solver. Section comps from the digitized 1986 cards, then the tuner aligns the card's expected rates with the target line."));
+    page.appendChild(engineFile("engines/hitter-v0.5/batch_runner.py", "batch_runner.py", "batch runner. Processes a CSV of hitters and produces the review lists."));
+    page.appendChild(engineFile("engines/hitter-v0.5/qa.py", "qa.py", "QA warnings for cards that are statistically fine but structurally suspicious."));
+    page.appendChild(engineFile("engines/hitter-v0.5/review_packet.py", "review_packet.py", "the compact human-readable review packet for flagged cards."));
+    page.appendChild(el("p", { class: "note", text: "Pitcher engine v0.2.3 (engines/pitcher-v0.2.3/)" }));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/pitcher_solver.py", "pitcher_solver.py", "the base solver. Generates legal 2d6 tables from target rates, calibrated against the frozen 1986 hitter population."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/historical_solver.py", "historical_solver.py", "historical pitchers, with special-category escalation."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/production_run.py", "production_run.py", "the v0.2.3 production pipeline that built the library's pitcher cards."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/calibration.py", "calibration.py", "the 1986 calibration and the supplemental strikeout modifier."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/translation.py", "translation.py", "the historical translation layer: 1986 baseline rates from the printed cards."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/event_vectors.py", "event_vectors.py", "exact event vectors for each pitcher category against the frozen 1986 population."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/career_spans.py", "career_spans.py", "career spans used for era normalization."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/aliases.py", "aliases.py", "player name aliases, nickname to 1986 card name."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/reconstruct.py", "reconstruct.py", "reconstruction check: actual lines against generated cards."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/stress_test.py", "stress_test.py", "the 24-pitcher stress test."));
+    page.appendChild(engineFile("engines/pitcher-v0.2.3/test_v011.py", "test_v011.py", "the solver's unit tests."));
+    page.appendChild(el("p", { class: "note", text: "Pitcher cards, version 2 (engines/pitcher-v2/)" }));
+    page.appendChild(engineFile("engines/pitcher-v2/engine_v2.py", "engine_v2.py", "the card version 2 resolution path: the TOUGH-band widening rule the v2 pitcher cards are played under."));
+    view.appendChild(page);
+  }
+
   function render() {
     if (!state.data) return;
     var where = route();
@@ -4169,6 +4210,7 @@
     else if (where.name === "add") renderAdd();
     else if (where.name === "about") renderAbout();
     else if (where.name === "formulas") renderFormulas();
+    else if (where.name === "engines") renderEngines();
     else renderBracket(activeSeries);
     renderBanner();
     if (where.name === "bracket" && activeSeries) {
