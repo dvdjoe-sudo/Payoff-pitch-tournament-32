@@ -570,6 +570,7 @@ def build():
     apply_padres_roster_amendment(cards, rosters)
     apply_expos_roster_amendment(cards, rosters)
     apply_diamondbacks_roster_amendment(cards, rosters)
+    apply_rays_roster_amendment(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -761,6 +762,45 @@ def apply_diamondbacks_roster_amendment(cards, rosters):
         raise SystemExit("Arizona owner roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Arizona owner roster requires 26 distinct players")
+
+
+
+def apply_rays_roster_amendment(cards, rosters):
+    """Joe-approved 2026-10-26 Tampa Bay 6-bench/6-reliever roster.
+
+    Huff replaces Kevin Kelly on the active 26 after R1-03. Preserve
+    Kelly's previously converted card, appearances and tournament lines
+    as historical records; never fabricate Huff's frozen Hitter v0.5 card.
+    """
+    roster = rosters.get("TB")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "kellyke02"]
+    huff_id = "huffau01"
+    matching = [p for p in players if p["id"] == huff_id]
+    if not matching:
+        players.append({
+            "group": "bench", "id": huff_id, "kind": "hitter",
+            "name": "Aubrey Huff", "pos": "OF", "slot": 6,
+        })
+    else:
+        if len(matching) != 1:
+            raise SystemExit("duplicate Tampa Bay Aubrey Huff roster entries")
+        matching[0].update(group="bench", slot=6, pos="OF", kind="hitter")
+    if "TB|" + huff_id in cards:
+        cards["TB|" + huff_id]["spots"] = [
+            {"group": "bench", "slot": 6, "pos": "OF", "kind": "hitter"},
+        ]
+    # Do NOT remove TB|kellyke02 from the archive or create an
+    # unconverted card for Huff. User handles original card conversion.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    groups = {group: sum(p["group"] == group for p in players) for group in order}
+    if groups != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Rays owner roster must be 9/6/5/6: " + str(groups))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Rays owner roster requires 26 distinct players")
 
 
 
