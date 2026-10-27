@@ -2720,16 +2720,6 @@
      1995
     ]
    },
-   "LH SPEC Tyler Holton 4": {
-    "lahman_id": "holtoty01",
-    "status": "ok",
-    "text": "Peak 162 with Detroit Tigers (2023–2025). Three franchise seasons; best 3. 65 G, 5-3, 3 SV, 86.0 IP, 59 H, 25 ER, 17 BB, 72 SO, 2.61 ERA, 0.89 WHIP, 7.5 K/9",
-    "years": [
-     2023,
-     2024,
-     2025
-    ]
-   },
    "LONG/SWING Dizzy Trout 14": {
     "lahman_id": "troutdi01",
     "status": "ok",
@@ -2752,6 +2742,18 @@
      1909,
      1910,
      1911
+    ]
+   },
+   "OF6 Kirk Gibson OF/PR": {
+    "lahman_id": "gibsoki01",
+    "status": "ok",
+    "text": "Peak 162 with Detroit Tigers (1984–1993). Years away from the franchise inside this span are not in the totals. 162 G, 687 PA, 594 AB, 104 R, 164 H, 28 2B, 6 3B, 29 HR, 101 RBI, 33 SB, 77 BB, 134 SO, .276/.363/.493/.856",
+    "years": [
+     1984,
+     1985,
+     1986,
+     1987,
+     1993
     ]
    },
    "RH FIRE Aurelio López 7": {

@@ -770,6 +770,13 @@ def check_tigers_roster_amendment(check: Check) -> None:
                  "Detroit announced owner roster aligns with active 6/6")
     check.expect("DET|holtoty01" in cards,
                  "Tyler Holton's genuine converted card remains in historic archive")
+    peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["DET"]
+    gibson_peak = peak.get("OF6 Kirk Gibson OF/PR") or {}
+    check.expect(gibson_peak.get("lahman_id") == "gibsoki01" and
+                 gibson_peak.get("years") == [1984, 1985, 1986, 1987, 1993],
+                 "Detroit-only Kirk Gibson peak display reflects approved bench spot")
+    check.expect("LH SPEC Tyler Holton 4" not in peak,
+                 "Inactive Tyler Holton is absent from current peak display")
     text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Kirk Gibson (`gibsoki01`) joins Detroit" in text,
                  "Detroit owner-approved amendment is in published roster")
