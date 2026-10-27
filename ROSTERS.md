@@ -77,6 +77,7 @@ This roster text is the one previously published in the tournament rules. Positi
 - Don Mattingly (1B/BAT)
 - Bernie Williams (OF)
 - Reggie Jackson (OF/BAT)
+- Rickey Henderson (OF/PR)
 
 ### Rotation
 
@@ -93,7 +94,6 @@ This roster text is the one previously published in the tournament rules. Positi
 - Sparky Lyle (LH FIRE)
 - David Robertson (RH SET)
 - Dave Righetti (LATE/MULTI)
-- Mike Stanton (LH SPEC)
 - Allie Reynolds (LONG/SWING)
 
 Recorded on that roster and not yet in a box score:
@@ -101,13 +101,14 @@ Recorded on that roster and not yet in a box score:
 - Tony Lazzeri (IF/BAT)
 - Don Mattingly (1B/BAT)
 - Reggie Jackson (OF/BAT)
+- Rickey Henderson (OF/PR)
 - Andy Pettitte
 - Sparky Lyle (LH FIRE)
 - Allie Reynolds (LONG/SWING)
 
-### Franchise cards (2026-10-27)
+### Approved active roster amendment (2026-10-26)
 
-The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. Mike Stanton (`stantmi02`) is the left-handed specialist. Rickey Henderson is not on the active roster. Played R1-01 results are unchanged.
+Rickey Henderson (`henderi01`) is the sixth Yankees bench player (OF/PR). Mike Stanton (`stantmi02`) is off the active bullpen. The active 26 are 9 lineup, 6 bench, 5 starters, and 6 relievers. Henderson's card is the Yankees seasons that reach 300 plate appearances: 1985, 1986, 1987, and 1988. The 1989 season is 293 plate appearances and stays out. Stanton's card and his R1-01 appearance stay in the archive. Played results are unchanged.
 
 ### Players in the results file
 
@@ -151,7 +152,7 @@ Bracket: winners. Series losses: 0. Full 26 Index: 971.2.
 
 Monte Irvin (`irvinmo01`) joins the sixth active Giants bench spot as a left fielder. Javier López (`lopezja02`) is removed from the active bullpen. The Giants now carry 9 starting hitters, 6 bench hitters, 5 starting pitchers, and 6 relievers (26 total).
 
-This amendment is effective only after the completed R1-02 Giants–Nationals series. All previously played games, historical converted cards (including Javier López), box scores, official results, dice/FAC records and bullpen appearances remain unchanged. Monte Irvin's original Hitter v0.5 card and Giants-only prime-window stats are pending genuine conversion; no ratings have been invented.
+This amendment is effective only after the completed R1-02 Giants–Nationals series. All previously played games, historical converted cards (including Javier López), box scores, official results, dice/FAC records and bullpen appearances remain unchanged. Monte Irvin's card is the New York Giants seasons that reach 300 plate appearances: 1950, 1951, 1953, and 1954. The 1952 season is 137 plate appearances and stays out.
 
 ### Players in the results file
 
@@ -1706,6 +1707,7 @@ This roster text is the one previously published in the tournament rules. Positi
 - Dan Uggla (INF/POWER)
 - Marcell Ozuna (OF4)
 - Derrek Lee (1B/POWER)
+- Juan Pierre (CF/PR)
 
 ### Rotation
 
@@ -1723,18 +1725,18 @@ This roster text is the one previously published in the tournament rules. Positi
 - Tanner Scott (LH)
 - Anthony Bender (MR)
 - Antonio Alfonseca (MR)
-- A.J. Burnett (LR/EMER SP)
 
 Recorded on that roster and not yet in a box score:
 
 - Otto Lopez (UTIL)
 - Marcell Ozuna (OF4)
 - Derrek Lee (1B/POWER)
+- Juan Pierre (CF/PR)
 - Jose Fernandez
 
-### Franchise cards (2026-10-27)
+### Approved active roster amendment (2026-10-26)
 
-The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. A.J. Burnett (`burneaj01`) is the long/emergency starter. Otto Lopez (`lopezot01`) is the utility bench player. Juan Pierre is not on the active roster. Played R1-01 results are unchanged.
+Juan Pierre (`pierrju01`) is the sixth Marlins bench player (CF/PR). A.J. Burnett (`burneaj01`) is off the active bullpen. The active 26 are 9 lineup, 6 bench, 5 starters, and 6 relievers. Otto Lopez (`lopezot01`) is the utility bench player. Pierre's card is the Florida and Miami seasons that reach 300 plate appearances: 2003, 2004, 2005, and 2013. Burnett's card and his R1-01 appearance stay in the archive. Played results are unchanged.
 
 ### Players in the results file
 

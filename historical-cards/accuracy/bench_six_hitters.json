@@ -1,0 +1,465 @@
+{
+ "players": [
+  {
+   "best_possible": 0.0009,
+   "card": {
+    "1b": 0.1684,
+    "2b": 0.0437,
+    "3b": 0.0061,
+    "avg": 0.2913,
+    "bb": 0.1414,
+    "hr": 0.0307,
+    "obp": 0.3943,
+    "slg": 0.4647,
+    "so": 0.1035
+   },
+   "counting": {
+    "2B": 106,
+    "3B": 15,
+    "AB": 2067,
+    "BB": 350,
+    "CS": 49,
+    "G": 531,
+    "GIDP": 36,
+    "H": 605,
+    "HBP": 10,
+    "HR": 75,
+    "IBB": 5,
+    "PA": 2440,
+    "R": 472,
+    "RBI": 233,
+    "SB": 301,
+    "SF": 13,
+    "SO": 252
+   },
+   "delta": {
+    "1b": 0.0007,
+    "2b": 0.0003,
+    "3b": -0.0,
+    "avg": -0.0014,
+    "hr": 0.0,
+    "obp_real": -0.0012,
+    "obp_ubb": 0.0009,
+    "slg": -0.0027,
+    "so": 0.0002
+   },
+   "fit_error": 0.0009,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1989 has 293 plate appearances, under the 300 floor. OPS+ 111.4.",
+    "Only 4 franchise seasons reach 300 plate appearances. The window is short.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "NYY|henderi01",
+   "kind": "hitter",
+   "name": "Rickey Henderson",
+   "nulls": [],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1676,
+    "2b": 0.0434,
+    "3b": 0.0061,
+    "avg": 0.2927,
+    "bb": 0.1434,
+    "hr": 0.0307,
+    "obp": 0.3955,
+    "obp_ubb": 0.3934,
+    "slg": 0.4673,
+    "so": 0.1033,
+    "ubb": 0.1414
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "155.2",
+     "other_clubs": [],
+     "pa": 654,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1985
+    },
+    {
+     "nulls": [],
+     "ops_plus": "123.6",
+     "other_clubs": [],
+     "pa": 701,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1986
+    },
+    {
+     "nulls": [],
+     "ops_plus": "143.6",
+     "other_clubs": [],
+     "pa": 440,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1987
+    },
+    {
+     "nulls": [],
+     "ops_plus": "123.5",
+     "other_clubs": [],
+     "pa": 645,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1988
+    },
+    {
+     "nulls": [],
+     "ops_plus": "111.4",
+     "other_clubs": [
+      "OAK"
+     ],
+     "pa": 293,
+     "teams": [
+      "NYA"
+     ],
+     "year": 1989
+    }
+   ],
+   "team": "NYY",
+   "window_years": [
+    1985,
+    1986,
+    1987,
+    1988
+   ]
+  },
+  {
+   "best_possible": 0.0012,
+   "card": {
+    "1b": 0.2254,
+    "2b": 0.0314,
+    "3b": 0.0139,
+    "avg": 0.2943,
+    "bb": 0.0607,
+    "hr": 0.0028,
+    "obp": 0.3442,
+    "slg": 0.3669,
+    "so": 0.0572
+   },
+   "counting": {
+    "2B": 80,
+    "3B": 34,
+    "AB": 2310,
+    "BB": 154,
+    "CS": 67,
+    "G": 599,
+    "GIDP": 32,
+    "H": 682,
+    "HBP": 25,
+    "HR": 7,
+    "IBB": 3,
+    "PA": 2496,
+    "R": 332,
+    "RBI": 145,
+    "SB": 190,
+    "SF": 7,
+    "SO": 142
+   },
+   "delta": {
+    "1b": 0.0006,
+    "2b": -0.0007,
+    "3b": 0.0003,
+    "avg": -0.001,
+    "hr": -0.0,
+    "obp_real": -0.0007,
+    "obp_ubb": 0.0005,
+    "slg": -0.0015,
+    "so": 0.0003
+   },
+   "fit_error": 0.0012,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "Only 4 franchise seasons reach 300 plate appearances. The window is short.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "MIA|pierrju01",
+   "kind": "hitter",
+   "name": "Juan Pierre",
+   "nulls": [],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.2248,
+    "2b": 0.0321,
+    "3b": 0.0136,
+    "avg": 0.2952,
+    "bb": 0.0617,
+    "hr": 0.0028,
+    "obp": 0.345,
+    "obp_ubb": 0.3438,
+    "slg": 0.3684,
+    "so": 0.0569,
+    "ubb": 0.0605
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "98.2",
+     "other_clubs": [],
+     "pa": 731,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2003
+    },
+    {
+     "nulls": [],
+     "ops_plus": "108.6",
+     "other_clubs": [],
+     "pa": 733,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2004
+    },
+    {
+     "nulls": [],
+     "ops_plus": "84.2",
+     "other_clubs": [],
+     "pa": 708,
+     "teams": [
+      "FLO"
+     ],
+     "year": 2005
+    },
+    {
+     "nulls": [],
+     "ops_plus": "68.7",
+     "other_clubs": [],
+     "pa": 324,
+     "teams": [
+      "MIA"
+     ],
+     "year": 2013
+    }
+   ],
+   "team": "MIA",
+   "window_years": [
+    2003,
+    2004,
+    2005,
+    2013
+   ]
+  },
+  {
+   "best_possible": 0.0002,
+   "card": {
+    "1b": 0.1754,
+    "2b": 0.0344,
+    "3b": 0.0115,
+    "avg": 0.2999,
+    "bb": 0.127,
+    "hr": 0.0378,
+    "obp": 0.3951,
+    "slg": 0.4976,
+    "so": 0.0674
+   },
+   "counting": {
+    "2B": 72,
+    "3B": 24,
+    "AB": 1808,
+    "BB": 266,
+    "CS": 6,
+    "G": 520,
+    "GIDP": 60,
+    "H": 545,
+    "HBP": 19,
+    "HR": 79,
+    "IBB": 0,
+    "PA": 2098,
+    "R": 289,
+    "RBI": 348,
+    "SB": 24,
+    "SF": 5,
+    "SO": 142
+   },
+   "delta": {
+    "1b": -0.0009,
+    "2b": 0.0001,
+    "3b": 0.0,
+    "avg": -0.0015,
+    "hr": 0.0001,
+    "obp_real": -0.0005,
+    "obp_ubb": -0.0005,
+    "slg": -0.0013,
+    "so": -0.0003
+   },
+   "fit_error": 0.0002,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "1952 has 137 plate appearances and OPS+ 130.8. The 300 floor leaves it out, and that OPS+ would rank inside the five.",
+    "Only 4 franchise seasons reach 300 plate appearances. The window is short.",
+    "Lahman nulls treated as zero: CS [1950]; IBB [1950, 1951, 1953, 1954]; SF [1950, 1951, 1953]",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "SF|irvinmo01",
+   "kind": "hitter",
+   "name": "Monte Irvin",
+   "nulls": [
+    {
+     "field": "CS",
+     "year": 1950
+    },
+    {
+     "field": "IBB",
+     "year": 1950
+    },
+    {
+     "field": "SF",
+     "year": 1950
+    },
+    {
+     "field": "IBB",
+     "year": 1951
+    },
+    {
+     "field": "SF",
+     "year": 1951
+    },
+    {
+     "field": "IBB",
+     "year": 1953
+    },
+    {
+     "field": "SF",
+     "year": 1953
+    },
+    {
+     "field": "IBB",
+     "year": 1954
+    }
+   ],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1764,
+    "2b": 0.0343,
+    "3b": 0.0114,
+    "avg": 0.3014,
+    "bb": 0.1268,
+    "hr": 0.0377,
+    "obp": 0.3956,
+    "obp_ubb": 0.3956,
+    "slg": 0.4989,
+    "so": 0.0677,
+    "ubb": 0.1268
+   },
+   "seasons": [
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "91.5",
+     "other_clubs": [],
+     "pa": 93,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1949
+    },
+    {
+     "nulls": [
+      "CS",
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "141.9",
+     "other_clubs": [],
+     "pa": 431,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1950
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "158.3",
+     "other_clubs": [],
+     "pa": 656,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1951
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "130.8",
+     "other_clubs": [],
+     "pa": 137,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1952
+    },
+    {
+     "nulls": [
+      "IBB",
+      "SF"
+     ],
+     "ops_plus": "153.8",
+     "other_clubs": [],
+     "pa": 502,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1953
+    },
+    {
+     "nulls": [
+      "IBB"
+     ],
+     "ops_plus": "116.0",
+     "other_clubs": [],
+     "pa": 509,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1954
+    },
+    {
+     "nulls": [],
+     "ops_plus": "85.0",
+     "other_clubs": [],
+     "pa": 172,
+     "teams": [
+      "NY1"
+     ],
+     "year": 1955
+    }
+   ],
+   "team": "SF",
+   "window_years": [
+    1950,
+    1951,
+    1953,
+    1954
+   ]
+  }
+ ],
+ "summary": {
+  "lahman_max_year": 2025,
+  "lahman_sha256": "48d05d6ffafb977846b14cfb273d2faf21b5519604cbb337792cb3ec8d25dd31",
+  "players": [
+   "NYY|henderi01",
+   "MIA|pierrju01",
+   "SF|irvinmo01"
+  ],
+  "window_rule": "five best franchise seasons by league OPS+ rounded half up to one decimal, PA>=300 where PA=AB+BB+HBP+SF"
+ }
+}

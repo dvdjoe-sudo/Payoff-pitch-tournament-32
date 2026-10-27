@@ -632,6 +632,12 @@ def retain_empty_team_cards(cards, rosters):
         if not players:
             continue
         rosters[code] = old_roster
+        for key in ("MIA|burneaj01", "NYY|stantmi02"):
+            if not key.startswith(code + "|"):
+                continue
+            previous = old_cards.get(key)
+            if previous:
+                cards.setdefault(key, previous)
         for player in players:
             key = "%s|%s" % (code, player["id"])
             previous = old_cards.get(key) or {}

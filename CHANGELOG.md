@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Restored 6/6 benches for the Yankees, Marlins, and Giants
+
+Joe's roster edits are the active 26s again. Rickey Henderson replaces Mike Stanton on the Yankees, Juan Pierre replaces A.J. Burnett on the Marlins, and Monte Irvin replaces Javier López on the Giants. Each new bench player has a franchise hitter card under the same rule as the other franchise cards: the best seasons by one-decimal league OPS+, at least 300 plate appearances, franchise teams only. Only four seasons clear that floor for each of them. Henderson is Yankees 1985–1988 (1989 is 293 plate appearances). Pierre is Florida 2003–2005 and Miami 2013. Irvin is New York Giants 1950, 1951, 1953, and 1954 (1952 is 137 plate appearances). No San Francisco season exists for Irvin. Stanton, Burnett, and López stay in the card file. Played games are unchanged. The service worker cache stays payoff-pitch-v55.
+
 ## 2026-10-27 — San Francisco Giants Monte Irvin / Javier López roster switch (Joe-approved)
 
 Following the completed R1-02 series, Monte Irvin replaces Javier López on the Giants active 26: Irvin is LF/bench6 and López is inactive. The roster now has 9 starting hitters, 6 bench players, 5 starting pitchers, and 6 relievers. Played games, card files, box scores, FAC/dice records, and historical relief appearances remain unchanged. The saved Giants converted cards are archived; Irvin's original playable Hitter v0.5 card with Giants-only franchise seasons remains pending conversion. The active roster validator and full rebuild adapter enforce the approved change.

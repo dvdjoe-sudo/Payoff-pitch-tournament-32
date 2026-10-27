@@ -3121,7 +3121,7 @@
     "id": "lopezot01",
     "kind": "hitter",
     "name": "Otto Lopez",
-    "pos": "UT",
+    "pos": "UTIL",
     "slot": 2
    },
    {
@@ -3129,7 +3129,7 @@
     "id": "ugglada01",
     "kind": "hitter",
     "name": "Dan Uggla",
-    "pos": "IF",
+    "pos": "2B",
     "slot": 3
    },
    {
@@ -3147,6 +3147,14 @@
     "name": "Derrek Lee",
     "pos": "1B",
     "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "pierrju01",
+    "kind": "hitter",
+    "name": "Juan Pierre",
+    "pos": "CF",
+    "slot": 6
    },
    {
     "group": "rotation",
@@ -3235,14 +3243,6 @@
     "name": "Antonio Alfonseca",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "burneaj01",
-    "kind": "pitcher",
-    "name": "A.J. Burnett",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 32
@@ -4201,7 +4201,7 @@
     "id": "lazzeto01",
     "kind": "hitter",
     "name": "Tony Lazzeri",
-    "pos": "IF",
+    "pos": "2B",
     "slot": 2
    },
    {
@@ -4225,8 +4225,16 @@
     "id": "jacksre01",
     "kind": "hitter",
     "name": "Reggie Jackson",
-    "pos": "OF",
+    "pos": "RF",
     "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "henderi01",
+    "kind": "hitter",
+    "name": "Rickey Henderson",
+    "pos": "OF",
+    "slot": 6
    },
    {
     "group": "rotation",
@@ -4310,19 +4318,11 @@
    },
    {
     "group": "bullpen",
-    "id": "stantmi02",
-    "kind": "pitcher",
-    "name": "Mike Stanton",
-    "pos": "RP",
-    "slot": 6
-   },
-   {
-    "group": "bullpen",
     "id": "reynoal01",
     "kind": "pitcher",
     "name": "Allie Reynolds",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 1

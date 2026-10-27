@@ -601,35 +601,36 @@ def check_marlins_roster_amendment(check: Check) -> None:
                  "Miami has 26 distinct active players")
     groups = ("lineup", "bench", "rotation", "bullpen")
     counts = {g: sum(p["group"] == g for p in players) for g in groups}
-    check.expect(counts == {"lineup": 9, "bench": 5, "rotation": 5, "bullpen": 7},
-                 "Miami active roster is 9/5/5/7")
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Miami active roster is 9/6/5/6")
     check.expect(all(sorted(p["slot"] for p in players if p["group"] == g) ==
                      list(range(1, counts[g] + 1)) for g in groups),
                  "Miami active slots are unique and consecutive")
     lopez = [p for p in players if p["id"] == "lopezot01"]
     check.expect(len(lopez) == 1 and lopez[0]["group"] == "bench" and
-                 lopez[0]["slot"] == 2 and lopez[0]["pos"] == "UT",
+                 lopez[0]["slot"] == 2 and lopez[0]["pos"] == "UTIL",
                  "Otto Lopez is the Miami utility bench player")
     johnson = [p for p in players if p["id"] == "johnsjo09"]
     check.expect(len(johnson) == 1 and johnson[0]["group"] == "rotation" and
                  johnson[0]["slot"] == 1,
                  "Josh Johnson is the Miami rotation ace")
-    burnett = [p for p in players if p["id"] == "burneaj01"]
-    check.expect(len(burnett) == 1 and burnett[0]["group"] == "bullpen" and
-                 burnett[0]["slot"] == 7,
-                 "A.J. Burnett is the Miami long reliever")
-    check.expect("pierrju01" not in ids,
-                 "Juan Pierre is not on the active Miami roster")
+    pierre = [p for p in players if p["id"] == "pierrju01"]
+    check.expect(len(pierre) == 1 and pierre[0]["group"] == "bench" and
+                 pierre[0]["slot"] == 6 and pierre[0]["pos"] == "CF",
+                 "Juan Pierre is the sixth Marlins bench player")
+    check.expect("burneaj01" not in ids,
+                 "A.J. Burnett is not on the active Miami roster")
     check.expect(rosters["MIA"]["played"] is True and rosters["MIA"]["seed"] == 32,
                  "Miami stays the played bracket seed 32")
     bios = json.loads((ROOT / "data" / "bios.json").read_text(encoding="utf-8"))
     check.expect("MIA|burneaj01" in bios,
                  "A.J. Burnett historical participant remains in bios")
     text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
-    check.expect("Otto Lopez (UTIL)" in text and "A.J. Burnett (LR/EMER SP)" in text,
-                 "Miami converted roster names Otto Lopez and A.J. Burnett")
-    check.expect("Juan Pierre is not on the active roster" in text,
-                 "Miami roster notes that Juan Pierre is not active")
+    check.expect("Otto Lopez (UTIL)" in text and "Juan Pierre (`pierrju01`) is the sixth Marlins bench player" in text,
+                 "Miami roster records Otto Lopez and Juan Pierre")
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    check.expect("MIA|burneaj01" in cards,
+                 "A.J. Burnett's card remains in the archive")
     script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
     check.expect('"MIA"' in script.split("EMPTY_TEAM_CODES =", 1)[1].split("\n", 1)[0],
                  "Full card rebuild preserves the Miami roster")
@@ -645,8 +646,8 @@ def check_yankees_roster_amendment(check: Check) -> None:
                  "Yankees have 26 distinct active players")
     groups = ("lineup", "bench", "rotation", "bullpen")
     counts = {g: sum(p["group"] == g for p in players) for g in groups}
-    check.expect(counts == {"lineup": 9, "bench": 5, "rotation": 5, "bullpen": 7},
-                 "Yankees have 9/5/5/7 active players")
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Yankees have 9/6/5/6 active players")
     check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
                      == list(range(1, counts[g] + 1)) for g in groups),
                  "Yankees active slots are unique and sequential")
@@ -656,21 +657,23 @@ def check_yankees_roster_amendment(check: Check) -> None:
                  "Derek Jeter is the Yankees' first lineup spot")
     check.expect(len(judge) == 1 and judge[0]["group"] == "lineup" and judge[0]["slot"] == 2,
                  "Aaron Judge is the Yankees' second lineup spot")
-    stanton = [p for p in players if p["id"] == "stantmi02"]
-    check.expect(len(stanton) == 1 and stanton[0]["group"] == "bullpen" and
-                 stanton[0]["slot"] == 6,
-                 "Mike Stanton is the Yankees left-handed specialist")
-    check.expect("henderi01" not in ids,
-                 "Rickey Henderson is not on the active Yankees roster")
+    henderson = [p for p in players if p["id"] == "henderi01"]
+    check.expect(len(henderson) == 1 and henderson[0]["group"] == "bench" and
+                 henderson[0]["slot"] == 6 and henderson[0]["pos"] == "OF",
+                 "Rickey Henderson is the sixth Yankees bench player")
+    check.expect("stantmi02" not in ids,
+                 "Mike Stanton is not on the active Yankees roster")
     check.expect(rosters["NYY"]["played"] is True and rosters["NYY"]["seed"] == 1,
                  "Yankees active roster retains seed 1 and played status")
     bios = json.loads((ROOT / "data" / "bios.json").read_text(encoding="utf-8"))
     check.expect("NYY|stantmi02" in bios,
                  "Mike Stanton remains recorded in historical Yankee bios")
     text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
-    check.expect("Mike Stanton (LH SPEC)" in text and
-                 "Rickey Henderson is not on the active roster" in text,
-                 "Yankees converted roster keeps Mike Stanton active")
+    check.expect("Rickey Henderson (`henderi01`) is the sixth Yankees bench player" in text,
+                 "Yankees roster records Rickey Henderson")
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    check.expect("NYY|stantmi02" in cards,
+                 "Mike Stanton's card remains in the archive")
     script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
     check.expect('"NYY"' in script.split("EMPTY_TEAM_CODES =", 1)[1].split("\n", 1)[0],
                  "Full set rebuild preserves the Yankees roster")
@@ -706,6 +709,9 @@ def check_giants_roster_amendment(check: Check) -> None:
     builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
     check.expect("apply_giants_roster_amendment(cards, rosters)" in builder,
                  "Giants 6/6 roster survives a regenerated set")
+    irvin_card = cards.get("SF|irvinmo01") or {}
+    check.expect(bool((irvin_card.get("card_bat") or {}).get("sections")),
+                 "Monte Irvin has a playable Giants franchise card")
 
 
 def main() -> int:

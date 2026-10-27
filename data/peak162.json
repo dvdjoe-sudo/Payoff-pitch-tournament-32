@@ -4220,6 +4220,16 @@
      1998
     ]
    },
+   "CF/PR Juan Pierre": {
+    "lahman_id": "pierrju01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2003–2005). Four franchise seasons; best 3. 162 G, 737 PA, 667 AB, 99 R, 202 H, 23 2B, 11 3B, 2 HR, 46 RBI, 56 SB, 47 BB, 38 SO, .303/.354/.378/.732",
+    "years": [
+     2003,
+     2004,
+     2005
+    ]
+   },
    "CL Robb Nen": {
     "lahman_id": "nenro01",
     "status": "ok",
@@ -4252,18 +4262,6 @@
      2022,
      2023,
      2024
-    ]
-   },
-   "LR/EMER SP A.J. Burnett": {
-    "lahman_id": "burneaj01",
-    "status": "ok",
-    "text": "Peak 162 with Miami Marlins (2001–2005): 65 G, 24-23, 0 SV, 416.0 IP, 343 H, 168 ER, 176 BB, 378 SO, 3.63 ERA, 1.25 WHIP, 8.2 K/9",
-    "years": [
-     2001,
-     2002,
-     2003,
-     2004,
-     2005
     ]
    },
    "MR Anthony Bender": {
@@ -5819,18 +5817,6 @@
      1986
     ]
    },
-   "LH SPEC Mike Stanton": {
-    "lahman_id": "stantmi02",
-    "status": "ok",
-    "text": "Peak 162 with New York Yankees (1998–2002): 65 G, 4-2, 2 SV, 65.2 IP, 65 H, 28 ER, 22 BB, 58 SO, 3.87 ERA, 1.33 WHIP, 8.0 K/9",
-    "years": [
-     1998,
-     1999,
-     2000,
-     2001,
-     2002
-    ]
-   },
    "LH Sparky Lyle": {
     "lahman_id": "lylesp01",
     "status": "ok",
@@ -5877,6 +5863,18 @@
      1979,
      1980,
      1981
+    ]
+   },
+   "OF/PR Rickey Henderson": {
+    "lahman_id": "henderi01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1985–1989): 162 G, 743 PA, 626 AB, 139 R, 180 H, 32 2B, 4 3B, 21 HR, 69 RBI, 89 SB, 110 BB, 76 SO, .288/.395/.455/.850",
+    "years": [
+     1985,
+     1986,
+     1987,
+     1988,
+     1989
     ]
    },
    "RH SET David Robertson": {
