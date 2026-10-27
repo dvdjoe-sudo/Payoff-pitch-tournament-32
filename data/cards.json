@@ -108,6 +108,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -219,7 +220,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "RF",
      "range": "A"
     }
@@ -609,6 +610,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -720,7 +722,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 2,
+     "e": 4,
      "pos": "2B",
      "range": "A"
     }
@@ -1069,6 +1071,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -1180,7 +1183,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "CF",
      "range": "A"
     }
@@ -1563,6 +1566,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -1674,7 +1678,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 2,
+     "e": 4,
      "pos": "1B",
      "range": "A"
     }
@@ -1933,6 +1937,7 @@
    "arm": "Weak",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -2044,7 +2049,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -2682,6 +2687,7 @@
    "arm": "Average",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -2793,7 +2799,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 2,
+     "e": 4,
      "pos": "2B",
      "range": "A"
     }
@@ -3087,6 +3093,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -3198,7 +3205,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "D"
     }
@@ -3465,6 +3472,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -3576,7 +3584,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -4175,6 +4183,7 @@
    "arm": "Above Average",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -4548,6 +4557,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -4659,7 +4669,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "CF",
      "range": "A"
     }
@@ -4990,6 +5000,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -5101,7 +5112,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "F"
     }
@@ -6418,6 +6429,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -6890,6 +6902,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -7001,7 +7014,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "D"
     }
@@ -7222,6 +7235,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -7333,7 +7347,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -7943,6 +7957,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -8054,7 +8069,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 1,
+     "e": 5,
      "pos": "C",
      "range": "A"
     }
@@ -9278,6 +9293,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -9389,7 +9405,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -9622,6 +9638,7 @@
    "arm": "Weak",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -9733,7 +9750,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "F"
     }
@@ -9963,6 +9980,7 @@
    "arm": "Weak",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -10074,7 +10092,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "F"
     }
@@ -10510,6 +10528,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -10621,7 +10640,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 1,
+     "e": 5,
      "pos": "SS",
      "range": "A"
     }
@@ -11752,6 +11771,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -11863,7 +11883,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -12196,6 +12216,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -12307,7 +12328,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "SS",
      "range": "A"
     }
@@ -12782,6 +12803,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -12893,7 +12915,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 2,
+     "e": 4,
      "pos": "C",
      "range": "A"
     }
@@ -19786,6 +19808,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -19897,7 +19920,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "RF",
      "range": "A"
     }
@@ -21075,6 +21098,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -21186,7 +21210,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "F"
     }
@@ -22956,6 +22980,7 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -23067,7 +23092,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "1B",
      "range": "D"
     }
@@ -23452,6 +23477,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -23563,7 +23589,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "2B",
      "range": "D"
     }
@@ -23945,6 +23971,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -24056,7 +24083,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "D"
     }
@@ -24712,6 +24739,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -24823,7 +24851,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -25352,6 +25380,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -25463,7 +25492,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -26186,6 +26215,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -26297,7 +26327,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "D"
     }
@@ -27206,6 +27236,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -27317,7 +27348,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -27543,6 +27574,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -27654,7 +27686,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "F"
     }
@@ -27881,6 +27913,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -29435,6 +29468,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -29546,7 +29580,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 1,
+     "e": 5,
      "pos": "C",
      "range": "A"
     }
@@ -29987,6 +30021,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -30673,6 +30708,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -30784,7 +30820,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "3B",
      "range": "A"
     }
@@ -31659,6 +31695,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -32104,6 +32141,7 @@
    "arm": "Weak",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -32215,7 +32253,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -33036,6 +33074,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -33147,7 +33186,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 1,
+     "e": 5,
      "pos": "C",
      "range": "A"
     }
@@ -33587,6 +33626,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -34029,6 +34069,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -34140,7 +34181,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -34480,6 +34521,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -34591,7 +34633,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -36309,6 +36351,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -36650,6 +36693,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -36761,7 +36805,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "D"
     }
@@ -36994,6 +37038,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -37105,7 +37150,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -37546,6 +37591,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -37657,7 +37703,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "D"
     }
@@ -37884,6 +37930,7 @@
    "arm": "Weak",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -37995,7 +38042,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "F"
     }
@@ -45716,6 +45763,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -45827,7 +45875,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "3B",
      "range": "A"
     }
@@ -46706,6 +46754,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -46817,7 +46866,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "CF",
      "range": "D"
     }
@@ -47296,6 +47345,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -47407,7 +47457,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -47672,6 +47722,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -47783,7 +47834,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -48370,6 +48421,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -48481,7 +48533,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 2,
+     "e": 4,
      "pos": "1B",
      "range": "A"
     }
@@ -49086,6 +49138,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -49197,13 +49250,13 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     },
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "2B",
      "range": "A"
     }
@@ -49424,6 +49477,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -49535,7 +49589,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 2,
+     "e": 4,
      "pos": "1B",
      "range": "A"
     }
@@ -49792,6 +49846,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -49903,7 +49958,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -50288,6 +50343,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -50399,7 +50455,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "2B",
      "range": "A"
     }
@@ -50903,6 +50959,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -51014,7 +51071,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 1,
+     "e": 5,
      "pos": "1B",
      "range": "A"
     }
@@ -51235,6 +51292,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -51346,7 +51404,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 2,
+     "e": 4,
      "pos": "SS",
      "range": "A"
     }
@@ -51722,6 +51780,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -51833,7 +51892,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -52080,6 +52139,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -52191,7 +52251,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "SS",
      "range": "A"
     }
@@ -52448,6 +52508,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Average",
    "out_table": [
     {
@@ -52559,7 +52620,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "C"
     }
@@ -60109,6 +60170,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -60220,7 +60282,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "RF",
      "range": "A"
     }
@@ -62770,6 +62832,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -62881,7 +62944,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "RF",
      "range": "A"
     }
@@ -64186,6 +64249,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -64297,7 +64361,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 2,
+     "e": 4,
      "pos": "C",
      "range": "A"
     }
@@ -64551,6 +64615,7 @@
    "arm": "Strong",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -64662,7 +64727,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "LF",
      "range": "A"
     }
@@ -64895,6 +64960,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -65006,7 +65072,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 5,
+     "e": 1,
      "pos": "SS",
      "range": "D"
     }
@@ -65888,6 +65954,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -65999,7 +66066,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "2B",
      "range": "D"
     }
@@ -85592,6 +85659,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -85703,7 +85771,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "D"
     }
@@ -86074,6 +86142,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -86185,7 +86254,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 1,
+     "e": 5,
      "pos": "C",
      "range": "A"
     }
@@ -86418,6 +86487,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -86756,6 +86826,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -86867,7 +86938,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -87655,6 +87726,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -87766,7 +87838,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -88968,6 +89040,7 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -89079,7 +89152,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "F"
     }
@@ -89797,6 +89870,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -89908,7 +89982,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -90135,6 +90209,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -90239,7 +90314,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 5,
+     "e": 1,
      "pos": "SS",
      "range": "D"
     }
@@ -90814,6 +90889,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -90925,7 +91001,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "CF",
      "range": "A"
     }
@@ -111742,6 +111818,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -111853,7 +111930,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "SS",
      "range": "A"
     }
@@ -112466,6 +112543,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -112577,7 +112655,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -112810,6 +112888,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -113355,6 +113434,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -113452,7 +113532,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -113682,6 +113762,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -113793,7 +113874,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "D"
     }
@@ -114684,6 +114765,7 @@
    "arm": "Average",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -114795,7 +114877,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "D"
     }
@@ -115377,6 +115459,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -115488,7 +115571,7 @@
    "positions": [
     {
      "arm": 1,
-     "e": 1,
+     "e": 5,
      "pos": "C",
      "range": "A"
     }
@@ -116166,6 +116249,7 @@
    "arm": "Weak",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -116277,7 +116361,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "F"
     }
@@ -116610,6 +116694,7 @@
    "arm": "Below Average",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -116721,7 +116806,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "2B",
      "range": "D"
     }
@@ -116951,6 +117036,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -117062,7 +117148,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "D"
     }
@@ -137398,6 +137484,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -137509,7 +137596,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "SS",
      "range": "F"
     }
@@ -138778,6 +138865,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -138889,7 +138977,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 2,
+     "e": 4,
      "pos": "2B",
      "range": "A"
     }
@@ -141393,6 +141481,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -141504,7 +141593,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "F"
     }
@@ -151133,6 +151222,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -151244,7 +151334,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "RF",
      "range": "A"
     }
@@ -152042,6 +152132,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -152153,7 +152244,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "D"
     }
@@ -152725,6 +152816,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -152836,7 +152928,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "3B",
      "range": "A"
     }
@@ -153176,6 +153268,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -153287,7 +153380,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "2B",
      "range": "A"
     }
@@ -153614,6 +153707,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -153725,7 +153819,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "CF",
      "range": "A"
     }
@@ -156018,6 +156112,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -157023,6 +157118,7 @@
    "arm": "Above Average",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -157134,7 +157230,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 2,
+     "e": 4,
      "pos": "3B",
      "range": "A"
     }
@@ -157557,6 +157653,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -157668,7 +157765,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "CF",
      "range": "A"
     }
@@ -158676,6 +158773,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -158787,7 +158885,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "D"
     }
@@ -159231,6 +159329,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -159342,7 +159441,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "SS",
      "range": "D"
     }
@@ -159665,6 +159764,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -159776,7 +159876,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "2B",
      "range": "D"
     }
@@ -160005,6 +160105,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -160116,7 +160217,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "D"
     }
@@ -160343,6 +160444,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -160454,7 +160556,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -161170,6 +161272,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -161281,7 +161384,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 2,
+     "e": 4,
      "pos": "3B",
      "range": "A"
     }
@@ -161607,6 +161710,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -161718,7 +161822,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "SS",
      "range": "F"
     }
@@ -162767,6 +162871,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -162878,7 +162983,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "D"
     }
@@ -169663,6 +169768,7 @@
    "arm": "Weak",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -169774,7 +169880,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -170017,6 +170123,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -170787,6 +170894,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -170898,7 +171006,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 2,
+     "e": 4,
      "pos": "1B",
      "range": "A"
     }
@@ -171159,6 +171267,7 @@
    "arm": "Above Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -171270,7 +171379,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 2,
+     "e": 4,
      "pos": "3B",
      "range": "A"
     }
@@ -172810,6 +172919,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -173762,6 +173872,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -173873,7 +173984,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -174122,6 +174233,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -175499,6 +175611,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -175610,7 +175723,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "D"
     }
@@ -176099,6 +176212,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -176210,7 +176324,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 2,
+     "e": 4,
      "pos": "3B",
      "range": "A"
     }
@@ -177090,6 +177204,7 @@
    "arm": "Weak",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -177201,7 +177316,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -177690,6 +177805,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -177801,7 +177917,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -178053,6 +178169,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -178164,7 +178281,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "D"
     }
@@ -179234,6 +179351,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -179345,7 +179463,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "1B",
      "range": "D"
     }
@@ -181039,6 +181157,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -181150,7 +181269,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 1,
+     "e": 5,
      "pos": "1B",
      "range": "A"
     }
@@ -181398,6 +181517,7 @@
    "arm": "Strong",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -181509,7 +181629,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "2B",
      "range": "A"
     }
@@ -181777,6 +181897,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -181888,7 +182009,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "D"
     }
@@ -182514,6 +182635,7 @@
    "arm": "Strong",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -182625,7 +182747,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "SS",
      "range": "A"
     }
@@ -183343,6 +183465,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -183454,7 +183577,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -183709,6 +183832,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -183820,7 +183944,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "SS",
      "range": "F"
     }
@@ -184079,6 +184203,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -184190,7 +184315,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "F"
     }
@@ -184529,6 +184654,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -184640,7 +184766,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "LF",
      "range": "A"
     }
@@ -186592,6 +186718,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -186703,7 +186830,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -187963,6 +188090,7 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -188074,7 +188202,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "1B",
      "range": "D"
     }
@@ -188710,6 +188838,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -188821,7 +188950,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -189078,6 +189207,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -189182,7 +189312,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "3B",
      "range": "A"
     }
@@ -189840,6 +189970,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -189951,7 +190082,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -190170,6 +190301,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -190281,7 +190413,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "3B",
      "range": "A"
     }
@@ -190511,6 +190643,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -191054,6 +191187,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -191165,7 +191299,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "F"
     }
@@ -191392,6 +191526,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -191503,7 +191638,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "D"
     }
@@ -191736,6 +191871,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -191847,7 +191983,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 2,
+     "e": 4,
      "pos": "CF",
      "range": "A"
     }
@@ -192181,6 +192317,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -192292,7 +192429,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -193620,6 +193757,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -193995,6 +194133,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -194106,7 +194245,7 @@
    "positions": [
     {
      "arm": 1,
-     "e": 1,
+     "e": 5,
      "pos": "C",
      "range": "A"
     }
@@ -194645,6 +194784,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -195360,6 +195500,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -195471,7 +195612,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 2,
+     "e": 4,
      "pos": "C",
      "range": "A"
     }
@@ -195701,6 +195842,7 @@
    "arm": "Average",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -196589,6 +196731,7 @@
    "arm": "Below Average",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -196700,7 +196843,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "2B",
      "range": "F"
     }
@@ -196933,6 +197076,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -197044,7 +197188,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "RF",
      "range": "A"
     }
@@ -197271,6 +197415,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -197382,7 +197527,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "F"
     }
@@ -197615,6 +197760,7 @@
    "arm": "Weak",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -197726,7 +197872,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }
@@ -198398,6 +198544,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -198736,6 +198883,7 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -198847,7 +198995,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 2,
+     "e": 4,
      "pos": "3B",
      "range": "A"
     }
@@ -199623,6 +199771,7 @@
    "arm": "Strong",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -200389,6 +200538,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Above Average",
    "out_table": [
     {
@@ -200873,6 +201023,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -200984,7 +201135,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -201545,6 +201696,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -201656,7 +201808,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -202312,6 +202464,7 @@
    "arm": "Strong",
    "bats": "S",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -202423,7 +202576,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -202691,6 +202844,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -202802,7 +202956,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "D"
     }
@@ -203032,6 +203186,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Great",
    "out_table": [
     {
@@ -203143,7 +203298,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 2,
+     "e": 4,
      "pos": "SS",
      "range": "A"
     }
@@ -203934,6 +204089,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -204045,7 +204201,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "RF",
      "range": "D"
     }
@@ -204424,6 +204580,7 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -204535,7 +204692,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "1B",
      "range": "D"
     }
@@ -204792,6 +204949,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -204903,7 +205061,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "1B",
      "range": "D"
     }
@@ -205128,6 +205286,7 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -205239,7 +205398,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "2B",
      "range": "F"
     }
@@ -205995,6 +206154,7 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -206106,7 +206266,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 5,
+     "e": 1,
      "pos": "3B",
      "range": "D"
     }
@@ -206367,6 +206527,7 @@
    "arm": "Strong",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -206478,7 +206639,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -206741,6 +206902,7 @@
     ]
    },
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -206852,7 +207014,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 5,
+     "e": 1,
      "pos": "C",
      "range": "F"
     }
@@ -207195,6 +207357,7 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -207306,7 +207469,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "D"
     }
@@ -207562,6 +207725,7 @@
    "arm": "Strong",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Elite",
    "out_table": [
     {
@@ -207673,7 +207837,7 @@
    "positions": [
     {
      "arm": 8,
-     "e": 1,
+     "e": 5,
      "pos": "CF",
      "range": "A"
     }
@@ -208278,6 +208442,7 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Below Average",
    "out_table": [
     {
@@ -208389,7 +208554,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 5,
+     "e": 1,
      "pos": "SS",
      "range": "D"
     }
@@ -208989,6 +209154,7 @@
    "arm": "Weak",
    "bats": "L",
    "dp": 7,
+   "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
    "fielding": "Poor",
    "out_table": [
     {
@@ -209100,7 +209266,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 5,
+     "e": 1,
      "pos": "LF",
      "range": "F"
     }

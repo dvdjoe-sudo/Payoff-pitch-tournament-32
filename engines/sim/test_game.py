@@ -318,16 +318,16 @@ def roster_rules_and_extra_innings():
 
 def sample_game_stays_out_of_the_tournament():
     report = play("BOS", "TOR", seed=1)
-    assert report["score"] == {"TOR": 0, "BOS": 2}
+    assert report["score"] == {"TOR": 1, "BOS": 4}
     assert report["innings"] == 9
     assert report["postponed"] is False
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
     assert report["pitching"]["TOR|stiebda01"]["outs"] == 24
     assert report["wp"] == {
-        "seen": 14, "fired": 0, "miss": 4, "empty": 10, "no_rating": 0, "unmarked": 0,
+        "seen": 13, "fired": 0, "miss": 5, "empty": 8, "no_rating": 0, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
-    assert any("WP? drawn 14. Fired 0." in line for line in report["log"])
+    assert any("WP? drawn 13. Fired 0." in line for line in report["log"])
     # Catcher arms are on the page-8 1-5 scale, so steals resolve.
     assert any("FAC steal." in line for line in report["log"])
     blob = subprocess.check_output(["git", "hash-object", "tournament_results.json"], cwd=ROOT, text=True).strip()
@@ -489,6 +489,89 @@ def wp_mark_uses_the_page_10_rating():
     assert found.bases[1]["id"] == "first"
 
 
+class FixedDice:
+    def __init__(self, die=6, pair=(1, 1)):
+        self.die, self.two = die, pair
+
+    def d6(self):
+        return self.die
+
+    def pair(self):
+        return self.two[0], self.two[1], sum(self.two)
+
+    def pct(self):
+        return 50
+
+    def take(self):
+        return []
+
+
+def stress_test_box_score_fixes():
+    """Bugs the 1000+ game stress run found (scripts/stress_sim.py)."""
+    import game as engine
+    # A restarted at-bat is not a batter faced.
+    found = game()
+    found.order_index["TOR"] = 3
+    found.pitcher["BOS"]["batters"] = 1
+    found._pitch_line(bf=1)
+    found._restart_at_bat()
+    assert found.order_index["TOR"] == 2
+    assert found.pitcher["BOS"]["batters"] == 0
+    assert found.pitch_box["BOS|martipe02"]["bf"] == 0
+
+    # The FAC prints the bunt error result as "E?" (pages 14 and 19).
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", fac=True)
+    found.deck.draw = lambda purpose: {"sac": {"F": "E?"}, "d6_1": 3, "d6_2": 7, "pct": 50}
+    found.deck.take = lambda: []
+    found.dice = FixedDice(die=6)
+    batter = found.away["lineup"][0]
+    found.bases = [runner("first"), None, None]
+    found._bunt(batter, "F", False)
+    line = found.box["TOR|" + batter["id"]]
+    assert line["ab"] == 1 and line["h"] == 0
+    assert found.bases[0]["id"] == batter["id"] and found.bases[1]["id"] == "first"
+    assert found.box["BOS|field"]["e"] == 1
+
+    # Safe on a dropped third strike is one at-bat and one strikeout.
+    saved = engine.rare_lookup
+    try:
+        found = game()
+        found.dice = FixedDice(pair=(1, 1))
+        batter = found.away["lineup"][0]
+        batter["run"] = 5
+        engine.rare_lookup = lambda empty, result, pct: {"coded": True, "event": "SO_DROP", "note": "drop"}
+        found._rare(batter, found.pitcher["BOS"]["player"], "TOUGH", None, None, pct=50)
+        line = found.box["TOR|" + batter["id"]]
+        assert (line["ab"], line["so"]) == (1, 1)
+        # RUN 6+ doubles and is out at third: one at-bat, one hit, one out.
+        found = game()
+        batter = found.away["lineup"][1]
+        batter["run"] = 7
+        engine.rare_lookup = lambda empty, result, pct: {"coded": True, "event": "RUN5_1B_OR_2B_OUT3", "note": "liner"}
+        found._rare(batter, found.pitcher["BOS"]["player"], "TOUGH", None, None, pct=50)
+        line = found.box["TOR|" + batter["id"]]
+        assert (line["ab"], line["h"], line["tb"], found.outs) == (1, 1, 2, 1)
+    finally:
+        engine.rare_lookup = saved
+
+    # A runner thrown out for the third out: the batter keeps his hit.
+    found = game()
+    batter = found.away["lineup"][0]
+    found.outs = 3
+    found._reach(batter, 1, 0, "Single.", hit=True, hold_lead=True)
+    line = found.box["TOR|" + batter["id"]]
+    assert (line["ab"], line["h"], line["tb"]) == (1, 1, 1)
+
+    # A starter tired at the end of a half is replaced when his side next
+    # takes the field, not before a game that may already be over.
+    found = game()
+    found.pitcher["BOS"]["fatigued"] = True
+    found._maybe_change_pitcher(before_batter=False)
+    assert found.pitcher["BOS"]["player"]["id"] == "martipe02"
+    found._maybe_change_pitcher(before_batter=True)
+    assert found.pitcher["BOS"]["player"]["id"] != "martipe02"
+
+
 if __name__ == "__main__":
     chart_faces()
     basic_running_and_walks()
@@ -499,4 +582,5 @@ if __name__ == "__main__":
     fac_deck_and_scripted_plays()
     wp_mark_uses_the_page_10_rating()
     sample_game_stays_out_of_the_tournament()
+    stress_test_box_score_fixes()
     print("game tests passed")

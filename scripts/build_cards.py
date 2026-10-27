@@ -372,6 +372,27 @@ def aggregate_tournament(key, lines, decisions, master_ids):
     return {"batting": batting, "pitching": pitching, "games": game_ids}
 
 
+ERROR_SCALE_MARK = "rulebook p2: 1 worst, 5 best (set-file digit flipped)"
+
+
+def rulebook_error_scale(positions, label=None):
+    """Set files store the error digit with 1 best; the rulebook (p2), the
+    park chart and the 1986 cards use 1 worst, 5 best. See
+    scripts/fix_error_scale.py."""
+    if not positions:
+        return positions
+    # Average C/4 is left for derive_hitter_fielding.py to replace from stats.
+    if label == "Average" and all(r.get("range") == "C" and r.get("e") == 4 for r in positions):
+        return positions
+    out = []
+    for row in positions:
+        row = dict(row)
+        if isinstance(row.get("e"), int):
+            row["e"] = 6 - row["e"]
+        out.append(row)
+    return out
+
+
 def build():
     site = load_json(os.path.join(ROOT, "tournament_results.json"))
     archive = load_json(ARCHIVE_PATH)
@@ -496,7 +517,8 @@ def build():
                 entry["card_bat"] = {
                     "bats": card.get("bats"),
                     "throws": card.get("throws"),
-                    "positions": card.get("positions"),
+                    "positions": rulebook_error_scale(card.get("positions"), line.get("Fielding")),
+                    "error_scale": ERROR_SCALE_MARK if card.get("positions") else None,
                     "sections": card.get("sections"),
                     "out_table": card.get("out_table"),
                     "dp": card.get("dp"),

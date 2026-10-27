@@ -65,6 +65,7 @@ The rate harness in `pa_sim.py` is a different tool. It is unchanged. Its error 
 - **ERR chart (page 20).** Implemented as printed. A dropped foul restarts the at-bat. SINGLE+error is a hit plus one extra base.
 - **OUT chart (page 20).** Implemented, including the range letters on the double-play rows and the arm-5 short-fly double play. **Ambiguous:** the double-play row does not say whether other runners advance. They hold. The lineout double play says the closest runner. The lead runner is used.
 - **Park charts.** Home park is the 1986 card when that stadium is also one of the 12 charts in the rulebook (pages 109–110). Fenway’s faces match. A club with no 1986 park in that set is refused. Colorado, Miami, Tampa Bay, Arizona, Washington, and the Philadelphia Athletics are in that group.
+- **Error rating direction (page 2, park cards).** Page 2: “The ‘E’ rating is the batter’s Error rating with 1 being the worst and 5 the best.” The printed park cards agree (error 5 has the smallest ERR band, e.g. Cleveland 1986: 5 = 1–32, 1 = 1–69) and so do the printed 1986 cards (Ozzie Smith SS A 4). The engine reads the digit as printed. 166 set-file hitter cards (labels Elite, Great, Above Average, Below Average, Poor, plus Larry Walker COL) had the digit the other way round (Elite A/1 … Poor F/5); it is flipped (6 − e) by `scripts/fix_error_scale.py`, and those cards carry `error_scale`. Range, arm and label are unchanged.
 - **Pitcher fielding.** Implemented. Every roster pitcher card carries `card_pit.fielding`, the range and error grade the 1986 pitcher cards print under FIELDING. It is derived from franchise-window pitcher (PO+A) and E per inning against the league, cut to match the printed 1986 grades (range 80.8% exact, error 85.2%). A batting card's own position line still comes first (Ruth).
 - **Average fielding.** Where a card still has the engine default (range C, error 4, label Average), the log says that grade is not a printed rating. Boston and Toronto fielders in the sample game are not in that group. Empty-roster clubs are.
 
@@ -113,16 +114,18 @@ Lasting sentences that are coded only in part: the extra out on a dropped third 
 
 `engines/sim/samples/tor-at-bos-seed1.txt`
 
-Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Toronto 0, Boston 2, nine innings. Pedro Martinez threw a 9-inning shutout, 32 batters. Dave Stieb 8 innings, 2 runs, 34 batters. Boston led after the top of the ninth, so the bottom was not played and Toronto’s bullpen did not enter.
+Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Toronto 1, Boston 4, nine innings. Pedro Martinez went nine, 1 run, 33 batters. Dave Stieb 8 innings, 4 runs, 37 batters. Boston led after the top of the ninth, so the bottom was not played. Stieb was tired after the eighth; the reliever would have come in when Toronto next took the field, so nobody entered.
 
-The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale (both Fisk and Whitt at 6), it was Toronto 0, Boston 4, and no steal resolved. Catcher arms are now on the page-8 1–5 scale (Fisk 3, Whitt 3). Steals draw FAC cards, so the deck sequence and the line score both change.
+The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Every change to a card or to the deck sequence changes the line score.
 
-`WP?` on this seed: fourteen marked cards drawn, none fired. Ten came up with the bases empty. Four missed the pitcher’s rating (Pedro Martinez and Dave Stieb are rated 30). No drawn card met a pitcher who has no WP rating.
+`WP?` on this seed: thirteen marked cards drawn, none fired. Eight came up with the bases empty. Five missed the pitcher’s rating (Pedro Martinez and Dave Stieb are rated 30). No drawn card met a pitcher who has no WP rating.
 
-Steals on this seed: four FAC steal resolutions. Tris Speaker was caught stealing. Nomar Garciaparra was safe on SB+E2?. Dustin Pedroia and George Bell stole. Fisk (arm 3) and Whitt (arm 3) are both on the page-8 chart.
+Steals on this seed: five FAC steal resolutions. Tris Speaker and Josh Donaldson were caught stealing. Nomar Garciaparra was safe on SB+E2? (Whitt's error 1, so the throw sailed). Dustin Pedroia and Jimmie Foxx stole.
 
 The catcher re-rate table is `engines/sim/catcher_arm_rerate.json`.
 
 The file is a hand check. It is not in `tournament_results.json`. Played games are unchanged. The service-worker cache is unchanged.
+
+`python3 scripts/stress_sim.py --seeds 3` plays every ordered pair of clubs with a 1986 park card on the deck and checks crashes, hangs, outs, runners, batting order, box-score totals (runs, PA = AB+BB+HBP+SF+SH, pitcher BF) and rule-path coverage. It writes only to /tmp.
 
 `python3 engines/sim/test_game.py` checks the charts, a scripted double play, sacrifice, steal, defense hit, ballpark split, fatigue single, the extra-inning continuation, the FAC deck, and this seed. `python3 engines/sim/test_pa_sim.py` still passes. The rate harness was not edited.
