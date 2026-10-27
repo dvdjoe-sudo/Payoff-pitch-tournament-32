@@ -4,7 +4,8 @@ The library has no game engine of its own; this module is the v2
 resolution semantics for library pitcher cards, exactly as fitted and
 gated in the 2026-10-24 v2 build (see ../V2_PITCHER_REPORT.md).
 
-The one change from v1 semantics — the v2 bump rule:
+The one change from v1 semantics — the v2 bump rule, which is the
+tournament tracker's rule:
   On a TOUGH or TOUGH-OUT read, a percentile landing within `bump`
   points above the top of the hitter's printed TOUGH SO range is also
   a strikeout: the band reads [lo, hi + bump]. The percentile itself
@@ -12,6 +13,13 @@ The one change from v1 semantics — the v2 bump rule:
   pushed reads past hitters' bottom-loaded SO bands and collapsed
   implied strikeout rates.) The conversion set grows monotonically
   with the bump for every hitter.
+
+The printed rulebook's %roll +10 / +20 rating is the v1 shift: add the
+bump to the percentile on a TOUGH result, and keep the original face
+when the sum is greater than 99. That shift lowers strikeouts. This
+module does not implement that sentence. The plate-appearance
+simulator in engines/sim does. DEFENSE_VECTOR and the 50/50 BALLPARK
+mix below are the frozen fit, not the park and defense charts.
 
 Environment for implied rates: the pooled Release 1.0 library hitter
 cards (184, engine v0.5) enumerated exactly (percentile 1..99 x 2d6).
