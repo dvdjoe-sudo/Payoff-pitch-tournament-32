@@ -20,7 +20,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 2 | SF | San Francisco Giants | Appearances only |
 | 3 | BOS | Boston Red Sox | Appearances only |
 | 4 | DET | Detroit Tigers | Official roster, plus game appearances |
-| 5 | STL | St. Louis Cardinals | Official roster |
+| 5 | STL | St. Louis Cardinals | Official roster, plus game appearances |
 | 6 | CHC | Chicago Cubs | Official roster |
 | 7 | ATL | Atlanta Braves | Official roster |
 | 8 | PIT | Pittsburgh Pirates | Official roster |
@@ -43,7 +43,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 25 | TOR | Toronto Blue Jays | Official roster |
 | 26 | SD | San Diego Padres | Official roster |
 | 27 | MON | Montreal Expos | Official roster |
-| 28 | COL | Colorado Rockies | Official roster |
+| 28 | COL | Colorado Rockies | Official roster, plus game appearances |
 | 29 | ARI | Arizona Diamondbacks | Appearances only |
 | 30 | TB | Tampa Bay Rays | Appearances only |
 | 31 | WSH | Washington Nationals | Appearances only |
@@ -345,6 +345,37 @@ Official roster provided by the tournament owner. The lines are copied from that
 - SU3 Jason Isringhausen
 - LHS Al Brazle
 - MID1 Lindy McDaniel
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Ozzie Smith (`smithoz01`) in R1-05-G1
+- Slot 2: Stan Musial (`musiast01`) in R1-05-G1
+- Slot 3: Rogers Hornsby (`hornsro01`) in R1-05-G1
+- Slot 4: Albert Pujols (`pujolal01`) in R1-05-G1
+- Slot 5: Jim Edmonds (`edmonji01`) in R1-05-G1
+- Slot 6: Joe Medwick (`medwijo01`) in R1-05-G1
+- Slot 7: Enos Slaughter (`slaugen01`) in R1-05-G1
+- Slot 8: Yadier Molina (`molinya01`) in R1-05-G1
+- Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1
+
+### Substitutes who have batted
+
+- Ted Simmons (`simmote01`), slot 1
+
+### Starts, in the order the games were played
+
+- Bob Gibson (`gibsobo01`) started R1-05-G1
+
+### Relievers who have appeared
+
+- Jason Isringhausen (`isrinja01`), first seen in R1-05-G1
+- Ryan Helsley (`helslry01`), first seen in R1-05-G1
+
+### Rotation carry recorded on the series
+
+- R1-05: next start Dizzy Dean
 
 ## 6. Chicago Cubs (CHC)
 
@@ -1465,6 +1496,34 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MR Jerry DiPoto 7
 - MR Matt Belisle 7
 - LHP Boone Logan 6
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Charlie Blackmon (`blackch02`) in R1-05-G1
+- Slot 2: DJ LeMahieu (`lemahdj01`) in R1-05-G1
+- Slot 3: Todd Helton (`heltoto01`) in R1-05-G1
+- Slot 4: Nolan Arenado (`arenano01`) in R1-05-G1
+- Slot 5: Larry Walker (`walkela01`) in R1-05-G1
+- Slot 6: Troy Tulowitzki (`tulowtr01`) in R1-05-G1
+- Slot 7: Matt Holliday (`hollima01`) in R1-05-G1
+- Slot 8: Elias Diaz (`diazel01`) in R1-05-G1
+- Slot 9: Andres Galarraga (`galaran01`) in R1-05-G1
+
+### Starts, in the order the games were played
+
+- Ubaldo Jimenez (`jimenub01`) started R1-05-G1
+
+### Relievers who have appeared
+
+- Boone Logan (`loganbo02`), first seen in R1-05-G1
+- Rafael Betancourt (`betanra01`), first seen in R1-05-G1
+- Huston Street (`streehu01`), first seen in R1-05-G1
+
+### Rotation carry recorded on the series
+
+- R1-05: next start Kyle Freeland
 
 ## 29. Arizona Diamondbacks (ARI)
 

@@ -1090,7 +1090,7 @@
  "COL": {
   "code": "COL",
   "name": "Colorado Rockies",
-  "played": false,
+  "played": true,
   "players": [
    {
     "group": "lineup",
@@ -1161,7 +1161,7 @@
     "id": "galaran01",
     "kind": "hitter",
     "name": "Andres Galarraga",
-    "pos": "DH",
+    "pos": "1B",
     "slot": 9
    },
    {
@@ -2818,7 +2818,7 @@
  "STL": {
   "code": "STL",
   "name": "St. Louis Cardinals",
-  "played": false,
+  "played": true,
   "players": [
    {
     "group": "lineup",
@@ -2873,7 +2873,7 @@
     "id": "slaugen01",
     "kind": "hitter",
     "name": "Enos Slaughter",
-    "pos": "DH",
+    "pos": "RF",
     "slot": 7
    },
    {

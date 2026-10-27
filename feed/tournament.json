@@ -1,8 +1,19 @@
 {
  "title": "Payoff Pitch Tournament 32",
  "site": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/",
- "games_played": 22,
- "next_up": null,
+ "games_played": 23,
+ "next_up": {
+  "series_id": "R1-05",
+  "game_in_series": 2,
+  "home": "STL",
+  "away": "COL",
+  "home_name": "St. Louis Cardinals",
+  "away_name": "Colorado Rockies",
+  "starters": {
+   "STL": "Dizzy Dean",
+   "COL": "Kyle Freeland"
+  }
+ },
  "games": [
   {
    "id": "R1-01-G1",
@@ -355,6 +366,22 @@
    "recap": "The Detroit Tigers beat the Arizona Diamondbacks 10-3. The go-ahead run scored in the 3rd inning. Harry Heilmann led the Detroit Tigers offense with 3 hits and 6 RBI in 5 at-bats. Hal Newhouser earned the win, allowing 2 earned runs in 5.0 innings.",
    "rng_seed": 20261213,
    "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-04-G6"
+  },
+  {
+   "id": "R1-05-G1",
+   "series_id": "R1-05",
+   "game_in_series": 1,
+   "date": "2026-10-26",
+   "away": "COL",
+   "home": "STL",
+   "away_name": "Colorado Rockies",
+   "home_name": "St. Louis Cardinals",
+   "away_runs": 8,
+   "home_runs": 10,
+   "winner": "STL",
+   "recap": "The St. Louis Cardinals beat the Colorado Rockies 10-8. The go-ahead run scored in the 7th inning. Rogers Hornsby led the St. Louis Cardinals offense with 4 hits and 3 RBI in 5 at-bats. Jason Isringhausen earned the win, allowing 2 earned runs in 3.0 innings.",
+   "rng_seed": 20261301,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-05-G1"
   }
  ]
 }

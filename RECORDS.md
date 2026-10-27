@@ -27,3 +27,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - New York Yankees scored 22 against Miami Marlins in R1-01-G3.
 - New York Yankees scored 17 against Miami Marlins in R1-01-G4.
 - Detroit Tigers scored 10 against Arizona Diamondbacks in R1-04-G6.
+- St. Louis Cardinals scored 10 against Colorado Rockies in R1-05-G1.
