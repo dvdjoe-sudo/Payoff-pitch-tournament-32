@@ -31244,7 +31244,7 @@
    "throws": "R"
   },
   "id": "bautife01",
-  "name": "Félix Bautista",
+  "name": "F\u00e9lix Bautista",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -96167,7 +96167,7 @@
   },
   "card_pit": null,
   "id": "ramirjo01",
-  "name": "José Ramírez",
+  "name": "Jos\u00e9 Ram\u00edrez",
   "peak_bat": {
    "2B": 209,
    "3B": 22,
@@ -108987,7 +108987,7 @@
   },
   "card_pit": null,
   "id": "gonzaca01",
-  "name": "Carlos González",
+  "name": "Carlos Gonz\u00e1lez",
   "peak_bat": {
    "2B": 140,
    "3B": 25,
@@ -127735,7 +127735,7 @@
    "throws": "L"
   },
   "id": "marteda01",
-  "name": "Dámaso Marte",
+  "name": "D\u00e1maso Marte",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -128628,7 +128628,7 @@
   },
   "card_pit": null,
   "id": "minosmi01",
-  "name": "Minnie Miñoso",
+  "name": "Minnie Mi\u00f1oso",
   "peak_bat": {
    "2B": 150,
    "3B": 56,
@@ -129522,7 +129522,7 @@
   },
   "card_pit": null,
   "id": "ordonma01",
-  "name": "Magglio Ordóñez",
+  "name": "Magglio Ord\u00f3\u00f1ez",
   "peak_bat": {
    "2B": 201,
    "3B": 11,
@@ -148111,7 +148111,7 @@
   },
   "card_pit": null,
   "id": "aloumo01",
-  "name": "Moisés Alou",
+  "name": "Mois\u00e9s Alou",
   "peak_bat": {
    "2B": 93,
    "3B": 8,
@@ -148994,7 +148994,7 @@
   },
   "card_pit": null,
   "id": "altuvjo01",
-  "name": "José Altuve",
+  "name": "Jos\u00e9 Altuve",
   "peak_bat": {
    "2B": 188,
    "3B": 14,
@@ -155275,7 +155275,7 @@
   },
   "card_pit": null,
   "id": "cedence01",
-  "name": "César Cedeño",
+  "name": "C\u00e9sar Cede\u00f1o",
   "peak_bat": {
    "2B": 163,
    "3B": 26,
@@ -157044,7 +157044,7 @@
   },
   "card_pit": null,
   "id": "cruzjo01",
-  "name": "José Cruz",
+  "name": "Jos\u00e9 Cruz",
   "peak_bat": {
    "2B": 142,
    "3B": 45,
@@ -158075,7 +158075,7 @@
   },
   "card_pit": null,
   "id": "gonzama01",
-  "name": "Marwin González",
+  "name": "Marwin Gonz\u00e1lez",
   "peak_bat": {
    "2B": 118,
    "3B": 8,
@@ -159402,7 +159402,7 @@
   },
   "card_pit": null,
   "id": "penaje02",
-  "name": "Jeremy Peña",
+  "name": "Jeremy Pe\u00f1a",
   "peak_bat": {
    "2B": 129,
    "3B": 11,
@@ -163361,7 +163361,7 @@
   },
   "card_pit": null,
   "id": "beltrca01",
-  "name": "Carlos Beltrán",
+  "name": "Carlos Beltr\u00e1n",
   "peak_bat": {
    "2B": 136,
    "3B": 38,
@@ -171628,7 +171628,7 @@
   },
   "card_pit": null,
   "id": "perezsa02",
-  "name": "Salvador Pérez",
+  "name": "Salvador P\u00e9rez",
   "peak_bat": {
    "2B": 116,
    "3B": 4,
@@ -189122,7 +189122,7 @@
    "throws": "R"
   },
   "id": "rodrifr03",
-  "name": "Francisco Rodríguez",
+  "name": "Francisco Rodr\u00edguez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -206844,7 +206844,27 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G2"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 11,
+    "er": 4,
+    "g": 1,
+    "gs": 1,
+    "h": 3,
+    "hr": 0,
+    "l": 0,
+    "outs": 6,
+    "r": 4,
+    "so": 2,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|alfonan01": {
   "card_bat": null,
@@ -206988,7 +207008,30 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 4,
+    "bf": 26,
+    "er": 7,
+    "g": 4,
+    "gs": 0,
+    "h": 5,
+    "hr": 0,
+    "l": 0,
+    "outs": 16,
+    "r": 7,
+    "so": 5,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|beckejo02": {
   "card_bat": null,
@@ -207130,7 +207173,27 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 13,
+    "er": 3,
+    "g": 1,
+    "gs": 1,
+    "h": 6,
+    "hr": 0,
+    "l": 1,
+    "outs": 6,
+    "r": 4,
+    "so": 3,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|bendean01": {
   "card_bat": null,
@@ -207276,7 +207339,29 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 18,
+    "er": 5,
+    "g": 3,
+    "gs": 0,
+    "h": 4,
+    "hr": 0,
+    "l": 1,
+    "outs": 12,
+    "r": 5,
+    "so": 3,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|burneaj01": {
   "card_bat": null,
@@ -207420,7 +207505,27 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G3"
+   ],
+   "pitching": {
+    "bb": 3,
+    "bf": 12,
+    "er": 2,
+    "g": 1,
+    "gs": 0,
+    "h": 2,
+    "hr": 0,
+    "l": 0,
+    "outs": 6,
+    "r": 3,
+    "so": 2,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|cabremi01": {
   "card_bat": {
@@ -208304,7 +208409,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 15,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 5,
+    "hbp": 0,
+    "hr": 0,
+    "r": 2,
+    "rbi": 3,
+    "sac": 0,
+    "sb": 0,
+    "sf": 1,
+    "so": 4
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|castilu01": {
   "card_bat": {
@@ -209174,7 +209306,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 14,
+    "bb": 4,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 3,
+    "hbp": 0,
+    "hr": 0,
+    "r": 3,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 5
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|cishest01": {
   "card_bat": null,
@@ -209318,7 +209477,30 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 5,
+    "bf": 26,
+    "er": 10,
+    "g": 4,
+    "gs": 0,
+    "h": 8,
+    "hr": 0,
+    "l": 0,
+    "outs": 12,
+    "r": 10,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|coninje01": {
   "card_bat": {
@@ -210205,7 +210387,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 15,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 3,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 4
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|fernajo02": {
   "card_bat": null,
@@ -211240,7 +211449,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 14,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 2,
+    "h": 4,
+    "hbp": 0,
+    "hr": 3,
+    "r": 3,
+    "rbi": 7,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 4
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|johnsch04": {
   "card_bat": {
@@ -212146,7 +212382,33 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 6,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 3,
+    "gidp": 1,
+    "h": 2,
+    "hbp": 0,
+    "hr": 1,
+    "r": 1,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3"
+   ],
+   "pitching": null
+  }
  },
  "MIA|johnsjo09": {
   "card_bat": null,
@@ -212288,7 +212550,27 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G1"
+   ],
+   "pitching": {
+    "bb": 3,
+    "bf": 27,
+    "er": 3,
+    "g": 1,
+    "gs": 1,
+    "h": 6,
+    "hr": 0,
+    "l": 1,
+    "outs": 18,
+    "r": 3,
+    "so": 6,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|leede02": {
   "card_bat": {
@@ -215068,7 +215350,28 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 12,
+    "er": 2,
+    "g": 2,
+    "gs": 0,
+    "h": 5,
+    "hr": 0,
+    "l": 0,
+    "outs": 6,
+    "r": 2,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|ozunama01": {
   "card_bat": {
@@ -216837,7 +217140,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 2,
+    "3b": 0,
+    "ab": 15,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 5,
+    "hbp": 0,
+    "hr": 0,
+    "r": 2,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 1,
+    "so": 4
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|ramosaj01": {
   "card_bat": null,
@@ -216981,7 +217311,28 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 3,
+    "bf": 21,
+    "er": 7,
+    "g": 2,
+    "gs": 0,
+    "h": 7,
+    "hr": 0,
+    "l": 0,
+    "outs": 11,
+    "r": 7,
+    "so": 4,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|realmjt01": {
   "card_bat": {
@@ -217899,7 +218250,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 10,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|scottta01": {
   "card_bat": null,
@@ -218039,7 +218417,28 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 13,
+    "er": 3,
+    "g": 2,
+    "gs": 0,
+    "h": 4,
+    "hr": 0,
+    "l": 0,
+    "outs": 6,
+    "r": 5,
+    "so": 0,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|sheffga01": {
   "card_bat": {
@@ -218907,7 +219306,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 1,
+    "ab": 15,
+    "bb": 3,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 5,
+    "hbp": 0,
+    "hr": 2,
+    "r": 5,
+    "rbi": 6,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 4
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|stantmi03": {
   "card_bat": {
@@ -219792,7 +220218,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 17,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 1,
+    "h": 2,
+    "hbp": 0,
+    "hr": 1,
+    "r": 2,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 10
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIA|ugglada01": {
   "card_bat": {
@@ -220679,7 +221132,31 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 1,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-01-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIA|willido03": {
   "card_bat": null,
@@ -220823,7 +221300,27 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G3"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 11,
+    "er": 6,
+    "g": 1,
+    "gs": 1,
+    "h": 6,
+    "hr": 0,
+    "l": 1,
+    "outs": 3,
+    "r": 6,
+    "so": 2,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIA|yelicch01": {
   "card_bat": {
@@ -221717,7 +222214,34 @@
    }
   ],
   "team": "MIA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 16,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 5,
+    "hbp": 2,
+    "hr": 3,
+    "r": 6,
+    "rbi": 3,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 6
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "MIL|braunry02": {
   "card_bat": {
@@ -227412,7 +227936,7 @@
   },
   "card_pit": null,
   "id": "gomezca01",
-  "name": "Carlos Gómez",
+  "name": "Carlos G\u00f3mez",
   "peak_bat": {
    "2B": 111,
    "3B": 22,
@@ -250921,7 +251445,7 @@
   },
   "card_pit": null,
   "id": "tovarce01",
-  "name": "César Tovar",
+  "name": "C\u00e9sar Tovar",
   "peak_bat": {
    "2B": 153,
    "3B": 34,
@@ -269000,7 +269524,7 @@
    "throws": "R"
   },
   "id": "benitar01",
-  "name": "Armando Benítez",
+  "name": "Armando Ben\u00edtez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -270209,7 +270733,7 @@
    "throws": "R"
   },
   "id": "diazed04",
-  "name": "Edwin Díaz",
+  "name": "Edwin D\u00edaz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -278316,7 +278840,7 @@
   },
   "card_pit": null,
   "id": "reyesjo01",
-  "name": "José Reyes",
+  "name": "Jos\u00e9 Reyes",
   "peak_bat": {
    "2B": 163,
    "3B": 74,
@@ -282239,7 +282763,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 18,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 5,
+    "hbp": 0,
+    "hr": 2,
+    "r": 4,
+    "rbi": 4,
+    "sac": 0,
+    "sb": 1,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|dimagjo01": {
   "card_bat": {
@@ -282858,7 +283409,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 19,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 5,
+    "hbp": 0,
+    "hr": 4,
+    "r": 5,
+    "rbi": 10,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|fordwh01": {
   "card_bat": null,
@@ -283002,7 +283580,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G1"
+   ],
+   "pitching": {
+    "bb": 2,
+    "bf": 28,
+    "er": 2,
+    "g": 1,
+    "gs": 1,
+    "h": 3,
+    "hr": 0,
+    "l": 0,
+    "outs": 23,
+    "r": 2,
+    "so": 8,
+    "sv": 0,
+    "w": 1
+   }
+  }
  },
  "NYY|gehrilo01": {
   "card_bat": {
@@ -283608,7 +284206,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 1,
+    "ab": 18,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 8,
+    "hbp": 0,
+    "hr": 4,
+    "r": 5,
+    "rbi": 18,
+    "sac": 0,
+    "sb": 0,
+    "sf": 1,
+    "so": 3
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|gomezle01": {
   "card_bat": null,
@@ -283752,7 +284377,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G3"
+   ],
+   "pitching": {
+    "bb": 4,
+    "bf": 39,
+    "er": 5,
+    "g": 1,
+    "gs": 1,
+    "h": 9,
+    "hr": 0,
+    "l": 0,
+    "outs": 27,
+    "r": 5,
+    "so": 13,
+    "sv": 0,
+    "w": 1
+   }
+  }
  },
  "NYY|gossari01": {
   "card_bat": null,
@@ -283902,7 +284547,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 4,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 0,
+    "hr": 0,
+    "l": 0,
+    "outs": 4,
+    "r": 0,
+    "so": 2,
+    "sv": 1,
+    "w": 0
+   }
+  }
  },
  "NYY|guidrro01": {
   "card_bat": null,
@@ -284046,7 +284711,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 3,
+    "bf": 36,
+    "er": 7,
+    "g": 1,
+    "gs": 1,
+    "h": 9,
+    "hr": 0,
+    "l": 0,
+    "outs": 24,
+    "r": 7,
+    "so": 10,
+    "sv": 0,
+    "w": 1
+   }
+  }
  },
  "NYY|henderi01": {
   "card_bat": {
@@ -286680,7 +287365,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 17,
+    "bb": 4,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 9,
+    "hbp": 0,
+    "hr": 2,
+    "r": 11,
+    "rbi": 3,
+    "sac": 2,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|judgeaa01": {
   "card_bat": {
@@ -287523,7 +288235,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 17,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 1,
+    "h": 6,
+    "hbp": 0,
+    "hr": 2,
+    "r": 8,
+    "rbi": 6,
+    "sac": 0,
+    "sb": 0,
+    "sf": 1,
+    "so": 5
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|lazzeto01": {
   "card_bat": {
@@ -289172,7 +289911,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 18,
+    "bb": 3,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 5,
+    "hbp": 0,
+    "hr": 3,
+    "r": 5,
+    "rbi": 6,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 7
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|mattido01": {
   "card_bat": {
@@ -290978,7 +291744,31 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 1,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-01-G2"
+   ],
+   "pitching": null
+  }
  },
  "NYY|pettian01": {
   "card_bat": null,
@@ -292009,7 +292799,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 17,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 2,
+    "h": 5,
+    "hbp": 0,
+    "hr": 1,
+    "r": 5,
+    "rbi": 1,
+    "sac": 1,
+    "sb": 0,
+    "sf": 0,
+    "so": 3
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|reynoal01": {
   "card_bat": null,
@@ -292297,7 +293114,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G2"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 8,
+    "er": 2,
+    "g": 1,
+    "gs": 0,
+    "h": 2,
+    "hr": 0,
+    "l": 0,
+    "outs": 6,
+    "r": 2,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "NYY|riverma01": {
   "card_bat": null,
@@ -292441,7 +293278,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G2"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 3,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 0,
+    "hr": 0,
+    "l": 0,
+    "outs": 3,
+    "r": 0,
+    "so": 1,
+    "sv": 1,
+    "w": 0
+   }
+  }
  },
  "NYY|roberda08": {
   "card_bat": null,
@@ -292587,7 +293444,28 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G2",
+    "R1-01-G4"
+   ],
+   "pitching": {
+    "bb": 2,
+    "bf": 17,
+    "er": 3,
+    "g": 2,
+    "gs": 0,
+    "h": 3,
+    "hr": 0,
+    "l": 0,
+    "outs": 12,
+    "r": 3,
+    "so": 4,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "NYY|rodrial01": {
   "card_bat": {
@@ -293441,7 +294319,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 16,
+    "bb": 4,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 3,
+    "hbp": 1,
+    "hr": 0,
+    "r": 3,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|ruffire01": {
   "card_bat": null,
@@ -293585,7 +294490,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G2"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 9,
+    "er": 4,
+    "g": 1,
+    "gs": 1,
+    "h": 4,
+    "hr": 0,
+    "l": 0,
+    "outs": 2,
+    "r": 4,
+    "so": 2,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "NYY|ruthba01": {
   "card_bat": {
@@ -294412,7 +295337,34 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 16,
+    "bb": 3,
+    "ci": 0,
+    "cs": 0,
+    "g": 4,
+    "gidp": 0,
+    "h": 8,
+    "hbp": 2,
+    "hr": 2,
+    "r": 9,
+    "rbi": 7,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 4
+   },
+   "games": [
+    "R1-01-G1",
+    "R1-01-G2",
+    "R1-01-G3",
+    "R1-01-G4"
+   ],
+   "pitching": null
+  }
  },
  "NYY|stantmi02": {
   "card_bat": null,
@@ -294556,7 +295508,27 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-01-G2"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 11,
+    "er": 1,
+    "g": 1,
+    "gs": 0,
+    "h": 4,
+    "hr": 0,
+    "l": 0,
+    "outs": 7,
+    "r": 1,
+    "so": 4,
+    "sv": 0,
+    "w": 1
+   }
+  }
  },
  "NYY|willibe02": {
   "card_bat": {
@@ -295443,7 +296415,32 @@
    }
   ],
   "team": "NYY",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 2,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 2,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-01-G2",
+    "R1-01-G3"
+   ],
+   "pitching": null
+  }
  },
  "OAK|bailean01": {
   "card_bat": null,
@@ -298302,7 +299299,7 @@
   },
   "card_pit": null,
   "id": "cansejo01",
-  "name": "José Canseco",
+  "name": "Jos\u00e9 Canseco",
   "peak_bat": {
    "2B": 120,
    "3B": 4,
@@ -338196,7 +339193,7 @@
    "throws": "L"
   },
   "id": "suarera01",
-  "name": "Ranger Suárez",
+  "name": "Ranger Su\u00e1rez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -369478,7 +370475,7 @@
   },
   "card_pit": null,
   "id": "beltrad01",
-  "name": "Adrián Beltré",
+  "name": "Adri\u00e1n Beltr\u00e9",
   "peak_bat": {
    "2B": 172,
    "3B": 8,
@@ -372270,7 +373267,7 @@
    "throws": "R"
   },
   "id": "diazed04",
-  "name": "Edwin Díaz",
+  "name": "Edwin D\u00edaz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -372412,7 +373409,7 @@
    "throws": "R"
   },
   "id": "garcifr02",
-  "name": "Freddy García",
+  "name": "Freddy Garc\u00eda",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -373458,7 +374455,7 @@
    "throws": "R"
   },
   "id": "hernafe02",
-  "name": "Félix Hernández",
+  "name": "F\u00e9lix Hern\u00e1ndez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -374350,7 +375347,7 @@
   },
   "card_pit": null,
   "id": "ibanera01",
-  "name": "Raúl Ibañez",
+  "name": "Ra\u00fal Iba\u00f1ez",
   "peak_bat": {
    "2B": 162,
    "3B": 16,
@@ -375516,7 +376513,7 @@
   },
   "card_pit": null,
   "id": "martied01",
-  "name": "Edgar Martínez",
+  "name": "Edgar Mart\u00ednez",
   "peak_bat": {
    "2B": 231,
    "3B": 7,
@@ -375956,7 +376953,7 @@
    "throws": "R"
   },
   "id": "munozan01",
-  "name": "Andrés Muñoz",
+  "name": "Andr\u00e9s Mu\u00f1oz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -380804,7 +381801,7 @@
   },
   "card_pit": null,
   "id": "rodriju01",
-  "name": "Julio Rodríguez",
+  "name": "Julio Rodr\u00edguez",
   "peak_bat": {
    "2B": 136,
    "3B": 9,
@@ -440090,7 +441087,7 @@
   },
   "card_pit": null,
   "id": "sierrru01",
-  "name": "Rubén Sierra",
+  "name": "Rub\u00e9n Sierra",
   "peak_bat": {
    "2B": 168,
    "3B": 28,
