@@ -4,8 +4,10 @@
 Reads the converted Payoff Pitch sets and the master tournament archive
 from the workspace, and writes two files the viewer loads at boot:
 
-  data/rosters.json  one entry per converted club: the 26 roster spots
-                     in set order (lineup, bench, rotation, bullpen)
+  data/rosters.json  one entry per converted club: role entries for 26
+                     distinct active players in set order (lineup,
+                     bench, rotation, bullpen). True two-way players may
+                     appear twice under one ID without taking two places.
   data/cards.json    one entry per rostered player, keyed "CODE|player_id"
                      the way data/bios.json is keyed: his prime-window
                      (peak) line, his converted card, and his tournament

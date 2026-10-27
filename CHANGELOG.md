@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Two-way players count once toward the active 26 (Joe-approved)
+
+A player rostered as both hitter and pitcher counts **one unique person**, not two roster slots. Boston Babe Ruth remains bench hitter #6 and bullpen pitching option #7: the 27 entries in the team roster describe exactly 26 active distinct players. Both real hitter and pitcher roles remain available, subject to normal gameplay and fatigue rules. No Boston personnel changes, new ratings, historic cards, box scores, R1-03 results, or dice/FAC logs were touched. The roster schema, published rules, UI and validation now distinguish role entries from unique players.
+
 ## 2026-10-27 — San Francisco Giants Monte Irvin / Javier López roster switch (Joe-approved)
 
 Following the completed R1-02 series, Monte Irvin replaces Javier López on the Giants active 26: Irvin is LF/bench6 and López is inactive. The roster now has 9 starting hitters, 6 bench players, 5 starting pitchers, and 6 relievers. Played games, card files, box scores, FAC/dice records, and historical relief appearances remain unchanged. The saved Giants converted cards are archived; Irvin's original playable Hitter v0.5 card with Giants-only franchise seasons remains pending conversion. The active roster validator and full rebuild adapter enforce the approved change.

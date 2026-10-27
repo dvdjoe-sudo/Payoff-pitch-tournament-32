@@ -708,6 +708,39 @@ def check_giants_roster_amendment(check: Check) -> None:
                  "Giants 6/6 roster survives a regenerated set")
 
 
+def check_unique_player_roster_limit(check: Check) -> None:
+    """Count people, not hitter/pitcher role entries (Joe 2026-10-27).
+
+    A genuine two-way player may have one batting role and one pitching
+    role with the same ID. Double-listing the same kind twice is invalid.
+    This must never edit any historical game or player card.
+    """
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    for code, roster in rosters.items():
+        players = roster.get("players", [])
+        roles = {}
+        for p in players:
+            roles.setdefault(p["id"], []).append(p)
+        check.expect(len(roles) == 26,
+                     f"{code} has 26 distinct active players (not role entries)")
+        invalid = {
+            pid: entries for pid, entries in roles.items()
+            if len(entries) > 2 or
+               (len(entries) == 2 and {p["kind"] for p in entries} != {"hitter", "pitcher"})
+        }
+        check.expect(not invalid,
+                     f"{code} repeated IDs only represent legitimate hitter/pitcher dual roles")
+    boston = rosters.get("BOS", {})
+    ruth = [p for p in boston.get("players", []) if p["id"] == "ruthba01"]
+    check.expect(
+        len(ruth) == 2
+        and any(p["group"] == "bench" and p["slot"] == 6 and p["kind"] == "hitter" for p in ruth)
+        and any(p["group"] == "bullpen" and p["slot"] == 7 and p["kind"] == "pitcher" for p in ruth),
+        "Babe Ruth retains Boston bench hitter #6 and bullpen pitcher #7")
+    check.expect(len(boston.get("players", [])) == 27,
+                 "Boston has 27 role entries describing 26 distinct players")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -728,6 +761,7 @@ def main() -> int:
     check_marlins_roster_amendment(check)
     check_yankees_roster_amendment(check)
     check_giants_roster_amendment(check)
+    check_unique_player_roster_limit(check)
     check_card_partitions(check)
     return check.done()
 

@@ -1829,6 +1829,9 @@
     if (!roster) return;
     var body = el("div");
     body.appendChild(el("p", { class: "note", text: "The converted set, in set order. Open a player for his card and his tournament line." }));
+    if (code === "BOS") {
+      body.appendChild(el("p", { class: "note", text: "Two-way roster rule: Babe Ruth counts as one of Boston's 26 active players. Bench hitter #6 and bullpen pitcher #7 are two roles for the same player, not a 27th roster place. Both real card roles remain eligible under the normal pitching and fatigue rules." }));
+    }
     if (code === "SD") {
       body.appendChild(el("p", { class: "note", text: "Approved Padres 26: Brian Giles is bench OF6 and will be playable after his frozen Hitter v0.5 conversion. Craig Lefferts is off the active roster; his previous card remains preserved as historical data." }));
     }
