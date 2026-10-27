@@ -81,6 +81,7 @@ import csv
 import json
 import fix_jump_from_attempts as jump_fix
 import fix_steal_letter as steal_fix
+import resolve_pitcher_tables as pitcher_resolve
 import math
 import os
 import sys
@@ -603,6 +604,9 @@ def build():
                         "inj": (ratings.get("inj") or {}).get("value"),
                     },
                 }
+                # 2d6 table re-solved with solver v0.3 (realistic DEFENSE,
+                # full target, 1986 result shares).
+                pitcher_resolve.apply(entry, "%s|%s" % (code, player_id))
 
             cards["%s|%s" % (code, player_id)] = entry
             for spot in person["spots"]:

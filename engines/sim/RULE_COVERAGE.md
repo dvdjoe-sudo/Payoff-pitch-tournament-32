@@ -114,9 +114,9 @@ Lasting sentences that are coded only in part: the extra out on a dropped third 
 
 `engines/sim/samples/tor-at-bos-seed1.txt`
 
-Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Toronto 0, Boston 4, nine innings. Pedro Martinez went nine, no runs, 37 batters. Dave Stieb 7 innings, 4 runs, 29 batters; Tom Henke pitched the eighth. Boston led after the top of the ninth, so the bottom was not played.
+Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Toronto 7, Boston 3, nine innings. Pedro Martinez 8 innings, 4 runs, 34 batters; Babe Ruth pitched the ninth (3 runs). Dave Stieb 8 innings, 3 runs, 34 batters; Tom Henke pitched the ninth.
 
-The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Every change to a card or to the deck sequence changes the line score.
+The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
 
 `WP?` on this seed: thirteen marked cards drawn, none fired. Five came up with the bases empty. Eight missed the pitcher’s rating (Pedro Martinez and Dave Stieb are rated 30). No drawn card met a pitcher who has no WP rating.
 
@@ -135,4 +135,4 @@ The file is a hand check. It is not in `tournament_results.json`. Played games a
 - **Stealing.** Auto steal (page 7, option 2): one check when the batter reaches first or second with the next base open, 2d6 <= Jump; third needs doubles too; no Jump number, no auto steal; Jump +/- applies the first time on base (page 8). A 2d6 of 12 goes to the pickoff chart (pages 8 and 18); a pickoff out is now scored `po`, not `cs`. Jump numbers were recalibrated from real attempt rates (`scripts/fix_jump_from_attempts.py`).
 - **Parks.** ARI, COL, MIA, TB and WSH use their 2024 Season PDF park cards (`historical-cards/reference/ballparks_2024.json`); no 1986 card exists for them. PHA has no park card in either set; its games use the 1986 Veterans Stadium card as a labelled stand-in (log header, gap note, `park_stand_in` in the report).
 - **Steal letter and Derived OF arms.** Steal letters come from window SB% and attempt rate fitted to the 1986 cards (`scripts/fix_steal_letter.py`); Derived-fielding outfield arms come from OF assists per game vs league fitted to 1986 printed arms (`scripts/derive_of_arm.py`).
-- **Error rate.** DEFENSE, FAC defense lines, park error bands and the error digit follow the rulebook. The high error count comes from pitcher 2d6 tables that give DEFENSE 19.9% of the weight (1986 cards: 4.6%); open question, not changed.
+- **Error rate / pitcher tables.** DEFENSE, FAC defense lines, park error bands and the error digit follow the rulebook. The old v0.2.3 solver modelled DEFENSE as 25% singles with no errors and gave it 19.9% of the 2d6 weight (1986 cards: 4.6%). Every pitcher table is now re-solved by `engines/pitcher-v0.3` (DEFENSE vector measured in this engine, full H/HR/BB/SO/HBP target, result shares held to the printed 1986 cards); `scripts/resolve_pitcher_tables.py`.

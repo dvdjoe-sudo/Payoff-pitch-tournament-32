@@ -2,6 +2,18 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Pitcher 2d6 tables re-solved (solver v0.3), owner-approved
+
+Every pitcher card's 2d6 table (377 cards) is re-solved by `engines/pitcher-v0.3` through `scripts/resolve_pitcher_tables.py` (also called by `build_cards.py`, seeded per card so rebuilds match).
+- **DEFENSE** is no longer the v0.2.3 placeholder (25% singles, no errors). Its event mix is measured in `game.py` itself (`defense_probe.py`, 88,739 DEFENSE plate appearances with tournament parks and fielders): 1B 16.4%, 2B 2.6%, 3B 0.8%, reached on error 27.1%, fielder's choice 4.5%, out 48.6%.
+- **BALLPARK** uses the 1986 park cards' WHEELHOUSE share instead of 50/50. TOUGH applies the page-39 +10/+20 shift the way the engine does.
+- **Target**: H, HR, BB, SO and HBP per batter faced from the card's own window, relative to the league in the same seasons (Lahman), mapped to card rates by lines fitted on the printed 1986 cards (205 pitchers with 60+ IP matched to their 1986 Lahman lines; R² H .37, HR .75, BB .90, SO .90, HBP .01). 2B/3B allowed are not in pitching records and are not targeted.
+- **Result shares** are pulled toward the printed 1986 mix and kept inside its range. TOUGH-OUT / PATIENT-OUT are no longer used (2 of 2,893 printed 1986 slots).
+- **Validation**: re-solving the 205 printed 1986 pitchers from their real 1986 stats gives mean card-rate gaps vs the printed tables of H .005, HR .002, BB .006, SO .011 per BF, and a mean 6.8% of 2d6 weight on a different result.
+- Share of 2d6 weight, all pitchers, old → new: DEFENSE 19.9% → 5.6%, IN-PLAY 3.9% → 17.8%, TOUGH 45.6% → 47.3%, PATIENT 19.9% → 18.9%, BALLPARK 8.6% → 8.1%, WHEELHOUSE 2.1% → 2.3%.
+
+Other pitcher ratings are unchanged: SO modifier, stamina, WP, hold, DP, pickoff, injury and fielding. The previous table is kept in `card_pit.table_basis`. Stress run (2,976 games): errors per team-game 1.77 → 0.55, AVG .215 → .256, reached without a hit 7.4% → 3.6% of AB. Sample game reseeded (Toronto 7, Boston 3). Cache v83.
+
 ## 2026-10-27 — PHA stand-in park, steal letters, Derived OF arms; error and Coors audit
 
 **PHA park (stand-in).** No Shibe Park / Connie Mack Stadium card exists in the 1986 or 2024 sets, so Philadelphia A's home games use the 1986 Veterans Stadium card, labelled a stand-in: the game log header says "STAND-IN for PHA", the note is logged as a gap, and the game report carries `park_stand_in`. All 2,976 stress games now run (93 PHA games failed before). The site does not display park names.
