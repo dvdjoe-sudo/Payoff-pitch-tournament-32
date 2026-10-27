@@ -817,6 +817,13 @@ def check_braves_roster_amendment(check: Check) -> None:
                  "Braves announced roster matches owner-approved amendment")
     check.expect("ATL|wohlema01" in cards,
                  "Mark Wohlers historical pitcher card is preserved")
+    peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["ATL"]
+    horner_peak = peak.get("BAT2 Bob Horner (RH Power/3B/1B)") or {}
+    check.expect(horner_peak.get("lahman_id") == "hornebo01"
+                 and horner_peak.get("years") == [1979, 1980, 1981, 1982, 1983],
+                 "Horner's original Braves-only five-season Peak 162 display is aligned")
+    check.expect("PWR Mark Wohlers R" not in peak,
+                 "Inactive Mark Wohlers is not on Braves active Peak 162 display")
     docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Bob Horner (`hornebo01`) joins Atlanta" in docs,
                  "Atlanta amendment appears in published rosters")
