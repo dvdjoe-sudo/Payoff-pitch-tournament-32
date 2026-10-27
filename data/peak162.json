@@ -3171,16 +3171,16 @@
      1982
     ]
    },
-   "2 Hal McRae DH 15": {
-    "lahman_id": "mcraeha01",
+   "2 Danny Tartabull DH 5": {
+    "lahman_id": "tartada01",
     "status": "ok",
-    "text": "Peak 162 with Kansas City Royals (1973–1977): 162 G, 672 PA, 592 AB, 81 R, 178 H, 42 2B, 7 3B, 14 HR, 88 RBI, 15 SB, 60 BB, 56 SO, .301/.370/.464/.834",
+    "text": "Peak 162 with Kansas City Royals (1987–1991): 162 G, 662 PA, 574 AB, 86 R, 166 H, 35 2B, 2 3B, 31 HR, 105 RBI, 7 SB, 80 BB, 146 SO, .290/.376/.518/.894",
     "years": [
-     1973,
-     1974,
-     1975,
-     1976,
-     1977
+     1987,
+     1988,
+     1989,
+     1990,
+     1991
     ]
    },
    "3 George Brett 3B 21": {
@@ -3265,16 +3265,28 @@
      1986
     ]
    },
-   "BAT Danny Tartabull OF 5": {
-    "lahman_id": "tartada01",
+   "BAT Hal McRae DH 15": {
+    "lahman_id": "mcraeha01",
     "status": "ok",
-    "text": "Peak 162 with Kansas City Royals (1987–1991): 162 G, 662 PA, 574 AB, 86 R, 166 H, 35 2B, 2 3B, 31 HR, 105 RBI, 7 SB, 80 BB, 146 SO, .290/.376/.518/.894",
+    "text": "Peak 162 with Kansas City Royals (1973–1977): 162 G, 672 PA, 592 AB, 81 R, 178 H, 42 2B, 7 3B, 14 HR, 88 RBI, 15 SB, 60 BB, 56 SO, .301/.370/.464/.834",
     "years": [
-     1987,
-     1988,
-     1989,
-     1990,
-     1991
+     1973,
+     1974,
+     1975,
+     1976,
+     1977
+    ]
+   },
+   "BAT2 John Mayberry 1B (KC 1972-1977)": {
+    "lahman_id": "maybejo01",
+    "status": "ok",
+    "text": "Peak 162 with Kansas City Royals (1972–1976): 162 G, 677 PA, 564 AB, 84 R, 150 H, 25 2B, 2 3B, 26 HR, 102 RBI, 3 SB, 104 BB, 81 SO, .267/.382/.458/.840",
+    "years": [
+     1972,
+     1973,
+     1974,
+     1975,
+     1976
     ]
    },
    "C2 Darrell Porter C 4": {
@@ -3321,18 +3333,6 @@
      1976,
      1977,
      1978
-    ]
-   },
-   "LR/SP Charlie Leibrandt 6": {
-    "lahman_id": "leibrch01",
-    "status": "ok",
-    "text": "Peak 162 with Kansas City Royals (1984–1988): 65 G, 29-20, 0 SV, 442.1 IP, 443 H, 166 ER, 123 BB, 220 SO, 3.38 ERA, 1.28 WHIP, 4.5 K/9",
-    "years": [
-     1984,
-     1985,
-     1986,
-     1987,
-     1988
     ]
    },
    "MR1 Greg Holland 8": {

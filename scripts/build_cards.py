@@ -584,6 +584,7 @@ def build():
     apply_orioles_roster_amendment(cards, rosters)
     apply_philadelphia_athletics_2026_roster_amendment(cards, rosters)
     apply_astros_roster_amendment(cards, rosters)
+    apply_kansas_city_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -597,6 +598,7 @@ AUTHORIZED_HITTERS = (
     "ARI|peralda01",
     "MON|aloumo01",
     "HOU|aloumo01",
+    "KC|maybejo01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -665,6 +667,53 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+
+
+def apply_kansas_city_roster_amendment(cards, rosters):
+    """Approved KC 9/6/5/6: Tartabull DH, McRae bench, Mayberry for Leibrandt.
+
+    Count only Mayberry's Kansas City 1972-1977 franchise seasons.
+    Preserve Leibrandt's original historical pitcher conversion and every
+    earlier game. Never fabricate a Mayberry playable Hitter v0.5 card.
+    """
+    roster = rosters.get("KC")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "leibrch01"]
+    for pid, group, slot, pos in (
+        ("tartada01", "lineup", 2, "DH"),
+        ("mcraeha01", "bench", 5, "DH"),
+    ):
+        matching = [p for p in players if p["id"] == pid]
+        if len(matching) != 1:
+            raise SystemExit("Kansas City required hitter missing or repeated: " + pid)
+        matching[0].update(group=group, slot=slot, pos=pos, kind="hitter")
+        card = cards.get("KC|" + pid)
+        if card:
+            card["spots"] = [{"group": group, "slot": slot, "pos": pos,
+                              "kind": "hitter"}]
+    mayberry = [p for p in players if p["id"] == "maybejo01"]
+    if not mayberry:
+        players.append({"group": "bench", "id": "maybejo01",
+                        "kind": "hitter", "name": "John Mayberry",
+                        "pos": "1B", "slot": 6})
+    elif len(mayberry) != 1:
+        raise SystemExit("Duplicate John Mayberry on the Royals roster")
+    else:
+        mayberry[0].update(group="bench", slot=6, pos="1B", kind="hitter")
+    existing = cards.get("KC|maybejo01")
+    if existing:
+        existing["spots"] = [{"group": "bench", "slot": 6,
+                              "pos": "1B", "kind": "hitter"}]
+    # KC|leibrch01 remains in the converted-card catalog as historical.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Kansas City approved 9/6/5/6 mismatch: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Kansas City must have exactly 26 distinct players")
 
 
 def apply_philadelphia_athletics_2026_roster_amendment(cards, rosters):

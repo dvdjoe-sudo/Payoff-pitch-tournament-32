@@ -722,7 +722,7 @@
   "manager": "Ned Yost (10 seasons)",
   "lineup": [
    "1 Willie Wilson CF 15",
-   "2 Hal McRae DH 15",
+   "2 Danny Tartabull DH 5",
    "3 George Brett 3B 21",
    "4 Bobby Witt Jr. SS 5",
    "5 Mike Sweeney 1B 13",
@@ -736,7 +736,8 @@
    "UTIL Whit Merrifield 2B 7",
    "OF4 Carlos Beltrán OF 7",
    "IF2 Freddie Patek INF 9",
-   "BAT Danny Tartabull OF 5"
+   "BAT Hal McRae DH 15",
+   "BAT2 John Mayberry 1B (KC 1972-1977)"
   ],
   "rotation": [
    "SP1 Kevin Appier 13",
@@ -751,8 +752,7 @@
    "SU2 Joakim Soria 7",
    "MR1 Greg Holland 8",
    "MR2 Kelvin Herrera 8",
-   "LHS Steve Mingori 7",
-   "LR/SP Charlie Leibrandt 6"
+   "LHS Steve Mingori 7"
   ]
  },
  "CHC": {

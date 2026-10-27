@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Kansas City Royals Mayberry/Leibrandt and DH swap (owner-approved)
+
+John Mayberry joins the Royals as sixth bench bat (LH 1B/PH; 1972–1977 Kansas City performance only) and Charlie Leibrandt leaves the active bullpen while retaining his original historical converted card. Danny Tartabull becomes lineup #2 starting DH, and Hal McRae moves to Tartabull's old bench #5 spot. The six remaining relievers are Quisenberry, Montgomery, Soria, Holland, Herrera and Mingori. Every other starting hitter and all five SPs stay in place. Kansas City now meets 9 lineup / 6 bench / 5 SP / 6 RP with 26 unique players. All original player cards, games, scores, original box scores and FAC/dice logs are preserved. Mayberry's authentic frozen Hitter v0.5 card remains pending, without invented ratings.
+
 ## 2026-10-27 — Philadelphia Athletics Foxx/Fain DH swap, Shantz for Barry (owner-approved)
 
 Philadelphia Athletics #17: Jimmie Foxx moves to DH at batting slot 4; Ferris Fain to 1B at slot 9. Jack Barry leaves the active six-man bench but his original converted card remains historically preserved. Bobby Shantz becomes the sixth bullpen arm (left-handed long/swing). Count Shantz's Philadelphia Athletics 1949–1954 seasons exclusively, not Kansas City or his later career. Bishop becomes bench 5 and Valo bench 6. The roster is 9/6/5/6, 26 distinct people. The entire historical card catalog, games, box scores, original scores, FAC/dice rolls and outcomes remain intact. Shantz's authentic playable Pitcher v0.2.3 conversion is pending and must not be fabricated; Peak 162 is display-only and can reflect starter innings.
