@@ -1562,7 +1562,15 @@
   }
 
   function spotsText(card) {
-    return (card.spots || []).map(function (spot) {
+    // For newly amended active rosters, use the approved live position and
+    // role assignment rather than frozen historical converted-card metadata.
+    // Keep the original card body and old spots intact for game provenance.
+    var roster = state.rosters && state.rosters[card.team];
+    var active = roster && (roster.players || []).filter(function (p) {
+      return p.id === card.id;
+    });
+    var spots = active && active.length ? active : (card.spots || []);
+    return spots.map(function (spot) {
       return (GROUP_TITLES[spot.group] || spot.group) + " " + spot.slot + " · " + spot.pos;
     }).join("; ");
   }
@@ -1871,7 +1879,7 @@
     if (code === "MIA") {
       body.appendChild(el("p", { class: "note", text: "Franchise cards cover the active Marlins 26. Josh Johnson leads the rotation, Otto Lopez is the utility bench player, and A.J. Burnett is the long reliever. Played games are unchanged." }));
     }
-    if (code === "PHA") body.appendChild(el("p", { class: "note", text: "Owner-approved 26-man roster: Ferris Fain is DH, Max Bishop is on the bench, and George Earnshaw is not on the roster. Elmer Valo is on the bench; his Hitter v0.5 card is awaiting original frozen-engine conversion and is not yet playable." }));
+    if (code === "PHA") body.appendChild(el("p", { class: "note", text: "Owner-approved Athletics 26 (9/6/5/6): Jimmie Foxx bats fourth as DH and Ferris Fain bats ninth at 1B. Bobby Shantz is the sixth bullpen pitcher, left-handed long/swing, with only his Philadelphia seasons eligible; his frozen Pitcher v0.2.3 playable card is pending. Jack Barry is inactive but retains his original historical card. Max Bishop is bench #5 and Elmer Valo #6." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
       var rows = roster.players.filter(function (spot) { return spot.group === group; })
         .sort(function (a, b) { return a.slot - b.slot; });

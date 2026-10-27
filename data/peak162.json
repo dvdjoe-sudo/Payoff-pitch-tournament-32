@@ -6311,7 +6311,7 @@
      1931
     ]
    },
-   "4 Jimmie Foxx 1B 11": {
+   "4 Jimmie Foxx DH 11": {
     "lahman_id": "foxxji01",
     "status": "ok",
     "text": "Peak 162 with Philadelphia Athletics (1931–1935): 162 G, 716 PA, 602 AB, 133 R, 204 H, 36 2B, 9 3B, 47 HR, 153 RBI, 6 SB, 112 BB, 98 SO, .339/.443/.664/1.107",
@@ -6371,7 +6371,7 @@
      1953
     ]
    },
-   "9 Ferris Fain DH L 6": {
+   "9 Ferris Fain 1B L 6": {
     "lahman_id": "fainfe01",
     "status": "ok",
     "text": "Peak 162 with Philadelphia Athletics (1948–1952): 162 G, 717 PA, 579 AB, 89 R, 172 H, 33 2B, 5 3B, 6 HR, 84 RBI, 7 SB, 130 BB, 37 SO, .298/.428/.405/.833",
@@ -6405,18 +6405,6 @@
      1946
     ]
    },
-   "IF2 Jack Barry 8": {
-    "lahman_id": "barryja01",
-    "status": "ok",
-    "text": "Peak 162 with Philadelphia Athletics (1909–1913): 162 G, 645 PA, 550 AB, 80 R, 141 H, 21 2B, 7 3B, 2 HR, 69 RBI, 24 SB, 54 BB, 53 SO, .256/.333/.330/.663",
-    "years": [
-     1909,
-     1910,
-     1911,
-     1912,
-     1913
-    ]
-   },
    "LH BAT/OF Elmer Valo 13": {
     "lahman_id": "valoel01",
     "status": "ok",
@@ -6439,6 +6427,18 @@
      1929,
      1930,
      1931
+    ]
+   },
+   "LHS/LONG Bobby Shantz 1949-1954 (Philadelphia only)": {
+    "lahman_id": "shantbo01",
+    "status": "ok",
+    "text": "Peak 162 with Philadelphia Athletics (1949–1953): 65 G, 26-21, 1 SV, 404.0 IP, 390 H, 162 ER, 138 BB, 190 SO, 3.60 ERA, 1.31 WHIP, 4.2 K/9. Historical Philadelphia workload includes many starts; this display line is not a relief-only projection.",
+    "years": [
+     1949,
+     1950,
+     1951,
+     1952,
+     1953
     ]
    },
    "LONG Eddie Rommel 13": {

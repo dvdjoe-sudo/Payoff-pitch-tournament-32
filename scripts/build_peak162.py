@@ -847,6 +847,8 @@ def main() -> None:
                                   if club == "BAL" and pid == "sislege01"
                                   else team_name)
                 text = side_text(peak_team_name, chosen, stats, size, total, kind)
+                if club == "PHA" and pid == "shantbo01":
+                    text += ". Historical Philadelphia workload includes many starts; this display line is not a relief-only projection."
                 if other and show_secondary(kind, other[2] if other_kind == "hit" else stats, stats if other_kind == "hit" else other[2]):
                     if not text.endswith("."):
                         text += "."
@@ -890,6 +892,7 @@ def main() -> None:
         ("SD", "1 Fernando Tatis Jr. SS R 6", "tatisfe02"),
         ("ATL", "OF4 Ronald Acuña Jr. (Speed/Power)", "acunaro01"),
         ("PHA", "SP4 Chief Bender 12", "bendech01"),
+        ("PHA", "LHS/LONG Bobby Shantz 1949-1954 (Philadelphia only)", "shantbo01"),
         ("PHA", "6 Home Run Baker 3B 7", "bakerfr01"),
         ("PHA", "SP1 Lefty Grove 9", "grovele01"),
         ("LAD", "9 Pee Wee Reese SS R 16", "reesepe01"),
@@ -920,6 +923,11 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    shantz = row("PHA", "LHS/LONG Bobby Shantz 1949-1954 (Philadelphia only)")
+    if (shantz.get("status") != "ok" or shantz.get("lahman_id") != "shantbo01"
+            or not all(1949 <= year <= 1954 for year in shantz.get("years", []))
+            or "not a relief-only projection" not in shantz.get("text", "")):
+        raise SystemExit("Bobby Shantz must use only Philadelphia seasons 1949-1954 with workload caveat")
     sisler = row("BAL", "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)")
     if (not all(1915 <= year <= 1927 for year in sisler["years"])
             or "Peak 162 with St. Louis Browns" not in sisler["text"]):

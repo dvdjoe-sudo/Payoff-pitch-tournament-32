@@ -582,6 +582,7 @@ def build():
     apply_twins_roster_amendment(cards, rosters)
     apply_white_sox_roster_amendment(cards, rosters)
     apply_orioles_roster_amendment(cards, rosters)
+    apply_philadelphia_athletics_2026_roster_amendment(cards, rosters)
     apply_astros_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
@@ -664,6 +665,74 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+
+
+def apply_philadelphia_athletics_2026_roster_amendment(cards, rosters):
+    """Owner-approved 1901-1954 Philadelphia Athletics 9/6/5/6 roster.
+
+    Foxx becomes DH and Fain moves to 1B without changing batting order.
+    Barry remains an original historical converted card; never delete it.
+    Shantz is the sixth, left-handed long/swing arm (not an SP rotation
+    promotion). No fake pitcher card is generated. Every earlier game stays
+    untouched.
+    """
+    roster = rosters.get("PHA")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "barryja01"]
+    index = {p["id"]: p for p in players}
+    for pid, group, slot, pos, kind in (
+        ("foxxji01", "lineup", 4, "DH", "hitter"),
+        ("fainfe01", "lineup", 9, "1B", "hitter"),
+        ("bishoma01", "bench", 5, "2B", "hitter"),
+        ("valoel01", "bench", 6, "OF", "hitter"),
+    ):
+        if pid not in index:
+            raise SystemExit("Philadelphia Athletics required player missing: " + pid)
+        index[pid].update(group=group, slot=slot, pos=pos, kind=kind)
+        card = cards.get("PHA|" + pid)
+        if card:
+            card["spots"] = [{"group": group, "slot": slot,
+                              "pos": pos, "kind": kind}]
+    pitcher_id = "shantbo01"
+    found = [p for p in players if p["id"] == pitcher_id]
+    if not found:
+        players.append({
+            "group": "bullpen", "id": pitcher_id,
+            "kind": "pitcher", "name": "Bobby Shantz", "pos": "RP", "slot": 6,
+        })
+    elif len(found) != 1:
+        raise SystemExit("Duplicate Bobby Shantz Athletics roster records")
+    else:
+        found[0].update(group="bullpen", kind="pitcher", pos="RP", slot=6)
+    shantz_card = cards.get("PHA|" + pitcher_id)
+    if shantz_card is None:
+        shantz_card = {
+            "id": pitcher_id, "name": "Bobby Shantz", "team": "PHA",
+            "spots": [], "card_bat": None, "card_pit": None,
+            "peak_bat": None, "peak_bat_162": None,
+            "peak_pit": None, "peak_pit_162": None, "tournament": None,
+        }
+        cards["PHA|" + pitcher_id] = shantz_card
+    shantz_card["spots"] = [{
+        "group": "bullpen", "slot": 6, "pos": "RP", "kind": "pitcher",
+    }]
+    if not shantz_card.get("card_pit"):
+        shantz_card["conversion_status"] = (
+            "PENDING: frozen Pitcher v0.2.3 Philadelphia-only conversion;"
+            " not yet playable. Includes Philadelphia seasons 1949-1954 only."
+        )
+    else:
+        shantz_card.pop("conversion_status", None)
+    # Preserve PHA|barryja01 unchanged as an archived former roster player.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {group: sum(p["group"] == group for p in players) for group in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Philadelphia Athletics approved 9/6/5/6 invalid: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Philadelphia Athletics need 26 unique active people")
 
 
 def apply_owner_roster_amendments(cards, rosters):

@@ -4577,7 +4577,7 @@
     "id": "foxxji01",
     "kind": "hitter",
     "name": "Jimmie Foxx",
-    "pos": "1B",
+    "pos": "DH",
     "slot": 4
    },
    {
@@ -4617,7 +4617,7 @@
     "id": "fainfe01",
     "kind": "hitter",
     "name": "Ferris Fain",
-    "pos": "DH",
+    "pos": "1B",
     "slot": 9
    },
    {
@@ -4654,19 +4654,11 @@
    },
    {
     "group": "bench",
-    "id": "barryja01",
-    "kind": "hitter",
-    "name": "Jack Barry",
-    "pos": "SS",
-    "slot": 5
-   },
-   {
-    "group": "bench",
     "id": "bishoma01",
     "kind": "hitter",
     "name": "Max Bishop",
     "pos": "2B",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "bench",
@@ -4674,7 +4666,7 @@
     "kind": "hitter",
     "name": "Elmer Valo",
     "pos": "OF",
-    "slot": 7
+    "slot": 6
    },
    {
     "group": "rotation",
@@ -4755,6 +4747,14 @@
     "name": "Jack Quinn",
     "pos": "RP",
     "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "shantbo01",
+    "kind": "pitcher",
+    "name": "Bobby Shantz",
+    "pos": "RP",
+    "slot": 6
    }
   ],
   "seed": 17

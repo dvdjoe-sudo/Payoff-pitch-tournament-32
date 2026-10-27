@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Philadelphia Athletics Foxx/Fain DH swap, Shantz for Barry (owner-approved)
+
+Philadelphia Athletics #17: Jimmie Foxx moves to DH at batting slot 4; Ferris Fain to 1B at slot 9. Jack Barry leaves the active six-man bench but his original converted card remains historically preserved. Bobby Shantz becomes the sixth bullpen arm (left-handed long/swing). Count Shantz's Philadelphia Athletics 1949–1954 seasons exclusively, not Kansas City or his later career. Bishop becomes bench 5 and Valo bench 6. The roster is 9/6/5/6, 26 distinct people. The entire historical card catalog, games, box scores, original scores, FAC/dice rolls and outcomes remain intact. Shantz's authentic playable Pitcher v0.2.3 conversion is pending and must not be fabricated; Peak 162 is display-only and can reflect starter innings.
+
 ## 2026-10-27 — Houston Astros Moisés Alou for Octavio Dotel (owner-approved)
 
 Houston adds Moisés Alou as its sixth bench bat (RH LF/RF), strictly using his **1998, 2000 and 2001 Houston Astros seasons**; Dotel leaves the active bullpen. Joe Sambito and Dave Smith move into relief positions 5 and 6, retaining their existing pitching functions. Houston now has 9 lineup hitters, 6 bench players, 5 starters, 6 relievers: 26 distinct active players. All original player card bodies, including Dotel's and Alou's unrelated Montreal card, and historical scores, games, box scores and original dice/FAC logs remain unchanged. No Hitter v0.5 ratings are invented; Astros Alou's playable conversion is pending.
