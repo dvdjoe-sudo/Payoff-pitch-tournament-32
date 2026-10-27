@@ -49,6 +49,28 @@ def test_shared_out_table_covers_holes():
     assert validate_hand(table, rows, exact=True)
 
 
+def test_project_shaped_pulls_triples_back_onto_comps():
+    widths = {}
+    for sec, keys in hs.CANON.items():
+        for hand in ('vsLHP', 'vsRHP'):
+            for key in keys:
+                widths[(sec, hand, key)] = 0
+    widths[('WHEELHOUSE', 'vsLHP', '3B')] = 1
+    widths[('WHEELHOUSE', 'vsRHP', '3B')] = 3
+    shares = hs.shape_shares(widths)
+    dumped = dict(widths)
+    dumped[('WHEELHOUSE', 'vsLHP', '3B')] = 13
+    dumped[('WHEELHOUSE', 'vsRHP', '3B')] = 13
+    dumped[('IN-PLAY', 'vsLHP', '3B')] = 9
+    projected = hs.project_shaped(dumped, shares)
+    assert projected[('IN-PLAY', 'vsLHP', '3B')] == 0, projected
+    left = projected[('WHEELHOUSE', 'vsLHP', '3B')]
+    right = projected[('WHEELHOUSE', 'vsRHP', '3B')]
+    assert left + right == 35, (left, right)
+    assert abs(left / 35 - 0.25) < 0.05, (left, right)
+    assert abs(right / 35 - 0.75) < 0.05, (left, right)
+
+
 def test_repack_clears_neighborhood_overlap():
     sections = {}
     for sec, keys in hs.CANON.items():
@@ -97,6 +119,7 @@ if __name__ == '__main__':
     test_inverted_overlap_and_past_99()
     test_hole_without_out_fails_resolved_reading()
     test_shared_out_table_covers_holes()
+    test_project_shaped_pulls_triples_back_onto_comps()
     test_repack_clears_neighborhood_overlap()
     test_classify_review_gap()
     # Pitcher modules live next door. Put them on the path for the import test.

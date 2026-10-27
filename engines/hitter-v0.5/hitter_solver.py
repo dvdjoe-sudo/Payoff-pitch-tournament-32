@@ -8,7 +8,8 @@ Output: ~/workspace/custom-cards/<slug>/<slug>-card.json
 
 Method: section-specific comps from the 596 digitized 1986 cards, then an
 analytical coordinate-descent tuner aligns the card's expected AVG/OBP/SLG/
-BB%/SO%/HR%/HBP% with the stat line. No hand tuning.
+BB%/SO%/HR%/HBP% and the 1B/2B/3B rates with the stat line. Doubles and
+triples keep the comp cards' section mix. No hand tuning.
 """
 import csv, json, os, re, sys, copy
 
@@ -61,6 +62,13 @@ CANON = {
     'IN-PLAY': ['2B', '3B', '1B'],
 }
 ORDER = ('HR', 'SO', 'BB', 'HBP', '3B', '2B', '1B')
+# Hits that appear in more than one section. Their face mix is taken from
+# the comp cards and held fixed while the tuner changes only the total.
+SHAPED = ('1B', '2B', '3B')
+MIN_COMP_PA = 300
+# Floors keep a near-zero triple rate from vanishing into the 1e-4
+# denominator, and from being free when the term is absent.
+RATE_FLOOR = {'1bp': 0.02, '2bp': 0.02, '3bp': 0.008}
 
 TEAMS = {
     'Baltimore Orioles': 'BAL', 'Boston Red Sox': 'BOS', 'California Angels': 'CAL',
@@ -114,23 +122,43 @@ def comp_distance(p, t):
             ((p['sop']-t['sop'])*3)**2 + ((p['hrp']-t['hrp'])*8)**2)
 
 
+def plate_appearances(card):
+    """AB+BB across the two pitcher hands. The 1986 card does not print HBP."""
+    total = 0
+    for side in ('L', 'R'):
+        stats = (card.get('stats_split') or {}).get(side) or {}
+        total += int(stats.get('AB') or 0) + int(stats.get('BB') or 0)
+    return total
+
+
 def select_comps(tgt, n=8, exclude=None):
     """Section comps. exclude is a set of profile names left out of the pool.
 
     A held-out accuracy check passes the player's own card here so the
     rebuild cannot copy that card.
+
+    Comps need a real sample. The eight highest home-run rates in the
+    1986 set are mostly cups of coffee, and their wheelhouses are not a
+    usable shape. Wheel comps are qualified cards with a similar home-run
+    rate. Patient comps are qualified cards with a similar walk rate.
     """
     profiles = reference()['profiles']
+    by_name = reference()['by_name']
     if exclude:
         skip = set(exclude)
         profiles = [p for p in profiles if p['name'] not in skip]
-    wh = sorted(profiles, key=lambda p: -p['hrp'])[:n]
-    pat = sorted(profiles, key=lambda p: -p['bbp'])[:n]
-    contact = sorted(profiles, key=lambda p: comp_distance(p, tgt))[:n]
-    return {'WHEELHOUSE': [p['name'] for p in wh],
-            'PATIENT': [p['name'] for p in pat],
-            'TOUGH': [p['name'] for p in contact],
-            'IN-PLAY': [p['name'] for p in contact]}
+    qualified = [p for p in profiles
+                 if plate_appearances(by_name.get(p['name']) or {}) >= MIN_COMP_PA]
+    pool = qualified if len(qualified) >= n else profiles
+
+    def closest(key):
+        return [p['name'] for p in sorted(pool, key=key)[:n]]
+
+    wh = closest(lambda p: (abs(p['hrp'] - tgt['hrp']), comp_distance(p, tgt)))
+    pat = closest(lambda p: (abs(p['bbp'] - tgt['bbp']), comp_distance(p, tgt)))
+    contact = closest(lambda p: (comp_distance(p, tgt),))
+    return {'WHEELHOUSE': wh, 'PATIENT': pat,
+            'TOUGH': contact, 'IN-PLAY': contact}
 
 
 def build_initial(comps):
@@ -149,6 +177,65 @@ def build_initial(comps):
                         continue
                 widths[(sec, hand, k)] = round(sum(vals) / len(vals)) if vals else 0
     return widths
+
+
+def shape_shares(widths):
+    """Fraction of each shaped outcome's faces sitting in each section and hand."""
+    shares = {}
+    for outcome in SHAPED:
+        cells = [key for key in widths if key[2] == outcome]
+        total = sum(max(0, widths[key]) for key in cells)
+        for key in cells:
+            shares[key] = (max(0, widths[key]) / total) if total else 0.0
+    return shares
+
+
+def project_shaped(widths, shares):
+    """Put 1B, 2B, and 3B back on the comp face mix.
+
+    The total of each outcome is kept. Which section holds those faces is
+    not. A restart that dumps 15 triples into one hand is pulled back onto
+    the sections where the comp cards actually printed that outcome.
+    """
+    if not shares:
+        return dict(widths)
+    projected = dict(widths)
+    for outcome in SHAPED:
+        cells = [key for key in shares if key[2] == outcome]
+        if not cells:
+            continue
+        total = sum(max(0, projected.get(key, 0)) for key in cells)
+        if sum(shares[key] for key in cells) <= 0:
+            for key in cells:
+                projected[key] = 0
+            continue
+        raw = {key: total * shares[key] for key in cells}
+        assigned = {key: int(raw[key]) for key in cells}
+        leftover = int(round(total)) - sum(assigned.values())
+        order = sorted(cells, key=lambda key: (raw[key] - assigned[key], shares[key]),
+                       reverse=True)
+        index = 0
+        while leftover > 0 and order:
+            assigned[order[index % len(order)]] += 1
+            leftover -= 1
+            index += 1
+        for key in cells:
+            projected[key] = assigned[key]
+    return projected
+
+
+def _with_fallback_share(shares, outcome, target_rate):
+    """If every comp printed none of an outcome the player actually had,
+    allow it on IN-PLAY. The book does not name a section for that case.
+    """
+    cells = [key for key in shares if key[2] == outcome]
+    if target_rate < 0.004 or sum(shares[key] for key in cells) > 0:
+        return shares
+    for hand in ('vsLHP', 'vsRHP'):
+        key = ('IN-PLAY', hand, outcome)
+        if key in shares:
+            shares[key] = 0.5
+    return shares
 
 
 def prescale(widths, tgt, bats):
@@ -379,7 +466,13 @@ def diagnose(exp, tgt_events, tgt_slash):
 
 
 def err(exp, tgt):
-    return sum(((exp[k]-tgt[k])/max(tgt[k], 1e-4))**2 for k in tgt)
+    total = 0.0
+    for key, target in tgt.items():
+        if key not in exp:
+            continue
+        floor = RATE_FLOOR.get(key, 1e-4)
+        total += ((exp[key] - target) / max(abs(target), floor)) ** 2
+    return total
 
 
 def irreducible_error(build_fn, tgt, bats, restarts=3):
@@ -434,15 +527,15 @@ def classify_review(fit_ok, actual_err, best_err):
 
 TUNE_CELLS = [
     [('PATIENT', 'BB')], [('WHEELHOUSE', 'HR')],
-    [('IN-PLAY', '1B')], [('IN-PLAY', '2B')],
-    [('TOUGH', '1B')], [('TOUGH', '2B')], [('TOUGH', 'SO')],
-    [('PATIENT', '1B')], [('PATIENT', 'HBP')],
-    [('WHEELHOUSE', '1B')], [('WHEELHOUSE', '2B')],
+    [('IN-PLAY', '1B')], [('IN-PLAY', '2B')], [('IN-PLAY', '3B')],
+    [('TOUGH', '1B')], [('TOUGH', '2B')], [('TOUGH', '3B')], [('TOUGH', 'SO')],
+    [('PATIENT', '1B')], [('PATIENT', '2B')], [('PATIENT', '3B')], [('PATIENT', 'HBP')],
+    [('WHEELHOUSE', '1B')], [('WHEELHOUSE', '2B')], [('WHEELHOUSE', '3B')],
 ]
 
 
-def tune(widths, tgt, bats):
-    W = dict(widths)
+def tune(widths, tgt, bats, shares=None):
+    W = project_shaped(widths, shares) if shares else dict(widths)
     best = err(expected(lay_out(W), bats), tgt)
     step = 8
     while step >= 1:
@@ -455,7 +548,9 @@ def tune(widths, tgt, bats):
                 for delta in (-step, step):
                     W2 = dict(W)
                     for key in keys:
-                        W2[key] = max(0, W2[key] + delta)
+                        W2[key] = max(0, W2.get(key, 0) + delta)
+                    if shares:
+                        W2 = project_shaped(W2, shares)
                     e = err(expected(lay_out(W2), bats), tgt)
                     if e < best - 1e-10:
                         best, W, improved = e, W2, True
@@ -517,53 +612,74 @@ def build_one(row, exclude=None):
     h, bb, ibb, hbp = g('H'), g('BB'), g('IBB'), g('HBP')
     ubb = bb - ibb  # unintentional walks only; IBB is a gameplay decision
     so, hr = g('SO'), g('HR')
-    tb = h + g('2B') + 2*g('3B') + 3*hr
+    doubles, triples = g('2B'), g('3B')
+    tb = h + doubles + 2*triples + 3*hr
+    singles = h - doubles - triples - hr
     tgt = {'avg': h/ab, 'obp': (h+ubb+hbp)/pa, 'slg': tb/ab,
-           'bbp': ubb/pa, 'sop': so/pa, 'hrp': hr/pa, 'hbpp': hbp/pa}
+           'bbp': ubb/pa, 'sop': so/pa, 'hrp': hr/pa, 'hbpp': hbp/pa,
+           '1bp': singles/pa, '2bp': doubles/pa, '3bp': triples/pa}
     bats = row['Bats'].strip().upper()[0]
     comps = select_comps(tgt, exclude=exclude)
     # v0.4: multi-start optimization (10 restarts). Each restart has its
     # own Random so the process-wide RNG is left alone and a rerun with
     # the same seeds reproduces the starts.
     import random
-    base_widths = prescale(build_initial(comps), tgt, bats)
+    raw_widths = build_initial(comps)
+    shares = shape_shares(raw_widths)
+    _with_fallback_share(shares, '2B', tgt['2bp'])
+    _with_fallback_share(shares, '3B', tgt['3bp'])
+    base_widths = prescale(raw_widths, tgt, bats)
+
+    def jitter(seed):
+        rng = random.Random(seed)
+        out = {}
+        for key, value in base_widths.items():
+            # Shaped outcomes stay on the comp mix. Jittering them by 15
+            # faces is what parked a triple band where the comps had none,
+            # and the old tuner had no 3B cell with which to remove it.
+            if key[2] in SHAPED:
+                out[key] = value
+            else:
+                out[key] = max(0, value + rng.randint(-15, 15))
+        return out
+
     starts = []
     starts.append(('heuristic', dict(base_widths)))
-    # rate-derived: scale widths by target event rates
-    rd = {k: max(1, int(v * 0.9)) for k, v in base_widths.items()}
+    # rate-derived: scale widths by target event rates, then restore the mix
+    rd = project_shaped({k: max(0, int(v * 0.9)) for k, v in base_widths.items()},
+                        shares)
     starts.append(('rate-derived', rd))
     # 8 randomized legal seeds
     for i in range(8):
-        rng = random.Random(1000 + i)
-        rw = {k: max(0, v + rng.randint(-15, 15))
-              for k, v in base_widths.items()}
-        starts.append((f'random-{i}', rw))
+        starts.append((f'random-{i}', jitter(1000 + i)))
     best_err, best_secs, best_idx, init_err = float('inf'), None, -1, None
     for idx, (label, w0) in enumerate(starts):
-        secs, e = tune(dict(w0), tgt, bats)
+        secs, e = tune(dict(w0), tgt, bats, shares)
         if idx == 0:
             init_err = e
         if e < best_err:
             best_err, best_secs, best_idx = e, secs, idx
     # Neighborhood search changes one width, then repacks the hand from
-    # face 1. Scoring the unrepacked endpoint edit let bands overlap and
-    # run past 99.
+    # face 1. Shaped outcomes are projected back onto the comp mix before
+    # the hand is scored, so a one-face edit cannot move triples into a
+    # section the comps left empty.
     improved = True
     while improved:
         improved = False
         cur_widths = widths_from_sections(best_secs)
-        for key, w in cur_widths.items():
-            if w <= 0:
+        for key, w in list(cur_widths.items()):
+            if w <= 0 and key[2] not in SHAPED:
                 continue
-            sec, hand, outcome = key
             for delta in (-2, -1, 1, 2):
                 nw = max(0, w + delta)
                 if nw == w:
                     continue
-                s2 = copy.deepcopy(best_secs)
-                r0 = s2[sec][hand][outcome] or [1, w]
-                s2[sec][hand][outcome] = [r0[0], r0[0] + nw - 1]
-                s2 = repack_sections(s2)
+                w2 = dict(cur_widths)
+                w2[key] = nw
+                w2 = project_shaped(w2, shares)
+                if w2 == cur_widths:
+                    continue
+                s2 = lay_out(w2)
                 e2 = err(expected(s2, bats), tgt)
                 if e2 < best_err - 1e-10:
                     best_err, best_secs, improved = e2, s2, True
@@ -574,10 +690,8 @@ def build_one(row, exclude=None):
     search_err = err(expected(sections, bats), tgt)
 
     def probe(seed=0):
-        rng = random.Random(2000 + seed)
-        rw = {k: max(0, v + rng.randint(-15, 15))
-              for k, v in base_widths.items()}
-        secs, _e = tune(dict(rw), tgt, bats)
+        rw = jitter(2000 + seed)
+        secs, _e = tune(dict(rw), tgt, bats, shares)
         return rw, repack_sections(secs)
 
     probe_err, probe_secs = irreducible_error(probe, tgt, bats, restarts=3)
@@ -605,7 +719,7 @@ def build_one(row, exclude=None):
     # v0.5: audit trail
     import datetime
     audit = {
-        'solver_version': '0.5',
+        'solver_version': '0.6',
         'built_utc': datetime.datetime.utcnow().isoformat() + 'Z',
         'input_row': {k: row[k] for k in row},
         'ibb_treatment': f"BB={g('BB'):.0f} IBB={g('IBB'):.0f} "
