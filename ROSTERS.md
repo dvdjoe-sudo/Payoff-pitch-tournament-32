@@ -927,6 +927,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF4 Adam Jones 11
 - IF2 Brian Roberts 13
 - BAT Ken Singleton 10
+- BAT2 George Sisler 1B (St. Louis Browns 1915-1927)
 
 ### Rotation
 
@@ -944,7 +945,12 @@ Official roster provided by the tournament owner. The lines are copied from that
 - FIREMAN Stu Miller 5
 - MR/MULTI Dick Hall 9
 - LHP Tippy Martinez 11
-- LR/SP6 Sammy Stewart 8
+
+### Approved active roster amendment (2026-10-27)
+
+George Sisler (`sislege01`) joins Baltimore franchise bench #6 (LH first baseman and pinch-hitting option) in place of Sammy Stewart (`stewasa01`), who becomes inactive. Sisler's qualifying and peak statistics use **only his St. Louis Browns seasons (1915–1927)**, not any years with Washington or the Boston Braves. The Orioles' current active 26 are 9 lineup hitters, 6 bench players, 5 rotation starters and 6 bullpen pitchers.
+
+The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu Miller, Dick Hall and Tippy Martinez. Their roles and slots do not change. The original Sammy Stewart converted pitcher card, archived cards for all players, previous games, scores, dice/FAC records and box scores remain historical and unchanged. Sisler's genuine frozen Hitter v0.5 playable conversion remains pending; no dice-chart ratings are invented.
 
 ## 16. Houston Astros (HOU)
 

@@ -549,6 +549,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "sislege01",
+    "kind": "hitter",
+    "name": "George Sisler",
+    "pos": "1B",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "palmeji01",
     "kind": "pitcher",
@@ -635,14 +643,6 @@
     "name": "Tippy Martinez",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "stewasa01",
-    "kind": "pitcher",
-    "name": "Sammy Stewart",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 15

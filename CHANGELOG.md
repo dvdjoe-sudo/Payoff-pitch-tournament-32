@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Baltimore Orioles George Sisler for Sammy Stewart (owner-approved)
+
+George Sisler is Baltimore's active sixth bench bat (LH 1B), based exclusively on his St. Louis Browns franchise seasons, 1915–1927. Sammy Stewart leaves the active bullpen; Olson, Britton, Bautista, Miller, Hall and Tippy Martinez remain in their existing slots. The active and official rosters and generated outputs are now 9/6/5/6, 26 unique active people. All original converted cards (including Stewart), earlier games, results, box scores and original dice/FAC records remain intact. Sisler's authentic Hitter v0.5 playable conversion is still pending; no invented ratings.
+
 ## 2026-10-27 — Chicago White Sox Dick Allen for Bob Locker (owner-approved)
 
 Dick Allen joins Chicago as RH 1B/DH bench #6, replacing Bob Locker on the active 26. Dámaso Marte shifts to bullpen slot 5 and Eddie Cicotte remains the long/swing option at slot 6; all existing lineup and starting rotation roles are unchanged. Chicago's official, active and generated rosters follow 9/6/5/6. All original conversions, including Locker's, historical games, outcomes, box scores and dice/FAC archives are preserved. Allen's genuine Chicago-only Hitter v0.5 playable conversion is pending and no card ratings are fabricated.
