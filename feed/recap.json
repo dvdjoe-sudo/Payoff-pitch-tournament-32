@@ -15,6 +15,18 @@
    "home_runs": 10,
    "winner": "STL",
    "recap": "The St. Louis Cardinals beat the Colorado Rockies 10-8. The go-ahead run scored in the 7th inning. Rogers Hornsby led the St. Louis Cardinals offense with 4 hits and 3 RBI in 5 at-bats. Jason Isringhausen earned the win, allowing 2 earned runs in 3.0 innings."
+  },
+  {
+   "id": "R1-05-G2",
+   "date": "2026-10-26",
+   "away": "COL",
+   "home": "STL",
+   "away_name": "Colorado Rockies",
+   "home_name": "St. Louis Cardinals",
+   "away_runs": 3,
+   "home_runs": 8,
+   "winner": "STL",
+   "recap": "The St. Louis Cardinals beat the Colorado Rockies 8-3. The go-ahead run scored in the 5th inning. Albert Pujols led the St. Louis Cardinals offense with 3 hits and 1 RBI in 4 at-bats. Dizzy Dean earned the win, allowing 2 earned runs in 6.0 innings."
   }
  ],
  "undated": [
@@ -104,6 +116,13 @@
     "team": "BOS",
     "k": 10,
     "ip": "6.2"
+   },
+   {
+    "game": "R1-05-G2",
+    "name": "Dizzy Dean",
+    "team": "STL",
+    "k": 10,
+    "ip": "6.0"
    }
   ],
   "big_games": [

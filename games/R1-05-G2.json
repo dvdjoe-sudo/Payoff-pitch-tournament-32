@@ -1,0 +1,1061 @@
+{
+ "id": "R1-05-G2",
+ "series_id": "R1-05",
+ "game_in_series": 2,
+ "rolls": [
+  [
+   77,
+   "2d6"
+  ],
+  [
+   196,
+   "%"
+  ],
+  [
+   140,
+   "2d6"
+  ],
+  [
+   95,
+   "%"
+  ],
+  [
+   123,
+   "2d6"
+  ],
+  [
+   250,
+   "%"
+  ],
+  [
+   3,
+   "2d6"
+  ],
+  [
+   55,
+   "%"
+  ],
+  [
+   185,
+   "2d6"
+  ],
+  [
+   132,
+   "%"
+  ],
+  [
+   9,
+   "2d6"
+  ],
+  [
+   209,
+   "%"
+  ],
+  [
+   74,
+   "2d6"
+  ],
+  [
+   160,
+   "%"
+  ],
+  [
+   58,
+   "2d6"
+  ],
+  [
+   118,
+   "%"
+  ],
+  [
+   155,
+   "2d6"
+  ],
+  [
+   243,
+   "%"
+  ],
+  [
+   145,
+   "2d6"
+  ],
+  [
+   102,
+   "%"
+  ],
+  [
+   131,
+   "2d6"
+  ],
+  [
+   84,
+   "%"
+  ],
+  [
+   163,
+   "2d6"
+  ],
+  [
+   229,
+   "%"
+  ],
+  [
+   36,
+   "2d6"
+  ],
+  [
+   48,
+   "%"
+  ],
+  [
+   256,
+   "%"
+  ],
+  [
+   192,
+   "2d6"
+  ],
+  [
+   181,
+   "%"
+  ],
+  [
+   42,
+   "2d6"
+  ],
+  [
+   235,
+   "%"
+  ],
+  [
+   179,
+   "2d6"
+  ],
+  [
+   139,
+   "%"
+  ],
+  [
+   91,
+   "2d6"
+  ],
+  [
+   197,
+   "1d6"
+  ],
+  [
+   168,
+   "%"
+  ],
+  [
+   81,
+   "2d6"
+  ],
+  [
+   184,
+   "%"
+  ],
+  [
+   63,
+   "2d6"
+  ],
+  [
+   188,
+   "%"
+  ],
+  [
+   238,
+   "2d6"
+  ],
+  [
+   10,
+   "%"
+  ],
+  [
+   164,
+   "2d6"
+  ],
+  [
+   72,
+   "%"
+  ],
+  [
+   18,
+   "%"
+  ],
+  [
+   144,
+   "2d6"
+  ],
+  [
+   251,
+   "%"
+  ],
+  [
+   49,
+   "2d6"
+  ],
+  [
+   242,
+   "%"
+  ],
+  [
+   211,
+   "2d6"
+  ],
+  [
+   207,
+   "%"
+  ],
+  [
+   239,
+   "2d6"
+  ],
+  [
+   85,
+   "%"
+  ],
+  [
+   11,
+   "2d6"
+  ],
+  [
+   152,
+   "%"
+  ],
+  [
+   94,
+   "2d6"
+  ],
+  [
+   78,
+   "%"
+  ],
+  [
+   88,
+   "2d6"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 3 full innings (printed protocol)"
+  ],
+  [
+   21,
+   "2d6"
+  ],
+  [
+   53,
+   "%"
+  ],
+  [
+   48,
+   "2d6"
+  ],
+  [
+   62,
+   "%"
+  ],
+  [
+   151,
+   "2d6"
+  ],
+  [
+   33,
+   "%"
+  ],
+  [
+   19,
+   "2d6"
+  ],
+  [
+   73,
+   "%"
+  ],
+  [
+   52,
+   "2d6"
+  ],
+  [
+   119,
+   "%"
+  ],
+  [
+   203,
+   "2d6"
+  ],
+  [
+   251,
+   "%"
+  ],
+  [
+   200,
+   "2d6"
+  ],
+  [
+   234,
+   "1d6"
+  ],
+  [
+   78,
+   "%"
+  ],
+  [
+   23,
+   "2d6"
+  ],
+  [
+   178,
+   "1d6"
+  ],
+  [
+   197,
+   "%"
+  ],
+  [
+   113,
+   "2d6"
+  ],
+  [
+   16,
+   "%"
+  ],
+  [
+   190,
+   "%"
+  ],
+  [
+   131,
+   "2d6"
+  ],
+  [
+   196,
+   "%"
+  ],
+  [
+   61,
+   "2d6"
+  ],
+  [
+   65,
+   "%"
+  ],
+  [
+   191,
+   "2d6"
+  ],
+  [
+   34,
+   "%"
+  ],
+  [
+   90,
+   "2d6"
+  ],
+  [
+   17,
+   "%"
+  ],
+  [
+   170,
+   "2d6"
+  ],
+  [
+   176,
+   "%"
+  ],
+  [
+   201,
+   "2d6"
+  ],
+  [
+   37,
+   "%"
+  ],
+  [
+   55,
+   "2d6"
+  ],
+  [
+   99,
+   "%"
+  ],
+  [
+   169,
+   "2d6"
+  ],
+  [
+   162,
+   "%"
+  ],
+  [
+   66,
+   "2d6"
+  ],
+  [
+   91,
+   "%"
+  ],
+  [
+   75,
+   "2d6"
+  ],
+  [
+   153,
+   "%"
+  ],
+  [
+   249,
+   "2d6"
+  ],
+  [
+   111,
+   "%"
+  ],
+  [
+   135,
+   "%"
+  ],
+  [
+   12,
+   "2d6"
+  ],
+  [
+   6,
+   "%"
+  ],
+  [
+   81,
+   "2d6"
+  ],
+  [
+   30,
+   "%"
+  ],
+  [
+   102,
+   "%"
+  ],
+  [
+   204,
+   "2d6"
+  ],
+  [
+   250,
+   "%"
+  ],
+  [
+   118,
+   "1d6"
+  ],
+  [
+   42,
+   "2d6"
+  ],
+  [
+   70,
+   "%"
+  ],
+  [
+   245,
+   "2d6"
+  ],
+  [
+   240,
+   "%"
+  ],
+  [
+   50,
+   "2d6"
+  ],
+  [
+   184,
+   "%"
+  ],
+  [
+   32,
+   "%"
+  ],
+  [
+   49,
+   "2d6"
+  ],
+  [
+   175,
+   "%"
+  ],
+  [
+   180,
+   "2d6"
+  ],
+  [
+   157,
+   "%"
+  ],
+  [
+   126,
+   "%"
+  ],
+  [
+   239,
+   "2d6"
+  ],
+  [
+   59,
+   "2d6"
+  ],
+  [
+   123,
+   "%"
+  ],
+  [
+   156,
+   "2d6"
+  ],
+  [
+   40,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 6 full innings (printed protocol)"
+  ],
+  [
+   254,
+   "2d6"
+  ],
+  [
+   192,
+   "%"
+  ],
+  [
+   218,
+   "2d6"
+  ],
+  [
+   232,
+   "%"
+  ],
+  [
+   203,
+   "2d6"
+  ],
+  [
+   222,
+   "%"
+  ],
+  [
+   91,
+   "2d6"
+  ],
+  [
+   43,
+   "%"
+  ],
+  [
+   164,
+   "2d6"
+  ],
+  [
+   181,
+   "%"
+  ],
+  [
+   140,
+   "2d6"
+  ],
+  [
+   51,
+   "%"
+  ],
+  [
+   226,
+   "2d6"
+  ],
+  [
+   65,
+   "%"
+  ],
+  [
+   99,
+   "2d6"
+  ],
+  [
+   102,
+   "%"
+  ],
+  [
+   211,
+   "2d6"
+  ],
+  [
+   25,
+   "2d6"
+  ],
+  [
+   163,
+   "2d6"
+  ],
+  [
+   19,
+   "%"
+  ],
+  [
+   98,
+   "2d6"
+  ],
+  [
+   197,
+   "%"
+  ],
+  [
+   101,
+   "2d6"
+  ],
+  [
+   246,
+   "%"
+  ],
+  [
+   55,
+   "2d6"
+  ],
+  [
+   143,
+   "%"
+  ],
+  [
+   169,
+   "2d6"
+  ],
+  [
+   18,
+   "%"
+  ],
+  [
+   141,
+   "2d6"
+  ],
+  [
+   129,
+   "%"
+  ],
+  [
+   187,
+   "%"
+  ],
+  [
+   243,
+   "2d6"
+  ],
+  [
+   151,
+   "%"
+  ],
+  [
+   161,
+   "2d6"
+  ],
+  [
+   38,
+   "%"
+  ],
+  [
+   142,
+   "2d6"
+  ],
+  [
+   106,
+   "%"
+  ],
+  [
+   14,
+   "2d6"
+  ],
+  [
+   130,
+   "%"
+  ],
+  [
+   58,
+   "2d6"
+  ],
+  [
+   28,
+   "%"
+  ],
+  [
+   156,
+   "%"
+  ],
+  [
+   30,
+   "2d6"
+  ],
+  [
+   207,
+   "%"
+  ],
+  [
+   8,
+   "2d6"
+  ],
+  [
+   33,
+   "%"
+  ],
+  [
+   147,
+   "%"
+  ],
+  [
+   217,
+   "2d6"
+  ],
+  [
+   256,
+   "%"
+  ],
+  [
+   223,
+   "2d6"
+  ],
+  [
+   94,
+   "%"
+  ],
+  [
+   85,
+   "2d6"
+  ],
+  [
+   194,
+   "%"
+  ]
+ ],
+ "manager_log": [
+  "SETUP ASSERTION BLOCK: all checks PASS (v2 engine + v2 cards bound for BOTH clubs, the park in force verified as the 1986 Busch Stadium card against the app source entry, FAC deck stream installed, FAC-chart absent, addendum live and merging for BOTH clubs, traits ON with Tony La Russa governing St. Louis from the home slot and Bud Black governing Colorado from the guest slot, the official bunt-grade overlay loaded and live at the bunt seam, McGraw's and Williams's packages managing NEITHER club and no other stray manager package live, fatigue fix layer installed under the trait layers with both starters' stamina lines served, the Game 1 carry proved against Game 1's saved state (Isringhausen barred, no caps), elimination gating CLOSED for both clubs). Printed in full in the game record.",
+  "PAYOFF PITCH TOP 32 TOURNAMENT, SERIES R1-05, GAME 2 (OFFICIAL): Colorado Rockies at St. Louis Cardinals, Busch Stadium (the 1986 Busch Stadium park card), DH on. Best of 7, home pattern 2-2-1-1-1, St. Louis home for Games 1, 2, 5 and 7, Colorado home for Games 3, 4 and 6 (at Coors Field on the printed 2024 card Joe adopted). St. Louis is the #5 seed, Colorado the #28 seed. St. Louis leads the series 1-0 (Game 1: St. Louis 10, Colorado 8, on 2026-10-26).",
+  "Venue and slot note: Colorado plays in the host engine's guest slot ('OPP') and St. Louis in the 'STL' slot: Colorado bats in the top half as the visitor and St. Louis in the bottom half as the home club, and the park card in force is the 1986 Busch Stadium card itself, loaded by name from the tracker app's ballparks.json and verified field-for-field against that source entry in the assertion block. John McGraw's package is present only as an import of the manager layers; its active gate was re-pointed to False at module level in this process, and Dick Williams's decision entry points in the traits2 substrate were re-pointed to no-ops the same way, so neither package manages either club in this game. McGraw manages San Francisco and Williams manages Montreal in this project (Joe's graphics rulings). No engine or traits file was edited.",
+  "Starters: Dizzy Dean (STL) vs Kyle Freeland (COL), each club's second starter in its posted rotation order (STL rotation: Bob Gibson, Dizzy Dean, Adam Wainwright, Harry Brecheen, Chris Carpenter; COL rotation: Ubaldo Jimenez, Kyle Freeland, Aaron Cook, German Marquez, Jhoulys Chacin); FAC deck seed 20261302 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Colorado's ratings merged into the layer for the guest slot from the Rockies' own pitcher_addendum.json). Stamina lines as served are printed in the assertion block.",
+  "Availability in (Game 2): the Game 1 carry under the house outs convention on the fatigue layer's next-game rows. Jason Isringhausen (9 relief outs in Game 1) is UNAVAILABLE and stands trimmed from St. Louis's pen in the setup; no other arm is capped (Game 1 relief outs: Logan 5, Street 4, Betancourt 2, Helsley 2, all under the 6-out cap band), and the driver's cap table is empty. The Game 1 starters' next turns run on the posted rotation. Ozzie Smith starts normally: his Game 1 ejection carries no suspension (project precedent). Both clubs field the governing 26 under Joe's six-and-six rule (six bench, six relievers): Colorado's bench carries Ellis Burks, seated there by Joe's 2026-10-26 ruling (Mike DeJean's chair), and St. Louis's carries Mark McGwire, seated by Joe's bench ruling over Tip O'Neill; St. Louis's pen stands at five available arms tonight under the carry.",
+  "FATIGUE FIX LIVE (Joe's commission, FATIGUE_FIX.md): the fatigue_fix layer is installed over the substrate stack, so all four book fatigue triggers are in force: the engine's 6-run universal rule, the starter-stamina trigger (Start inning reached at 3+ runs, evaluated before the inning's first plate appearance as well as after every one), the Short/Long reliever triggers (appearance innings and runs), and the save-symbol exemption machinery (no converted card carries a symbol, so the exemption correctly cannot fire; no symbol was invented). The layer records the Section 1.6 fatigue standard in the game state.",
+  "Managers: St. Louis is managed by TONY LA RUSSA (the library layer, traits_la_russa.py: Micro-Manager, Second Leadoff, Double-Switch Master, Postseason Alchemy), governing from the 'STL' slot. The universal DH is in force (Joe's ruling, 2026-10-26), so Second Leadoff can never fire (the 8-hole is a hitter, never the pitcher) and stands as encoded dead machinery, and the Double-Switch Master fires only in its combined-move form. Postseason Alchemy eligibility as encoded: the age-32+ Cardinals (Enos Slaughter, Jim Edmonds, Ken Boyer, Lou Brock, Mark McGwire, Ozzie Smith, Yadier Molina) plus Joe's named leaders Albert Pujols and Yadier Molina; Stan Musial (30) qualifies by neither test and that is recorded plainly. Colorado is managed by BUD BLACK (traits_bud_black.py: The Coors Field Buffer, Super Bullpen, Even-Keel Counterpunch, Sprawling Outfield Veterans), governing from the guest slot as Colorado. Brian Fuentes (B* in the frozen pool) is Colorado's only Super Bullpen eligible arm; Ellis Burks stands in Black's veteran table at age 33.",
+  "La Russa's driver-called hook: his layer's pre_pa is a driver hook by design (it retires stale PA flags, latches the Second Leadoff construction, works the Micro-Manager arm/drop watch, and flags the Second Leadoff and Postseason Alchemy plate appearances); this driver calls it before every plate appearance, after the substrate's bookkeeping, and calls Black's settle() when the game ends.",
+  "Hierarchy in force: book mechanics (fatigue, Rest Chart); the one hard rule (no starting pitcher relieves except for a club facing elimination, with a one-day rotation setback); manager traits where they speak; the hook policy and Joe's closer branch as the DEFAULT policy everywhere else.",
+  "Elimination mark: Game 2 of a best-of-7, St. Louis leading 1-0; this is an elimination game for NEITHER club (Colorado has one loss, St. Louis none; elimination begins at three). The hard rule's exception is CLOSED for both: no starting pitcher may relieve tonight for either club, and the game's traits elimination list is empty.",
+  "[1T 0 out, bases ---] Charlie Blackmon vs Dizzy Dean",
+  "  dice 2d6=9 (5+6) %=02 -> TOUGH",
+  "  TOUGH %=02 -> SO",
+  "  Charlie Blackmon strikes out",
+  "[1T 1 out, bases ---] DJ LeMahieu vs Dizzy Dean",
+  "  dice 2d6=3 (3+5) %=77 -> IN-PLAY",
+  "  IN-PLAY %=77 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[1T 2 out, bases ---] Todd Helton vs Dizzy Dean",
+  "  dice 2d6=8 (6+2) %=02 -> TOUGH",
+  "  TOUGH %=02 -> SO",
+  "  Todd Helton strikes out",
+  "[1B 0 out, bases ---] Ozzie Smith vs Kyle Freeland",
+  "  dice 2d6=10 (3+1) %=09 -> PATIENT",
+  "  PATIENT %=09 -> BB",
+  "  Ozzie Smith walks",
+  "[1B 0 out, bases 1--] Stan Musial vs Kyle Freeland",
+  "  dice 2d6=11 (4+6) %=62 -> IN-PLAY",
+  "  IN-PLAY %=62 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[1B 1 out, bases 1--] Rogers Hornsby vs Kyle Freeland",
+  "  dice 2d6=7 (5+4) %=96 -> TOUGH",
+  "  TOUGH %=96 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[1B 2 out, bases 1--] Albert Pujols vs Kyle Freeland",
+  "  dice 2d6=11 (5+5) %=27 -> IN-PLAY",
+  "  IN-PLAY %=27 -> 1B",
+  "  Albert Pujols singles (LF fields it)",
+  "  auto-steal: Albert Pujols has the jump but is held (2 outs, runner on 3rd)",
+  "[1B 2 out, bases 1-1] Jim Edmonds vs Kyle Freeland",
+  "  dice 2d6=10 (3+1) %=87 -> PATIENT",
+  "  PATIENT %=87 -> HBP",
+  "  Jim Edmonds is hit by a pitch",
+  "[1B 2 out, bases 111] Joe Medwick vs Kyle Freeland",
+  "  dice 2d6=3 (3+5) %=25 -> TOUGH-OUT",
+  "  Joe Medwick strikes out",
+  "[2T 0 out, bases ---] Nolan Arenado vs Dizzy Dean",
+  "  dice 2d6=2 (1+5) %=19 -> TOUGH",
+  "  TOUGH %=19 -> SO",
+  "  Nolan Arenado strikes out",
+  "[2T 1 out, bases ---] Larry Walker vs Dizzy Dean",
+  "  dice 2d6=8 (4+1) %=43 -> TOUGH",
+  "  TOUGH %=43 -> 3B",
+  "  Larry Walker triples, 0 run(s) score",
+  "[2T 1 out, bases --1] Troy Tulowitzki vs Dizzy Dean",
+  "  dice 2d6=10 (1+3) %=27 -> TOUGH",
+  "  TOUGH %=27 -> SO",
+  "  Troy Tulowitzki strikes out",
+  "[2T 2 out, bases --1] Matt Holliday vs Dizzy Dean",
+  "  dice 2d6=4 (6+3) %=12 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): WHEELHOUSE, re-roll %=83",
+  "  WHEELHOUSE %=83 -> 2B",
+  "  Matt Holliday doubles (LF fields it)",
+  "  auto-steal: Matt Holliday would go but stealing 3rd needs doubles on the 2d6",
+  "[2T 2 out, bases -1-] Elias Diaz vs Dizzy Dean",
+  "  dice 2d6=5 (1+5) %=70 -> TOUGH",
+  "  TOUGH %=70 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[2B 0 out, bases ---] Enos Slaughter vs Kyle Freeland",
+  "  dice 2d6=3 (2+6) %=38 -> TOUGH-OUT",
+  "  TOUGH-OUT: OUT section -> P3",
+  "  pop out 1B, runners hold",
+  "[2B 1 out, bases ---] Yadier Molina vs Kyle Freeland",
+  "  dice 2d6=6 (6+2) %=64 -> TOUGH",
+  "  TOUGH %=64 -> 1B",
+  "  Yadier Molina singles (CF fields it)",
+  "[2B 1 out, bases 1--] Ken Boyer vs Kyle Freeland",
+  "  bunt: fielder C, %=22 -> LEAD",
+  "  bunt: lead runner thrown out, batter safe",
+  "[2B 2 out, bases 1--] Ozzie Smith vs Kyle Freeland",
+  "  dice 2d6=10 (3+3) %=99 -> PATIENT",
+  "  PATIENT %=99 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[3T 0 out, bases ---] Andres Galarraga vs Dizzy Dean",
+  "  dice 2d6=7 (3+4) %=88 -> TOUGH",
+  "  TOUGH %=88 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[3T 1 out, bases ---] Charlie Blackmon vs Dizzy Dean",
+  "  dice 2d6=7 (4+6) %=40 -> TOUGH",
+  "  TOUGH %=40 -> SO",
+  "  Charlie Blackmon strikes out",
+  "[3T 2 out, bases ---] DJ LeMahieu vs Dizzy Dean",
+  "  dice 2d6=4 (4+6) %=06 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): WHEELHOUSE, re-roll %=10",
+  "  WHEELHOUSE %=10 -> HR",
+  "  DJ LeMahieu homers",
+  "[3T 2 out, bases ---] Todd Helton vs Dizzy Dean",
+  "  dice 2d6=6 (2+3) %=23 -> PATIENT",
+  "  PATIENT %=23 -> BB",
+  "  Todd Helton walks",
+  "[3T 2 out, bases 1--] Nolan Arenado vs Dizzy Dean",
+  "  dice 2d6=9 (3+5) %=41 -> TOUGH",
+  "  TOUGH %=41 -> SO",
+  "  Nolan Arenado strikes out",
+  "[3B 0 out, bases ---] Stan Musial vs Kyle Freeland",
+  "  dice 2d6=5 (1+3) %=45 -> PATIENT",
+  "  PATIENT %=45 -> BB",
+  "  Stan Musial walks",
+  "[3B 0 out, bases 1--] Rogers Hornsby vs Kyle Freeland",
+  "  dice 2d6=8 (4+1) %=39 -> DEFENSE",
+  "  DEFENSE: P converts it: GB-fc",
+  "  GB-fc: lead runner forced out, batter safe",
+  "[3B 1 out, bases 1--] Albert Pujols vs Kyle Freeland",
+  "  dice 2d6=9 (6+2) %=88 -> IN-PLAY",
+  "  IN-PLAY %=88 above the ranges -> OUT G6",
+  "  double play turned",
+  "  GIDP SS",
+  "  FAC deck reshuffled after 3 full innings (printed protocol)",
+  "[4T 0 out, bases ---] Larry Walker vs Dizzy Dean",
+  "  dice 2d6=5 (3+6) %=36 -> TOUGH",
+  "  TOUGH %=36 -> SO",
+  "  Larry Walker strikes out",
+  "[4T 1 out, bases ---] Troy Tulowitzki vs Dizzy Dean",
+  "  dice 2d6=9 (3+1) %=93 -> TOUGH",
+  "  TOUGH %=93 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[4T 2 out, bases ---] Matt Holliday vs Dizzy Dean",
+  "  dice 2d6=6 (3+2) %=40 -> PATIENT",
+  "  PATIENT %=40 -> HBP",
+  "  Matt Holliday is hit by a pitch",
+  "[4T 2 out, bases 1--] Elias Diaz vs Dizzy Dean",
+  "  caught stealing: Matt Holliday out at 2",
+  "[4B 0 out, bases ---] Jim Edmonds vs Kyle Freeland",
+  "  dice 2d6=6 (5+3) %=81 -> TOUGH",
+  "  TOUGH %=81 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[4B 1 out, bases ---] Joe Medwick vs Kyle Freeland",
+  "  dice 2d6=10 (3+3) %=23 -> PATIENT",
+  "  PATIENT %=23 -> BB",
+  "  Joe Medwick walks",
+  "[4B 1 out, bases 1--] Enos Slaughter vs Kyle Freeland",
+  "  bunt: fielder 1B, %=88 -> MISS",
+  "  MISS: batter misses the pitch, bunt stays on",
+  "  bunt: fielder 1B, %=66 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[4B 2 out, bases -1-] Yadier Molina vs Kyle Freeland",
+  "  dice 2d6=4 (5+1) %=99 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=58",
+  "  IN-PLAY %=58 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[5T 0 out, bases ---] Elias Diaz vs Dizzy Dean",
+  "  dice 2d6=8 (4+6) %=02 -> TOUGH",
+  "  TOUGH %=02 -> SO",
+  "  Elias Diaz strikes out",
+  "[5T 1 out, bases ---] Andres Galarraga vs Dizzy Dean",
+  "  dice 2d6=8 (2+4) %=28 -> TOUGH",
+  "  TOUGH %=28 -> SO",
+  "  Andres Galarraga strikes out",
+  "[5T 2 out, bases ---] Charlie Blackmon vs Dizzy Dean",
+  "  dice 2d6=2 (1+1) %=69 -> TOUGH",
+  "  TOUGH %=69 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[5B 0 out, bases ---] Ken Boyer vs Kyle Freeland",
+  "  dice 2d6=9 (4+4) %=03 -> IN-PLAY",
+  "  IN-PLAY %=03 -> 2B",
+  "  Ken Boyer doubles (LF fields it)",
+  "[5B 0 out, bases -1-] Ozzie Smith vs Kyle Freeland",
+  "  dice 2d6=9 (3+6) %=24 -> IN-PLAY",
+  "  IN-PLAY %=24 -> 1B",
+  "  Ozzie Smith singles (CF fields it)",
+  "[5B 0 out, bases 1--] Stan Musial vs Kyle Freeland",
+  "  dice 2d6=8 (1+1) %=21 -> DEFENSE",
+  "  DEFENSE: ball gets by/through SS: Stan Musial with a 1B, runners advance 2",
+  "[5B 0 out, bases 1-1] Rogers Hornsby vs Kyle Freeland",
+  "  dice 2d6=12 (6+2) %=68 -> DEFENSE",
+  "  DEFENSE: 1-base error on 3B, batter reaches",
+  "[5B 0 out, bases 11-] Albert Pujols vs Kyle Freeland",
+  "  dice 2d6=9 (5+6) %=32 -> IN-PLAY",
+  "  IN-PLAY %=32 -> 1B",
+  "  Albert Pujols singles (LF fields it)",
+  "  FATIGUE (book): Kyle Freeland is fatigued under the book's starter-stamina rule: Start 5 reached (inning 5) with 3 runs allowed, 3 or more (2024 rulebook p10)",
+  "Pitching change (Colorado): Boone Logan replaces Kyle Freeland",
+  "[5B 0 out, bases 11-] Jim Edmonds vs Boone Logan",
+  "  WILD PITCH by Boone Logan (book p10, addendum WP rating): all runners advance one base",
+  "  dice 2d6=8 (2+4) %=38 -> IN-PLAY",
+  "  IN-PLAY %=38 above the ranges -> OUT G1",
+  "  pitcher looks back the lead runner, throws to 1st: batter out, runners hold",
+  "  ground out P",
+  "[5B 1 out, bases -11] Joe Medwick vs Boone Logan",
+  "  dice 2d6=8 (6+6) %=72 -> IN-PLAY",
+  "  IN-PLAY %=72 above the ranges -> OUT G6",
+  "  batter out at 1st, runner on 3rd scores on the throw",
+  "  ground out SS, run scores",
+  "[5B 2 out, bases -1-] Enos Slaughter vs Boone Logan",
+  "  dice 2d6=10 (3+3) %=67 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, LHB): IN-PLAY, re-roll %=19",
+  "  IN-PLAY %=19 -> 1B",
+  "  Enos Slaughter singles (CF fields it)",
+  "[5B 2 out, bases 1--] Yadier Molina vs Boone Logan",
+  "  DROP?: 2B hangs on, Enos Slaughter is OUT",
+  "  EVEN-KEEL COUNTERPUNCH (Black): DJ LeMahieu leads off after a 5-run half; WHEELHOUSE +5 this at-bat",
+  "[6T 0 out, bases ---] DJ LeMahieu vs Dizzy Dean",
+  "  dice 2d6=3 (2+4) %=52 -> IN-PLAY",
+  "  IN-PLAY %=52 above the ranges -> OUT G3",
+  "  ground out 1B",
+  "[6T 1 out, bases ---] Todd Helton vs Dizzy Dean",
+  "  dice 2d6=11 (5+1) %=09 -> TOUGH-OUT",
+  "  Todd Helton strikes out",
+  "[6T 2 out, bases ---] Nolan Arenado vs Dizzy Dean",
+  "  dice 2d6=12 (6+3) %=99 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=36",
+  "  IN-PLAY %=36 above the ranges -> OUT P4",
+  "  pop out 2B, runners hold",
+  "[6B 0 out, bases ---] Yadier Molina vs Boone Logan",
+  "  dice 2d6=9 (3+2) %=21 -> TOUGH",
+  "  TOUGH %=21 -> SO",
+  "  Yadier Molina strikes out",
+  "[6B 1 out, bases ---] Ken Boyer vs Boone Logan",
+  "  dice 2d6=8 (pair 6+2) %=00 -> IN-PLAY: RARE PLAY (initial percentile 00)",
+  "  Rare Plays, Bases Empty, IN-PLAY: percentile 83 (same FAC stream) -> 80-84: a violent storm pops up over open-air Busch Stadium; the game is delayed",
+  "  delay roll 2d6=8 (4+2) on the same FAC stream: an 80-minute delay, 50 or more, so both pitchers stiffen up and must be replaced (Boone Logan for Colorado, Dizzy Dean for St. Louis)",
+  "Pitching change (Colorado): Matt Belisle replaces Boone Logan",
+  "  Boone Logan, stiffened by the 80-minute storm delay, is replaced under the 80-84 entry by Matt Belisle (the engine's role pick, 'mid' first in the 6th), who takes over the bottom of the 6th",
+  "Pitching change (St. Louis): Al Brazle replaces Dizzy Dean",
+  "  Dizzy Dean, stiffened by the same delay, is replaced under the entry by Al Brazle (the engine's role pick, 'mid' first in the 6th); the change is recorded during the delay and Al Brazle takes the field for the top of the 7th",
+  "  dice 2d6=7 (2+6) %=68 -> IN-PLAY",
+  "  IN-PLAY %=68 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[6B 2 out, bases ---] Ozzie Smith vs Matt Belisle",
+  "  dice 2d6=6 (5+6) %=54 -> TOUGH",
+  "  TOUGH %=54 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "  FAC deck reshuffled after 6 full innings (printed protocol)",
+  "[7T 0 out, bases ---] Larry Walker vs Al Brazle",
+  "  dice 2d6=6 (1+1) %=41 -> TOUGH-OUT",
+  "  TOUGH-OUT: OUT section -> P4",
+  "  pop out 2B, runners hold",
+  "[7T 1 out, bases ---] Troy Tulowitzki vs Al Brazle",
+  "  dice 2d6=5 (1+2) %=16 -> DEFENSE",
+  "  DEFENSE: ball gets by/through 3B: Troy Tulowitzki with a 2B, runners advance 2",
+  "  auto-steal: Troy Tulowitzki would go but stealing 3rd needs doubles on the 2d6",
+  "[7T 1 out, bases -1-] Matt Holliday vs Al Brazle",
+  "  dice 2d6=7 (5+4) %=84 -> TOUGH",
+  "  TOUGH %=84 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[7T 2 out, bases --1] Elias Diaz vs Al Brazle",
+  "  dice 2d6=4 (4+5) %=70 -> IN-PLAY",
+  "  IN-PLAY %=70 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[7B 0 out, bases ---] Stan Musial vs Matt Belisle",
+  "  dice 2d6=3 (3+4) %=25 -> TOUGH",
+  "  TOUGH %=14 -> SO",
+  "  Stan Musial strikes out",
+  "[7B 1 out, bases ---] Rogers Hornsby vs Matt Belisle",
+  "  dice 2d6=8 (1+4) %=28 -> PATIENT",
+  "  PATIENT %=28 -> BB",
+  "  Rogers Hornsby walks",
+  "[7B 1 out, bases 1--] Albert Pujols vs Matt Belisle",
+  "  dice 2d6=7 (4+5) %=19 -> IN-PLAY",
+  "  IN-PLAY %=19 -> 1B",
+  "  Albert Pujols singles (CF fields it)",
+  "[7B 1 out, bases 1-1] Jim Edmonds vs Matt Belisle",
+  "  dice 2d6=10 (1+1) %=20 -> DEFENSE",
+  "  DEFENSE: SS converts it: GB-fc",
+  "  GB-fc: lead runner forced out, batter safe",
+  "[7B 2 out, bases 1--] Joe Medwick vs Matt Belisle",
+  "  dice 2d6=7 (3+2) %=04 -> IN-PLAY",
+  "  IN-PLAY %=04 -> 3B",
+  "  Joe Medwick triples, 1 run(s) score",
+  "  FATIGUE (book): Matt Belisle is fatigued under the book's relief rule: a Short reliever at 2 runs allowed, the 2-run limit (2024 rulebook p11)",
+  "[7B 2 out, bases --1] Enos Slaughter vs Matt Belisle",
+  "  dice 2d6=2 (1+4) %=60 -> DEFENSE",
+  "  DEFENSE: 2-base error on 2B, batter reaches",
+  "  auto-steal: Enos Slaughter would go but stealing 3rd needs doubles on the 2d6",
+  "Pitching change (Colorado): Rafael Betancourt replaces Matt Belisle",
+  "[7B 2 out, bases -1-] Yadier Molina vs Rafael Betancourt",
+  "  dice 2d6=10 (2+3) %=75 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=72",
+  "  IN-PLAY %=72 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "  EVEN-KEEL COUNTERPUNCH (Black): Andres Galarraga leads off after a 3-run half; WHEELHOUSE +5 this at-bat",
+  "[8T 0 out, bases ---] Andres Galarraga vs Al Brazle",
+  "  dice 2d6=7 (5+3) %=59 -> TOUGH",
+  "  TOUGH %=59 -> SO",
+  "  Andres Galarraga strikes out",
+  "[8T 1 out, bases ---] Charlie Blackmon vs Al Brazle",
+  "  dice 2d6=8 (5+1) %=75 -> PATIENT",
+  "  PATIENT %=75 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[8T 2 out, bases ---] DJ LeMahieu vs Al Brazle",
+  "  dice 2d6=7 (5+3) %=65 -> TOUGH",
+  "  TOUGH %=65 -> SO",
+  "  DJ LeMahieu strikes out",
+  "[8B 0 out, bases ---] Ken Boyer vs Rafael Betancourt",
+  "  dice 2d6=9 (5+3) %=33 -> TOUGH",
+  "  TOUGH %=33 -> SO",
+  "  Ken Boyer strikes out",
+  "[8B 1 out, bases ---] Ozzie Smith vs Rafael Betancourt",
+  "  dice 2d6=10 (3+1) %=51 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, SHB): IN-PLAY, re-roll %=83",
+  "  IN-PLAY %=83 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[8B 2 out, bases ---] Stan Musial vs Rafael Betancourt",
+  "  dice 2d6=7 (3+3) %=45 -> TOUGH",
+  "  TOUGH %=45 above the ranges -> OUT G1",
+  "  ground out P",
+  "[9T 0 out, bases ---] Todd Helton vs Al Brazle",
+  "  dice 2d6=2 (1+2) %=40 -> PATIENT",
+  "  PATIENT %=40 -> BB",
+  "  Todd Helton walks",
+  "  Todd Helton steals 2 safely",
+  "[9T 0 out, bases -1-] Nolan Arenado vs Al Brazle",
+  "  dice 2d6=8 (5+5) %=83 -> PATIENT",
+  "  PATIENT %=83 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[9T 1 out, bases --1] Larry Walker vs Al Brazle",
+  "  dice 2d6=6 (6+6) %=74 -> TOUGH-OUT",
+  "  TOUGH-OUT: OUT section -> G4",
+  "  batter out at 1st, runner on 3rd scores on the throw",
+  "  ground out 2B, run scores",
+  "[9T 2 out, bases ---] Troy Tulowitzki vs Al Brazle",
+  "  dice 2d6=10 (1+4) %=76 -> TOUGH",
+  "  TOUGH %=76 above the ranges -> OUT F8",
+  "  fly out CF"
+ ]
+}

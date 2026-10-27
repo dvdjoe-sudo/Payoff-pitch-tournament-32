@@ -42,9 +42,9 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
 | Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
 | Hal Newhouser | Detroit Tigers | 12.2 | 10.0 | 1 | 11 | 4 |
+| Dizzy Dean | St. Louis Cardinals | 11.7 | 6.0 | 1 | 10 | 2 |
 | Shane McClanahan | Tampa Bay Rays | 11.7 | 8.2 | 1 | 7 | 3 |
 | Jordan Zimmermann | Washington Nationals | 10.6 | 8.0 | 1 | 6 | 3 |
-| Lefty Gomez | New York Yankees | 10.5 | 9.0 | 1 | 13 | 5 |
 
 ## Reliever
 
@@ -58,6 +58,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
+| Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Pete Fairbanks | Tampa Bay Rays | 7.1 | 1 | 2.1 | 1 | 2 |
 | Jake McGee | Tampa Bay Rays | 6.9 | 0 | 2.2 | 4 | 0 |
 | J.P. Howell | Tampa Bay Rays | 6.3 | 0 | 5.1 | 4 | 4 |
-| Aurelio Lopez | Detroit Tigers | 5.9 | 0 | 3.2 | 4 | 2 |
