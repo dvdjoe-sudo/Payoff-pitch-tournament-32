@@ -12,7 +12,7 @@ Every series is a best of 7. A club is eliminated on its second series loss. The
 
 ## Status
 
-R1-01, R1-02, R1-03, and R1-04 are complete. Boston beat Tampa Bay 4-3 and Detroit beat Arizona 4-2. Boston and Detroit advance on the winners side. Tampa Bay and Arizona drop to the losers side and are not eliminated. The other 12 opening series are scheduled and unplayed. Winners Round 2 and Losers Round 1 still wait until all 16 opening series are complete.
+R1-01, R1-02, R1-03, R1-04, and R1-05 are complete. Boston beat Tampa Bay 4-3, Detroit beat Arizona 4-2, and St. Louis beat Colorado 4-0. Boston, Detroit, and St. Louis advance on the winners side. Tampa Bay, Arizona, and Colorado drop to the losers side and are not eliminated. The other 11 opening series are scheduled and unplayed. Winners Round 2 and Losers Round 1 still wait until all 16 opening series are complete.
 
 | Slot | Pairing | Status |
 |---|---|---|
@@ -20,7 +20,7 @@ R1-01, R1-02, R1-03, and R1-04 are complete. Boston beat Tampa Bay 4-3 and Detro
 | R1-02 | #2 San Francisco Giants vs #31 Washington Nationals | Played. Giants 4-1. |
 | R1-03 | #3 Boston Red Sox vs #30 Tampa Bay Rays | Complete. Boston won 4-3. |
 | R1-04 | #4 Detroit Tigers vs #29 Arizona Diamondbacks | Complete. Detroit won 4-2. |
-| R1-05 | #5 St. Louis Cardinals vs #28 Colorado Rockies | Not played |
+| R1-05 | #5 St. Louis Cardinals vs #28 Colorado Rockies | Complete. St. Louis won 4-0. |
 | R1-06 | #6 Chicago Cubs vs #27 Montreal Expos | Not played |
 | R1-07 | #7 Atlanta Braves vs #26 San Diego Padres | Not played |
 | R1-08 | #8 Pittsburgh Pirates vs #25 Toronto Blue Jays | Not played |

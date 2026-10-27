@@ -350,15 +350,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Ozzie Smith (`smithoz01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 2: Stan Musial (`musiast01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 3: Rogers Hornsby (`hornsro01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 4: Albert Pujols (`pujolal01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 5: Jim Edmonds (`edmonji01`) in R1-05-G1; Jim Edmonds (`edmonji01`) in R1-05-G2; Lou Brock (`brocklo01`) in R1-05-G3
-- Slot 6: Joe Medwick (`medwijo01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 7: Enos Slaughter (`slaugen01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 2 later games)
+- Slot 1: Ozzie Smith (`smithoz01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 2: Stan Musial (`musiast01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 3: Rogers Hornsby (`hornsro01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 4: Albert Pujols (`pujolal01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 5: Jim Edmonds (`edmonji01`) in R1-05-G1; Jim Edmonds (`edmonji01`) in R1-05-G2; Lou Brock (`brocklo01`) in R1-05-G3; Lou Brock (`brocklo01`) in R1-05-G4
+- Slot 6: Joe Medwick (`medwijo01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 7: Enos Slaughter (`slaugen01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 3 later games)
 
 ### Substitutes who have batted
 
@@ -369,16 +369,18 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Bob Gibson (`gibsobo01`) started R1-05-G1
 - Dizzy Dean (`deandi01`) started R1-05-G2
 - Adam Wainwright (`wainwad01`) started R1-05-G3
+- Harry Brecheen (`brechha01`) started R1-05-G4
 
 ### Relievers who have appeared
 
 - Jason Isringhausen (`isrinja01`), first seen in R1-05-G1
 - Ryan Helsley (`helslry01`), first seen in R1-05-G1
 - Al Brazle (`brazlal01`), first seen in R1-05-G2
+- Bruce Sutter (`suttebr01`), first seen in R1-05-G4
 
 ### Rotation carry recorded on the series
 
-- R1-05: next start Harry Brecheen
+- R1-05: next start Chris Carpenter
 
 ## 6. Chicago Cubs (CHC)
 
@@ -1456,7 +1458,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ## 28. Colorado Rockies (COL)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 467.4.
+Bracket: losers. Series losses: 1. Full 26 Index: 467.4.
 
 Manager: Bud Black.
 
@@ -1504,21 +1506,22 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Charlie Blackmon (`blackch02`) in R1-05-G1 (same starter in 2 later games)
-- Slot 2: DJ LeMahieu (`lemahdj01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 3: Todd Helton (`heltoto01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 4: Nolan Arenado (`arenano01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 5: Larry Walker (`walkela01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 6: Troy Tulowitzki (`tulowtr01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 7: Matt Holliday (`hollima01`) in R1-05-G1 (same starter in 2 later games)
-- Slot 8: Elias Diaz (`diazel01`) in R1-05-G1; Elias Diaz (`diazel01`) in R1-05-G2; Yorvit Torrealba (`torreyo01`) in R1-05-G3
-- Slot 9: Andres Galarraga (`galaran01`) in R1-05-G1 (same starter in 2 later games)
+- Slot 1: Charlie Blackmon (`blackch02`) in R1-05-G1; Charlie Blackmon (`blackch02`) in R1-05-G2; Charlie Blackmon (`blackch02`) in R1-05-G3; Ellis Burks (`burksel01`) in R1-05-G4
+- Slot 2: DJ LeMahieu (`lemahdj01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 3: Todd Helton (`heltoto01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 4: Nolan Arenado (`arenano01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 5: Larry Walker (`walkela01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 6: Troy Tulowitzki (`tulowtr01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 7: Matt Holliday (`hollima01`) in R1-05-G1 (same starter in 3 later games)
+- Slot 8: Elias Diaz (`diazel01`) in R1-05-G1; Elias Diaz (`diazel01`) in R1-05-G2; Yorvit Torrealba (`torreyo01`) in R1-05-G3; Yorvit Torrealba (`torreyo01`) in R1-05-G4
+- Slot 9: Andres Galarraga (`galaran01`) in R1-05-G1 (same starter in 3 later games)
 
 ### Starts, in the order the games were played
 
 - Ubaldo Jimenez (`jimenub01`) started R1-05-G1
 - Kyle Freeland (`freelky01`) started R1-05-G2
 - Aaron Cook (`cookaa01`) started R1-05-G3
+- German Marquez (`marquge01`) started R1-05-G4
 
 ### Relievers who have appeared
 
@@ -1529,7 +1532,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Rotation carry recorded on the series
 
-- R1-05: next start German Marquez
+- R1-05: next start Jhoulys Chacin
 
 ## 29. Arizona Diamondbacks (ARI)
 

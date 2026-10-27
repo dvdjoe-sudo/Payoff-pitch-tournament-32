@@ -17,12 +17,12 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
+| Rogers Hornsby | St. Louis Cardinals | 24.5 | 12 | 6 | 5 | 1 |
 | Charlie Gehringer | Detroit Tigers | 24.0 | 14 | 3 | 3 | 1 |
 | Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
 | Jason Bartlett | Tampa Bay Rays | 24.0 | 14 | 4 | 4 | 1 |
 | David Ortiz | Boston Red Sox | 23.5 | 14 | 4 | 4 | 2 |
-| Ketel Marte | Arizona Diamondbacks | 22.5 | 16 | 3 | 4 | 2 |
-| Yogi Berra | New York Yankees | 20.5 | 11 | 4 | 4 | 2 |
+| Albert Pujols | St. Louis Cardinals | 23.0 | 12 | 5 | 5 | 1 |
 
 ## Cy Young
 
@@ -60,10 +60,10 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
+| Ryan Helsley | St. Louis Cardinals | 8.6 | 1 | 2.1 | 1 | 1 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
 | Chad Cordero | Washington Nationals | 7.4 | 1 | 1.0 | 1 | 0 |
 | Mariano Rivera | New York Yankees | 7.4 | 1 | 1.0 | 1 | 0 |
 | Pete Fairbanks | Tampa Bay Rays | 7.1 | 1 | 2.1 | 1 | 2 |
 | Jake McGee | Tampa Bay Rays | 6.9 | 0 | 2.2 | 4 | 0 |
-| Ryan Helsley | St. Louis Cardinals | 6.8 | 1 | 1.2 | 0 | 1 |
