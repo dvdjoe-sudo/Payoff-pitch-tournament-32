@@ -573,6 +573,7 @@ def build():
     apply_rays_roster_amendment(cards, rosters)
     apply_nationals_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
+    retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
 
 
@@ -607,6 +608,44 @@ def retain_authorized_hitters(cards):
         entry["peak_bat_162"] = old.get("peak_bat_162")
         entry.pop("conversion_status", None)
 
+
+
+# Baltimore, Cleveland, the White Sox, and Houston had no set-file
+# cards. The sandbox build wrote their bodies from franchise seasons.
+# A full rebuild starts from the set files, so it has to copy those
+# bodies and the roster rows back. A game import never reaches this path.
+EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU")
+
+
+def retain_empty_team_cards(cards, rosters):
+    cards_path = os.path.join(ROOT, "data", "cards.json")
+    rosters_path = os.path.join(ROOT, "data", "rosters.json")
+    if not os.path.exists(cards_path) or not os.path.exists(rosters_path):
+        return
+    old_cards = load_json(cards_path)
+    old_rosters = load_json(rosters_path)
+    for code in EMPTY_TEAM_CODES:
+        old_roster = old_rosters.get(code) or {}
+        players = old_roster.get("players") or []
+        if not players:
+            continue
+        rosters[code] = old_roster
+        for player in players:
+            key = "%s|%s" % (code, player["id"])
+            previous = old_cards.get(key) or {}
+            playable = (previous.get("card_bat") or {}).get("sections") or (
+                previous.get("card_pit") or {}).get("table_2d6")
+            if not playable:
+                continue
+            entry = cards.get(key)
+            if entry is None:
+                cards[key] = previous
+                continue
+            for field in ("card_bat", "card_pit", "peak_bat", "peak_bat_162",
+                          "peak_pit", "peak_pit_162", "spots", "name"):
+                if previous.get(field) is not None:
+                    entry[field] = previous[field]
+            entry.pop("conversion_status", None)
 
 
 def apply_owner_roster_amendments(cards, rosters):
