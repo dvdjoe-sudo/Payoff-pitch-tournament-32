@@ -1721,6 +1721,7 @@ Recorded on that roster and not yet in a box score:
 - Ozuna (OF4)
 - Lee (1B/POWER)
 - Fernandez
+- Juan Pierre (CF/PR)
 
 ### Approved active roster amendment (2026-10-26)
 
