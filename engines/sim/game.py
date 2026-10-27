@@ -46,7 +46,15 @@ from book import (
     wp_hit,
 )
 from charts import PARKS
-from fac import Deck, FacRolls, parse_err_cell, parse_hit_cell, parse_out_cell, parse_runner_line
+from fac import (
+    WP_READING,
+    Deck,
+    FacRolls,
+    parse_err_cell,
+    parse_hit_cell,
+    parse_out_cell,
+    parse_runner_line,
+)
 from rare import lookup as rare_lookup
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -224,6 +232,16 @@ class Game:
             self.deck = None
             self.dice = self.plain
         self.fac_result_card = None
+        self.wp_seen = 0
+        self.wp_fired = 0
+        self.wp_miss = 0
+        self.wp_empty = 0
+        self.wp_no_rating = 0
+        self.wp_unmarked = 0
+        self._wp_reroll_gap_said = False
+        self._in_wild_reroll = False
+        if self.deck:
+            self.deck.on_draw = self._on_fac_draw
         self.park = park_for(home["code"])
         if self.park is None:
             raise SystemExit("no ballpark card for " + home["code"])
@@ -323,9 +341,7 @@ class Game:
             self.say(
                 "Fast Action Cards replace the dice (pages 12-15). The deck is the 256 cards on rulebook pages 40-71. The 1986 season card PDF has no FAC sheets."
             )
-            self.gap(
-                "WP? is printed beside the 1d6 on some cards. Pages 12-15 do not say what it means. It is not applied."
-            )
+            self.gap(WP_READING)
             self.gap(
                 "Three cards say to use the previous card's 1d6 (1-3 out, check the runner; 4-6 safe, check the fielder). Their HOME line is only a position letter, so it is not read as a play."
             )
@@ -377,6 +393,14 @@ class Game:
             self.inning += 1
         if self.postponed:
             self.say("Postponed. The line is not a finished game.")
+        if self.deck:
+            self.say(
+                "WP? drawn %d. Fired %d. Missed the rating %d. Bases empty %d. No WP rating %d. Page-10 wild pitches on a card with no WP? mark %d."
+                % (
+                    self.wp_seen, self.wp_fired, self.wp_miss,
+                    self.wp_empty, self.wp_no_rating, self.wp_unmarked,
+                )
+            )
         self.say("Final %s %d, %s %d." % (
             self.away["code"], self.score[self.away["code"]],
             self.home["code"], self.score[self.home["code"]],
@@ -661,28 +685,122 @@ class Game:
                 self._runners_advance(1)
                 self._record_out(batter, "SH", "Fielder handles the bunt. Treated as SH (page 19).")
 
+    def _on_fac_draw(self, card, purpose):
+        """A drawn WP? card that is not the at-bat percentile. Page 10."""
+        if not card.get("wp"):
+            return
+        if purpose == "batter":
+            return
+        if purpose == "pct" and self._in_wild_reroll:
+            return
+        pitcher = self.pitcher[self.fielding["code"]]["player"]
+        if self._wp_classify(card, pitcher) != "hit":
+            return
+        self._runners_advance(1)
+        if self._wp_reroll_gap_said:
+            return
+        self._wp_reroll_gap_said = True
+        self.gap(
+            "Page 10 re-rolls the percentile after a wild pitch so that roll can resolve the at-bat. This WP? card was drawn for %s, not as that at-bat percentile, so no new at-bat percentile is drawn. The card is still used for %s. Uncertain."
+            % (purpose, purpose)
+        )
+
+    def _marked_wp_card(self, pct):
+        card = self.deck.last if self.deck else None
+        if not card or not card.get("wp") or card.get("pct") != pct:
+            return None
+        return card
+
+    def _wp_classify(self, card, pitcher, second=False):
+        """Count one WP? card. Does not move runners. Page 10."""
+        self.wp_seen += 1
+        pct = card["pct"]
+        where = "p%d r%d c%d" % (card["page"], card["row"], card["col"])
+        wp = (pitcher.get("addendum") or {}).get("wp")
+        if not any(self.bases):
+            self.wp_empty += 1
+            self.say(
+                "FAC %s WP? percentile %02d. Bases are empty, so page 10 does not call a wild pitch."
+                % (where, pct)
+            )
+            return "empty"
+        if not wp:
+            self.wp_no_rating += 1
+            self.say(
+                "FAC %s WP? percentile %02d. %s has no WP rating. Page 10 says a wild pitch then comes only from the Rare Play charts."
+                % (where, pct, pitcher["name"])
+            )
+            return "no-rating"
+        if not wp_hit(wp, pct):
+            self.wp_miss += 1
+            self.say(
+                "FAC %s WP? percentile %02d is outside %s's WP rating %s. No wild pitch (page 10)."
+                % (where, pct, pitcher["name"], wp)
+            )
+            return "miss"
+        self.wp_fired += 1
+        which = "Second wild pitch" if second else "Wild pitch"
+        self.say(
+            "FAC %s WP? percentile %02d is inside %s's WP rating %s. %s. Runners advance 1 (page 10)."
+            % (where, pct, pitcher["name"], wp, which)
+        )
+        return "hit"
+
     def _wild_pitch(self, pitcher, pct):
         """Return the percentile that resolves the at-bat. Page 10."""
+        marked = self._marked_wp_card(pct)
+        if marked:
+            if self._wp_classify(marked, pitcher) != "hit":
+                return pct
+            self._runners_advance(1)
+            if self.outs >= 3:
+                return pct
+            return self._wild_reroll(pitcher)
         if not any(self.bases):
             return pct
         wp = (pitcher["addendum"] or {}).get("wp")
-        if wp is None:
+        if not wp or not wp_hit(wp, pct):
             return pct
-        if not wp_hit(wp, pct):
-            return pct
+        self.wp_unmarked += 1
         self.say("Wild pitch on percentile %02d. Rating %s. Runners advance 1 (page 10)." % (pct, wp))
         self._runners_advance(1)
         if self.outs >= 3:
             return pct
-        pct = self.dice.pct()
+        return self._wild_reroll(pitcher)
+
+    def _wild_reroll(self, pitcher):
+        """Page 10. The re-roll resolves the at-bat. A second hit advances again."""
+        self._in_wild_reroll = True
+        try:
+            pct = self.dice.pct()
+        finally:
+            self._in_wild_reroll = False
+        rolls = ", ".join(self.dice.take())
         if self.deck:
             self.fac_result_card = self.deck.last
-        self.say("Wild-pitch re-roll percentile %02d. Rolls %s." % (pct, ", ".join(self.dice.take())))
+        self.say("Wild-pitch re-roll percentile %02d. Rolls %s." % (pct, rolls))
+        wp = (pitcher["addendum"] or {}).get("wp")
+        marked = self._marked_wp_card(pct)
+        kind = None
+        if marked and any(self.bases):
+            kind = self._wp_classify(marked, pitcher, second=True)
+        elif marked:
+            self.wp_seen += 1
+            self.wp_empty += 1
+            self.say(
+                "FAC p%d r%d c%d WP? on the wild-pitch re-roll. Bases are empty, so the mark does not add a wild pitch (page 10)."
+                % (marked["page"], marked["row"], marked["col"])
+            )
         if wp_hit(wp, pct):
-            self.say("Second wild pitch. Runners advance 1 more. This same roll resolves the at-bat (page 10).")
+            if kind != "hit":
+                if not marked:
+                    self.wp_unmarked += 1
+                self.say("Second wild pitch. Runners advance 1 more. This same roll resolves the at-bat (page 10).")
             self._runners_advance(1)
-        else:
+        elif kind is None:
             self.say("The re-roll is outside the wild-pitch range. Runners hold. This roll resolves the at-bat (page 10).")
+        else:
+            self.say("This same roll resolves the at-bat (page 10).")
         return pct
 
     def _want_hit_and_run(self, batter):
@@ -2454,6 +2572,14 @@ class Game:
             "pitching": self.pitch_box,
             "options": self.opts,
             "postponed": self.postponed,
+            "wp": {
+                "seen": self.wp_seen,
+                "fired": self.wp_fired,
+                "miss": self.wp_miss,
+                "empty": self.wp_empty,
+                "no_rating": self.wp_no_rating,
+                "unmarked": self.wp_unmarked,
+            },
         }
 
 

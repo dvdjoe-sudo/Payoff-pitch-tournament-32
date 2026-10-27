@@ -692,7 +692,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -1954,7 +1954,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -2856,7 +2856,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -4118,7 +4118,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -4750,7 +4750,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -6098,7 +6098,7 @@
    },
    "home": "3B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -6550,7 +6550,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -6732,7 +6732,7 @@
    },
    "home": "3B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -7094,7 +7094,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -7636,7 +7636,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -9978,7 +9978,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -10160,7 +10160,7 @@
    },
    "home": "3B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -10342,7 +10342,7 @@
    },
    "home": "1B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -11694,7 +11694,7 @@
    },
    "home": "1B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -12146,7 +12146,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -12598,7 +12598,7 @@
    },
    "home": "1B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -12690,7 +12690,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -13772,7 +13772,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -13954,7 +13954,7 @@
    },
    "home": "1B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -18092,7 +18092,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -18364,7 +18364,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -19802,7 +19802,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -20254,7 +20254,7 @@
    },
    "home": "3B HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -20796,7 +20796,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -21158,7 +21158,7 @@
    },
    "home": "C HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",
@@ -22780,7 +22780,7 @@
    },
    "home": "P HOME Out",
    "uncertain": [
-    "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch or a prompt to check the card's percentile against the pitcher's WP rating. This game checks that percentile against the rating on page 10. It is not treated as an automatic wild pitch. Uncertain."
    ],
    "raw": [
     "2d6 % dice",

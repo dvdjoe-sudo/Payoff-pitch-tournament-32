@@ -322,7 +322,11 @@ def sample_game_stays_out_of_the_tournament():
     assert report["postponed"] is False
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
     assert report["pitching"]["TOR|stiebda01"]["outs"] == 21
+    assert report["wp"] == {
+        "seen": 11, "fired": 0, "miss": 7, "empty": 4, "no_rating": 0, "unmarked": 0,
+    }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
+    assert any("WP? drawn 11. Fired 0." in line for line in report["log"])
     blob = subprocess.check_output(["git", "hash-object", "tournament_results.json"], cwd=ROOT, text=True).strip()
     assert blob == "c355ca75cf71d179e8d2fa4c01a8d8756d5e58c4"
     diff = subprocess.check_output(["git", "diff", "--", "sw.js"], cwd=ROOT, text=True)
@@ -380,6 +384,107 @@ def fac_deck_and_scripted_plays():
     assert any("does not say how to turn 6, 7, or 8" in gap for gap in found.gaps)
 
 
+def _fac_index(cards, page, row, col):
+    for index, card in enumerate(cards):
+        if card["page"] == page and card["row"] == row and card["col"] == col:
+            return index
+    raise AssertionError("no card p%s r%s c%s" % (page, row, col))
+
+
+def wp_mark_uses_the_page_10_rating():
+    from fac import WP_READING, load_deck
+    cards = load_deck()
+    marked = [card for card in cards if card["wp"]]
+    assert len(marked) == 26
+    assert all(WP_READING in card["uncertain"] for card in marked)
+    assert all(30 <= card["pct"] <= 39 for card in marked)
+    hit = _fac_index(cards, 49, 0, 0)
+    assert cards[hit]["wp"] is True and cards[hit]["pct"] == 30
+    miss = _fac_index(cards, 43, 1, 3)
+    assert cards[miss]["wp"] is True and cards[miss]["pct"] == 36
+    other = next(
+        index for index, card in enumerate(cards)
+        if not card["wp"] and card["pct"] not in range(30, 33) and card["pct"] != 0
+    )
+    pedro = lambda found: found.pitcher["BOS"]["player"]
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = [hit]
+    found.deck.pos = 0
+    found.bases = [runner("first"), None, None]
+    found.deck.draw("advance")
+    assert found.bases[1]["id"] == "first"
+    assert found.bases[0] is None
+    assert found.score["TOR"] == 0
+    assert found.wp_fired == 1 and found.wp_seen == 1
+    assert found.deck.pos == 1
+    assert any("Page 10 re-rolls the percentile" in gap for gap in found.gaps)
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = [hit]
+    found.deck.pos = 0
+    found.deck.draw("advance")
+    assert found.bases == [None, None, None]
+    assert found.wp_empty == 1 and found.wp_fired == 0
+    assert any("Bases are empty" in line for line in found.log)
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = [miss]
+    found.deck.pos = 0
+    found.bases = [runner("first"), None, None]
+    found.deck.draw("steal")
+    assert found.wp_miss == 1 and found.wp_fired == 0
+    assert found.bases[0]["id"] == "first"
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    original = pedro(found)
+    clone = dict(original)
+    clone["addendum"] = dict(original.get("addendum") or {})
+    clone["addendum"]["wp"] = None
+    found.pitcher["BOS"]["player"] = clone
+    found.deck.order = [hit]
+    found.deck.pos = 0
+    found.bases = [runner("first"), None, None]
+    found.deck.draw("bunt")
+    assert found.wp_no_rating == 1 and found.wp_fired == 0
+    assert found.bases[0]["id"] == "first"
+    assert any("Rare Play charts" in line for line in found.log)
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = [hit, other]
+    found.deck.pos = 0
+    found.bases = [runner("first"), None, None]
+    card = found.deck.draw("batter")
+    assert found.wp_seen == 0
+    pct = found._wild_pitch(pedro(found), card["pct"])
+    assert pct == cards[other]["pct"]
+    assert found.bases[1]["id"] == "first"
+    assert found.wp_fired == 1 and found.wp_seen == 1
+    assert found.deck.pos == 2
+    assert any("Wild-pitch re-roll" in line for line in found.log)
+
+    both = [index for index, card in enumerate(cards) if card["wp"] and card["pct"] == 30]
+    assert len(both) >= 2
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = both[:2]
+    found.deck.pos = 0
+    found.bases = [runner("first"), None, None]
+    card = found.deck.draw("batter")
+    found._wild_pitch(pedro(found), card["pct"])
+    assert found.bases[2]["id"] == "first"
+    assert found.score["TOR"] == 0
+    assert found.wp_fired == 2
+
+    assert not any(not card["wp"] and 30 <= card["pct"] <= 39 for card in cards)
+    found = game()
+    found.bases = [runner("first"), None, None]
+    feed(found, [4, 4])
+    pct = found._wild_pitch(found.pitcher["BOS"]["player"], 30)
+    assert pct == 44
+    assert found.wp_fired == 0 and found.wp_unmarked == 1
+    assert found.bases[1]["id"] == "first"
+
+
 if __name__ == "__main__":
     chart_faces()
     basic_running_and_walks()
@@ -388,5 +493,6 @@ if __name__ == "__main__":
     hit_and_run_advanced_and_infield()
     roster_rules_and_extra_innings()
     fac_deck_and_scripted_plays()
+    wp_mark_uses_the_page_10_rating()
     sample_game_stays_out_of_the_tournament()
     print("game tests passed")

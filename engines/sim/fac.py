@@ -95,6 +95,7 @@ class Deck:
         self.last = None
         self.trace = []
         self.full_innings = 0
+        self.on_draw = None
 
     def note_full_inning(self):
         """Page 12 recommends a shuffle after every three full innings."""
@@ -125,6 +126,8 @@ class Deck:
                 card["d6_2"], card["d6_1"], mark, card["pct"],
             )
         )
+        if self.on_draw:
+            self.on_draw(card, purpose)
         return card
 
     def take(self):
@@ -146,6 +149,14 @@ class Deck:
         """Rightmost percentile digit. A one-digit percentile is used whole."""
         card = self.draw(purpose)
         return card["pct"] % 10
+
+
+WP_READING = (
+    "WP? means wild pitch. Pages 12-15 do not say whether the mark is itself a wild pitch "
+    "or a prompt to check the card's percentile against the pitcher's WP rating. "
+    "This game checks that percentile against the rating on page 10. "
+    "It is not treated as an automatic wild pitch. Uncertain."
+)
 
 
 def star_bases(token):
@@ -263,9 +274,7 @@ def _card(page, row, col, x0, words):
         d6_1 = int(mid[0][4])
     wp = any(w[4] == "WP?" for w in kept)
     if wp:
-        uncertain.append(
-            "WP? is printed beside the 1d6. Pages 12-15 do not say what it means, so it is not applied."
-        )
+        uncertain.append(WP_READING)
     sections = _sections(kept, x0, uncertain)
     return {
         "page": page,
