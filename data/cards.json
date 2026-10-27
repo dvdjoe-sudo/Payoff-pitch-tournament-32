@@ -3833,7 +3833,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -3944,9 +3945,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -5448,7 +5449,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -5559,7 +5561,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "RF",
      "range": "C"
     }
@@ -5921,7 +5923,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -6032,7 +6035,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -7560,7 +7563,8 @@
    "arm": "Average",
    "bats": "S",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -8277,7 +8281,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -8388,9 +8393,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -8826,7 +8831,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -8937,7 +8943,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -10848,7 +10854,8 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -10959,7 +10966,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -11186,7 +11193,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -11297,7 +11305,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -13314,7 +13322,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -13427,7 +13436,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -13759,7 +13768,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -13872,7 +13882,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -14353,7 +14363,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -14464,9 +14475,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -14799,7 +14810,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -15288,7 +15300,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -15401,7 +15414,7 @@
      "arm": 3,
      "e": 4,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -15626,7 +15639,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -15737,9 +15751,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -15970,7 +15984,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -16083,7 +16098,7 @@
      "arm": 6,
      "e": 4,
      "pos": "UT",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -16622,7 +16637,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -16733,7 +16749,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -17282,7 +17298,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -17393,9 +17410,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "DH",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -17614,7 +17631,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -17727,7 +17745,7 @@
      "arm": 6,
      "e": 4,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -17958,7 +17976,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -18069,7 +18088,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "IF",
      "range": "C"
     }
@@ -18299,7 +18318,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -18412,7 +18432,7 @@
      "arm": 6,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -18643,7 +18663,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -18981,7 +19002,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -19094,7 +19116,7 @@
      "arm": 6,
      "e": 4,
      "pos": "PH",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -19319,7 +19341,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -19430,7 +19453,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -20107,7 +20130,8 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -20709,7 +20733,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -20822,7 +20847,7 @@
      "arm": 6,
      "e": 4,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -21462,7 +21487,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -21573,9 +21599,9 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -21935,7 +21961,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -22046,7 +22073,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -22306,7 +22333,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -22417,7 +22445,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -24258,7 +24286,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -24371,7 +24400,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -25667,7 +25696,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -25780,7 +25810,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -26725,7 +26755,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -28194,7 +28225,8 @@
    "arm": "Above Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -28569,7 +28601,8 @@
     "years_used": []
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -28913,7 +28946,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -29024,9 +29058,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -30297,7 +30331,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -31086,7 +31121,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -31197,7 +31233,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -32409,7 +32445,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -32520,9 +32557,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -35001,7 +35038,8 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -35339,7 +35377,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -35714,7 +35753,8 @@
     "years_used": []
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -35825,7 +35865,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -38188,7 +38228,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -38301,7 +38342,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -38532,7 +38573,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -38643,7 +38685,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -38873,7 +38915,8 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -38984,7 +39027,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -39426,7 +39469,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -39537,9 +39581,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "PH",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -39770,7 +39814,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -39881,9 +39926,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -40105,7 +40150,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -40216,9 +40262,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 5,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -40658,7 +40704,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -40771,7 +40818,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -41107,7 +41154,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -41218,7 +41266,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -41766,7 +41814,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -42107,7 +42156,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -42218,9 +42268,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -42486,7 +42536,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -42597,9 +42648,9 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -43022,7 +43073,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -43133,7 +43185,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -43360,7 +43412,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -43471,9 +43524,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "DH",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -43739,7 +43792,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -43850,7 +43904,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -44181,7 +44235,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -44294,7 +44349,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -44522,7 +44577,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -44633,7 +44689,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -44863,7 +44919,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -44976,7 +45033,7 @@
      "arm": 6,
      "e": 4,
      "pos": "UT",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -45207,7 +45264,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -45318,7 +45376,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 5,
      "pos": "IF",
      "range": "C"
     }
@@ -46277,7 +46335,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -46390,7 +46449,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -48682,7 +48741,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -48793,9 +48853,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -52753,7 +52813,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -52864,7 +52925,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -53088,7 +53149,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -53199,9 +53261,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -53638,7 +53700,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -53751,7 +53814,7 @@
      "arm": 6,
      "e": 4,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -53979,7 +54042,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -54466,7 +54530,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -54912,7 +54977,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -55023,9 +55089,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "IF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -55256,7 +55322,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -55369,7 +55436,7 @@
      "arm": 6,
      "e": 4,
      "pos": "DH",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -55703,7 +55770,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -55816,7 +55884,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -56041,7 +56109,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -56152,7 +56221,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "PH",
      "range": "C"
     }
@@ -56373,7 +56442,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -56484,9 +56554,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -57021,7 +57091,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -57132,9 +57203,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -57365,7 +57436,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -57842,7 +57914,8 @@
     "years_used": []
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -58288,7 +58361,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -58399,9 +58473,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "1B",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -58623,7 +58697,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -58736,7 +58811,7 @@
      "arm": 6,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -59298,7 +59373,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -59409,7 +59485,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "1B",
      "range": "C"
     }
@@ -59662,7 +59738,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -59773,9 +59850,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -60414,7 +60491,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -60787,7 +60865,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -60900,7 +60979,7 @@
      "arm": 6,
      "e": 4,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -61160,7 +61239,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -61271,9 +61351,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "OF",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -61504,7 +61584,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -61615,7 +61696,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -61874,7 +61955,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -61985,7 +62067,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -63058,7 +63140,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -65309,7 +65392,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -65422,7 +65506,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -66148,7 +66232,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -66259,7 +66344,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "LF",
      "range": "C"
     }
@@ -66485,7 +66570,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -66596,7 +66682,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -66829,7 +66915,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -66940,9 +67027,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "DH",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -67205,7 +67292,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -67549,7 +67637,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -67660,7 +67749,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -67890,7 +67979,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -68001,9 +68091,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -68615,7 +68705,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -68959,7 +69050,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -69070,9 +69162,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -69297,7 +69389,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -69641,7 +69734,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -69752,9 +69846,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -70077,7 +70171,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -70188,7 +70283,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "UT",
      "range": "C"
     }
@@ -70737,7 +70832,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -70848,7 +70944,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "IF",
      "range": "C"
     }
@@ -71711,7 +71807,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -71822,9 +71919,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -72255,7 +72352,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -72368,7 +72466,7 @@
      "arm": 6,
      "e": 4,
      "pos": "PH",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -72704,7 +72802,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -72815,9 +72914,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -73048,7 +73147,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -73159,9 +73259,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -73490,7 +73590,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -73603,7 +73704,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -74352,7 +74453,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -74463,9 +74565,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -74693,7 +74795,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -74804,9 +74907,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "DH",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -75037,7 +75140,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -75148,7 +75252,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -75590,7 +75694,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -75703,7 +75808,7 @@
      "arm": 6,
      "e": 4,
      "pos": "RF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -75931,7 +76036,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -76042,9 +76148,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "IF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -76313,7 +76419,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -76424,9 +76531,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -76687,7 +76794,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -76798,9 +76906,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -77346,7 +77454,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -77457,9 +77566,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "1B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -77684,7 +77793,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -77795,9 +77905,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "OF",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -78028,7 +78138,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -78139,7 +78250,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -78369,7 +78480,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -78482,7 +78594,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -78710,7 +78822,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -78821,7 +78934,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -79054,7 +79167,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -79167,7 +79281,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -79433,7 +79547,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -79544,9 +79659,9 @@
    "positions": [
     {
      "arm": 1,
-     "e": 4,
+     "e": 2,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -79762,7 +79877,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -79873,7 +79989,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -80299,7 +80415,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -80412,7 +80529,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -80643,7 +80760,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -80754,7 +80872,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "UT",
      "range": "C"
     }
@@ -81089,7 +81207,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -81200,7 +81319,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -81433,7 +81552,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -81544,7 +81664,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -81768,7 +81888,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -81879,7 +82000,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -82109,7 +82230,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -82220,7 +82342,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "RF",
      "range": "C"
     }
@@ -82550,7 +82672,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -82661,9 +82784,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -83033,7 +83156,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -83144,9 +83268,9 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 2,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -84127,7 +84251,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -84238,9 +84363,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -84567,7 +84692,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -84680,7 +84806,7 @@
      "arm": 6,
      "e": 4,
      "pos": "IF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -85014,7 +85140,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -85127,7 +85254,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -87183,7 +87310,8 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -87975,7 +88103,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -88086,7 +88215,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -90343,7 +90472,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -90456,7 +90586,7 @@
      "arm": 6,
      "e": 4,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -91129,7 +91259,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -91240,9 +91371,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -91473,7 +91604,8 @@
    "arm": "Above Average",
    "bats": "S",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -91584,9 +91716,9 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -92337,7 +92469,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -92448,7 +92581,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -92678,7 +92811,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -92789,7 +92923,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -93124,7 +93258,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -93235,9 +93370,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -93567,7 +93702,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -93678,9 +93814,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -93945,7 +94081,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -94387,7 +94524,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -94498,7 +94636,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -94731,7 +94869,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -94842,7 +94981,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "UT",
      "range": "C"
     }
@@ -95071,7 +95210,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -95511,7 +95651,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -95622,9 +95763,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -95850,7 +95991,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -95961,7 +96103,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -96335,7 +96477,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -96446,9 +96589,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -96775,7 +96918,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -96886,9 +97030,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "DH",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -97112,7 +97256,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -97223,9 +97368,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -97453,7 +97598,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -97564,7 +97710,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "IF",
      "range": "C"
     }
@@ -97902,7 +98048,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -98015,7 +98162,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -98241,7 +98388,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -98788,7 +98936,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -98901,7 +99050,7 @@
      "arm": 6,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -99169,7 +99318,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -99508,7 +99658,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -99619,9 +99770,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -99849,7 +100000,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -99960,7 +100112,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "DH",
      "range": "C"
     }
@@ -100295,7 +100447,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -100406,9 +100559,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -100952,7 +101105,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -101296,7 +101450,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -101407,7 +101562,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -101640,7 +101795,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -101753,7 +101909,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -102292,7 +102448,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -102403,7 +102560,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -102776,7 +102933,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -102887,9 +103045,9 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -103117,7 +103275,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -103230,7 +103389,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -103458,7 +103617,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -103569,7 +103729,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -103999,7 +104159,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -104112,7 +104273,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -104337,7 +104498,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -104448,7 +104610,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -104783,7 +104945,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -104894,9 +105057,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -105162,7 +105325,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -105273,7 +105437,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -105611,7 +105775,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -105724,7 +105889,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -105955,7 +106120,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -106045,7 +106211,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "2B",
      "range": "C"
     }
@@ -106278,7 +106444,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -106389,9 +106556,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -106725,7 +106892,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -107069,7 +107237,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -107180,9 +107349,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -107413,7 +107582,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -107524,7 +107694,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -107961,7 +108131,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -108072,9 +108243,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "DH",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -108440,7 +108611,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -108553,7 +108725,7 @@
      "arm": 3,
      "e": 4,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -108781,7 +108953,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -109227,7 +109400,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -109338,7 +109512,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -109673,7 +109847,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -109786,7 +109961,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -110017,7 +110192,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -110128,9 +110304,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -110571,7 +110747,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -110684,7 +110861,7 @@
      "arm": 6,
      "e": 4,
      "pos": "UT",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -111119,7 +111296,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -111230,9 +111408,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -111943,7 +112121,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -113847,7 +114026,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -113958,7 +114138,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -115641,7 +115821,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -117114,7 +117295,8 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -117225,7 +117407,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -117558,7 +117740,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -117899,7 +118082,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -118010,7 +118194,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "DH",
      "range": "C"
     }
@@ -118237,7 +118421,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -118350,7 +118535,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -118719,7 +118904,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -119579,7 +119765,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -119920,7 +120107,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -120031,7 +120219,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "3B",
      "range": "C"
     }
@@ -120261,7 +120449,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -120374,7 +120563,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -120815,7 +121004,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -121264,7 +121454,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -121375,7 +121566,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "UT",
      "range": "C"
     }
@@ -121608,7 +121799,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -121719,9 +121911,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "UT",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -122091,7 +122283,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -122202,7 +122395,7 @@
    "positions": [
     {
      "arm": 4,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -122429,7 +122622,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -122540,7 +122734,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "IF",
      "range": "C"
     }
@@ -122875,7 +123069,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -122986,7 +123181,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -123314,7 +123509,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -123425,9 +123621,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -123655,7 +123851,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -123766,7 +123963,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -124034,7 +124231,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -124145,7 +124343,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -124375,7 +124573,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -124488,7 +124687,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -124821,7 +125020,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -124932,7 +125132,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -125477,7 +125677,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -125588,9 +125789,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -125819,7 +126020,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -125930,7 +126132,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "OF",
      "range": "C"
     }
@@ -126154,7 +126356,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -126265,7 +126468,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -126498,7 +126701,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -126821,7 +127025,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -126932,9 +127137,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "IF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -127269,7 +127474,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -127380,9 +127586,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -127610,7 +127816,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -127989,7 +128196,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -128100,9 +128308,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 2,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -128435,7 +128643,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -128546,7 +128755,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "2B",
      "range": "C"
     }
@@ -129194,7 +129403,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -129305,7 +129515,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -129634,7 +129844,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -129745,9 +129956,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "DH",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -130068,7 +130279,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -130181,7 +130393,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -130515,7 +130727,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -130626,7 +130839,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -130958,7 +131171,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -131069,7 +131283,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "IF",
      "range": "C"
     }
@@ -131302,7 +131516,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -131413,7 +131628,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "DH",
      "range": "C"
     }
@@ -131643,7 +131858,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -131756,7 +131972,7 @@
      "arm": 6,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -132189,7 +132405,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -132638,7 +132855,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -132749,9 +132967,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -133401,7 +133619,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -133512,7 +133731,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -133739,7 +133958,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -133850,7 +134070,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -134062,7 +134282,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -134173,9 +134394,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -134503,7 +134724,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -134614,9 +134836,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "UT",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -134831,7 +135053,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -134942,7 +135165,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "UT",
      "range": "C"
     }
@@ -135175,7 +135398,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -135288,7 +135512,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -135557,7 +135781,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -135668,9 +135893,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -136006,7 +136231,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -136117,9 +136343,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -136383,7 +136609,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -136494,9 +136721,9 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 3,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -136829,7 +137056,8 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -136940,7 +137168,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -137722,7 +137950,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -137835,7 +138064,7 @@
      "arm": 6,
      "e": 4,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -138204,7 +138433,8 @@
     "years_used": []
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -138999,7 +139229,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -139110,7 +139341,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -139343,7 +139574,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -139454,7 +139686,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "1B",
      "range": "C"
     }
@@ -139687,7 +139919,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -140134,7 +140367,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -140245,9 +140479,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -140472,7 +140706,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -140585,7 +140820,7 @@
      "arm": 7,
      "e": 4,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -140813,7 +141048,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -140924,9 +141160,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -141846,7 +142082,8 @@
     "years_used": []
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -141957,7 +142194,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 2,
      "pos": "C",
      "range": "C"
     }
@@ -142293,7 +142530,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -142399,7 +142637,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -142630,7 +142868,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -142743,7 +142982,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -142974,7 +143213,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -143085,7 +143325,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
      "range": "C"
     }
@@ -143526,7 +143766,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -143637,7 +143878,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -143969,7 +144210,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -144080,7 +144322,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "1B",
      "range": "C"
     }
@@ -144307,7 +144549,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -144418,9 +144661,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -144651,7 +144894,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -144755,7 +144999,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 5,
      "pos": "SS",
      "range": "C"
     }
@@ -145132,7 +145376,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -145243,7 +145488,7 @@
    "positions": [
     {
      "arm": 3,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -145476,7 +145721,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -145589,7 +145835,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -146030,7 +146276,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -146143,7 +146390,7 @@
      "arm": 6,
      "e": 4,
      "pos": "CF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -146374,7 +146621,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -146485,7 +146733,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -146712,7 +146960,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -146823,7 +147072,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "DH",
      "range": "C"
     }
@@ -147056,7 +147305,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -147167,9 +147417,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -147839,7 +148089,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -148395,7 +148646,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -148508,7 +148760,7 @@
      "arm": 6,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -148739,7 +148991,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -148850,7 +149103,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 5,
      "pos": "SS",
      "range": "C"
     }
@@ -149185,7 +149438,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -149296,9 +149550,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -149631,7 +149885,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -149742,7 +149997,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "2B",
      "range": "C"
     }
@@ -150081,7 +150336,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -150194,7 +150450,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -150532,7 +150788,8 @@
    "arm": "Average",
    "bats": "S",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -150643,9 +150900,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "CF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -152129,7 +152386,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -152240,9 +152498,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -153799,7 +154057,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -153910,7 +154169,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "RF",
      "range": "C"
     }
@@ -154181,7 +154440,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -154292,7 +154552,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -154622,7 +154882,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -154733,9 +154994,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -155070,7 +155331,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -155181,7 +155443,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -155414,7 +155676,8 @@
    "arm": "Above Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -155525,9 +155788,9 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -156099,7 +156362,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -156212,7 +156476,7 @@
      "arm": 6,
      "e": 4,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -157635,7 +157899,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -157739,7 +158004,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "OF",
      "range": "C"
     }
@@ -157969,7 +158234,8 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -158080,7 +158346,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -160559,7 +160825,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -160670,9 +160937,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 2,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -161678,7 +161945,8 @@
    "arm": "Above Average",
    "bats": "S",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -161789,7 +162057,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -162055,7 +162323,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -162166,7 +162435,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -162839,7 +163108,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -162952,7 +163222,7 @@
      "arm": 6,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -163174,7 +163444,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -163285,7 +163556,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -163515,7 +163786,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -163628,7 +163900,7 @@
      "arm": 6,
      "e": 4,
      "pos": "OF",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -163859,7 +164131,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -163970,7 +164243,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -164408,7 +164681,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -164519,9 +164793,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "CF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -164859,7 +165133,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -164970,9 +165245,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -165410,7 +165685,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -165521,9 +165797,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "DH",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -166169,7 +166445,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -166282,7 +166559,7 @@
      "arm": 6,
      "e": 4,
      "pos": "1B",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -166648,7 +166925,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -166759,7 +167037,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -166986,7 +167264,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -167097,7 +167376,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "UT",
      "range": "C"
     }
@@ -167433,7 +167712,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -167777,7 +168057,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -167888,9 +168169,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
-     "range": "C"
+     "range": "A"
     }
    ],
    "qa_status": "PASS",
@@ -168221,7 +168502,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -168334,7 +168616,7 @@
      "arm": 6,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -168562,7 +168844,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -168668,7 +168951,7 @@
      "arm": 6,
      "e": 4,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -168934,7 +169217,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -170139,7 +170423,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -170250,7 +170535,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -171215,7 +171500,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -171319,9 +171605,9 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -171577,7 +171863,8 @@
    "arm": "Average",
    "bats": "S",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -171690,7 +171977,7 @@
      "arm": 6,
      "e": 4,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -172180,7 +172467,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -172291,9 +172579,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -174203,7 +174491,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -174676,7 +174965,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -176178,7 +176468,8 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -176289,7 +176580,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "3B",
      "range": "C"
     }
@@ -178349,7 +178640,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -178460,9 +178752,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -179263,7 +179555,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -179376,7 +179669,7 @@
      "arm": 6,
      "e": 4,
      "pos": "LF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -179634,7 +179927,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -179745,7 +180039,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -180013,7 +180307,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -180126,7 +180421,7 @@
      "arm": 2,
      "e": 4,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -180372,7 +180667,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -180485,7 +180781,7 @@
      "arm": 6,
      "e": 4,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -181849,7 +182145,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -181960,9 +182257,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
@@ -184606,7 +184903,8 @@
    "arm": "Below Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -184717,7 +185015,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -185131,7 +185429,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -185242,9 +185541,9 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 2,
      "pos": "C",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",
@@ -185726,7 +186025,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -185837,9 +186137,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "OF",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -186663,7 +186963,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -186776,7 +187077,7 @@
      "arm": 7,
      "e": 4,
      "pos": "3B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "ARCHITECTURE-LIMITED",
@@ -187037,7 +187338,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -187148,7 +187450,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "2B",
      "range": "C"
     }
@@ -189136,7 +189438,8 @@
    "arm": "Average",
    "bats": "S",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -192428,7 +192731,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -192539,7 +192843,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "2B",
      "range": "C"
     }
@@ -192876,7 +193180,8 @@
    "arm": "Below Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -192987,7 +193292,7 @@
    "positions": [
     {
      "arm": 5,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -194675,7 +194980,8 @@
    "arm": "Average",
    "bats": "B",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -194786,7 +195092,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "RF",
      "range": "C"
     }
@@ -195838,7 +196144,8 @@
    "arm": "Above Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -195949,7 +196256,7 @@
    "positions": [
     {
      "arm": 7,
-     "e": 4,
+     "e": 3,
      "pos": "SS",
      "range": "C"
     }
@@ -197652,7 +197959,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -197763,7 +198071,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "RF",
      "range": "C"
     }
@@ -198979,7 +199287,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -199090,7 +199399,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -200896,7 +201205,8 @@
    "arm": "Average",
    "bats": "L",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -201007,7 +201317,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
      "range": "C"
     }
@@ -205219,7 +205529,8 @@
     ]
    },
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -205330,7 +205641,7 @@
    "positions": [
     {
      "arm": 2,
-     "e": 4,
+     "e": 3,
      "pos": "C",
      "range": "C"
     }
@@ -208339,7 +208650,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -208450,7 +208762,7 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "OF",
      "range": "C"
     }
@@ -209138,7 +209450,8 @@
    "arm": "Average",
    "bats": "R",
    "dp": 7,
-   "fielding": "Average",
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
    "out_table": [
     {
      "range": [
@@ -209249,9 +209562,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 2,
      "pos": "1B",
-     "range": "C"
+     "range": "D"
     }
    ],
    "qa_status": "PASS",

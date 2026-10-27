@@ -324,7 +324,7 @@ def sample_game_stays_out_of_the_tournament():
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
     assert report["pitching"]["TOR|stiebda01"]["outs"] == 24
     assert report["wp"] == {
-        "seen": 14, "fired": 0, "miss": 3, "empty": 11, "no_rating": 0, "unmarked": 0,
+        "seen": 14, "fired": 0, "miss": 4, "empty": 10, "no_rating": 0, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
     assert any("WP? drawn 14. Fired 0." in line for line in report["log"])

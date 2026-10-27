@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Derived hitter range and error
+
+313 hitter cards that carried the engine Average fielding default (range C, error 4) now carry range and error derived from franchise-window fielding stats (Lahman; 2026 from the MLB Stats API), calibrated per position to the printed 1986 cards (`scripts/derive_hitter_fielding.py`, `engines/sim/hitter_fielding_method.json`). Their fielding label reads Derived. Arms, cards with set-file fielding, 2d6 and result tables, rosters and played results are unchanged. Biggio (HOU, C) and Ohtani (LAA, LAD) keep the default: no usable games at the card position.
+
 ## 2026-10-27 — Sixth-bench cards and derived pitcher ratings
 
 Every rostered player now has a card. **22 cards built** for players added since the last card build (Sisler, Allison, Henderson, Klein, P. Waner, Irvin, Werth, Horner, C. González, D. Allen, Gibson, M. Alou, Mayberry, Carew, Lowell, Oglivie, H. Johnson, Chavez, Beltré, Sierra, G. Carter, and Bobby Shantz with a full pitcher card), with the franchise-window method used for every other built card (`scripts/build_sixth_bench_cards.py`). **Pitcher ratings** missing from the set files are derived from real franchise-window stats and calibrated to the printed 1986 cards (`scripts/derive_pitcher_ratings.py`, `engines/sim/pitcher_rating_method.json`): stamina, Hold, DP, Injury and pickoff for 155 pitchers, WP for 170, and a pitcher FIELDING line for all 353. No 2d6 table, roster, or played result changed. Flags per player: `historical-cards/accuracy/pitcher_ratings.json`.
