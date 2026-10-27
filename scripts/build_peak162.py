@@ -804,6 +804,14 @@ def main() -> None:
             pid = person["id"]
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
+            if club == "BAL" and pid == "sislege01":
+                # Baltimore franchise history includes the St. Louis Browns.
+                # Owner authorized *only* Sisler's Browns seasons, never any
+                # of his time with Washington or the Boston Braves.
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if 1915 <= year <= 1927}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                   if 1915 <= year <= 1927}
             kind = resolve_kind(slot_kind(group, line), batting_seasons, pitching_seasons)
             try:
                 if kind == "hit":
@@ -826,7 +834,10 @@ def main() -> None:
                     unavailable.append((club, line, club_out[line]["reason"]))
                     continue
                 _, chosen, stats, size, total = found
-                text = side_text(team_name, chosen, stats, size, total, kind)
+                peak_team_name = ("St. Louis Browns"
+                                  if club == "BAL" and pid == "sislege01"
+                                  else team_name)
+                text = side_text(peak_team_name, chosen, stats, size, total, kind)
                 if other and show_secondary(kind, other[2] if other_kind == "hit" else stats, stats if other_kind == "hit" else other[2]):
                     if not text.endswith("."):
                         text += "."
@@ -878,6 +889,7 @@ def main() -> None:
         ("OAK", "SP1 Catfish Hunter", "hunteca01"),
         ("MON", "1 Tim Raines LF S 13", "raineti01"),
         ("CWS", "5 Joe Jackson DH", "jacksjo01"),
+        ("BAL", "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)", "sislege01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -895,6 +907,10 @@ def main() -> None:
         raise SystemExit("Lefty Grove peak is outside the Philadelphia Athletics")
     if any(year < 1969 or year > 2004 for year in row("MON", "1 Tim Raines LF S 13")["years"]):
         raise SystemExit("Tim Raines peak is outside the Expos")
+    sisler = row("BAL", "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)")
+    if (not all(1915 <= year <= 1927 for year in sisler["years"])
+            or "Peak 162 with St. Louis Browns" not in sisler["text"]):
+        raise SystemExit("George Sisler's display must use St. Louis Browns years only")
     if min(row("MIN", "SP1 Walter Johnson 1907-1927 (21)")["years"]) > 1960:
         raise SystemExit("Walter Johnson peak did not use the Senators")
     if "Pitching" not in row("LAD", "4 Shohei Ohtani DH L 2")["text"]:

@@ -960,6 +960,19 @@ def check_orioles_roster_amendment(check: Check) -> None:
                  "Baltimore announced roster is synced and limits Sisler to Browns")
     check.expect("BAL|stewasa01" in cards,
                  "Original Sammy Stewart pitcher card remains historical")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["BAL"]
+    sisler_peak = peaks.get("BAT2 George Sisler 1B (St. Louis Browns 1915-1927)") or {}
+    check.expect(sisler_peak.get("lahman_id") == "sislege01"
+                 and sisler_peak.get("years") == [1918, 1919, 1920, 1921, 1922]
+                 and sisler_peak.get("status") == "ok"
+                 and (sisler_peak.get("text") or "").startswith("Peak 162 with St. Louis Browns"),
+                 "George Sisler's Browns-only 1918-1922 franchise peak is active")
+    check.expect("LR/SP6 Sammy Stewart 8" not in peaks,
+                 "Inactive Sammy Stewart removed from current Baltimore Peak 162")
+    peak_builder = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "BAL" and pid == "sislege01"' in peak_builder
+                 and 'if 1915 <= year <= 1927' in peak_builder,
+                 "Future Peak 162 rebuild limits Sisler to St. Louis Browns seasons")
     published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("George Sisler (`sislege01`) joins Baltimore" in published,
                  "Baltimore owner approval appears in published roster")
