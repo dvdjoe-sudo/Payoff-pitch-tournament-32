@@ -8588,9 +8588,15 @@
    },
    "OF2 Joe Carter RF/LF R (Toronto 1991-1997)": {
     "lahman_id": "cartejo01",
-    "status": "unavailable",
-    "text": "Peak stats unavailable",
-    "reason": "Toronto-only 1991-1997 peak awaiting verified Lahman build; no guessed statistics."
+    "status": "ok",
+    "text": "Peak 162 with Toronto Blue Jays (1991–1995): 162 G, 703 PA, 638 AB, 93 R, 168 H, 34 2B, 4 3B, 34 HR, 118 RBI, 14 SB, 45 BB, 108 SO, .263/.314/.488/.802",
+    "years": [
+     1991,
+     1992,
+     1993,
+     1994,
+     1995
+    ]
    },
    "OF4 Lloyd Moseby OF 10": {
     "lahman_id": "mosebll01",

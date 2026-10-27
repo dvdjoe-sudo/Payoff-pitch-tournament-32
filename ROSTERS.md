@@ -1490,7 +1490,7 @@ Joe Carter (`cartejo01`) joins the **Toronto Blue Jays** active 26 as **sixth be
 
 Jim Clancy (`clancji01`) leaves the active bullpen, while his authentic converted pitcher card remains in the historical card archive. The six relief pitchers remain in their previous order: **Tom Henke, Mark Eichhorn, Duane Ward, Roberto Osuna, Scott Downs and Paul Quantrill**. All **nine starting hitters and five rotation pitchers are unchanged**, including **José Bautista starting at DH batting fifth**. Toronto has **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct active players.
 
-All historical cards, prior box scores, completed games, FAC/dice logs and tournament results remain unchanged. Carter's Toronto-only five-year Peak 162 display requires a verified Lahman generator build and his frozen authentic **Hitter v0.5** playable card conversion is pending; no simulated card ratings or stats have been invented.
+All historical cards, prior box scores, completed games, FAC/dice logs and tournament results remain unchanged. Carter's verified Toronto-only **Peak 162** covers **1991–1995** (Lahman): 162 G, 168 H, 34 HR, 118 RBI, 14 SB, .263/.314/.488/.802. His frozen authentic **Hitter v0.5** playable card conversion remains pending; no simulated card ratings were invented.
 
 ## 26. San Diego Padres (SD)
 

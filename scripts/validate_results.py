@@ -1029,10 +1029,10 @@ def check_toronto_roster_amendment(check: Check) -> None:
     peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["TOR"]
     carter_peak = peak.get("OF2 Joe Carter RF/LF R (Toronto 1991-1997)") or {}
     check.expect(carter_peak.get("lahman_id") == "cartejo01"
-                 and (carter_peak.get("status") != "ok"
-                      or (carter_peak.get("years")
-                          and all(1991 <= y <= 1997 for y in carter_peak["years"]))),
-                 "Carter's Peak 162 from Toronto years only or explicitly pending")
+                 and carter_peak.get("status") == "ok"
+                 and carter_peak.get("years") == [1991, 1992, 1993, 1994, 1995]
+                 and carter_peak.get("text", "").startswith("Peak 162 with Toronto Blue Jays"),
+                 "Carter's verified Toronto-only 1991-1995 Peak 162 present")
     check.expect("LR/SP Jim Clancy 9" not in peak,
                  "Inactive Clancy absent from Toronto active Peak 162")
     doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
