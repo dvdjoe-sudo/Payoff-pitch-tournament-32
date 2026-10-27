@@ -610,12 +610,11 @@ def retain_authorized_hitters(cards):
 
 
 
-# These clubs had no set-file cards. The sandbox build wrote franchise
-# card bodies for every code except MIA and NYY, which keep the
-# owner-approved active rosters and any preexisting card, including
-# inactive A.J. Burnett and Mike Stanton, without inventing a body.
-# A game import never reaches this path.
-EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU", "MIA", "NYY", "KC", "LAA", "MIL", "MIN", "NYM", "OAK", "PHI")
+# These clubs had no set-file cards. The sandbox build wrote their
+# bodies from franchise seasons. A full rebuild starts from the set
+# files, so it has to copy those bodies and the roster rows back. A
+# game import never reaches this path.
+EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU", "KC", "LAA", "MIL", "MIN", "NYM", "OAK", "PHI", "SEA", "MIA", "NYY")
 
 
 def retain_empty_team_cards(cards, rosters):
@@ -631,15 +630,6 @@ def retain_empty_team_cards(cards, rosters):
         if not players:
             continue
         rosters[code] = old_roster
-        if code in ("MIA", "NYY"):
-            # Do not replace historical card bodies or generate guesses.
-            # Keep all previous cards for either club, including inactive
-            # A.J. Burnett (MIA) and Mike Stanton (NYY). Rickey Henderson
-            # remains pending a genuine owner-authorized conversion.
-            for key, previous in old_cards.items():
-                if key.startswith(code + "|"):
-                    cards.setdefault(key, previous)
-            continue
         for player in players:
             key = "%s|%s" % (code, player["id"])
             previous = old_cards.get(key) or {}

@@ -1,5 +1,5 @@
 /* Payoff Pitch offline shell. Bump CACHE when a shipped asset must replace a cached copy. */
-var CACHE = "payoff-pitch-v53";
+var CACHE = "payoff-pitch-v54";
 var SHELL = [
   "./",
   "./index.html",
