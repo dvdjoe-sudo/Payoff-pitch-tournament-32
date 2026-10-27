@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Old-method dice refit (sandbox)
+
+The 252 converted-roster cards whose windows did not change now use the same solver as the 215. That is 120 hitters and 132 pitchers, 251 cards, because Babe Ruth is both. Windows, peak lines, fielding, stamina, and the tournament block stay. Hitter dice include doubles and triples in the objective, and a DEFENSE roll uses the rulebook position check. Pitcher charts use the page-39 shift on TOUGH only. The four missing hitters and Elmer Valo's placeholder were not filled. No game result was changed. The per-card comparison is `historical-cards/accuracy/rebuild_252.json`.
+
 ## 2026-10-27 — Window-card dice refit
 
 The 215 cards whose peak window changed have new dice and pitching charts. Doubles and triples follow the 1986 card shapes, and a DEFENSE roll is a position check against a neutral fielder and the 1986 park charts rather than an automatic out. A reached-on-error is an at-bat and not a hit. Fielding, stamina, and peak lines stay as they were. A game import still refreshes only the tournament block on each card. The service worker cache is payoff-pitch-v47. No game result was changed.
