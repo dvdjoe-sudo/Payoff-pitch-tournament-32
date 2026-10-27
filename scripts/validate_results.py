@@ -1020,13 +1020,13 @@ def check_mets_roster_amendment(check: Check) -> None:
                  "Howard Johnson genuine card exists or remains explicitly pending")
     peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["NYM"]
     hojo_peak = peaks.get("BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)") or {}
-    if hojo_peak:
-        check.expect(hojo_peak.get("lahman_id") == "johnsho01"
-                     and hojo_peak.get("status") == "ok"
-                     and all(1985 <= y <= 1993 for y in hojo_peak.get("years", [])),
-                     "Howard Johnson Peak 162 restricted to Mets 1985–1993")
-        check.expect("LR/SP6 Sid Fernandez L" not in peaks,
-                     "Inactive Sid Fernandez removed from active Mets Peak 162")
+    check.expect(hojo_peak.get("lahman_id") == "johnsho01"
+                 and hojo_peak.get("status") == "ok"
+                 and hojo_peak.get("years") == [1987, 1988, 1989, 1990, 1991]
+                 and (hojo_peak.get("text") or "").startswith("Peak 162 with New York Mets"),
+                 "Howard Johnson genuine Mets-only 1987–1991 five-year peak present")
+    check.expect("LR/SP6 Sid Fernandez L" not in peaks,
+                 "Inactive Sid Fernandez removed from active Mets Peak 162")
     published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Howard Johnson (`johnsho01`) becomes the **sixth bench hitter**" in published,
                  "Mets owner-approved amendment is in published roster")

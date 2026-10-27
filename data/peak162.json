@@ -5445,6 +5445,18 @@
      1999
     ]
    },
+   "BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)": {
+    "lahman_id": "johnsho01",
+    "status": "ok",
+    "text": "Peak 162 with New York Mets (1987–1991): 162 G, 679 PA, 585 AB, 101 R, 151 H, 33 2B, 3 3B, 33 HR, 100 RBI, 34 SB, 83 BB, 119 SO, .258/.347/.492/.839",
+    "years": [
+     1987,
+     1988,
+     1989,
+     1990,
+     1991
+    ]
+   },
    "C2 Gary Carter (Veteran C/Defense)": {
     "lahman_id": "cartega01",
     "status": "ok",
@@ -5489,18 +5501,6 @@
      1984,
      1985,
      1986
-    ]
-   },
-   "LR/SP6 Sid Fernandez L": {
-    "lahman_id": "fernasi01",
-    "status": "ok",
-    "text": "Peak 162 with New York Mets (1985–1989): 65 G, 27-16, 0 SV, 400.2 IP, 292 H, 142 ER, 164 BB, 385 SO, 3.18 ERA, 1.14 WHIP, 8.7 K/9",
-    "years": [
-     1985,
-     1986,
-     1987,
-     1988,
-     1989
     ]
    },
    "MR1 Tug McGraw L": {
