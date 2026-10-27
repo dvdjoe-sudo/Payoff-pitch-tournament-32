@@ -2,6 +2,24 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Box score scoring, responsible pitcher, manager bullpen
+
+These came out of the test series Game 1 (Montreal at Chicago).
+- **RBI were never credited.** The field existed and was never added to. Now RBI follow rule 9.04: none on a run that scores on a steal, pickoff or wild pitch, when the batter reached on an error, or when he grounded into a double play.
+- **Runs were charged to the pitcher on the mound.** Inherited runners now count against the pitcher who put them on (rule 9.16).
+- **Pitcher lines.** They now show H, ER, BB, SO, HR and HBP. Earned runs are reconstructed for errors: a runner who reached on an error, or a run after outs plus errors reach three, is unearned.
+- **Decisions.** W/L/S and holds are assigned (rules 9.17-9.19) and printed in the rendered box.
+- **Bullpen.** The engine only changed pitchers on page 10-11 fatigue (3+ runs at his Start inning, or 6 runs). A starter who never met those conditions threw complete games of 10+ innings (Game 1: Jenkins and Rogers). This was rule-faithful, not a crash, but unrealistic. New option `bullpen`, default `"manager"`, adds usage:
+  - a fatigued starter comes out at once, and so does one who has allowed 5 runs;
+  - a starter goes his Start rating;
+  - a closer comes in for 9th-inning saves;
+  - Short men work late and close games, Long men early.
+
+  `bullpen="book"` keeps the old behaviour. Once-per-game is unchanged.
+- **Stress (2,976 games).** Runs 5.28 → 5.15 per team-game, AVG .258 → .255, SLG .436 → .425. Starter IP 5.66 → 4.86, complete games 25.9% → 6.7%, relievers 2.59 → 3.02 per team-game.
+  - 168-game check: a save in 33% of games, holds 0.14 per game, starter wins 63%.
+- Tests in `test_game.official_scoring_and_bullpen`. Sample game: Boston 9, Toronto 1.
+
 ## 2026-10-27 — Intentional walks count as walks on hitter cards
 
 Owner ruling: the engine has no intentional walk, so a hitter's real IBB are printed as ordinary walks. Card walk target is BB (IBB included) over full PA, in `hitter_solver.build_one`/`event_targets` and `scripts/capacity_retune.py`. The pass widens PATIENT BB (both hands) from empty faces, then from PATIENT hit faces, which the IN-PLAY/TOUGH re-tune puts back. PATIENT holds about 22.9% of PA; a card that cannot reach its walk target is flagged `card_bat.capacity_basis.walk_cap_hit`, and the walks it cannot print are dropped as plate appearances (other bands scaled by 1/(1−shortfall)) instead of becoming outs, so only OBP falls short. Flagged: Barry Bonds (28.3% target, 21.7% on card) and Ted Williams (22.6% vs 22.3%). Basis on each card: `ibb`, `walk_target_bbp`, `walk_expected_bbp`, `walk_shortfall`, `target`. Idempotent (re-run changes nothing). 439 cards differ from the pre-repair cards.

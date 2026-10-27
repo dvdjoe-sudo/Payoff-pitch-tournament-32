@@ -318,16 +318,17 @@ def roster_rules_and_extra_innings():
 
 def sample_game_stays_out_of_the_tournament():
     report = play("BOS", "TOR", seed=1)
-    assert report["score"] == {"TOR": 1, "BOS": 5}
+    assert report["score"] == {"TOR": 1, "BOS": 9}
     assert report["innings"] == 9
     assert report["postponed"] is False
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
-    assert report["pitching"]["TOR|stiebda01"]["outs"] == 21
+    assert report["pitching"]["TOR|stiebda01"]["outs"] == 14
+    assert report["decisions"]["W"] == "BOS|martipe02" and report["decisions"]["L"] == "TOR|stiebda01"
     assert report["wp"] == {
-        "seen": 19, "fired": 1, "miss": 9, "empty": 9, "no_rating": 0, "unmarked": 0,
+        "seen": 19, "fired": 2, "miss": 8, "empty": 8, "no_rating": 1, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
-    assert any("WP? drawn 19. Fired 1." in line for line in report["log"])
+    assert any("WP? drawn 19. Fired 2." in line for line in report["log"])
     # Catcher arms are on the page-8 1-5 scale, so steals resolve.
     # Seed 1 has no steal attempt since the v0.3 pitcher tables; seed 4 does.
     assert any("FAC steal." in line for line in play("BOS", "TOR", seed=4)["log"])
@@ -625,7 +626,97 @@ def supplemental_strikeout_is_on_by_default():
     assert not off._supplemental_strikeout(pitcher, 55)
 
 
+def official_scoring_and_bullpen():
+    """RBI (9.04), responsible pitcher and earned runs (9.16), W/L/S (9.17-9.19),
+    manager bullpen usage. Owner ruling 2026-10-27."""
+    def pa_for(found, batter):
+        return {"batter": batter, "rbi": [], "outs0": found.outs, "log0": len(found.log), "on_error": False}
+
+    # A run on a hit is batted in; a run on a double play or an error is not.
+    for text, on_error, want in (("Single.", False, 1), ("Double play.", False, 0), ("Error.", True, 0)):
+        found = game()
+        batter, runner = found.away["lineup"][0], found.away["lineup"][5]
+        found.bases[2] = runner
+        found._resp[runner["id"]] = found._pkey()
+        found._pa = pa_for(found, batter)
+        found._pa["on_error"] = on_error
+        found.say(text)
+        if text == "Double play.":
+            found.outs += 2
+        found._score_runner(2, "scores")
+        pa, found._pa = found._pa, None
+        found._settle_rbi(pa)
+        assert found.box.get("TOR|" + batter["id"], {}).get("rbi", 0) == want, text
+
+    # A run on a wild pitch or steal is not batted in.
+    found = game()
+    batter, runner = found.away["lineup"][0], found.away["lineup"][5]
+    found.bases[2] = runner
+    found._pa = pa_for(found, batter)
+    found._no_rbi += 1
+    found._score_runner(2, "scores on the wild pitch")
+    found._no_rbi -= 1
+    assert found._pa["rbi"] == []
+
+    # An inherited runner's run is charged to the pitcher who put him on.
+    found = game()
+    starter = found._pkey()
+    runner = found.away["lineup"][3]
+    found.bases[1] = runner
+    found._resp[runner["id"]] = starter
+    found._pitch_line()
+    found.pitcher["BOS"]["fatigued"] = True
+    found._maybe_change_pitcher(before_batter=True)
+    reliever = found._pkey()
+    assert reliever != starter
+    found._pitch_line()
+    found._runners_advance(2)
+    assert found.pitch_box[starter]["r"] == 1 and found.pitch_box[starter]["er"] == 1
+    assert found.pitch_box[reliever]["r"] == 0
+
+    # Earned runs: a runner who reached on an error, or a run after the
+    # inning would have ended without the errors, is unearned.
+    found = game()
+    runner = found.away["lineup"][3]
+    found._pitch_line()
+    found.bases[2] = runner
+    found._ue.add(runner["id"])
+    found._score_runner(2, "scores")
+    row = found.pitch_box[found._pkey()]
+    assert (row["r"], row["er"]) == (1, 0)
+    found.bases[2] = found.away["lineup"][4]
+    found.outs, found._half_err = 2, 1
+    found._score_runner(2, "scores")
+    assert (row["r"], row["er"]) == (2, 0)
+
+    # The book option keeps a fatigued starter until the end of the half.
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", fac=False, bullpen="book")
+    found.pitcher["BOS"]["fatigued"] = True
+    found._maybe_change_pitcher(before_batter=True)
+    assert found.pitcher["BOS"]["player"]["id"] == "martipe02"
+
+    # Whole games: the box adds up and the decisions are on the right sides.
+    for seed in range(1, 41):
+        r = play("CHC", "MON", seed=seed)
+        if r["postponed"]:
+            continue
+        for side, other in (("CHC", "MON"), ("MON", "CHC")):
+            pit = [v for k, v in r["pitching"].items() if k.startswith(side + "|")]
+            bat = [v for k, v in r["box"].items() if k.startswith(other + "|") and not k.endswith("|field")]
+            assert sum(p["r"] for p in pit) == r["score"][other], seed
+            assert sum(p["er"] for p in pit) <= sum(p["r"] for p in pit)
+            assert sum(p["h"] for p in pit) == sum(b["h"] for b in bat), seed
+            assert sum(p["hr"] for p in pit) == sum(b["hr"] for b in bat), seed
+            assert sum(b["rbi"] for b in bat) <= r["score"][other], seed
+        d = r["decisions"]
+        win = max(r["score"], key=r["score"].get)
+        assert d["W"].startswith(win + "|") and not d["L"].startswith(win + "|"), seed
+        assert d["S"] is None or (d["S"].startswith(win + "|") and d["S"] != d["W"]), seed
+        assert d["W"] in r["pitching"] and d["L"] in r["pitching"]
+
+
 if __name__ == "__main__":
+    official_scoring_and_bullpen()
     supplemental_strikeout_is_on_by_default()
     chart_faces()
     basic_running_and_walks()
