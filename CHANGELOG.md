@@ -4,7 +4,7 @@ Dated rulings and repo history. The rules, seeds, and bracket in force are [TOUR
 
 ## 2026-10-27 — Five missing hitter cards (sandbox)
 
-David Peralta, Moises Alou, Brian Giles, Aubrey Huff, and Elmer Valo now have playable hitter cards. Each window is the five best franchise seasons by one-decimal league OPS+, among seasons of at least 300 plate appearances. Plate appearances are AB + BB + HBP + SF. Peralta is 2014, 2015, 2018, 2019, and 2022, Arizona only. Alou is 1992–1996. Giles is 2004–2008. Huff is 2001–2005. Valo is 1946, 1947, 1948, 1951, and 1952. Fielding stays the engine Average default. Valo's intentional walks and sacrifice flies are unrecorded in Lahman and stored as zero. No 2026 line was added. The comparison is `historical-cards/accuracy/missing_hitters.json`. The service worker cache is unchanged. No game result was changed.
+David Peralta, Moises Alou, Brian Giles, Aubrey Huff, and Elmer Valo now have playable hitter cards. Each window is the five best franchise seasons by one-decimal league OPS+, among seasons of at least 300 plate appearances. Plate appearances are AB + BB + HBP + SF. Peralta is 2014, 2015, 2018, 2019, and 2022, Arizona only. Alou is 1992–1996. Giles is 2004–2008. Huff is 2001–2005. Valo is 1946, 1947, 1948, 1951, and 1952. Fielding stays the engine Average default. Valo's intentional walks and sacrifice flies are unrecorded in Lahman and stored as zero. No 2026 line was added. The comparison is `historical-cards/accuracy/missing_hitters.json`. The service worker cache is payoff-pitch-v50. No game result was changed.
 
 ## 2026-10-27 — Old-method dice refit (sandbox)
 
