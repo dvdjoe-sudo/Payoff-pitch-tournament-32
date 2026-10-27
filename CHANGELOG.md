@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Seattle Mariners Adrián Beltré for Mike Moore (owner-approved)
+
+Seattle adds Adrián Beltré as sixth bench hitter / reserve 3B. Only 2005–2009 Seattle Mariners performance qualifies; no years with any other franchise are used. Mike Moore leaves the active bullpen but keeps his original archived pitching card. J.J. Putz, Andrés Muñoz, Edwin Díaz, Jeff Nelson, Arthur Rhodes, Kazuhiro Sasaki become relief slots 1–6 without changing their pitching responsibilities. The entire starting batting order and rotation are unchanged, including Edgar Martínez at DH batting fourth. 26 unique active players, with 9/6/5/6. Original cards and completed tournament games, FAC/dice logs, scores, box scores and results all remain intact; Beltré's frozen playable Hitter v0.5 conversion is pending, never invented.
+
 ## 2026-10-27 — Kansas City Royals Mayberry/Leibrandt and DH swap (owner-approved)
 
 John Mayberry joins the Royals as sixth bench bat (LH 1B/PH; 1972–1977 Kansas City performance only) and Charlie Leibrandt leaves the active bullpen while retaining his original historical converted card. Danny Tartabull becomes lineup #2 starting DH, and Hal McRae moves to Tartabull's old bench #5 spot. The six remaining relievers are Quisenberry, Montgomery, Soria, Holland, Herrera and Mingori. Every other starting hitter and all five SPs stay in place. Kansas City now meets 9 lineup / 6 bench / 5 SP / 6 RP with 26 unique players. All original player cards, games, scores, original box scores and FAC/dice logs are preserved. Mayberry's authentic frozen Hitter v0.5 card remains pending, without invented ratings.

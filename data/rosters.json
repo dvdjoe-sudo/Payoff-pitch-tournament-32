@@ -5525,6 +5525,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "beltrad01",
+    "kind": "hitter",
+    "name": "Adrián Beltré",
+    "pos": "3B",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "johnsra05",
     "kind": "pitcher",
@@ -5566,19 +5574,11 @@
    },
    {
     "group": "bullpen",
-    "id": "mooremi01",
-    "kind": "pitcher",
-    "name": "Mike Moore",
-    "pos": "RP",
-    "slot": 1
-   },
-   {
-    "group": "bullpen",
     "id": "putzjj01",
     "kind": "pitcher",
     "name": "J.J. Putz",
     "pos": "RP",
-    "slot": 2
+    "slot": 1
    },
    {
     "group": "bullpen",
@@ -5586,7 +5586,7 @@
     "kind": "pitcher",
     "name": "Andrés Muñoz",
     "pos": "RP",
-    "slot": 3
+    "slot": 2
    },
    {
     "group": "bullpen",
@@ -5594,7 +5594,7 @@
     "kind": "pitcher",
     "name": "Edwin Díaz",
     "pos": "RP",
-    "slot": 4
+    "slot": 3
    },
    {
     "group": "bullpen",
@@ -5602,7 +5602,7 @@
     "kind": "pitcher",
     "name": "Jeff Nelson",
     "pos": "RP",
-    "slot": 5
+    "slot": 4
    },
    {
     "group": "bullpen",
@@ -5610,7 +5610,7 @@
     "kind": "pitcher",
     "name": "Arthur Rhodes",
     "pos": "RP",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "bullpen",
@@ -5618,7 +5618,7 @@
     "kind": "pitcher",
     "name": "Kazuhiro Sasaki",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 19

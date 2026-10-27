@@ -7642,6 +7642,18 @@
      2025
     ]
    },
+   "IF2 Adrián Beltré 3B (SEA 2005-2009)": {
+    "lahman_id": "beltrad01",
+    "status": "ok",
+    "text": "Peak 162 with Seattle Mariners (2005–2009): 162 G, 693 PA, 640 AB, 84 R, 170 H, 39 2B, 2 3B, 23 HR, 90 RBI, 11 SB, 44 BB, 112 SO, .266/.317/.442/.759",
+    "years": [
+     2005,
+     2006,
+     2007,
+     2008,
+     2009
+    ]
+   },
    "LH SET Arthur Rhodes 4": {
     "lahman_id": "rhodear01",
     "status": "ok",
@@ -7652,18 +7664,6 @@
      2002,
      2003,
      2008
-    ]
-   },
-   "LR Mike Moore 7": {
-    "lahman_id": "mooremi01",
-    "status": "ok",
-    "text": "Peak 162 with Seattle Mariners (1984–1988): 65 G, 19-27, 1 SV, 435.0 IP, 444 H, 204 ER, 145 BB, 278 SO, 4.22 ERA, 1.35 WHIP, 5.7 K/9",
-    "years": [
-     1984,
-     1985,
-     1986,
-     1987,
-     1988
     ]
    },
    "MIF/PR/DEF Harold Reynolds 10": {

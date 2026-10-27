@@ -974,6 +974,68 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_seattle_roster_amendment(check: Check) -> None:
+    """Owner-approved Seattle Beltré / Moore change, Edgar DH unaffected."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["SEA"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["SEA"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Seattle active roster has 26 distinct players and 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Seattle slots are sequential in every group")
+    beltre = [p for p in players if p["id"] == "beltrad01"]
+    check.expect(len(beltre) == 1 and beltre[0]["group"] == "bench"
+                 and beltre[0]["slot"] == 6 and beltre[0]["pos"] == "3B"
+                 and beltre[0]["kind"] == "hitter",
+                 "Adrián Beltré becomes sixth Seattle bench hitter and reserve 3B")
+    check.expect("mooremi01" not in ids,
+                 "Mike Moore is off Seattle's active roster")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["putzjj01", "munozan01", "diazed04",
+                     "nelsoje01", "rhodear01", "sasakka01"],
+                 "Seattle retains six relievers in approved order")
+    dh = [p for p in players if p["group"] == "lineup" and p["slot"] == 4]
+    check.expect(len(dh) == 1 and dh[0]["id"] == "martied01"
+                 and dh[0]["pos"] == "DH"
+                 and announced["lineup"][3] == "4 Edgar Martínez DH R 18",
+                 "Edgar Martínez remains starting DH batting fourth")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and announced["bench"][-1] == "IF2 Adrián Beltré 3B (SEA 2005-2009)"
+                 and not any("Mike Moore" in s for s in announced["bullpen"]),
+                 "Seattle owner official source synchronized")
+    check.expect("SEA|mooremi01" in cards,
+                 "Seattle Mike Moore original converted card retained in historical catalog")
+    beltre_card = cards.get("SEA|beltrad01")
+    check.expect(not beltre_card or bool(beltre_card.get("card_bat"))
+                 or bool(beltre_card.get("conversion_status")),
+                 "Adrián Beltré playable Hitter v0.5 either genuine or explicitly pending")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["SEA"]
+    peak = peaks.get("IF2 Adrián Beltré 3B (SEA 2005-2009)") or {}
+    check.expect(peak.get("lahman_id") == "beltrad01"
+                 and peak.get("status") == "ok"
+                 and peak.get("years") == [2005, 2006, 2007, 2008, 2009]
+                 and (peak.get("text") or "").startswith("Peak 162 with Seattle Mariners"),
+                 "Seattle-only Beltré 2005-09 Peak 162 verified")
+    check.expect("LR Mike Moore 7" not in peaks,
+                 "Inactive Moore absent from current Seattle peak")
+    published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Adrián Beltré (`beltrad01`) joins the **Seattle Mariners**" in published,
+                 "Seattle change appears in published roster")
+    generator = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "SEA" and pid == "beltrad01"' in generator
+                 and "seattle_beltre_years = {2005, 2006, 2007, 2008, 2009}" in generator,
+                 "Future generated peak includes only Beltré's Seattle years")
+    rebuild = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_mariners_roster_amendment(cards, rosters)" in rebuild,
+                 "Future full card set rebuild retains approved Seattle 26")
+
+
 def check_kansas_city_roster_amendment(check: Check) -> None:
     """Owner-approved Royals Tartabull DH, McRae bench, Mayberry for Leibrandt."""
     active = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))["KC"]
@@ -1277,6 +1339,7 @@ def main() -> int:
     check_orioles_roster_amendment(check)
     check_astros_roster_amendment(check)
     check_kansas_city_roster_amendment(check)
+    check_seattle_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

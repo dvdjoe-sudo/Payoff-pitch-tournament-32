@@ -585,6 +585,7 @@ def build():
     apply_philadelphia_athletics_2026_roster_amendment(cards, rosters)
     apply_astros_roster_amendment(cards, rosters)
     apply_kansas_city_roster_amendment(cards, rosters)
+    apply_mariners_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -599,6 +600,7 @@ AUTHORIZED_HITTERS = (
     "MON|aloumo01",
     "HOU|aloumo01",
     "KC|maybejo01",
+    "SEA|beltrad01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -667,6 +669,55 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+
+
+def apply_mariners_roster_amendment(cards, rosters):
+    """Owner-approved Seattle Beltré for Mike Moore, preserving historical cards.
+
+    Beltré's eligibility and genuine future card use ONLY his 2005-2009
+    Mariners seasons; no other franchise counts. All 26 slots validated.
+    """
+    roster = rosters.get("SEA")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "mooremi01"]
+    beltre_id = "beltrad01"
+    beltre = [p for p in players if p["id"] == beltre_id]
+    if not beltre:
+        players.append({"group": "bench", "id": beltre_id,
+                        "kind": "hitter", "name": "Adrián Beltré",
+                        "pos": "3B", "slot": 6})
+    elif len(beltre) != 1:
+        raise SystemExit("Duplicate Seattle Adrián Beltré entries")
+    else:
+        beltre[0].update(group="bench", kind="hitter", pos="3B", slot=6)
+    card = cards.get("SEA|" + beltre_id)
+    if card:
+        card["spots"] = [{"group": "bench", "slot": 6,
+                          "pos": "3B", "kind": "hitter"}]
+    relief_ids = ("putzjj01", "munozan01", "diazed04",
+                  "nelsoje01", "rhodear01", "sasakka01")
+    for slot, pid in enumerate(relief_ids, 1):
+        matches = [p for p in players if p["id"] == pid and p["group"] == "bullpen"]
+        if len(matches) != 1:
+            raise SystemExit("Seattle missing reliever " + pid)
+        matches[0]["slot"] = slot
+        card = cards.get("SEA|" + pid)
+        if card:
+            card["spots"] = [{"group": "bullpen", "slot": slot,
+                              "pos": "RP", "kind": "pitcher"}]
+    # SEA|mooremi01 must remain a genuine historical converted card.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Seattle approved roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Seattle must have 26 unique active players")
+    if [(p["id"], p["pos"]) for p in players
+        if p["group"] == "lineup" and p["slot"] == 4] != [("martied01", "DH")]:
+        raise SystemExit("Edgar Martinez must remain starting DH batting fourth")
 
 
 def apply_kansas_city_roster_amendment(cards, rosters):

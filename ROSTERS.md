@@ -1141,6 +1141,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - 1B/DH Alvin Davis 8
 - OF4 Julio Rodríguez 5
 - OF/Power PH Jay Buhner 15
+- IF2 Adrián Beltré 3B (SEA 2005-2009)
 
 ### Rotation
 
@@ -1152,13 +1153,20 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Bullpen
 
-- LR Mike Moore 7
 - MR J.J. Putz 6
 - FIRE Andrés Muñoz 6
 - SET Edwin Díaz 3
 - RH SET Jeff Nelson 8
 - LH SET Arthur Rhodes 4
 - CL Kazuhiro Sasaki 4
+
+### Approved active roster amendment (2026-10-27)
+
+Adrián Beltré (`beltrad01`) joins the **Seattle Mariners** active 26 in sixth bench slot as a **third-base defensive reserve and right-handed pinch hitter**. Only his **2005–2009 Seattle Mariners seasons** count toward his franchise-specific peak and eventual frozen Hitter v0.5 conversion. All Dodgers, Red Sox and Rangers seasons are excluded.
+
+Mike Moore (`mooremi01`) becomes inactive; his original converted card stays in the historical archive. The six remaining relievers retain their existing sequence and responsibilities, now assigned RP1–RP6: J.J. Putz, Andrés Muñoz, Edwin Díaz, Jeff Nelson, Arthur Rhodes and Kazuhiro Sasaki. The entire nine-man starting batting order and all five starting pitchers remain unchanged, including **Edgar Martínez batting fourth as DH**. Seattle's active split is **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct players.
+
+All previously created player cards and previously played games, scores, box scores, original dice/FAC logs and results remain untouched. Beltré's authentic Seattle-only Hitter v0.5 playable card is pending conversion: no unverified percentile bands, defensive ratings or dice-chart numbers have been introduced.
 
 ## 20. Los Angeles Angels (LAA)
 

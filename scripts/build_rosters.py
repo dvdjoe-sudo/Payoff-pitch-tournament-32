@@ -308,6 +308,18 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "SEA":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Adrián Beltré (`beltrad01`) joins the **Seattle Mariners** active 26 in sixth bench slot as a **third-base defensive reserve and right-handed pinch hitter**. Only his **2005–2009 Seattle Mariners seasons** count toward his franchise-specific peak and eventual frozen Hitter v0.5 conversion. All Dodgers, Red Sox and Rangers seasons are excluded.",
+            "",
+            "Mike Moore (`mooremi01`) becomes inactive; his original converted card stays in the historical archive. The six remaining relievers retain their existing sequence and responsibilities, now assigned RP1–RP6: J.J. Putz, Andrés Muñoz, Edwin Díaz, Jeff Nelson, Arthur Rhodes and Kazuhiro Sasaki. The entire nine-man starting batting order and all five starting pitchers remain unchanged, including **Edgar Martínez batting fourth as DH**. Seattle's active split is **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct players.",
+            "",
+            "All previously created player cards and previously played games, scores, box scores, original dice/FAC logs and results remain untouched. Beltré's authentic Seattle-only Hitter v0.5 playable card is pending conversion: no unverified percentile bands, defensive ratings or dice-chart numbers have been introduced.",
+            "",
+        ]
+
     if code == "KC":
         lines += [
             "### Approved active roster amendments (2026-10-27)",

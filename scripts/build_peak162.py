@@ -804,6 +804,14 @@ def main() -> None:
             pid = person["id"]
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
+            if club == "SEA" and pid == "beltrad01":
+                # Owner-approved Seattle-only Beltré, excluding every
+                # Dodgers / Boston / Texas year from his prime and card.
+                seattle_beltre_years = {2005, 2006, 2007, 2008, 2009}
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in seattle_beltre_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in seattle_beltre_years}
             if club == "KC" and pid == "maybejo01":
                 # Owner approved only Mayberry's KC seasons (1972-1977),
                 # never Houston, Toronto or New York.
@@ -912,6 +920,7 @@ def main() -> None:
         ("BAL", "BAT2 George Sisler 1B (St. Louis Browns 1915-1927)", "sislege01"),
         ("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)", "aloumo01"),
         ("KC", "BAT2 John Mayberry 1B (KC 1972-1977)", "maybejo01"),
+        ("SEA", "IF2 Adrián Beltré 3B (SEA 2005-2009)", "beltrad01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -932,6 +941,10 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    seattle_beltre = row("SEA", "IF2 Adrián Beltré 3B (SEA 2005-2009)")
+    if (seattle_beltre.get("status") != "ok" or seattle_beltre.get("lahman_id") != "beltrad01"
+            or seattle_beltre.get("years") != [2005, 2006, 2007, 2008, 2009]):
+        raise SystemExit("Beltré's Seattle Peak 162 must cover ONLY 2005-2009")
     kc_mayberry = row("KC", "BAT2 John Mayberry 1B (KC 1972-1977)")
     if (kc_mayberry.get("status") != "ok" or kc_mayberry.get("lahman_id") != "maybejo01"
             or not all(1972 <= year <= 1977 for year in kc_mayberry.get("years", []))):
