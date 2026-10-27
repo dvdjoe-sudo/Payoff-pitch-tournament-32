@@ -1720,8 +1720,8 @@ Recorded on that roster and not yet in a box score:
 - Lopez (UTIL)
 - Ozuna (OF4)
 - Lee (1B/POWER)
-- Fernandez
 - Juan Pierre (CF/PR)
+- Fernandez
 
 ### Approved active roster amendment (2026-10-26)
 
