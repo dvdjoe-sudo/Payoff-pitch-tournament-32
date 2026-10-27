@@ -4234,9 +4234,15 @@
    },
    "IF2 Mike Lowell 3B R (Florida/Miami 1999-2005)": {
     "lahman_id": "lowelmi01",
-    "status": "unavailable",
-    "text": "Peak stats unavailable",
-    "reason": "Pending verified Florida/Miami Marlins 1999–2005 five-year Lahman calculation; no estimated stats"
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2000–2004): 162 G, 684 PA, 606 AB, 86 R, 170 H, 42 2B, 0 3B, 27 HR, 104 RBI, 4 SB, 62 BB, 89 SO, .280/.349/.485/.834",
+    "years": [
+     2000,
+     2001,
+     2002,
+     2003,
+     2004
+    ]
    },
    "INF/POWER Dan Uggla": {
     "lahman_id": "ugglada01",
@@ -5863,9 +5869,15 @@
    },
    "OF6 Rickey Henderson LF/CF R (Yankees 1985-1989)": {
     "lahman_id": "henderi01",
-    "status": "unavailable",
-    "text": "Peak stats unavailable",
-    "reason": "Pending verified New York Yankees 1985–1989 five-year Lahman calculation; no estimated stats"
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1985–1989): 162 G, 743 PA, 626 AB, 139 R, 180 H, 32 2B, 4 3B, 21 HR, 69 RBI, 89 SB, 110 BB, 76 SO, .288/.395/.455/.850",
+    "years": [
+     1985,
+     1986,
+     1987,
+     1988,
+     1989
+    ]
    },
    "RH SET David Robertson": {
     "lahman_id": "roberda08",

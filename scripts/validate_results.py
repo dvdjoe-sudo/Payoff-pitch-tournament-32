@@ -749,9 +749,9 @@ def check_final_six_bench_team(check: Check, code: str,
     newpeak = peak.get(label) or {}
     lo, hi = (1985, 1989) if code == "NYY" else (1999, 2005)
     check.expect(newpeak.get("lahman_id") == new_id
-                 and (newpeak.get("status") != "ok"
-                      or newpeak.get("years") and
-                      all(lo <= y <= hi for y in newpeak["years"])),
+                 and newpeak.get("status") == "ok"
+                 and newpeak.get("years")
+                 and all(lo <= y <= hi for y in newpeak["years"]),
                  code + " new five-year peak franchise-only or pending")
     check.expect(("LONG/SWING Allie Reynolds" if code == "NYY"
                   else "LR/EMER SP A.J. Burnett") not in peak,
