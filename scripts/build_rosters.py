@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "MIN":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Bob Allison (`allisbo01`) joins Minnesota's active 26 as sixth bench hitter (RH power, OF/1B). Firpo Marberry (`marbefi01`) leaves the active bullpen. The team now has 9 lineup players, 6 bench hitters, 5 starting pitchers and 6 relievers, 26 distinct players.",
+            "",
+            "Jhoan Duran, Taylor Rogers and Jim Perry move to bullpen slots 4, 5 and 6 respectively without changing their roles. This amendment affects future games only and does not edit any original player cards, archived Firpo Marberry conversion, FAC/dice rolls, box scores, completed games or historical tournament results. Bob Allison's genuine Hitter v0.5 card and Senators/Twins franchise-only peak line require an authentic conversion; no playable card ratings are invented.",
+            "",
+        ]
+
     if code == "PHI":
         lines += [
             "### Approved active roster amendment (2026-10-27)",

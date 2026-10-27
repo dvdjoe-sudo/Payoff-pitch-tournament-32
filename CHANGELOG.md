@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Minnesota Twins Bob Allison for Firpo Marberry (Joe-approved)
+
+Bob Allison becomes active Minnesota bench #6 (OF/1B RH power); Firpo Marberry leaves the active bullpen while his original converted card remains historical. Duran, Rogers and Perry shift to bullpen #4–6. The 26-player active team now follows 9/6/5/6, aligned in the official owner roster, active JSON, generated roster page, full-build adapter and validators. All original player cards, played games, box scores and original dice/FAC records remain intact. Allison's playable original Hitter v0.5 card remains pending a Senators/Twins-only conversion.
+
 ## 2026-10-27 — Philadelphia Phillies Chuck Klein for Ryan Madson (Joe-approved)
 
 Chuck Klein joins the active 26 as RF/LF bench hitter #6 and Ryan Madson leaves active relief duty. Papelbon, Garber, McGraw, Reed, Lidge and Suárez remain, now numbered 1-6 in the bullpen. Starting lineup and rotation are untouched. The canonical roster, official owner roster, generator, roster document and validator now agree on 9/6/5/6. Madson's authentic original card remains in archived cards; no existing cards, tournament results, played games, FAC/dice logs or box scores were altered. Klein requires a genuine Phillies-franchise-only Hitter v0.5 card conversion; roster inclusion is not a playable card.

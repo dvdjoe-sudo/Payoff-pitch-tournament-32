@@ -579,6 +579,7 @@ def build():
     apply_braves_roster_amendment(cards, rosters)
     apply_pirates_roster_amendment(cards, rosters)
     apply_phillies_roster_amendment(cards, rosters)
+    apply_twins_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -599,6 +600,7 @@ AUTHORIZED_HITTERS = (
     "ATL|hornebo01",
     "PIT|wanerpa01",
     "PHI|kleinch01",
+    "MIN|allisbo01",
 )
 
 
@@ -1171,6 +1173,54 @@ def apply_phillies_roster_amendment(cards, rosters):
         raise SystemExit("Phillies approved roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Phillies approved roster needs 26 distinct active players")
+
+
+def apply_twins_roster_amendment(cards, rosters):
+    """Joe-approved Twins Allison replaces Marberry, future active 9/6/5/6.
+
+    Archive all genuine converted cards (including Firpo Marberry),
+    older data and any completed game; never create a guessed hitter
+    card for Bob Allison. Franchise seasons include Senators/Twins.
+    """
+    roster = rosters.get("MIN")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "marbefi01"]
+    allison_id = "allisbo01"
+    existing = [p for p in players if p["id"] == allison_id]
+    if not existing:
+        players.append({
+            "group": "bench", "id": allison_id, "kind": "hitter",
+            "name": "Bob Allison", "pos": "RF", "slot": 6,
+        })
+    elif len(existing) != 1:
+        raise SystemExit("duplicate Bob Allison Minnesota roster entries")
+    else:
+        existing[0].update(group="bench", kind="hitter", pos="RF", slot=6)
+    for player_id, group, slot, pos, kind in (
+        (allison_id, "bench", 6, "RF", "hitter"),
+        ("duranjh01", "bullpen", 4, "RP", "pitcher"),
+        ("rogerta01", "bullpen", 5, "RP", "pitcher"),
+        ("perryji01", "bullpen", 6, "RP", "pitcher"),
+    ):
+        found = [p for p in players if p["id"] == player_id]
+        if len(found) != 1:
+            raise SystemExit("Twins approved active role missing: " + player_id)
+        found[0].update(group=group, slot=slot, pos=pos, kind=kind)
+        card = cards.get("MIN|" + player_id)
+        if card:
+            card["spots"] = [{
+                "group": group, "slot": slot, "pos": pos, "kind": kind,
+            }]
+    # MIN|marbefi01 remains untouched as a historical converted card.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Minnesota approved roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Minnesota approved roster needs 26 distinct active players")
 
 
 def dump(obj, path):

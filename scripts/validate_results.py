@@ -928,6 +928,46 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_twins_roster_amendment(check: Check) -> None:
+    """Owner-approved Bob Allison for Firpo Marberry active Minnesota 26."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["MIN"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["MIN"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26 and
+                 counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Minnesota has 26 unique active players, 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Minnesota active role slots are sequential")
+    allison = [p for p in players if p["id"] == "allisbo01"]
+    check.expect(len(allison) == 1 and allison[0]["group"] == "bench"
+                 and allison[0]["slot"] == 6 and allison[0]["pos"] == "RF"
+                 and allison[0]["kind"] == "hitter",
+                 "Bob Allison is the Minnesota sixth active bench hitter")
+    check.expect("marbefi01" not in ids,
+                 "Firpo Marberry no longer occupies an active relief spot")
+    relief_ids = [p["id"] for p in players if p["group"] == "bullpen"]
+    check.expect(relief_ids == ["nathajo01", "worthal01", "aguilri01",
+                                "duranjh01", "rogerta01", "perryji01"],
+                 "Minnesota approved six bullpen pitchers stay in correct order")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and any("Bob Allison" in line for line in announced["bench"])
+                 and not any("Firpo Marberry" in line for line in announced["bullpen"]),
+                 "Minnesota owner roster agrees with active 9/6/5/6")
+    check.expect("MIN|marbefi01" in cards,
+                 "Firpo Marberry historic converted pitching card is preserved")
+    doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Bob Allison (`allisbo01`) joins Minnesota" in doc,
+                 "Minnesota approval appears in published roster")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_twins_roster_amendment(cards, rosters)" in builder,
+                 "Future full builds preserve approved Twins active 26")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -953,6 +993,7 @@ def main() -> int:
     check_braves_roster_amendment(check)
     check_pirates_roster_amendment(check)
     check_phillies_roster_amendment(check)
+    check_twins_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

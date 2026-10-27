@@ -3581,6 +3581,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "allisbo01",
+    "kind": "hitter",
+    "name": "Bob Allison",
+    "pos": "RF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "johnswa01",
     "kind": "pitcher",
@@ -3646,19 +3654,11 @@
    },
    {
     "group": "bullpen",
-    "id": "marbefi01",
-    "kind": "pitcher",
-    "name": "Firpo Marberry",
-    "pos": "RP",
-    "slot": 4
-   },
-   {
-    "group": "bullpen",
     "id": "duranjh01",
     "kind": "pitcher",
     "name": "Jhoan Duran",
     "pos": "RP",
-    "slot": 5
+    "slot": 4
    },
    {
     "group": "bullpen",
@@ -3666,7 +3666,7 @@
     "kind": "pitcher",
     "name": "Taylor Rogers",
     "pos": "RP",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "bullpen",
@@ -3674,7 +3674,7 @@
     "kind": "pitcher",
     "name": "Jim Perry",
     "pos": "RP",
-    "slot": 7
+    "slot": 6
    }
   ],
   "seed": 12
