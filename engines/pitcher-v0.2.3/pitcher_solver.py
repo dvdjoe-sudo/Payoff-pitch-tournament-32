@@ -16,13 +16,20 @@ D6_TOTAL = 36
 # Legal outcomes per slot
 OUTCOMES = ['WHEELHOUSE', 'PATIENT', 'TOUGH', 'IN-PLAY', 'BALLPARK', 'DEFENSE']
 
-# Load 1986 data
-with open(os.path.join(REF, 'cards_1986.json')) as f:
-    ALL = json.load(f)['players']
-HITTERS_1986 = [p for p in ALL if not p.get('pitcher')]
-PITCHERS_1986 = [p for p in ALL if p.get('pitcher')]
+# The 1986 reference is opened on first use, not at import.
+ALL = None
+HITTERS_1986 = None
+PITCHERS_1986 = None
 
-print(f"Loaded: {len(HITTERS_1986)} hitters, {len(PITCHERS_1986)} pitchers (1986)")
+
+def load_1986():
+    global ALL, HITTERS_1986, PITCHERS_1986
+    if ALL is None:
+        with open(os.path.join(REF, 'cards_1986.json')) as f:
+            ALL = json.load(f)['players']
+        HITTERS_1986 = [p for p in ALL if not p.get('pitcher')]
+        PITCHERS_1986 = [p for p in ALL if p.get('pitcher')]
+    return ALL, HITTERS_1986, PITCHERS_1986
 
 
 def table_to_probs(table):
@@ -33,12 +40,28 @@ def table_to_probs(table):
     return probs
 
 
-def evaluate_vs_hitters(table, pitcher_hand='R'):
+def _vectors_with_modifier(vecs, so_modifier):
+    """Copy the category vectors and apply the v2 SO bump to TOUGH."""
+    from calibration import apply_so_modifier
+    out = dict(vecs)
+    for key in ('TOUGH', 'TOUGH-OUT'):
+        if key in out:
+            out[key] = apply_so_modifier(out[key], so_modifier)
+    return out
+
+
+def evaluate_vs_hitters(table, pitcher_hand='R', so_modifier='NONE', vectors=None):
     """Evaluate 2d6 table against 1986 hitter population using exact vectors.
     No Monte Carlo. Sum of (2d6_weight * category_event_vector).
+
+    pitcher_hand selects the vsRHP or vsLHP hitter vectors. so_modifier
+    is the v2 band bump (NONE, +10, +20), applied before the events
+    are scored. Pass vectors to score without opening the 1986 files.
     """
-    from event_vectors import VECTORS_RHP, VECTORS_LHP
-    vecs = VECTORS_RHP if pitcher_hand == 'R' else VECTORS_LHP
+    if vectors is None:
+        from event_vectors import vectors_for
+        vectors = vectors_for(pitcher_hand)
+    vecs = _vectors_with_modifier(vectors, so_modifier)
     total = {'1B': 0, '2B': 0, '3B': 0, 'HR': 0, 'BB': 0,
              'HBP': 0, 'SO': 0, 'OUT': 0, 'RARE_PLAY': 0}
     for roll_str, outcome in table.items():
@@ -63,33 +86,40 @@ def err(events, target):
                for k in target)
 
 
-def random_table():
-    """Generate random legal 2d6 table."""
-    return {str(r): random.choice(OUTCOMES) for r in range(2, 13)}
+def random_table(rng):
+    """Generate random legal 2d6 table from a seeded RNG."""
+    return {str(r): rng.choice(OUTCOMES) for r in range(2, 13)}
 
 
-def neighbor(table):
+def neighbor(table, rng):
     """Single-slot mutation."""
     t = dict(table)
-    r = str(random.randint(2, 12))
-    t[r] = random.choice([o for o in OUTCOMES if o != t[r]])
+    r = str(rng.randint(2, 12))
+    t[r] = rng.choice([o for o in OUTCOMES if o != t[r]])
     return t
 
 
-def optimize(target, restarts=10, iters=500):
-    """Multi-start local search. Returns (best_table, best_err, diagnostics)."""
+def optimize(target, restarts=10, iters=500, hand='R', seed=0,
+             so_modifier='NONE', vectors=None):
+    """Multi-start local search. Returns (best_table, best_err, diagnostics).
+
+    hand is the pitcher's throwing hand and selects the hitter vectors.
+    seed makes the search reproducible. so_modifier is applied inside
+    every evaluation, in the v2 direction.
+    """
+    rng = random.Random(seed)
     best_err, best_table = float('inf'), None
     init_err = None
     best_restart = -1
     for i in range(restarts):
-        tbl = random_table()
-        e = err(evaluate_vs_hitters(tbl), target)
+        tbl = random_table(rng)
+        e = err(evaluate_vs_hitters(tbl, hand, so_modifier, vectors), target)
         if i == 0:
             init_err = e
         # hill climb
         for _ in range(iters):
-            nt = neighbor(tbl)
-            ne = err(evaluate_vs_hitters(nt), target)
+            nt = neighbor(tbl, rng)
+            ne = err(evaluate_vs_hitters(nt, hand, so_modifier, vectors), target)
             if ne < e:
                 tbl, e = nt, ne
         if e < best_err:
@@ -104,7 +134,9 @@ def optimize(target, restarts=10, iters=500):
 
 if __name__ == '__main__':
     # v0.1 smoke test: reconstruct Don Aase's table
-    aase = next(p for p in PITCHERS_1986 if p['name'] == 'Don Aase')
+    _all, _hitters, pitchers = load_1986()
+    print(f"Loaded: {len(_hitters)} hitters, {len(pitchers)} pitchers (1986)")
+    aase = next(p for p in pitchers if p['name'] == 'Don Aase')
     actual = aase['pitcher']['results']
     print(f"\nDon Aase actual 1986 table: {actual}")
     print(f"Outcome probs: {table_to_probs(actual)}")

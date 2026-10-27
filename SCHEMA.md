@@ -141,7 +141,7 @@ Series winners, series scores, game scores, inning lines, batting lines, pitchin
 
 ## Roster and card data
 
-Two generated files sit beside the results file. They are not part of schema 1 and no locked check covers them. `scripts/build_cards.py` writes both from the converted set files and the master archive; rerunning it with unchanged inputs rewrites byte-identical files.
+Two generated files sit beside the results file. They are not part of schema 1 and no locked check covers them. `scripts/build_cards.py` can still build both from the converted set files and the master archive, but once `data/cards.json` exists a normal run, including a game import, refreshes only the `tournament` block from this repo's `tournament_results.json`. Peak windows, dice, pitching charts, player ids, and `data/rosters.json` stay as repaired. `PP_REBUILD_CARDS_FROM_SETS=1` is the explicit full rebuild, and a game import does not set it. The full rebuild with unchanged inputs rewrites byte-identical files.
 
 `data/rosters.json` is keyed by club code: `code`, `name`, `seed`, `played` (whether the club has a game in the archive), and `players`, the roster spots in set order. Each spot is `id`, `name`, `group` (`lineup`, `bench`, `rotation`, or `bullpen`), `slot` within the group, `pos` as the set carries it, and `kind` (`hitter` or `pitcher`). A two-way player holds two spots; Babe Ruth is Boston's bench spot 6 and bullpen spot 7.
 

@@ -9,12 +9,9 @@ import json, os
 HIST = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = os.path.join(os.path.dirname(HIST), 'historical-cards', 'reference')
 
-with open(os.path.join(REF, 'cards_1986.json')) as f:
-    ALL = json.load(f)['players']
-HITTERS = [p for p in ALL if not p.get('pitcher')]
-
-with open(os.path.join(REF, 'ballparks.json')) as f:
-    PARKS = json.load(f)
+ALL = None
+HITTERS = None
+PARKS = None
 
 # Map section outcomes to events
 # Each section has ranges like {'HR': [1,5], '2B': [6,10], ...}
@@ -104,17 +101,48 @@ def build_category_vectors(pitcher_hand='R'):
     return vectors
 
 
-# Precompute for both hands
-VECTORS_RHP = build_category_vectors('R')
-VECTORS_LHP = build_category_vectors('L')
+# The 1986 cards are loaded on first use. Importing this module does
+# not open them and does not print. Uncertain: section_events still
+# divides a band by 100, while the site die is faces 01-99. That scale
+# is unchanged here.
+_VECTORS = {}
+_PLAYERS = None
 
-print("v0.1.1 event vectors built.")
-print(f"\nWHEELHOUSE vs RHP: {VECTORS_RHP['WHEELHOUSE']}")
-print(f"\nTOUGH vs RHP: {VECTORS_RHP['TOUGH']}")
-print(f"\nPATIENT-OUT vs RHP: {VECTORS_RHP['PATIENT-OUT']}")
+
+def load_players():
+    """Return (all players, hitters). Opens the 1986 reference once."""
+    global ALL, HITTERS, _PLAYERS
+    if _PLAYERS is None:
+        with open(os.path.join(REF, 'cards_1986.json')) as f:
+            ALL = json.load(f)['players']
+        HITTERS = [p for p in ALL if not p.get('pitcher')]
+        with open(os.path.join(REF, 'ballparks.json')) as f:
+            global PARKS
+            PARKS = json.load(f)
+        _PLAYERS = (ALL, HITTERS)
+    return _PLAYERS
+
+
+def vectors_for(pitcher_hand='R'):
+    key = 'R' if pitcher_hand == 'R' else 'L'
+    if key not in _VECTORS:
+        load_players()
+        _VECTORS[key] = build_category_vectors(key)
+    return _VECTORS[key]
+
+
+def get_vectors():
+    return vectors_for('R'), vectors_for('L')
 
 
 if __name__ == '__main__':
+    VECTORS_RHP = vectors_for('R')
+    VECTORS_LHP = vectors_for('L')
+    print("v0.1.1 event vectors built.")
+    print(f"\nWHEELHOUSE vs RHP: {VECTORS_RHP['WHEELHOUSE']}")
+    print(f"\nTOUGH vs RHP: {VECTORS_RHP['TOUGH']}")
+    print(f"\nPATIENT-OUT vs RHP: {VECTORS_RHP['PATIENT-OUT']}")
+
     # Test 1: known hitter + category produces exact vector
     h = next(p for p in HITTERS if p['name'] == 'Don Mattingly')
     ev = section_events(h['sections']['WHEELHOUSE'], 'vsRHP')

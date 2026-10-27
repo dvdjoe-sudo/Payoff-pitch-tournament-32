@@ -13,11 +13,32 @@ BB%/SO%/HR%/HBP% with the stat line. No hand tuning.
 import csv, json, os, re, sys, copy
 
 HOME = os.path.expanduser('~')
-APP = HOME + '/workspace/payoff-pitch-app'
-CC = HOME + '/workspace/custom-cards'
-CARDS = json.load(open(APP + '/data/cards_1986.json'))['players']
-BY_NAME = {p['name']: p for p in CARDS}
-PROFILES = json.load(open(CC + '/card_profiles.json'))
+APP = os.environ.get(
+    'PP_CARDS_1986_DIR', HOME + '/workspace/payoff-pitch-app')
+CC = os.environ.get(
+    'PP_CUSTOM_CARDS_DIR', HOME + '/workspace/custom-cards')
+_REFERENCE = None
+
+
+def reference():
+    """Load the 1986 comp cards and profiles on first use.
+
+    Importing this module does not open those files. They are not in
+    this repository. A build that needs them fails at the call, with
+    the path, instead of at import.
+    """
+    global _REFERENCE
+    if _REFERENCE is None:
+        cards_path = os.path.join(APP, 'data', 'cards_1986.json')
+        profiles_path = os.path.join(CC, 'card_profiles.json')
+        cards = json.load(open(cards_path))['players']
+        profiles = json.load(open(profiles_path))
+        _REFERENCE = {
+            'cards': cards,
+            'by_name': {p['name']: p for p in cards},
+            'profiles': profiles,
+        }
+    return _REFERENCE
 
 # ---- section model ----
 # BALLPARK (8.98% of pitcher rolls) resolves via the park chart to WHEELHOUSE
@@ -86,9 +107,10 @@ def comp_distance(p, t):
 
 
 def select_comps(tgt, n=8):
-    wh = sorted(PROFILES, key=lambda p: -p['hrp'])[:n]
-    pat = sorted(PROFILES, key=lambda p: -p['bbp'])[:n]
-    contact = sorted(PROFILES, key=lambda p: comp_distance(p, tgt))[:n]
+    profiles = reference()['profiles']
+    wh = sorted(profiles, key=lambda p: -p['hrp'])[:n]
+    pat = sorted(profiles, key=lambda p: -p['bbp'])[:n]
+    contact = sorted(profiles, key=lambda p: comp_distance(p, tgt))[:n]
     return {'WHEELHOUSE': [p['name'] for p in wh],
             'PATIENT': [p['name'] for p in pat],
             'TOUGH': [p['name'] for p in contact],
@@ -96,9 +118,10 @@ def select_comps(tgt, n=8):
 
 
 def build_initial(comps):
+    by_name = reference()['by_name']
     widths = {}
     for sec, keys in CANON.items():
-        cards = [BY_NAME[n] for n in comps[sec]]
+        cards = [by_name[n] for n in comps[sec]]
         for hand in ('vsLHP', 'vsRHP'):
             for k in keys:
                 # v0.5 fix: skip cards missing this section/hand
@@ -172,14 +195,92 @@ def prescale(widths, tgt, bats):
                 W[(sec, h, key)] = max(0, round(need_pa * (c / tot) / p[sec] /
                                                 (0.28 if h == 'vsLHP' else 0.72) * 99))
     return W
+
+
+def hole_faces(table):
+    """Faces 1-99 that no result band claims. Inverted and out-of-range
+    bands claim nothing; repack drops them before this runs."""
+    claimed = set()
+    for key in ('HR', '3B', '2B', '1B', 'BB', 'HBP', 'SO'):
+        rng = (table or {}).get(key)
+        if not rng:
+            continue
+        lo, hi = int(rng[0]), int(rng[1])
+        if lo > hi or lo < 1 or hi > 99:
+            continue
+        claimed.update(range(lo, hi + 1))
+    return [face for face in range(1, 100) if face not in claimed]
+
+
+def _label_for_face(face, template):
+    for row in template or []:
+        rng = row.get('range')
+        if not rng or len(rng) < 2:
+            continue
+        lo, hi = int(rng[0]), int(rng[1])
+        if lo <= face <= hi:
+            return row.get('result') or 'P4'
+    # Uncertain which out type a hole should print when the comp chart
+    # does not cover that face. P4 is the fallback the repaired cards
+    # already use for an uncovered out.
+    return 'P4'
+
+
+def rows_from_faces(faces, template):
+    """Merge consecutive hole faces that share a label."""
+    rows = []
+    for face in faces:
+        label = _label_for_face(face, template)
+        if rows and rows[-1]['result'] == label and rows[-1]['range'][1] == face - 1:
+            rows[-1]['range'][1] = face
+        else:
+            rows.append({'range': [face, face], 'result': label})
+    return rows
+
+
+def widths_from_sections(sections):
     widths = {}
     for sec, keys in CANON.items():
-        cards = [BY_NAME[n] for n in comps[sec]]
         for hand in ('vsLHP', 'vsRHP'):
-            for k in keys:
-                widths[(sec, hand, k)] = round(sum(
-                    width(c['sections'][sec][hand], k) for c in cards) / len(cards))
+            table = (sections.get(sec) or {}).get(hand) or {}
+            for key in keys:
+                rng = table.get(key)
+                if rng and int(rng[0]) <= int(rng[1]):
+                    widths[(sec, hand, key)] = int(rng[1]) - int(rng[0]) + 1
+                else:
+                    widths[(sec, hand, key)] = 0
     return widths
+
+
+def repack_sections(sections):
+    """Pack every hand from face 1 using the current band widths.
+
+    A neighborhood edit that moves one endpoint can overlap the next
+    band or run past 99. Widths are kept; lay_out places them in
+    canonical order and clips the hand at 99.
+    """
+    return lay_out(widths_from_sections(sections))
+
+
+def out_tables_from_holes(sections, template):
+    """Build an out table from the faces each hand did not claim.
+
+    Hands on one card do not share a hole set, so one shared table
+    cannot equal every hand's holes. out_by_hand is the strict table
+    for each hand. The shared out_table covers the union. A face that
+    is a result on one hand and a hole on another remains in the
+    shared table. Uncertain: that printed overlap is what the
+    resolved reading ignores, giving the result band the face.
+    """
+    per = {}
+    union = set()
+    for sec in CANON:
+        per[sec] = {}
+        for hand in ('vsLHP', 'vsRHP'):
+            holes = hole_faces(sections[sec][hand])
+            per[sec][hand] = rows_from_faces(holes, template)
+            union.update(holes)
+    return per, rows_from_faces(sorted(union), template)
 
 
 def lay_out(widths):
@@ -266,13 +367,15 @@ def err(exp, tgt):
 
 
 def irreducible_error(build_fn, tgt, bats, restarts=3):
-    """Estimate best achievable error via multiple tuner restarts.
-    Returns (best_error, best_sections). If actual is close to best,
-    the miss is architectural, not solver failure."""
-    import random
+    """Best error from independent tuner restarts.
+
+    build_fn(seed=) owns its own RNG. The returned error is a probe,
+    not a copy of the card already chosen. classify_review uses the
+    gap between the shipped card and this probe.
+    """
     best_err, best_secs = float('inf'), None
     for i in range(restarts):
-        widths, secs = build_fn(seed=i)
+        _widths, secs = build_fn(seed=i)
         e = err(expected(secs, bats), tgt)
         if e < best_err:
             best_err, best_secs = e, secs
@@ -280,23 +383,37 @@ def irreducible_error(build_fn, tgt, bats, restarts=3):
 
 
 def classify_review(fit_ok, actual_err, best_err):
-    """Two-tier review: SOLVER vs ARCHITECTURE-LIMITED."""
+    """Two-tier review: SOLVER vs ARCHITECTURE-LIMITED.
+
+    A shipped card that matches the probe and still misses tolerance
+    is architecture-limited. A shipped card at least 50% worse than
+    the probe is a solver miss. Tiny absolute errors stay
+    architecture-limited even when the ratio is large. A missing
+    probe is a solver review, not a silent pass.
+    """
     if fit_ok:
         return 'PASS', 'within tolerance'
-    # If errors are tiny in absolute terms, small relative gaps don't
-    # indicate solver failure
+    if best_err is None:
+        return 'SOLVER-REVIEW', (
+            'No independent probe of the best legal card. '
+            'Manual inspection recommended.')
+    if actual_err + 1e-12 < best_err:
+        best_err = actual_err
     if best_err < 0.003 and actual_err < 0.005:
         return 'ARCHITECTURE-LIMITED', (
             'Format cannot simultaneously reproduce all target event rates. '
             'Solver found the best legal card.')
-    # If actual is within 50% of best possible, solver is effectively optimal
-    if best_err > 0 and (actual_err - best_err) / best_err < 0.50:
-        return 'ARCHITECTURE-LIMITED', (
-            'Format cannot simultaneously reproduce all target event rates. '
-            'Solver found the best legal card.')
-    return 'SOLVER-REVIEW', (
-        'Optimizer may not have found the best legal card. '
-        'Manual inspection recommended.')
+    if best_err > 0:
+        gap = (actual_err - best_err) / best_err
+    else:
+        gap = actual_err - best_err
+    if gap >= 0.50:
+        return 'SOLVER-REVIEW', (
+            'Optimizer may not have found the best legal card. '
+            'Manual inspection recommended.')
+    return 'ARCHITECTURE-LIMITED', (
+        'Format cannot simultaneously reproduce all target event rates. '
+        'Solver found the best legal card.')
 
 
 TUNE_CELLS = [
@@ -385,7 +502,9 @@ def build_one(row):
            'bbp': ubb/pa, 'sop': so/pa, 'hrp': hr/pa, 'hbpp': hbp/pa}
     bats = row['Bats'].strip().upper()[0]
     comps = select_comps(tgt)
-    # v0.4: multi-start optimization (10 restarts)
+    # v0.4: multi-start optimization (10 restarts). Each restart has its
+    # own Random so the process-wide RNG is left alone and a rerun with
+    # the same seeds reproduces the starts.
     import random
     base_widths = prescale(build_initial(comps), tgt, bats)
     starts = []
@@ -395,8 +514,8 @@ def build_one(row):
     starts.append(('rate-derived', rd))
     # 8 randomized legal seeds
     for i in range(8):
-        random.seed(1000 + i)
-        rw = {k: max(0, v + random.randint(-15, 15))
+        rng = random.Random(1000 + i)
+        rw = {k: max(0, v + rng.randint(-15, 15))
               for k, v in base_widths.items()}
         starts.append((f'random-{i}', rw))
     best_err, best_secs, best_idx, init_err = float('inf'), None, -1, None
@@ -406,37 +525,47 @@ def build_one(row):
             init_err = e
         if e < best_err:
             best_err, best_secs, best_idx = e, secs, idx
-    # v0.4: exhaustive neighborhood search ±1, ±2 around best
+    # Neighborhood search changes one width, then repacks the hand from
+    # face 1. Scoring the unrepacked endpoint edit let bands overlap and
+    # run past 99.
     improved = True
     while improved:
         improved = False
-        cur_widths = {}
-        # reconstruct widths from best_secs (approximate via reverse)
-        # simpler: perturb the best sections directly
-        for sec in ('WHEELHOUSE', 'PATIENT', 'TOUGH', 'IN-PLAY'):
-            for hand in ('vsLHP', 'vsRHP'):
-                for outcome, rng in best_secs[sec][hand].items():
-                    if rng:
-                        key = (sec, hand, outcome)
-                        cur_widths[key] = rng[1] - rng[0] + 1
+        cur_widths = widths_from_sections(best_secs)
         for key, w in cur_widths.items():
+            if w <= 0:
+                continue
             sec, hand, outcome = key
             for delta in (-2, -1, 1, 2):
                 nw = max(0, w + delta)
                 if nw == w:
                     continue
-                # apply to a copy
-                import copy
                 s2 = copy.deepcopy(best_secs)
-                r0 = s2[sec][hand][outcome]
+                r0 = s2[sec][hand][outcome] or [1, w]
                 s2[sec][hand][outcome] = [r0[0], r0[0] + nw - 1]
+                s2 = repack_sections(s2)
                 e2 = err(expected(s2, bats), tgt)
                 if e2 < best_err - 1e-10:
                     best_err, best_secs, improved = e2, s2, True
                     break
             if improved:
                 break
-    sections = best_secs
+    sections = repack_sections(best_secs)
+    search_err = err(expected(sections, bats), tgt)
+
+    def probe(seed=0):
+        rng = random.Random(2000 + seed)
+        rw = {k: max(0, v + rng.randint(-15, 15))
+              for k, v in base_widths.items()}
+        secs, _e = tune(dict(rw), tgt, bats)
+        return rw, repack_sections(secs)
+
+    probe_err, probe_secs = irreducible_error(probe, tgt, bats, restarts=3)
+    if probe_secs is not None and probe_err < search_err:
+        sections = probe_secs
+        best_err = probe_err
+    else:
+        best_err = search_err
     exp = expected(sections, bats)
     actual_err = err(exp, tgt)
     # v0.4 diagnostics
@@ -445,7 +574,10 @@ def build_one(row):
     improvement = ((init_err - best_err) / init_err * 100) if init_err > 0 else 0
     opt_status = 'UNSTABLE INITIALIZATION' if improvement > 50 else 'STABLE'
     r = ratings(row)
-    best_comp = min(PROFILES, key=lambda p: comp_distance(p, tgt))['name']
+    ref = reference()
+    best_comp = min(ref['profiles'], key=lambda p: comp_distance(p, tgt))['name']
+    template = (ref['by_name'].get(best_comp) or {}).get('out_table') or []
+    out_by_hand, out_table = out_tables_from_holes(sections, template)
     # v0.5: audit trail
     import datetime
     audit = {
@@ -457,8 +589,8 @@ def build_one(row):
         'winning_seed': best_label,
         'restart_index': best_idx,
         'objective_score': round(actual_err, 6),
-        'best_possible_score': round(best_err, 6),
-        'neighborhood_search': 'exhaustive ±1,±2 completed',
+        'best_possible_score': round(min(search_err, probe_err), 6),
+        'neighborhood_search': 'exhaustive ±1,±2 then repack',
         'optimizer_status': opt_status,
     }
     card = {
@@ -469,7 +601,8 @@ def build_one(row):
         'based_on': 'Auto build (make_card.py): section comps + analytical tune',
         'stat_line': {k: row[k] for k in row},
         'positions': r['positions'], 'sections': sections,
-        'out_table': [dict(x) for x in BY_NAME[best_comp]['out_table']],
+        'out_table': out_table,
+        'out_by_hand': out_by_hand,
         'dp': r['dp'], 'steal': r['steal'], 'run': r['run'],
         'sac_bunt': r['sac_bunt'], 'pitcher': None,
         'audit': audit,

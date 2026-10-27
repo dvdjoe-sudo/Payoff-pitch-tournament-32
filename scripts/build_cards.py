@@ -60,8 +60,19 @@ files with the change note. Nothing here edits a game, a series, or a
 locked line; the validator's locked checks are untouched.
 
 Run from anywhere:  python3 scripts/build_cards.py
-The build is deterministic: a second run with unchanged inputs writes
-byte-identical files.
+
+Once data/cards.json exists, a run refreshes only the tournament
+block from this repo's tournament_results.json. Peak windows, dice,
+pitching charts, ids, and roster spots stay as repaired. data/rosters.json
+is not rewritten. A game import uses that same path, so a new game
+never rebuilds card bodies from the set archive.
+
+PP_REBUILD_CARDS_FROM_SETS=1 is the explicit full rebuild from the set
+folders. It replaces card bodies and roster spots. Game import does
+not set it.
+
+The full rebuild is deterministic: a second run with unchanged inputs
+writes byte-identical files.
 """
 
 import csv
@@ -636,7 +647,44 @@ def dump(obj, path):
         handle.write(text)
 
 
+def refresh_tournament_lines(cards, archive):
+    """Replace only each card's tournament block.
+
+    Matching is by club and normalized name, the same key the archive
+    uses. A card with no appearance gets tournament null. Nothing else
+    on the card is read for writing.
+    """
+    master_ids, master_lines, master_decisions = tournament_index(archive)
+    changed = 0
+    for card in cards.values():
+        key = (card.get("team"), norm_name(card.get("name")))
+        updated = aggregate_tournament(
+            key, master_lines, master_decisions, master_ids)
+        if card.get("tournament") != updated:
+            card["tournament"] = updated
+            changed += 1
+    return changed
+
+
+def preserve_existing_cards():
+    """Refresh tournament lines and leave repaired card bodies in place."""
+    cards_path = os.path.join(ROOT, "data", "cards.json")
+    cards = load_json(cards_path)
+    archive = load_json(os.path.join(ROOT, "tournament_results.json"))
+    changed = refresh_tournament_lines(cards, archive)
+    dump(cards, cards_path)
+    print("preserved repaired card bodies")
+    print("players: %d" % len(cards))
+    print("tournament lines refreshed: %d" % changed)
+    print("data/rosters.json was not rewritten")
+    return 0
+
+
 def main():
+    cards_path = os.path.join(ROOT, "data", "cards.json")
+    rebuild = os.environ.get("PP_REBUILD_CARDS_FROM_SETS") == "1"
+    if os.path.exists(cards_path) and not rebuild:
+        return preserve_existing_cards()
     cards, rosters, reconciliations, peak_notes = build()
     dump(rosters, os.path.join(ROOT, "data", "rosters.json"))
     dump(cards, os.path.join(ROOT, "data", "cards.json"))

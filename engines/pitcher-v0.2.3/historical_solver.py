@@ -8,7 +8,6 @@
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pitcher_solver import optimize, evaluate_vs_hitters
-from event_vectors import VECTORS_RHP, VECTORS_LHP
 from aliases import resolve
 
 # Normal six
@@ -20,31 +19,29 @@ SPECIAL_OUTCOMES = ['TOUGH-OUT', 'PATIENT-OUT']
 FIT_THRESHOLD = 0.005  # v0.2: if core-six fit worse than this, try specials
 
 
-def solve_historical(target, pitcher_hand='R', restarts=10):
+def solve_historical(target, pitcher_hand='R', restarts=10, seed=0):
     """Solve with escalation. Returns (table, events, diagnostics).
-    
-    Tries SO modifiers NONE, +10, +20. Reports which was selected.
-    """
-    from calibration import SO_MODIFIERS, apply_so_modifier
-    import pitcher_solver
-    from event_vectors import VECTORS_RHP, VECTORS_LHP
 
-    orig_outcomes = pitcher_solver.OUTCOMES
+    Tries SO modifiers NONE, +10, +20. The same seed is used for each
+    modifier, and the modifier is applied inside the evaluation in the
+    v2 direction, so the winner is the modifier that fits, not a
+    second random search.
+    """
+    import pitcher_solver
+
+    orig_outcomes = list(pitcher_solver.OUTCOMES)
     best_overall = None
 
-    # Try each SO modifier
     for mod in ['NONE', '+10', '+20']:
-        pitcher_solver.OUTCOMES = NORMAL_OUTCOMES
-        # Temporarily patch the TOUGH vector if modifier active
-        # (v0.2.2: applied during evaluation via custom vectors)
-        tbl, err, diag = optimize(target, restarts=restarts)
-        # TODO: apply modifier to evaluation
-        # For now, record modifier tried
+        pitcher_solver.OUTCOMES = list(NORMAL_OUTCOMES)
+        tbl, err, diag = optimize(
+            target, restarts=restarts, hand=pitcher_hand,
+            seed=seed, so_modifier=mod)
         if best_overall is None or err < best_overall[1]:
             best_overall = (tbl, err, diag, mod)
 
     tbl, err, diag, mod = best_overall
-    ev = evaluate_vs_hitters(tbl, pitcher_hand)
+    ev = evaluate_vs_hitters(tbl, pitcher_hand, mod)
 
     result = {
         'table': tbl, 'events': ev, 'fit_error': err,
@@ -53,11 +50,14 @@ def solve_historical(target, pitcher_hand='R', restarts=10):
         'diagnostics': diag,
     }
 
-    # Escalate to specials if needed (existing logic)
+    # Escalate to specials if needed (existing logic). The winning
+    # modifier stays in the evaluation.
     if err >= FIT_THRESHOLD:
-        pitcher_solver.OUTCOMES = NORMAL_OUTCOMES + SPECIAL_OUTCOMES
-        tbl2, err2, diag2 = optimize(target, restarts=restarts)
-        ev2 = evaluate_vs_hitters(tbl2, pitcher_hand)
+        pitcher_solver.OUTCOMES = list(NORMAL_OUTCOMES) + list(SPECIAL_OUTCOMES)
+        tbl2, err2, diag2 = optimize(
+            target, restarts=restarts, hand=pitcher_hand,
+            seed=seed + 1, so_modifier=mod)
+        ev2 = evaluate_vs_hitters(tbl2, pitcher_hand, mod)
         specials_used = set(tbl2.values()) & set(SPECIAL_OUTCOMES)
         result.update({
             'table': tbl2, 'events': ev2, 'fit_error': err2,
