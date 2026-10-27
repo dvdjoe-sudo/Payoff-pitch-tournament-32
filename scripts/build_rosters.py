@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "ATL":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Bob Horner (`hornebo01`) joins Atlanta as bench BAT2/3B/1B #6, replacing Mark Wohlers (`wohlema01`) on the active pitching staff. Phil Niekro remains the long-relief/emergency-start option. The active 26 are 9 lineup hitters, 6 bench players, 5 starters and 6 bullpen pitchers.",
+            "",
+            "Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are unchanged. This amendment applies to future tournament games only. All authentic earlier cards (including Wohlers's), completed games and original dice/FAC records remain historical and unchanged. Horner's authentic playable Hitter v0.5 conversion must use Braves franchise seasons only; no invented card numbers have been supplied.",
+            "",
+        ]
+
     if code == "DET":
         lines += [
             "### Approved active roster amendment (2026-10-27)",

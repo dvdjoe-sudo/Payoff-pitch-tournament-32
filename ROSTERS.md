@@ -489,6 +489,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF4 Ronald Acuña Jr. (Speed/Power)
 - BAT David Justice (LH Power)
 - DEF Andrelton Simmons (Elite Defense)
+- BAT2 Bob Horner (RH Power/3B/1B)
 
 ### Rotation
 
@@ -504,9 +505,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 - SU Raisel Iglesias R
 - SU/LH Mike Remlinger L
 - MID Gene Garber R
-- PWR Mark Wohlers R
 - LH Jonny Venters L
 - LR/SP Phil Niekro R
+
+### Approved active roster amendment (2026-10-27)
+
+Bob Horner (`hornebo01`) joins Atlanta as bench BAT2/3B/1B #6, replacing Mark Wohlers (`wohlema01`) on the active pitching staff. Phil Niekro remains the long-relief/emergency-start option. The active 26 are 9 lineup hitters, 6 bench players, 5 starters and 6 bullpen pitchers.
+
+Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are unchanged. This amendment applies to future tournament games only. All authentic earlier cards (including Wohlers's), completed games and original dice/FAC records remain historical and unchanged. Horner's authentic playable Hitter v0.5 conversion must use Braves franchise seasons only; no invented card numbers have been supplied.
 
 ## 8. Pittsburgh Pirates (PIT)
 

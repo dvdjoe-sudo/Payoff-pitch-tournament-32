@@ -576,6 +576,7 @@ def build():
     apply_nationals_roster_amendment(cards, rosters)
     apply_giants_roster_amendment(cards, rosters)
     apply_tigers_roster_amendment(cards, rosters)
+    apply_braves_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -593,6 +594,7 @@ AUTHORIZED_HITTERS = (
     "PHA|valoel01",
     "SF|irvinmo01",
     "DET|gibsoki01",
+    "ATL|hornebo01",
 )
 
 
@@ -1019,6 +1021,55 @@ def apply_tigers_roster_amendment(cards, rosters):
         raise SystemExit("Detroit approved 26 must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Detroit must carry 26 unique active players")
+
+
+def apply_braves_roster_amendment(cards, rosters):
+    """Joe-approved Atlanta 6/6: Horner for Wohlers, future games only.
+
+    Keep Niekro in long/emergency relief and preserve all existing
+    Mark Wohlers cards and any historical records unchanged.
+    Bob Horner requires a genuine Braves-only Hitter v0.5 conversion.
+    """
+    roster = rosters.get("ATL")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "wohlema01"]
+    horner_id = "hornebo01"
+    found = [p for p in players if p["id"] == horner_id]
+    if not found:
+        players.append({
+            "group": "bench", "id": horner_id, "kind": "hitter",
+            "name": "Bob Horner", "pos": "3B", "slot": 6,
+        })
+    elif len(found) != 1:
+        raise SystemExit("duplicate Atlanta Bob Horner roster entries")
+    else:
+        found[0].update(group="bench", kind="hitter", pos="3B", slot=6)
+    # A stored authentic Horner card survives complete set rebuilds.
+    # Never invent card bands, statistical peaks or performance ratings.
+    for player_id, group, slot, pos, kind in (
+        (horner_id, "bench", 6, "3B", "hitter"),
+        ("ventejo01", "bullpen", 5, "RP", "pitcher"),
+        ("niekrph01", "bullpen", 6, "RP", "pitcher"),
+    ):
+        match = [p for p in players if p["id"] == player_id]
+        if len(match) != 1:
+            raise SystemExit("Atlanta missing active role: " + player_id)
+        match[0].update(group=group, slot=slot, pos=pos, kind=kind)
+        card = cards.get("ATL|" + player_id)
+        if card:
+            card["spots"] = [{
+                "group": group, "slot": slot, "pos": pos, "kind": kind,
+            }]
+    # Historical ATL|wohlema01 is not deleted or edited here.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Atlanta approved 26 must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Atlanta requires 26 unique active players")
 
 
 def dump(obj, path):

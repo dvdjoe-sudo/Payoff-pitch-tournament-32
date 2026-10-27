@@ -785,6 +785,46 @@ def check_tigers_roster_amendment(check: Check) -> None:
                  "Future set rebuilds preserve the Detroit personnel change")
 
 
+def check_braves_roster_amendment(check: Check) -> None:
+    """Approved Atlanta Bob Horner / Mark Wohlers active switch."""
+    all_rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    atl = all_rosters["ATL"]
+    players = atl["players"]
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["ATL"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26 and
+                 counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Atlanta approved 26 has 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Atlanta bullpen and bench slots are sequential")
+    horner = [p for p in players if p["id"] == "hornebo01"]
+    check.expect(len(horner) == 1 and horner[0]["group"] == "bench"
+                 and horner[0]["slot"] == 6 and horner[0]["pos"] == "3B",
+                 "Bob Horner is Braves' sixth bench hitter")
+    check.expect("wohlema01" not in ids,
+                 "Mark Wohlers is not on Atlanta active roster")
+    niekro = [p for p in players if p["id"] == "niekrph01"]
+    check.expect(len(niekro) == 1 and niekro[0]["group"] == "bullpen"
+                 and niekro[0]["slot"] == 6,
+                 "Phil Niekro remains Atlanta bullpen long-relief option")
+    check.expect(any("Bob Horner" in s for s in announced["bench"])
+                 and not any("Mark Wohlers" in s for s in announced["bullpen"])
+                 and len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6,
+                 "Braves announced roster matches owner-approved amendment")
+    check.expect("ATL|wohlema01" in cards,
+                 "Mark Wohlers historical pitcher card is preserved")
+    docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Bob Horner (`hornebo01`) joins Atlanta" in docs,
+                 "Atlanta amendment appears in published rosters")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_braves_roster_amendment(cards, rosters)" in builder,
+                 "Atlanta amendment persists across full set rebuilding")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -807,6 +847,7 @@ def main() -> int:
     check_giants_roster_amendment(check)
     check_unique_player_roster_limit(check)
     check_tigers_roster_amendment(check)
+    check_braves_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

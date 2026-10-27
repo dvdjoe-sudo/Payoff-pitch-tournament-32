@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Atlanta Braves Bob Horner for Mark Wohlers (Joe-approved)
+
+Bob Horner becomes bench hitter #6 (RH power, third and first base coverage); Mark Wohlers becomes inactive. Phil Niekro remains in the long/emergency relief role at bullpen #6, with Jonny Venters moved to bullpen #5. Atlanta's active roster becomes 9/6/5/6, with only 26 distinct players. The original Braves cards, including Wohlers's converted pitching chart, remain stored unchanged; all completed games, box scores, scores and FAC/dice records remain unchanged. A genuine Braves-only Horner Hitter v0.5 conversion remains pending. Update is synchronized to all active roster sources and to the full-rebuild procedure.
+
 ## 2026-10-27 — Detroit Tigers Kirk Gibson for Tyler Holton (Joe-approved)
 
 Kirk Gibson (OF/PR) becomes Detroit's bench6 hitter, Tyler Holton becomes inactive and the two surviving later relief roles are renumbered to RP5 Dizzy Trout / RP6 Denny McLain. Active 26: 9/6/5/6. Detroit's owner roster, converted active roster, rebuild adapter, website and validation are synchronized. Every R1-04 Detroit–Arizona game, authentic earlier card (including Holton), archived box score, manager log and dice/FAC sequence remains unchanged. Gibson's genuine Detroit-franchise-only Hitter v0.5 conversion remains pending, without fabricated card ratings.
