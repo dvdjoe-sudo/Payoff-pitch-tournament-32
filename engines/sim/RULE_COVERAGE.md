@@ -1,0 +1,116 @@
+# Payoff Pitch full-game rule coverage
+
+The only sources used here are the 146-page Payoff Pitch Baseball rulebook (©2021 Sideline Strategy Games, Joe Bryan) and the 1986 season card set. The Quick Results booklet and the separate two-page Ratings and Symbols sheet are not official and are not used. Page 39 of the rulebook is the Ratings and Symbols Addendum. It is part of the book.
+
+Status words:
+
+- **Implemented.** The code follows the printed sentence.
+- **Ambiguous.** The book can be read more than one way. The log says which reading was used.
+- **Missing data.** The chart needs a rating the card or roster does not have. No rating is invented.
+
+Dice only. Fast Action Cards are an official method (pages 12–15). The deck is not in this repository.
+
+The rate harness in `pa_sim.py` is a different tool. It is unchanged. Its error chart treats several page-20 error faces as outs and treats SINGLE+error as a reached-on-error. This game follows the printed ERR chart: a numbered error is that many bases, and SINGLE+error is a hit plus one extra base.
+
+## Plate appearance
+
+- **Pitcher 2d6, then the batter section (pages 2–4).** Implemented. Percentile 00 on the initial roll is a rare play (page 4). A face that misses the section is an out (page 4).
+- **PATIENT-OUT (page 2).** Implemented. A walk or hit by pitch counts. Anything else uses the OUT section. If that face is also outside the OUT section, page 2 says to use the out printed with the pitcher result. These cards store the words PATIENT-OUT and do not store that out. The log names the gap and records an out with no fielding code.
+- **TOUGH-OUT (page 2).** Implemented. A strikeout counts. A face above the strikeout band is an out, including a face that sits in a hit band. A face below the band keeps its printed result.
+- **Page 39 +10 / +20.** Implemented on a plain TOUGH result, on by default, because it is a printed rating. 00 is not shifted. A sum over 99 keeps the original face. **Ambiguous:** the addendum names TOUGH and does not name TOUGH-OUT. The shift is not applied to TOUGH-OUT.
+- **BALLPARK (pages 2 and 9).** Implemented. The home park’s wheelhouse column follows the batter’s stance (left column `wh_l`, right column `wh_r`). Inside that range, the re-roll is read on WHEELHOUSE. Otherwise it is read on IN-PLAY. **Ambiguous:** page 9 says re-roll the dice. Page 2 and the FAC instructions (page 13) name the percentile. This game re-rolls the percentile and keeps the 2d6.
+- **/IN-PLAY/ (page 3).** Toggle `slash_in_play`. `normal` (the default) always reads IN-PLAY, which is the cross-era option. `first_inning` uses the printed first-inning / later-inning split. `out_section` uses the batter’s OUT section. These cards do not contain `/IN-PLAY/`, and they do not store the out printed beside it. **Missing data** if that mode is turned on.
+- **Supplemental strikeout band (page 11).** Toggle `supplemental_so`, default off. The band starts at 50 or 90. **Missing data:** these cards store +10 or +20, which is the page 39 TOUGH shift, not that band. Turning the toggle on does not change an out.
+- **Optional 00 home run (page 39).** Toggle `zero_hr`, default off. It applies only when the HR range is blank or 0.
+
+## Baserunning
+
+- **Basic (pages 5–6 and 16).** Default. Runners move as many bases as the hit. With two outs, or on a WHEELHOUSE hit, they take one more. A triple or home run scores everyone.
+- **PATIENT extra base (pages 6 and 16).** Implemented when the automatic extra base does not already apply. The lead runner goes when a new 2d6 is less than RUN. The coach’s chart then compares 2d6 with RUN and ARM. **Ambiguous:** a PATIENT hit with two outs is named by both sentences. This game uses the two-out extra base and does not add a second attempt.
+- **Advanced chart (page 16).** Toggle `running="advanced"`. The low die of the at-bat’s 2d6 is the column. With two outs, RUN 6 or higher takes two on a single and scores on a double. RUN 5 or lower has the coach’s choice. **Ambiguous:** the chart has no column for a runner on third, or for a runner on second when the hit is a double. That runner takes the same number of bases as the hit, and the log says so.
+- **Fast Action Card running (pages 12–15).** Not used. The deck is absent.
+- **Hit location (page 16).** Implemented from the ones digit. A slash uses the left fielder for a left-handed batter and the right fielder for a right-handed batter. A switch hitter stands opposite the pitcher (page 5 does not say this in those words; the card engine already treats a switch hitter that way, and the park column uses the same stand).
+
+## Outs, double plays, flies, bunts, hit and run, infield in
+
+- **Strikeout, popout, lineout (pages 5 and 17).** Implemented. Runners hold.
+- **Ground ball with a runner on first and fewer than two outs (pages 6 and 17).** Implemented. The lower of the pitcher DP and the batter DP is the rating. 2d6 at or under it is a double play. 2d6 of 11 or 12 is a play at first and the runners advance one. Anything between is a fielder’s choice. The at-bat percentile’s exceptions are included: a 5 with runners on first and second and the ball to the third baseman, shortstop, or pitcher puts the runner from second out at third; a 5 on a fielder’s choice to the shortstop or third baseman puts the runner from second out at third; a 6 to the shortstop is the ordinary 4-6-3. **Ambiguous:** the first exception does not say what the runner on first does, or whether a runner on third scores. They hold. **Missing data:** if one of the two DP ratings is absent, the one that exists is used alone and the log says page 6 wanted the lower of the two. A missing rating is not filled in with 12.
+- **G3 unassisted (page 17).** Implemented as a log note. A percentile ending in 3–9 is unassisted. Ending in 0, 1, or 2 is a throw to the pitcher covering. The batter is out either way.
+- **Ground ball with first base empty (page 17).** Implemented, including the pitcher’s look-back, the automatic score from third on a ball to the second baseman or shortstop, the choice from third on a ball to the corners, and the runner on second.
+- **Fly balls (page 17).** Implemented. WHEELHOUSE and PATIENT are deep. A runner who scores from third, when the catch is not the third out, is a sacrifice fly and not an at-bat. **Ambiguous:** page 17 says a runner on third scores on a deep fly and does not mention the third out. This game does not count a run on the third out.
+- **Sacrifice bunt, option 1 (page 9 and the page 19 chart).** Implemented. Option 2 cannot run. **Missing data:** the cards store the bunt letter and do not store the 2d6 auto-bunt numbers. A declared bunt is a usage choice: the 8 or 9 hitter, a runner on first, nobody on third, fewer than two outs. The squeeze is coded (column D, page 19) and is not called on its own.
+- **Hit and run (pages 10 and 18).** Optional, and on. The moment it is called is a usage choice: runner on first, nobody on third, one out, lineup slot 2 or 6. WHEELHOUSE re-rolls all four dice. Doubles are read as a normal wheelhouse. 00–49 is a single and the runners take two. 50–99 is the OUT section. PATIENT is a foul re-rolled on IN-PLAY. A walk is refused. **Ambiguous:** the book does not say what that walk becomes. It is re-read on IN-PLAY. **Ambiguous:** PATIENT-OUT is not named, so it follows PATIENT. A lineout doubles off the lead runner. **Ambiguous:** the book says the closest runner and does not say how to measure closest. A runner rated 7 or higher scores from first on a single when the outfielder’s arm is 8 or higher. Otherwise he stops at third. F8 and F9 with a runner still on first use the extra 2d6 and 1d10. **Ambiguous:** 1d10 is read as 0–9. The book does not say whether 0 is 10.
+- **Infield in (pages 7 and 19).** Optional. Declared only from the 7th inning on, with a runner on third, fewer than two outs, and the score within one. That moment is a usage choice. The 2–5, 6–8, 9–10, and 11–12 rows are implemented, including the bases-loaded notes and the play at home. **Ambiguous:** the bases-loaded 1d10 is read as 0–9.
+
+## Steals, pickoffs, wild pitches
+
+- **Auto steal (page 7, option 2).** Default. One check when the batter reaches and the next base is open. Third base needs doubles and a total at or under Jump. No Jump rating means he does not go. **Ambiguous:** the book says to compare the 2d6 and does not say whether that is the at-bat’s 2d6 or a new roll. This game rolls a new 2d6. The FAC instructions (page 13) say to use the last card, or to draw another if preferred.
+- **Manager’s choice (page 7, option 1).** Not the unattended default. The stealing and stealing-home charts are transcribed. Auto steal never sends a runner home, because option 2 only checks the batter who just reached.
+- **Hold (page 7, option 3).** Toggle `steal="hold"`. A new 2d6 is compared with the pitcher’s Hold. **Ambiguous:** the book says to roll four dice and does not say the roll is separate from the at-bat. **Missing data** when Hold is blank.
+- **Jump + / − and Jump 1 (pages 8 and 39).** Implemented. The plus or minus applies the first time he reaches with a steal chance. Jump 1 is used as 2 that once, and he is not checked again.
+- **Steal dagger (page 39).** **Missing data.** No card stores the dagger after the steal letter, so a catcher arm of 1 or 2 is not rewritten to 3.
+- **Catcher arm (page 8).** The chart is arms 1 through 5, 1 the best. **Missing data** on these rosters: the converted catcher arms are mostly 6, 7, or 8. The steal is not given a result. The runner holds. Arms are not mapped onto 1–5.
+- **Pickoff on double 6s (pages 8 and 18).** Implemented when Hold exists. **Ambiguous:** a wild pickoff has a second error roll on page 18. This game advances the runners one base and does not assign that error.
+- **Steal DROP fielder (page 18).** **Ambiguous:** the key uses the batter’s hand. After the batter has reached, the runner’s hand is what the base dict still has. The log says so.
+- **Wild pitch (page 10).** Implemented, including a second wild pitch on the re-roll. Ratings stored as `30` or `30-32` are both read. A pitcher with no rating can wild-pitch only from a rare-play cell. **Missing data** wherever `wp` is null.
+
+## Defense, errors, parks
+
+- **Defense chart (pages 2 and 20).** Implemented. The at-bat percentile picks RANGE or ERROR and the position. All four dice are then re-rolled for the park. RANGE that lands on the catcher uses center field (page 2). A park percentile of 00 is outside every 1–99 band and is played as an out. The book defines 00 as a rare play on the initial roll, not on this re-roll.
+- **HIT chart stars and the dagger triple (page 20).** Implemented.
+- **ERR chart (page 20).** Implemented as printed. A dropped foul restarts the at-bat. SINGLE+error is a hit plus one extra base.
+- **OUT chart (page 20).** Implemented, including the range letters on the double-play rows and the arm-5 short-fly double play. **Ambiguous:** the double-play row does not say whether other runners advance. They hold. The lineout double play says the closest runner. The lead runner is used.
+- **Park charts.** Home park is the 1986 card when that stadium is also one of the 12 charts in the rulebook (pages 109–110). Fenway’s faces match. A club with no 1986 park in that set is refused. Colorado, Miami, Tampa Bay, Arizona, Washington, and the Philadelphia Athletics are in that group.
+- **Pitcher fielding.** **Missing data.** Pitcher cards have no fielding line. A range or error check against the pitcher is logged and recorded as an out, because the park band cannot be read. No grade is invented.
+- **Average fielding.** Where a card still has the engine default (range C, error 4, label Average), the log says that grade is not a printed rating. Boston and Toronto fielders in the sample game are not in that group. Empty-roster clubs are.
+
+## Fatigue, relief, injury
+
+- **Starter fatigue (pages 10–11 and 21).** Implemented when Start stamina exists. He tires in the inning equal to Start if he has allowed 3 or more runs, and at 6 runs in any inning. A fatigued BALLPARK is read on WHEELHOUSE with the same percentile. PATIENT and TOUGH are re-read on the page 21 chart. A fatigue single uses the original PATIENT or TOUGH advancement. Slash and OUT qualities are ignored while he is tired (page 21).
+- **Short and long relief (page 11).** Implemented. Each inning he appears in counts as one. Short tires at 2 runs, or after the second inning ends. Long tires at 3 runs, or after the third inning ends.
+- **Removing a tired pitcher.** Not required. The book lets him stay on the fatigue card. This game brings a fatigued starter out at the end of the half-inning, a Short man out after one completed inning, and a Long man out after three. The next arm is the next name in the roster’s bullpen. That order is a usage choice.
+- **Save symbol #, †, or + (pages 11 and 39).** **Missing data.** No card stores it. The save-situation exception is not applied.
+- **Empty stamina.** **Missing data** on pitchers built for clubs that did not yet have a printed stamina line. Whitey Ford and the other empty-roster Yankees pitchers are the example. Fatigue is not invented. The log says pages 10–11 cannot say when he tires, and he can stay in the game. Pedro Martinez (Start 6) and Dave Stieb (Start 7) have stamina. The sample game uses them.
+- **Pitcher rest chart (page 21).** Not applied. It is days of rest between games. This is one game.
+- **Injury chart (page 21).** Implemented when a coded play calls for it. A player with no Prone / Normal / Durable / Iron rating is not given Normal. Most rare-play injury sentences sit in cells that are not transcribed.
+
+## Rare plays (pages 22–30)
+
+A 00 re-rolls the percentile and looks up the cell. Coded cells, bases empty unless noted:
+
+- Wheelhouse 00–05 and Patient 00–05: the pitcher leaves and is checked for injury.
+- Wheelhouse 06–13: foul ball, catcher injury check, the at-bat is not a result.
+- Wheelhouse 14–16: line drive off the pitcher. RUN 6 or less is out. RUN 7 or more is a single.
+- Wheelhouse 17–26: groundout, batter leaves.
+- Wheelhouse 27–56: weather die. 1–2 no effect. 3–4 both current pitchers leave. 5–6 postponed. Official only from the sixth inning.
+- Wheelhouse 57–66: RUN 5 or less is a single. RUN 6 or more is a double and then out at third.
+- Wheelhouse 67–76: home run unless the center fielder’s range is A.
+- Wheelhouse 77–79 and 92–99: the printed outs.
+- Wheelhouse 80–86: out if the left fielder’s range is A, otherwise a single.
+- Wheelhouse 87–91: double.
+- Patient walks, strikeouts, and hit by pitches on page 22, for the bands in `rare.py`.
+- Tough 00–12 strikeouts, and 45–64 the dropped third strike.
+- In-play 06–11: single off the pitcher.
+- Defense 94–99, bases empty: restart the at-bat.
+- Runners on, wheelhouse 70–79: single, runners advance two.
+
+Every other cell is **not transcribed**. The log names the section and the percentile. The at-bat is rolled again. The book does not say to replay it. Replay exists so a test game can finish.
+
+Lasting sentences that are coded only in part: the extra out on a dropped third strike is logged and not added. Ejections, suspensions, and “every TOUGH becomes a strikeout for the rest of the game” are not modeled. Those cells are mostly still in the uncoded set.
+
+## Things the book does not define
+
+- **Designated hitter.** The word does not appear. Any of the nine lineup hitters may be the DH. The pitcher does not bat, because the roster lists nine hitters. Jose Bautista is Toronto’s DH and does not field. **Ambiguous:** Boston lists David Ortiz and Jimmie Foxx both at first base. The book does not say who fields. Ortiz fields. Foxx hits and does not field.
+- **Extra innings.** The book does not say. A tie after nine continues one full inning at a time until one side leads. Nobody is placed on second. A safety stop at 30 innings is not a rule. The sample game did not need it.
+- **Earned runs.** Not defined. The box counts runs only.
+- **Which hand covers second on a steal DROP after the batter is already aboard.** See steals.
+
+## Logged game
+
+`engines/sim/samples/tor-at-bos-seed1.txt`
+
+Toronto at Boston, Fenway Park, seed 1. Final: Toronto 5, Boston 8, nine innings. Pedro Martinez 9 innings, 5 runs. Dave Stieb 7 innings, 8 runs. Tom Henke 1 inning, 0 runs. Mark Eichhorn was brought in for the ninth and did not face a batter, because Boston led after the top of the ninth and the bottom was not played.
+
+The file is a hand check. It is not in `tournament_results.json`. Played games are unchanged. The service-worker cache is unchanged.
+
+`python3 engines/sim/test_game.py` checks the charts, a scripted double play, sacrifice, steal, defense hit, ballpark split, fatigue single, the extra-inning continuation, and this seed. `python3 engines/sim/test_pa_sim.py` still passes. The rate harness was not edited.
