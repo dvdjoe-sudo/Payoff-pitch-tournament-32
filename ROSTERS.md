@@ -1618,7 +1618,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - UTIL Garrett Hampson IF/OF R 5
 - OF4 Trevor Story SS/OF R 6
 - IF2 Mark Reynolds 1B/3B R 5
-- BAT Ian Desmond OF R 5
+- BAT Carlos González OF L (Colorado 2009-2018)
 - OF5 Ellis Burks OF R 5
 
 ### Rotation
@@ -1637,6 +1637,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MR Jerry DiPoto 7
 - MR Matt Belisle 7
 - LHP Boone Logan 6
+
+### Approved Colorado active-roster amendment (2026-10-27; future games only)
+
+Carlos González (`gonzaca01`) replaces Ian Desmond (`desmoia01`) as **Colorado Rockies bench hitter #5**, a **left-handed outfield reserve (LF/CF/RF)**. González is evaluated **only from his Colorado Rockies 2009–2018 seasons**, excluding Oakland and Cleveland. The change is approved **only for games after the already-played R1-05 series**. Desmond leaves the **active 26** but his authentic converted historical card remains archived; prior appearances, if any, still count as historical records.
+
+Colorado keeps the entire nine-man starting batting order, including Andrés Galarraga **starting at DH batting ninth**, all five rotation pitchers, all six bullpen pitchers and the other five bench hitters. The active roster stays **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct players. All prior game results, scores, standings, original box scores, FAC/dice roll logs and historical converted cards remain unchanged.
+
+González's verified Colorado-only Peak 162 display is awaiting a Lahman generator rebuild and his genuine frozen **Hitter v0.5** playable conversion remains pending; **no fabricated dice ratings or statistics** are published.
 
 ### Players in the results file
 

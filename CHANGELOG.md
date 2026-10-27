@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Colorado Rockies Carlos González for Ian Desmond (future games only)
+
+Colorado #28 owner approval: **Carlos González** (`gonzaca01`) replaces Ian Desmond (`desmoia01`) at **bench slot #5**, serving as a left-handed reserve for LF/CF/RF. Count **Colorado Rockies seasons 2009–2018 only** for Peak 162 and his future frozen Hitter v0.5 playable card. Desmond is inactive but the original historical converted card stays archived. **Future games only**, after Colorado's recorded four-game R1-05 series; results, box scores, dice/FAC rolls and all played game records remain unchanged. The nine-man starting lineup (including Andrés Galarraga DH ninth), all five SP, all six RP and other five bench players stay intact. Exactly 9/6/5/6 active, 26 unique players. Authentic playable González card and verified Colorado-only Peak 162 pending; no invented cards or stats.
+
 ## 2026-10-27 — Padres Ken Caminiti starting DH with 3B eligibility (owner-approved)
 
 The original San Diego Padres #26 batting order remains untouched. **Ken Caminiti (`caminke01`) starts at DH batting fourth**, and is **eligible at both 3B and DH**; **Manny Machado (`machama01`) starts at 3B batting sixth**. The active roster stores Caminiti's starting position as `DH`, with `eligible_positions: ["3B", "DH"]`. Future roster rebuilding and the club's player-card roster display keep both positions visible. The owner-announced lineup already showed Caminiti DH. All 26 players remain 9/6/5/6, with unchanged bench, rotation and bullpen. Original converted cards, tournament games, box scores and dice/FAC history remain untouched.

@@ -2032,15 +2032,11 @@
      1997
     ]
    },
-   "BAT Ian Desmond OF R 5": {
-    "lahman_id": "desmoia01",
-    "status": "ok",
-    "text": "Peak 162 with Colorado Rockies (2017–2019). Three franchise seasons; best 3. 162 G, 605 PA, 548 AB, 79 R, 138 H, 26 2B, 5 3B, 20 HR, 79 RBI, 16 SB, 46 BB, 144 SO, .252/.313/.429/.742",
-    "years": [
-     2017,
-     2018,
-     2019
-    ]
+   "BAT Carlos González OF L (Colorado 2009-2018)": {
+    "lahman_id": "gonzaca01",
+    "status": "unavailable",
+    "text": "Peak stats unavailable",
+    "reason": "Awaiting verified Colorado Rockies-only Lahman Peak 162 rebuild for 2009-2018; no invented statistics"
    },
    "C2 Yorvit Torrealba C R 10": {
     "lahman_id": "torreyo01",

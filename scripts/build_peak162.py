@@ -807,6 +807,15 @@ def main() -> None:
 
 
 
+
+            if club == "COL" and pid == "gonzaca01":
+                # Carlos González: use ONLY the Colorado Rockies 2009-2018,
+                # never Oakland or Cleveland; this is his franchise peak.
+                cargo_colorado_years = set(range(2009, 2019))
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in cargo_colorado_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in cargo_colorado_years}
             if club == "TOR" and pid == "cartejo01":
                 # Joe Carter's Toronto Blue Jays years only; never include
                 # his previous or later teams in the franchise peak.
@@ -980,6 +989,7 @@ def main() -> None:
         ("MIL", "OF2 Ben Oglivie LF (Milwaukee 1978-1986)", "oglivbe01"),
         ("TEX", "OF2 Rubén Sierra RF S (Texas 1986-1992, 2000-2001, 2003)", "sierrru01"),
         ("TOR", "OF2 Joe Carter RF/LF R (Toronto 1991-1997)", "cartejo01"),
+        ("COL", "BAT Carlos González OF L (Colorado 2009-2018)", "gonzaca01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -1000,6 +1010,15 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    colorado_gonzalez = row("COL", "BAT Carlos González OF L (Colorado 2009-2018)")
+    if (colorado_gonzalez.get("status") != "ok"
+            or colorado_gonzalez.get("lahman_id") != "gonzaca01"
+            or not colorado_gonzalez.get("years")
+            or not all(2009 <= y <= 2018 for y in colorado_gonzalez["years"])
+            or not colorado_gonzalez.get("text", "").startswith("Peak 162 with Colorado Rockies")):
+        raise SystemExit("Carlos González Peak 162 must use Colorado-only 2009-2018")
+    if "BAT Ian Desmond OF R 5" in clubs["COL"]:
+        raise SystemExit("Inactive Ian Desmond cannot appear on Colorado active Peak 162")
     toronto_carter = row("TOR", "OF2 Joe Carter RF/LF R (Toronto 1991-1997)")
     if (toronto_carter.get("status") != "ok"
             or toronto_carter.get("lahman_id") != "cartejo01"

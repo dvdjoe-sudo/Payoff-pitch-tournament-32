@@ -592,6 +592,7 @@ def build():
     apply_milwaukee_roster_amendment(cards, rosters)
     apply_texas_roster_amendment(cards, rosters)
     apply_toronto_roster_amendment(cards, rosters)
+    apply_colorado_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -613,6 +614,7 @@ AUTHORIZED_HITTERS = (
     "MIL|oglivbe01",
     "TEX|sierrru01",
     "TOR|cartejo01",
+    "COL|gonzaca01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -684,6 +686,45 @@ def retain_empty_team_cards(cards, rosters):
 
 
 
+
+
+
+def apply_colorado_roster_amendment(cards, rosters):
+    """Owner-approved Carlos González for Ian Desmond, future games only.
+
+    Only González's Colorado Rockies 2009-2018 seasons may be used for
+    a frozen Hitter v0.5 or Peak 162. Preserve the Desmond source card,
+    all original dice/FAC records and completed games.
+    """
+    roster = rosters.get("COL")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "desmoia01"]
+    carlos_id = "gonzaca01"
+    present = [p for p in players if p["id"] == carlos_id]
+    if not present:
+        players.append({"group": "bench", "id": carlos_id, "kind": "hitter",
+                        "name": "Carlos González", "pos": "OF", "slot": 5})
+    elif len(present) != 1:
+        raise SystemExit("Duplicate Carlos González Colorado roster entry")
+    else:
+        present[0].update(group="bench", kind="hitter", pos="OF", slot=5)
+    gonzalez_card = cards.get("COL|" + carlos_id)
+    if gonzalez_card:
+        gonzalez_card["spots"] = [{"group": "bench", "slot": 5,
+                                  "pos": "OF", "kind": "hitter"}]
+    # Keep the original COL|desmoia01 genuine card as historical data.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Colorado approved 9/6/5/6 mismatch: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Colorado must have 26 unique active players")
+    dh = [p for p in players if p["group"] == "lineup" and p["slot"] == 9]
+    if len(dh) != 1 or dh[0]["id"] != "galaran01" or dh[0]["pos"] != "DH":
+        raise SystemExit("Colorado Galarraga DH changed without approval")
 
 
 def apply_toronto_roster_amendment(cards, rosters):

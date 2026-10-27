@@ -1630,10 +1630,10 @@
    },
    {
     "group": "bench",
-    "id": "desmoia01",
+    "id": "gonzaca01",
     "kind": "hitter",
-    "name": "Ian Desmond",
-    "pos": "LF",
+    "name": "Carlos González",
+    "pos": "OF",
     "slot": 5
    },
    {

@@ -1011,6 +1011,74 @@ def check_phillies_roster_amendment(check: Check) -> None:
 
 
 
+
+def check_colorado_roster_amendment(check: Check) -> None:
+    """Owner-approved CarGo for Desmond applies after four recorded games."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["COL"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["COL"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Colorado owner-approved active 26 retain 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Colorado roster roles have consecutive slots")
+    cargo = [p for p in players if p["id"] == "gonzaca01"]
+    check.expect(len(cargo) == 1 and cargo[0]["group"] == "bench"
+                 and cargo[0]["slot"] == 5 and cargo[0]["pos"] == "OF"
+                 and cargo[0]["kind"] == "hitter",
+                 "Carlos González is Colorado fifth bench hitter and reserve OF")
+    check.expect("desmoia01" not in ids,
+                 "Ian Desmond not in Colorado active 26")
+    check.expect([p["id"] for p in players if p["group"] == "lineup"]
+                 == ["blackch02", "lemahdj01", "heltoto01", "arenano01",
+                     "walkela01", "tulowtr01", "hollima01", "diazel01", "galaran01"],
+                 "Colorado original nine starters and batting positions preserved")
+    check.expect([p["id"] for p in players if p["group"] == "rotation"]
+                 == ["jimenub01", "freelky01", "cookaa01", "marquge01", "chacijh01"],
+                 "Colorado original five SP unchanged")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["fuentbr01", "streehu01", "betanra01",
+                     "dipotje01", "belisma01", "loganbo02"],
+                 "Colorado original six relievers unchanged")
+    check.expect(players[8]["id"] == "galaran01" and players[8]["pos"] == "DH"
+                 and announced["lineup"][8] == "9 Andres Galarraga DH R 5",
+                 "Colorado Galarraga stays ninth batter at DH")
+    check.expect(announced["bench"][4] == "BAT Carlos González OF L (Colorado 2009-2018)"
+                 and len(announced["bench"]) == 6
+                 and not any("Ian Desmond" in p for p in announced["bench"]),
+                 "Colorado original six bench slots now include CarGo for Desmond")
+    check.expect("COL|desmoia01" in cards,
+                 "Ian Desmond genuine converted card preserved in history")
+    cargo_card = cards.get("COL|gonzaca01")
+    check.expect(not cargo_card or bool(cargo_card.get("card_bat"))
+                 or bool(cargo_card.get("conversion_status")),
+                 "CarGo genuine Hitter v0.5 card playable or visibly pending")
+    peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["COL"]
+    cargo_peak = peak.get("BAT Carlos González OF L (Colorado 2009-2018)") or {}
+    check.expect(cargo_peak.get("lahman_id") == "gonzaca01"
+                 and (cargo_peak.get("status") != "ok"
+                      or (cargo_peak.get("years")
+                          and all(2009 <= y <= 2018 for y in cargo_peak["years"]))),
+                 "CarGo Colorado-only Peak 162 verified or explicitly pending")
+    check.expect("BAT Ian Desmond OF R 5" not in peak,
+                 "Inactive Desmond Peak 162 does not display in active Rockies")
+    docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Carlos González (`gonzaca01`) replaces Ian Desmond" in docs
+                 and "### Players in the results file" in docs,
+                 "Colorado amendment recorded ahead of immutable historic R1-05 reports")
+    check.expect("apply_colorado_roster_amendment(cards, rosters)" in
+                 (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8"),
+                 "Colorado roster swap persists through subsequent card rebuilds")
+    check.expect('club == "COL" and pid == "gonzaca01"' in
+                 (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8"),
+                 "Only Colorado 2009-2018 can enter CarGo peak stats")
+
+
 def check_toronto_roster_amendment(check: Check) -> None:
     """Approved Joe Carter for Jim Clancy, with Bautista and history preserved."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1770,6 +1838,7 @@ def main() -> int:
     check_milwaukee_roster_amendment(check)
     check_texas_roster_amendment(check)
     check_toronto_roster_amendment(check)
+    check_colorado_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 
