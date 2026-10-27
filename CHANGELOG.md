@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Offline cache v54
+
+The service worker cache is payoff-pitch-v54 so the ten new franchise-card clubs replace a cached roster or script. No game result was changed.
+
 ## 2026-10-27 — Empty-team cards, Mariners, Marlins, and Yankees (sandbox)
 
 Seattle, Miami, and the Yankees now have playable cards for every active roster spot. The Marlins bench name is Otto Lopez. The Yankees bullpen name is Mike Stanton, the left-handed reliever. Josh Johnson is the Marlins rotation ace. Tanner Scott and Anthony Bender are the Marlins lefty and middle reliever. Babe Ruth is the Yankees DH, Reggie Jackson is the OF/BAT bench bat, Allie Reynolds is the long/swing reliever, Gary Sheffield is the Marlins DH, and A.J. Burnett is the long/emergency starter. The window rule is unchanged. Lahman stops at 2025. A 2026 line is included only from the MLB Stats API snapshot retrieved 2026-10-27. Cal Raleigh, Julio Rodríguez, Andrés Muñoz, Otto Lopez, Sandy Alcantara, and Anthony Bender take a 2026 season. Aaron Judge's 2026 line is 283 plate appearances, under the 300 floor, so it stays out. Tanner Scott's 2026 innings are with the Dodgers. Miami and New York have already played; the new card ids match the box scores, and no game result was changed. The active 26s are these converted rosters: A.J. Burnett and Mike Stanton stay active. Juan Pierre and Rickey Henderson are not on the active lists, and no card was invented for them. Fielding stays the engine Average default. Pitcher stamina and the set-file addenda are empty. The comparison is `historical-cards/accuracy/empty_teams_sea_mia_nyy.json`. The 2026 pull is `historical-cards/sources/mlb_2026_sea_mia_nyy.json`. The service worker cache stays payoff-pitch-v51.
