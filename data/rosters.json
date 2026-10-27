@@ -2417,7 +2417,7 @@
     "id": "caminke01",
     "kind": "hitter",
     "name": "Ken Caminiti",
-    "pos": "DH",
+    "pos": "3B",
     "slot": 4
    },
    {
@@ -2499,6 +2499,14 @@
     "name": "Gary Sheffield",
     "pos": "3B",
     "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "gilesbr02",
+    "kind": "hitter",
+    "name": "Brian Giles",
+    "pos": "OF",
+    "slot": 6
    },
    {
     "group": "rotation",
@@ -2587,14 +2595,6 @@
     "name": "Luke Gregerson",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "leffecr01",
-    "kind": "pitcher",
-    "name": "Craig Lefferts",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 26
