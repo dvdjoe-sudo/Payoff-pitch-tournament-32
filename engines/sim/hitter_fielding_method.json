@@ -1,0 +1,635 @@
+{
+ "positions": {
+  "C": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.7899,
+     1.0003,
+     1.183,
+     1.2024
+    ],
+    "fit_1986": {
+     "n": 74,
+     "exact": 36,
+     "within_one": 60,
+     "exact_pct": 48.6,
+     "within_one_pct": 81.1
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.3902,
+     0.915,
+     1.296,
+     1.3535
+    ],
+    "fit_1986": {
+     "n": 74,
+     "exact": 32,
+     "within_one": 67,
+     "exact_pct": 43.2,
+     "within_one_pct": 90.5
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     -0.0,
+     0.7465,
+     1.1121,
+     4.2719
+    ],
+    "fit_1986": {
+     "n": 74,
+     "exact": 73,
+     "within_one": 74,
+     "exact_pct": 98.6,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "1B": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.6364,
+     0.9602,
+     1.0183,
+     1.214
+    ],
+    "fit_1986": {
+     "n": 73,
+     "exact": 35,
+     "within_one": 61,
+     "exact_pct": 47.9,
+     "within_one_pct": 83.6
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.3087,
+     0.6596,
+     1.1111,
+     1.2159
+    ],
+    "fit_1986": {
+     "n": 73,
+     "exact": 35,
+     "within_one": 65,
+     "exact_pct": 47.9,
+     "within_one_pct": 89.0
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.3355,
+     0.6368,
+     1.216,
+     4.4076
+    ],
+    "fit_1986": {
+     "n": 73,
+     "exact": 71,
+     "within_one": 73,
+     "exact_pct": 97.3,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "2B": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.411,
+     0.411,
+     1.1625,
+     1.1886
+    ],
+    "fit_1986": {
+     "n": 69,
+     "exact": 34,
+     "within_one": 67,
+     "exact_pct": 49.3,
+     "within_one_pct": 97.1
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.0694,
+     0.0694,
+     0.9301,
+     1.2723
+    ],
+    "fit_1986": {
+     "n": 69,
+     "exact": 33,
+     "within_one": 61,
+     "exact_pct": 47.8,
+     "within_one_pct": 88.4
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.3709,
+     0.7111,
+     1.0889,
+     10.2316
+    ],
+    "fit_1986": {
+     "n": 69,
+     "exact": 67,
+     "within_one": 69,
+     "exact_pct": 97.1,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "3B": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.5589,
+     0.8244,
+     1.0425,
+     1.1733
+    ],
+    "fit_1986": {
+     "n": 70,
+     "exact": 33,
+     "within_one": 63,
+     "exact_pct": 47.1,
+     "within_one_pct": 90.0
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.3205,
+     0.3224,
+     1.2013,
+     1.2013
+    ],
+    "fit_1986": {
+     "n": 70,
+     "exact": 32,
+     "within_one": 69,
+     "exact_pct": 45.7,
+     "within_one_pct": 98.6
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.4483,
+     0.8445,
+     1.2029,
+     3.1567
+    ],
+    "fit_1986": {
+     "n": 70,
+     "exact": 69,
+     "within_one": 70,
+     "exact_pct": 98.6,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "SS": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.6878,
+     0.8727,
+     1.0291,
+     1.2144
+    ],
+    "fit_1986": {
+     "n": 67,
+     "exact": 35,
+     "within_one": 62,
+     "exact_pct": 52.2,
+     "within_one_pct": 92.5
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.2383,
+     0.2383,
+     0.8723,
+     1.3337
+    ],
+    "fit_1986": {
+     "n": 67,
+     "exact": 34,
+     "within_one": 55,
+     "exact_pct": 50.7,
+     "within_one_pct": 82.1
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.5903,
+     0.8215,
+     1.2516,
+     3.7555
+    ],
+    "fit_1986": {
+     "n": 67,
+     "exact": 66,
+     "within_one": 67,
+     "exact_pct": 98.5,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "LF": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.2347,
+     0.4906,
+     0.8985,
+     1.3856
+    ],
+    "fit_1986": {
+     "n": 103,
+     "exact": 52,
+     "within_one": 90,
+     "exact_pct": 50.5,
+     "within_one_pct": 87.4
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.1694,
+     0.2106,
+     0.6854,
+     1.3897
+    ],
+    "fit_1986": {
+     "n": 103,
+     "exact": 45,
+     "within_one": 79,
+     "exact_pct": 43.7,
+     "within_one_pct": 76.7
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.0829,
+     0.8804,
+     1.2617,
+     5.008
+    ],
+    "fit_1986": {
+     "n": 103,
+     "exact": 102,
+     "within_one": 103,
+     "exact_pct": 99.0,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "CF": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.5847,
+     0.8579,
+     0.8791,
+     1.4725
+    ],
+    "fit_1986": {
+     "n": 70,
+     "exact": 39,
+     "within_one": 65,
+     "exact_pct": 55.7,
+     "within_one_pct": 92.9
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.4411,
+     0.6114,
+     0.6114,
+     1.2954
+    ],
+    "fit_1986": {
+     "n": 70,
+     "exact": 39,
+     "within_one": 64,
+     "exact_pct": 55.7,
+     "within_one_pct": 91.4
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.3166,
+     0.7886,
+     1.1547,
+     11.0584
+    ],
+    "fit_1986": {
+     "n": 70,
+     "exact": 68,
+     "within_one": 70,
+     "exact_pct": 97.1,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "RF": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.4175,
+     0.9022,
+     1.0959,
+     1.1755
+    ],
+    "fit_1986": {
+     "n": 81,
+     "exact": 41,
+     "within_one": 69,
+     "exact_pct": 50.6,
+     "within_one_pct": 85.2
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.2747,
+     0.2747,
+     1.0077,
+     1.3645
+    ],
+    "fit_1986": {
+     "n": 81,
+     "exact": 37,
+     "within_one": 71,
+     "exact_pct": 45.7,
+     "within_one_pct": 87.7
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.1656,
+     0.8288,
+     1.364,
+     4.6367
+    ],
+    "fit_1986": {
+     "n": 81,
+     "exact": 81,
+     "within_one": 81,
+     "exact_pct": 100.0,
+     "within_one_pct": 100.0
+    }
+   }
+  },
+  "OF": {
+   "range": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.2347,
+     0.8751,
+     0.9475,
+     1.1764
+    ],
+    "fit_1986": {
+     "n": 254,
+     "exact": 121,
+     "within_one": 220,
+     "exact_pct": 47.6,
+     "within_one_pct": 86.6
+    }
+   },
+   "range_game": {
+    "labels": [
+     "F",
+     "D",
+     "C",
+     "B",
+     "A"
+    ],
+    "cuts": [
+     0.1694,
+     0.2106,
+     0.9563,
+     1.3897
+    ],
+    "fit_1986": {
+     "n": 254,
+     "exact": 110,
+     "within_one": 219,
+     "exact_pct": 43.3,
+     "within_one_pct": 86.2
+    }
+   },
+   "e": {
+    "labels": [
+     5,
+     4,
+     3,
+     2,
+     1
+    ],
+    "cuts": [
+     0.0829,
+     0.8358,
+     1.2723,
+     5.008
+    ],
+    "fit_1986": {
+     "n": 254,
+     "exact": 242,
+     "within_one": 254,
+     "exact_pct": 95.3,
+     "within_one_pct": 100.0
+    }
+   }
+  }
+ },
+ "skipped_unmatched_1986": [
+  "Andre Thornton",
+  "Hal McRae",
+  "Jorge Orta",
+  "Mike Brown (Pittsburgh)",
+  "R.J. Reynolds",
+  "U L Washington",
+  "Andy Van Slyke",
+  "La Schelle Tarver",
+  "Luis Salazar",
+  "Andre David",
+  "Ivan DeJesus",
+  "Dave Van Gorder",
+  "Paul O'Neill",
+  "Chris Jones"
+ ],
+ "source": "1986 Payoff Pitch season PDF hitter fielding rows (as parsed in cards_1986.json) vs Lahman 1986 Fielding / FieldingOFsplit; a row is fitted when the player had at least 10 games there.",
+ "thin_games": 50,
+ "min_games": 20
+}

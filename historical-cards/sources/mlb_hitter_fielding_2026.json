@@ -1,0 +1,388 @@
+{
+ "players": {
+  "alvaryo01": {
+   "mlbam": 670541,
+   "name": "Yordan Alvarez",
+   "rows": [
+    {
+     "team_id": 117,
+     "pos": "LF",
+     "G": 25,
+     "PO": 36,
+     "A": 0,
+     "E": 2,
+     "innings": "194.0",
+     "InnOuts": 582
+    },
+    {
+     "team_id": 117,
+     "pos": "DH",
+     "G": 134,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "penaje02": {
+   "mlbam": 665161,
+   "name": "Jeremy Pe\u00f1a",
+   "rows": [
+    {
+     "team_id": 117,
+     "pos": "SS",
+     "G": 109,
+     "PO": 166,
+     "A": 208,
+     "E": 13,
+     "innings": "904.1",
+     "InnOuts": 2713
+    },
+    {
+     "team_id": 117,
+     "pos": "DH",
+     "G": 2,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "wittbo02": {
+   "mlbam": 677951,
+   "name": "Bobby Witt Jr.",
+   "rows": [
+    {
+     "team_id": 118,
+     "pos": "SS",
+     "G": 140,
+     "PO": 180,
+     "A": 326,
+     "E": 10,
+     "innings": "1209.0",
+     "InnOuts": 3627
+    },
+    {
+     "team_id": 118,
+     "pos": "DH",
+     "G": 3,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "ohtansh01": {
+   "mlbam": 660271,
+   "name": "Shohei Ohtani",
+   "rows": [
+    {
+     "team_id": 119,
+     "pos": "P",
+     "G": 14,
+     "PO": 11,
+     "A": 8,
+     "E": 1,
+     "innings": "85.2",
+     "InnOuts": 257
+    },
+    {
+     "team_id": 119,
+     "pos": "DH",
+     "G": 134,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "lopezot01": {
+   "mlbam": 672640,
+   "name": "Otto Lopez",
+   "rows": [
+    {
+     "team_id": 146,
+     "pos": "SS",
+     "G": 156,
+     "PO": 216,
+     "A": 344,
+     "E": 21,
+     "innings": "1357.0",
+     "InnOuts": 4071
+    },
+    {
+     "team_id": 146,
+     "pos": "DH",
+     "G": 1,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "contrwi02": {
+   "mlbam": 661388,
+   "name": "William Contreras",
+   "rows": [
+    {
+     "team_id": 158,
+     "pos": "C",
+     "G": 128,
+     "PO": 1194,
+     "A": 48,
+     "E": 0,
+     "innings": "1085.2",
+     "InnOuts": 3257
+    },
+    {
+     "team_id": 158,
+     "pos": "DH",
+     "G": 20,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "turanbr02": {
+   "mlbam": 668930,
+   "name": "Brice Turang",
+   "rows": [
+    {
+     "team_id": 158,
+     "pos": "2B",
+     "G": 151,
+     "PO": 219,
+     "A": 369,
+     "E": 5,
+     "innings": "1311.2",
+     "InnOuts": 3935
+    },
+    {
+     "team_id": 158,
+     "pos": "SS",
+     "G": 4,
+     "PO": 2,
+     "A": 3,
+     "E": 1,
+     "innings": "12.0",
+     "InnOuts": 36
+    }
+   ]
+  },
+  "buxtoby01": {
+   "mlbam": 621439,
+   "name": "Byron Buxton",
+   "rows": [
+    {
+     "team_id": 142,
+     "pos": "CF",
+     "G": 72,
+     "PO": 199,
+     "A": 0,
+     "E": 0,
+     "innings": "597.2",
+     "InnOuts": 1793
+    },
+    {
+     "team_id": 142,
+     "pos": "DH",
+     "G": 20,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "harpebr03": {
+   "mlbam": 547180,
+   "name": "Bryce Harper",
+   "rows": [
+    {
+     "team_id": 143,
+     "pos": "1B",
+     "G": 109,
+     "PO": 743,
+     "A": 61,
+     "E": 4,
+     "innings": "923.2",
+     "InnOuts": 2771
+    },
+    {
+     "team_id": 143,
+     "pos": "RF",
+     "G": 43,
+     "PO": 63,
+     "A": 1,
+     "E": 1,
+     "innings": "363.2",
+     "InnOuts": 1091
+    },
+    {
+     "team_id": 143,
+     "pos": "DH",
+     "G": 12,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "raleica01": {
+   "mlbam": 663728,
+   "name": "Cal Raleigh",
+   "rows": [
+    {
+     "team_id": 136,
+     "pos": "C",
+     "G": 104,
+     "PO": 865,
+     "A": 36,
+     "E": 6,
+     "innings": "894.0",
+     "InnOuts": 2682
+    },
+    {
+     "team_id": 136,
+     "pos": "DH",
+     "G": 23,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "rodriju01": {
+   "mlbam": 677594,
+   "name": "Julio Rodr\u00edguez",
+   "rows": [
+    {
+     "team_id": 136,
+     "pos": "CF",
+     "G": 143,
+     "PO": 365,
+     "A": 4,
+     "E": 3,
+     "innings": "1239.1",
+     "InnOuts": 3718
+    },
+    {
+     "team_id": 136,
+     "pos": "DH",
+     "G": 7,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  },
+  "diazya01": {
+   "mlbam": 650490,
+   "name": "Yandy D\u00edaz",
+   "rows": [
+    {
+     "team_id": 139,
+     "pos": "DH",
+     "G": 154,
+     "PO": 0,
+     "A": 0,
+     "E": 0,
+     "innings": "0.0",
+     "InnOuts": 0
+    }
+   ]
+  }
+ },
+ "league": {
+  "P": {
+   "G": 20800,
+   "PO": 2767,
+   "A": 3612,
+   "E": 345,
+   "InnOuts": 129239
+  },
+  "2B": {
+   "G": 5811,
+   "PO": 7166,
+   "A": 12324,
+   "E": 287,
+   "InnOuts": 129239
+  },
+  "LF": {
+   "G": 6364,
+   "PO": 9578,
+   "A": 210,
+   "E": 118,
+   "InnOuts": 129239
+  },
+  "CF": {
+   "G": 5913,
+   "PO": 12577,
+   "A": 163,
+   "E": 111,
+   "InnOuts": 129239
+  },
+  "RF": {
+   "G": 6115,
+   "PO": 9718,
+   "A": 260,
+   "E": 134,
+   "InnOuts": 129239
+  },
+  "SS": {
+   "G": 5443,
+   "PO": 6777,
+   "A": 11076,
+   "E": 492,
+   "InnOuts": 129239
+  },
+  "C": {
+   "G": 5605,
+   "PO": 41476,
+   "A": 1790,
+   "E": 324,
+   "InnOuts": 129239
+  },
+  "1B": {
+   "G": 5598,
+   "PO": 35610,
+   "A": 3289,
+   "E": 230,
+   "InnOuts": 129239
+  },
+  "3B": {
+   "G": 5767,
+   "PO": 3570,
+   "A": 7846,
+   "E": 458,
+   "InnOuts": 129239
+  },
+  "DH": {
+   "G": 5595,
+   "PO": 0,
+   "A": 0,
+   "E": 0,
+   "InnOuts": 0
+  }
+ }
+}
