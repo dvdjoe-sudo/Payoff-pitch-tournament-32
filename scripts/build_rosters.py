@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "ARI":
+        lines += [
+            "### Approved active roster amendment (2026-10-26)",
+            "",
+            "David Peralta (`peralda01`) joins the sixth bench spot as a left-handed outfielder (LF). Juan Cruz (`cruzju02`) leaves the active bullpen. The active 26 now have 9 lineup players, 6 bench players, 5 starting pitchers, and 6 relievers.",
+            "",
+            "The amendment is for games after R1-04 only. Cruz's appearances below, original converted card (if on file), and all game results remain historical records. Peralta's frozen Hitter v0.5 conversion is pending and no card ratings are assumed. Active personnel are listed in `data/rosters.json`.",
+            "",
+        ]
+
     if appeared["lineup"] or appeared["rotation"] or appeared["bullpen"] or appeared["subs"]:
         lines += ["### Players in the results file", ""]
         if not canonical and code not in announced:
