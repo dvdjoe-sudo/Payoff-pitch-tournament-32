@@ -188,10 +188,12 @@ def main():
     ap.add_argument("--proxy-park", default=None,
                     help="stand-in park name for clubs with no 1986 park card (stress only)")
     ap.add_argument("--supplemental-so", action="store_true",
-                    help="turn on the page 11 optional Supplemental Strikeout band")
+                    help="page 11 optional Supplemental Strikeout band (on by default; kept for old commands)")
+    ap.add_argument("--no-supplemental-so", action="store_true",
+                    help="turn off the page 11 optional Supplemental Strikeout band")
     args = ap.parse_args()
-    if args.supplemental_so:
-        OPTS["supplemental_so"] = True
+    if args.no_supplemental_so:
+        OPTS["supplemental_so"] = False
     global PROXY_PARK
     PROXY_PARK = args.proxy_park
     codes = sorted(ROSTERS)

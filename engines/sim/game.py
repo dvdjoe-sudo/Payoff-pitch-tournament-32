@@ -249,7 +249,7 @@ class Game:
             "bunt_policy": True,
             "hit_and_run": True,
             "infield_in": True,
-            "supplemental_so": False,
+            "supplemental_so": True,  # page 11 optional rule, owner choice 2026-10-27
             "tough_shift": True,
             "slash_in_play": "normal",
             "zero_hr": False,
@@ -1186,7 +1186,8 @@ class Game:
                 kind = "OUT"
             if self._supplemental_strikeout(pitcher, pct):
                 kind = "SO"
-                self.say("Optional page 11 strikeout range replaces the out.")
+                band = pitcher.get("so_band")
+                self.say("Optional page 11 strikeout range %02d-%02d replaces the out. The range is an estimate, not printed on the card." % (band[0], band[1]))
             self.say("%s section percentile %02d is an out: %s." % (section, pct, kind))
             self._apply_out(batter, kind, pitcher, hit_and_run, section, pct)
             return

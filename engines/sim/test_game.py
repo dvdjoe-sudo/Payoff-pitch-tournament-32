@@ -610,7 +610,23 @@ def stress_test_box_score_fixes():
     assert found.pitcher["BOS"]["player"]["id"] != "martipe02"
 
 
+def supplemental_strikeout_is_on_by_default():
+    """Page 11 optional rule: on by default (owner choice), off by option.
+    Only a pitcher with an so_band is affected, and only on a batter-card out."""
+    found = game()
+    assert found.opts["supplemental_so"] is True
+    pitcher = {"so_band": [50, 61]}
+    assert found._supplemental_strikeout(pitcher, 50)
+    assert found._supplemental_strikeout(pitcher, 61)
+    assert not found._supplemental_strikeout(pitcher, 62)
+    assert not found._supplemental_strikeout(pitcher, 49)
+    assert not found._supplemental_strikeout({"so_band": None}, 55)
+    off = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", fac=False, supplemental_so=False)
+    assert not off._supplemental_strikeout(pitcher, 55)
+
+
 if __name__ == "__main__":
+    supplemental_strikeout_is_on_by_default()
     chart_faces()
     basic_running_and_walks()
     double_play_fly_and_bunt()

@@ -473,8 +473,8 @@ def expected(sections, bats, run=None):
 def event_targets(row):
     """Target event rates (per PA) from a CSV row. IBB excluded from BB."""
     g = lambda k: float(row[k] or 0)
-    pa = g('PA')
     h, bb, ibb = g('H'), g('BB'), g('IBB')
+    pa = g('PA') - ibb  # the card has no IBB plate appearance
     ubb = bb - ibb
     d2, d3, hr = g('2B'), g('3B'), g('HR')
     s1 = h - d2 - d3 - hr
@@ -649,9 +649,11 @@ def build_one(row, exclude=None, run=None):
     name, nickname = parse_name(row['Name'])
     slug = re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
     g = lambda k: float(row[k] or 0)
-    pa, ab = g('PA'), g('AB')
     h, bb, ibb, hbp = g('H'), g('BB'), g('IBB'), g('HBP')
     ubb = bb - ibb  # unintentional walks only; IBB is a gameplay decision
+    # The card has no IBB plate appearance, so rates are per PA without
+    # IBB. Dividing by full PA turned each IBB into an out (Bonds -.045 AVG).
+    pa, ab = g('PA') - ibb, g('AB')
     so, hr = g('SO'), g('HR')
     doubles, triples = g('2B'), g('3B')
     tb = h + doubles + 2*triples + 3*hr
