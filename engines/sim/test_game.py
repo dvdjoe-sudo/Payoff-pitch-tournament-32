@@ -318,16 +318,16 @@ def roster_rules_and_extra_innings():
 
 def sample_game_stays_out_of_the_tournament():
     report = play("BOS", "TOR", seed=1)
-    assert report["score"] == {"TOR": 7, "BOS": 1}
+    assert report["score"] == {"TOR": 1, "BOS": 5}
     assert report["innings"] == 9
     assert report["postponed"] is False
-    assert report["pitching"]["BOS|martipe02"]["outs"] == 18
-    assert report["pitching"]["TOR|stiebda01"]["outs"] == 27
+    assert report["pitching"]["BOS|martipe02"]["outs"] == 27
+    assert report["pitching"]["TOR|stiebda01"]["outs"] == 21
     assert report["wp"] == {
-        "seen": 19, "fired": 0, "miss": 9, "empty": 10, "no_rating": 0, "unmarked": 0,
+        "seen": 19, "fired": 1, "miss": 9, "empty": 9, "no_rating": 0, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
-    assert any("WP? drawn 19. Fired 0." in line for line in report["log"])
+    assert any("WP? drawn 19. Fired 1." in line for line in report["log"])
     # Catcher arms are on the page-8 1-5 scale, so steals resolve.
     # Seed 1 has no steal attempt since the v0.3 pitcher tables; seed 4 does.
     assert any("FAC steal." in line for line in play("BOS", "TOR", seed=4)["log"])
@@ -610,7 +610,23 @@ def stress_test_box_score_fixes():
     assert found.pitcher["BOS"]["player"]["id"] != "martipe02"
 
 
+def supplemental_strikeout_is_on_by_default():
+    """Page 11 optional rule: on by default (owner choice), off by option.
+    Only a pitcher with an so_band is affected, and only on a batter-card out."""
+    found = game()
+    assert found.opts["supplemental_so"] is True
+    pitcher = {"so_band": [50, 61]}
+    assert found._supplemental_strikeout(pitcher, 50)
+    assert found._supplemental_strikeout(pitcher, 61)
+    assert not found._supplemental_strikeout(pitcher, 62)
+    assert not found._supplemental_strikeout(pitcher, 49)
+    assert not found._supplemental_strikeout({"so_band": None}, 55)
+    off = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", fac=False, supplemental_so=False)
+    assert not off._supplemental_strikeout(pitcher, 55)
+
+
 if __name__ == "__main__":
+    supplemental_strikeout_is_on_by_default()
     chart_faces()
     basic_running_and_walks()
     double_play_fly_and_bunt()

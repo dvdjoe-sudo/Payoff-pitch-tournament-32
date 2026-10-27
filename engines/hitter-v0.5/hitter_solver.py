@@ -471,11 +471,12 @@ def expected(sections, bats, run=None):
 
 
 def event_targets(row):
-    """Target event rates (per PA) from a CSV row. IBB excluded from BB."""
+    """Target event rates (per PA) from a CSV row. IBB count as walks
+    (owner ruling 2026-10-27: the engine has no intentional walk)."""
     g = lambda k: float(row[k] or 0)
+    h, bb = g('H'), g('BB')
     pa = g('PA')
-    h, bb, ibb = g('H'), g('BB'), g('IBB')
-    ubb = bb - ibb
+    ubb = bb  # BB already includes IBB
     d2, d3, hr = g('2B'), g('3B'), g('HR')
     s1 = h - d2 - d3 - hr
     return {'1bp': s1/pa, '2bp': d2/pa, '3bp': d3/pa, 'hrp': hr/pa,
@@ -649,9 +650,12 @@ def build_one(row, exclude=None, run=None):
     name, nickname = parse_name(row['Name'])
     slug = re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
     g = lambda k: float(row[k] or 0)
-    pa, ab = g('PA'), g('AB')
     h, bb, ibb, hbp = g('H'), g('BB'), g('IBB'), g('HBP')
-    ubb = bb - ibb  # unintentional walks only; IBB is a gameplay decision
+    # Owner ruling 2026-10-27: the engine has no intentional walk, so real
+    # IBB are printed as ordinary walks. BB (which includes IBB) over full PA.
+    # (Dropping IBB from BB but not from PA had turned each IBB into an out.)
+    ubb = bb
+    pa, ab = g('PA'), g('AB')
     so, hr = g('SO'), g('HR')
     doubles, triples = g('2B'), g('3B')
     tb = h + doubles + 2*triples + 3*hr
@@ -766,7 +770,7 @@ def build_one(row, exclude=None, run=None):
         'built_utc': datetime.datetime.utcnow().isoformat() + 'Z',
         'input_row': {k: row[k] for k in row},
         'ibb_treatment': f"BB={g('BB'):.0f} IBB={g('IBB'):.0f} "
-                         f"uBB={ubb:.0f} target_bbp={tgt['bbp']:.4f}",
+                         f"walk_target_BB={ubb:.0f} (IBB counted as BB) target_bbp={tgt['bbp']:.4f}",
         'winning_seed': best_label,
         'restart_index': best_idx,
         'objective_score': round(actual_err, 6),

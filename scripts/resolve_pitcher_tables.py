@@ -56,14 +56,16 @@ def apply(entry, key=None):
     if flags:
         basis["flag"] = "; ".join(flags)
     band = solver.supplemental_so_band(res["table"], res["target"]["so"], hand, bump)
-    # Page 11 optional rule; the engine reads it only with supplemental_so on.
+    # Page 11 optional rule; the engine reads it when supplemental_so is on (the default).
     if band:
         cp["so_band"] = band
+        cp["so_band_source"] = "estimate"  # not printed on any card; see table_basis.so_band_note
         basis["so_band_note"] = ("derived, not printed: page 11 optional Supplemental Strikeout band, "
                                  "starts at 50 as the 2024 set prints it, sized to the card's SO shortfall %.4f/BF"
                                  % (res["target"]["so"] - res["card_rates"]["so"]))
     else:
         cp.pop("so_band", None)
+        cp.pop("so_band_source", None)
     cp["table_basis"] = basis
     cp["special"] = []
     return prev, res["table"]

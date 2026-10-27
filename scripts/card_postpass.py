@@ -3,6 +3,7 @@
 so a rebuild by any script gives the same cards:
 
 - hitter platoon split restored to the 1986 same-side ratio (platoon_resplit)
+- IBB counted as walks (PATIENT, ~22.9% cap, flagged), hits clipped by a full section put back (capacity_retune)
 - Jump and Steal letter from real steals, 1986 calibration (fix_jump_from_attempts, fix_steal_letter)
 - pitcher 2d6 table, solver v0.3, plus the page 11 band (resolve_pitcher_tables)
 - outfield arm on Derived cards from assists (derive_of_arm)
@@ -14,6 +15,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import capacity_retune  # noqa: E402
 import derive_of_arm  # noqa: E402
 import fix_jump_from_attempts as jump_fix  # noqa: E402
 import fix_steal_letter as steal_fix  # noqa: E402
@@ -31,7 +33,8 @@ def finalize(cards, keys=None):
         card = cards.get(key)
         if not card:
             continue
-        platoon_resplit.apply(card, _RATIOS)
+        if platoon_resplit.apply(card, _RATIOS):
+            capacity_retune.apply(card, fresh=True)
         jump_fix.apply(card)
         steal_fix.apply(card)
         pitcher_resolve.apply(card, key)

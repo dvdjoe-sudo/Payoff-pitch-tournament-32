@@ -2,6 +2,23 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Intentional walks count as walks on hitter cards
+
+Owner ruling: the engine has no intentional walk, so a hitter's real IBB are printed as ordinary walks. Card walk target is BB (IBB included) over full PA, in `hitter_solver.build_one`/`event_targets` and `scripts/capacity_retune.py`. The pass widens PATIENT BB (both hands) from empty faces, then from PATIENT hit faces, which the IN-PLAY/TOUGH re-tune puts back. PATIENT holds about 22.9% of PA; a card that cannot reach its walk target is flagged `card_bat.capacity_basis.walk_cap_hit`, and the walks it cannot print are dropped as plate appearances (other bands scaled by 1/(1−shortfall)) instead of becoming outs, so only OBP falls short. Flagged: Barry Bonds (28.3% target, 21.7% on card) and Ted Williams (22.6% vs 22.3%). Basis on each card: `ibb`, `walk_target_bbp`, `walk_expected_bbp`, `walk_shortfall`, `target`. Idempotent (re-run changes nothing). 439 cards differ from the pre-repair cards.
+- Card vs average pitcher: Bonds .334/.471/.723 → .332/.485/.725, McCovey OBP .388 → .418, Judge .417 → .437, Ruth .489 → .512.
+- Stress (2,976 games): runs 5.14 → 5.28, BB 2.96 → 3.28, OBP .319 → .326, AVG .258, SLG .435 → .436.
+
+## 2026-10-27 — Monster-hitter repair; supplemental SO on by default
+
+**Why the great hitters hit low (Ruth .245 vs .375, Bonds .230 vs .346).** Traced with `scripts/hitter_gap_trace.py` (real → card vs average pitcher → card vs all tournament pitchers → games):
+- **Opponent quality (largest, inherent).** Every hitter loses about .045 AVG, .06 OBP and .12 SLG moving from an average pitcher to this all-star pitching field. Not a bug.
+- **Card build for extreme hitters (two bugs, fixed).** (1) The solver divided every event by PA that still included intentional walks, while IBB was dropped from BB, so each IBB became an out (Bonds 10.5% of PA, 1% on average); superseded by the IBB-as-walks entry above. (2) Shape projection clipped hits off full PATIENT/WHEELHOUSE sections (Ruth had 69 empty IN-PLAY faces). `scripts/capacity_retune.py` rescales bands for IBB and moves lost singles/doubles/triples into IN-PLAY/TOUGH within printed 1986 widths; it keeps a change only if AVG rises and SLG does not fall. 224 cards changed; history in `card_bat.capacity_basis`. Ruth card .298 → .359 AVG, Bonds .301 → .334. It runs in `card_postpass.py` after the platoon split.
+- **Format ceilings (inherent).** HR prints only in WHEELHOUSE (max about 8.1% of PA) and BB only in PATIENT (about 22.9%). The engine has no intentional walk, so real OBP that came from IBB cannot appear.
+- **Parks, fatigue, fielders, FAC:** ±.02 AVG by team. **Platoon re-split:** about zero; lefty stars are not hurt vs LHP.
+- Stress (2,976 games): runs 5.05 → 5.14, AVG .256 → .258, SLG .430 → .435. Hitters at 84.6% of real AVG (was 84.1%).
+
+**Supplemental strikeout rule (page 11) on by default.** Owner choice. Turn off with `supplemental_so=False` or `stress_sim.py --no-supplemental-so`. The 34 bands are estimates, not printed, and are labelled `so_band_source: "estimate"`.
+
 ## 2026-10-27 — Platoon splits, per-hand pitcher calibration, 1986 steal/arm calibration, optional SO band
 
 **Lefty pitchers allowed ~25% more runs than righties (stress RA9 6.21 vs 4.95; real 3.01 vs 2.93).** Two causes, both fixed:
