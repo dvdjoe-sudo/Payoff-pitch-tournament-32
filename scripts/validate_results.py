@@ -964,16 +964,13 @@ def check_astros_roster_amendment(check: Check) -> None:
                  "Moisés Alou's Montreal historical card remains separate")
     peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["HOU"]
     alou_peak = peaks.get("BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)") or {}
-    # Peak checks are enforced when the generated line is present; the
-    # generation job supplies the authentic Lahman line for this PR.
-    if alou_peak:
-        check.expect(alou_peak.get("lahman_id") == "aloumo01"
-                     and alou_peak.get("years") == [1998, 2000, 2001]
-                     and alou_peak.get("status") == "ok"
-                     and (alou_peak.get("text") or "").startswith("Peak 162 with Houston Astros"),
-                     "Moisés Alou's authentic peak is Houston 1998, 2000 and 2001 only")
-        check.expect("FIRE Octavio Dotel 5" not in peaks,
-                     "Inactive Dotel excluded from Houston active Peak 162")
+    check.expect(alou_peak.get("lahman_id") == "aloumo01"
+                 and alou_peak.get("years") == [1998, 2000, 2001]
+                 and alou_peak.get("status") == "ok"
+                 and (alou_peak.get("text") or "").startswith("Peak 162 with Houston Astros"),
+                 "Moisés Alou's authentic peak is Houston 1998, 2000 and 2001 only")
+    check.expect("FIRE Octavio Dotel 5" not in peaks,
+                 "Inactive Dotel excluded from Houston active Peak 162")
     script = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
     check.expect('club == "HOU" and pid == "aloumo01"' in script
                  and 'allowed_houston_years = {1998, 2000, 2001}' in script,
