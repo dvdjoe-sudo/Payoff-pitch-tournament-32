@@ -1249,6 +1249,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - IF José Reyes (SS/Speed/PR)
 - OF4 Mookie Wilson (OF/Pinch-Runner)
 - BAT John Olerud (LH Power/PH)
+- BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)
 
 ### Rotation (throws)
 
@@ -1266,7 +1267,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MR1 Tug McGraw L
 - MR2 John Franco L
 - LHS Jesse Orosco L
-- LR/SP6 Sid Fernandez L
+
+### Approved active roster amendment (2026-10-27)
+
+Howard Johnson (`johnsho01`) becomes the **sixth bench hitter** for the New York Mets, providing switch-hitting power, speed and 3B/infield reserve coverage. **Only his 1985–1993 New York Mets seasons count**, excluding his earlier Detroit and subsequent Colorado/Chicago franchises. Sid Fernandez (`fernasi01`) becomes inactive in the bullpen and keeps his original genuine historical pitching card. The six active relievers stay in their existing sequence: Billy Wagner, Edwin Díaz, Armando Benítez, Tug McGraw, John Franco and Jesse Orosco.
+
+The entire starting nine and five-man rotation stay unchanged. **Pete Alonso remains the starting DH batting sixth**, while **John Olerud remains bench #5**. The owner-approved active roster now has **9 lineup / 6 bench / 5 rotation / 6 bullpen** and 26 distinct players.
+
+This prospective roster amendment preserves the original archive of every historical card, completed game, box score, final score and FAC/dice roll. Howard Johnson's authentic Mets-only frozen Hitter v0.5 playable conversion is **pending**; no fabricated dice-table numbers, percentage bands or fielding ratings are introduced.
 
 ## 22. Oakland Athletics (OAK)
 

@@ -974,6 +974,71 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+def check_mets_roster_amendment(check: Check) -> None:
+    """Owner-approved Mets Johnson/Fernandez with Alonso DH unchanged."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["NYM"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["NYM"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Mets roster has 26 distinct players and 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "All Mets active group slots consecutive")
+    by_id = {p["id"]: p for p in players}
+    howard = by_id.get("johnsho01", {})
+    check.expect((howard.get("group"), howard.get("kind"), howard.get("pos"), howard.get("slot"))
+                 == ("bench", "hitter", "3B", 6),
+                 "Howard Johnson becomes sixth Mets bench hitter, reserve third baseman")
+    check.expect("fernasi01" not in ids,
+                 "Sid Fernandez moved off the active Mets bullpen")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["wagnebi02", "diazed04", "benitar01",
+                     "mcgratu01", "francjo01", "oroscje01"],
+                 "Mets six original relief specialists retain their slots")
+    alonso = by_id.get("alonspe01", {})
+    olerud = by_id.get("olerujo01", {})
+    check.expect((alonso.get("group"), alonso.get("slot"), alonso.get("pos"))
+                 == ("lineup", 6, "DH")
+                 and (olerud.get("group"), olerud.get("slot")) == ("bench", 5)
+                 and announced["lineup"][5] == "6 Pete Alonso DH R"
+                 and announced["bench"][4] == "BAT John Olerud (LH Power/PH)",
+                 "Pete Alonso remains batting sixth DH; Olerud remains bench fifth")
+    check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
+                 and announced["bench"][-1] == "BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)"
+                 and not any("Sid Fernandez" in x for x in announced["bullpen"]),
+                 "Mets approved official sources agree on new roster")
+    check.expect("NYM|fernasi01" in cards,
+                 "Sid Fernandez's authentic original card remains historical")
+    hcard = cards.get("NYM|johnsho01")
+    check.expect(not hcard or bool(hcard.get("card_bat"))
+                 or bool(hcard.get("conversion_status")),
+                 "Howard Johnson genuine card exists or remains explicitly pending")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["NYM"]
+    hojo_peak = peaks.get("BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)") or {}
+    check.expect(hojo_peak.get("lahman_id") == "johnsho01"
+                 and hojo_peak.get("status") == "ok"
+                 and hojo_peak.get("years") == [1987, 1988, 1989, 1990, 1991]
+                 and (hojo_peak.get("text") or "").startswith("Peak 162 with New York Mets"),
+                 "Howard Johnson genuine Mets-only 1987–1991 five-year peak present")
+    check.expect("LR/SP6 Sid Fernandez L" not in peaks,
+                 "Inactive Sid Fernandez removed from active Mets Peak 162")
+    published = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Howard Johnson (`johnsho01`) becomes the **sixth bench hitter**" in published,
+                 "Mets owner-approved amendment is in published roster")
+    generator = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "NYM" and pid == "johnsho01"' in generator
+                 and "howard_mets_years = {1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993}" in generator,
+                 "Mets peak source enforces 1985–1993 seasons only")
+    rebuild = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_mets_roster_amendment(cards, rosters)" in rebuild,
+                 "Mets roster change survives full-card regeneration")
+
+
 def check_angels_roster_amendment(check: Check) -> None:
     """Owner-approved LAA Carew for Doug Corbett, Ohtani DH unchanged."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1402,6 +1467,7 @@ def main() -> int:
     check_kansas_city_roster_amendment(check)
     check_seattle_roster_amendment(check)
     check_angels_roster_amendment(check)
+    check_mets_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

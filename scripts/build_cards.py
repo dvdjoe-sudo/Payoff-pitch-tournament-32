@@ -587,6 +587,7 @@ def build():
     apply_kansas_city_roster_amendment(cards, rosters)
     apply_mariners_roster_amendment(cards, rosters)
     apply_angels_roster_amendment(cards, rosters)
+    apply_mets_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -603,6 +604,7 @@ AUTHORIZED_HITTERS = (
     "KC|maybejo01",
     "SEA|beltrad01",
     "LAA|carewro01",
+    "NYM|johnsho01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -671,6 +673,47 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+
+
+def apply_mets_roster_amendment(cards, rosters):
+    """Owner-approved Howard Johnson NYM 1985–1993 for Sid Fernandez.
+
+    Keep Alonso DH sixth, Olerud fifth reserve and original historical
+    converted cards/results. Never fabricate HoJo's frozen Hitter v0.5 card.
+    """
+    roster = rosters.get("NYM")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "fernasi01"]
+    target = "johnsho01"
+    existing = [p for p in players if p["id"] == target]
+    if not existing:
+        players.append({"group": "bench", "id": target, "kind": "hitter",
+                        "name": "Howard Johnson", "pos": "3B", "slot": 6})
+    elif len(existing) != 1:
+        raise SystemExit("Duplicate Mets Howard Johnson active roster entries")
+    else:
+        existing[0].update(group="bench", kind="hitter", pos="3B", slot=6)
+    card = cards.get("NYM|" + target)
+    if card:
+        card["spots"] = [{"group": "bench", "slot": 6,
+                          "pos": "3B", "kind": "hitter"}]
+    # The real NYM|fernasi01 historical pitching card remains in the catalog.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    totals = {g: sum(p["group"] == g for p in players) for g in order}
+    if totals != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Mets approved roster must be 9/6/5/6: " + str(totals))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Mets must have 26 unique active players")
+    for pid, group, slot, pos in (
+        ("alonspe01", "lineup", 6, "DH"),
+        ("olerujo01", "bench", 5, "UT"),
+    ):
+        if len([p for p in players if p["id"] == pid and p["group"] == group
+                and p["slot"] == slot and p["pos"] == pos]) != 1:
+            raise SystemExit("Mets approved DH / Olerud position changed: " + pid)
 
 
 def apply_angels_roster_amendment(cards, rosters):

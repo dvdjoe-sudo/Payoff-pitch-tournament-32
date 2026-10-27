@@ -804,6 +804,14 @@ def main() -> None:
             pid = person["id"]
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
+            if club == "NYM" and pid == "johnsho01":
+                # Howard Johnson's Mets years alone (1985–1993), never
+                # his Detroit, Colorado or Chicago years.
+                howard_mets_years = {1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993}
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in howard_mets_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in howard_mets_years}
             if club == "LAA" and pid == "carewro01":
                 # Rod Carew played for Minnesota and California. Only the
                 # 1979-1985 California Angels franchise seasons count here.
@@ -932,6 +940,7 @@ def main() -> None:
         ("KC", "BAT2 John Mayberry 1B (KC 1972-1977)", "maybejo01"),
         ("SEA", "IF2 Adrián Beltré 3B (SEA 2005-2009)", "beltrad01"),
         ("LAA", "BAT2 Rod Carew 1B (California Angels 1979-1985)", "carewro01"),
+        ("NYM", "BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)", "johnsho01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -952,6 +961,11 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    mets_hojo = row("NYM", "BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)")
+    if (mets_hojo.get("status") != "ok" or mets_hojo.get("lahman_id") != "johnsho01"
+            or not mets_hojo.get("years")
+            or not all(1985 <= y <= 1993 for y in mets_hojo.get("years", []))):
+        raise SystemExit("Howard Johnson Mets peak must use 1985-1993 seasons only")
     california_carew = row("LAA", "BAT2 Rod Carew 1B (California Angels 1979-1985)")
     if (california_carew.get("status") != "ok"
             or california_carew.get("lahman_id") != "carewro01"
