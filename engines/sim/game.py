@@ -1,13 +1,15 @@
-"""One Payoff Pitch game, dice only, from the rulebook.
+"""One Payoff Pitch game from the rulebook.
 
 This does not read or write tournament_results.json. A lineup is taken
 from data/rosters.json and the cards from data/cards.json. Rolls are
 logged. Where the book offers a choice, the choice is a toggle and the
 log names it. Where the book does not say, the log says so.
 
-Baserunning default is the basic rule on pages 6 and 16. The advanced
-chart is the running="advanced" toggle. Fast Action Cards are an
-official method and are not used: the deck is not in this repository.
+The default draw is the Fast Action Card deck printed on rulebook pages
+40-71 (fac=True). The 1986 season card PDF has no FAC sheets. Running
+then uses the card's SINGLE and DOUBLE lines (pages 13-14). fac=False
+keeps the dice. Basic running is pages 5-6 and 16. Advanced running is
+running="advanced".
 """
 from __future__ import annotations
 
@@ -44,6 +46,7 @@ from book import (
     wp_hit,
 )
 from charts import PARKS
+from fac import Deck, FacRolls, parse_err_cell, parse_hit_cell, parse_out_cell, parse_runner_line
 from rare import lookup as rare_lookup
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -196,9 +199,11 @@ class Game:
         self.home = home
         self.away = away
         self.rng = random.Random(seed)
-        self.dice = Dice(self.rng)
+        self.plain = Dice(self.rng)
         self.seed = seed
+        passed_running = "running" in opts
         self.opts = {
+            "fac": True,
             "running": "basic",
             "steal": "auto",
             "bunt_policy": True,
@@ -210,6 +215,15 @@ class Game:
             "zero_hr": False,
         }
         self.opts.update(opts)
+        if self.opts["fac"]:
+            self.deck = Deck(self.rng)
+            self.dice = FacRolls(self.deck)
+            if not passed_running:
+                self.opts["running"] = "fac"
+        else:
+            self.deck = None
+            self.dice = self.plain
+        self.fac_result_card = None
         self.park = park_for(home["code"])
         if self.park is None:
             raise SystemExit("no ballpark card for " + home["code"])
@@ -305,9 +319,23 @@ class Game:
         self.say(
             "No card stores the page 39 dagger after the steal letter. A catcher arm of 1 or 2 is not rewritten to 3."
         )
-        self.gap(
-            "Fast Action Cards are an official method (pages 12-15). The deck is not in this repository, so every chart uses dice."
-        )
+        if self.deck:
+            self.say(
+                "Fast Action Cards replace the dice (pages 12-15). The deck is the 256 cards on rulebook pages 40-71. The 1986 season card PDF has no FAC sheets."
+            )
+            self.gap(
+                "WP? is printed beside the 1d6 on some cards. Pages 12-15 do not say what it means. It is not applied."
+            )
+            self.gap(
+                "Three cards say to use the previous card's 1d6 (1-3 out, check the runner; 4-6 safe, check the fielder). Their HOME line is only a position letter, so it is not read as a play."
+            )
+            self.gap(
+                "Every card has a HOME line. Pages 12-15 do not say when to read it. A play at home uses the page 19 chart, and the next card supplies the 2d6 and the percentile."
+            )
+        else:
+            self.gap(
+                "This game uses dice. Fast Action Cards are the other official method (pages 12-15). Pass fac=True to draw the deck."
+            )
         while self.inning <= 30:
             for half, batting, fielding in (
                 ("top", self.away, self.home),
@@ -341,6 +369,11 @@ class Game:
             if self.inning >= 30 and self.score[self.home["code"]] == self.score[self.away["code"]]:
                 self.gap("Safety stop at 30 innings. The book does not set a limit.")
                 break
+            if self.deck and self.inning % 3 == 0:
+                reason = "Recommended reshuffle after three full innings (page 12). Inning %d is complete." % self.inning
+                self.deck.reshuffle(reason)
+                self.say(reason)
+                self.deck.take()
             self.inning += 1
         if self.postponed:
             self.say("Postponed. The line is not a finished game.")
@@ -378,11 +411,14 @@ class Game:
         self.say("%s (%s) vs %s. %s." % (batter["name"], batter["pos"], pitcher["name"], situation))
         if self._try_bunt(batter, pitcher):
             return
+        if self.deck:
+            self._plate_fac(batter, pitcher)
+            return
         one, two, total = self.dice.pair()
         pct = self.dice.pct()
         rolls = self.dice.take()
         result = str(pitcher["table"].get(str(total), "IN-PLAY"))
-        self.say("Roll %s. 2d6 %d+%d=%d -> %s." % (", ".join(rolls), one, two, total, result))
+        self.say("Roll %s. 2d6 %s -> %s." % (", ".join(rolls), self._fmt(one, two, total), result))
         pct = self._wild_pitch(pitcher, pct)
         if pct == 0:
             self._rare(batter, pitcher, result, one, two)
@@ -392,6 +428,62 @@ class Game:
             self._hit_and_run(batter, pitcher, reading, pct, one, two, total)
             return
         self._apply_reading(batter, pitcher, reading, pct, one, two, total, False)
+
+    def _plate_fac(self, batter, pitcher):
+        """One card for the pitcher 2d6, then a card for the percentile. Page 13."""
+        card = self.deck.draw("pitch")
+        total = card["d6_2"]
+        result = str(pitcher["table"].get(str(total), "IN-PLAY"))
+        self.say("FAC pitch. 2d6=%s -> %s. Rolls %s." % (total, result, ", ".join(self.deck.take())))
+        one = two = None
+        fatigued = self.pitcher[self.fielding["code"]]["fatigued"]
+        needs_pct = result not in {"BALLPARK", "DEFENSE", "RANGE", "ERROR"} or (
+            result == "BALLPARK" and fatigued
+        )
+        pct = None
+        if needs_pct:
+            pct_card = self.deck.draw("batter")
+            pct = pct_card["pct"]
+            self.fac_result_card = pct_card
+            self.say(
+                "FAC percentile %02d. This card's 2d6 is %s. Rolls %s."
+                % (pct, pct_card["d6_2"], ", ".join(self.deck.take()))
+            )
+            pct = self._wild_pitch(pitcher, pct)
+            if pct == 0:
+                self._rare(batter, pitcher, result, one, two)
+                return
+        reading = self._pitch_reading(batter, pitcher, result, pct)
+        if self.opts["hit_and_run"] and self._want_hit_and_run(batter):
+            self._hit_and_run(batter, pitcher, reading, pct, one, two, total)
+            return
+        self._apply_reading(batter, pitcher, reading, pct, one, two, total, False)
+
+    def _fmt(self, one, two, total):
+        if one is None:
+            return "2d6=%s" % total
+        return "%d+%d=%d" % (one, two, total)
+
+    def _is_doubles(self, one, two, why):
+        if one is not None:
+            return one == two
+        left, right = self.plain.d6(), self.plain.d6()
+        self.gap(
+            "%s needs doubles. A Fast Action Card prints the 2d6 total and not the two dice (pages 12-13). Two dice are rolled for that check. Page 15 allows dice with the deck."
+            % why
+        )
+        self.say("Doubles check %d and %d. Rolls %s." % (left, right, ", ".join(self.plain.take())))
+        return left == right
+
+    def _low_die(self, one, two):
+        if one is not None:
+            return min(one, two)
+        left, right = self.plain.d6(), self.plain.d6()
+        self.gap(
+            "Advanced running uses the lower die (page 16). A Fast Action Card prints only the 2d6 total. Two dice are rolled for that die. Page 15 allows it."
+        )
+        self.say("Low die from %d and %d. Rolls %s." % (left, right, ", ".join(self.plain.take())))
+        return min(left, right)
 
     def _situation(self):
         names = []
@@ -503,17 +595,37 @@ class Game:
         if squeeze:
             letter = "D"
             self.say("Squeeze uses column D regardless of the batter's letter (page 19).")
-        fielder_die = self.dice.d6()
-        pct = self.dice.pct()
-        rolls = self.dice.take()
-        fielder = {1: "P", 2: "C", 3: "1B", 4: "P", 5: "3B", 6: "C"}[fielder_die]
-        result = sac_result(letter, pct)
-        self.say("Bunt roll %s. Fielder %s (page 19 1d6 key). Chart %s." % (", ".join(rolls), fielder, result))
+        if self.deck:
+            card = self.deck.draw("bunt")
+            result = (card.get("sac") or {}).get(letter)
+            fielder_die = card["d6_1"]
+            rolls = self.deck.take()
+            if result is None:
+                self.gap("This FAC has no sac result for letter %s. The bunt is not given a result." % letter)
+                return
+            fielder = {1: "P", 2: "C", 3: "1B", 4: "P", 5: "3B", 6: "C"}[fielder_die]
+            self.say("FAC bunt %s -> %s. 1d6=%s names the fielder (pages 13-14 and 19). Rolls %s." % (
+                letter, result, fielder_die, ", ".join(rolls)))
+        else:
+            fielder_die = self.dice.d6()
+            pct = self.dice.pct()
+            rolls = self.dice.take()
+            fielder = {1: "P", 2: "C", 3: "1B", 4: "P", 5: "3B", 6: "C"}[fielder_die]
+            result = sac_result(letter, pct)
+            self.say("Bunt roll %s. Fielder %s (page 19 1d6 key). Chart %s." % (", ".join(rolls), fielder, result))
         if result == "MISS":
             self.say("First miss. Page 19 says the second miss is a strikeout. The bunt is rolled again.")
-            pct = self.dice.pct()
-            result = sac_result(letter, pct)
-            self.say("Second bunt percentile %02d -> %s. Rolls %s." % (pct, result, ", ".join(self.dice.take())))
+            if self.deck:
+                again = self.deck.draw("bunt-again")
+                result = (again.get("sac") or {}).get(letter)
+                self.say("Second bunt card -> %s. Rolls %s." % (result, ", ".join(self.deck.take())))
+                if result is None:
+                    self.gap("The second bunt card has no result for %s. It is not a second miss." % letter)
+                    return
+            else:
+                pct = self.dice.pct()
+                result = sac_result(letter, pct)
+                self.say("Second bunt percentile %02d -> %s. Rolls %s." % (pct, result, ", ".join(self.dice.take())))
             if result == "MISS":
                 self._record_out(batter, "SO", "Second bunt miss is a strikeout (page 19).")
                 return
@@ -563,6 +675,8 @@ class Game:
         if self.outs >= 3:
             return pct
         pct = self.dice.pct()
+        if self.deck:
+            self.fac_result_card = self.deck.last
         self.say("Wild-pitch re-roll percentile %02d. Rolls %s." % (pct, ", ".join(self.dice.take())))
         if wp_hit(wp, pct):
             self.say("Second wild pitch. Runners advance 1 more. This same roll resolves the at-bat (page 10).")
@@ -584,9 +698,9 @@ class Game:
         if section == "WHEELHOUSE":
             a, b, fresh = self.dice.pair()
             new_pct = self.dice.pct()
-            self.say("Wheelhouse during a hit and run. Re-roll %d+%d=%d, percentile %02d. Rolls %s." % (
-                a, b, fresh, new_pct, ", ".join(self.dice.take())))
-            if a == b:
+            self.say("Wheelhouse during a hit and run. Re-roll %s, percentile %02d. Rolls %s." % (
+                self._fmt(a, b, fresh), new_pct, ", ".join(self.dice.take())))
+            if self._is_doubles(a, b, "A hit-and-run wheelhouse"):
                 self.say("Doubles. The wheelhouse is read as normal (page 10).")
                 if new_pct == 0:
                     self._rare(batter, pitcher, "WHEELHOUSE", a, b)
@@ -642,8 +756,14 @@ class Game:
             self._finish_event(batter, pitcher, "1B", advance, pct, one, two, hit_and_run)
             return
         if event == "PARK":
+            if pct is None and self.deck:
+                park_card = self.deck.draw("park")
+                pct = park_card["pct"]
+                self.say("FAC ballpark percentile %02d. Rolls %s. (page 13)" % (pct, ", ".join(self.deck.take())))
             section = self._ballpark_section(batter, pitcher, pct)
             new_pct = self.dice.pct()
+            if self.deck:
+                self.fac_result_card = self.deck.last
             self.say("Re-roll percentile %02d onto %s. Rolls %s. Page 2 names the percentile. Page 9 says re-roll the dice." % (
                 new_pct, section, ", ".join(self.dice.take())))
             self.gap(
@@ -702,6 +822,10 @@ class Game:
         )
 
     def _ballpark_section(self, batter, pitcher, pct):
+        if pct is None and self.deck:
+            park_card = self.deck.draw("park")
+            pct = park_card["pct"]
+            self.say("FAC ballpark percentile %02d. Rolls %s. (page 13)" % (pct, ", ".join(self.deck.take())))
         stand = _stand(batter["bats"], pitcher["throws"] or "R")
         wh = self.park["wh_l"] if stand == "L" else self.park["wh_r"]
         self.say("BALLPARK. %s bats %s. %s wheelhouse runs through %s (page 9)." % (
@@ -863,6 +987,9 @@ class Game:
             self._reach(batter, 2, 4, "Hit and run double. Runners score (page 18).", hit=True)
             return
         bases = {"1B": 1, "2B": 2, "3B": 3, "HR": 4}[event]
+        if self.opts["running"] == "fac" and self.deck and event in {"1B", "2B"} and any(self.bases):
+            self._fac_running(batter, event)
+            return
         if self.opts["running"] == "advanced" and event in {"1B", "2B"} and any(self.bases):
             self._advanced_hit(batter, event, one, two, pct)
             return
@@ -879,6 +1006,8 @@ class Game:
             elif section == "PATIENT" and event in {"1B", "2B"} and any(self.bases):
                 self._patient_extra(batter, event, pct)
                 return
+        elif self.opts["running"] == "fac":
+            pass
         elif self.opts["running"] not in {"basic", "advanced"}:
             self.gap("Running option %s is not a printed dice chart. Basic advancement is used." % self.opts["running"])
         self._reach(batter, bases, runner_bases, "%s." % event, hit=True)
@@ -901,8 +1030,87 @@ class Game:
             self.say("Hit and run: runners take two on a single (page 18).")
         self._reach(batter, 1, bases, text, hit=True)
 
+    def _fac_running(self, batter, event):
+        """Preferred advancement: the next card's SINGLE or DOUBLE lines. Pages 13-14."""
+        card = self.deck.draw("advance")
+        block = card["single"] if event == "1B" else card["double"]
+        self.say(
+            "FAC %s. %s. %s. 1d6=%s on this card. Rolls %s. (pages 13-14)"
+            % (
+                "single" if event == "1B" else "double",
+                block.get("location"),
+                "; ".join(block.get("lines") or []) or "no extra runner line",
+                card["d6_1"],
+                ", ".join(self.deck.take()),
+            )
+        )
+        default = 1 if event == "1B" else 2
+        moves = {}
+        for base in (0, 1, 2):
+            if self.bases[base]:
+                moves[base] = default
+        choice = False
+        for line in block.get("lines") or []:
+            parsed = parse_runner_line(line)
+            if parsed is None:
+                self.gap("Runner line is not encoded: %s. That runner keeps %d base(s)." % (line, default))
+                continue
+            who, count, plus = parsed
+            if plus:
+                choice = True
+            if who == "first" and 0 in moves:
+                moves[0] = count
+            elif who == "second" and 1 in moves:
+                moves[1] = count
+            elif who in {"all", "score"}:
+                for base in list(moves):
+                    moves[base] = 3 if who == "score" else count
+        automatic = set()
+        for base in list(moves):
+            runner = self.bases[base]
+            run = runner["run"] or 0
+            if self.outs >= 2 and run >= 6:
+                moves[base] = 2 if event == "1B" else 3
+                automatic.add(base)
+                self.say("%s RUN %s with two outs takes the automatic extra base (page 14)." % (runner["name"], run))
+        lead = max(moves) if moves else None
+        lead_id = self.bases[lead]["id"] if lead is not None else None
+        for base in (2, 1, 0):
+            if base in moves and self.bases[base] is not None:
+                self._advance_runner_n(base, moves[base], "FAC")
+        if choice and lead_id and lead not in automatic and self.outs < 3:
+            now = self._find_runner(lead_id)
+            runner = self.bases[now] if now is not None else None
+            if runner is not None:
+                run = runner["run"] or 0
+                self.say(
+                    "+? compares RUN %s to 1d6=%s on this card. He tries when RUN is higher (page 13). The next card's 1d6 is allowed and is not used."
+                    % (run, card["d6_1"])
+                )
+                if run > card["d6_1"]:
+                    pos = self._fac_fielder(batter, block.get("location"))
+                    self._extra_base(now, pos)
+        batter_bases = 1 if event == "1B" else 2
+        self._reach(batter, batter_bases, 0, "%s." % event, hit=True, hold_lead=True)
+
+    def _fac_fielder(self, batter, location):
+        text = location or ""
+        if "/" in text:
+            left, right = [part.strip() for part in text.split("/", 1)]
+            stand = _stand(batter["bats"], self.pitcher[self.fielding["code"]]["player"]["throws"] or "R")
+            chosen = left if stand == "L" else right
+            self.say("Split location %s. A %s batter is fielded by %s (page 13)." % (text, stand, chosen))
+            for pos in ("LF", "CF", "RF", "1B", "2B", "3B", "SS", "P", "C"):
+                if pos in chosen:
+                    return pos
+        for pos in ("LF", "CF", "RF"):
+            if pos in text:
+                return pos
+        self.gap("The FAC location does not name an outfielder (%s). The extra-base chart needs an arm, so the lead runner holds the stated base." % text)
+        return None
+
     def _advanced_hit(self, batter, event, one, two, pct):
-        low = min(one, two)
+        low = self._low_die(one, two)
         self.say("Advanced running uses the low die %d (page 16)." % low)
         planned = []
         for base in (2, 1, 0):
@@ -1002,7 +1210,7 @@ class Game:
             return
         if hit_and_run and kind in GROUND_OUTS and self.bases[0] is not None and self.outs < 2:
             a, b, total = self.dice.pair()
-            self.say("Hit and run groundout chart. 2d6 %d+%d=%d. Rolls %s." % (a, b, total, ", ".join(self.dice.take())))
+            self.say("Hit and run groundout chart. 2d6 %s. Rolls %s." % (self._fmt(a, b, total), ", ".join(self.dice.take())))
             if total <= 3:
                 self._out_runner(0, "forced at second")
                 self._record_out(batter, kind, "Hit and run double play (page 18).")
@@ -1087,10 +1295,10 @@ class Game:
             return
         a, b, total = self.dice.pair()
         face = self.dice.d10()
-        self.say("Hit and run %s with a runner still on first. 2d6 %d+%d=%d, 1d10=%d. Rolls %s. (page 18)" % (
-            kind, a, b, total, face, ", ".join(self.dice.take())))
+        self.say("Hit and run %s with a runner still on first. 2d6 %s, 1d10=%d. Rolls %s. (page 18)" % (
+            kind, self._fmt(a, b, total), face, ", ".join(self.dice.take())))
         self.gap("Page 18's hit-and-run fly check says 1d10. This game reads it as 0-9. It does not say whether 0 is 10.")
-        if a == b and face > (runner.get("run") or 0):
+        if self._is_doubles(a, b, "The hit-and-run fly check") and face > (runner.get("run") or 0):
             self._out_runner(0, "thrown out going back to first")
 
     def _maybe_send(self, base, pos, run_cut=0):
@@ -1132,8 +1340,8 @@ class Game:
             rating = min(int(bat_dp), int(pit_dp))
         a, b, total = self.dice.pair()
         ones = pct % 10
-        self.say("Double-play check. Lower DP %s. 2d6 %d+%d=%d. At-bat percentile %02d. Rolls %s. (pages 6 and 17)" % (
-            rating, a, b, total, pct, ", ".join(self.dice.take())))
+        self.say("Double-play check. Lower DP %s. 2d6 %s. At-bat percentile %02d. Rolls %s. (pages 6 and 17)" % (
+            rating, self._fmt(a, b, total), pct, ", ".join(self.dice.take())))
         if kind == "G3":
             if ones >= 3:
                 self.say("The percentile ends in %d. The first baseman is unassisted (page 17)." % ones)
@@ -1197,8 +1405,8 @@ class Game:
     def _infield_in(self, batter, pos):
         a, b, total = self.dice.pair()
         pct = self.dice.pct()
-        self.say("Infield-in chart re-roll %d+%d=%d, percentile %02d. Rolls %s. (page 19)" % (
-            a, b, total, pct, ", ".join(self.dice.take())))
+        self.say("Infield-in chart re-roll %s, percentile %02d. Rolls %s. (page 19)" % (
+            self._fmt(a, b, total), pct, ", ".join(self.dice.take())))
         loaded = all(base is not None for base in self.bases)
         if total <= 5:
             if loaded:
@@ -1274,6 +1482,9 @@ class Game:
             self._reach(batter, 1, 0, "Batter safe at first on the play at home (page 19).", hit=False)
 
     def _defense(self, batter, pitcher, reading, hit_and_run, pct):
+        if self.deck:
+            self._defense_fac(batter, pitcher, reading)
+            return
         mode = reading.get("mode", "DEFENSE")
         slot = defense_slot(pct)
         self.say("Defense chart uses the at-bat percentile %02d (page 20)." % pct)
@@ -1291,8 +1502,8 @@ class Game:
         self.say("Chart says %s at %s (page 20)." % (check, pos))
         a, b, total = self.dice.pair()
         park_pct = self.dice.pct()
-        self.say("Re-roll all four dice (page 20): %d+%d=%d, percentile %02d. Rolls %s." % (
-            a, b, total, park_pct, ", ".join(self.dice.take())))
+        self.say("Re-roll all four dice (page 20): %s, percentile %02d. Rolls %s." % (
+            self._fmt(a, b, total), park_pct, ", ".join(self.dice.take())))
         fielder = self._fielder(pos)
         if check == "RANGE":
             grade = self._range_of(fielder)
@@ -1336,15 +1547,132 @@ class Game:
                     "%d-base error (page 20). The batter reaches on the error, which is not a hit." % int(outcome),
                     hit=False, error=True)
 
-    def _defense_out(self, batter, pos, total):
-        if pos in {"LF", "CF", "RF"}:
-            group = 2
-        elif pos == "C":
-            group = 0
+    def _defense_fac(self, batter, pitcher, reading):
+        """DEFENSE draws the card's fielding line, then a park percentile, then the HIT/ERR/OUT row. Page 13."""
+        mode = reading.get("mode", "DEFENSE")
+        card = self.deck.draw("defense")
+        info = card.get("defense") or {}
+        self.say("FAC defense. %s. Rolls %s. (page 13)" % (info.get("text"), ", ".join(self.deck.take())))
+        if info.get("check") == "RARE":
+            self.say("DEF RARE PLAY. The next card names the fielder. The card after that is the rare-play percentile (page 13).")
+            fielder_card = self.deck.draw("rare-fielder")
+            named = fielder_card.get("defense") or {}
+            self.say("Rare-play fielder card: %s. Rolls %s." % (named.get("text"), ", ".join(self.deck.take())))
+            if named.get("check") == "RARE" or not named.get("pos"):
+                self.gap("The card drawn for the rare-play fielder does not name a position. The at-bat is replayed. The book does not say to replay it.")
+                self.order_index[self.batting["code"]] -= 1
+                return
+            pct_card = self.deck.draw("rare-pct")
+            self.say("Defense rare-play percentile %02d. Rolls %s." % (pct_card["pct"], ", ".join(self.deck.take())))
+            self._rare(batter, pitcher, "DEFENSE", None, None, pct=pct_card["pct"])
+            return
+        check = info.get("check")
+        pos = info.get("pos")
+        if check not in {"RANGE", "ERROR"} or pos is None:
+            self.gap("This FAC defense section could not be read (%s). Recorded as an out." % info.get("text"))
+            self._record_out(batter, "DEF", "Unreadable defense card.")
+            return
+        if mode == "RANGE" and check != "RANGE":
+            self.gap("The pitcher card says RANGE. The FAC says %s. The position comes from the card and the check is RANGE (page 2)." % check)
+            check = "RANGE"
+        elif mode == "ERROR" and check != "ERROR":
+            self.gap("The pitcher card says ERROR. The FAC says %s. The position comes from the card and the check is ERROR." % check)
+            check = "ERROR"
+        if check == "RANGE" and pos == "C":
+            pos = "CF"
+            self.say("RANGE selected the catcher. Page 2 says to use CF.")
+        park_card = self.deck.draw("park")
+        park_pct = park_card["pct"]
+        self.say("Park check percentile %02d. Rolls %s." % (park_pct, ", ".join(self.deck.take())))
+        fielder = self._fielder(pos)
+        if check == "RANGE":
+            grade = self._range_of(fielder)
+            hi = (self.park["range_hit_hi"] or {}).get(grade or "")
+            if hi is None:
+                self.gap("No range grade for %s. The park check cannot be read. Recorded as an out." % pos)
+                self._record_out(batter, "DEF", "Defense out, missing range.")
+                return
+            self.say("Park range %s hits through %s at %s." % (grade, hi, self.park["name"]))
+            band = "OUT" if park_pct == 0 or park_pct > hi else "HIT"
         else:
-            group = 1
-        kind = DEFENSE_OUT[total][group]
-        self.say("Park check is OUT. Chart %s (page 20)." % kind)
+            err = self._error_of(fielder)
+            hi = (self.park["error_hi"] or {}).get(str(err) if err is not None else "")
+            if hi is None:
+                self.gap("No error number for %s. The park check cannot be read. Recorded as an out." % pos)
+                self._record_out(batter, "DEF", "Defense out, missing error.")
+                return
+            self.say("Park error %s is an error through %s." % (err, hi))
+            band = "OUT" if park_pct == 0 or park_pct > hi else "ERR"
+        self.say("Park check is %s. Symbols on the park card are ignored (page 13)." % band)
+        played = self.deck.draw("defense-play")
+        self.fac_result_card = played
+        self.say("FAC %s row. Rolls %s." % (band, ", ".join(self.deck.take())))
+        if band == "OUT":
+            group = 0 if pos == "C" else 2 if pos in {"LF", "CF", "RF"} else 1
+            text = (played.get("out") or [None, None, None])[group]
+            kind = parse_out_cell(text) if text else None
+            if kind is None:
+                self.gap("OUT cell %s is not a printed result. Recorded as an out." % text)
+                self._record_out(batter, "DEF", "Unreadable OUT cell.")
+                return
+            self._defense_out(batter, pos, None, kind)
+            return
+        if band == "ERR":
+            group = POS_ERR_GROUP[pos]
+            text = (played.get("err") or [None, None, None])[group]
+            outcome = parse_err_cell(text) if text else None
+            if outcome is None:
+                self.gap("ERR cell %s is not a printed result. Recorded as an out." % text)
+                self._record_out(batter, "DEF", "Unreadable ERR cell.")
+                return
+            if outcome == "FOUL":
+                self.say("Dropped foul. The at-bat restarts (page 20).")
+                self.order_index[self.batting["code"]] -= 1
+                return
+            if outcome == "SINGLE+":
+                self.say("SINGLE+error is a hit, and the runners take one extra base (page 20). The FAC error cell states that advance, so a SINGLE card is not also drawn.")
+                self._reach(batter, 1, 2, "Single plus an error.", hit=True, error=True)
+                return
+            self._reach(
+                batter, int(outcome), int(outcome),
+                "%d-base error (page 20). The batter reaches on the error, which is not a hit." % int(outcome),
+                hit=False, error=True,
+            )
+            return
+        group = POS_HIT_GROUP[pos]
+        text = (played.get("hit") or [None, None, None])[group]
+        cell = parse_hit_cell(text) if text else None
+        if cell is None:
+            self.gap("HIT cell %s is not a printed result. Recorded as an out." % text)
+            self._record_out(batter, "DEF", "Unreadable HIT cell.")
+            return
+        hit = cell["result"]
+        bases = cell["bases"]
+        if cell["dagger"] and (batter["run"] or 0) >= 8 and hit == "2B":
+            hit, bases = "3B", 3
+            self.say("Dagger double becomes a triple. RUN is 8 or higher (page 20).")
+        if self.opts["running"] == "fac" and hit in {"1B", "2B"} and any(self.bases):
+            self.say("HIT cell %s. The star advance is not used. The next card's %s section is the preferred advance (pages 13-14)." % (text, "SINGLE" if hit == "1B" else "DOUBLE"))
+            self._fac_running(batter, hit)
+            return
+        self._reach(
+            batter, {"1B": 1, "2B": 2, "3B": 3}[hit], bases,
+            "Range hit %s from the FAC. Runners advance %d (the printed stars)." % (hit, bases),
+            hit=True,
+        )
+
+    def _defense_out(self, batter, pos, total, kind=None):
+        if kind is None:
+            if pos in {"LF", "CF", "RF"}:
+                group = 2
+            elif pos == "C":
+                group = 0
+            else:
+                group = 1
+            kind = DEFENSE_OUT[total][group]
+            self.say("Park check is OUT. Chart %s (page 20)." % kind)
+        else:
+            self.say("FAC OUT cell %s (page 20)." % kind)
         fielder = self._fielder(pos)
         if kind in {"POP", "POP-FOUL", "LINE"}:
             self._record_out(batter, kind, "Defense out. Runners hold.")
@@ -1412,9 +1740,12 @@ class Game:
             return
         self._record_out(batter, kind, "Defense out.")
 
-    def _rare(self, batter, pitcher, result, one, two):
-        pct = self.dice.pct()
-        self.say("Percentile 00. Rare play. Re-roll percentile %02d. Rolls %s. (page 4)" % (pct, ", ".join(self.dice.take())))
+    def _rare(self, batter, pitcher, result, one, two, pct=None):
+        if pct is None:
+            pct = self.dice.pct()
+            self.say("Percentile 00. Rare play. Re-roll percentile %02d. Rolls %s. (page 4)" % (pct, ", ".join(self.dice.take())))
+        else:
+            self.say("Rare-play chart percentile %02d (page 13)." % pct)
         cell = rare_lookup(not any(self.bases), result, pct)
         self.say(cell["note"])
         if not cell["coded"]:
@@ -1721,14 +2052,26 @@ class Game:
         jump = self._jump_this_time(batter, jump, steal.get("jump_mod"))
         if jump is None:
             return
-        # Use a fresh 2d6. The book says "compare the 2d6 total" and does not say it is a new roll.
-        self.gap("Auto steal compares a 2d6 to Jump (page 7). It does not say whether that is the at-bat's 2d6 or a new roll. This game rolls a new 2d6.")
-        a, b, total = self.dice.pair()
-        self.say("Auto-steal check %d+%d=%d against jump %s. Rolls %s." % (a, b, total, jump, ", ".join(self.dice.take())))
+        if self.deck:
+            card = self.fac_result_card
+            if card is None:
+                card = self.deck.draw("auto-steal")
+                self.deck.take()
+                self.gap("Auto steal had no result card saved. A new card's 2d6 is used. Page 13 allows drawing the next card.")
+            else:
+                self.say("Auto steal uses 2d6=%s on the card that resolved the play (page 13)." % card["d6_2"])
+            a, b, total = None, None, card["d6_2"]
+        else:
+            # Use a fresh 2d6. The book says "compare the 2d6 total" and does not say it is a new roll.
+            self.gap("Auto steal compares a 2d6 to Jump (page 7). It does not say whether that is the at-bat's 2d6 or a new roll. This game rolls a new 2d6.")
+            a, b, total = self.dice.pair()
+            self.say("Auto-steal check %s against jump %s. Rolls %s." % (self._fmt(a, b, total), jump, ", ".join(self.dice.take())))
+        if self.deck:
+            self.say("Auto-steal check 2d6=%s against jump %s." % (total, jump))
         if total == 12:
             self._pickoff(batter)
             return
-        if base == 1 and a != b:
+        if base == 1 and not self._is_doubles(a, b, "Stealing third"):
             self.say("Stealing third needs doubles (page 7). He does not go.")
             return
         if total > jump:
@@ -1770,12 +2113,12 @@ class Game:
             self.gap("Hold stealing needs the pitcher's Hold rating (page 7). This pitcher has none. The runner stays.")
             return
         a, b, total = self.dice.pair()
-        self.say("Hold steal check %d+%d=%d against Hold %s. Rolls %s." % (a, b, total, hold, ", ".join(self.dice.take())))
+        self.say("Hold steal check %s against Hold %s. Rolls %s." % (self._fmt(a, b, total), hold, ", ".join(self.dice.take())))
         if total == 12:
             self._pickoff_runner(lead)
             return
         letter = (runner.get("steal") or {}).get("rating")
-        if lead == 1 and a != b:
+        if lead == 1 and not self._is_doubles(a, b, "Stealing third"):
             self.say("Stealing third needs doubles (page 7). He does not go.")
             return
         if total <= int(hold):
@@ -1802,13 +2145,52 @@ class Game:
         arm = self._arm_of(catcher)
         if arm is None or not 1 <= int(arm) <= 5:
             self.gap(
-                "Catcher arm is %s. Page 8 rates catcher arms from 1 to 5. The stealing chart has no column, so the steal is not given a result and the runner holds."
+                "Catcher arm is %s. Page 8 rates a catcher from 1 to 5, 1 the best. The 1986 cards print catcher arms on that scale (Gedman 1, Whitt 2, Fisk 3, Tony Pena 2) and a separate outfield arm on the same player (Fisk's 1986 LF arm is 8). These roster cards store the hitter solver's words instead: weak 4, below average 5, average 6, above average 7, strong 8. The book does not say how to turn 6, 7, or 8 into a 1-5 catcher arm. The steal chart is not used and the runner holds."
                 % arm
             )
             return
         column = STEAL_COLUMN.get("%s%s" % (letter, int(arm)))
         if column is None:
             self.gap("No stealing column for %s%s." % (letter, arm))
+            return
+        if self.deck:
+            previous = self.deck.last
+            card = self.deck.draw("steal")
+            self.say(
+                "FAC steal. %s%s is %s. Rolls %s. (pages 13-14)"
+                % (letter, int(arm), column, ", ".join(self.deck.take()))
+            )
+            special = (card.get("steal") or {}).get("special")
+            if special:
+                die = previous["d6_1"] if previous else None
+                self.say("Printed instruction: %s" % special)
+                if die is None:
+                    self.gap("The card says to use the previous card's 1d6. No previous card was drawn. The steal is not given a result.")
+                    return
+                self.say("Previous card 1d6=%s. 1-3 is out and the runner is checked. 4-6 is safe and the fielder is checked." % die)
+                if die <= 3:
+                    self._out_runner(base, "caught stealing")
+                    self._line_id(self.batting["code"], runner["id"], cs=1)
+                    person = self._person(self.batting, runner["id"]) or runner
+                    self._injury(person, "Normal")
+                else:
+                    self._move_runner(base, base + 1, "steals")
+                    self._line_id(self.batting["code"], runner["id"], sb=1)
+                    self._injury(self._fielder("C") or {}, "Normal")
+                return
+            outcome = (card.get("steal") or {}).get("grades", {}).get(column)
+            if outcome == "Safe":
+                self._move_runner(base, base + 1, "steals")
+                self._line_id(self.batting["code"], runner["id"], sb=1)
+            elif outcome == "Out":
+                self._out_runner(base, "caught stealing")
+                self._line_id(self.batting["code"], runner["id"], cs=1)
+            elif outcome == "SB+E2?":
+                self._fac_steal_error(base, runner, card)
+            elif outcome == "Drop?":
+                self._fac_steal_drop(base, runner, card)
+            else:
+                self.gap("This FAC has no stealing result for %s. The runner holds." % column)
             return
         pct = self.dice.pct()
         result = steal_result(column, pct)
@@ -1842,6 +2224,37 @@ class Game:
             else:
                 self._out_runner(base, "caught, fielder holds the ball")
                 self._line_id(self.batting["code"], runner["id"], cs=1)
+
+    def _fac_steal_error(self, base, runner, card):
+        """SB+E2? on the card. The runner is safe. 1d6 against the catcher's error decides the wild throw. Page 18."""
+        self._move_runner(base, base + 1, "safe")
+        self._line_id(self.batting["code"], runner["id"], sb=1)
+        die = card["d6_1"]
+        catcher = self._fielder("C")
+        err = self._error_of(catcher)
+        self.say("SB+E2? uses 1d6=%s on this card against the catcher's error %s (page 18)." % (die, err))
+        if err is None or die > err:
+            self.say("The throw sails. Runners advance 1.")
+            self._line_field(self.fielding["code"], e=1)
+            self._runners_advance(1)
+        else:
+            self.say("The throw is late and on target. No extra base.")
+
+    def _fac_steal_drop(self, base, runner, card):
+        """Drop? on the card. 1d6 on this card against the covering fielder. Page 18."""
+        cover = "SS" if _stand(runner.get("bats", "R"), "R") == "L" else "2B"
+        self.gap("The steal DROP fielder depends on the batter's hand (page 18). The runner's hand was used when the batter had already reached. That may be the wrong hand.")
+        fielder = self._fielder(cover)
+        die = card["d6_1"]
+        err = self._error_of(fielder)
+        self.say("Drop? 1d6=%s on this card, %s error %s (page 18)." % (die, cover, err))
+        if err is None or die > err:
+            self._move_runner(base, base + 1, "safe, ball dropped")
+            self._line_id(self.batting["code"], runner["id"], sb=1)
+            self._line_field(self.fielding["code"], e=1)
+        else:
+            self._out_runner(base, "caught, fielder holds the ball")
+            self._line_id(self.batting["code"], runner["id"], cs=1)
 
     def _pickoff_runner(self, base):
         runner = self.bases[base]

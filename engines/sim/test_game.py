@@ -25,7 +25,7 @@ class Bag:
 
 
 def game():
-    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off")
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", fac=False)
     found.dice.rng = Bag([])
     return found
 
@@ -317,14 +317,67 @@ def roster_rules_and_extra_innings():
 
 def sample_game_stays_out_of_the_tournament():
     report = play("BOS", "TOR", seed=1)
-    assert report["score"] == {"TOR": 5, "BOS": 8}
+    assert report["score"] == {"TOR": 0, "BOS": 4}
     assert report["innings"] == 9
     assert report["postponed"] is False
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
+    assert report["pitching"]["TOR|stiebda01"]["outs"] == 21
+    assert any("Fast Action Cards replace the dice" in line for line in report["log"])
     blob = subprocess.check_output(["git", "hash-object", "tournament_results.json"], cwd=ROOT, text=True).strip()
     assert blob == "c355ca75cf71d179e8d2fa4c01a8d8756d5e58c4"
     diff = subprocess.check_output(["git", "diff", "--", "sw.js"], cwd=ROOT, text=True)
     assert diff == ""
+
+
+def fac_deck_and_scripted_plays():
+    from fac import load_deck
+    cards = load_deck()
+    assert len(cards) == 256
+    assert sum(1 for card in cards if card["wp"]) == 26
+    specials = [card for card in cards if card["steal"]["special"]]
+    assert len(specials) == 3
+    assert all(card["home"] in {"C", "P"} for card in specials)
+    assert all(card["defense"]["check"] == "RARE" for card in specials)
+    flagged = [card for card in cards if card["uncertain"]]
+    assert len(flagged) == 29
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = [0]
+    found.deck.pos = 0
+    batter = found.away["lineup"][0]
+    found.bases = [None, runner("second", 4), None]
+    found.outs = 2
+    found._fac_running(batter, "1B")
+    assert found.score["TOR"] == 0
+    assert found.bases[2]["id"] == "second"
+    assert found.bases[0]["id"] == batter["id"]
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = [0]
+    found.deck.pos = 0
+    arm(found, "BOS", "C", 3)
+    who = runner("thief", 8)
+    who["steal"] = {"jump": 4, "rating": "A", "jump_mod": None}
+    found.bases = [who, None, None]
+    found._resolve_steal(0, "A", who)
+    assert found.bases[1]["id"] == "thief"
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    found.deck.order = [0]
+    found.deck.pos = 0
+    batter = found.away["lineup"][7]
+    found.bases = [runner("first"), None, None]
+    found._bunt(batter, "A", False)
+    assert found.outs == 1
+    assert found.bases[1]["id"] == "first"
+    assert found.box["TOR|" + batter["id"]]["sh"] == 1
+
+    found = Game(load_club("BOS"), load_club("TOR"), seed=1, steal="off", running="fac")
+    who = runner("thief", 8)
+    found.bases = [who, None, None]
+    found._resolve_steal(0, "A", who)
+    assert found.bases[0]["id"] == "thief"
+    assert any("does not say how to turn 6, 7, or 8" in gap for gap in found.gaps)
 
 
 if __name__ == "__main__":
@@ -334,5 +387,6 @@ if __name__ == "__main__":
     steal_defense_and_pitch_quality()
     hit_and_run_advanced_and_infield()
     roster_rules_and_extra_innings()
+    fac_deck_and_scripted_plays()
     sample_game_stays_out_of_the_tournament()
     print("game tests passed")
