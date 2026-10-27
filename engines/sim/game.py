@@ -258,6 +258,8 @@ class Game:
             # uses the closer in a save spot. "book" keeps the old behaviour
             # (a reliever only after a starter tires, at the end of a half).
             "bullpen": "manager",
+            "blowout": 6,       # manager: margin that counts as a blowout (usage choice)
+            "blowout_cap": 8,   # in a blowout, pull anyway at this many runs (book max 6 + 2)
         }
         self.opts.update(opts)
         if self.opts["fac"]:
@@ -650,10 +652,15 @@ class Game:
         if player["removed"]:
             remove = True
             reason = "The pitcher was removed by a play."
+        forced = bool(player["removed"])
         if not remove:
             why = self._usage_reason(before_batter)
             if why:
                 remove, reason = True, why
+        cap = self.opts.get("blowout_cap", 8)
+        if before_batter and self._blowout() and state["runs"] >= cap and not forced and self._pen_left():
+            remove, forced = True, True
+            reason = "Manager: blowout, but %s has allowed %d runs (cap %d) and is pulled." % (player["name"], state["runs"], cap)
         if not before_batter and self._no_more_batters():
             return
         code = self.fielding["code"]
@@ -676,6 +683,13 @@ class Game:
             pending[code] = reason
             return
         pending.pop(code, None)
+        if not forced and self._blowout() and not self._long_left():
+            # Blowout: no mop-up/long man left, so he wears it (usage choice).
+            seen = self._wears = getattr(self, "_wears", set())
+            if player["id"] not in seen:
+                seen.add(player["id"])
+                self.say("Manager: blowout (%s). No long man is left, so %s stays in and wears it." % (self._margin_text(), player["name"]))
+            return
         # A pitcher who has left cannot come back in the same game.
         self._pitched = getattr(self, "_pitched", {})
         gone = self._pitched.setdefault(code, set())
@@ -724,7 +738,7 @@ class Game:
         code = self.batting["code"]
         self.score[code] += 1
         self.pitcher[self.fielding["code"]]["runs"] += 1
-        self._line_id(code, runner["id"], r=1)
+        self._line_id(code, runner["id"], name=runner.get("name"), r=1)
         resp = self._resp.pop(runner["id"], None) or self._pkey()
         # Earned unless the runner reached on an error, or the inning would
         # already have ended had the errors been outs (rule 9.16(a)).
@@ -839,6 +853,20 @@ class Game:
         me = self.pitcher[self.fielding["code"]]["player"]["id"]
         return any(not p["removed"] and p["id"] not in gone and p["id"] != me for p in self.fielding["bullpen"])
 
+    def _blowout(self):
+        if self.opts.get("bullpen") != "manager":
+            return False
+        return abs(self.score[self.home["code"]] - self.score[self.away["code"]]) >= self.opts.get("blowout", 6)
+
+    def _margin_text(self):
+        return "%s %d, %s %d" % (self.away["code"], self.score[self.away["code"]], self.home["code"], self.score[self.home["code"]])
+
+    def _long_left(self):
+        gone = getattr(self, "_pitched", {}).get(self.fielding["code"], set())
+        me = self.pitcher[self.fielding["code"]]["player"]["id"]
+        return any(not p["removed"] and p["id"] not in gone and p["id"] != me
+                   and (p["stamina"] or {}).get("relief") == "Long" for p in self.fielding["bullpen"])
+
     def _save_spot_now(self):
         """Re-check the save situation with the current score when the change is made."""
         code = self.fielding["code"]
@@ -853,6 +881,13 @@ class Game:
         short = [p for p in pen if (p["stamina"] or {}).get("relief") == "Short"]
         long_ = [p for p in pen if (p["stamina"] or {}).get("relief") == "Long"]
         if self.opts.get("bullpen") == "manager":
+            if self._blowout():
+                # Never the closer or top relievers in a blowout: long men first.
+                if long_:
+                    return long_[0]
+                if short:
+                    return short[-1]
+                return pen[-1]
             if late and -1 <= lead <= 3 and short:
                 return short[0]            # closer / setup, in roster order
             if not late and long_:
@@ -2887,14 +2922,23 @@ class Game:
 
     def _line(self, batter, **add):
         row = self.box.setdefault(self.batting["code"] + "|" + batter["id"], _empty_line(batter))
+        if row.get("name") in (None, "", row.get("id")):  # created first by _line_id
+            row.update({k: v for k, v in _empty_line(batter).items() if k in ("name", "pos")})
         for key, amount in add.items():
             row[key] = row.get(key, 0) + amount
         charge = {k: add[k] for k in ("h", "bb", "so", "hr", "hbp") if add.get(k)}
         if charge:
             self._pitch_line(**charge)
 
-    def _line_id(self, code, pid, **add):
-        row = self.box.setdefault(code + "|" + pid, {"id": pid, "name": pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0})
+    def _line_id(self, code, pid, name=None, **add):
+        key = code + "|" + pid
+        who = None
+        if key not in self.box:
+            club = self.home if self.home["code"] == code else self.away
+            who = next((p for grp in ("people", "lineup", "bench") for p in club.get(grp) or [] if p.get("id") == pid), None)
+            if who is not None and who.get("pos") is not None:
+                self.box[key] = _empty_line(who)
+        row = self.box.setdefault(key, {"id": pid, "name": (who or {}).get("name") or name or pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0})
         for key, amount in add.items():
             row[key] = row.get(key, 0) + amount
 

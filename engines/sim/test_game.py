@@ -323,12 +323,13 @@ def sample_game_stays_out_of_the_tournament():
     assert report["postponed"] is False
     assert report["pitching"]["BOS|martipe02"]["outs"] == 27
     assert report["pitching"]["TOR|stiebda01"]["outs"] == 14
+    assert report["pitching"]["TOR|quantpa01"]["outs"] == 10  # blowout: the long man wears it
     assert report["decisions"]["W"] == "BOS|martipe02" and report["decisions"]["L"] == "TOR|stiebda01"
     assert report["wp"] == {
-        "seen": 19, "fired": 2, "miss": 8, "empty": 8, "no_rating": 1, "unmarked": 0,
+        "seen": 19, "fired": 0, "miss": 8, "empty": 9, "no_rating": 2, "unmarked": 0,
     }
     assert any("Fast Action Cards replace the dice" in line for line in report["log"])
-    assert any("WP? drawn 19. Fired 2." in line for line in report["log"])
+    assert any("WP? drawn 19. Fired 0." in line for line in report["log"])
     # Catcher arms are on the page-8 1-5 scale, so steals resolve.
     # Seed 1 has no steal attempt since the v0.3 pitcher tables; seed 4 does.
     assert any("FAC steal." in line for line in play("BOS", "TOR", seed=4)["log"])
@@ -626,6 +627,48 @@ def supplemental_strikeout_is_on_by_default():
     assert not off._supplemental_strikeout(pitcher, 55)
 
 
+def box_names_and_blowout_usage():
+    """Box lines always carry display names; blowouts let the pitcher wear it."""
+    for seed in range(1, 41):
+        r = play("CHC", "MON", seed=seed)
+        for k, v in r["box"].items():
+            if not k.endswith("|field"):
+                assert v["name"] != v["id"], "box shows an id: %s" % k
+    f = game()
+    f.batting, f.fielding = f.away, f.home
+    f.inning, f.half, f.outs, f.bases = 6, "top", 0, [None, None, None]
+    starter = f.pitcher["BOS"]["player"]
+    long_ids = {p["id"] for p in f.home["bullpen"] if (p["stamina"] or {}).get("relief") == "Long"}
+    # Close game: a fatigued starter comes out.
+    f.score = {"TOR": 3, "BOS": 4}
+    f.pitcher["BOS"]["fatigued"] = True
+    f._maybe_change_pitcher(before_batter=True)
+    assert f.pitcher["BOS"]["player"] is not starter
+    # Blowout: the reliever is a long man, never the closer.
+    g = game()
+    g.batting, g.fielding = g.away, g.home
+    g.inning, g.half, g.outs, g.bases = 6, "top", 0, [None, None, None]
+    g.score = {"TOR": 2, "BOS": 10}
+    g.pitcher["BOS"]["fatigued"] = True
+    g._maybe_change_pitcher(before_batter=True)
+    mop = g.pitcher["BOS"]["player"]
+    if long_ids:
+        assert mop["id"] in long_ids
+    # No long man left: a fatigued pitcher wears it until the cap.
+    g._pitched["BOS"] |= {p["id"] for p in g.home["bullpen"] if p is not mop and p["id"] in long_ids}
+    st = g.pitcher["BOS"]
+    st.update(runs=4, batters=3, fatigued=True)
+    g._maybe_change_pitcher(before_batter=True)
+    assert g.pitcher["BOS"]["player"] is mop and any("wears it" in l for l in g.log)
+    st["runs"] = 8
+    g._maybe_change_pitcher(before_batter=True)
+    out = g.pitcher["BOS"]["player"]
+    assert out is not mop and any("cap 8" in l for l in g.log)
+    shorts = [p for p in g.home["bullpen"] if (p["stamina"] or {}).get("relief") == "Short"]
+    if len(shorts) > 1:
+        assert out is not shorts[0], "closer used in a blowout"
+
+
 def late_bullpen_usage():
     """A 9th-inning closer call is re-checked on the current score, and a tired
     reliever comes out before the next batter while the pen has an arm."""
@@ -757,6 +800,7 @@ def official_scoring_and_bullpen():
 
 
 if __name__ == "__main__":
+    box_names_and_blowout_usage()
     late_bullpen_usage()
     official_scoring_and_bullpen()
     supplemental_strikeout_is_on_by_default()

@@ -2,6 +2,25 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Box names; blowout bullpen usage
+
+These came out of the test series Game 3.
+- **Box score showed player IDs** (e.g. `crowape01`). A batter's line could be created first by a run, steal or pickoff, under his ID with no name. Lines now always carry the display name. The test checks 40 games for any ID-named line.
+- **Blowouts (margin 6+ either way, option `blowout`).**
+  - A usage pull (fatigue, Start rating, Short man's inning) goes ahead only when a Long man is left, and he is the reliever brought in.
+  - The closer and top Short men are never used.
+  - With no Long man, the pitcher wears it until `blowout_cap` (8 runs, the book maximum of 6 plus 2). A removal by a play still forces a change.
+  - Close games are unchanged.
+- **Stress (2,976 games, before → after):**
+  - relievers 3.23 → 2.90 per team-game;
+  - in games with a final margin of 6+, relievers 3.36 → 2.11;
+  - in games with a final margin of 2 or less, relievers 3.23 → 3.22 and starter IP 4.94 → 4.94;
+  - starter IP 4.87 → 4.89; complete games 7.4% → 7.8%;
+  - relief outings with 4+ runs 3.0% → 4.7%;
+  - R 5.03 → 5.11; AVG/SLG .253/.419 → .255/.424.
+- **Sample game.** The score is unchanged at Boston 9, Toronto 1. Quantrill now finishes for Toronto. The WP tally has shifted (fired 2 → 0) because the card sequence changed.
+- Tests in `test_game.box_names_and_blowout_usage`.
+
 ## 2026-10-27 — Late bullpen usage: closer re-check, tired relievers
 
 These came out of the test series Game 2.

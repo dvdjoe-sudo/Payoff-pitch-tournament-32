@@ -78,6 +78,7 @@ The rate harness in `pa_sim.py` is a different tool. It is unchanged. Its error 
   - A starter goes his Start rating in innings, then comes out at the end of a half. He may continue only while leading with 1 run or fewer allowed.
   - From the 9th, a lead of 1-3 brings the closer, the first unused Short man in roster order, for a starter who has gone 7.
   - The reliever is a Short man (roster order) from the 7th inning with the score from -1 to +3, a Long man before the 7th, and otherwise the last Short man.
+  - Blowout (margin 6+, `blowout`): a usage pull goes ahead only when a Long man is left, and the closer and top Short men are never used. With no Long man, the pitcher wears it until `blowout_cap` (8 runs, the book maximum of 6 plus 2) or a removal by a play.
   - The closer call is re-checked on the score at the moment of the change. A reliever who is fatigued (page 11) comes out before the next batter if the pen has an unused arm.
   - A Short man still comes out after one inning and a Long man after three. A pitcher who leaves cannot return.
   - `bullpen="book"` keeps the old behaviour: a fatigued starter comes out only at the end of a half, and the next name in the bullpen comes in.
@@ -131,7 +132,7 @@ Lasting sentences that are coded only in part: the extra out on a dropped third 
 
 `engines/sim/samples/tor-at-bos-seed1.txt`
 
-Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Boston 9, Toronto 1, nine innings. Pedro Martinez pitched all nine (W). Dave Stieb (L) went 4.2 innings; Toronto used three relievers.
+Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Boston 9, Toronto 1, nine innings. Pedro Martinez pitched all nine (W). Dave Stieb (L) went 4.2 innings; Paul Quantrill wore the last 3.1 in the blowout.
 
 Before manager bullpen usage and official scoring (2026-10-27), it was Boston 5, Toronto 1. Before intentional walks were counted as walks on hitter cards (2026-10-27), it was Toronto 7, Boston 1 (the capacity repair and default supplemental SO had left that unchanged). Before the platoon re-split and per-hand pitcher calibration (2026-10-27), it was Toronto 7, Boston 3. The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
 
