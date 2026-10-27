@@ -979,6 +979,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - OF2 George Springer 7
 - IF2 Jeremy Peña 5
 - BAT Jim Wynn 11
+- BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)
 
 ### Rotation
 
@@ -994,9 +995,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 - SU Brad Lidge 6
 - SU Josh Hader 3
 - MID Ryan Pressly 7
-- FIRE Octavio Dotel 5
 - LH Joe Sambito 8
 - LATE Dave Smith 11
+
+### Approved active roster amendment (2026-10-27)
+
+Moisés Alou (`aloumo01`) becomes Houston bench hitter #6 (right-handed corner outfielder, LF/RF), replacing Octavio Dotel (`doteloc01`) on the active 26. **Only Alou's Houston Astros seasons 1998, 2000 and 2001 count** for his prime and Peak 162, excluding his entire non-Houston career and the 1999 injury season. The official Houston roster is now 9 starting hitters, 6 bench hitters, 5 starters and 6 relievers: 26 unique active players.
+
+Joe Sambito moves to bullpen spot 5 and Dave Smith to spot 6, retaining their left-handed and late relief roles. All previously converted cards (including Dotel and Alou's separate Montreal record), old games, scores, original dice/FAC logs, box scores and prior tournament results remain untouched. Houston Alou's genuine frozen Hitter v0.5 playable card requires its own Astros-only conversion; no guessed card values are supplied.
 
 ## 17. Philadelphia Athletics (PHA)
 

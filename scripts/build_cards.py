@@ -582,6 +582,7 @@ def build():
     apply_twins_roster_amendment(cards, rosters)
     apply_white_sox_roster_amendment(cards, rosters)
     apply_orioles_roster_amendment(cards, rosters)
+    apply_astros_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -594,6 +595,7 @@ def build():
 AUTHORIZED_HITTERS = (
     "ARI|peralda01",
     "MON|aloumo01",
+    "HOU|aloumo01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -1175,6 +1177,49 @@ def apply_phillies_roster_amendment(cards, rosters):
         raise SystemExit("Phillies approved roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Phillies approved roster needs 26 distinct active players")
+
+
+def apply_astros_roster_amendment(cards, rosters):
+    """Owner-approved Houston Alou 1998/2000/2001 for Octavio Dotel.
+
+    All original conversions, including HOU Dotel and MON Alou, remain
+    archived. Never fabricate a Houston Hitter v0.5 card or rewrite games.
+    """
+    roster = rosters.get("HOU")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "doteloc01"]
+    alou_id = "aloumo01"
+    found = [p for p in players if p["id"] == alou_id]
+    if not found:
+        players.append({"group": "bench", "id": alou_id, "kind": "hitter",
+                        "name": "Moisés Alou", "pos": "LF", "slot": 6})
+    elif len(found) != 1:
+        raise SystemExit("Houston Moises Alou appears more than once")
+    else:
+        found[0].update(group="bench", kind="hitter", pos="LF", slot=6)
+    for pid, group, slot, pos, kind in (
+        (alou_id, "bench", 6, "LF", "hitter"),
+        ("sambijo01", "bullpen", 5, "RP", "pitcher"),
+        ("smithda02", "bullpen", 6, "RP", "pitcher"),
+    ):
+        matches = [p for p in players if p["id"] == pid]
+        if len(matches) != 1:
+            raise SystemExit("Houston active role missing: " + pid)
+        matches[0].update(group=group, slot=slot, pos=pos, kind=kind)
+        card = cards.get("HOU|" + pid)
+        if card:
+            card["spots"] = [{"group": group, "slot": slot,
+                              "pos": pos, "kind": kind}]
+    # HOU|doteloc01 remains historical; MON|aloumo01 is a separate club.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Houston active roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Houston active roster needs 26 distinct players")
 
 
 def apply_orioles_roster_amendment(cards, rosters):
