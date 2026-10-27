@@ -959,6 +959,14 @@ def check_white_sox_roster_amendment(check: Check) -> None:
                  "Owner Chicago source agrees with converted active 26")
     check.expect("CWS|lockebo02" in cards,
                  "Original Bob Locker pitcher card remains archived")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["CWS"]
+    allen_peak = peaks.get("BAT2 Dick Allen 1B/DH (1972-1974)") or {}
+    check.expect(allen_peak.get("lahman_id") == "allendi01"
+                 and allen_peak.get("years") == [1972, 1973, 1974]
+                 and allen_peak.get("status") == "ok",
+                 "Dick Allen three-season White Sox-only Peak 162 is active")
+    check.expect("MR2 Bob Locker" not in peaks,
+                 "Inactive Bob Locker removed from current CWS Peak 162 display")
     roster_doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Dick Allen (`allendi01`) joins Chicago" in roster_doc,
                  "Chicago owner change appears in published roster")
