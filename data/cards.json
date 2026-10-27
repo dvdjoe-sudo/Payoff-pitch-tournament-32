@@ -3004,7 +3004,7 @@
  },
  "ARI|montemi01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "L",
    "dp": 7,
    "fielding": "Below Average",
@@ -3117,7 +3117,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 5,
      "pos": "C",
      "range": "D"
@@ -3270,7 +3270,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2009,
+     2010,
+     2011,
+     2012,
+     2014
+    ],
+    "years_used": [
+     2009,
+     2010,
+     2011,
+     2012,
+     2014
+    ],
+    "cs": 134,
+    "sb": 270,
+    "att": 404,
+    "cs_pct": 0.3317,
+    "lg_cs_pct": 0.2727,
+    "rel": 0.2165,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "montemi01",
@@ -3345,7 +3383,7 @@
  },
  "ARI|morenga01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Poor",
@@ -3458,7 +3496,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 2,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -3611,7 +3649,44 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "years_used": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "cs": 62,
+    "sb": 159,
+    "att": 221,
+    "cs_pct": 0.2805,
+    "lg_cs_pct": 0.2209,
+    "rel": 0.2698,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv",
+     "MLB Stats API 2026 fielding"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "morenga01",
@@ -7746,7 +7821,7 @@
  },
  "ATL|crandde01": {
   "card_bat": {
-   "arm": "Strong",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Elite",
@@ -7859,7 +7934,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 2,
      "e": 1,
      "pos": "C",
      "range": "A"
@@ -8009,7 +8084,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1956,
+     1958,
+     1959,
+     1960,
+     1962
+    ],
+    "years_used": [
+     1956,
+     1958,
+     1959,
+     1960,
+     1962
+    ],
+    "cs": 116,
+    "sb": 126,
+    "att": 242,
+    "cs_pct": 0.4793,
+    "lg_cs_pct": 0.3977,
+    "rel": 0.2053,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "crandde01",
@@ -12132,7 +12245,7 @@
  },
  "ATL|torrejo01": {
   "card_bat": {
-   "arm": "Above Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Great",
@@ -12245,7 +12358,7 @@
    ],
    "positions": [
     {
-     "arm": 7,
+     "arm": 2,
      "e": 2,
      "pos": "C",
      "range": "A"
@@ -12398,7 +12511,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1963,
+     1964,
+     1965,
+     1966,
+     1967
+    ],
+    "years_used": [
+     1963,
+     1964,
+     1965,
+     1966,
+     1967
+    ],
+    "cs": 138,
+    "sb": 184,
+    "att": 322,
+    "cs_pct": 0.4286,
+    "lg_cs_pct": 0.3838,
+    "rel": 0.1167,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "torrejo01",
@@ -13041,7 +13192,7 @@
    "throws": "R"
   },
   "id": "bautife01",
-  "name": "Félix Bautista",
+  "name": "F\u00e9lix Bautista",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -13645,7 +13796,7 @@
  },
  "BAL|dempsri01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -13758,7 +13909,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -13911,7 +14062,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1978,
+     1980,
+     1982,
+     1984,
+     1985
+    ],
+    "years_used": [
+     1978,
+     1980,
+     1982,
+     1984,
+     1985
+    ],
+    "cs": 180,
+    "sb": 300,
+    "att": 480,
+    "cs_pct": 0.375,
+    "lg_cs_pct": 0.3329,
+    "rel": 0.1264,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "dempsri01",
@@ -14528,7 +14717,7 @@
  },
  "BAL|hoilech01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -14641,7 +14830,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -14791,7 +14980,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1992,
+     1993,
+     1994,
+     1995,
+     1998
+    ],
+    "years_used": [
+     1992,
+     1993,
+     1994,
+     1995,
+     1998
+    ],
+    "cs": 150,
+    "sb": 366,
+    "att": 516,
+    "cs_pct": 0.2907,
+    "lg_cs_pct": 0.3197,
+    "rel": -0.0906,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "hoilech01",
@@ -20264,7 +20491,7 @@
  },
  "BOS|fiskca01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -20377,7 +20604,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -20530,7 +20757,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1972,
+     1976,
+     1977,
+     1978,
+     1980
+    ],
+    "years_used": [
+     1972,
+     1976,
+     1977,
+     1978,
+     1980
+    ],
+    "cs": 215,
+    "sb": 383,
+    "att": 598,
+    "cs_pct": 0.3595,
+    "lg_cs_pct": 0.3512,
+    "rel": 0.0238,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "fiskca01",
@@ -24031,7 +24296,7 @@
  },
  "BOS|varitja01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "3",
    "bats": "S",
    "dp": 7,
    "fielding": "Poor",
@@ -24144,7 +24409,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -24300,7 +24565,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1999,
+     2003,
+     2004,
+     2005,
+     2007
+    ],
+    "years_used": [
+     1999,
+     2003,
+     2004,
+     2005,
+     2007
+    ],
+    "cs": 133,
+    "sb": 390,
+    "att": 523,
+    "cs_pct": 0.2543,
+    "lg_cs_pct": 0.295,
+    "rel": -0.138,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "varitja01",
@@ -27215,7 +27518,7 @@
  },
  "CHC|hartnga01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -27328,7 +27631,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -27484,7 +27787,41 @@
     "jump_mod": null,
     "rating": "B"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1924,
+     1928,
+     1930,
+     1935,
+     1937
+    ],
+    "years_used": [],
+    "cs": 0,
+    "sb": 0,
+    "att": 0,
+    "cs_pct": null,
+    "lg_cs_pct": null,
+    "rel": null,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": true,
+    "flags": [
+     "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+     "window years without CS tracking: 1924,1928,1930,1935,1937",
+     "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+    ],
+    "sources": [],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "hartnga01",
@@ -28002,7 +28339,7 @@
  },
  "CHC|klingjo01": {
   "card_bat": {
-   "arm": "Strong",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Elite",
@@ -28115,7 +28452,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 2,
      "e": 1,
      "pos": "C",
      "range": "A"
@@ -28271,7 +28608,45 @@
     "jump_mod": null,
     "rating": "B"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1902,
+     1903,
+     1906,
+     1907,
+     1908
+    ],
+    "years_used": [
+     1902,
+     1903,
+     1906,
+     1907,
+     1908
+    ],
+    "cs": 542,
+    "sb": 528,
+    "att": 1070,
+    "cs_pct": 0.5065,
+    "lg_cs_pct": 0.4488,
+    "rel": 0.1288,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "klingjo01",
@@ -31506,7 +31881,7 @@
  },
  "CIN|benchjo01": {
   "card_bat": {
-   "arm": "Strong",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Elite",
@@ -31619,7 +31994,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 2,
      "e": 1,
      "pos": "C",
      "range": "A"
@@ -31769,7 +32144,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1969,
+     1970,
+     1972,
+     1974,
+     1975
+    ],
+    "years_used": [
+     1969,
+     1970,
+     1972,
+     1974,
+     1975
+    ],
+    "cs": 163,
+    "sb": 155,
+    "att": 318,
+    "cs_pct": 0.5126,
+    "lg_cs_pct": 0.3651,
+    "rel": 0.4041,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "benchjo01",
@@ -34145,7 +34558,7 @@
  },
  "CIN|lombaer01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -34258,7 +34671,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -34414,7 +34827,41 @@
     "jump_mod": null,
     "rating": "B"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1932,
+     1935,
+     1936,
+     1938,
+     1940
+    ],
+    "years_used": [],
+    "cs": 0,
+    "sb": 0,
+    "att": 0,
+    "cs_pct": null,
+    "lg_cs_pct": null,
+    "rel": null,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": true,
+    "flags": [
+     "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+     "window years without CS tracking: 1932,1935,1936,1938,1940",
+     "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+    ],
+    "sources": [],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "lombaer01",
@@ -40795,7 +41242,7 @@
  },
  "CLE|martivi01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "B",
    "dp": 7,
    "fielding": "Average",
@@ -40908,7 +41355,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -41052,7 +41499,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2004,
+     2005,
+     2006,
+     2007,
+     2009
+    ],
+    "years_used": [
+     2004,
+     2005,
+     2006,
+     2007,
+     2009
+    ],
+    "cs": 123,
+    "sb": 411,
+    "att": 534,
+    "cs_pct": 0.2303,
+    "lg_cs_pct": 0.2837,
+    "rel": -0.188,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "martivi01",
@@ -41584,7 +42069,7 @@
   },
   "card_pit": null,
   "id": "ramirjo01",
-  "name": "José Ramírez",
+  "name": "Jos\u00e9 Ram\u00edrez",
   "peak_bat": {
    "2B": 209,
    "3B": 22,
@@ -41996,7 +42481,7 @@
  },
  "CLE|santaca01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "B",
    "dp": 7,
    "fielding": "Average",
@@ -42109,7 +42594,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -42259,7 +42744,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2011,
+     2013,
+     2014,
+     2016,
+     2019
+    ],
+    "years_used": [
+     2011,
+     2013,
+     2014
+    ],
+    "cs": 33,
+    "sb": 115,
+    "att": 148,
+    "cs_pct": 0.223,
+    "lg_cs_pct": 0.275,
+    "rel": -0.1891,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": false,
+    "flags": [
+     "window years with no C fielding row: 2016,2019"
+    ],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "santaca01",
@@ -45792,7 +46315,7 @@
  },
  "COL|diazel01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Poor",
@@ -45905,7 +46428,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 2,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -46061,7 +46584,43 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2021,
+     2022,
+     2023,
+     2024
+    ],
+    "years_used": [
+     2021,
+     2022,
+     2023,
+     2024
+    ],
+    "cs": 71,
+    "sb": 190,
+    "att": 261,
+    "cs_pct": 0.272,
+    "lg_cs_pct": 0.2192,
+    "rel": 0.241,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "diazel01",
@@ -49418,7 +49977,7 @@
  },
  "COL|torreyo01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Poor",
@@ -49531,7 +50090,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -49684,7 +50243,37 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2007
+    ],
+    "years_used": [
+     2007
+    ],
+    "cs": 15,
+    "sb": 61,
+    "att": 76,
+    "cs_pct": 0.1974,
+    "lg_cs_pct": 0.2556,
+    "rel": -0.2279,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "torreyo01",
@@ -51828,7 +52417,7 @@
  },
  "CWS|fiskca01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -51941,7 +52530,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -52094,7 +52683,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1981,
+     1983,
+     1985,
+     1989,
+     1990
+    ],
+    "years_used": [
+     1981,
+     1983,
+     1985,
+     1989,
+     1990
+    ],
+    "cs": 173,
+    "sb": 353,
+    "att": 526,
+    "cs_pct": 0.3289,
+    "lg_cs_pct": 0.3246,
+    "rel": 0.0133,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "fiskca01",
@@ -54291,7 +54918,7 @@
    "throws": "L"
   },
   "id": "marteda01",
-  "name": "Dámaso Marte",
+  "name": "D\u00e1maso Marte",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -54628,7 +55255,7 @@
   },
   "card_pit": null,
   "id": "minosmi01",
-  "name": "Minnie Miñoso",
+  "name": "Minnie Mi\u00f1oso",
   "peak_bat": {
    "2B": 150,
    "3B": 56,
@@ -54966,7 +55593,7 @@
   },
   "card_pit": null,
   "id": "ordonma01",
-  "name": "Magglio Ordóñez",
+  "name": "Magglio Ord\u00f3\u00f1ez",
   "peak_bat": {
    "2B": 201,
    "3B": 11,
@@ -55135,7 +55762,7 @@
  },
  "CWS|schalra01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -55248,7 +55875,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -55401,7 +56028,41 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1914,
+     1915,
+     1917,
+     1919,
+     1922
+    ],
+    "years_used": [],
+    "cs": 0,
+    "sb": 0,
+    "att": 0,
+    "cs_pct": null,
+    "lg_cs_pct": null,
+    "rel": null,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": true,
+    "flags": [
+     "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+     "window years without CS tracking: 1914,1915,1917,1919,1922",
+     "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+    ],
+    "sources": [],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "schalra01",
@@ -57641,7 +58302,7 @@
  },
  "DET|freehbi01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -57754,7 +58415,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -57910,7 +58571,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1964,
+     1967,
+     1968,
+     1971,
+     1974
+    ],
+    "years_used": [
+     1964,
+     1967,
+     1968,
+     1971,
+     1974
+    ],
+    "cs": 169,
+    "sb": 283,
+    "att": 452,
+    "cs_pct": 0.3739,
+    "lg_cs_pct": 0.3792,
+    "rel": -0.0139,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "freehbi01",
@@ -60892,7 +61591,7 @@
  },
  "DET|parrila02": {
   "card_bat": {
-   "arm": "Above Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Great",
@@ -61005,7 +61704,7 @@
    ],
    "positions": [
     {
-     "arm": 7,
+     "arm": 2,
      "e": 2,
      "pos": "C",
      "range": "A"
@@ -61158,7 +61857,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1980,
+     1982,
+     1983,
+     1985,
+     1986
+    ],
+    "years_used": [
+     1980,
+     1982,
+     1983,
+     1985,
+     1986
+    ],
+    "cs": 204,
+    "sb": 268,
+    "att": 472,
+    "cs_pct": 0.4322,
+    "lg_cs_pct": 0.3276,
+    "rel": 0.3195,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "parrila02",
@@ -63196,7 +63933,7 @@
   },
   "card_pit": null,
   "id": "altuvjo01",
-  "name": "José Altuve",
+  "name": "Jos\u00e9 Altuve",
   "peak_bat": {
    "2B": 188,
    "3B": 14,
@@ -63605,7 +64342,7 @@
  },
  "HOU|ausmubr01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -63718,7 +64455,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -63874,7 +64611,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1997,
+     1998,
+     2002,
+     2005,
+     2007
+    ],
+    "years_used": [
+     1997,
+     1998,
+     2002,
+     2005,
+     2007
+    ],
+    "cs": 143,
+    "sb": 254,
+    "att": 397,
+    "cs_pct": 0.3602,
+    "lg_cs_pct": 0.3044,
+    "rel": 0.1834,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "ausmubr01",
@@ -64631,7 +65406,7 @@
  },
  "HOU|biggicr01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "4",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -64744,7 +65519,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 4,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -64900,7 +65675,47 @@
     "jump_mod": null,
     "rating": "C"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "career C (window lacked CS)",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1993,
+     1994,
+     1995,
+     1997,
+     1998
+    ],
+    "years_used": [
+     1988,
+     1989,
+     1990,
+     1991,
+     2007
+    ],
+    "cs": 130,
+    "sb": 434,
+    "att": 564,
+    "cs_pct": 0.2305,
+    "lg_cs_pct": 0.3194,
+    "rel": -0.2783,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": false,
+    "flags": [
+     "franchise window had no usable catcher CS; used career C seasons 1988-2007"
+    ],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "biggicr01",
@@ -65586,7 +66401,7 @@
   },
   "card_pit": null,
   "id": "cedence01",
-  "name": "César Cedeño",
+  "name": "C\u00e9sar Cede\u00f1o",
   "peak_bat": {
    "2B": 163,
    "3B": 26,
@@ -66268,7 +67083,7 @@
   },
   "card_pit": null,
   "id": "cruzjo01",
-  "name": "José Cruz",
+  "name": "Jos\u00e9 Cruz",
   "peak_bat": {
    "2B": 142,
    "3B": 45,
@@ -66710,7 +67525,7 @@
   },
   "card_pit": null,
   "id": "gonzama01",
-  "name": "Marwin González",
+  "name": "Marwin Gonz\u00e1lez",
   "peak_bat": {
    "2B": 118,
    "3B": 8,
@@ -67349,7 +68164,7 @@
   },
   "card_pit": null,
   "id": "penaje02",
-  "name": "Jeremy Peña",
+  "name": "Jeremy Pe\u00f1a",
   "peak_bat": {
    "2B": 129,
    "3B": 11,
@@ -69253,7 +70068,7 @@
   },
   "card_pit": null,
   "id": "beltrca01",
-  "name": "Carlos Beltrán",
+  "name": "Carlos Beltr\u00e1n",
   "peak_bat": {
    "2B": 136,
    "3B": 38,
@@ -72161,7 +72976,7 @@
  },
  "KC|perezsa02": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -72274,7 +73089,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -72424,11 +73239,49 @@
     "jump_mod": null,
     "rating": "B"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2012,
+     2013,
+     2021,
+     2022,
+     2024
+    ],
+    "years_used": [
+     2012,
+     2013,
+     2021,
+     2022,
+     2024
+    ],
+    "cs": 82,
+    "sb": 150,
+    "att": 232,
+    "cs_pct": 0.3534,
+    "lg_cs_pct": 0.2487,
+    "rel": 0.4213,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "perezsa02",
-  "name": "Salvador Pérez",
+  "name": "Salvador P\u00e9rez",
   "peak_bat": {
    "2B": 116,
    "3B": 4,
@@ -72499,7 +73352,7 @@
  },
  "KC|porteda02": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "L",
    "dp": 7,
    "fielding": "Average",
@@ -72612,7 +73465,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -72768,7 +73621,43 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1977,
+     1978,
+     1979,
+     1980
+    ],
+    "years_used": [
+     1977,
+     1978,
+     1979,
+     1980
+    ],
+    "cs": 172,
+    "sb": 233,
+    "att": 405,
+    "cs_pct": 0.4247,
+    "lg_cs_pct": 0.3511,
+    "rel": 0.2094,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "porteda02",
@@ -75186,7 +76075,7 @@
  },
  "LAA|boonebo01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "1",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -75299,7 +76188,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 1,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -75440,7 +76329,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1982,
+     1983,
+     1985,
+     1987,
+     1988
+    ],
+    "years_used": [
+     1982,
+     1983,
+     1985,
+     1987,
+     1988
+    ],
+    "cs": 237,
+    "sb": 271,
+    "att": 508,
+    "cs_pct": 0.4665,
+    "lg_cs_pct": 0.3175,
+    "rel": 0.4693,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "boonebo01",
@@ -78386,7 +79313,7 @@
  },
  "LAA|napolmi01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -78499,7 +79426,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -78649,7 +79576,41 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2006,
+     2009,
+     2010
+    ],
+    "years_used": [
+     2006,
+     2009,
+     2010
+    ],
+    "cs": 57,
+    "sb": 164,
+    "att": 221,
+    "cs_pct": 0.2579,
+    "lg_cs_pct": 0.2787,
+    "rel": -0.0745,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "napolmi01",
@@ -79288,7 +80249,7 @@
    "throws": "R"
   },
   "id": "rodrifr03",
-  "name": "Francisco Rodríguez",
+  "name": "Francisco Rodr\u00edguez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -81207,7 +82168,7 @@
  },
  "LAD|camparo01": {
   "card_bat": {
-   "arm": "Strong",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Elite",
@@ -81320,7 +82281,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 2,
      "e": 1,
      "pos": "C",
      "range": "A"
@@ -81476,7 +82437,44 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1949,
+     1950,
+     1951,
+     1953,
+     1955
+    ],
+    "years_used": [
+     1955
+    ],
+    "cs": 23,
+    "sb": 21,
+    "att": 44,
+    "cs_pct": 0.5227,
+    "lg_cs_pct": 0.456,
+    "rel": 0.1462,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": false,
+    "flags": [
+     "window years without CS tracking: 1949,1950,1951,1953",
+     "1949-1953 seasons in window (Lahman has no catcher CS)"
+    ],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "camparo01",
@@ -84827,7 +85825,7 @@
  },
  "LAD|piazzmi01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Poor",
@@ -84940,7 +85938,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -85090,7 +86088,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1993,
+     1994,
+     1995,
+     1996,
+     1997
+    ],
+    "years_used": [
+     1993,
+     1994,
+     1995,
+     1996,
+     1997
+    ],
+    "cs": 191,
+    "sb": 539,
+    "att": 730,
+    "cs_pct": 0.2616,
+    "lg_cs_pct": 0.3131,
+    "rel": -0.1643,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "piazzmi01",
@@ -89019,7 +90055,7 @@
  },
  "MIA|johnsch04": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "1",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -89132,7 +90168,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 1,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -89285,7 +90321,43 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1995,
+     1996,
+     1997,
+     2001
+    ],
+    "years_used": [
+     1995,
+     1996,
+     1997,
+     2001
+    ],
+    "cs": 171,
+    "sb": 209,
+    "att": 380,
+    "cs_pct": 0.45,
+    "lg_cs_pct": 0.3078,
+    "rel": 0.4618,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "johnsch04",
@@ -91017,7 +92089,7 @@
  },
  "MIA|realmjt01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -91130,7 +92202,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -91283,7 +92355,43 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2015,
+     2016,
+     2017,
+     2018
+    ],
+    "years_used": [
+     2015,
+     2016,
+     2017,
+     2018
+    ],
+    "cs": 90,
+    "sb": 181,
+    "att": 271,
+    "cs_pct": 0.3321,
+    "lg_cs_pct": 0.2817,
+    "rel": 0.1789,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "realmjt01",
@@ -93786,7 +94894,7 @@
  },
  "MIL|contrwi02": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -93899,7 +95007,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -94052,7 +95160,44 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "years_used": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "cs": 84,
+    "sb": 257,
+    "att": 341,
+    "cs_pct": 0.2463,
+    "lg_cs_pct": 0.2191,
+    "rel": 0.1241,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv",
+     "MLB Stats API 2026 fielding"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "contrwi02",
@@ -95178,7 +96323,7 @@
   },
   "card_pit": null,
   "id": "gomezca01",
-  "name": "Carlos Gómez",
+  "name": "Carlos G\u00f3mez",
   "peak_bat": {
    "2B": 111,
    "3B": 22,
@@ -96962,7 +98107,7 @@
  },
  "MIL|surhobj01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "L",
    "dp": 7,
    "fielding": "Average",
@@ -97075,7 +98220,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -97228,7 +98373,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1987,
+     1990,
+     1991,
+     1993,
+     1995
+    ],
+    "years_used": [
+     1987,
+     1990,
+     1991,
+     1993,
+     1995
+    ],
+    "cs": 103,
+    "sb": 252,
+    "att": 355,
+    "cs_pct": 0.2901,
+    "lg_cs_pct": 0.3164,
+    "rel": -0.0831,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "surhobj01",
@@ -98948,7 +100131,7 @@
  },
  "MIN|batteea01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -99061,7 +100244,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -99217,7 +100400,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1960,
+     1961,
+     1963,
+     1964,
+     1965
+    ],
+    "years_used": [
+     1960,
+     1961,
+     1963,
+     1964,
+     1965
+    ],
+    "cs": 123,
+    "sb": 161,
+    "att": 284,
+    "cs_pct": 0.4331,
+    "lg_cs_pct": 0.3794,
+    "rel": 0.1416,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "batteea01",
@@ -102160,7 +103381,7 @@
  },
  "MIN|mauerjo01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "L",
    "dp": 7,
    "fielding": "Average",
@@ -102273,7 +103494,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -102426,7 +103647,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2006,
+     2009,
+     2010,
+     2012,
+     2013
+    ],
+    "years_used": [
+     2006,
+     2009,
+     2010,
+     2012,
+     2013
+    ],
+    "cs": 86,
+    "sb": 222,
+    "att": 308,
+    "cs_pct": 0.2792,
+    "lg_cs_pct": 0.2742,
+    "rel": 0.0183,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "mauerjo01",
@@ -104530,7 +105789,7 @@
   },
   "card_pit": null,
   "id": "tovarce01",
-  "name": "César Tovar",
+  "name": "C\u00e9sar Tovar",
   "peak_bat": {
    "2B": 153,
    "3B": 34,
@@ -105576,7 +106835,7 @@
  },
  "MON|cartega01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -105689,7 +106948,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -105845,7 +107104,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1977,
+     1979,
+     1980,
+     1982,
+     1984
+    ],
+    "years_used": [
+     1977,
+     1979,
+     1980,
+     1982,
+     1984
+    ],
+    "cs": 304,
+    "sb": 492,
+    "att": 796,
+    "cs_pct": 0.3819,
+    "lg_cs_pct": 0.3438,
+    "rel": 0.1108,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "cartega01",
@@ -108749,7 +110046,7 @@
  },
  "MON|schnebr01": {
   "card_bat": {
-   "arm": "Strong",
+   "arm": "1",
    "bats": "L",
    "dp": 7,
    "fielding": "Elite",
@@ -108862,7 +110159,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 1,
      "e": 1,
      "pos": "C",
      "range": "A"
@@ -109018,7 +110315,39 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2003,
+     2004
+    ],
+    "years_used": [
+     2003,
+     2004
+    ],
+    "cs": 63,
+    "sb": 60,
+    "att": 123,
+    "cs_pct": 0.5122,
+    "lg_cs_pct": 0.3013,
+    "rel": 0.6997,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "schnebr01",
@@ -112141,7 +113470,7 @@
    "throws": "R"
   },
   "id": "benitar01",
-  "name": "Armando Benítez",
+  "name": "Armando Ben\u00edtez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -112207,7 +113536,7 @@
  },
  "NYM|cartega01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -112320,7 +113649,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -112476,7 +113805,43 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1985,
+     1986,
+     1987,
+     1988
+    ],
+    "years_used": [
+     1985,
+     1986,
+     1987,
+     1988
+    ],
+    "cs": 173,
+    "sb": 471,
+    "att": 644,
+    "cs_pct": 0.2686,
+    "lg_cs_pct": 0.3106,
+    "rel": -0.1351,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "cartega01",
@@ -112679,7 +114044,7 @@
    "throws": "R"
   },
   "id": "diazed04",
-  "name": "Edwin Díaz",
+  "name": "Edwin D\u00edaz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -115144,7 +116509,7 @@
  },
  "NYM|piazzmi01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "4",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -115257,7 +116622,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 4,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -115407,7 +116772,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
+    ],
+    "years_used": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
+    ],
+    "cs": 170,
+    "sb": 579,
+    "att": 749,
+    "cs_pct": 0.227,
+    "lg_cs_pct": 0.3127,
+    "rel": -0.2742,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "piazzmi01",
@@ -115752,7 +117155,7 @@
   },
   "card_pit": null,
   "id": "reyesjo01",
-  "name": "José Reyes",
+  "name": "Jos\u00e9 Reyes",
   "peak_bat": {
    "2B": 163,
    "3B": 74,
@@ -117035,7 +118438,7 @@
  },
  "NYY|berrayo01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "L",
    "dp": 7,
    "fielding": "Average",
@@ -117148,7 +118551,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -117301,7 +118704,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1950,
+     1952,
+     1953,
+     1954,
+     1956
+    ],
+    "years_used": [
+     1954,
+     1956
+    ],
+    "cs": 58,
+    "sb": 54,
+    "att": 112,
+    "cs_pct": 0.5179,
+    "lg_cs_pct": 0.4515,
+    "rel": 0.1471,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": false,
+    "flags": [
+     "window years without CS tracking: 1950,1952,1953",
+     "1949-1953 seasons in window (Lahman has no catcher CS)"
+    ],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "berrayo01",
@@ -120575,7 +122016,7 @@
  },
  "NYY|munsoth01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -120688,7 +122129,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -120841,7 +122282,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1970,
+     1973,
+     1975,
+     1976,
+     1977
+    ],
+    "years_used": [
+     1970,
+     1973,
+     1975,
+     1976,
+     1977
+    ],
+    "cs": 240,
+    "sb": 307,
+    "att": 547,
+    "cs_pct": 0.4388,
+    "lg_cs_pct": 0.357,
+    "rel": 0.2289,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "munsoth01",
@@ -124102,7 +125581,7 @@
   },
   "card_pit": null,
   "id": "cansejo01",
-  "name": "José Canseco",
+  "name": "Jos\u00e9 Canseco",
   "peak_bat": {
    "2B": 120,
    "3B": 4,
@@ -127662,7 +129141,7 @@
  },
  "OAK|steinte01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -127775,7 +129254,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -127931,7 +129410,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1987,
+     1988,
+     1992,
+     1995,
+     1996
+    ],
+    "years_used": [
+     1987,
+     1988,
+     1992,
+     1995,
+     1996
+    ],
+    "cs": 201,
+    "sb": 322,
+    "att": 523,
+    "cs_pct": 0.3843,
+    "lg_cs_pct": 0.305,
+    "rel": 0.2599,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "steinte01",
@@ -128445,7 +129962,7 @@
  },
  "OAK|tenacge01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -128558,7 +130075,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -128711,7 +130228,43 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1973,
+     1974,
+     1975,
+     1976
+    ],
+    "years_used": [
+     1973,
+     1974,
+     1975,
+     1976
+    ],
+    "cs": 83,
+    "sb": 151,
+    "att": 234,
+    "cs_pct": 0.3547,
+    "lg_cs_pct": 0.351,
+    "rel": 0.0106,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "tenacge01",
@@ -130204,7 +131757,7 @@
  },
  "PHA|cochrmi01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "L",
    "dp": 7,
    "fielding": "Average",
@@ -130317,7 +131870,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -130473,7 +132026,41 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1927,
+     1930,
+     1931,
+     1932,
+     1933
+    ],
+    "years_used": [],
+    "cs": 0,
+    "sb": 0,
+    "att": 0,
+    "cs_pct": null,
+    "lg_cs_pct": null,
+    "rel": null,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": true,
+    "flags": [
+     "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+     "window years without CS tracking: 1927,1930,1931,1932,1933",
+     "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+    ],
+    "sources": [],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "cochrmi01",
@@ -133778,7 +135365,7 @@
  },
  "PHA|schanwa01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "S",
    "dp": 7,
    "fielding": "Average",
@@ -133891,7 +135478,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -134047,7 +135634,40 @@
     "jump_mod": null,
     "rating": "C"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1914,
+     1915,
+     1916,
+     1917
+    ],
+    "years_used": [],
+    "cs": 0,
+    "sb": 0,
+    "att": 0,
+    "cs_pct": null,
+    "lg_cs_pct": null,
+    "rel": null,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": true,
+    "flags": [
+     "Lahman has no catcher CS for this player in any season (era gap: SB sometimes stored, CS blank)",
+     "window years without CS tracking: 1914,1915,1916,1917",
+     "no usable CS data; defaulted to arm 3 (page-8 middle). Uncertain."
+    ],
+    "sources": [],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "schanwa01",
@@ -136892,7 +138512,7 @@
  },
  "PHI|daultda01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "L",
    "dp": 7,
    "fielding": "Average",
@@ -137005,7 +138625,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -137161,7 +138781,46 @@
     "jump_mod": null,
     "rating": "B"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1990,
+     1992,
+     1993,
+     1995,
+     1997
+    ],
+    "years_used": [
+     1990,
+     1992,
+     1993,
+     1995
+    ],
+    "cs": 163,
+    "sb": 329,
+    "att": 492,
+    "cs_pct": 0.3313,
+    "lg_cs_pct": 0.3218,
+    "rel": 0.0296,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": true,
+    "defaulted": false,
+    "flags": [
+     "window years with no C fielding row: 1997"
+    ],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "daultda01",
@@ -139188,7 +140847,7 @@
  },
  "PHI|realmjt01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -139301,7 +140960,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -139457,7 +141116,45 @@
     "jump_mod": null,
     "rating": "C"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2019,
+     2021,
+     2022,
+     2023,
+     2024
+    ],
+    "years_used": [
+     2019,
+     2021,
+     2022,
+     2023,
+     2024
+    ],
+    "cs": 122,
+    "sb": 262,
+    "att": 384,
+    "cs_pct": 0.3177,
+    "lg_cs_pct": 0.2302,
+    "rel": 0.3802,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "realmjt01",
@@ -140886,7 +142583,7 @@
    "throws": "L"
   },
   "id": "suarera01",
-  "name": "Ranger Suárez",
+  "name": "Ranger Su\u00e1rez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -143019,7 +144716,7 @@
  },
  "PIT|kendaja01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Below Average",
@@ -143132,7 +144829,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "D"
@@ -143288,7 +144985,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1997,
+     1998,
+     1999,
+     2000,
+     2003
+    ],
+    "years_used": [
+     1997,
+     1998,
+     1999,
+     2000,
+     2003
+    ],
+    "cs": 179,
+    "sb": 367,
+    "att": 546,
+    "cs_pct": 0.3278,
+    "lg_cs_pct": 0.3133,
+    "rel": 0.0465,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "kendaja01",
@@ -145363,7 +147098,7 @@
  },
  "PIT|sanguma01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -145476,7 +147211,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -145629,7 +147364,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1969,
+     1970,
+     1971,
+     1972,
+     1975
+    ],
+    "years_used": [
+     1969,
+     1970,
+     1971,
+     1972,
+     1975
+    ],
+    "cs": 159,
+    "sb": 237,
+    "att": 396,
+    "cs_pct": 0.4015,
+    "lg_cs_pct": 0.3672,
+    "rel": 0.0935,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "sanguma01",
@@ -151282,7 +153055,7 @@
  },
  "SD|santibe01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -151395,7 +153168,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -151551,7 +153324,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1987,
+     1989,
+     1990,
+     1991,
+     1992
+    ],
+    "years_used": [
+     1987,
+     1989,
+     1990,
+     1991,
+     1992
+    ],
+    "cs": 213,
+    "sb": 376,
+    "att": 589,
+    "cs_pct": 0.3616,
+    "lg_cs_pct": 0.3186,
+    "rel": 0.135,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "santibe01",
@@ -152735,7 +154546,7 @@
  },
  "SD|tenacge01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -152848,7 +154659,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -153001,7 +154812,43 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1977,
+     1978,
+     1979,
+     1980
+    ],
+    "years_used": [
+     1977,
+     1978,
+     1979,
+     1980
+    ],
+    "cs": 150,
+    "sb": 237,
+    "att": 387,
+    "cs_pct": 0.3876,
+    "lg_cs_pct": 0.3498,
+    "rel": 0.1082,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "tenacge01",
@@ -154570,7 +156417,7 @@
    "throws": "R"
   },
   "id": "diazed04",
-  "name": "Edwin Díaz",
+  "name": "Edwin D\u00edaz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -154666,7 +156513,7 @@
    "throws": "R"
   },
   "id": "garcifr02",
-  "name": "Freddy García",
+  "name": "Freddy Garc\u00eda",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -155110,7 +156957,7 @@
    "throws": "R"
   },
   "id": "hernafe02",
-  "name": "Félix Hernández",
+  "name": "F\u00e9lix Hern\u00e1ndez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -155446,7 +157293,7 @@
   },
   "card_pit": null,
   "id": "ibanera01",
-  "name": "Raúl Ibañez",
+  "name": "Ra\u00fal Iba\u00f1ez",
   "peak_bat": {
    "2B": 162,
    "3B": 16,
@@ -155983,7 +157830,7 @@
   },
   "card_pit": null,
   "id": "martied01",
-  "name": "Edgar Martínez",
+  "name": "Edgar Mart\u00ednez",
   "peak_bat": {
    "2B": 231,
    "3B": 7,
@@ -156284,7 +158131,7 @@
    "throws": "R"
   },
   "id": "munozan01",
-  "name": "Andrés Muñoz",
+  "name": "Andr\u00e9s Mu\u00f1oz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -156884,7 +158731,7 @@
  },
  "SEA|raleica01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "B",
    "dp": 7,
    "fielding": "Average",
@@ -156997,7 +158844,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -157147,7 +158994,46 @@
     "jump_mod": null,
     "rating": "C"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "years_used": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "cs": 126,
+    "sb": 366,
+    "att": 492,
+    "cs_pct": 0.2561,
+    "lg_cs_pct": 0.2243,
+    "rel": 0.1418,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv",
+     "MLB Stats API 2026 fielding"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "raleica01",
@@ -158276,7 +160162,7 @@
   },
   "card_pit": null,
   "id": "rodriju01",
-  "name": "Julio Rodríguez",
+  "name": "Julio Rodr\u00edguez",
   "peak_bat": {
    "2B": 136,
    "3B": 9,
@@ -159118,7 +161004,7 @@
  },
  "SEA|wilsoda01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -159231,7 +161117,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -159381,7 +161267,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1995,
+     1996,
+     1997,
+     2001,
+     2002
+    ],
+    "years_used": [
+     1995,
+     1996,
+     1997,
+     2001,
+     2002
+    ],
+    "cs": 169,
+    "sb": 291,
+    "att": 460,
+    "cs_pct": 0.3674,
+    "lg_cs_pct": 0.3085,
+    "rel": 0.191,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "wilsoda01",
@@ -160278,7 +162202,7 @@
  },
  "SF|brenlbo01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -160391,7 +162315,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -160541,7 +162465,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1983,
+     1984,
+     1985,
+     1986,
+     1987
+    ],
+    "years_used": [
+     1983,
+     1984,
+     1985,
+     1986,
+     1987
+    ],
+    "cs": 230,
+    "sb": 396,
+    "att": 626,
+    "cs_pct": 0.3674,
+    "lg_cs_pct": 0.3205,
+    "rel": 0.1464,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "brenlbo01",
@@ -164912,7 +166874,7 @@
  },
  "SF|poseybu01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Below Average",
@@ -165025,7 +166987,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 5,
      "pos": "C",
      "range": "D"
@@ -165178,7 +167140,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2010,
+     2012,
+     2014,
+     2015,
+     2021
+    ],
+    "years_used": [
+     2010,
+     2012,
+     2014,
+     2015,
+     2021
+    ],
+    "cs": 122,
+    "sb": 255,
+    "att": 377,
+    "cs_pct": 0.3236,
+    "lg_cs_pct": 0.2697,
+    "rel": 0.2,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "poseybu01",
@@ -169608,7 +171608,7 @@
  },
  "STL|molinya01": {
   "card_bat": {
-   "arm": "Above Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -169721,7 +171721,7 @@
    ],
    "positions": [
     {
-     "arm": 7,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -169865,7 +171865,45 @@
     "jump_mod": null,
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2011,
+     2012,
+     2013,
+     2014,
+     2016
+    ],
+    "years_used": [
+     2011,
+     2012,
+     2013,
+     2014,
+     2016
+    ],
+    "cs": 113,
+    "sb": 200,
+    "att": 313,
+    "cs_pct": 0.361,
+    "lg_cs_pct": 0.2735,
+    "rel": 0.32,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "molinya01",
@@ -171038,7 +173076,7 @@
  },
  "STL|simmote01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "S",
    "dp": 7,
    "fielding": "Below Average",
@@ -171151,7 +173189,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "D"
@@ -171307,7 +173345,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1975,
+     1977,
+     1978,
+     1979,
+     1980
+    ],
+    "years_used": [
+     1975,
+     1977,
+     1978,
+     1979,
+     1980
+    ],
+    "cs": 245,
+    "sb": 532,
+    "att": 777,
+    "cs_pct": 0.3153,
+    "lg_cs_pct": 0.3495,
+    "rel": -0.0978,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "simmote01",
@@ -174610,7 +176686,7 @@
  },
  "TB|hallto02": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -174723,7 +176799,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -174870,7 +176946,43 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2002,
+     2003,
+     2004,
+     2005
+    ],
+    "years_used": [
+     2002,
+     2003,
+     2004,
+     2005
+    ],
+    "cs": 114,
+    "sb": 174,
+    "att": 288,
+    "cs_pct": 0.3958,
+    "lg_cs_pct": 0.3035,
+    "rel": 0.3042,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "hallto02",
@@ -178930,7 +181042,7 @@
  },
  "TB|zuninmi01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Poor",
@@ -179043,7 +181155,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -179169,7 +181281,37 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2021
+    ],
+    "years_used": [
+     2021
+    ],
+    "cs": 13,
+    "sb": 47,
+    "att": 60,
+    "cs_pct": 0.2167,
+    "lg_cs_pct": 0.2432,
+    "rel": -0.109,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "zuninmi01",
@@ -182996,7 +185138,7 @@
  },
  "TEX|rodriiv01": {
   "card_bat": {
-   "arm": "Strong",
+   "arm": "1",
    "bats": "R",
    "dp": 7,
    "fielding": "Elite",
@@ -183109,7 +185251,7 @@
    ],
    "positions": [
     {
-     "arm": 8,
+     "arm": 1,
      "e": 1,
      "pos": "C",
      "range": "A"
@@ -183262,7 +185404,45 @@
     "jump_mod": null,
     "rating": "C"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
+    ],
+    "years_used": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
+    ],
+    "cs": 159,
+    "sb": 141,
+    "att": 300,
+    "cs_pct": 0.53,
+    "lg_cs_pct": 0.3123,
+    "rel": 0.6972,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "rodriiv01",
@@ -183967,7 +186147,7 @@
  },
  "TEX|sundbji01": {
   "card_bat": {
-   "arm": "Above Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Great",
@@ -184080,7 +186260,7 @@
    ],
    "positions": [
     {
-     "arm": 7,
+     "arm": 2,
      "e": 2,
      "pos": "C",
      "range": "A"
@@ -184233,7 +186413,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1974,
+     1977,
+     1978,
+     1980,
+     1981
+    ],
+    "years_used": [
+     1974,
+     1977,
+     1978,
+     1980,
+     1981
+    ],
+    "cs": 258,
+    "sb": 328,
+    "att": 586,
+    "cs_pct": 0.4403,
+    "lg_cs_pct": 0.3494,
+    "rel": 0.2601,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "sundbji01",
@@ -189034,7 +191252,7 @@
  },
  "TOR|kirkal01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "3",
    "bats": "R",
    "dp": 7,
    "fielding": "Poor",
@@ -189147,7 +191365,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -189291,7 +191509,46 @@
     "jump_mod": null,
     "rating": "B"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "years_used": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "cs": 86,
+    "sb": 312,
+    "att": 398,
+    "cs_pct": 0.2161,
+    "lg_cs_pct": 0.2249,
+    "rel": -0.0391,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv",
+     "MLB Stats API 2026 fielding"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "kirkal01",
@@ -190785,7 +193042,7 @@
  },
  "TOR|whitter01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "3",
    "bats": "L",
    "dp": 7,
    "fielding": "Below Average",
@@ -190898,7 +193155,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "D"
@@ -191051,7 +193308,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     1983,
+     1985,
+     1986,
+     1988,
+     1989
+    ],
+    "years_used": [
+     1983,
+     1985,
+     1986,
+     1988,
+     1989
+    ],
+    "cs": 156,
+    "sb": 329,
+    "att": 485,
+    "cs_pct": 0.3216,
+    "lg_cs_pct": 0.3166,
+    "rel": 0.0161,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "whitter01",
@@ -193543,7 +195838,7 @@
  },
  "WSH|ramoswi01": {
   "card_bat": {
-   "arm": "Average",
+   "arm": "2",
    "bats": "R",
    "dp": 7,
    "fielding": "Average",
@@ -193656,7 +195951,7 @@
    ],
    "positions": [
     {
-     "arm": 6,
+     "arm": 2,
      "e": 4,
      "pos": "C",
      "range": "C"
@@ -193800,7 +196095,45 @@
     "jump_mod": null,
     "rating": "F"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2011,
+     2013,
+     2014,
+     2015,
+     2016
+    ],
+    "years_used": [
+     2011,
+     2013,
+     2014,
+     2015,
+     2016
+    ],
+    "cs": 98,
+    "sb": 174,
+    "att": 272,
+    "cs_pct": 0.3603,
+    "lg_cs_pct": 0.2808,
+    "rel": 0.2829,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "ramoswi01",
@@ -194710,7 +197043,7 @@
  },
  "WSH|ruizke01": {
   "card_bat": {
-   "arm": "Below Average",
+   "arm": "3",
    "bats": "S",
    "dp": 7,
    "fielding": "Poor",
@@ -194823,7 +197156,7 @@
    ],
    "positions": [
     {
-     "arm": 5,
+     "arm": 3,
      "e": 5,
      "pos": "C",
      "range": "F"
@@ -194967,7 +197300,44 @@
     "jump_mod": null,
     "rating": "C"
    },
-   "throws": "R"
+   "throws": "R",
+   "catcher_arm_method": {
+    "scale": "rulebook page 8 (1 best .. 5)",
+    "basis": "franchise window",
+    "metric": "CS/(CS+SB) vs league",
+    "window": [
+     2022,
+     2023,
+     2024,
+     2026
+    ],
+    "years_used": [
+     2022,
+     2023,
+     2024,
+     2026
+    ],
+    "cs": 81,
+    "sb": 325,
+    "att": 406,
+    "cs_pct": 0.1995,
+    "lg_cs_pct": 0.2211,
+    "rel": -0.0976,
+    "cuts_rel": [
+     0.44,
+     0.07,
+     -0.23,
+     -0.37
+    ],
+    "uncertain": false,
+    "defaulted": false,
+    "flags": [],
+    "sources": [
+     "Lahman Fielding.csv",
+     "MLB Stats API 2026 fielding"
+    ],
+    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15"
+   }
   },
   "card_pit": null,
   "id": "ruizke01",
