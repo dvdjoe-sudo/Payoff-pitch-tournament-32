@@ -418,6 +418,17 @@ def check_pha_roster_alignment(check: Check) -> None:
                  or bool(cards["PHA|shantbo01"].get("card_pit"))
                  or bool(cards["PHA|shantbo01"].get("conversion_status")),
                  "Shantz is either authentically converted or explicitly pending")
+    peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["PHA"]
+    shantz_peak = peaks.get("LHS/LONG Bobby Shantz 1949-1954 (Philadelphia only)") or {}
+    check.expect(shantz_peak.get("lahman_id") == "shantbo01"
+                 and shantz_peak.get("years") == [1949, 1950, 1951, 1952, 1953]
+                 and shantz_peak.get("status") == "ok"
+                 and "not a relief-only projection" in (shantz_peak.get("text") or ""),
+                 "Shantz Peak 162 uses Philadelphia-only franchise window with starter caveat")
+    check.expect("IF2 Jack Barry 8" not in peaks
+                 and "4 Jimmie Foxx DH 11" in peaks
+                 and "9 Ferris Fain 1B L 6" in peaks,
+                 "PHA Peak 162 agrees with Foxx/Fain position switch and Barry removal")
     check.expect(any("Ferris Fain 1B" in row for row in announced["lineup"])
                  and any("Jimmie Foxx DH" in row for row in announced["lineup"])
                  and len(announced["bench"]) == 6
