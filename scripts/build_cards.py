@@ -572,6 +572,7 @@ def build():
     apply_diamondbacks_roster_amendment(cards, rosters)
     apply_rays_roster_amendment(cards, rosters)
     apply_nationals_roster_amendment(cards, rosters)
+    apply_giants_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -587,6 +588,7 @@ AUTHORIZED_HITTERS = (
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
+    "SF|irvinmo01",
 )
 
 
@@ -924,6 +926,46 @@ def apply_nationals_roster_amendment(cards, rosters):
         raise SystemExit("Nationals owner roster must be 9/6/5/6: " + str(counts))
     if len({p["id"] for p in players}) != 26:
         raise SystemExit("Nationals owner roster requires 26 distinct players")
+
+
+def apply_giants_roster_amendment(cards, rosters):
+    """Joe-approved 2026-10-27 Giants post-R1-02 6/6 active roster.
+
+    Monte Irvin takes bench LF6 in place of Javier Lopez as a reliever.
+    Archive all prior cards and games; never fabricate the genuine
+    frozen Hitter v0.5 conversion or a Giants-franchise-only peak line.
+    """
+    roster = rosters.get("SF")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "lopezja02"]
+    irvin_id = "irvinmo01"
+    matches = [p for p in players if p["id"] == irvin_id]
+    if not matches:
+        players.append({
+            "group": "bench", "id": irvin_id, "kind": "hitter",
+            "name": "Monte Irvin", "pos": "LF", "slot": 6,
+        })
+    else:
+        if len(matches) != 1:
+            raise SystemExit("duplicate Giants Monte Irvin roster entries")
+        matches[0].update(group="bench", kind="hitter", pos="LF", slot=6)
+    # An existing authentic Irvin card may be used, not invented.
+    # retain_authorized_hitters() preserves any original conversion
+    # already present in data/cards.json on a full set-file rebuild.
+    if "SF|" + irvin_id in cards:
+        cards["SF|" + irvin_id]["spots"] = [
+            {"group": "bench", "kind": "hitter", "pos": "LF", "slot": 6}
+        ]
+    # Do not delete or modify SF|lopezja02 (historical card).
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Giants owner roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Giants owner roster requires 26 distinct players")
 
 
 def dump(obj, path):

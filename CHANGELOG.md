@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — San Francisco Giants Monte Irvin / Javier López roster switch (Joe-approved)
+
+Following the completed R1-02 series, Monte Irvin replaces Javier López on the Giants active 26: Irvin is LF/bench6 and López is inactive. The roster now has 9 starting hitters, 6 bench players, 5 starting pitchers, and 6 relievers. Played games, card files, box scores, FAC/dice records, and historical relief appearances remain unchanged. The saved Giants converted cards are archived; Irvin's original playable Hitter v0.5 card with Giants-only franchise seasons remains pending conversion. The active roster validator and full rebuild adapter enforce the approved change.
+
 ## 2026-10-27 — Offline cache v54
 
 The service worker cache is payoff-pitch-v54 so the ten new franchise-card clubs replace a cached roster or script. No game result was changed.

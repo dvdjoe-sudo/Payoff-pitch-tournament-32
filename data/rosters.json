@@ -5741,6 +5741,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "irvinmo01",
+    "kind": "hitter",
+    "name": "Monte Irvin",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "mathech01",
     "kind": "pitcher",
@@ -5827,14 +5835,6 @@
     "name": "Santiago Casilla",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "lopezja02",
-    "kind": "pitcher",
-    "name": "Javier Lopez",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 2

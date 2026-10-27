@@ -677,6 +677,37 @@ def check_yankees_roster_amendment(check: Check) -> None:
     _active_cards_playable(check, "NYY", players)
 
 
+def check_giants_roster_amendment(check: Check) -> None:
+    """Giants 26-man 6/6 switch, effective only after completed R1-02."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["SF"]["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "Giants have 26 unique active players")
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Giants active roster is 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Giants active slots are consecutive and distinct")
+    irvin = [p for p in players if p["id"] == "irvinmo01"]
+    check.expect(len(irvin) == 1 and irvin[0]["group"] == "bench"
+                 and irvin[0]["slot"] == 6 and irvin[0]["pos"] == "LF",
+                 "Monte Irvin is sixth Giants bench outfielder")
+    check.expect("lopezja02" not in ids,
+                 "Javier Lopez has no active Giants bullpen slot")
+    check.expect("SF|lopezja02" in cards,
+                 "Javier Lopez's converted card remains in historical archive")
+    doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Monte Irvin (`irvinmo01`) joins the sixth active Giants" in doc,
+                 "Giants roster change recorded for future-only games")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_giants_roster_amendment(cards, rosters)" in builder,
+                 "Giants 6/6 roster survives a regenerated set")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -696,6 +727,7 @@ def main() -> int:
     check_nationals_roster_amendment(check)
     check_marlins_roster_amendment(check)
     check_yankees_roster_amendment(check)
+    check_giants_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

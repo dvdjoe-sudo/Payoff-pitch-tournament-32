@@ -298,6 +298,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "SF":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Monte Irvin (`irvinmo01`) joins the sixth active Giants bench spot as a left fielder. Javier López (`lopezja02`) is removed from the active bullpen. The Giants now carry 9 starting hitters, 6 bench hitters, 5 starting pitchers, and 6 relievers (26 total).",
+            "",
+            "This amendment is effective only after the completed R1-02 Giants–Nationals series. All previously played games, historical converted cards (including Javier López), box scores, official results, dice/FAC records and bullpen appearances remain unchanged. Monte Irvin's original Hitter v0.5 card and Giants-only prime-window stats are pending genuine conversion; no ratings have been invented.",
+            "",
+        ]
+
     if code == "ARI":
         lines += [
             "### Approved active roster amendment (2026-10-26)",
