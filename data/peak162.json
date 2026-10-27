@@ -4543,18 +4543,6 @@
      2005
     ]
    },
-   "LR/SP Freddy Peralta 2018-2025 (8)": {
-    "lahman_id": "peralfr01",
-    "status": "ok",
-    "text": "Peak 162 with Milwaukee Brewers (2021–2025): 65 G, 25-16, 0 SV, 340.1 IP, 247 H, 125 ER, 125 BB, 413 SO, 3.30 ERA, 1.09 WHIP, 10.9 K/9",
-    "years": [
-     2021,
-     2022,
-     2023,
-     2024,
-     2025
-    ]
-   },
    "MR1 Dan Plesac 1987-1993 (7)": {
     "lahman_id": "plesada01",
     "status": "ok",
@@ -4694,6 +4682,12 @@
      1982,
      1984
     ]
+   },
+   "OF2 Ben Oglivie LF (Milwaukee 1978-1986)": {
+    "lahman_id": "oglivbe01",
+    "status": "unavailable",
+    "text": "Peak stats unavailable",
+    "reason": "Milwaukee-only 1978-1986 peak awaiting verified Lahman build; no guessed statistics."
    }
   },
   "MIN": {

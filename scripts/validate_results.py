@@ -974,6 +974,69 @@ def check_phillies_roster_amendment(check: Check) -> None:
                  "Phillies owner change persists through full roster rebuild")
 
 
+
+def check_milwaukee_roster_amendment(check: Check) -> None:
+    """Approved Milwaukee Oglivie/Peralta; genuine history stays immutable."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    owner = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["MIL"]
+    cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
+    players = rosters["MIL"]["players"]
+    ids = [p["id"] for p in players]
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(len(players) == len(set(ids)) == 26
+                 and counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Milwaukee approved roster has 26 unique players, 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Milwaukee approved roles are consecutive")
+    oglivie = [p for p in players if p["id"] == "oglivbe01"]
+    check.expect(len(oglivie) == 1 and oglivie[0]["group"] == "bench"
+                 and oglivie[0]["slot"] == 6 and oglivie[0]["pos"] == "LF"
+                 and oglivie[0]["kind"] == "hitter",
+                 "Ben Oglivie added as sixth Brewers bench hitter and LF reserve")
+    check.expect("peralfr01" not in ids,
+                 "Freddy Peralta no longer in Milwaukee active bullpen")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["haderjo01", "willide03", "fingero01", "plesada01",
+                     "sandeke01", "jeffrje01"],
+                 "Six Milwaukee relievers retain original sequence")
+    dh = [p for p in players if p["group"] == "lineup" and p["slot"] == 4]
+    check.expect(len(dh) == 1 and dh[0]["id"] == "fieldpr01"
+                 and dh[0]["pos"] == "DH"
+                 and owner["lineup"][3] == "4 Prince Fielder DH 2005-2011 (7)",
+                 "Milwaukee starter Prince Fielder remains DH batting fourth")
+    check.expect(len(owner["bench"]) == 6 and owner["bench"][-1]
+                 == "OF2 Ben Oglivie LF (Milwaukee 1978-1986)"
+                 and len(owner["bullpen"]) == 6 and not any(
+                     "Freddy Peralta" in x for x in owner["bullpen"]),
+                 "Milwaukee official active roster agrees with approved swap")
+    check.expect("MIL|peralfr01" in cards,
+                 "Original authentic Freddy Peralta pitcher card preserved in archive")
+    oglivie_card = cards.get("MIL|oglivbe01")
+    check.expect(not oglivie_card or bool(oglivie_card.get("card_bat"))
+                 or bool(oglivie_card.get("conversion_status")),
+                 "Oglivie card is authentic if playable or visibly pending")
+    peak = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["MIL"]
+    row = peak.get("OF2 Ben Oglivie LF (Milwaukee 1978-1986)") or {}
+    check.expect(row.get("lahman_id") == "oglivbe01"
+                 and (row.get("status") != "ok" or (
+                      all(1978 <= y <= 1986 for y in row.get("years", []))
+                      and row.get("text", "").startswith("Peak 162 with Milwaukee Brewers"))),
+                 "Ben Oglivie peak must be verified or explicitly pending")
+    check.expect("LR/SP Freddy Peralta 2018-2025 (8)" not in peak,
+                 "Inactive Peralta no longer in active Brewers peak display")
+    docs = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Ben Oglivie (\u0060oglivbe01\u0060) joins the **Milwaukee Brewers**" in docs,
+                 "Milwaukee approval appears in generated roster document")
+    builder = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect("apply_milwaukee_roster_amendment(cards, rosters)" in builder,
+                 "Milwaukee approval persists in future full roster rebuilds")
+    generator = (ROOT / "scripts" / "build_peak162.py").read_text(encoding="utf-8")
+    check.expect('club == "MIL" and pid == "oglivbe01"' in generator,
+                 "Oglivie Brewers-only stat guard persists in generator")
+
+
 def check_oakland_roster_amendment(check: Check) -> None:
     """Approved Oakland Chavez/Nelson transaction; PED review remains separate."""
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
@@ -1530,6 +1593,7 @@ def main() -> int:
     check_angels_roster_amendment(check)
     check_mets_roster_amendment(check)
     check_oakland_roster_amendment(check)
+    check_milwaukee_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

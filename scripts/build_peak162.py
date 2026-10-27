@@ -804,6 +804,15 @@ def main() -> None:
             pid = person["id"]
             batting_seasons = bat_rows[(club, pid)]
             pitching_seasons = pit_rows[(club, pid)]
+
+            if club == "MIL" and pid == "oglivbe01":
+                # Ben Oglivie's Brewers era only; exclude all Boston/Detroit
+                # performance, including when reprocessing future seasons.
+                oglivie_milwaukee_years = set(range(1978, 1987))
+                batting_seasons = {year: row for year, row in batting_seasons.items()
+                                   if year in oglivie_milwaukee_years}
+                pitching_seasons = {year: row for year, row in pitching_seasons.items()
+                                    if year in oglivie_milwaukee_years}
             if club == "OAK" and pid == "chaveer01":
                 # Oakland Athletics years exclusively; Yankees / Arizona
                 # years cannot enter his franchise peak or future card.
@@ -950,6 +959,7 @@ def main() -> None:
         ("LAA", "BAT2 Rod Carew 1B (California Angels 1979-1985)", "carewro01"),
         ("NYM", "BAT2 Howard Johnson 3B/IF S (Mets 1985-1993)", "johnsho01"),
         ("OAK", "IF2 Eric Chavez 3B (Oakland 1998-2010)", "chaveer01"),
+        ("MIL", "OF2 Ben Oglivie LF (Milwaukee 1978-1986)", "oglivbe01"),
         ("CLE", "5 Shoeless Joe Jackson RF 6", "jacksjo01"),
         ("PHI", "SP3 Grover Cleveland Alexander 8", "alexape01"),
         ("CHC", "SP4 Pete Alexander", "alexape01"),
@@ -970,6 +980,15 @@ def main() -> None:
     houston_alou = row("HOU", "BAT2 Moisés Alou LF/RF (Houston 1998, 2000, 2001)")
     if houston_alou.get("years") != [1998, 2000, 2001] or houston_alou.get("status") != "ok":
         raise SystemExit("Moisés Alou's Houston Peak 162 must use exactly 1998, 2000, 2001")
+    brewers_oglivie = row("MIL", "OF2 Ben Oglivie LF (Milwaukee 1978-1986)")
+    if (brewers_oglivie.get("status") != "ok"
+            or brewers_oglivie.get("lahman_id") != "oglivbe01"
+            or not brewers_oglivie.get("years")
+            or not all(1978 <= y <= 1986 for y in brewers_oglivie["years"])
+            or not brewers_oglivie.get("text", "").startswith("Peak 162 with Milwaukee Brewers")):
+        raise SystemExit("Oglivie Peak 162 must use Brewers-only 1978–1986 seasons")
+    if "LR/SP Freddy Peralta 2018-2025 (8)" in clubs["MIL"]:
+        raise SystemExit("Inactive Freddy Peralta cannot appear in active Brewers Peak 162")
     oakland_chavez = row("OAK", "IF2 Eric Chavez 3B (Oakland 1998-2010)")
     if (oakland_chavez.get("status") != "ok" or oakland_chavez.get("lahman_id") != "chaveer01"
             or not oakland_chavez.get("years")

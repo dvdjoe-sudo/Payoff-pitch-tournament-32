@@ -577,7 +577,8 @@
    "OF Ryan Braun 2007-2020 (14) OF/Bat",
    "INF Jeff Cirillo 1994-1999, 2005-2006 (8) 3B/1B/Utility",
    "1B Cecil Cooper 1977-1987 (11) 1B/Bat",
-   "OF Gorman Thomas 1970-1983, 1986 (15) OF/Power"
+   "OF Gorman Thomas 1970-1983, 1986 (15) OF/Power",
+   "OF2 Ben Oglivie LF (Milwaukee 1978-1986)"
   ],
   "rotation": [
    "SP1 Teddy Higuera 1985-1993 (9)",
@@ -592,8 +593,7 @@
    "SU2 Rollie Fingers 1981-1982, 1984-1985 (4)",
    "MR1 Dan Plesac 1987-1993 (7)",
    "MR2 Ken Sanders 1970-1976 (7)",
-   "MR3 Jeremy Jeffress 2010, 2014-2016, 2017-2019 (7)",
-   "LR/SP Freddy Peralta 2018-2025 (8)"
+   "MR3 Jeremy Jeffress 2010, 2014-2016, 2017-2019 (7)"
   ],
   "headers": {
    "lineup": "Lineup (years with MIL)"

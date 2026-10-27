@@ -308,6 +308,17 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "MIL":
+        lines += [
+            "### Approved active roster amendment (2026-10-27)",
+            "",
+            "Ben Oglivie (`oglivbe01`) joins the **Milwaukee Brewers** active 26 as **sixth bench hitter**, a left-handed pinch-hit power option and **left-field / corner-outfield reserve**. Only his **Milwaukee Brewers seasons (1978–1986)** qualify; all Boston and Detroit statistics are excluded from his future Peak 162 and authentic Hitter v0.5 conversion.",
+            "",
+            "Freddy Peralta (`peralfr01`) leaves the active bullpen but keeps his original authentic historical converted pitcher card. The remaining six relievers are **Josh Hader, Devin Williams, Rollie Fingers, Dan Plesac, Ken Sanders and Jeremy Jeffress**, in the same RP1–RP6 order. The **entire starting nine, Prince Fielder at DH batting fourth, and five starting pitchers stay unchanged**. The active roster has **9 lineup / 6 bench / 5 rotation / 6 bullpen** and 26 unique players.",
+            "",
+            "All historical cards, played games, box scores, results and FAC/dice logs remain unchanged. Oglivie's genuine Milwaukee-only **Hitter v0.5** card and verified five-year Peak 162 conversion are pending; **no fabricated dice ratings or statistics** are published. Any PED eligibility discussion is separate.",
+            "",
+        ]
     if code == "OAK":
         lines += [
             "### Approved active roster amendment (2026-10-27)",

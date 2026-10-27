@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Milwaukee Brewers Ben Oglivie for Freddy Peralta (owner-approved)
+
+Milwaukee's sixth bench hitter is Ben Oglivie (left-handed LF/corner-OF reserve) using **Milwaukee Brewers franchise statistics from 1978–1986 only**. Freddy Peralta leaves the active bullpen and retains his authentic original converted historical card. The six remaining relievers are Josh Hader, Devin Williams, Rollie Fingers, Dan Plesac, Ken Sanders and Jeremy Jeffress. All nine original starters, **Prince Fielder batting fourth at DH**, and the five-man rotation remain unchanged. Active roster **9/6/5/6**, 26 unique players. No historical cards, previously played games, dice/FAC logs, results or box scores were modified. Oglivie's genuine frozen Hitter v0.5 and five-year franchise Peak 162 conversion will be generated/verified separately; no fabricated ratings or stats. PED reviews remain separate.
+
 ## 2026-10-27 — Oakland Athletics Eric Chavez for Gene Nelson (owner-approved)
 
 Eric Chavez joins Oakland's active bench as sixth hitter and left-handed defensive reserve 3B; only 1998–2010 Oakland Athletics franchise seasons may count. Gene Nelson leaves the active bullpen but his original authentic converted pitcher card remains historically archived. Honeycutt moves to relief slot 6; other relievers, starting pitchers and all nine starting hitters, including José Canseco batting fifth as DH, remain unchanged. Active 26 is 9 lineup/6 bench/5 SP/6 RP, 26 unique people. No PED eligibility changes authorized in this transaction; separate review remains pending. Original player cards, every previously played game, results, box scores, dice/FAC logs and archive are untouched. Chavez's genuine frozen Hitter v0.5 playable card remains pending without invented ratings.

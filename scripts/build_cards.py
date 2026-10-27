@@ -589,6 +589,7 @@ def build():
     apply_angels_roster_amendment(cards, rosters)
     apply_mets_roster_amendment(cards, rosters)
     apply_oakland_roster_amendment(cards, rosters)
+    apply_milwaukee_roster_amendment(cards, rosters)
     retain_authorized_hitters(cards)
     retain_empty_team_cards(cards, rosters)
     return cards, rosters, reconciliations, peak_notes
@@ -607,6 +608,7 @@ AUTHORIZED_HITTERS = (
     "LAA|carewro01",
     "NYM|johnsho01",
     "OAK|chaveer01",
+    "MIL|oglivbe01",
     "SD|gilesbr02",
     "TB|huffau01",
     "PHA|valoel01",
@@ -675,6 +677,44 @@ def retain_empty_team_cards(cards, rosters):
                 if previous.get(field) is not None:
                     entry[field] = previous[field]
             entry.pop("conversion_status", None)
+
+
+
+def apply_milwaukee_roster_amendment(cards, rosters):
+    """Owner-approved Ben Oglivie for Freddy Peralta, Milwaukee-only 1978-1986.
+
+    Preserve Peralta's original historical card; never fabricate Oglivie's
+    frozen Hitter v0.5 conversion or alter any lineup, DH, SP or played game.
+    """
+    roster = rosters.get("MIL")
+    if roster is None:
+        return
+    players = roster["players"]
+    players[:] = [p for p in players if p["id"] != "peralfr01"]
+    player_id = "oglivbe01"
+    found = [p for p in players if p["id"] == player_id]
+    if not found:
+        players.append({"group": "bench", "id": player_id, "kind": "hitter",
+                        "name": "Ben Oglivie", "pos": "LF", "slot": 6})
+    elif len(found) != 1:
+        raise SystemExit("Duplicate Milwaukee Ben Oglivie roster entries")
+    else:
+        found[0].update(group="bench", kind="hitter", pos="LF", slot=6)
+    card = cards.get("MIL|" + player_id)
+    if card:
+        card["spots"] = [{"group": "bench", "slot": 6,
+                          "pos": "LF", "kind": "hitter"}]
+    # The original genuine MIL|peralfr01 card stays archived, unmodified.
+    order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
+    players.sort(key=lambda p: (order[p["group"]], p["slot"]))
+    counts = {g: sum(p["group"] == g for p in players) for g in order}
+    if counts != {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6}:
+        raise SystemExit("Milwaukee approved roster must be 9/6/5/6: " + str(counts))
+    if len({p["id"] for p in players}) != 26:
+        raise SystemExit("Milwaukee must have 26 unique active players")
+    dh = [p for p in players if p["group"] == "lineup" and p["slot"] == 4]
+    if len(dh) != 1 or dh[0]["id"] != "fieldpr01" or dh[0]["pos"] != "DH":
+        raise SystemExit("Milwaukee Prince Fielder DH changed without approval")
 
 
 def apply_oakland_roster_amendment(cards, rosters):

@@ -3365,6 +3365,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "oglivbe01",
+    "kind": "hitter",
+    "name": "Ben Oglivie",
+    "pos": "LF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "higuete01",
     "kind": "pitcher",
@@ -3451,14 +3459,6 @@
     "name": "Jeremy Jeffress",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "peralfr01",
-    "kind": "pitcher",
-    "name": "Freddy Peralta",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 23
