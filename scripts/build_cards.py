@@ -1343,6 +1343,18 @@ def apply_diamondbacks_roster_amendment(cards, rosters):
         card["spots"] = [
             {"group": "bench", "kind": "hitter", "pos": "LF", "slot": 6},
         ]
+    # Owner-approved Arizona lineup metadata correction, effective after R1-04.
+    # Walker starts DH in batting slot 5 but is also eligible at first base.
+    # Goldschmidt is the unchanged 1B starter in batting slot 2.
+    # Do NOT mutate any frozen historical card/spot or prior game.
+    walker = [p for p in players if p["id"] == "walkech02"
+              and p["group"] == "lineup" and p["slot"] == 5]
+    goldschmidt = [p for p in players if p["id"] == "goldspa01"
+                   and p["group"] == "lineup" and p["slot"] == 2]
+    if len(walker) != 1 or len(goldschmidt) != 1 or goldschmidt[0]["pos"] != "1B":
+        raise SystemExit("Arizona Walker DH / Goldschmidt 1B lineup roles changed")
+    walker[0]["pos"] = "DH"
+    walker[0]["eligible_positions"] = ["1B", "DH"]
     order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
     players.sort(key=lambda p: (order[p["group"]], p["slot"]))
     counts = {group: sum(p["group"] == group for p in players) for group in order}

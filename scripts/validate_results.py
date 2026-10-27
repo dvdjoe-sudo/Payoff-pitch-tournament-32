@@ -602,6 +602,43 @@ def check_arizona_roster_amendment(check: Check) -> None:
     roster_doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("David Peralta (`peralda01`) joins the sixth bench spot" in roster_doc,
                  "Arizona dated roster amendment appears in generated roster record")
+    walker = [p for p in players if p["id"] == "walkech02"]
+    goldschmidt = [p for p in players if p["id"] == "goldspa01"]
+    check.expect(len(walker) == 1
+                 and walker[0]["group"] == "lineup"
+                 and walker[0]["slot"] == 5
+                 and walker[0]["pos"] == "DH"
+                 and walker[0].get("eligible_positions") == ["1B", "DH"],
+                 "Christian Walker starts Arizona DH fifth with 1B/DH eligibility")
+    check.expect(len(goldschmidt) == 1
+                 and goldschmidt[0]["group"] == "lineup"
+                 and goldschmidt[0]["slot"] == 2
+                 and goldschmidt[0]["pos"] == "1B",
+                 "Goldschmidt starts Arizona first base second in original order")
+    check.expect([p["id"] for p in players if p["group"] == "lineup"]
+                 == ["carroco02", "goldspa01", "marteke01",
+                     "gonzalu01", "walkech02", "finlest01",
+                     "willima04", "morenga01", "perdoge01"],
+                 "Arizona original nine starting hitters and batting order unchanged")
+    check.expect([p["id"] for p in players if p["group"] == "rotation"]
+                 == ["johnsra05", "schilcu01", "webbbr01",
+                     "galleza01", "kellyme01"],
+                 "Arizona original five starting pitchers remain")
+    check.expect([p["id"] for p in players if p["group"] == "bullpen"]
+                 == ["valvejo01", "putzjj01", "kimby01",
+                     "zieglbr01", "bradlar01", "chafian01"],
+                 "Arizona six relief pitchers remain unchanged")
+    check.expect([p["id"] for p in players if p["group"] == "bench"]
+                 == ["montemi01", "counscr01", "polloaj01",
+                     "reynoma01", "uptonju01", "peralda01"],
+                 "Arizona six bench hitters remain unchanged")
+    check.expect("ARI|walkech02" in cards,
+                 "Walker's original converted card remains preserved")
+    check.expect("Christian Walker (`walkech02`) remains **fifth" in roster_doc,
+                 "Arizona owner-approved DH/1B position ruling documented")
+    check.expect('walker[0]["eligible_positions"] = ["1B", "DH"]' in
+                 (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8"),
+                 "Arizona approved DH/1B position ruling survives future builds")
 
 
 

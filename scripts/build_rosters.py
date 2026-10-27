@@ -523,6 +523,15 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "",
         ]
 
+    if code == "ARI":
+        lines += [
+            "### Approved Arizona starting-DH and 1B eligibility correction (2026-10-27)",
+            "",
+            "Christian Walker (`walkech02`) remains **fifth in the original Arizona batting order** but now **starts at DH**. He is **eligible at both 1B and DH**, so he may also play first base when needed. Paul Goldschmidt (`goldspa01`) remains the **starting 1B batting second**. All nine starting hitters retain the same batting order, and **all 26 original active players and their slots are unchanged**, with **9 lineup / 6 bench / 5 starting pitchers / 6 relievers**.",
+            "",
+            "**Effective only for games after the six completed R1-04 games.** All historical player cards (including original conversion/position data), completed results, box scores, scores, pitching records, FAC/dice rolls, play-by-play and prior tournament standings remain untouched. The Diamondbacks' missing owner-announced roster and franchise Peak 162 data remain a separate future task; no stats or dice ratings have been guessed.",
+            "",
+        ]
     if code == "TB":
         lines += [
             "### Approved active roster amendment (2026-10-26)",

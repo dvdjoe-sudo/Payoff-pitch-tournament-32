@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Arizona Christian Walker starting DH, 1B eligible (owner-approved)
+
+Approved Arizona Diamondbacks #29 metadata correction: **Christian Walker (`walkech02`) starts at DH, batting fifth, but remains eligible at 1B/DH**. **Paul Goldschmidt (`goldspa01`) stays at first base, batting second.** Same nine starting hitters, all 26 active players and original batting order, rotation, bench and bullpen. Exactly **9/6/5/6**; the changed starting defensive assignment applies only after the six recorded R1-04 games. Preserve original cards and spots, scores, FAC/dice data, box scores, play-by-play and all completed tournament history. Missing Arizona owner-announced roster and Peak 162 data will be addressed separately; no fabricated statistics.
+
 ## 2026-10-27 — Colorado Rockies Carlos González for Ian Desmond (future games only)
 
 Colorado #28 owner approval: **Carlos González** (`gonzaca01`) replaces Ian Desmond (`desmoia01`) at **bench slot #5**, serving as a left-handed reserve for LF/CF/RF. Count **Colorado Rockies seasons 2009–2018 only** for Peak 162 and his future frozen Hitter v0.5 playable card. Desmond is inactive but the original historical converted card stays archived. **Future games only**, after Colorado's recorded four-game R1-05 series; results, box scores, dice/FAC rolls and all played game records remain unchanged. The nine-man starting lineup (including Andrés Galarraga DH ninth), all five SP, all six RP and other five bench players stay intact. Exactly 9/6/5/6 active, 26 unique players. González's Rockies-only **Peak 162** is verified from Lahman over 2009–2013: per 162 games 32 HR, 105 RBI, 28 SB and .307/.368/.552/.920. The original playable Hitter v0.5 conversion remains pending; no invented dice outcomes.

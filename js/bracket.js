@@ -1870,7 +1870,7 @@
       body.appendChild(el("p", { class: "note", text: "Giants active 26, effective after R1-02: Monte Irvin joins as bench LF6 and Javier López is inactive. Every historical game and López's original card remain archived. Irvin's genuine Hitter v0.5 conversion is pending." }));
     }
     if (code === "ARI") {
-      body.appendChild(el("p", { class: "note", text: "Approved Diamondbacks 26, effective after R1-04: David Peralta is bench LF6, pending his genuine Hitter v0.5 card. Juan Cruz is inactive; his past appearances and existing historical card remain in the archive." }));
+      body.appendChild(el("p", { class: "note", text: "Approved Diamondbacks 26, effective after R1-04: David Peralta is bench LF6, pending his genuine Hitter v0.5 card. Juan Cruz is inactive; his past appearances and existing historical card remain in the archive. Position correction approved for future games only: Christian Walker starts DH batting fifth, with 1B/DH eligibility; Paul Goldschmidt remains the first baseman batting second. All nine batting slots, all 26 roster members, the pitching staff, six completed R1-04 games and historical cards/results remain unchanged. Arizona owner-announced roster and Peak 162 coverage remain pending separately." }));
     }
     if (code === "TB") {
       body.appendChild(el("p", { class: "note", text: "Approved Rays 26, effective after R1-03: Aubrey Huff joins as bench OF6 (Hitter v0.5 conversion pending), Kevin Kelly leaves the active bullpen, and J.P. Howell takes RP6. Kelly\u0027s original card and any completed game records remain preserved." }));

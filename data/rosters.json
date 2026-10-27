@@ -41,8 +41,12 @@
     "id": "walkech02",
     "kind": "hitter",
     "name": "Christian Walker",
-    "pos": "1B",
-    "slot": 5
+    "pos": "DH",
+    "slot": 5,
+    "eligible_positions": [
+     "1B",
+     "DH"
+    ]
    },
    {
     "group": "lineup",

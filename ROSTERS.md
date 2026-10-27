@@ -1688,6 +1688,12 @@ David Peralta (`peralda01`) joins the sixth bench spot as a left-handed outfield
 
 The amendment is for games after R1-04 only. Cruz's appearances below, original converted card (if on file), and all game results remain historical records. Peralta's frozen Hitter v0.5 conversion is pending and no card ratings are assumed. Active personnel are listed in `data/rosters.json`.
 
+### Approved Arizona starting-DH and 1B eligibility correction (2026-10-27)
+
+Christian Walker (`walkech02`) remains **fifth in the original Arizona batting order** but now **starts at DH**. He is **eligible at both 1B and DH**, so he may also play first base when needed. Paul Goldschmidt (`goldspa01`) remains the **starting 1B batting second**. All nine starting hitters retain the same batting order, and **all 26 original active players and their slots are unchanged**, with **9 lineup / 6 bench / 5 starting pitchers / 6 relievers**.
+
+**Effective only for games after the six completed R1-04 games.** All historical player cards (including original conversion/position data), completed results, box scores, scores, pitching records, FAC/dice rolls, play-by-play and prior tournament standings remain untouched. The Diamondbacks' missing owner-announced roster and franchise Peak 162 data remain a separate future task; no stats or dice ratings have been guessed.
+
 ### Players in the results file
 
 Positions are not in the results file. TODO for Joe: positions, manager, and anyone who has not appeared.
