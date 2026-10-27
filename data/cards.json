@@ -31244,7 +31244,7 @@
    "throws": "R"
   },
   "id": "bautife01",
-  "name": "F\u00e9lix Bautista",
+  "name": "Félix Bautista",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -44836,19 +44836,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 4,
+     "pos": "P",
+     "range": "C"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 9
    },
    "table_2d6": {
     "10": "BALLPARK",
@@ -96160,7 +96167,7 @@
   },
   "card_pit": null,
   "id": "ramirjo01",
-  "name": "Jos\u00e9 Ram\u00edrez",
+  "name": "José Ramírez",
   "peak_bat": {
    "2B": 209,
    "3B": 22,
@@ -108980,7 +108987,7 @@
   },
   "card_pit": null,
   "id": "gonzaca01",
-  "name": "Carlos Gonz\u00e1lez",
+  "name": "Carlos González",
   "peak_bat": {
    "2B": 140,
    "3B": 25,
@@ -127366,18 +127373,25 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "B"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
+    "relief": "Short",
     "start": null
    },
    "table_2d6": {
@@ -127721,7 +127735,7 @@
    "throws": "L"
   },
   "id": "marteda01",
-  "name": "D\u00e1maso Marte",
+  "name": "Dámaso Marte",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -128614,7 +128628,7 @@
   },
   "card_pit": null,
   "id": "minosmi01",
-  "name": "Minnie Mi\u00f1oso",
+  "name": "Minnie Miñoso",
   "peak_bat": {
    "2B": 150,
    "3B": 56,
@@ -129508,7 +129522,7 @@
   },
   "card_pit": null,
   "id": "ordonma01",
-  "name": "Magglio Ord\u00f3\u00f1ez",
+  "name": "Magglio Ordóñez",
   "peak_bat": {
    "2B": 201,
    "3B": 11,
@@ -148097,7 +148111,7 @@
   },
   "card_pit": null,
   "id": "aloumo01",
-  "name": "Mois\u00e9s Alou",
+  "name": "Moisés Alou",
   "peak_bat": {
    "2B": 93,
    "3B": 8,
@@ -148980,7 +148994,7 @@
   },
   "card_pit": null,
   "id": "altuvjo01",
-  "name": "Jos\u00e9 Altuve",
+  "name": "José Altuve",
   "peak_bat": {
    "2B": 188,
    "3B": 14,
@@ -155261,7 +155275,7 @@
   },
   "card_pit": null,
   "id": "cedence01",
-  "name": "C\u00e9sar Cede\u00f1o",
+  "name": "César Cedeño",
   "peak_bat": {
    "2B": 163,
    "3B": 26,
@@ -157030,7 +157044,7 @@
   },
   "card_pit": null,
   "id": "cruzjo01",
-  "name": "Jos\u00e9 Cruz",
+  "name": "José Cruz",
   "peak_bat": {
    "2B": 142,
    "3B": 45,
@@ -157103,19 +157117,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 5,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "F"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 1
    },
    "table_2d6": {
     "10": "TOUGH",
@@ -158054,7 +158075,7 @@
   },
   "card_pit": null,
   "id": "gonzama01",
-  "name": "Marwin Gonz\u00e1lez",
+  "name": "Marwin González",
   "peak_bat": {
    "2B": 118,
    "3B": 8,
@@ -159381,7 +159402,7 @@
   },
   "card_pit": null,
   "id": "penaje02",
-  "name": "Jeremy Pe\u00f1a",
+  "name": "Jeremy Peña",
   "peak_bat": {
    "2B": 129,
    "3B": 11,
@@ -163340,7 +163361,7 @@
   },
   "card_pit": null,
   "id": "beltrca01",
-  "name": "Carlos Beltr\u00e1n",
+  "name": "Carlos Beltrán",
   "peak_bat": {
    "2B": 136,
    "3B": 38,
@@ -165912,19 +165933,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "B"
+    }
+   ],
    "qa_status": "PASS",
    "so_modifier": "+10",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 7
    },
    "table_2d6": {
     "10": "BALLPARK",
@@ -171600,7 +171628,7 @@
   },
   "card_pit": null,
   "id": "perezsa02",
-  "name": "Salvador P\u00e9rez",
+  "name": "Salvador Pérez",
   "peak_bat": {
    "2B": 116,
    "3B": 4,
@@ -180078,19 +180106,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 9,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "B"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "+10",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 9
    },
    "table_2d6": {
     "10": "PATIENT",
@@ -189087,7 +189122,7 @@
    "throws": "R"
   },
   "id": "rodrifr03",
-  "name": "Francisco Rodr\u00edguez",
+  "name": "Francisco Rodríguez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -207247,19 +207282,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 2,
+     "pos": "P",
+     "range": "C"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 6
    },
    "table_2d6": {
     "10": "PATIENT",
@@ -227370,7 +227412,7 @@
   },
   "card_pit": null,
   "id": "gomezca01",
-  "name": "Carlos G\u00f3mez",
+  "name": "Carlos Gómez",
   "peak_bat": {
    "2B": 111,
    "3B": 22,
@@ -230554,19 +230596,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 5,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "C"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 5
    },
    "table_2d6": {
     "10": "BALLPARK",
@@ -245129,19 +245178,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 4,
+     "pos": "P",
+     "range": "D"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 8
    },
    "table_2d6": {
     "10": "PATIENT",
@@ -250865,7 +250921,7 @@
   },
   "card_pit": null,
   "id": "tovarce01",
-  "name": "C\u00e9sar Tovar",
+  "name": "César Tovar",
   "peak_bat": {
    "2B": 153,
    "3B": 34,
@@ -268944,7 +269000,7 @@
    "throws": "R"
   },
   "id": "benitar01",
-  "name": "Armando Ben\u00edtez",
+  "name": "Armando Benítez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -270153,7 +270209,7 @@
    "throws": "R"
   },
   "id": "diazed04",
-  "name": "Edwin D\u00edaz",
+  "name": "Edwin Díaz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -270221,19 +270277,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 5,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 4,
+     "pos": "P",
+     "range": "F"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 6
    },
    "table_2d6": {
     "10": "BALLPARK",
@@ -278253,7 +278316,7 @@
   },
   "card_pit": null,
   "id": "reyesjo01",
-  "name": "Jos\u00e9 Reyes",
+  "name": "José Reyes",
   "peak_bat": {
    "2B": 163,
    "3B": 74,
@@ -291952,19 +292015,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "D"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 8
    },
    "table_2d6": {
     "10": "IN-PLAY",
@@ -298232,7 +298302,7 @@
   },
   "card_pit": null,
   "id": "cansejo01",
-  "name": "Jos\u00e9 Canseco",
+  "name": "José Canseco",
   "peak_bat": {
    "2B": 120,
    "3B": 4,
@@ -304593,19 +304663,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-31"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "F"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 9
    },
    "table_2d6": {
     "10": "PATIENT",
@@ -333599,19 +333676,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30-32"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 3,
+     "pos": "P",
+     "range": "C"
+    }
+   ],
    "qa_status": "HISTORICAL-TARGET-REVIEW",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 1
    },
    "table_2d6": {
     "10": "BALLPARK",
@@ -338112,7 +338196,7 @@
    "throws": "L"
   },
   "id": "suarera01",
-  "name": "Ranger Su\u00e1rez",
+  "name": "Ranger Suárez",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -369394,7 +369478,7 @@
   },
   "card_pit": null,
   "id": "beltrad01",
-  "name": "Adri\u00e1n Beltr\u00e9",
+  "name": "Adrián Beltré",
   "peak_bat": {
    "2B": 172,
    "3B": 8,
@@ -372186,7 +372270,7 @@
    "throws": "R"
   },
   "id": "diazed04",
-  "name": "Edwin D\u00edaz",
+  "name": "Edwin Díaz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -372328,7 +372412,7 @@
    "throws": "R"
   },
   "id": "garcifr02",
-  "name": "Freddy Garc\u00eda",
+  "name": "Freddy García",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -373374,7 +373458,7 @@
    "throws": "R"
   },
   "id": "hernafe02",
-  "name": "F\u00e9lix Hern\u00e1ndez",
+  "name": "Félix Hernández",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -374266,7 +374350,7 @@
   },
   "card_pit": null,
   "id": "ibanera01",
-  "name": "Ra\u00fal Iba\u00f1ez",
+  "name": "Raúl Ibañez",
   "peak_bat": {
    "2B": 162,
    "3B": 16,
@@ -375432,7 +375516,7 @@
   },
   "card_pit": null,
   "id": "martied01",
-  "name": "Edgar Mart\u00ednez",
+  "name": "Edgar Martínez",
   "peak_bat": {
    "2B": 231,
    "3B": 7,
@@ -375505,19 +375589,26 @@
   "card_bat": null,
   "card_pit": {
    "addendum": {
-    "dp": null,
-    "hold": null,
-    "inj": null,
-    "pickoff": null,
-    "wp": null
+    "dp": 7,
+    "hold": 8,
+    "inj": "Durable",
+    "pickoff": "chart p18, keyed to Hold",
+    "wp": "30"
    },
    "card_type": "RP",
+   "fielding": [
+    {
+     "e": 2,
+     "pos": "P",
+     "range": "B"
+    }
+   ],
    "qa_status": "PASS",
    "so_modifier": "NONE",
    "special": [],
    "stamina": {
-    "relief": null,
-    "start": null
+    "relief": "Long",
+    "start": 7
    },
    "table_2d6": {
     "10": "PATIENT",
@@ -375865,7 +375956,7 @@
    "throws": "R"
   },
   "id": "munozan01",
-  "name": "Andr\u00e9s Mu\u00f1oz",
+  "name": "Andrés Muñoz",
   "peak_bat": null,
   "peak_bat_162": null,
   "peak_pit": {
@@ -380713,7 +380804,7 @@
   },
   "card_pit": null,
   "id": "rodriju01",
-  "name": "Julio Rodr\u00edguez",
+  "name": "Julio Rodríguez",
   "peak_bat": {
    "2B": 136,
    "3B": 9,
@@ -439999,7 +440090,7 @@
   },
   "card_pit": null,
   "id": "sierrru01",
-  "name": "Rub\u00e9n Sierra",
+  "name": "Rubén Sierra",
   "peak_bat": {
    "2B": 168,
    "3B": 28,
