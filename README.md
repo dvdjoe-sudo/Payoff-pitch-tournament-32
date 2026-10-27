@@ -137,6 +137,10 @@ The owner's 101-page *R1-03 FAC and Dice Rolls* record was supplied on 2026-10-2
 
 Brian Giles (left-handed OF) was added as sixth bench player, and Craig Lefferts was removed from the active 26. The active roster is 9 lineup / 6 bench / 5 SP / 6 RP. Lefferts' previously converted card stays in `data/cards.json` as archived historical source data and must not be confused with an active roster spot. Giles' original Hitter v0.5 conversion has **not** been produced in this change: he is marked as awaiting conversion on his roster/player page, and no simulated card ratings were invented. The franchise Peak 162 display is Padres-only; his stats from other franchises must never be included.
 
+## 2026-10-26 Arizona Diamondbacks approved 6/6 roster
+
+David Peralta has been added as the sixth Arizona bench player (left-handed LF); Juan Cruz is off the active 26. The active split is 9 lineup / 6 bench / 5 SP / 6 RP. Cruz appeared during R1-04, so his box scores and prior results remain exactly as played, and his converted card remains historical reference data. No invented hitter-card results are supplied for Peralta. His actual frozen Hitter v0.5 conversion and franchise-only five-season peak profile are still needed before play. `data/rosters.json` records the active 26; ROSTERS.md separately preserves previous game appearances. This roster change applies only to future games.
+
 ## 2026-10-26 Montreal Expos approved 6/6 roster
 
 Moisés Alou (RH outfielder) is the Expos' sixth bench player; Jeff Fassero leaves the active roster. Montreal now has 9 lineup / 6 bench / 5 SP / 6 RP. Fassero's existing converted pitcher card is retained in `data/cards.json` as historical data. Alou's Hitter v0.5 card is **pending Joe's original conversion**; no fake dice, fielding, or ratings have been generated. His franchise Peak 162 profile uses Montreal seasons 1992–1996 only and omits his brief 1990 cameo. Past games remain unchanged.
