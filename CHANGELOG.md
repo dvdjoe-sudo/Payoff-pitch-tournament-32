@@ -30,6 +30,10 @@ The Awards page ranks tournament MVP, Cy Young, and reliever points from the box
 
 Joe approved allowing different bench and bullpen sizes by club, and allowing owner-approved roster adjustments during the tournament. Every club must keep 26 active players, with nine lineup spots and five scheduled starters; the usual five-man bench and seven-man bullpen is only the default. The current Dodgers, Cubs, Guardians, Reds, Cardinals, and Philadelphia Athletics roster distributions are valid as published. Future changes require Joe's approval and a dated amendment, effective only for future games. This ruling did not change any player, card, seed, lineup already played, or tournament result. See [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md).
 
+## 2026-10-26 — San Diego Padres 6/6 active roster (Joe-approved)
+
+Brian Giles joins the bench as OF6; Craig Lefferts leaves the active 26. The Padres now carry nine lineup spots, six bench players, five scheduled starters, and six relievers. Lefferts' existing converted Payoff Pitch card remains available as **historical, inactive data**. Giles' hitter conversion is Joe's responsibility, and no guessed ratings or counterfeit card are published; his card is pending. Any Peak 162 display must use **Padres-franchise statistics only**. San Diego has not played an official tournament game, and all other teams, cards and recorded results are unchanged. This roster amendment supports the club-by-club transition toward 6/6.
+
 ## 2026-10-26 — Results timeline
 
 The Results page is a day-by-day scoreboard of every game on the book. Each day lists the games played that day, with the club logos, the final score, and a link to the game. Games with no stored date sit after the dated days. The layout stays on a phone. The service worker cache is payoff-pitch-v32. No game result was changed.
