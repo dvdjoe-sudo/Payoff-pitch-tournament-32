@@ -15,8 +15,10 @@ Average default. Pitcher stamina and the set-file addenda stay empty.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import os
+import re
 import sys
 import tarfile
 from collections import defaultdict
@@ -40,10 +42,14 @@ ROSTERS = os.path.join(ROOT, "data", "rosters.json")
 ANNOUNCED = os.path.join(ROOT, "data", "announced_rosters.json")
 PEAK_PATH = os.path.join(ROOT, "data", "peak162.json")
 RESULTS = os.path.join(ROOT, "tournament_results.json")
-SIDECAR = os.path.join(ROOT, "historical-cards", "sources", "mlb_2026_batch.json")
-REPORT = os.path.join(ROOT, "historical-cards", "accuracy", "empty_teams_batch.json")
+DEFAULT_SIDECAR = os.path.join(ROOT, "historical-cards", "sources", "mlb_2026_batch.json")
+DEFAULT_REPORT = os.path.join(ROOT, "historical-cards", "accuracy", "empty_teams_batch.json")
+SIDECAR = DEFAULT_SIDECAR
+REPORT = DEFAULT_REPORT
 
-CODES = ("BAL", "CLE", "CWS", "HOU")
+DEFAULT_CODES = ("BAL", "CLE", "CWS", "HOU")
+CODES = DEFAULT_CODES
+ALLOW_PLAYED = set()
 FRANCHISE = {
     "ARI": ["ARI"],
     "ATL": ["BSN", "ML1", "ATL"],
@@ -53,16 +59,52 @@ FRANCHISE = {
     "COL": ["COL"],
     "CWS": ["CHA"],
     "HOU": ["HOU"],
+    "KC": ["KCA"],
+    "LAA": ["LAA", "CAL", "ANA"],
+    "MIA": ["FLO", "MIA"],
+    "MIL": ["SE1", "ML4", "MIL"],
+    "MIN": ["WS1", "MIN"],
     "MON": ["MON"],
+    "NYM": ["NYN"],
+    "NYY": ["NYA"],
+    "OAK": ["OAK", "ATH"],
     "PHA": ["PHA"],
+    "PHI": ["PHI"],
+    "SEA": ["SEA"],
     "TEX": ["WS2", "TEX"],
 }
-BOUNDS = {"PHA": (1901, 1954), "MON": (1969, 2004)}
+BOUNDS = {"PHA": (1901, 1954), "MON": (1969, 2004), "OAK": (1968, 2025)}
 TEAM_LINE = {
     "BAL": "Baltimore Orioles",
     "CLE": "Cleveland Guardians",
     "CWS": "Chicago White Sox",
     "HOU": "Houston Astros",
+    "KC": "Kansas City Royals",
+    "LAA": "Los Angeles Angels",
+    "MIA": "Miami Marlins",
+    "MIL": "Milwaukee Brewers",
+    "MIN": "Minnesota Twins",
+    "NYM": "New York Mets",
+    "NYY": "New York Yankees",
+    "OAK": "Oakland Athletics",
+    "PHI": "Philadelphia Phillies",
+    "SEA": "Seattle Mariners",
+}
+MLB_IDS = {
+    "BAL": 110,
+    "CLE": 114,
+    "CWS": 145,
+    "HOU": 117,
+    "KC": 118,
+    "LAA": 108,
+    "MIA": 146,
+    "MIL": 158,
+    "MIN": 142,
+    "NYM": 121,
+    "NYY": 147,
+    "OAK": 133,
+    "PHI": 143,
+    "SEA": 136,
 }
 PITCH_FIELDS = {
     "W": "W", "L": "L", "G": "G", "GS": "GS", "SV": "SV", "H": "H", "R": "R",
@@ -157,26 +199,38 @@ def parse_line(line):
     return slot_token, " ".join(rest), pos
 
 
-def card_pos(group, slot_token, parsed):
+POS_MAP = {
+    "C": "C", "1B": "1B", "2B": "2B", "3B": "3B", "SS": "SS",
+    "LF": "LF", "CF": "CF", "RF": "RF", "DH": "DH", "OF": "OF",
+    "IF": "IF", "INF": "IF", "UT": "UT", "UTIL": "UT", "PH": "PH",
+}
+def roster_name(line):
+    name = peak.extract_name(line)
+    if not name:
+        raise SystemExit("roster line has no player name: " + line)
+    return name
+
+
+def roster_pos(group, line):
     if group == "rotation":
         return "SP"
     if group == "bullpen":
         return "RP"
-    if parsed:
-        token = parsed.split("/")[0]
-        return {"INF": "IF", "UT": "UT"}.get(token, token)
-    prefix = slot_token.upper()
-    if prefix.startswith("C"):
-        return "C"
-    if prefix.startswith("OF"):
-        return "OF"
-    if prefix.startswith("IF"):
-        return "IF"
-    if prefix.startswith("UTIL") or prefix.startswith("UT"):
-        return "UT"
-    if prefix.startswith("BAT"):
-        return "PH"
-    return "UT"
+    text = re.sub(r"\([^)]*\)", " ", line)
+    found = []
+    for raw in text.replace(",", " ").split():
+        if re.fullmatch(r"(?:18|19|20)\d{2}(?:-(?:18|19|20)\d{2})?", raw):
+            continue
+        for part in re.split(r"[/]", raw):
+            token = part.upper()
+            mapped = POS_MAP.get(token) or POS_MAP.get(re.sub(r"\d+$", "", token))
+            if mapped and mapped not in found:
+                found.append(mapped)
+    specific = {"C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "DH"}
+    for mapped in found:
+        if mapped in specific:
+            return mapped
+    return found[0] if found else "UT"
 
 
 def load_players():
@@ -187,7 +241,7 @@ def load_players():
         block = announced[code]
         for group in ("lineup", "bench", "rotation", "bullpen"):
             for slot, line in enumerate(block[group], start=1):
-                slot_token, name, parsed = parse_line(line)
+                slot_token, _parsed_name, _parsed_pos = parse_line(line)
                 info = book[code].get(line)
                 if not info or info.get("status") != "ok" or not info.get("lahman_id"):
                     raise SystemExit("no peak id for %s %s" % (code, line))
@@ -197,18 +251,19 @@ def load_players():
                     "team": code,
                     "group": group,
                     "slot": number,
-                    "pos": card_pos(group, slot_token, parsed),
+                    "pos": roster_pos(group, line),
                     "kind": kind,
-                    "name": name,
+                    "name": roster_name(line),
                     "id": info["lahman_id"],
                     "key": "%s|%s" % (code, info["lahman_id"]),
                     "line": line,
                     "manager": block.get("manager") or "",
                 })
     keys = [player["key"] for player in players]
-    if len(players) != 104 or len(set(keys)) != 104:
-        raise SystemExit("expected 104 distinct cards, found %d (%d keys)" % (
-            len(players), len(set(keys))))
+    expected = 26 * len(CODES)
+    if len(players) != expected or len(set(keys)) != expected:
+        raise SystemExit("expected %d distinct cards, found %d (%d keys)" % (
+            expected, len(players), len(set(keys))))
     return players
 
 
@@ -603,8 +658,12 @@ def attach_2026(players, side, hitter_seasons, pitcher_seasons, rates):
         row = dict(row)
         row["franchise_team_id"] = side["mlb_team_ids"][row["team"]]
         checks[(row["team"], row["lahman_id"])] = row
-    if set(ids) != {110, 114, 145, 117}:
-        raise SystemExit("sidecar team ids changed")
+    expected = {MLB_IDS[code] for code in CODES}
+    if set(ids) != expected:
+        raise SystemExit("sidecar team ids %s, expected %s" % (sorted(ids), sorted(expected)))
+    for code in CODES:
+        if side["mlb_team_ids"][code] != MLB_IDS[code]:
+            raise SystemExit("mlb id for %s changed" % code)
     for player in players:
         key = (player["team"], player["id"])
         seasons = hitter_seasons[player["key"]] if player["kind"] == "hitter" else pitcher_seasons[player["key"]]
@@ -1060,7 +1119,39 @@ def proposals():
     }
 
 
-def main():
+def configure(argv=None):
+    global CODES, REPORT, SIDECAR, ALLOW_PLAYED
+    parser = argparse.ArgumentParser(description="Build franchise cards for empty clubs.")
+    parser.add_argument("--codes", default=",".join(DEFAULT_CODES))
+    parser.add_argument("--report", default=DEFAULT_REPORT)
+    parser.add_argument("--sidecar", default=DEFAULT_SIDECAR)
+    parser.add_argument(
+        "--allow-played",
+        action="store_true",
+        help="NYY and MIA already have box scores. Write cards only; do not touch results.",
+    )
+    args = parser.parse_args(argv)
+    codes = tuple(part.strip() for part in args.codes.split(",") if part.strip())
+    unknown = [code for code in codes if code not in TEAM_LINE or code not in FRANCHISE or code not in MLB_IDS]
+    if unknown:
+        raise SystemExit("unknown club %s" % ", ".join(unknown))
+    if codes != DEFAULT_CODES and args.report == DEFAULT_REPORT:
+        raise SystemExit("pass --report so this batch does not overwrite the first accuracy file")
+    if codes != DEFAULT_CODES and args.sidecar == DEFAULT_SIDECAR:
+        raise SystemExit("pass --sidecar so this batch does not overwrite the first 2026 pull")
+    played = set()
+    if args.allow_played:
+        played = {code for code in codes if code in {"NYY", "MIA"}}
+        if not played:
+            raise SystemExit("--allow-played needs NYY or MIA in --codes")
+    CODES = codes
+    REPORT = args.report
+    SIDECAR = args.sidecar
+    ALLOW_PLAYED = played
+
+
+def main(argv=None):
+    configure(argv)
     players = load_players()
     print("roster", len(players), "hitters", sum(p["kind"] == "hitter" for p in players),
           "pitchers", sum(p["kind"] == "pitcher" for p in players))
@@ -1070,6 +1161,7 @@ def main():
     pit_rates = league_era(teams)
     persons = people_index(people)
     miss.FRANCHISE.update(FRANCHISE)
+    miss.YEAR_BOUNDS.update(BOUNDS)
     cards = json.loads(open(CARDS, encoding="utf-8").read())
     if dump_text(cards) != open(CARDS, encoding="utf-8").read():
         raise SystemExit("cards.json does not round-trip")
@@ -1084,8 +1176,6 @@ def main():
         raise SystemExit("Lahman span batting %s pitching %s teams %s" % (bat_max, pit_max, team_max))
     miss.assert_known(by_bat, hit_rates)
     assert_pitchers(cards, rosters, by_pit, pit_rates)
-    side = load_sidecar()
-    modern = rates_2026(side)
     hitter_seasons = {}
     pitcher_seasons = {}
     for player in players:
@@ -1100,7 +1190,18 @@ def main():
         else:
             pitcher_seasons[player["key"]] = franchise_pitching(
                 player["id"], player["team"], by_pit[player["id"]], pit_rates)
-    attach_2026(players, side, hitter_seasons, pitcher_seasons, modern)
+    list_only = os.environ.get("PP_LIST_2026") == "1" and not os.path.exists(SIDECAR)
+    if list_only:
+        for player in players:
+            seasons = hitter_seasons[player["key"]] if player["kind"] == "hitter" else pitcher_seasons[player["key"]]
+            player["latest"] = max((row["year"] for row in seasons), default=0)
+            player["y2026"] = None
+            if player["latest"] >= 2024:
+                print("NEED2026", player["key"], player["name"], player["kind"], player["latest"])
+    else:
+        side = load_sidecar()
+        modern = rates_2026(side)
+        attach_2026(players, side, hitter_seasons, pitcher_seasons, modern)
     shared = duplicate_flags(players)
     windows = []
     for player in players:
@@ -1202,14 +1303,28 @@ def main():
             "players": roster_players,
             "seed": team["seed"],
         }
-        if rosters[code]["played"]:
+        if rosters[code]["played"] and code not in ALLOW_PLAYED:
             raise SystemExit(code + " already has a played game; this batch does not touch results")
+        if code in ALLOW_PLAYED:
+            appeared = set()
+            for game in results["games"]:
+                for line in game.get("batting", []) + game.get("pitching", []):
+                    if line["team"] == code:
+                        appeared.add(line["player_id"])
+            missing = sorted(appeared - {row["id"] for row in roster_players})
+            if missing:
+                raise SystemExit("%s box score ids are missing from the roster: %s" % (
+                    code, ", ".join(missing)))
     after = {key: json.dumps(value, sort_keys=True) for key, value in cards.items()}
     changed = sorted(key for key in set(before) | set(after) if before.get(key) != after.get(key))
-    expected = sorted(player["key"] for player in players)
-    if changed != expected:
-        raise SystemExit("card key mismatch %s" % [key for key in changed if key not in expected][:8])
+    expected = {player["key"] for player in players}
+    unexpected = [key for key in changed if key not in expected]
+    missing = sorted(expected - set(after))
+    if unexpected or missing:
+        raise SystemExit("card key mismatch unexpected %s missing %s" % (unexpected[:8], missing[:8]))
     for code, text in before_rosters.items():
+        if code in CODES:
+            continue
         if json.dumps(rosters[code], sort_keys=True) != text:
             raise SystemExit("existing roster changed: " + code)
     write_json(cards, CARDS)
@@ -1249,7 +1364,10 @@ def main():
     write_json({
         "summary": summary,
         "players": reports,
-        "not_built": proposals(),
+        "not_built": proposals() if CODES == DEFAULT_CODES else {
+            "built": True,
+            "reason": "Later empty-team batch. The surname proposals stay in empty_teams_batch.json.",
+        },
         "window_rule": {
             "hitters": "five best franchise seasons by league OPS+ rounded half up to one decimal, no park factor, PA>=300 where PA=AB+BB+HBP+SF",
             "pitchers": "five best franchise seasons by one-decimal ERA+ times IP, rotation floor 100 IP, bullpen floor 30 IP, no park factor",
