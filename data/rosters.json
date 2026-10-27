@@ -1853,6 +1853,14 @@
     "slot": 5
    },
    {
+    "group": "bench",
+    "id": "aloumo01",
+    "kind": "hitter",
+    "name": "Moises Alou",
+    "pos": "OF",
+    "slot": 6
+   },
+   {
     "group": "rotation",
     "id": "rogerst01",
     "kind": "pitcher",
@@ -1939,14 +1947,6 @@
     "name": "Woodie Fryman",
     "pos": "RP",
     "slot": 6
-   },
-   {
-    "group": "bullpen",
-    "id": "fasseje01",
-    "kind": "pitcher",
-    "name": "Jeff Fassero",
-    "pos": "RP",
-    "slot": 7
    }
   ],
   "seed": 27
