@@ -3463,6 +3463,222 @@
   ],
   "seed": 23
  },
+ "MIN": {
+  "code": "MIN",
+  "name": "Minnesota Twins",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "carewro01",
+    "kind": "hitter",
+    "name": "Rod Carew",
+    "pos": "2B",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "mauerjo01",
+    "kind": "hitter",
+    "name": "Joe Mauer",
+    "pos": "C",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "puckeki01",
+    "kind": "hitter",
+    "name": "Kirby Puckett",
+    "pos": "CF",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "killeha01",
+    "kind": "hitter",
+    "name": "Harmon Killebrew",
+    "pos": "DH",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "gosligo01",
+    "kind": "hitter",
+    "name": "Goose Goslin",
+    "pos": "LF",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "olivato01",
+    "kind": "hitter",
+    "name": "Tony Oliva",
+    "pos": "RF",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "hrbekke01",
+    "kind": "hitter",
+    "name": "Kent Hrbek",
+    "pos": "1B",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "cronijo01",
+    "kind": "hitter",
+    "name": "Joe Cronin",
+    "pos": "SS",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "gaettga01",
+    "kind": "hitter",
+    "name": "Gary Gaetti",
+    "pos": "3B",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "batteea01",
+    "kind": "hitter",
+    "name": "Earl Battey",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "ricesa01",
+    "kind": "hitter",
+    "name": "Sam Rice",
+    "pos": "OF",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "buxtoby01",
+    "kind": "hitter",
+    "name": "Byron Buxton",
+    "pos": "OF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "morneju01",
+    "kind": "hitter",
+    "name": "Justin Morneau",
+    "pos": "1B",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "tovarce01",
+    "kind": "hitter",
+    "name": "César Tovar",
+    "pos": "UT",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "johnswa01",
+    "kind": "pitcher",
+    "name": "Walter Johnson",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "santajo01",
+    "kind": "pitcher",
+    "name": "Johan Santana",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "blylebe01",
+    "kind": "pitcher",
+    "name": "Bert Blyleven",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "violafr01",
+    "kind": "pitcher",
+    "name": "Frank Viola",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "kaatji01",
+    "kind": "pitcher",
+    "name": "Jim Kaat",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "nathajo01",
+    "kind": "pitcher",
+    "name": "Joe Nathan",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "worthal01",
+    "kind": "pitcher",
+    "name": "Al Worthington",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "aguilri01",
+    "kind": "pitcher",
+    "name": "Rick Aguilera",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "marbefi01",
+    "kind": "pitcher",
+    "name": "Firpo Marberry",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "duranjh01",
+    "kind": "pitcher",
+    "name": "Jhoan Duran",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "rogerta01",
+    "kind": "pitcher",
+    "name": "Taylor Rogers",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "perryji01",
+    "kind": "pitcher",
+    "name": "Jim Perry",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 12
+ },
  "MON": {
   "code": "MON",
   "name": "Montreal Expos",
@@ -3678,6 +3894,222 @@
    }
   ],
   "seed": 27
+ },
+ "NYM": {
+  "code": "NYM",
+  "name": "New York Mets",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "lindofr01",
+    "kind": "hitter",
+    "name": "Francisco Lindor",
+    "pos": "SS",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "hernake01",
+    "kind": "hitter",
+    "name": "Keith Hernandez",
+    "pos": "1B",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "wrighda03",
+    "kind": "hitter",
+    "name": "David Wright",
+    "pos": "3B",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "strawda01",
+    "kind": "hitter",
+    "name": "Darryl Strawberry",
+    "pos": "RF",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "piazzmi01",
+    "kind": "hitter",
+    "name": "Mike Piazza",
+    "pos": "C",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "alonspe01",
+    "kind": "hitter",
+    "name": "Pete Alonso",
+    "pos": "DH",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "beltrca01",
+    "kind": "hitter",
+    "name": "Carlos Beltran",
+    "pos": "CF",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "alfoned01",
+    "kind": "hitter",
+    "name": "Edgardo Alfonzo",
+    "pos": "2B",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "jonescl01",
+    "kind": "hitter",
+    "name": "Cleon Jones",
+    "pos": "LF",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "cartega01",
+    "kind": "hitter",
+    "name": "Gary Carter",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "mcneije01",
+    "kind": "hitter",
+    "name": "Jeff McNeil",
+    "pos": "UT",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "reyesjo01",
+    "kind": "hitter",
+    "name": "José Reyes",
+    "pos": "IF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "wilsomo01",
+    "kind": "hitter",
+    "name": "Mookie Wilson",
+    "pos": "OF",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "olerujo01",
+    "kind": "hitter",
+    "name": "John Olerud",
+    "pos": "UT",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "seaveto01",
+    "kind": "pitcher",
+    "name": "Tom Seaver",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "goodedw01",
+    "kind": "pitcher",
+    "name": "Dwight Gooden",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "degroja01",
+    "kind": "pitcher",
+    "name": "Jacob deGrom",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "koosmje01",
+    "kind": "pitcher",
+    "name": "Jerry Koosman",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "leiteal01",
+    "kind": "pitcher",
+    "name": "Al Leiter",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "wagnebi02",
+    "kind": "pitcher",
+    "name": "Billy Wagner",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "diazed04",
+    "kind": "pitcher",
+    "name": "Edwin Díaz",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "benitar01",
+    "kind": "pitcher",
+    "name": "Armando Benítez",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "mcgratu01",
+    "kind": "pitcher",
+    "name": "Tug McGraw",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "francjo01",
+    "kind": "pitcher",
+    "name": "John Franco",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "oroscje01",
+    "kind": "pitcher",
+    "name": "Jesse Orosco",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "fernasi01",
+    "kind": "pitcher",
+    "name": "Sid Fernandez",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 21
  },
  "NYY": {
   "code": "NYY",
@@ -3895,6 +4327,222 @@
   ],
   "seed": 1
  },
+ "OAK": {
+  "code": "OAK",
+  "name": "Oakland Athletics",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "henderi01",
+    "kind": "hitter",
+    "name": "Rickey Henderson",
+    "pos": "LF",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "bandosa01",
+    "kind": "hitter",
+    "name": "Sal Bando",
+    "pos": "3B",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "jacksre01",
+    "kind": "hitter",
+    "name": "Reggie Jackson",
+    "pos": "RF",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "mcgwima01",
+    "kind": "hitter",
+    "name": "Mark McGwire",
+    "pos": "1B",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "cansejo01",
+    "kind": "hitter",
+    "name": "José Canseco",
+    "pos": "DH",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "tejadmi01",
+    "kind": "hitter",
+    "name": "Miguel Tejada",
+    "pos": "SS",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "murphdw01",
+    "kind": "hitter",
+    "name": "Dwayne Murphy",
+    "pos": "CF",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "steinte01",
+    "kind": "hitter",
+    "name": "Terry Steinbach",
+    "pos": "C",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "ellisma01",
+    "kind": "hitter",
+    "name": "Mark Ellis",
+    "pos": "2B",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "tenacge01",
+    "kind": "hitter",
+    "name": "Gene Tenace",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "phillto02",
+    "kind": "hitter",
+    "name": "Tony Phillips",
+    "pos": "UT",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "rudijo01",
+    "kind": "hitter",
+    "name": "Joe Rudi",
+    "pos": "OF",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "campabe01",
+    "kind": "hitter",
+    "name": "Bert Campaneris",
+    "pos": "IF",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "olsonma02",
+    "kind": "hitter",
+    "name": "Matt Olson",
+    "pos": "UT",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "hunteca01",
+    "kind": "pitcher",
+    "name": "Catfish Hunter",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "bluevi01",
+    "kind": "pitcher",
+    "name": "Vida Blue",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "stewada01",
+    "kind": "pitcher",
+    "name": "Dave Stewart",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "hudsoti01",
+    "kind": "pitcher",
+    "name": "Tim Hudson",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "zitoba01",
+    "kind": "pitcher",
+    "name": "Barry Zito",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "eckerde01",
+    "kind": "pitcher",
+    "name": "Dennis Eckersley",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "fingero01",
+    "kind": "pitcher",
+    "name": "Rollie Fingers",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "bailean01",
+    "kind": "pitcher",
+    "name": "Andrew Bailey",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "doolise01",
+    "kind": "pitcher",
+    "name": "Sean Doolittle",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "hendrli01",
+    "kind": "pitcher",
+    "name": "Liam Hendriks",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "nelsoge01",
+    "kind": "pitcher",
+    "name": "Gene Nelson",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "honeyri01",
+    "kind": "pitcher",
+    "name": "Rick Honeycutt",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 22
+ },
  "PHA": {
   "code": "PHA",
   "name": "Philadelphia Athletics",
@@ -4110,6 +4758,222 @@
    }
   ],
   "seed": 17
+ },
+ "PHI": {
+  "code": "PHI",
+  "name": "Philadelphia Phillies",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "hamilbi01",
+    "kind": "hitter",
+    "name": "Billy Hamilton",
+    "pos": "CF",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "abreubo01",
+    "kind": "hitter",
+    "name": "Bobby Abreu",
+    "pos": "RF",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "delahed01",
+    "kind": "hitter",
+    "name": "Ed Delahanty",
+    "pos": "LF",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "schmimi01",
+    "kind": "hitter",
+    "name": "Mike Schmidt",
+    "pos": "3B",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "harpebr03",
+    "kind": "hitter",
+    "name": "Bryce Harper",
+    "pos": "1B",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "howarry01",
+    "kind": "hitter",
+    "name": "Ryan Howard",
+    "pos": "DH",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "utleych01",
+    "kind": "hitter",
+    "name": "Chase Utley",
+    "pos": "2B",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "realmjt01",
+    "kind": "hitter",
+    "name": "J.T. Realmuto",
+    "pos": "C",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "rolliji01",
+    "kind": "hitter",
+    "name": "Jimmy Rollins",
+    "pos": "SS",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "daultda01",
+    "kind": "hitter",
+    "name": "Darren Daulton",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "bowala01",
+    "kind": "hitter",
+    "name": "Larry Bowa",
+    "pos": "SS",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "rolensc01",
+    "kind": "hitter",
+    "name": "Scott Rolen",
+    "pos": "3B",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "allendi01",
+    "kind": "hitter",
+    "name": "Dick Allen",
+    "pos": "1B",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "ashburi01",
+    "kind": "hitter",
+    "name": "Richie Ashburn",
+    "pos": "CF",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "carltst01",
+    "kind": "pitcher",
+    "name": "Steve Carlton",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "roberro01",
+    "kind": "pitcher",
+    "name": "Robin Roberts",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "alexape01",
+    "kind": "pitcher",
+    "name": "Grover Cleveland Alexander",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "hamelco01",
+    "kind": "pitcher",
+    "name": "Cole Hamels",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "schilcu01",
+    "kind": "pitcher",
+    "name": "Curt Schilling",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "papeljo01",
+    "kind": "pitcher",
+    "name": "Jonathan Papelbon",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "garbege01",
+    "kind": "pitcher",
+    "name": "Gene Garber",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "madsory01",
+    "kind": "pitcher",
+    "name": "Ryan Madson",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "mcgratu01",
+    "kind": "pitcher",
+    "name": "Tug McGraw",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "reedro01",
+    "kind": "pitcher",
+    "name": "Ron Reed",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "lidgebr01",
+    "kind": "pitcher",
+    "name": "Brad Lidge",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "suarera01",
+    "kind": "pitcher",
+    "name": "Ranger Suárez",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 11
  },
  "PIT": {
   "code": "PIT",

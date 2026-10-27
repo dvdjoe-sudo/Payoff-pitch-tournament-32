@@ -610,12 +610,12 @@ def retain_authorized_hitters(cards):
 
 
 
-# These clubs had no set-file cards. BAL/CLE/CWS/HOU and KC/LAA/MIL
-# keep franchise-card bodies written by the sandbox build. MIA and NYY
-# keep the owner-approved active rosters and any preexisting card,
-# including inactive A.J. Burnett and Mike Stanton, without inventing a
-# body. A game import never reaches this path.
-EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU", "MIA", "NYY", "KC", "LAA", "MIL")
+# These clubs had no set-file cards. The sandbox build wrote franchise
+# card bodies for every code except MIA and NYY, which keep the
+# owner-approved active rosters and any preexisting card, including
+# inactive A.J. Burnett and Mike Stanton, without inventing a body.
+# A game import never reaches this path.
+EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU", "MIA", "NYY", "KC", "LAA", "MIL", "MIN", "NYM", "OAK", "PHI")
 
 
 def retain_empty_team_cards(cards, rosters):
