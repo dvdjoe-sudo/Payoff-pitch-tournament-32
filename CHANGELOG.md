@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Five missing hitter cards (sandbox)
+
+David Peralta, Moises Alou, Brian Giles, Aubrey Huff, and Elmer Valo now have playable hitter cards. Each window is the five best franchise seasons by one-decimal league OPS+, among seasons of at least 300 plate appearances. Plate appearances are AB + BB + HBP + SF. Peralta is 2014, 2015, 2018, 2019, and 2022, Arizona only. Alou is 1992–1996. Giles is 2004–2008. Huff is 2001–2005. Valo is 1946, 1947, 1948, 1951, and 1952. Fielding stays the engine Average default. Valo's intentional walks and sacrifice flies are unrecorded in Lahman and stored as zero. No 2026 line was added. The comparison is `historical-cards/accuracy/missing_hitters.json`. The service worker cache is payoff-pitch-v50. No game result was changed.
+
 ## 2026-10-27 — Old-method dice refit (sandbox)
 
 The 252 converted-roster cards whose windows did not change now use the same solver as the 215. That is 120 hitters and 132 pitchers, 251 cards, because Babe Ruth is both. Windows, peak lines, fielding, stamina, and the tournament block stay. Hitter dice include doubles and triples in the objective, and a DEFENSE roll uses the rulebook position check. Pitcher charts use the page-39 shift on TOUGH only. The four missing hitters and Elmer Valo's placeholder were not filled. No game result was changed. The per-card comparison is `historical-cards/accuracy/rebuild_252.json`. The service worker cache is payoff-pitch-v48.

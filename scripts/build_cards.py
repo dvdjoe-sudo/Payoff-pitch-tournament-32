@@ -572,7 +572,40 @@ def build():
     apply_diamondbacks_roster_amendment(cards, rosters)
     apply_rays_roster_amendment(cards, rosters)
     apply_nationals_roster_amendment(cards, rosters)
+    retain_authorized_hitters(cards)
     return cards, rosters, reconciliations, peak_notes
+
+
+# These five were built from Lahman franchise seasons because the set
+# files had no frozen card. A full rebuild starts from those files, so
+# it has to copy the playable bodies back or the next build would drop
+# them. A game import never reaches this path.
+AUTHORIZED_HITTERS = (
+    "ARI|peralda01",
+    "MON|aloumo01",
+    "SD|gilesbr02",
+    "TB|huffau01",
+    "PHA|valoel01",
+)
+
+
+def retain_authorized_hitters(cards):
+    path = os.path.join(ROOT, "data", "cards.json")
+    if not os.path.exists(path):
+        return
+    existing = load_json(path)
+    for key in AUTHORIZED_HITTERS:
+        old = existing.get(key) or {}
+        if not (old.get("card_bat") or {}).get("sections"):
+            continue
+        entry = cards.get(key)
+        if entry is None:
+            cards[key] = old
+            continue
+        entry["card_bat"] = old["card_bat"]
+        entry["peak_bat"] = old.get("peak_bat")
+        entry["peak_bat_162"] = old.get("peak_bat_162")
+        entry.pop("conversion_status", None)
 
 
 
@@ -580,9 +613,8 @@ def apply_owner_roster_amendments(cards, rosters):
     """Keep the staged PHA converted-set view aligned with Joe's dated owner card.
 
     The original external set directory has not yet been regenerated. This
-    adapter deliberately does NOT invent a Hitter v0.5 card for Elmer Valo.
-    When the frozen engine output is available, rebuild the source set first,
-    then rerun this builder to replace the visible pending entry.
+    function does not invent dice. A playable Valo card already stored in
+    data/cards.json is copied back by retain_authorized_hitters.
     """
     roster = rosters.get("PHA")
     if roster is None:
@@ -615,8 +647,8 @@ def apply_owner_roster_amendments(cards, rosters):
             "pos": spot["pos"], "slot": spot["slot"],
         }]
 
-    # This placeholder is NOT a converted or playable card. Only original
-    # Hitter v0.5 output is authorized to populate card_bat.
+    # No dice are invented here. A missing card stays pending. A playable
+    # body already on disk is restored by retain_authorized_hitters.
     valocard = cards.get("PHA|" + valo_id)
     if valocard is None:
         valocard = {
@@ -649,11 +681,11 @@ def apply_owner_roster_amendments(cards, rosters):
 def apply_padres_roster_amendment(cards, rosters):
     """Owner-approved San Diego 6 bench / 6 relievers roster amendment.
 
-    Brian Giles replaces Craig Lefferts on the ACTIVE 26, but Joe is
-    handling the frozen Hitter v0.5 conversion. Do not invent a playable
-    Giles card. Preserve the already-converted Lefferts card data as a
-    historical record, without listing him as active; his archival card
-    can still be inspected by id from the source collection.
+    Brian Giles replaces Craig Lefferts on the ACTIVE 26. This function
+    does not invent dice. A playable Giles card already stored in
+    data/cards.json is copied back by retain_authorized_hitters. Preserve
+    the already-converted Lefferts card as a historical record, without
+    listing him as active.
     """
     roster = rosters.get("SD")
     if roster is None:
@@ -676,7 +708,6 @@ def apply_padres_roster_amendment(cards, rosters):
         card["spots"] = [
             {"group": "bench", "slot": 6, "pos": "OF", "kind": "hitter"},
         ]
-        # Never assert card validity without original frozen-engine output.
     # Lefferts stays in cards if present as archived source data, but no
     # longer occupies an active roster slot. No data is destroyed here.
     order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
@@ -693,7 +724,9 @@ def apply_expos_roster_amendment(cards, rosters):
     """Owner-approved Montreal Alou/Fassero swap; no invented hitter card.
 
     The original set may still list Fassero. Keep that existing pitcher
-    card for historical inspection, but not among the active 26.
+    card for historical inspection, but not among the active 26. This
+    function does not invent dice. A playable Alou card already stored
+    in data/cards.json is copied back by retain_authorized_hitters.
     """
     roster = rosters.get("MON")
     if roster is None:
@@ -715,7 +748,6 @@ def apply_expos_roster_amendment(cards, rosters):
         cards["MON|" + alou_id]["spots"] = [
             {"group": "bench", "kind": "hitter", "pos": "OF", "slot": 6},
         ]
-    # Do not create a fake card. Joe will perform the Hitter v0.5 conversion.
     order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
     players.sort(key=lambda p: (order[p["group"]], p["slot"]))
     counts = {group: sum(p["group"] == group for p in players) for group in order}
@@ -731,9 +763,9 @@ def apply_diamondbacks_roster_amendment(cards, rosters):
 
     The original converted set contains Juan Cruz. Keep that card and
     any R1-04 results unchanged as historical data, but remove Cruz
-    from the active roster. David Peralta occupies bench LF6. His
-    original frozen Hitter v0.5 card must come from Joe; do not invent
-    percentile bands, attributes, or pitching/hitting data here.
+    from the active roster. David Peralta occupies bench LF6. This
+    function does not invent dice. A playable Peralta card already
+    stored in data/cards.json is copied back by retain_authorized_hitters.
     """
     roster = rosters.get("ARI")
     if roster is None:
@@ -771,7 +803,9 @@ def apply_rays_roster_amendment(cards, rosters):
 
     Huff replaces Kevin Kelly on the active 26 after R1-03. Preserve
     Kelly's previously converted card, appearances and tournament lines
-    as historical records; never fabricate Huff's frozen Hitter v0.5 card.
+    as historical records. This function does not invent dice. A playable
+    Huff card already stored in data/cards.json is copied back by
+    retain_authorized_hitters.
     """
     roster = rosters.get("TB")
     if roster is None:
@@ -803,8 +837,8 @@ def apply_rays_roster_amendment(cards, rosters):
         card["spots"] = [
             {"group": "bullpen", "kind": "pitcher", "pos": "RP", "slot": 6},
         ]
-    # Do NOT remove TB|kellyke02 from the archive or create an
-    # unconverted card for Huff. User handles original card conversion.
+    # Do NOT remove TB|kellyke02 from the archive. A missing Huff card
+    # stays missing until retain_authorized_hitters copies a stored one.
     order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
     players.sort(key=lambda p: (order[p["group"]], p["slot"]))
     groups = {group: sum(p["group"] == group for p in players) for group in order}
