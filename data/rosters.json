@@ -3121,7 +3121,7 @@
     "id": "lopezot01",
     "kind": "hitter",
     "name": "Otto Lopez",
-    "pos": "UTIL",
+    "pos": "UT",
     "slot": 2
    },
    {
@@ -3129,7 +3129,7 @@
     "id": "ugglada01",
     "kind": "hitter",
     "name": "Dan Uggla",
-    "pos": "2B",
+    "pos": "IF",
     "slot": 3
    },
    {
@@ -3147,14 +3147,6 @@
     "name": "Derrek Lee",
     "pos": "1B",
     "slot": 5
-   },
-   {
-    "group": "bench",
-    "id": "pierrju01",
-    "kind": "hitter",
-    "name": "Juan Pierre",
-    "pos": "CF",
-    "slot": 6
    },
    {
     "group": "rotation",
@@ -3243,6 +3235,14 @@
     "name": "Antonio Alfonseca",
     "pos": "RP",
     "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "burneaj01",
+    "kind": "pitcher",
+    "name": "A.J. Burnett",
+    "pos": "RP",
+    "slot": 7
    }
   ],
   "seed": 32
@@ -4201,7 +4201,7 @@
     "id": "lazzeto01",
     "kind": "hitter",
     "name": "Tony Lazzeri",
-    "pos": "2B",
+    "pos": "IF",
     "slot": 2
    },
    {
@@ -4225,16 +4225,8 @@
     "id": "jacksre01",
     "kind": "hitter",
     "name": "Reggie Jackson",
-    "pos": "RF",
-    "slot": 5
-   },
-   {
-    "group": "bench",
-    "id": "henderi01",
-    "kind": "hitter",
-    "name": "Rickey Henderson",
     "pos": "OF",
-    "slot": 6
+    "slot": 5
    },
    {
     "group": "rotation",
@@ -4318,11 +4310,19 @@
    },
    {
     "group": "bullpen",
+    "id": "stantmi02",
+    "kind": "pitcher",
+    "name": "Mike Stanton",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
     "id": "reynoal01",
     "kind": "pitcher",
     "name": "Allie Reynolds",
     "pos": "RP",
-    "slot": 6
+    "slot": 7
    }
   ],
   "seed": 1
@@ -5406,6 +5406,222 @@
    }
   ],
   "seed": 26
+ },
+ "SEA": {
+  "code": "SEA",
+  "name": "Seattle Mariners",
+  "played": false,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "suzukic01",
+    "kind": "hitter",
+    "name": "Ichiro Suzuki",
+    "pos": "RF",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "rodrial01",
+    "kind": "hitter",
+    "name": "Alex Rodriguez",
+    "pos": "SS",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "griffke02",
+    "kind": "hitter",
+    "name": "Ken Griffey Jr.",
+    "pos": "CF",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "martied01",
+    "kind": "hitter",
+    "name": "Edgar Martínez",
+    "pos": "DH",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "ibanera01",
+    "kind": "hitter",
+    "name": "Raúl Ibañez",
+    "pos": "LF",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "raleica01",
+    "kind": "hitter",
+    "name": "Cal Raleigh",
+    "pos": "C",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "olerujo01",
+    "kind": "hitter",
+    "name": "John Olerud",
+    "pos": "1B",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "boonebr01",
+    "kind": "hitter",
+    "name": "Bret Boone",
+    "pos": "2B",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "seageky01",
+    "kind": "hitter",
+    "name": "Kyle Seager",
+    "pos": "3B",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "wilsoda01",
+    "kind": "hitter",
+    "name": "Dan Wilson",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "reynoha01",
+    "kind": "hitter",
+    "name": "Harold Reynolds",
+    "pos": "UT",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "davisal01",
+    "kind": "hitter",
+    "name": "Alvin Davis",
+    "pos": "1B",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "rodriju01",
+    "kind": "hitter",
+    "name": "Julio Rodríguez",
+    "pos": "OF",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "buhneja01",
+    "kind": "hitter",
+    "name": "Jay Buhner",
+    "pos": "OF",
+    "slot": 5
+   },
+   {
+    "group": "rotation",
+    "id": "johnsra05",
+    "kind": "pitcher",
+    "name": "Randy Johnson",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "hernafe02",
+    "kind": "pitcher",
+    "name": "Félix Hernández",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "moyerja01",
+    "kind": "pitcher",
+    "name": "Jamie Moyer",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "langsma01",
+    "kind": "pitcher",
+    "name": "Mark Langston",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "garcifr02",
+    "kind": "pitcher",
+    "name": "Freddy García",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "mooremi01",
+    "kind": "pitcher",
+    "name": "Mike Moore",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "putzjj01",
+    "kind": "pitcher",
+    "name": "J.J. Putz",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "munozan01",
+    "kind": "pitcher",
+    "name": "Andrés Muñoz",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "diazed04",
+    "kind": "pitcher",
+    "name": "Edwin Díaz",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "nelsoje01",
+    "kind": "pitcher",
+    "name": "Jeff Nelson",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "rhodear01",
+    "kind": "pitcher",
+    "name": "Arthur Rhodes",
+    "pos": "RP",
+    "slot": 6
+   },
+   {
+    "group": "bullpen",
+    "id": "sasakka01",
+    "kind": "pitcher",
+    "name": "Kazuhiro Sasaki",
+    "pos": "RP",
+    "slot": 7
+   }
+  ],
+  "seed": 19
  },
  "SF": {
   "code": "SF",

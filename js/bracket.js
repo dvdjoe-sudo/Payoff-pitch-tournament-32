@@ -1828,7 +1828,7 @@
     var roster = state.rosters && state.rosters[code];
     if (!roster) return;
     var body = el("div");
-    body.appendChild(el("p", { class: "note", text: code === "NYY" ? "Approved Yankees active roster synchronized from the published owner list and completed R1-01 results; playable cards are shown only where genuine conversions exist." : code === "MIA" ? "Approved Miami active roster from the published owner list and completed R1-01 games. Not all playable cards are converted yet." : "The converted set, in set order. Open a player for his card and his tournament line." }));
+    body.appendChild(el("p", { class: "note", text: "The converted set, in set order. Open a player for his card and his tournament line." }));
     if (code === "SD") {
       body.appendChild(el("p", { class: "note", text: "Approved Padres 26: Brian Giles is bench OF6 and will be playable after his frozen Hitter v0.5 conversion. Craig Lefferts is off the active roster; his previous card remains preserved as historical data." }));
     }
@@ -1845,10 +1845,10 @@
       body.appendChild(el("p", { class: "note", text: "Approved Nationals 26, effective after R1-02: Jayson Werth joins bench OF6 with his original Hitter v0.5 card conversion pending. Craig Stammen is inactive, while his historical card and all completed games are preserved." }));
     }
     if (code === "NYY") {
-      body.appendChild(el("p", { class: "note", text: "Approved Yankees 26 after R1-01: Rickey Henderson is bench OF/PR6, pending a genuine Yankees-only hitting card. Mike Stanton is off the active bullpen but his historical appearances and any existing card remain intact. All completed Yankees-Marlins games are preserved." }));
+      body.appendChild(el("p", { class: "note", text: "Franchise cards cover the active Yankees 26. Mike Stanton is the left-handed specialist. Played games are unchanged." }));
     }
     if (code === "MIA") {
-      body.appendChild(el("p", { class: "note", text: "Approved Marlins 26 after R1-01: Juan Pierre enters as sixth bench CF / pinch-runner; A.J. Burnett is off the active bullpen. Existing historical results and cards are unchanged; Pierre's original card conversion is pending. The previously listed utility Lopez is tentatively mapped to Otto Lopez, pending owner identity confirmation." }));
+      body.appendChild(el("p", { class: "note", text: "Franchise cards cover the active Marlins 26. Josh Johnson leads the rotation, Otto Lopez is the utility bench player, and A.J. Burnett is the long reliever. Played games are unchanged." }));
     }
     if (code === "PHA") body.appendChild(el("p", { class: "note", text: "Owner-approved 26-man roster: Ferris Fain is DH, Max Bishop is on the bench, and George Earnshaw is not on the roster. Elmer Valo is on the bench; his Hitter v0.5 card is awaiting original frozen-engine conversion and is not yet playable." }));
     ["lineup", "bench", "rotation", "bullpen"].forEach(function (group) {
@@ -2297,7 +2297,7 @@
         "Approved 26-man roster member. The original frozen Payoff Pitch hitter conversion has not been added yet; no ratings or percentile bands have been invented."
       }));
       pending.appendChild(el("p", { text:
-        code === "NYY" ? "Rickey Henderson: his Yankees-only five-season peak (1985–1989) and playable Hitter v0.5 card await authentic conversion. No unverified ratings were invented." : code === "MIA" ? "Miami's active roster was synchronized from its published franchise lineup. Missing playable cards, including Juan Pierre, require authentic conversion; no ratings or five-season windows have been fabricated." : code === "WSH" ? "Jayson Werth: original Hitter v0.5 conversion and Nationals-only five-season peak line are pending. No playable ratings or simulated card were fabricated." : code === "ARI" ? "David Peralta: the original Hitter v0.5 conversion and Arizona-only five-season peak line are pending. No unverified card ratings were added." : code === "TB" ? "Aubrey Huff: his original Hitter v0.5 conversion and Rays-only five-season peak line are pending. No playable ratings were invented." : "The club's franchise-only Peak 162 display is available on the team page. The playable card will be added when converted."
+        code === "WSH" ? "Jayson Werth: original Hitter v0.5 conversion and Nationals-only five-season peak line are pending. No playable ratings or simulated card were fabricated." : code === "ARI" ? "David Peralta: the original Hitter v0.5 conversion and Arizona-only five-season peak line are pending. No unverified card ratings were added." : code === "TB" ? "Aubrey Huff: his original Hitter v0.5 conversion and Rays-only five-season peak line are pending. No playable ratings were invented." : "The club's franchise-only Peak 162 display is available on the team page. The playable card will be added when converted."
       }));
       view.appendChild(pending);
       return;

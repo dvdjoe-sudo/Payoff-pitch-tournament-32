@@ -4087,6 +4087,311 @@
     ]
    }
   },
+  "MIA": {
+   "1 Luis Castillo 2B": {
+    "lahman_id": "castilu01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1999–2003): 162 G, 732 PA, 643 AB, 102 R, 196 H, 22 2B, 7 3B, 3 HR, 39 RBI, 50 SB, 77 BB, 92 SO, .304/.378/.371/.749",
+    "years": [
+     1999,
+     2000,
+     2001,
+     2002,
+     2003
+    ]
+   },
+   "1B/POWER Derrek Lee": {
+    "lahman_id": "leede02",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1999–2003): 162 G, 631 PA, 548 AB, 83 R, 147 H, 30 2B, 4 3B, 26 HR, 79 RBI, 11 SB, 73 BB, 141 SO, .269/.359/.480/.839",
+    "years": [
+     1999,
+     2000,
+     2001,
+     2002,
+     2003
+    ]
+   },
+   "2 Christian Yelich CF": {
+    "lahman_id": "yelicch01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2013–2017): 162 G, 708 PA, 624 AB, 93 R, 181 H, 37 2B, 4 3B, 15 HR, 74 RBI, 18 SB, 76 BB, 146 SO, .290/.369/.432/.801",
+    "years": [
+     2013,
+     2014,
+     2015,
+     2016,
+     2017
+    ]
+   },
+   "3 Gary Sheffield DH": {
+    "lahman_id": "sheffga01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1994–1998): 162 G, 694 PA, 545 AB, 111 R, 156 H, 30 2B, 1 3B, 37 HR, 114 RBI, 21 SB, 132 BB, 85 SO, .287/.433/.553/.986",
+    "years": [
+     1994,
+     1995,
+     1996,
+     1997,
+     1998
+    ]
+   },
+   "4 Giancarlo Stanton RF": {
+    "lahman_id": "stantmi03",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2011–2015): 162 G, 683 PA, 588 AB, 94 R, 160 H, 34 2B, 2 3B, 42 HR, 108 RBI, 8 SB, 85 BB, 190 SO, .272/.367/.553/.920",
+    "years": [
+     2011,
+     2012,
+     2013,
+     2014,
+     2015
+    ]
+   },
+   "5 Miguel Cabrera 3B": {
+    "lahman_id": "cabremi01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2003–2007): 162 G, 691 PA, 606 AB, 101 R, 189 H, 41 2B, 2 3B, 31 HR, 118 RBI, 4 SB, 72 BB, 133 SO, .313/.388/.542/.930",
+    "years": [
+     2003,
+     2004,
+     2005,
+     2006,
+     2007
+    ]
+   },
+   "6 Hanley Ramirez SS": {
+    "lahman_id": "ramirha01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2007–2011): 162 G, 715 PA, 629 AB, 117 R, 195 H, 39 2B, 3 3B, 27 HR, 88 RBI, 39 SB, 73 BB, 112 SO, .309/.386/.512/.898",
+    "years": [
+     2007,
+     2008,
+     2009,
+     2010,
+     2011
+    ]
+   },
+   "7 Cliff Floyd LF": {
+    "lahman_id": "floydcl01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1998–2002): 162 G, 676 PA, 593 AB, 104 R, 177 H, 44 2B, 2 3B, 29 HR, 110 RBI, 24 SB, 69 BB, 115 SO, .298/.376/.528/.904",
+    "years": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
+    ]
+   },
+   "8 Jeff Conine 1B": {
+    "lahman_id": "coninje01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1994–2003). Years away from the franchise inside this span are not in the totals. 162 G, 639 PA, 563 AB, 77 R, 163 H, 28 2B, 3 3B, 25 HR, 100 RBI, 2 SB, 66 BB, 113 SO, .289/.362/.485/.847",
+    "years": [
+     1994,
+     1995,
+     1996,
+     1997,
+     2003
+    ]
+   },
+   "9 J.T. Realmuto C": {
+    "lahman_id": "realmjt01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2014–2018): 162 G, 645 PA, 596 AB, 77 R, 167 H, 34 2B, 5 3B, 18 HR, 73 RBI, 9 SB, 37 BB, 116 SO, .279/.327/.442/.769",
+    "years": [
+     2014,
+     2015,
+     2016,
+     2017,
+     2018
+    ]
+   },
+   "C2 Charles Johnson": {
+    "lahman_id": "johnsch04",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1994–1998): 162 G, 617 PA, 535 AB, 58 R, 128 H, 26 2B, 1 3B, 22 HR, 72 RBI, 0 SB, 70 BB, 131 SO, .239/.330/.416/.746",
+    "years": [
+     1994,
+     1995,
+     1996,
+     1997,
+     1998
+    ]
+   },
+   "CL Robb Nen": {
+    "lahman_id": "nenro01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1993–1997): 65 G, 5-4, 26 SV, 76.0 IP, 68 H, 29 ER, 29 BB, 79 SO, 3.41 ERA, 1.28 WHIP, 9.4 K/9",
+    "years": [
+     1993,
+     1994,
+     1995,
+     1996,
+     1997
+    ]
+   },
+   "INF/POWER Dan Uggla": {
+    "lahman_id": "ugglada01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2006–2010): 162 G, 704 PA, 611 AB, 104 R, 161 H, 35 2B, 3 3B, 32 HR, 97 RBI, 4 SB, 76 BB, 159 SO, .263/.349/.488/.837",
+    "years": [
+     2006,
+     2007,
+     2008,
+     2009,
+     2010
+    ]
+   },
+   "LH Tanner Scott": {
+    "lahman_id": "scottta01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2022–2024). Three franchise seasons; best 3. 65 G, 7-5, 18 SV, 65.1 IP, 45 H, 20 ER, 34 BB, 87 SO, 2.70 ERA, 1.20 WHIP, 11.9 K/9",
+    "years": [
+     2022,
+     2023,
+     2024
+    ]
+   },
+   "LR/EMER SP A.J. Burnett": {
+    "lahman_id": "burneaj01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2001–2005): 65 G, 24-23, 0 SV, 416.0 IP, 343 H, 168 ER, 176 BB, 378 SO, 3.63 ERA, 1.25 WHIP, 8.2 K/9",
+    "years": [
+     2001,
+     2002,
+     2003,
+     2004,
+     2005
+    ]
+   },
+   "MR Anthony Bender": {
+    "lahman_id": "bendean01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2021–2024). Four franchise seasons; best 3. Years away from the franchise inside this span are not in the totals. 65 G, 4-3, 5 SV, 61.2 IP, 52 H, 23 ER, 21 BB, 68 SO, 3.37 ERA, 1.18 WHIP, 9.9 K/9",
+    "years": [
+     2021,
+     2022,
+     2024
+    ]
+   },
+   "MR Antonio Alfonseca": {
+    "lahman_id": "alfonan01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (1998–2005). Years away from the franchise inside this span are not in the totals. 65 G, 4-5, 23 SV, 69.0 IP, 75 H, 29 ER, 26 BB, 44 SO, 3.78 ERA, 1.46 WHIP, 5.7 K/9",
+    "years": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2005
+    ]
+   },
+   "OF4 Marcell Ozuna": {
+    "lahman_id": "ozunama01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2013–2017): 162 G, 666 PA, 613 AB, 79 R, 169 H, 31 2B, 4 3B, 24 HR, 90 RBI, 3 SB, 47 BB, 146 SO, .277/.329/.457/.786",
+    "years": [
+     2013,
+     2014,
+     2015,
+     2016,
+     2017
+    ]
+   },
+   "SP1 Josh Johnson": {
+    "lahman_id": "johnsjo09",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2008–2012): 34 GS, 13-8, 0 SV, 216.1 IP, 192 H, 74 ER, 64 BB, 200 SO, 3.06 ERA, 1.18 WHIP, 8.3 K/9",
+    "years": [
+     2008,
+     2009,
+     2010,
+     2011,
+     2012
+    ]
+   },
+   "SP2 Sandy Alcantara": {
+    "lahman_id": "alcansa01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2019–2023): 34 GS, 10-13, 0 SV, 221.0 IP, 189 H, 81 ER, 63 BB, 193 SO, 3.30 ERA, 1.14 WHIP, 7.9 K/9",
+    "years": [
+     2019,
+     2020,
+     2021,
+     2022,
+     2023
+    ]
+   },
+   "SP3 Dontrelle Willis": {
+    "lahman_id": "willido03",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2003–2007): 34 GS, 14-11, 0 SV, 214.2 IP, 220 H, 90 ER, 72 BB, 159 SO, 3.78 ERA, 1.36 WHIP, 6.7 K/9",
+    "years": [
+     2003,
+     2004,
+     2005,
+     2006,
+     2007
+    ]
+   },
+   "SP4 Josh Beckett": {
+    "lahman_id": "beckejo02",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2001–2005): 34 GS, 14-11, 0 SV, 201.0 IP, 175 H, 77 ER, 74 BB, 200 SO, 3.46 ERA, 1.23 WHIP, 9.0 K/9",
+    "years": [
+     2001,
+     2002,
+     2003,
+     2004,
+     2005
+    ]
+   },
+   "SP5 Jose Fernandez": {
+    "lahman_id": "fernajo02",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2013–2015). Four franchise seasons; best 3. 34 GS, 16-7, 0 SV, 209.0 IP, 150 H, 56 ER, 61 BB, 243 SO, 2.40 ERA, 1.01 WHIP, 10.5 K/9",
+    "years": [
+     2013,
+     2014,
+     2015
+    ]
+   },
+   "SU A.J. Ramos": {
+    "lahman_id": "ramosaj01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2013–2017): 65 G, 3-3, 19 SV, 65.2 IP, 46 H, 20 ER, 35 BB, 76 SO, 2.75 ERA, 1.23 WHIP, 10.4 K/9",
+    "years": [
+     2013,
+     2014,
+     2015,
+     2016,
+     2017
+    ]
+   },
+   "SU Steve Cishek": {
+    "lahman_id": "cishest01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2011–2015): 65 G, 4-5, 22 SV, 66.0 IP, 57 H, 21 ER, 24 BB, 71 SO, 2.90 ERA, 1.23 WHIP, 9.7 K/9",
+    "years": [
+     2011,
+     2012,
+     2013,
+     2014,
+     2015
+    ]
+   },
+   "UTIL Otto Lopez": {
+    "lahman_id": "lopezot01",
+    "status": "ok",
+    "text": "Peak 162 with Miami Marlins (2024–2025). Two franchise seasons; all of them. 162 G, 640 PA, 590 AB, 72 R, 151 H, 27 2B, 1 3B, 13 HR, 72 RBI, 22 SB, 43 BB, 98 SO, .257/.308/.372/.680",
+    "years": [
+     2024,
+     2025
+    ]
+   }
+  },
   "MIL": {
    "1 Christian Yelich LF 2018-2026 (9)": {
     "lahman_id": "yelicch01",
@@ -5330,6 +5635,320 @@
      2020,
      2021,
      2022
+    ]
+   }
+  },
+  "NYY": {
+   "1 Derek Jeter SS": {
+    "lahman_id": "jeterde01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1999–2003): 162 G, 747 PA, 655 AB, 127 R, 212 H, 34 2B, 4 3B, 19 HR, 83 RBI, 25 SB, 73 BB, 114 SO, .324/.400/.478/.878",
+    "years": [
+     1999,
+     2000,
+     2001,
+     2002,
+     2003
+    ]
+   },
+   "1B/BAT Don Mattingly": {
+    "lahman_id": "mattido01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1984–1988): 162 G, 728 PA, 662 AB, 107 R, 219 H, 47 2B, 2 3B, 29 HR, 122 RBI, 1 SB, 52 BB, 38 SO, .332/.376/.541/.917",
+    "years": [
+     1984,
+     1985,
+     1986,
+     1987,
+     1988
+    ]
+   },
+   "2 Aaron Judge RF": {
+    "lahman_id": "judgeaa01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (2021–2025): 162 G, 711 PA, 581 AB, 126 R, 178 H, 30 2B, 1 3B, 56 HR, 126 RBI, 11 SB, 119 BB, 178 SO, .306/.426/.649/1.075",
+    "years": [
+     2021,
+     2022,
+     2023,
+     2024,
+     2025
+    ]
+   },
+   "3 Babe Ruth DH": {
+    "lahman_id": "ruthba01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1920–1924): 162 G, 727 PA, 561 AB, 165 R, 208 H, 43 2B, 12 3B, 54 HR, 151 RBI, 13 SB, 158 BB, 95 SO, .370/.511/.778/1.289",
+    "years": [
+     1920,
+     1921,
+     1922,
+     1923,
+     1924
+    ]
+   },
+   "4 Lou Gehrig 1B": {
+    "lahman_id": "gehrilo01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1927–1931): 162 G, 740 PA, 608 AB, 151 R, 215 H, 43 2B, 15 3B, 41 HR, 168 RBI, 10 SB, 114 BB, 71 SO, .354/.458/.677/1.135",
+    "years": [
+     1927,
+     1928,
+     1929,
+     1930,
+     1931
+    ]
+   },
+   "5 Mickey Mantle LF": {
+    "lahman_id": "mantlmi01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1954–1958): 162 G, 707 PA, 568 AB, 138 R, 185 H, 25 2B, 8 3B, 42 HR, 115 RBI, 13 SB, 132 BB, 109 SO, .325/.451/.618/1.069",
+    "years": [
+     1954,
+     1955,
+     1956,
+     1957,
+     1958
+    ]
+   },
+   "6 Joe DiMaggio CF": {
+    "lahman_id": "dimagjo01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1937–1941): 162 G, 724 PA, 644 AB, 142 R, 226 H, 40 2B, 13 3B, 40 HR, 163 RBI, 4 SB, 74 BB, 29 SO, .350/.420/.638/1.058",
+    "years": [
+     1937,
+     1938,
+     1939,
+     1940,
+     1941
+    ]
+   },
+   "7 Alex Rodriguez 3B": {
+    "lahman_id": "rodrial01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (2005–2009): 162 G, 710 PA, 597 AB, 124 R, 181 H, 30 2B, 1 3B, 44 HR, 134 RBI, 20 SB, 93 BB, 135 SO, .304/.407/.579/.986",
+    "years": [
+     2005,
+     2006,
+     2007,
+     2008,
+     2009
+    ]
+   },
+   "8 Yogi Berra C": {
+    "lahman_id": "berrayo01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1952–1956): 162 G, 684 PA, 606 AB, 100 R, 175 H, 26 2B, 4 3B, 31 HR, 123 RBI, 1 SB, 67 BB, 30 SO, .289/.363/.498/.861",
+    "years": [
+     1952,
+     1953,
+     1954,
+     1955,
+     1956
+    ]
+   },
+   "9 Willie Randolph 2B": {
+    "lahman_id": "randowi01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1976–1980): 162 G, 708 PA, 597 AB, 101 R, 165 H, 23 2B, 10 3B, 5 HR, 53 RBI, 35 SB, 97 BB, 53 SO, .277/.378/.371/.749",
+    "years": [
+     1976,
+     1977,
+     1978,
+     1979,
+     1980
+    ]
+   },
+   "C2 Thurman Munson": {
+    "lahman_id": "munsoth01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1969–1973): 162 G, 649 PA, 574 AB, 77 R, 162 H, 24 2B, 5 3B, 13 HR, 64 RBI, 6 SB, 61 BB, 72 SO, .283/.355/.407/.762",
+    "years": [
+     1969,
+     1970,
+     1971,
+     1972,
+     1973
+    ]
+   },
+   "CL Mariano Rivera": {
+    "lahman_id": "riverma01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1996–2000): 65 G, 6-3, 34 SV, 80.0 IP, 60 H, 19 ER, 24 BB, 71 SO, 2.13 ERA, 1.04 WHIP, 8.0 K/9",
+    "years": [
+     1996,
+     1997,
+     1998,
+     1999,
+     2000
+    ]
+   },
+   "FIRE Goose Gossage": {
+    "lahman_id": "gossari01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1978–1982): 65 G, 7-6, 33 SV, 111.2 IP, 76 H, 26 ER, 41 BB, 108 SO, 2.07 ERA, 1.05 WHIP, 8.7 K/9",
+    "years": [
+     1978,
+     1979,
+     1980,
+     1981,
+     1982
+    ]
+   },
+   "IF/BAT Tony Lazzeri": {
+    "lahman_id": "lazzeto01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1928–1932): 162 G, 692 PA, 596 AB, 99 R, 185 H, 37 2B, 14 3B, 14 HR, 120 RBI, 14 SB, 79 BB, 71 SO, .311/.394/.492/.886",
+    "years": [
+     1928,
+     1929,
+     1930,
+     1931,
+     1932
+    ]
+   },
+   "LATE/MULTI Dave Righetti": {
+    "lahman_id": "righeda01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1982–1986): 65 G, 12-9, 25 SV, 167.1 IP, 144 H, 58 ER, 69 BB, 141 SO, 3.13 ERA, 1.27 WHIP, 7.6 K/9",
+    "years": [
+     1982,
+     1983,
+     1984,
+     1985,
+     1986
+    ]
+   },
+   "LH SPEC Mike Stanton": {
+    "lahman_id": "stantmi02",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1998–2002): 65 G, 4-2, 2 SV, 65.2 IP, 65 H, 28 ER, 22 BB, 58 SO, 3.87 ERA, 1.33 WHIP, 8.0 K/9",
+    "years": [
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
+    ]
+   },
+   "LH Sparky Lyle": {
+    "lahman_id": "lylesp01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1973–1977): 65 G, 8-7, 21 SV, 113.1 IP, 100 H, 29 ER, 37 BB, 74 SO, 2.29 ERA, 1.21 WHIP, 5.9 K/9",
+    "years": [
+     1973,
+     1974,
+     1975,
+     1976,
+     1977
+    ]
+   },
+   "LONG/SWING Allie Reynolds": {
+    "lahman_id": "reynoal01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1948–1952): 65 G, 30-14, 7 SV, 408.1 IP, 360 H, 150 ER, 201 BB, 230 SO, 3.31 ERA, 1.37 WHIP, 5.1 K/9",
+    "years": [
+     1948,
+     1949,
+     1950,
+     1951,
+     1952
+    ]
+   },
+   "OF Bernie Williams": {
+    "lahman_id": "willibe02",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1997–2001): 162 G, 719 PA, 618 AB, 123 R, 201 H, 39 2B, 5 3B, 30 HR, 122 RBI, 15 SB, 91 BB, 94 SO, .325/.411/.548/.959",
+    "years": [
+     1997,
+     1998,
+     1999,
+     2000,
+     2001
+    ]
+   },
+   "OF/BAT Reggie Jackson": {
+    "lahman_id": "jacksre01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1977–1981): 162 G, 672 PA, 583 AB, 94 R, 164 H, 29 2B, 3 3B, 36 HR, 114 RBI, 10 SB, 81 BB, 142 SO, .281/.371/.526/.897",
+    "years": [
+     1977,
+     1978,
+     1979,
+     1980,
+     1981
+    ]
+   },
+   "RH SET David Robertson": {
+    "lahman_id": "roberda08",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (2011–2017). Years away from the franchise inside this span are not in the totals. 65 G, 4-3, 10 SV, 64.0 IP, 44 H, 15 ER, 23 BB, 88 SO, 2.06 ERA, 1.05 WHIP, 12.4 K/9",
+    "years": [
+     2011,
+     2012,
+     2013,
+     2014,
+     2017
+    ]
+   },
+   "SP1 Whitey Ford": {
+    "lahman_id": "fordwh01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1961–1965): 34 GS, 18-7, 1 SV, 238.2 IP, 216 H, 76 ER, 60 BB, 164 SO, 2.85 ERA, 1.16 WHIP, 6.2 K/9",
+    "years": [
+     1961,
+     1962,
+     1963,
+     1964,
+     1965
+    ]
+   },
+   "SP2 Red Ruffing": {
+    "lahman_id": "ruffire01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1935–1939): 34 GS, 22-10, 0 SV, 275.0 IP, 263 H, 100 ER, 87 BB, 120 SO, 3.26 ERA, 1.27 WHIP, 3.9 K/9",
+    "years": [
+     1935,
+     1936,
+     1937,
+     1938,
+     1939
+    ]
+   },
+   "SP3 Lefty Gomez": {
+    "lahman_id": "gomezle01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1934–1938): 34 GS, 19-11, 0 SV, 263.2 IP, 236 H, 88 ER, 106 BB, 155 SO, 3.01 ERA, 1.30 WHIP, 5.3 K/9",
+    "years": [
+     1934,
+     1935,
+     1936,
+     1937,
+     1938
+    ]
+   },
+   "SP4 Ron Guidry": {
+    "lahman_id": "guidrro01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1977–1981): 34 GS, 21-8, 1 SV, 259.1 IP, 213 H, 77 ER, 76 BB, 217 SO, 2.68 ERA, 1.12 WHIP, 7.5 K/9",
+    "years": [
+     1977,
+     1978,
+     1979,
+     1980,
+     1981
+    ]
+   },
+   "SP5 Andy Pettitte": {
+    "lahman_id": "pettian01",
+    "status": "ok",
+    "text": "Peak 162 with New York Yankees (1996–2000): 34 GS, 18-10, 0 SV, 222.2 IP, 233 H, 98 ER, 81 BB, 149 SO, 3.96 ERA, 1.41 WHIP, 6.0 K/9",
+    "years": [
+     1996,
+     1997,
+     1998,
+     1999,
+     2000
     ]
    }
   },

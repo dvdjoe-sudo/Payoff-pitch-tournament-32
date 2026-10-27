@@ -993,5 +993,79 @@
    "LONG Eddie Rommel 13",
    "MULTI Jack Quinn 6"
   ]
+ },
+ "NYY": {
+  "manager": "Casey Stengel",
+  "lineup": [
+   "1 Derek Jeter SS",
+   "2 Aaron Judge RF",
+   "3 Babe Ruth DH",
+   "4 Lou Gehrig 1B",
+   "5 Mickey Mantle LF",
+   "6 Joe DiMaggio CF",
+   "7 Alex Rodriguez 3B",
+   "8 Yogi Berra C",
+   "9 Willie Randolph 2B"
+  ],
+  "bench": [
+   "C2 Thurman Munson",
+   "IF/BAT Tony Lazzeri",
+   "1B/BAT Don Mattingly",
+   "OF Bernie Williams",
+   "OF/BAT Reggie Jackson"
+  ],
+  "rotation": [
+   "SP1 Whitey Ford",
+   "SP2 Red Ruffing",
+   "SP3 Lefty Gomez",
+   "SP4 Ron Guidry",
+   "SP5 Andy Pettitte"
+  ],
+  "bullpen": [
+   "CL Mariano Rivera",
+   "FIRE Goose Gossage",
+   "LH Sparky Lyle",
+   "RH SET David Robertson",
+   "LATE/MULTI Dave Righetti",
+   "LH SPEC Mike Stanton",
+   "LONG/SWING Allie Reynolds"
+  ]
+ },
+ "MIA": {
+  "manager": "Jack McKeon",
+  "lineup": [
+   "1 Luis Castillo 2B",
+   "2 Christian Yelich CF",
+   "3 Gary Sheffield DH",
+   "4 Giancarlo Stanton RF",
+   "5 Miguel Cabrera 3B",
+   "6 Hanley Ramirez SS",
+   "7 Cliff Floyd LF",
+   "8 Jeff Conine 1B",
+   "9 J.T. Realmuto C"
+  ],
+  "bench": [
+   "C2 Charles Johnson",
+   "UTIL Otto Lopez",
+   "INF/POWER Dan Uggla",
+   "OF4 Marcell Ozuna",
+   "1B/POWER Derrek Lee"
+  ],
+  "rotation": [
+   "SP1 Josh Johnson",
+   "SP2 Sandy Alcantara",
+   "SP3 Dontrelle Willis",
+   "SP4 Josh Beckett",
+   "SP5 Jose Fernandez"
+  ],
+  "bullpen": [
+   "CL Robb Nen",
+   "SU Steve Cishek",
+   "SU A.J. Ramos",
+   "LH Tanner Scott",
+   "MR Anthony Bender",
+   "MR Antonio Alfonseca",
+   "LR/EMER SP A.J. Burnett"
+  ]
  }
 }

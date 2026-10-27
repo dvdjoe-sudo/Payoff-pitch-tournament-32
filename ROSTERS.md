@@ -60,57 +60,54 @@ This roster text is the one previously published in the tournament rules. Positi
 
 ### Lineup
 
-- 1 Jeter SS
-- 2 Judge RF
-- 3 Ruth DH
-- 4 Gehrig 1B
-- 5 Mantle LF
-- 6 DiMaggio CF
-- 7 A. Rodriguez 3B
-- 8 Berra C
-- 9 Randolph 2B
+- 1 Derek Jeter SS
+- 2 Aaron Judge RF
+- 3 Babe Ruth DH
+- 4 Lou Gehrig 1B
+- 5 Mickey Mantle LF
+- 6 Joe DiMaggio CF
+- 7 Alex Rodriguez 3B
+- 8 Yogi Berra C
+- 9 Willie Randolph 2B
 
 ### Bench
 
-- Munson (C2)
-- Lazzeri (IF/BAT)
-- Mattingly (1B/BAT)
-- B. Williams (OF)
-- R. Jackson (OF/BAT)
-- Rickey Henderson (OF/PR)
+- Thurman Munson (C2)
+- Tony Lazzeri (IF/BAT)
+- Don Mattingly (1B/BAT)
+- Bernie Williams (OF)
+- Reggie Jackson (OF/BAT)
 
 ### Rotation
 
-- Ford
-- Ruffing
-- Gomez
-- Guidry
-- Pettitte
+- Whitey Ford
+- Red Ruffing
+- Lefty Gomez
+- Ron Guidry
+- Andy Pettitte
 
 ### Bullpen
 
-- Rivera (CL)
-- Gossage (FIRE)
-- Lyle (LH FIRE)
-- Robertson (RH SET)
-- Righetti (LATE/MULTI)
-- Reynolds (LONG/SWING)
+- Mariano Rivera (CL)
+- Goose Gossage (FIRE)
+- Sparky Lyle (LH FIRE)
+- David Robertson (RH SET)
+- Dave Righetti (LATE/MULTI)
+- Mike Stanton (LH SPEC)
+- Allie Reynolds (LONG/SWING)
 
 Recorded on that roster and not yet in a box score:
 
-- Lazzeri (IF/BAT)
-- Mattingly (1B/BAT)
-- R. Jackson (OF/BAT)
-- Rickey Henderson (OF/PR)
-- Pettitte
-- Lyle (LH FIRE)
-- Reynolds (LONG/SWING)
+- Tony Lazzeri (IF/BAT)
+- Don Mattingly (1B/BAT)
+- Reggie Jackson (OF/BAT)
+- Andy Pettitte
+- Sparky Lyle (LH FIRE)
+- Allie Reynolds (LONG/SWING)
 
-### Approved active roster amendment (2026-10-26)
+### Franchise cards (2026-10-27)
 
-Rickey Henderson (`henderi01`) joins the Yankees as sixth bench player (OF/PR). Mike Stanton (`stantmi02`) moves off the active bullpen while remaining in historical R1-01 appearances and any original converted cards. Active roster: 9 lineup, 6 bench, 5 starters, 6 relievers (26).
-
-This amendment applies only after the completed R1-01 Yankees-Marlins series. Previously played results, box scores, manager logs, and FAC/dice records remain untouched. Rickey's Payoff Pitch hitter card awaits an authentic conversion, using only his New York Yankees seasons (1985-1989). The other six bullpen members, including Sparky Lyle, Dave Righetti, and Allie Reynolds, are unchanged.
+The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. Mike Stanton (`stantmi02`) is the left-handed specialist. Rickey Henderson is not on the active roster. Played R1-01 results are unchanged.
 
 ### Players in the results file
 
@@ -1686,55 +1683,52 @@ This roster text is the one previously published in the tournament rules. Positi
 
 ### Lineup
 
-- 1 Castillo 2B
-- 2 Yelich CF
-- 3 Sheffield DH
-- 4 Stanton RF
-- 5 Cabrera 3B
-- 6 Ramirez SS
-- 7 Floyd LF
-- 8 Conine 1B
-- 9 Realmuto C
+- 1 Luis Castillo 2B
+- 2 Christian Yelich CF
+- 3 Gary Sheffield DH
+- 4 Giancarlo Stanton RF
+- 5 Miguel Cabrera 3B
+- 6 Hanley Ramirez SS
+- 7 Cliff Floyd LF
+- 8 Jeff Conine 1B
+- 9 J.T. Realmuto C
 
 ### Bench
 
-- C. Johnson (C2)
-- Lopez (UTIL)
-- Uggla (INF/POWER)
-- Ozuna (OF4)
-- Lee (1B/POWER)
-- Juan Pierre (CF/PR)
+- Charles Johnson (C2)
+- Otto Lopez (UTIL)
+- Dan Uggla (INF/POWER)
+- Marcell Ozuna (OF4)
+- Derrek Lee (1B/POWER)
 
 ### Rotation
 
-- Johnson
-- Alcantara
-- Willis
-- Beckett
-- Fernandez
+- Josh Johnson
+- Sandy Alcantara
+- Dontrelle Willis
+- Josh Beckett
+- Jose Fernandez
 
 ### Bullpen
 
-- Nen (CL)
-- Cishek (SU)
-- Ramos (SU)
-- Scott (LH)
-- Bender (MR)
-- Alfonseca (MR)
+- Robb Nen (CL)
+- Steve Cishek (SU)
+- A.J. Ramos (SU)
+- Tanner Scott (LH)
+- Anthony Bender (MR)
+- Antonio Alfonseca (MR)
+- A.J. Burnett (LR/EMER SP)
 
 Recorded on that roster and not yet in a box score:
 
-- Lopez (UTIL)
-- Ozuna (OF4)
-- Lee (1B/POWER)
-- Juan Pierre (CF/PR)
-- Fernandez
+- Otto Lopez (UTIL)
+- Marcell Ozuna (OF4)
+- Derrek Lee (1B/POWER)
+- Jose Fernandez
 
-### Approved active roster amendment (2026-10-26)
+### Franchise cards (2026-10-27)
 
-Juan Pierre (`pierrju01`) joins the Miami bench at CF/PR6. A.J. Burnett (`burneaj01`) is removed from the active bullpen but remains in all archived game and card records. Active 26: 9 lineup, 6 bench, 5 starting pitchers, 6 relievers.
-
-The amendment applies only after the completed R1-01 Yankees series. The original scores, box scores, FAC/dice rolls, and pitching appearances are unchanged. Pierre's playable Payoff Pitch card remains pending an original conversion using Marlins-only seasons. The earlier owner roster lists a bench player as `Lopez (UTIL)` without a first name; this structured roster provisionally maps that slot to Otto Lopez (`lopezot01`) based on his 2024–2026 Miami seasons and must be owner-verified before a card conversion.
+The active 26 are the approved franchise-card roster: 9 lineup, 5 bench, 5 starters, and 7 relievers. A.J. Burnett (`burneaj01`) is the long/emergency starter. Otto Lopez (`lopezot01`) is the utility bench player. Juan Pierre is not on the active roster. Played R1-01 results are unchanged.
 
 ### Players in the results file
 

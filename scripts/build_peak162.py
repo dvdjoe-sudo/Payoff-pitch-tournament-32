@@ -58,6 +58,8 @@ FRANCHISE = {
     "PIT": {"PT1", "PIT"},
     "TOR": {"TOR"},
     "KC": {"KCA"},
+    "NYY": {"NYA"},
+    "MIA": {"FLO", "MIA"},
     "CHC": {"CHN"},
     "CLE": {"CLE"},
     "CIN": {"CN2", "CIN"},
@@ -69,7 +71,9 @@ YEAR_BOUNDS = {
     "MON": (1969, 2004),
     "OAK": (1968, 2025),
 }
-FROZEN = {"WSH", "BOS", "TB", "ARI", "NYY", "MIA", "SF"}
+# The Yankees and Marlins have already played. The owner confirmed the
+# full names after those games, and the card ids have to match the box scores.
+FROZEN = {"WSH", "BOS", "TB", "ARI", "SF"}
 # Alou had only 14 games with Montreal in 1990; his owner-approved
 # representative five-season window is 1992-1996, without that cameo.
 HITTER_WINDOW_EXCLUDE = {("MON", "aloumo01"): {1990}}
@@ -84,6 +88,26 @@ MANUAL = {
     # The card does not say Jr. walshed02 is the son, and both pitched
     # for the White Sox. The rotation ace is Edward Augustine Walsh.
     ("CWS", "ed walsh"): "walshed01",
+    # The box scores already use these ids. The other man with the name
+    # is a different player, or the Lahman spelling does not match the line.
+    ("NYY", "goose gossage"): "gossari01",
+    ("NYY", "mike stanton"): "stantmi02",
+    ("NYY", "david robertson"): "roberda08",
+    ("NYY", "bernie williams"): "willibe02",
+    ("NYY", "reggie jackson"): "jacksre01",
+    ("NYY", "allie reynolds"): "reynoal01",
+    ("NYY", "alex rodriguez"): "rodrial01",
+    ("MIA", "giancarlo stanton"): "stantmi03",
+    ("MIA", "josh johnson"): "johnsjo09",
+    ("MIA", "charles johnson"): "johnsch04",
+    ("MIA", "luis castillo"): "castilu01",
+    ("MIA", "otto lopez"): "lopezot01",
+    ("MIA", "anthony bender"): "bendean01",
+    ("MIA", "tanner scott"): "scottta01",
+    ("MIA", "jose fernandez"): "fernajo02",
+    ("MIA", "a j ramos"): "ramosaj01",
+    ("MIA", "a j burnett"): "burneaj01",
+    ("MIA", "hanley ramirez"): "ramirha01",
 }
 
 POSITION = {
