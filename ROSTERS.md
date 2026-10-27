@@ -101,9 +101,9 @@ Recorded on that roster and not yet in a box score:
 - Tony Lazzeri (IF/BAT)
 - Don Mattingly (1B/BAT)
 - Reggie Jackson (OF/BAT)
+- Rickey Henderson (OF6; Yankees 1985–1989)
 - Andy Pettitte
 - Sparky Lyle (LH FIRE)
-- Rickey Henderson (OF6; Yankees 1985–1989)
 
 ### Franchise cards (2026-10-27)
 
@@ -1870,8 +1870,8 @@ Recorded on that roster and not yet in a box score:
 - Otto Lopez (UTIL)
 - Marcell Ozuna (OF4)
 - Derrek Lee (1B/POWER)
-- Jose Fernandez
 - Mike Lowell (IF2/3B; Marlins 1999–2005)
+- Jose Fernandez
 
 ### Franchise cards (2026-10-27)
 
