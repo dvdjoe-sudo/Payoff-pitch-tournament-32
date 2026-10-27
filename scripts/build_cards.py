@@ -432,11 +432,17 @@ def build():
             if site_key in site_ids:
                 published = sorted(site_ids[site_key])[0]
                 if player_id and published != player_id:
-                    reconciliations.append(
-                        "%s %s: input_stats/archive id %s, site publishes "
-                        "%s; the card data keys on the published id" % (
-                            code, name, player_id, published))
-                    player_id = published
+                    if player_id == "mcclash01" and published == "mcclasha01":
+                        reconciliations.append(
+                            "%s %s: results still use %s; the card keeps "
+                            "the Lahman id %s" % (
+                                code, name, published, player_id))
+                    else:
+                        reconciliations.append(
+                            "%s %s: input_stats/archive id %s, site publishes "
+                            "%s; the card data keys on the published id" % (
+                                code, name, player_id, published))
+                        player_id = published
             if not player_id:
                 raise SystemExit("no player id found for %s %s" % (code, name))
             if site_key in master_ids:

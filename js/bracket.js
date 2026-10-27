@@ -1533,8 +1533,22 @@
 
   var GROUP_TITLES = { lineup: "Lineup", bench: "Bench", rotation: "Rotation", bullpen: "Bullpen" };
 
+  // Shane McClanahan's card uses his Lahman id. Played games still
+  // store mcclasha01, and that file is not rewritten.
+  var PLAYER_ID_ALIAS = { mcclasha01: "mcclash01", mcclash01: "mcclasha01" };
+
+  function aliasId(id) {
+    return PLAYER_ID_ALIAS[id] || "";
+  }
+
   function cardFor(code, id) {
-    return (state.cards && state.cards[code + "|" + id]) || null;
+    var cards = state.cards || {};
+    return cards[code + "|" + id] || cards[code + "|" + aliasId(id)] || null;
+  }
+
+  function playerRecord(code, id) {
+    var players = state.players || {};
+    return players[code + "|" + id] || players[code + "|" + aliasId(id)] || null;
   }
 
   function rate3(value) {
@@ -2245,7 +2259,7 @@
       return;
     }
     markNav("standings");
-    var player = state.players[code + "|" + id];
+    var player = playerRecord(code, id);
     var card = cardFor(code, id);
     clear(view);
     if (!player && card) {
@@ -2287,7 +2301,7 @@
       el("p", { class: "meta" }, linkTeam(code), " · " + player.id)
     ));
     page.appendChild(hero);
-    var bio = state.bios && state.bios[code + "|" + id];
+    var bio = state.bios && (state.bios[code + "|" + id] || state.bios[code + "|" + aliasId(id)]);
     if (bio && bio.bio) {
       page.appendChild(el("h3", { text: "Bio" }));
       page.appendChild(el("p", { text: bio.bio }));
@@ -2606,6 +2620,8 @@
     });
     Object.keys(state.cards || {}).forEach(function (key) {
       if (state.players[key]) return;
+      var parts = key.split("|");
+      if (aliasId(parts[1]) && state.players[parts[0] + "|" + aliasId(parts[1])]) return;
       var card = state.cards[key];
       if (card.name.toLowerCase().indexOf(needle) !== -1 || card.team.toLowerCase().indexOf(needle) !== -1 || card.id.toLowerCase().indexOf(needle) !== -1) {
         hits.push({ name: card.name, team: card.team, id: card.id });
