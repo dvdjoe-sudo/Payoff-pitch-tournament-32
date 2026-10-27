@@ -80,6 +80,7 @@ writes byte-identical files.
 import csv
 import json
 import fix_jump_from_attempts as jump_fix
+import fix_steal_letter as steal_fix
 import math
 import os
 import sys
@@ -560,6 +561,7 @@ def build():
                 }
                 # Jump from real attempt rate, calibrated to the 1986 cards.
                 jump_fix.apply(entry)
+                steal_fix.apply(entry)
 
             if key in v2_by_name:
                 v2 = v2_by_name[key]

@@ -1,0 +1,1808 @@
+{
+ "fit": {
+  "matched": 104,
+  "exact": 0.212,
+  "within_one": 0.654,
+  "shares": {
+   "4": 2,
+   "5": 18,
+   "6": 26,
+   "7": 30,
+   "8": 20,
+   "9": 8
+  }
+ },
+ "cuts_rel": [
+  2.288,
+  1.391,
+  1.064,
+  0.697,
+  0.281
+ ],
+ "arms": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "cards": [
+  {
+   "key": "ARI|peralda01",
+   "name": "David Peralta",
+   "window": [
+    2014,
+    2015,
+    2018,
+    2019,
+    2022
+   ],
+   "years_used": [
+    2014,
+    2015,
+    2018,
+    2019,
+    2022
+   ],
+   "of_g": 562,
+   "of_a": 15,
+   "rel_assist_rate": 0.576,
+   "old_arm": 6,
+   "new_arm": 8
+  },
+  {
+   "key": "ARI|uptonju01",
+   "name": "Justin Upton",
+   "window": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "years_used": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "of_g": 673,
+   "of_a": 22,
+   "rel_assist_rate": 0.665,
+   "old_arm": 6,
+   "new_arm": 8
+  },
+  {
+   "key": "ATL|murphda05",
+   "name": "Dale Murphy",
+   "window": [
+    1982,
+    1983,
+    1984,
+    1985,
+    1987
+   ],
+   "years_used": [
+    1982,
+    1983,
+    1984,
+    1985,
+    1987
+   ],
+   "of_g": 802,
+   "of_a": 48,
+   "rel_assist_rate": 1.006,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "BAL|anderbr01",
+   "name": "Brady Anderson",
+   "window": [
+    1992,
+    1993,
+    1996,
+    1997,
+    1999
+   ],
+   "years_used": [
+    1992,
+    1993,
+    1996,
+    1997,
+    1999
+   ],
+   "of_g": 701,
+   "of_a": 32,
+   "rel_assist_rate": 0.818,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "BAL|blairpa01",
+   "name": "Paul Blair",
+   "window": [
+    1966,
+    1967,
+    1969,
+    1970,
+    1974
+   ],
+   "years_used": [
+    1966,
+    1967,
+    1969,
+    1970,
+    1974
+   ],
+   "of_g": 702,
+   "of_a": 48,
+   "rel_assist_rate": 1.138,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "BAL|robinfr02",
+   "name": "Frank Robinson",
+   "window": [
+    1966,
+    1967,
+    1968,
+    1969,
+    1971
+   ],
+   "years_used": [
+    1966,
+    1967,
+    1968,
+    1969,
+    1971
+   ],
+   "of_g": 620,
+   "of_a": 28,
+   "rel_assist_rate": 0.761,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "BOS|ruthba01",
+   "name": "Babe Ruth",
+   "window": [
+    1918,
+    1919
+   ],
+   "years_used": [
+    1918,
+    1919
+   ],
+   "of_g": 170,
+   "of_a": 22,
+   "rel_assist_rate": 0.971,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "BOS|willite01",
+   "name": "Ted Williams",
+   "window": [
+    1941,
+    1942,
+    1946,
+    1955,
+    1957
+   ],
+   "years_used": [
+    1941,
+    1942,
+    1946,
+    1955,
+    1957
+   ],
+   "of_g": 651,
+   "of_a": 40,
+   "rel_assist_rate": 0.822,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "CHC|sosasa01",
+   "name": "Sammy Sosa",
+   "window": [
+    1998,
+    1999,
+    2000,
+    2001,
+    2002
+   ],
+   "years_used": [
+    1998,
+    1999,
+    2000,
+    2001,
+    2002
+   ],
+   "of_g": 787,
+   "of_a": 40,
+   "rel_assist_rate": 0.923,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "CHC|wilsoha01",
+   "name": "Hack Wilson",
+   "window": [
+    1926,
+    1927,
+    1928,
+    1929,
+    1930
+   ],
+   "years_used": [
+    1926,
+    1927,
+    1928,
+    1929,
+    1930
+   ],
+   "of_g": 734,
+   "of_a": 58,
+   "rel_assist_rate": 0.811,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "CIN|roushed01",
+   "name": "Edd Roush",
+   "window": [
+    1917,
+    1918,
+    1919,
+    1920,
+    1923
+   ],
+   "years_used": [
+    1917,
+    1918,
+    1919,
+    1920,
+    1923
+   ],
+   "of_g": 656,
+   "of_a": 82,
+   "rel_assist_rate": 0.971,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "CLE|belleal01",
+   "name": "Albert Belle",
+   "window": [
+    1991,
+    1993,
+    1994,
+    1995,
+    1996
+   ],
+   "years_used": [
+    1991,
+    1993,
+    1994,
+    1995,
+    1996
+   ],
+   "of_g": 637,
+   "of_a": 50,
+   "rel_assist_rate": 1.399,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "CLE|jacksjo01",
+   "name": "Shoeless Joe Jackson",
+   "window": [
+    1911,
+    1912,
+    1913,
+    1914,
+    1915
+   ],
+   "years_used": [
+    1911,
+    1912,
+    1913,
+    1914,
+    1915
+   ],
+   "of_g": 659,
+   "of_a": 115,
+   "rel_assist_rate": 1.231,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "CLE|loftoke01",
+   "name": "Kenny Lofton",
+   "window": [
+    1993,
+    1994,
+    1995,
+    1996,
+    1999
+   ],
+   "years_used": [
+    1993,
+    1994,
+    1995,
+    1996,
+    1999
+   ],
+   "of_g": 643,
+   "of_a": 59,
+   "rel_assist_rate": 1.626,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "COL|blackch02",
+   "name": "Charlie Blackmon",
+   "window": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "years_used": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "of_g": 737,
+   "of_a": 25,
+   "rel_assist_rate": 0.703,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "CWS|jonesfi01",
+   "name": "Fielder Jones",
+   "window": [
+    1901,
+    1902,
+    1903,
+    1905,
+    1908
+   ],
+   "years_used": [
+    1901,
+    1902,
+    1903,
+    1905,
+    1908
+   ],
+   "of_g": 706,
+   "of_a": 94,
+   "rel_assist_rate": 1.076,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "CWS|minosmi01",
+   "name": "Minnie Mi\u00f1oso",
+   "window": [
+    1951,
+    1953,
+    1954,
+    1956,
+    1957
+   ],
+   "years_used": [
+    1951,
+    1953,
+    1954,
+    1956,
+    1957
+   ],
+   "of_g": 675,
+   "of_a": 52,
+   "rel_assist_rate": 1.074,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "CWS|ordonma01",
+   "name": "Magglio Ord\u00f3\u00f1ez",
+   "window": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "years_used": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "of_g": 767,
+   "of_a": 50,
+   "rel_assist_rate": 1.207,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "DET|cobbty01",
+   "name": "Ty Cobb",
+   "window": [
+    1909,
+    1910,
+    1911,
+    1914,
+    1917
+   ],
+   "years_used": [
+    1909,
+    1910,
+    1911,
+    1914,
+    1917
+   ],
+   "of_g": 687,
+   "of_a": 101,
+   "rel_assist_rate": 1.064,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "DET|heilmha01",
+   "name": "Harry Heilmann",
+   "window": [
+    1921,
+    1922,
+    1923,
+    1925,
+    1927
+   ],
+   "years_used": [
+    1921,
+    1922,
+    1923,
+    1925,
+    1927
+   ],
+   "of_g": 675,
+   "of_a": 49,
+   "rel_assist_rate": 0.675,
+   "old_arm": 6,
+   "new_arm": 8
+  },
+  {
+   "key": "DET|veachbo01",
+   "name": "Bobby Veach",
+   "window": [
+    1915,
+    1916,
+    1917,
+    1919,
+    1921
+   ],
+   "years_used": [
+    1915,
+    1916,
+    1917,
+    1919,
+    1921
+   ],
+   "of_g": 743,
+   "of_a": 85,
+   "rel_assist_rate": 0.893,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "HOU|aloumo01",
+   "name": "Mois\u00e9s Alou",
+   "window": [
+    1998,
+    2000,
+    2001
+   ],
+   "years_used": [
+    1998,
+    2000,
+    2001
+   ],
+   "of_g": 405,
+   "of_a": 26,
+   "rel_assist_rate": 1.156,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "HOU|berkmla01",
+   "name": "Lance Berkman",
+   "window": [
+    2001,
+    2002,
+    2004,
+    2006,
+    2008
+   ],
+   "years_used": [
+    2001,
+    2002,
+    2004,
+    2006
+   ],
+   "of_g": 515,
+   "of_a": 26,
+   "rel_assist_rate": 0.955,
+   "old_arm": 6,
+   "new_arm": 7,
+   "flag": "window seasons missing from Lahman: [2008]"
+  },
+  {
+   "key": "HOU|cedence01",
+   "name": "C\u00e9sar Cede\u00f1o",
+   "window": [
+    1972,
+    1973,
+    1975,
+    1976,
+    1980
+   ],
+   "years_used": [
+    1972,
+    1973,
+    1975,
+    1976,
+    1980
+   ],
+   "of_g": 686,
+   "of_a": 47,
+   "rel_assist_rate": 1.039,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "HOU|cruzjo01",
+   "name": "Jos\u00e9 Cruz",
+   "window": [
+    1976,
+    1977,
+    1978,
+    1983,
+    1984
+   ],
+   "years_used": [
+    1976,
+    1977,
+    1978,
+    1983,
+    1984
+   ],
+   "of_g": 752,
+   "of_a": 45,
+   "rel_assist_rate": 0.951,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "KC|gordoal01",
+   "name": "Alex Gordon",
+   "window": [
+    2008,
+    2011,
+    2012,
+    2014,
+    2015
+   ],
+   "years_used": [
+    2011,
+    2012,
+    2014,
+    2015
+   ],
+   "of_g": 565,
+   "of_a": 49,
+   "rel_assist_rate": 1.78,
+   "old_arm": 6,
+   "new_arm": 5,
+   "flag": "window seasons missing from Lahman: [2008]"
+  },
+  {
+   "key": "KC|otisam01",
+   "name": "Amos Otis",
+   "window": [
+    1971,
+    1972,
+    1973,
+    1976,
+    1978
+   ],
+   "years_used": [
+    1971,
+    1972,
+    1973,
+    1976,
+    1978
+   ],
+   "of_g": 704,
+   "of_a": 40,
+   "rel_assist_rate": 0.895,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "KC|wilsowi02",
+   "name": "Willie Wilson",
+   "window": [
+    1979,
+    1980,
+    1982,
+    1984,
+    1990
+   ],
+   "years_used": [
+    1979,
+    1980,
+    1982,
+    1984,
+    1990
+   ],
+   "of_g": 680,
+   "of_a": 33,
+   "rel_assist_rate": 0.768,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "LAA|anderga01",
+   "name": "Garret Anderson",
+   "window": [
+    1995,
+    2001,
+    2002,
+    2003,
+    2007
+   ],
+   "years_used": [
+    1995,
+    2001,
+    2002,
+    2003,
+    2007
+   ],
+   "of_g": 625,
+   "of_a": 43,
+   "rel_assist_rate": 1.293,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "LAA|guerrvl01",
+   "name": "Vladimir Guerrero",
+   "window": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "years_used": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "of_g": 596,
+   "of_a": 41,
+   "rel_assist_rate": 1.37,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "LAA|troutmi01",
+   "name": "Mike Trout",
+   "window": [
+    2013,
+    2017,
+    2018,
+    2019,
+    2022
+   ],
+   "years_used": [
+    2013,
+    2017,
+    2018,
+    2019,
+    2022
+   ],
+   "of_g": 614,
+   "of_a": 19,
+   "rel_assist_rate": 0.675,
+   "old_arm": 6,
+   "new_arm": 8
+  },
+  {
+   "key": "LAD|wheatza01",
+   "name": "Zack Wheat",
+   "window": [
+    1914,
+    1916,
+    1920,
+    1923,
+    1924
+   ],
+   "years_used": [
+    1914,
+    1916,
+    1920,
+    1923,
+    1924
+   ],
+   "of_g": 667,
+   "of_a": 62,
+   "rel_assist_rate": 0.753,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "MIA|floydcl01",
+   "name": "Cliff Floyd",
+   "window": [
+    1998,
+    2000,
+    2001,
+    2002
+   ],
+   "years_used": [
+    1998,
+    2000,
+    2001,
+    2002
+   ],
+   "of_g": 515,
+   "of_a": 33,
+   "rel_assist_rate": 1.165,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "MIA|stantmi03",
+   "name": "Giancarlo Stanton",
+   "window": [
+    2011,
+    2012,
+    2014,
+    2015,
+    2017
+   ],
+   "years_used": [
+    2011,
+    2012,
+    2014,
+    2015,
+    2017
+   ],
+   "of_g": 622,
+   "of_a": 38,
+   "rel_assist_rate": 1.26,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "MIA|yelicch01",
+   "name": "Christian Yelich",
+   "window": [
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "years_used": [
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "of_g": 572,
+   "of_a": 19,
+   "rel_assist_rate": 0.669,
+   "old_arm": 6,
+   "new_arm": 8
+  },
+  {
+   "key": "MIL|gomezca01",
+   "name": "Carlos G\u00f3mez",
+   "window": [
+    2010,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "years_used": [
+    2010,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "of_g": 610,
+   "of_a": 35,
+   "rel_assist_rate": 1.178,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "MIL|jenkige01",
+   "name": "Geoff Jenkins",
+   "window": [
+    1999,
+    2000,
+    2001,
+    2003,
+    2005
+   ],
+   "years_used": [
+    1999,
+    2000,
+    2001,
+    2003,
+    2005
+   ],
+   "of_g": 630,
+   "of_a": 55,
+   "rel_assist_rate": 1.645,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "MIL|oglivbe01",
+   "name": "Ben Oglivie",
+   "window": [
+    1978,
+    1979,
+    1980,
+    1983,
+    1985
+   ],
+   "years_used": [
+    1978,
+    1979,
+    1980,
+    1983,
+    1985
+   ],
+   "of_g": 565,
+   "of_a": 42,
+   "rel_assist_rate": 1.155,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "MIL|yelicch01",
+   "name": "Christian Yelich",
+   "window": [
+    2018,
+    2019,
+    2023,
+    2024,
+    2025
+   ],
+   "years_used": [
+    2018,
+    2019,
+    2023,
+    2024,
+    2025
+   ],
+   "of_g": 458,
+   "of_a": 15,
+   "rel_assist_rate": 0.76,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "MIN|allisbo01",
+   "name": "Bob Allison",
+   "window": [
+    1962,
+    1963,
+    1964,
+    1967,
+    1968
+   ],
+   "years_used": [
+    1962,
+    1963,
+    1964,
+    1967,
+    1968
+   ],
+   "of_g": 617,
+   "of_a": 34,
+   "rel_assist_rate": 0.936,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "MIN|gosligo01",
+   "name": "Goose Goslin",
+   "window": [
+    1924,
+    1925,
+    1926,
+    1927,
+    1928
+   ],
+   "years_used": [
+    1924,
+    1925,
+    1926,
+    1927,
+    1928
+   ],
+   "of_g": 724,
+   "of_a": 83,
+   "rel_assist_rate": 1.17,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "MIN|olivato01",
+   "name": "Tony Oliva",
+   "window": [
+    1964,
+    1965,
+    1966,
+    1968,
+    1971
+   ],
+   "years_used": [
+    1964,
+    1965,
+    1966,
+    1968,
+    1971
+   ],
+   "of_g": 712,
+   "of_a": 37,
+   "rel_assist_rate": 0.907,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "MIN|puckeki01",
+   "name": "Kirby Puckett",
+   "window": [
+    1986,
+    1987,
+    1988,
+    1989,
+    1992
+   ],
+   "years_used": [
+    1986,
+    1987,
+    1988,
+    1989,
+    1992
+   ],
+   "of_g": 771,
+   "of_a": 50,
+   "rel_assist_rate": 1.199,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "NYM|beltrca01",
+   "name": "Carlos Beltran",
+   "window": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2011
+   ],
+   "years_used": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2011
+   ],
+   "of_g": 646,
+   "of_a": 40,
+   "rel_assist_rate": 1.235,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "NYM|jonescl01",
+   "name": "Cleon Jones",
+   "window": [
+    1968,
+    1969,
+    1970,
+    1971,
+    1974
+   ],
+   "years_used": [
+    1968,
+    1969,
+    1970,
+    1971,
+    1974
+   ],
+   "of_g": 643,
+   "of_a": 33,
+   "rel_assist_rate": 0.848,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "NYM|strawda01",
+   "name": "Darryl Strawberry",
+   "window": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1990
+   ],
+   "years_used": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1990
+   ],
+   "of_g": 691,
+   "of_a": 35,
+   "rel_assist_rate": 0.916,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "NYY|dimagjo01",
+   "name": "Joe DiMaggio",
+   "window": [
+    1937,
+    1939,
+    1940,
+    1941,
+    1949
+   ],
+   "years_used": [
+    1937,
+    1939,
+    1940,
+    1941,
+    1949
+   ],
+   "of_g": 612,
+   "of_a": 56,
+   "rel_assist_rate": 1.16,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "NYY|henderi01",
+   "name": "Rickey Henderson",
+   "window": [
+    1985,
+    1986,
+    1987,
+    1988
+   ],
+   "years_used": [
+    1985,
+    1986,
+    1987,
+    1988
+   ],
+   "of_g": 492,
+   "of_a": 21,
+   "rel_assist_rate": 0.771,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "NYY|judgeaa01",
+   "name": "Aaron Judge",
+   "window": [
+    2017,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "years_used": [
+    2017,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "of_g": 555,
+   "of_a": 18,
+   "rel_assist_rate": 0.79,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "NYY|mantlmi01",
+   "name": "Mickey Mantle",
+   "window": [
+    1956,
+    1957,
+    1958,
+    1961,
+    1962
+   ],
+   "years_used": [
+    1956,
+    1957,
+    1958,
+    1961,
+    1962
+   ],
+   "of_g": 700,
+   "of_a": 31,
+   "rel_assist_rate": 0.687,
+   "old_arm": 6,
+   "new_arm": 8
+  },
+  {
+   "key": "OAK|henderi01",
+   "name": "Rickey Henderson",
+   "window": [
+    1981,
+    1989,
+    1990,
+    1992,
+    1993
+   ],
+   "years_used": [
+    1981,
+    1989,
+    1990,
+    1992,
+    1993
+   ],
+   "of_g": 598,
+   "of_a": 33,
+   "rel_assist_rate": 0.956,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "OAK|jacksre01",
+   "name": "Reggie Jackson",
+   "window": [
+    1969,
+    1971,
+    1972,
+    1973,
+    1974
+   ],
+   "years_used": [
+    1969,
+    1971,
+    1972,
+    1973,
+    1974
+   ],
+   "of_g": 702,
+   "of_a": 46,
+   "rel_assist_rate": 1.051,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "OAK|murphdw01",
+   "name": "Dwayne Murphy",
+   "window": [
+    1979,
+    1980,
+    1981,
+    1982,
+    1984
+   ],
+   "years_used": [
+    1979,
+    1980,
+    1981,
+    1982,
+    1984
+   ],
+   "of_g": 682,
+   "of_a": 57,
+   "rel_assist_rate": 1.299,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "PHA|johnsbo01",
+   "name": "Bob Johnson",
+   "window": [
+    1934,
+    1937,
+    1938,
+    1939,
+    1942
+   ],
+   "years_used": [
+    1934,
+    1937,
+    1938,
+    1939,
+    1942
+   ],
+   "of_g": 721,
+   "of_a": 85,
+   "rel_assist_rate": 1.501,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "PHA|moseswa01",
+   "name": "Wally Moses",
+   "window": [
+    1935,
+    1936,
+    1937,
+    1940,
+    1941
+   ],
+   "years_used": [
+    1935,
+    1936,
+    1937,
+    1940,
+    1941
+   ],
+   "of_g": 620,
+   "of_a": 57,
+   "rel_assist_rate": 1.118,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "PHA|simmoal01",
+   "name": "Al Simmons",
+   "window": [
+    1925,
+    1927,
+    1929,
+    1930,
+    1931
+   ],
+   "years_used": [
+    1925,
+    1927,
+    1929,
+    1930,
+    1931
+   ],
+   "of_g": 664,
+   "of_a": 57,
+   "rel_assist_rate": 0.967,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "PHA|strunam01",
+   "name": "Amos Strunk",
+   "window": [
+    1912,
+    1913,
+    1915,
+    1916,
+    1917
+   ],
+   "years_used": [
+    1912,
+    1913,
+    1915,
+    1916,
+    1917
+   ],
+   "of_g": 597,
+   "of_a": 82,
+   "rel_assist_rate": 1.035,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "PHI|abreubo01",
+   "name": "Bobby Abreu",
+   "window": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2004
+   ],
+   "years_used": [
+    1999,
+    2000,
+    2001,
+    2002,
+    2004
+   ],
+   "of_g": 772,
+   "of_a": 55,
+   "rel_assist_rate": 1.323,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "PHI|ashburi01",
+   "name": "Richie Ashburn",
+   "window": [
+    1948,
+    1951,
+    1954,
+    1955,
+    1958
+   ],
+   "years_used": [
+    1948,
+    1951,
+    1954,
+    1955,
+    1958
+   ],
+   "of_g": 715,
+   "of_a": 59,
+   "rel_assist_rate": 1.125,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "PHI|delahed01",
+   "name": "Ed Delahanty",
+   "window": [
+    1893,
+    1895,
+    1896,
+    1899,
+    1901
+   ],
+   "years_used": [
+    1893,
+    1895,
+    1896,
+    1899,
+    1901
+   ],
+   "of_g": 546,
+   "of_a": 95,
+   "rel_assist_rate": 1.181,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "PHI|hamilbi01",
+   "name": "Billy Hamilton",
+   "window": [
+    1891,
+    1892,
+    1893,
+    1894,
+    1895
+   ],
+   "years_used": [
+    1891,
+    1892,
+    1893,
+    1894,
+    1895
+   ],
+   "of_g": 609,
+   "of_a": 77,
+   "rel_assist_rate": 0.793,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "PHI|kleinch01",
+   "name": "Chuck Klein",
+   "window": [
+    1929,
+    1930,
+    1931,
+    1932,
+    1933
+   ],
+   "years_used": [
+    1929,
+    1930,
+    1931,
+    1932,
+    1933
+   ],
+   "of_g": 759,
+   "of_a": 125,
+   "rel_assist_rate": 1.884,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "PIT|bondsba01",
+   "name": "Barry Bonds",
+   "window": [
+    1988,
+    1989,
+    1990,
+    1991,
+    1992
+   ],
+   "years_used": [
+    1988,
+    1989,
+    1990,
+    1991,
+    1992
+   ],
+   "of_g": 731,
+   "of_a": 50,
+   "rel_assist_rate": 1.275,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "PIT|careyma01",
+   "name": "Max Carey",
+   "window": [
+    1916,
+    1917,
+    1922,
+    1923,
+    1925
+   ],
+   "years_used": [
+    1916,
+    1917,
+    1922,
+    1923,
+    1925
+   ],
+   "of_g": 745,
+   "of_a": 130,
+   "rel_assist_rate": 1.532,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "PIT|kinerra01",
+   "name": "Ralph Kiner",
+   "window": [
+    1947,
+    1948,
+    1949,
+    1950,
+    1951
+   ],
+   "years_used": [
+    1947,
+    1948,
+    1949,
+    1950,
+    1951
+   ],
+   "of_g": 702,
+   "of_a": 46,
+   "rel_assist_rate": 0.849,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "PIT|parkeda01",
+   "name": "Dave Parker",
+   "window": [
+    1975,
+    1976,
+    1977,
+    1978,
+    1979
+   ],
+   "years_used": [
+    1975,
+    1976,
+    1977,
+    1978,
+    1979
+   ],
+   "of_g": 738,
+   "of_a": 72,
+   "rel_assist_rate": 1.489,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "PIT|wanerpa01",
+   "name": "Paul Waner",
+   "window": [
+    1926,
+    1927,
+    1928,
+    1934,
+    1936
+   ],
+   "years_used": [
+    1926,
+    1927,
+    1928,
+    1934,
+    1936
+   ],
+   "of_g": 703,
+   "of_a": 85,
+   "rel_assist_rate": 1.294,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "SEA|griffke02",
+   "name": "Ken Griffey Jr.",
+   "window": [
+    1991,
+    1993,
+    1994,
+    1996,
+    1997
+   ],
+   "years_used": [
+    1991,
+    1993,
+    1994,
+    1996,
+    1997
+   ],
+   "of_g": 684,
+   "of_a": 54,
+   "rel_assist_rate": 1.416,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "SEA|ibanera01",
+   "name": "Ra\u00fal Iba\u00f1ez",
+   "window": [
+    2004,
+    2006,
+    2007,
+    2008,
+    2013
+   ],
+   "years_used": [
+    2004,
+    2006,
+    2007,
+    2008,
+    2013
+   ],
+   "of_g": 653,
+   "of_a": 46,
+   "rel_assist_rate": 1.404,
+   "old_arm": 6,
+   "new_arm": 5
+  },
+  {
+   "key": "SEA|suzukic01",
+   "name": "Ichiro Suzuki",
+   "window": [
+    2001,
+    2002,
+    2004,
+    2007,
+    2009
+   ],
+   "years_used": [
+    2001,
+    2002,
+    2004,
+    2007,
+    2009
+   ],
+   "of_g": 762,
+   "of_a": 41,
+   "rel_assist_rate": 1.036,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "SF|irvinmo01",
+   "name": "Monte Irvin",
+   "window": [
+    1950,
+    1951,
+    1953,
+    1954
+   ],
+   "years_used": [
+    1950,
+    1951,
+    1953,
+    1954
+   ],
+   "of_g": 402,
+   "of_a": 29,
+   "rel_assist_rate": 0.935,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "SF|ottme01",
+   "name": "Mel Ott",
+   "window": [
+    1932,
+    1936,
+    1938,
+    1939,
+    1944
+   ],
+   "years_used": [
+    1932,
+    1936,
+    1938,
+    1939,
+    1944
+   ],
+   "of_g": 538,
+   "of_a": 46,
+   "rel_assist_rate": 1.042,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "STL|medwijo01",
+   "name": "Joe Medwick",
+   "window": [
+    1935,
+    1936,
+    1937,
+    1938,
+    1939
+   ],
+   "years_used": [
+    1935,
+    1936,
+    1937,
+    1938,
+    1939
+   ],
+   "of_g": 758,
+   "of_a": 55,
+   "rel_assist_rate": 0.881,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "STL|musiast01",
+   "name": "Stan Musial",
+   "window": [
+    1943,
+    1946,
+    1948,
+    1949,
+    1951
+   ],
+   "years_used": [
+    1943,
+    1946,
+    1948,
+    1949,
+    1951
+   ],
+   "of_g": 599,
+   "of_a": 52,
+   "rel_assist_rate": 1.083,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "STL|slaugen01",
+   "name": "Enos Slaughter",
+   "window": [
+    1940,
+    1941,
+    1942,
+    1948,
+    1949
+   ],
+   "years_used": [
+    1940,
+    1941,
+    1942,
+    1948,
+    1949
+   ],
+   "of_g": 687,
+   "of_a": 47,
+   "rel_assist_rate": 0.889,
+   "old_arm": 6,
+   "new_arm": 7
+  },
+  {
+   "key": "TB|zobribe01",
+   "name": "Ben Zobrist",
+   "window": [
+    2009,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "years_used": [
+    2009,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "of_g": 275,
+   "of_a": 18,
+   "rel_assist_rate": 1.349,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "TEX|sierrru01",
+   "name": "Rub\u00e9n Sierra",
+   "window": [
+    1989,
+    1990,
+    1991,
+    1992,
+    2001
+   ],
+   "years_used": [
+    1989,
+    1990,
+    1991,
+    1992,
+    2001
+   ],
+   "of_g": 654,
+   "of_a": 41,
+   "rel_assist_rate": 1.146,
+   "old_arm": 6,
+   "new_arm": 6
+  },
+  {
+   "key": "TOR|cartejo01",
+   "name": "Joe Carter",
+   "window": [
+    1991,
+    1992,
+    1993,
+    1994,
+    1996
+   ],
+   "years_used": [
+    1991,
+    1992,
+    1993,
+    1994,
+    1996
+   ],
+   "of_g": 656,
+   "of_a": 41,
+   "rel_assist_rate": 1.112,
+   "old_arm": 6,
+   "new_arm": 6
+  }
+ ]
+}

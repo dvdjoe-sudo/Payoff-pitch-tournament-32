@@ -145,7 +145,7 @@ BB. Forced runners advance (page 5).
 Jesse Barfield to first.
 Auto steal uses 2d6=3 on the card that resolved the play (page 13).
 Auto-steal check 2d6=3 against jump 3.
-FAC steal. F3 is POOR. Rolls FAC p48 r1 c3 steal 2d6=4 1d6=6 pct=06. (pages 13-14)
+FAC steal. C3 is NORMAL. Rolls FAC p48 r1 c3 steal 2d6=4 1d6=6 pct=06. (pages 13-14)
 Jesse Barfield safe.
 SB+E2? uses 1d6=6 on this card against the catcher's error 3 (page 18).
 The throw sails. Runners advance 1.
@@ -198,7 +198,7 @@ Range hit 1B from the FAC. Runners advance 1 (the printed stars).
 Roberto Alomar to first.
 Auto steal uses 2d6=4 on the card that resolved the play (page 13).
 Auto-steal check 2d6=4 against jump 4.
-FAC steal. C3 is NORMAL. Rolls FAC p69 r1 c2 steal 2d6=8 1d6=4 pct=94. (pages 13-14)
+FAC steal. A3 is EXCELLENT. Rolls FAC p69 r1 c2 steal 2d6=8 1d6=4 pct=94. (pages 13-14)
 Roberto Alomar steals.
 Tony Fernandez (SS) vs Pedro Martinez. 1 out, Roberto Alomar on 2nd.
 FAC pitch. 2d6=6 -> DEFENSE. Rolls FAC p50 r1 c3 pitch 2d6=6 1d6=2 pct=58.
