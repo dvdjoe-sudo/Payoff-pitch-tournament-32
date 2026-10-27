@@ -114,9 +114,9 @@ Lasting sentences that are coded only in part: the extra out on a dropped third 
 
 `engines/sim/samples/tor-at-bos-seed1.txt`
 
-Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Toronto 7, Boston 1, nine innings. Pedro Martinez 6 innings, 5 runs, 24 batters; Babe Ruth pitched the last three (2 runs). Dave Stieb pitched all nine, 1 run, 33 batters.
+Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Boston 5, Toronto 1, nine innings. Pedro Martinez pitched all nine; Dave Stieb seven innings, Tom Henke one.
 
-The hitter IBB/capacity repair and default supplemental SO (2026-10-27) left this seed's line score unchanged. Before the platoon re-split and per-hand pitcher calibration (2026-10-27), it was Toronto 7, Boston 3. The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
+Before intentional walks were counted as walks on hitter cards (2026-10-27), it was Toronto 7, Boston 1 (the capacity repair and default supplemental SO had left that unchanged). Before the platoon re-split and per-hand pitcher calibration (2026-10-27), it was Toronto 7, Boston 3. The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
 
 `WP?` on this seed: thirteen marked cards drawn, none fired. Five came up with the bases empty. Eight missed the pitcher’s rating (Pedro Martinez and Dave Stieb are rated 30). No drawn card met a pitcher who has no WP rating.
 

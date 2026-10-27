@@ -3,7 +3,7 @@
 so a rebuild by any script gives the same cards:
 
 - hitter platoon split restored to the 1986 same-side ratio (platoon_resplit)
-- hitter bands scaled for IBB, hits clipped by a full section put back (capacity_retune)
+- IBB counted as walks (PATIENT, ~22.9% cap, flagged), hits clipped by a full section put back (capacity_retune)
 - Jump and Steal letter from real steals, 1986 calibration (fix_jump_from_attempts, fix_steal_letter)
 - pitcher 2d6 table, solver v0.3, plus the page 11 band (resolve_pitcher_tables)
 - outfield arm on Derived cards from assists (derive_of_arm)
