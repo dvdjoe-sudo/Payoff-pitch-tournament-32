@@ -79,6 +79,7 @@ CANONICAL = {
             ("Uggla", "Uggla (INF/POWER)"),
             ("Ozuna", "Ozuna (OF4)"),
             ("Lee", "Lee (1B/POWER)"),
+            ("Pierre", "Juan Pierre (CF/PR)"),
         ],
         "rotation": [
             ("Johnson", "Johnson"),
@@ -94,7 +95,6 @@ CANONICAL = {
             ("Scott", "Scott (LH)"),
             ("Bender", "Bender (MR)"),
             ("Alfonseca", "Alfonseca (MR)"),
-            ("Burnett", "Burnett (LR/EMER SP)"),
         ],
     },
 }
@@ -325,6 +325,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "Jayson Werth (`werthja01`) joins Washington as bench OF6 (RF/LF/DH). Craig Stammen (`stammcr01`) leaves the active bullpen. The Nationals now carry 9 lineup players, 6 bench players, 5 starting pitchers, and 6 relievers, 26 total.",
             "",
             "The roster change applies only after R1-02. Stammen's original converted card (if on file), historical pitching appearances, box scores, dice/FAC records, series results and all other completed games remain unchanged. Werth's original frozen Hitter v0.5 card conversion is still pending, using **Washington franchise seasons only**. Current roster spots are in `data/rosters.json`.",
+            "",
+        ]
+
+    if code == "MIA":
+        lines += [
+            "### Approved active roster amendment (2026-10-26)",
+            "",
+            "Juan Pierre (`pierrju01`) joins the Miami bench at CF/PR6. A.J. Burnett (`burneaj01`) is removed from the active bullpen but remains in all archived game and card records. Active 26: 9 lineup, 6 bench, 5 starting pitchers, 6 relievers.",
+            "",
+            "The amendment applies only after the completed R1-01 Yankees series. The original scores, box scores, FAC/dice rolls, and pitching appearances are unchanged. Pierre's playable Payoff Pitch card remains pending an original conversion using Marlins-only seasons. The earlier owner roster lists a bench player as `Lopez (UTIL)` without a first name; this structured roster provisionally maps that slot to Otto Lopez (`lopezot01`) based on his 2024–2026 Miami seasons and must be owner-verified before a card conversion.",
             "",
         ]
 

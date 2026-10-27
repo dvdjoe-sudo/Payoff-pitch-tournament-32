@@ -2599,6 +2599,222 @@
   ],
   "seed": 10
  },
+ "MIA": {
+  "code": "MIA",
+  "name": "Miami Marlins",
+  "played": true,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "castilu01",
+    "kind": "hitter",
+    "name": "Luis Castillo",
+    "pos": "2B",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "yelicch01",
+    "kind": "hitter",
+    "name": "Christian Yelich",
+    "pos": "CF",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "sheffga01",
+    "kind": "hitter",
+    "name": "Gary Sheffield",
+    "pos": "DH",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "stantmi03",
+    "kind": "hitter",
+    "name": "Giancarlo Stanton",
+    "pos": "RF",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "cabremi01",
+    "kind": "hitter",
+    "name": "Miguel Cabrera",
+    "pos": "3B",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "ramirha01",
+    "kind": "hitter",
+    "name": "Hanley Ramirez",
+    "pos": "SS",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "floydcl01",
+    "kind": "hitter",
+    "name": "Cliff Floyd",
+    "pos": "LF",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "coninje01",
+    "kind": "hitter",
+    "name": "Jeff Conine",
+    "pos": "1B",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "realmjt01",
+    "kind": "hitter",
+    "name": "J.T. Realmuto",
+    "pos": "C",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "johnsch04",
+    "kind": "hitter",
+    "name": "Charles Johnson",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "lopezot01",
+    "kind": "hitter",
+    "name": "Otto Lopez",
+    "pos": "UTIL",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "ugglada01",
+    "kind": "hitter",
+    "name": "Dan Uggla",
+    "pos": "2B",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "ozunama01",
+    "kind": "hitter",
+    "name": "Marcell Ozuna",
+    "pos": "OF",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "leede02",
+    "kind": "hitter",
+    "name": "Derrek Lee",
+    "pos": "1B",
+    "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "pierrju01",
+    "kind": "hitter",
+    "name": "Juan Pierre",
+    "pos": "CF",
+    "slot": 6
+   },
+   {
+    "group": "rotation",
+    "id": "johnsjo09",
+    "kind": "pitcher",
+    "name": "Josh Johnson",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "alcansa01",
+    "kind": "pitcher",
+    "name": "Sandy Alcantara",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "willido03",
+    "kind": "pitcher",
+    "name": "Dontrelle Willis",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "beckejo02",
+    "kind": "pitcher",
+    "name": "Josh Beckett",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "fernajo02",
+    "kind": "pitcher",
+    "name": "Jose Fernandez",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "nenro01",
+    "kind": "pitcher",
+    "name": "Robb Nen",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "cishest01",
+    "kind": "pitcher",
+    "name": "Steve Cishek",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "ramosaj01",
+    "kind": "pitcher",
+    "name": "A.J. Ramos",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "scottta01",
+    "kind": "pitcher",
+    "name": "Tanner Scott",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "bendean01",
+    "kind": "pitcher",
+    "name": "Anthony Bender",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "alfonan01",
+    "kind": "pitcher",
+    "name": "Antonio Alfonseca",
+    "pos": "RP",
+    "slot": 6
+   }
+  ],
+  "seed": 32
+ },
  "MON": {
   "code": "MON",
   "name": "Montreal Expos",

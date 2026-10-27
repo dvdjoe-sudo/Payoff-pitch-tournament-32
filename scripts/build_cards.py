@@ -610,11 +610,13 @@ def retain_authorized_hitters(cards):
 
 
 
-# Baltimore, Cleveland, the White Sox, and Houston had no set-file
-# cards. The sandbox build wrote their bodies from franchise seasons.
-# A full rebuild starts from the set files, so it has to copy those
-# bodies and the roster rows back. A game import never reaches this path.
-EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU")
+# These teams are not in SETS. BAL/CLE/CWS/HOU retain their previous
+# verified franchise-only card bodies; MIA has a published owner roster
+# but no set-file import. Preserve that roster without making up cards.
+# The original (including archived A.J. Burnett) Miami card entries are
+# retained on full set rebuild, whether or not they are active.
+# Game import never reaches the full rebuild path.
+EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU", "MIA")
 
 
 def retain_empty_team_cards(cards, rosters):
@@ -630,6 +632,13 @@ def retain_empty_team_cards(cards, rosters):
         if not players:
             continue
         rosters[code] = old_roster
+        if code == "MIA":
+            # Preserve every prior Miami card including Burnett's historical
+            # card. No body/chart is generated for Juan Pierre or anyone else.
+            for key, previous in old_cards.items():
+                if key.startswith("MIA|"):
+                    cards.setdefault(key, previous)
+            continue
         for player in players:
             key = "%s|%s" % (code, player["id"])
             previous = old_cards.get(key) or {}

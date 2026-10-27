@@ -580,6 +580,42 @@ def check_nationals_roster_amendment(check: Check) -> None:
                  "Nationals dated amendment published in roster record")
 
 
+def check_marlins_roster_amendment(check: Check) -> None:
+    """Owner-approved Miami active 26, keeping the 2003/series record frozen."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    players = rosters["MIA"]["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "Miami has 26 distinct active players")
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Miami active roster is 9/6/5/6")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g) ==
+                     list(range(1, counts[g] + 1)) for g in groups),
+                 "Miami active slots are unique and consecutive")
+    pierre = [p for p in players if p["id"] == "pierrju01"]
+    check.expect(len(pierre) == 1 and pierre[0]["group"] == "bench" and
+                 pierre[0]["slot"] == 6 and pierre[0]["pos"] == "CF",
+                 "Juan Pierre occupies sixth Miami bench slot")
+    check.expect("burneaj01" not in ids,
+                 "A.J. Burnett does not hold an active Miami bullpen spot")
+    check.expect(rosters["MIA"]["played"] is True and rosters["MIA"]["seed"] == 32,
+                 "Miami synchronized as played bracket seed 32")
+    bios = json.loads((ROOT / "data" / "bios.json").read_text(encoding="utf-8"))
+    check.expect("MIA|burneaj01" in bios,
+                 "A.J. Burnett historical participant remains in bios")
+    text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Juan Pierre (CF/PR)" in text and
+                 "A.J. Burnett (`burneaj01`) is removed from the active bullpen" in text,
+                 "Miami approved active 26 and historical Burnett recorded in roster")
+    check.expect("Lopez (UTIL)" in text and "provisionally maps" in text,
+                 "Lopez's first-name identity is explicitly provisional")
+    script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect('"MIA"' in script.split("EMPTY_TEAM_CODES =", 1)[1].split("\\n", 1)[0],
+                 "Full card rebuild preserves the standalone Miami roster")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -597,6 +633,7 @@ def main() -> int:
     check_arizona_roster_amendment(check)
     check_rays_roster_amendment(check)
     check_nationals_roster_amendment(check)
+    check_marlins_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

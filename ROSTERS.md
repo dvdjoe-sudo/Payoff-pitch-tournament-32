@@ -1696,6 +1696,7 @@ This roster text is the one previously published in the tournament rules. Positi
 - Uggla (INF/POWER)
 - Ozuna (OF4)
 - Lee (1B/POWER)
+- Juan Pierre (CF/PR)
 
 ### Rotation
 
@@ -1713,7 +1714,6 @@ This roster text is the one previously published in the tournament rules. Positi
 - Scott (LH)
 - Bender (MR)
 - Alfonseca (MR)
-- Burnett (LR/EMER SP)
 
 Recorded on that roster and not yet in a box score:
 
@@ -1721,6 +1721,12 @@ Recorded on that roster and not yet in a box score:
 - Ozuna (OF4)
 - Lee (1B/POWER)
 - Fernandez
+
+### Approved active roster amendment (2026-10-26)
+
+Juan Pierre (`pierrju01`) joins the Miami bench at CF/PR6. A.J. Burnett (`burneaj01`) is removed from the active bullpen but remains in all archived game and card records. Active 26: 9 lineup, 6 bench, 5 starting pitchers, 6 relievers.
+
+The amendment applies only after the completed R1-01 Yankees series. The original scores, box scores, FAC/dice rolls, and pitching appearances are unchanged. Pierre's playable Payoff Pitch card remains pending an original conversion using Marlins-only seasons. The earlier owner roster lists a bench player as `Lopez (UTIL)` without a first name; this structured roster provisionally maps that slot to Otto Lopez (`lopezot01`) based on his 2024–2026 Miami seasons and must be owner-verified before a card conversion.
 
 ### Players in the results file
 
