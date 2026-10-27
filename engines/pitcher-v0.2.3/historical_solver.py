@@ -19,45 +19,65 @@ SPECIAL_OUTCOMES = ['TOUGH-OUT', 'PATIENT-OUT']
 FIT_THRESHOLD = 0.005  # v0.2: if core-six fit worse than this, try specials
 
 
-def solve_historical(target, pitcher_hand='R', restarts=10, seed=0):
+def solve_historical(target, pitcher_hand='R', restarts=10, seed=0, so_rule='widening'):
     """Solve with escalation. Returns (table, events, diagnostics).
 
-    Tries SO modifiers NONE, +10, +20. The same seed is used for each
-    modifier, and the modifier is applied inside the evaluation in the
-    v2 direction, so the winner is the modifier that fits, not a
-    second random search.
+    so_rule 'widening' is the tracker: +10/+20 expands the SO band inside
+    the evaluation. so_rule 'printed' is rulebook page 39: the same
+    modifiers shift the TOUGH percentile, and a sum past 99 is ignored.
+    The default stays 'widening' so the tracker tests keep their reading.
     """
     import pitcher_solver
 
     orig_outcomes = list(pitcher_solver.OUTCOMES)
     best_overall = None
+    printed_vectors = {}
+    if so_rule == 'printed':
+        from printed_shift import vectors_for_bump
+        for mod, bump in (('NONE', 0), ('+10', 10), ('+20', 20)):
+            printed_vectors[mod] = vectors_for_bump(pitcher_hand, bump)
 
     for mod in ['NONE', '+10', '+20']:
         pitcher_solver.OUTCOMES = list(NORMAL_OUTCOMES)
-        tbl, err, diag = optimize(
-            target, restarts=restarts, hand=pitcher_hand,
-            seed=seed, so_modifier=mod)
+        if so_rule == 'printed':
+            tbl, err, diag = optimize(
+                target, restarts=restarts, hand=pitcher_hand,
+                seed=seed, so_modifier='NONE', vectors=printed_vectors[mod])
+        else:
+            tbl, err, diag = optimize(
+                target, restarts=restarts, hand=pitcher_hand,
+                seed=seed, so_modifier=mod)
         if best_overall is None or err < best_overall[1]:
             best_overall = (tbl, err, diag, mod)
 
     tbl, err, diag, mod = best_overall
-    ev = evaluate_vs_hitters(tbl, pitcher_hand, mod)
+    if so_rule == 'printed':
+        ev = evaluate_vs_hitters(tbl, pitcher_hand, 'NONE', printed_vectors[mod])
+    else:
+        ev = evaluate_vs_hitters(tbl, pitcher_hand, mod)
 
     result = {
         'table': tbl, 'events': ev, 'fit_error': err,
         'core_six_fit': err, 'so_modifier': mod,
         'status': 'PASS' if err < FIT_THRESHOLD else 'HISTORICAL-TARGET-REVIEW',
         'diagnostics': diag,
+        'so_rule': so_rule,
     }
 
     # Escalate to specials if needed (existing logic). The winning
     # modifier stays in the evaluation.
     if err >= FIT_THRESHOLD:
         pitcher_solver.OUTCOMES = list(NORMAL_OUTCOMES) + list(SPECIAL_OUTCOMES)
-        tbl2, err2, diag2 = optimize(
-            target, restarts=restarts, hand=pitcher_hand,
-            seed=seed + 1, so_modifier=mod)
-        ev2 = evaluate_vs_hitters(tbl2, pitcher_hand, mod)
+        if so_rule == 'printed':
+            tbl2, err2, diag2 = optimize(
+                target, restarts=restarts, hand=pitcher_hand,
+                seed=seed + 1, so_modifier='NONE', vectors=printed_vectors[mod])
+            ev2 = evaluate_vs_hitters(tbl2, pitcher_hand, 'NONE', printed_vectors[mod])
+        else:
+            tbl2, err2, diag2 = optimize(
+                target, restarts=restarts, hand=pitcher_hand,
+                seed=seed + 1, so_modifier=mod)
+            ev2 = evaluate_vs_hitters(tbl2, pitcher_hand, mod)
         specials_used = set(tbl2.values()) & set(SPECIAL_OUTCOMES)
         result.update({
             'table': tbl2, 'events': ev2, 'fit_error': err2,

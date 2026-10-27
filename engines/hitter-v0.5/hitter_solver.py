@@ -13,24 +13,32 @@ BB%/SO%/HR%/HBP% with the stat line. No hand tuning.
 import csv, json, os, re, sys, copy
 
 HOME = os.path.expanduser('~')
-APP = os.environ.get(
-    'PP_CARDS_1986_DIR', HOME + '/workspace/payoff-pitch-app')
-CC = os.environ.get(
-    'PP_CUSTOM_CARDS_DIR', HOME + '/workspace/custom-cards')
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+REF = os.path.join(ROOT, 'historical-cards', 'reference')
+APP = os.environ.get('PP_CARDS_1986_DIR', '')
+CC = os.environ.get('PP_CUSTOM_CARDS_DIR', HOME + '/workspace/custom-cards')
 _REFERENCE = None
 
 
 def reference():
     """Load the 1986 comp cards and profiles on first use.
 
-    Importing this module does not open those files. They are not in
-    this repository. A build that needs them fails at the call, with
-    the path, instead of at import.
+    The files live at historical-cards/reference/. PP_CARDS_1986 and
+    PP_CARD_PROFILES override the file paths. PP_CARDS_1986_DIR still
+    selects a directory whose data/cards_1986.json is the card file.
+    Importing this module does not open the files.
     """
     global _REFERENCE
     if _REFERENCE is None:
-        cards_path = os.path.join(APP, 'data', 'cards_1986.json')
-        profiles_path = os.path.join(CC, 'card_profiles.json')
+        cards_path = os.environ.get('PP_CARDS_1986')
+        profiles_path = os.environ.get('PP_CARD_PROFILES')
+        if not cards_path:
+            if APP:
+                cards_path = os.path.join(APP, 'data', 'cards_1986.json')
+            else:
+                cards_path = os.path.join(REF, 'cards_1986.json')
+        if not profiles_path:
+            profiles_path = os.path.join(REF, 'card_profiles.json')
         cards = json.load(open(cards_path))['players']
         profiles = json.load(open(profiles_path))
         _REFERENCE = {
@@ -106,8 +114,16 @@ def comp_distance(p, t):
             ((p['sop']-t['sop'])*3)**2 + ((p['hrp']-t['hrp'])*8)**2)
 
 
-def select_comps(tgt, n=8):
+def select_comps(tgt, n=8, exclude=None):
+    """Section comps. exclude is a set of profile names left out of the pool.
+
+    A held-out accuracy check passes the player's own card here so the
+    rebuild cannot copy that card.
+    """
     profiles = reference()['profiles']
+    if exclude:
+        skip = set(exclude)
+        profiles = [p for p in profiles if p['name'] not in skip]
     wh = sorted(profiles, key=lambda p: -p['hrp'])[:n]
     pat = sorted(profiles, key=lambda p: -p['bbp'])[:n]
     contact = sorted(profiles, key=lambda p: comp_distance(p, tgt))[:n]
@@ -486,8 +502,12 @@ def fit_report(exp, tgt):
     return lines, fit, status
 
 
-def build_one(row):
-    """Build a card from a CSV row. Returns (card, exp, tgt, best_comp)."""
+def build_one(row, exclude=None):
+    """Build a card from a CSV row. Returns (card, exp, tgt, best_comp).
+
+    exclude keeps those profile names out of the comp pool and out of
+    the out-table template pick.
+    """
     if row['Position'].strip().upper() == 'P':
         return None
     name, nickname = parse_name(row['Name'])
@@ -501,7 +521,7 @@ def build_one(row):
     tgt = {'avg': h/ab, 'obp': (h+ubb+hbp)/pa, 'slg': tb/ab,
            'bbp': ubb/pa, 'sop': so/pa, 'hrp': hr/pa, 'hbpp': hbp/pa}
     bats = row['Bats'].strip().upper()[0]
-    comps = select_comps(tgt)
+    comps = select_comps(tgt, exclude=exclude)
     # v0.4: multi-start optimization (10 restarts). Each restart has its
     # own Random so the process-wide RNG is left alone and a rerun with
     # the same seeds reproduces the starts.
@@ -575,7 +595,11 @@ def build_one(row):
     opt_status = 'UNSTABLE INITIALIZATION' if improvement > 50 else 'STABLE'
     r = ratings(row)
     ref = reference()
-    best_comp = min(ref['profiles'], key=lambda p: comp_distance(p, tgt))['name']
+    pool = ref['profiles']
+    if exclude:
+        skip = set(exclude)
+        pool = [p for p in pool if p['name'] not in skip]
+    best_comp = min(pool, key=lambda p: comp_distance(p, tgt))['name']
     template = (ref['by_name'].get(best_comp) or {}).get('out_table') or []
     out_by_hand, out_table = out_tables_from_holes(sections, template)
     # v0.5: audit trail

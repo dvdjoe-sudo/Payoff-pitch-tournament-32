@@ -1,0 +1,522 @@
+[
+ {
+  "name": "ATLANTA-FULTON COUNTY STADIUM",
+  "season": "1986 Atlanta (N)",
+  "wh_l": 73,
+  "wh_r": 58,
+  "range_hit_hi": {
+   "A": 30,
+   "B": 38,
+   "C": 51,
+   "D": 58,
+   "F": 65
+  },
+  "error_hi": {
+   "5": 31,
+   "4": 42,
+   "3": 52,
+   "2": 58,
+   "1": 66
+  }
+ },
+ {
+  "name": "DODGER STADIUM",
+  "season": "1986 Los Angeles (N)",
+  "wh_l": 63,
+  "wh_r": 28,
+  "range_hit_hi": {
+   "A": 34,
+   "B": 42,
+   "C": 49,
+   "D": 55,
+   "F": 63
+  },
+  "error_hi": {
+   "5": 28,
+   "4": 42,
+   "3": 54,
+   "2": 64,
+   "1": 77
+  }
+ },
+ {
+  "name": "WRIGLEY FIELD",
+  "season": "1986 Chicago (N)",
+  "wh_l": 75,
+  "wh_r": 68,
+  "range_hit_hi": {
+   "A": 34,
+   "B": 48,
+   "C": 57,
+   "D": 67,
+   "F": 78
+  },
+  "error_hi": {
+   "5": 23,
+   "4": 30,
+   "3": 39,
+   "2": 45,
+   "1": 51
+  }
+ },
+ {
+  "name": "STADE OLYMPIQUE",
+  "season": "1986 Montreal (N)",
+  "wh_l": 28,
+  "wh_r": 38,
+  "range_hit_hi": {
+   "A": 32,
+   "B": 43,
+   "C": 50,
+   "D": 59,
+   "F": 68
+  },
+  "error_hi": {
+   "5": 20,
+   "4": 27,
+   "3": 37,
+   "2": 45,
+   "1": 53
+  }
+ },
+ {
+  "name": "RIVERFRONT STADIUM",
+  "season": "1986 Cincinnati (N)",
+  "wh_l": 72,
+  "wh_r": 67,
+  "range_hit_hi": {
+   "A": 33,
+   "B": 45,
+   "C": 53,
+   "D": 66,
+   "F": 71
+  },
+  "error_hi": {
+   "5": 20,
+   "4": 26,
+   "3": 35,
+   "2": 41,
+   "1": 48
+  }
+ },
+ {
+  "name": "SHEA STADIUM",
+  "season": "1986 New York (N)",
+  "wh_l": 55,
+  "wh_r": 48,
+  "range_hit_hi": {
+   "A": 25,
+   "B": 35,
+   "C": 45,
+   "D": 51,
+   "F": 59
+  },
+  "error_hi": {
+   "5": 34,
+   "4": 46,
+   "3": 56,
+   "2": 63,
+   "1": 71
+  }
+ },
+ {
+  "name": "ASTRODOME",
+  "season": "1986 Houston (N)",
+  "wh_l": 33,
+  "wh_r": 46,
+  "range_hit_hi": {
+   "A": 27,
+   "B": 36,
+   "C": 47,
+   "D": 58,
+   "F": 68
+  },
+  "error_hi": {
+   "5": 28,
+   "4": 35,
+   "3": 41,
+   "2": 51,
+   "1": 58
+  }
+ },
+ {
+  "name": "VETERANS STADIUM",
+  "season": "1986 Philadelphia (N)",
+  "wh_l": 54,
+  "wh_r": 55,
+  "range_hit_hi": {
+   "A": 32,
+   "B": 43,
+   "C": 56,
+   "D": 63,
+   "F": 71
+  },
+  "error_hi": {
+   "5": 24,
+   "4": 36,
+   "3": 44,
+   "2": 51,
+   "1": 57
+  }
+ },
+ {
+  "name": "THREE RIVERS STADIUM",
+  "season": "1986 Pittsburgh (N)",
+  "wh_l": 45,
+  "wh_r": 50,
+  "range_hit_hi": {
+   "A": 31,
+   "B": 41,
+   "C": 48,
+   "D": 57,
+   "F": 67
+  },
+  "error_hi": {
+   "5": 27,
+   "4": 32,
+   "3": 39,
+   "2": 44,
+   "1": 52
+  }
+ },
+ {
+  "name": "MEMORIAL STADIUM",
+  "season": "1986 Baltimore (A)",
+  "wh_l": 86,
+  "wh_r": 52,
+  "range_hit_hi": {
+   "A": 28,
+   "B": 41,
+   "C": 47,
+   "D": 56,
+   "F": 65
+  },
+  "error_hi": {
+   "5": 34,
+   "4": 40,
+   "3": 49,
+   "2": 59,
+   "1": 64
+  }
+ },
+ {
+  "name": "JACK MURPHY STADIUM",
+  "season": "1986 San Diego (N)",
+  "wh_l": 64,
+  "wh_r": 76,
+  "range_hit_hi": {
+   "A": 29,
+   "B": 39,
+   "C": 48,
+   "D": 58,
+   "F": 64
+  },
+  "error_hi": {
+   "5": 22,
+   "4": 33,
+   "3": 42,
+   "2": 50,
+   "1": 56
+  }
+ },
+ {
+  "name": "FENWAY PARK",
+  "season": "1986 Boston (A)",
+  "wh_l": 28,
+  "wh_r": 46,
+  "range_hit_hi": {
+   "A": 31,
+   "B": 44,
+   "C": 57,
+   "D": 67,
+   "F": 80
+  },
+  "error_hi": {
+   "5": 22,
+   "4": 32,
+   "3": 42,
+   "2": 48,
+   "1": 55
+  }
+ },
+ {
+  "name": "CANDLESTICK PARK",
+  "season": "1986 San Francisco (N)",
+  "wh_l": 33,
+  "wh_r": 44,
+  "range_hit_hi": {
+   "A": 26,
+   "B": 37,
+   "C": 46,
+   "D": 54,
+   "F": 66
+  },
+  "error_hi": {
+   "5": 30,
+   "4": 39,
+   "3": 51,
+   "2": 62,
+   "1": 73
+  }
+ },
+ {
+  "name": "ANAHEIM STADIUM",
+  "season": "1986 California (A)",
+  "wh_l": 59,
+  "wh_r": 54,
+  "range_hit_hi": {
+   "A": 23,
+   "B": 35,
+   "C": 43,
+   "D": 53,
+   "F": 63
+  },
+  "error_hi": {
+   "5": 24,
+   "4": 33,
+   "3": 43,
+   "2": 54,
+   "1": 58
+  }
+ },
+ {
+  "name": "BUSCH STADIUM",
+  "season": "1986 St. Louis (N)",
+  "wh_l": 27,
+  "wh_r": 31,
+  "range_hit_hi": {
+   "A": 33,
+   "B": 41,
+   "C": 50,
+   "D": 62,
+   "F": 69
+  },
+  "error_hi": {
+   "5": 33,
+   "4": 40,
+   "3": 50,
+   "2": 57,
+   "1": 63
+  }
+ },
+ {
+  "name": "COMISKEY PARK",
+  "season": "1986 Chicago (A)",
+  "wh_l": 27,
+  "wh_r": 33,
+  "range_hit_hi": {
+   "A": 31,
+   "B": 37,
+   "C": 48,
+   "D": 55,
+   "F": 61
+  },
+  "error_hi": {
+   "5": 21,
+   "4": 27,
+   "3": 34,
+   "2": 42,
+   "1": 49
+  }
+ },
+ {
+  "name": "CLEVELAND STADIUM",
+  "season": "1986 Cleveland (A)",
+  "wh_l": 38,
+  "wh_r": 52,
+  "range_hit_hi": {
+   "A": 32,
+   "B": 47,
+   "C": 60,
+   "D": 67,
+   "F": 80
+  },
+  "error_hi": {
+   "5": 32,
+   "4": 43,
+   "3": 52,
+   "2": 59,
+   "1": 69
+  }
+ },
+ {
+  "name": "HUBERT H HUMPHREY METRODOME",
+  "season": "1986 Minnesota (A)",
+  "wh_l": 84,
+  "wh_r": 72,
+  "range_hit_hi": {
+   "A": 35,
+   "B": 46,
+   "C": 54,
+   "D": 66,
+   "F": 70
+  },
+  "error_hi": {
+   "5": 31,
+   "4": 38,
+   "3": 46,
+   "2": 58,
+   "1": 69
+  }
+ },
+ {
+  "name": "TIGER STADIUM",
+  "season": "1986 Detroit (A)",
+  "wh_l": 68,
+  "wh_r": 52,
+  "range_hit_hi": {
+   "A": 25,
+   "B": 34,
+   "C": 42,
+   "D": 51,
+   "F": 59
+  },
+  "error_hi": {
+   "5": 29,
+   "4": 39,
+   "3": 51,
+   "2": 62,
+   "1": 71
+  }
+ },
+ {
+  "name": "YANKEE STADIUM",
+  "season": "1986 New York (A)",
+  "wh_l": 87,
+  "wh_r": 48,
+  "range_hit_hi": {
+   "A": 28,
+   "B": 40,
+   "C": 52,
+   "D": 63,
+   "F": 71
+  },
+  "error_hi": {
+   "5": 34,
+   "4": 43,
+   "3": 50,
+   "2": 58,
+   "1": 67
+  }
+ },
+ {
+  "name": "ROYALS STADIUM",
+  "season": "1986 Kansas City (A)",
+  "wh_l": 24,
+  "wh_r": 27,
+  "range_hit_hi": {
+   "A": 29,
+   "B": 39,
+   "C": 53,
+   "D": 61,
+   "F": 70
+  },
+  "error_hi": {
+   "5": 21,
+   "4": 32,
+   "3": 42,
+   "2": 52,
+   "1": 61
+  }
+ },
+ {
+  "name": "OAKLAND COLISEUM",
+  "season": "1986 Oakland (A)",
+  "wh_l": 38,
+  "wh_r": 51,
+  "range_hit_hi": {
+   "A": 27,
+   "B": 35,
+   "C": 41,
+   "D": 51,
+   "F": 57
+  },
+  "error_hi": {
+   "5": 28,
+   "4": 33,
+   "3": 43,
+   "2": 54,
+   "1": 57
+  }
+ },
+ {
+  "name": "COUNTY STADIUM",
+  "season": "1986 Milwaukee (A)",
+  "wh_l": 33,
+  "wh_r": 47,
+  "range_hit_hi": {
+   "A": 36,
+   "B": 42,
+   "C": 50,
+   "D": 56,
+   "F": 65
+  },
+  "error_hi": {
+   "5": 33,
+   "4": 41,
+   "3": 48,
+   "2": 59,
+   "1": 65
+  }
+ },
+ {
+  "name": "KINGDOME",
+  "season": "1986 Seattle (A)",
+  "wh_l": 63,
+  "wh_r": 61,
+  "range_hit_hi": {
+   "A": 31,
+   "B": 39,
+   "C": 52,
+   "D": 60,
+   "F": 69
+  },
+  "error_hi": {
+   "5": 26,
+   "4": 40,
+   "3": 48,
+   "2": 54,
+   "1": 65
+  }
+ },
+ {
+  "name": "ARLINGTON STADIUM",
+  "season": "1986 Texas (A)",
+  "wh_l": 41,
+  "wh_r": 45,
+  "range_hit_hi": {
+   "A": 24,
+   "B": 36,
+   "C": 49,
+   "D": 58,
+   "F": 72
+  },
+  "error_hi": {
+   "5": 25,
+   "4": 31,
+   "3": 41,
+   "2": 50,
+   "1": 58
+  }
+ },
+ {
+  "name": "EXHIBITION STADIUM",
+  "season": "1986 Toronto (A)",
+  "wh_l": 51,
+  "wh_r": 61,
+  "range_hit_hi": {
+   "A": 27,
+   "B": 41,
+   "C": 52,
+   "D": 61,
+   "F": 70
+  },
+  "error_hi": {
+   "5": 23,
+   "4": 28,
+   "3": 39,
+   "2": 46,
+   "1": 55
+  }
+ }
+]
