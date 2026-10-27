@@ -610,13 +610,13 @@ def retain_authorized_hitters(cards):
 
 
 
-# These teams are not in SETS. BAL/CLE/CWS/HOU retain their previous
-# verified franchise-only card bodies; MIA has a published owner roster
-# but no set-file import. Preserve that roster without making up cards.
-# The original (including archived A.J. Burnett) Miami card entries are
-# retained on full set rebuild, whether or not they are active.
+# These clubs are not in SETS. BAL/CLE/CWS/HOU retain previously
+# verified franchise-only card bodies. MIA and NYY now have synchronized
+# owner-approved active rosters but no set-file imports. Preserve all
+# pre-existing cards of these two clubs (including inactive A.J. Burnett
+# and Mike Stanton) in a full rebuild, without fabricating new cards.
 # Game import never reaches the full rebuild path.
-EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU", "MIA")
+EMPTY_TEAM_CODES = ("BAL", "CLE", "CWS", "HOU", "MIA", "NYY")
 
 
 def retain_empty_team_cards(cards, rosters):
@@ -632,11 +632,13 @@ def retain_empty_team_cards(cards, rosters):
         if not players:
             continue
         rosters[code] = old_roster
-        if code == "MIA":
-            # Preserve every prior Miami card including Burnett's historical
-            # card. No body/chart is generated for Juan Pierre or anyone else.
+        if code in ("MIA", "NYY"):
+            # Do not replace historical card bodies or generate guesses.
+            # Keep all previous cards for either club, including inactive
+            # A.J. Burnett (MIA) and Mike Stanton (NYY). Rickey Henderson
+            # remains pending a genuine owner-authorized conversion.
             for key, previous in old_cards.items():
-                if key.startswith("MIA|"):
+                if key.startswith(code + "|"):
                     cards.setdefault(key, previous)
             continue
         for player in players:

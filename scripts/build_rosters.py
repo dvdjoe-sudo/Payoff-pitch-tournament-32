@@ -42,6 +42,7 @@ CANONICAL = {
             ("Mattingly", "Mattingly (1B/BAT)"),
             ("Williams", "B. Williams (OF)"),
             ("Jackson", "R. Jackson (OF/BAT)"),
+            ("Henderson", "Rickey Henderson (OF/PR)"),
         ],
         "rotation": [
             ("Ford", "Ford"),
@@ -56,7 +57,6 @@ CANONICAL = {
             ("Lyle", "Lyle (LH FIRE)"),
             ("Robertson", "Robertson (RH SET)"),
             ("Righetti", "Righetti (LATE/MULTI)"),
-            ("Stanton", "Stanton (LH SPEC)"),
             ("Reynolds", "Reynolds (LONG/SWING)"),
         ],
     },
@@ -325,6 +325,16 @@ def render_team(team: dict, appeared: dict, pending: list[str], announced: dict)
             "Jayson Werth (`werthja01`) joins Washington as bench OF6 (RF/LF/DH). Craig Stammen (`stammcr01`) leaves the active bullpen. The Nationals now carry 9 lineup players, 6 bench players, 5 starting pitchers, and 6 relievers, 26 total.",
             "",
             "The roster change applies only after R1-02. Stammen's original converted card (if on file), historical pitching appearances, box scores, dice/FAC records, series results and all other completed games remain unchanged. Werth's original frozen Hitter v0.5 card conversion is still pending, using **Washington franchise seasons only**. Current roster spots are in `data/rosters.json`.",
+            "",
+        ]
+
+    if code == "NYY":
+        lines += [
+            "### Approved active roster amendment (2026-10-26)",
+            "",
+            "Rickey Henderson (`henderi01`) joins the Yankees as sixth bench player (OF/PR). Mike Stanton (`stantmi02`) moves off the active bullpen while remaining in historical R1-01 appearances and any original converted cards. Active roster: 9 lineup, 6 bench, 5 starters, 6 relievers (26).",
+            "",
+            "This amendment applies only after the completed R1-01 Yankees-Marlins series. Previously played results, box scores, manager logs, and FAC/dice records remain untouched. Rickey's Payoff Pitch hitter card awaits an authentic conversion, using only his New York Yankees seasons (1985-1989). The other six bullpen members, including Sparky Lyle, Dave Righetti, and Allie Reynolds, are unchanged.",
             "",
         ]
 

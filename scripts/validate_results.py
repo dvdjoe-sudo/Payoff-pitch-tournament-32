@@ -616,6 +616,40 @@ def check_marlins_roster_amendment(check: Check) -> None:
                  "Full card rebuild preserves the standalone Miami roster")
 
 
+def check_yankees_roster_amendment(check: Check) -> None:
+    """Approved NYY Rickey-for-Stanton roster; preserve prior R1-01 data."""
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    players = rosters["NYY"]["players"]
+    ids = [p["id"] for p in players]
+    check.expect(len(players) == len(set(ids)) == 26,
+                 "Yankees have 26 distinct active players")
+    groups = ("lineup", "bench", "rotation", "bullpen")
+    counts = {g: sum(p["group"] == g for p in players) for g in groups}
+    check.expect(counts == {"lineup": 9, "bench": 6, "rotation": 5, "bullpen": 6},
+                 "Yankees have 9/6/5/6 active players")
+    check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
+                     == list(range(1, counts[g] + 1)) for g in groups),
+                 "Yankees active slots are unique and sequential")
+    rickey = [p for p in players if p["id"] == "henderi01"]
+    check.expect(len(rickey) == 1 and rickey[0]["group"] == "bench"
+                 and rickey[0]["slot"] == 6 and rickey[0]["pos"] == "OF",
+                 "Rickey Henderson is the sixth Yankee bench player")
+    check.expect("stantmi02" not in ids,
+                 "Mike Stanton is not on the Yankees active bullpen")
+    check.expect(rosters["NYY"]["played"] is True and rosters["NYY"]["seed"] == 1,
+                 "Yankees active roster retains seed 1 and played status")
+    bios = json.loads((ROOT / "data" / "bios.json").read_text(encoding="utf-8"))
+    check.expect("NYY|stantmi02" in bios,
+                 "Mike Stanton remains recorded in historical Yankee bios")
+    text = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
+    check.expect("Rickey Henderson (OF/PR)" in text and
+                 "Mike Stanton (`stantmi02`) moves off the active bullpen" in text,
+                 "Owner-approved Yankees roster and Stanton historical status documented")
+    script = (ROOT / "scripts" / "build_cards.py").read_text(encoding="utf-8")
+    check.expect('"NYY"' in script.split("EMPTY_TEAM_CODES =", 1)[1].split("\\n", 1)[0],
+                 "Full set rebuild preserves the existing Yankees roster/cards")
+
+
 def main() -> int:
     check = Check()
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
@@ -634,6 +668,7 @@ def main() -> int:
     check_rays_roster_amendment(check)
     check_nationals_roster_amendment(check)
     check_marlins_roster_amendment(check)
+    check_yankees_roster_amendment(check)
     check_card_partitions(check)
     return check.done()
 

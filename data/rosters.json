@@ -3031,6 +3031,222 @@
   ],
   "seed": 27
  },
+ "NYY": {
+  "code": "NYY",
+  "name": "New York Yankees",
+  "played": true,
+  "players": [
+   {
+    "group": "lineup",
+    "id": "jeterde01",
+    "kind": "hitter",
+    "name": "Derek Jeter",
+    "pos": "SS",
+    "slot": 1
+   },
+   {
+    "group": "lineup",
+    "id": "judgeaa01",
+    "kind": "hitter",
+    "name": "Aaron Judge",
+    "pos": "RF",
+    "slot": 2
+   },
+   {
+    "group": "lineup",
+    "id": "ruthba01",
+    "kind": "hitter",
+    "name": "Babe Ruth",
+    "pos": "DH",
+    "slot": 3
+   },
+   {
+    "group": "lineup",
+    "id": "gehrilo01",
+    "kind": "hitter",
+    "name": "Lou Gehrig",
+    "pos": "1B",
+    "slot": 4
+   },
+   {
+    "group": "lineup",
+    "id": "mantlmi01",
+    "kind": "hitter",
+    "name": "Mickey Mantle",
+    "pos": "LF",
+    "slot": 5
+   },
+   {
+    "group": "lineup",
+    "id": "dimagjo01",
+    "kind": "hitter",
+    "name": "Joe DiMaggio",
+    "pos": "CF",
+    "slot": 6
+   },
+   {
+    "group": "lineup",
+    "id": "rodrial01",
+    "kind": "hitter",
+    "name": "Alex Rodriguez",
+    "pos": "3B",
+    "slot": 7
+   },
+   {
+    "group": "lineup",
+    "id": "berrayo01",
+    "kind": "hitter",
+    "name": "Yogi Berra",
+    "pos": "C",
+    "slot": 8
+   },
+   {
+    "group": "lineup",
+    "id": "randowi01",
+    "kind": "hitter",
+    "name": "Willie Randolph",
+    "pos": "2B",
+    "slot": 9
+   },
+   {
+    "group": "bench",
+    "id": "munsoth01",
+    "kind": "hitter",
+    "name": "Thurman Munson",
+    "pos": "C",
+    "slot": 1
+   },
+   {
+    "group": "bench",
+    "id": "lazzeto01",
+    "kind": "hitter",
+    "name": "Tony Lazzeri",
+    "pos": "2B",
+    "slot": 2
+   },
+   {
+    "group": "bench",
+    "id": "mattido01",
+    "kind": "hitter",
+    "name": "Don Mattingly",
+    "pos": "1B",
+    "slot": 3
+   },
+   {
+    "group": "bench",
+    "id": "willibe02",
+    "kind": "hitter",
+    "name": "Bernie Williams",
+    "pos": "OF",
+    "slot": 4
+   },
+   {
+    "group": "bench",
+    "id": "jacksre01",
+    "kind": "hitter",
+    "name": "Reggie Jackson",
+    "pos": "RF",
+    "slot": 5
+   },
+   {
+    "group": "bench",
+    "id": "henderi01",
+    "kind": "hitter",
+    "name": "Rickey Henderson",
+    "pos": "OF",
+    "slot": 6
+   },
+   {
+    "group": "rotation",
+    "id": "fordwh01",
+    "kind": "pitcher",
+    "name": "Whitey Ford",
+    "pos": "SP",
+    "slot": 1
+   },
+   {
+    "group": "rotation",
+    "id": "ruffire01",
+    "kind": "pitcher",
+    "name": "Red Ruffing",
+    "pos": "SP",
+    "slot": 2
+   },
+   {
+    "group": "rotation",
+    "id": "gomezle01",
+    "kind": "pitcher",
+    "name": "Lefty Gomez",
+    "pos": "SP",
+    "slot": 3
+   },
+   {
+    "group": "rotation",
+    "id": "guidrro01",
+    "kind": "pitcher",
+    "name": "Ron Guidry",
+    "pos": "SP",
+    "slot": 4
+   },
+   {
+    "group": "rotation",
+    "id": "pettian01",
+    "kind": "pitcher",
+    "name": "Andy Pettitte",
+    "pos": "SP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "riverma01",
+    "kind": "pitcher",
+    "name": "Mariano Rivera",
+    "pos": "RP",
+    "slot": 1
+   },
+   {
+    "group": "bullpen",
+    "id": "gossari01",
+    "kind": "pitcher",
+    "name": "Goose Gossage",
+    "pos": "RP",
+    "slot": 2
+   },
+   {
+    "group": "bullpen",
+    "id": "lylesp01",
+    "kind": "pitcher",
+    "name": "Sparky Lyle",
+    "pos": "RP",
+    "slot": 3
+   },
+   {
+    "group": "bullpen",
+    "id": "roberda08",
+    "kind": "pitcher",
+    "name": "David Robertson",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
+    "id": "righeda01",
+    "kind": "pitcher",
+    "name": "Dave Righetti",
+    "pos": "RP",
+    "slot": 5
+   },
+   {
+    "group": "bullpen",
+    "id": "reynoal01",
+    "kind": "pitcher",
+    "name": "Allie Reynolds",
+    "pos": "RP",
+    "slot": 6
+   }
+  ],
+  "seed": 1
+ },
  "PHA": {
   "code": "PHA",
   "name": "Philadelphia Athletics",

@@ -77,6 +77,7 @@ This roster text is the one previously published in the tournament rules. Positi
 - Mattingly (1B/BAT)
 - B. Williams (OF)
 - R. Jackson (OF/BAT)
+- Rickey Henderson (OF/PR)
 
 ### Rotation
 
@@ -93,7 +94,6 @@ This roster text is the one previously published in the tournament rules. Positi
 - Lyle (LH FIRE)
 - Robertson (RH SET)
 - Righetti (LATE/MULTI)
-- Stanton (LH SPEC)
 - Reynolds (LONG/SWING)
 
 Recorded on that roster and not yet in a box score:
@@ -101,9 +101,16 @@ Recorded on that roster and not yet in a box score:
 - Lazzeri (IF/BAT)
 - Mattingly (1B/BAT)
 - R. Jackson (OF/BAT)
+- Rickey Henderson (OF/PR)
 - Pettitte
 - Lyle (LH FIRE)
 - Reynolds (LONG/SWING)
+
+### Approved active roster amendment (2026-10-26)
+
+Rickey Henderson (`henderi01`) joins the Yankees as sixth bench player (OF/PR). Mike Stanton (`stantmi02`) moves off the active bullpen while remaining in historical R1-01 appearances and any original converted cards. Active roster: 9 lineup, 6 bench, 5 starters, 6 relievers (26).
+
+This amendment applies only after the completed R1-01 Yankees-Marlins series. Previously played results, box scores, manager logs, and FAC/dice records remain untouched. Rickey's Payoff Pitch hitter card awaits an authentic conversion, using only his New York Yankees seasons (1985-1989). The other six bullpen members, including Sparky Lyle, Dave Righetti, and Allie Reynolds, are unchanged.
 
 ### Players in the results file
 
