@@ -20286,7 +20286,7 @@
    "bats": "L",
    "dp": 7,
    "error_scale": "rulebook p2: 1 worst, 5 best (set-file digit flipped)",
-   "fielding": "Average",
+   "fielding": "Above Average",
    "of_arm_scale": null,
    "out_table": [
     {
@@ -20398,9 +20398,9 @@
    "positions": [
     {
      "arm": 6,
-     "e": 4,
+     "e": 3,
      "pos": "1B",
-     "range": "C"
+     "range": "B"
     }
    ],
    "qa_status": "PASS",
