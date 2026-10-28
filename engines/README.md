@@ -49,5 +49,30 @@ spans, calibrated to the printed 1986 cards.
   The one change from v1 semantics is the TOUGH-band widening rule
   described at the top of the file.
 
+## New generation (adopted 2026-10-28)
+
+Adopted 2026-10-28 as the card system for the whole tournament going
+forward: every club's cards are being rebuilt under it. The frozen
+engines above are the previous generation; series already played
+stand as played on the cards they were built with. The new engines
+learned the printed game's own grammar from the real 1986 cards
+instead of solving backward from a target line.
+
+- `hitting_engine_v1_2.py`: hitting engine, research build v1.2.
+  Style-first generation: the hitter is classified from his line
+  (contact, balanced, power, free-swinger), the style supplies the
+  band shapes, and his exact numbers are fit inside that shape.
+  Reads `dataset.json` and `out_dataset.json` from beside itself.
+- `dataset.json`: the 596 printed 1986 hitter cards the hitting
+  engine fits from.
+- `out_dataset.json`: the printed OUT charts of the 1986 set.
+- `pitcher_grammar_generator.py`: the pitcher table generator, a
+  faithful standalone extraction of the workshop build scripts of
+  2026-10-28 (the smoothed decile-ladder fit and the greedy face
+  assignment). Fits itself from `pitchers_1986.json` beside it and
+  carries its validation anchor in its header.
+- `pitchers_1986.json`: the parse of all 484 printed 1986 pitcher
+  cards (dice tables, ratings, stat lines).
+
 See the Engines page on the tournament site for the plain-language
 version of how a conversion runs.
