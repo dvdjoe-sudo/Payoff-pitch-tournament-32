@@ -525,7 +525,7 @@
     "id": "machama01",
     "kind": "hitter",
     "name": "Manny Machado",
-    "pos": "UT",
+    "pos": "3B",
     "slot": 2
    },
    {
@@ -533,7 +533,7 @@
     "id": "jonesad01",
     "kind": "hitter",
     "name": "Adam Jones",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 3
    },
    {
@@ -541,7 +541,7 @@
     "id": "roberbr01",
     "kind": "hitter",
     "name": "Brian Roberts",
-    "pos": "IF",
+    "pos": "2B",
     "slot": 4
    },
    {
@@ -549,7 +549,7 @@
     "id": "singlke01",
     "kind": "hitter",
     "name": "Ken Singleton",
-    "pos": "PH",
+    "pos": "RF",
     "slot": 5
    },
    {
@@ -2485,7 +2485,7 @@
     "id": "beltrca01",
     "kind": "hitter",
     "name": "Carlos Beltr\u00e1n",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 3
    },
    {
@@ -2493,7 +2493,7 @@
     "id": "patekfr01",
     "kind": "hitter",
     "name": "Freddie Patek",
-    "pos": "IF",
+    "pos": "SS",
     "slot": 4
    },
    {
