@@ -6577,28 +6577,28 @@
    }
   },
   "PHI": {
-   "1 Billy Hamilton CF S 6": {
-    "lahman_id": "hamilbi01",
+   "1 Richie Ashburn CF L 12": {
+    "lahman_id": "ashburi01",
     "status": "ok",
-    "text": "Peak 162 with Philadelphia Phillies (1891–1895): 162 G, 809 PA, 668 AB, 199 R, 246 H, 30 2B, 11 3B, 6 HR, 85 RBI, 109 SB, 125 BB, 30 SO, .368/.475/.471/.946",
+    "text": "Peak 162 with Philadelphia Phillies (1954–1958): 162 G, 755 PA, 635 AB, 104 R, 203 H, 27 2B, 10 3B, 2 HR, 43 RBI, 16 SB, 107 BB, 47 SO, .319/.420/.402/.822",
     "years": [
-     1891,
-     1892,
-     1893,
-     1894,
-     1895
+     1954,
+     1955,
+     1956,
+     1957,
+     1958
     ]
    },
-   "2 Bobby Abreu RF L 9": {
-    "lahman_id": "abreubo01",
+   "2 Johnny Callison RF L 10": {
+    "lahman_id": "callijo01",
     "status": "ok",
-    "text": "Peak 162 with Philadelphia Phillies (1998–2002): 162 G, 693 PA, 580 AB, 106 R, 181 H, 43 2B, 8 3B, 24 HR, 92 RBI, 29 SB, 105 BB, 129 SO, .312/.415/.534/.949",
+    "text": "Peak 162 with Philadelphia Phillies (1961–1965): 162 G, 690 PA, 619 AB, 99 R, 172 H, 29 2B, 12 3B, 25 HR, 86 RBI, 8 SB, 56 BB, 104 SO, .278/.340/.486/.826",
     "years": [
-     1998,
-     1999,
-     2000,
-     2001,
-     2002
+     1961,
+     1962,
+     1963,
+     1964,
+     1965
     ]
    },
    "3 Ed Delahanty LF L 13": {
@@ -6625,16 +6625,16 @@
      1984
     ]
    },
-   "4TH OF Richie Ashburn CF L 12": {
-    "lahman_id": "ashburi01",
+   "4TH OF Bobby Abreu RF L 9": {
+    "lahman_id": "abreubo01",
     "status": "ok",
-    "text": "Peak 162 with Philadelphia Phillies (1954–1958): 162 G, 755 PA, 635 AB, 104 R, 203 H, 27 2B, 10 3B, 2 HR, 43 RBI, 16 SB, 107 BB, 47 SO, .319/.420/.402/.822",
+    "text": "Peak 162 with Philadelphia Phillies (1998–2002): 162 G, 693 PA, 580 AB, 106 R, 181 H, 43 2B, 8 3B, 24 HR, 92 RBI, 29 SB, 105 BB, 129 SO, .312/.415/.534/.949",
     "years": [
-     1954,
-     1955,
-     1956,
-     1957,
-     1958
+     1998,
+     1999,
+     2000,
+     2001,
+     2002
     ]
    },
    "5 Bryce Harper 1B L 8": {
@@ -6673,16 +6673,16 @@
      2009
     ]
    },
-   "8 J.T. Realmuto C R 8": {
-    "lahman_id": "realmjt01",
+   "8 Carlos Ruiz C R 11": {
+    "lahman_id": "ruizca01",
     "status": "ok",
-    "text": "Peak 162 with Philadelphia Phillies (2019–2023): 162 G, 654 PA, 589 AB, 90 R, 157 H, 33 2B, 5 3B, 26 HR, 90 RBI, 17 SB, 49 BB, 150 SO, .267/.332/.468/.800",
+    "text": "Peak 162 with Philadelphia Phillies (2009–2013): 162 G, 586 PA, 511 AB, 60 R, 147 H, 36 2B, 1 3B, 13 HR, 69 RBI, 3 SB, 56 BB, 66 SO, .288/.371/.434/.805",
     "years": [
-     2019,
-     2020,
-     2021,
-     2022,
-     2023
+     2009,
+     2010,
+     2011,
+     2012,
+     2013
     ]
    },
    "9 Jimmy Rollins SS S 15": {

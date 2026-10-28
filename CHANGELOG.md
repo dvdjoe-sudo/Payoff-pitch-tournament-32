@@ -2,6 +2,31 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Phillies: Johnny Callison replaces Billy Hamilton
+
+The owner requested this change.
+- **Roster.** Johnny Callison (RF, bats L, 10 Phillies seasons) takes Billy Hamilton's lineup slot 1. Hamilton is removed from `rosters.json`, `announced_rosters.json`, `ROSTERS.md`, `peak162.json` and `cards.json`. The bench (6) and bullpen (6) are unchanged.
+- **Card.** It uses the franchise-card method (`scripts/build_callison_card.py`, a wrapper for `build_sixth_bench_cards.py`).
+  - Window: the five best Phillies seasons by league OPS+ with PA>=300, which are 1962, 1963, 1964, 1965 and 1968. Baseball-Reference OPS+ gives the same five.
+  - Solver: Hitter v0.5, then `card_postpass` (platoon re-split, IBB as walks, jump and steal letter from SB+CS, OF arm), then `derive_hitter_fielding`. QA PASS.
+  - Fielding: RF range B, error 4, arm 4 (top bucket: 100 assists in 739 games, 2.36x league). Jump 3, steal C.
+  - Card vs real: AVG .274/.275, OBP .334/.334, SLG .485/.487, HR .040/.040, SO .154/.154.
+- **Peak 162 line.** 1961-1965, the consecutive-window display method.
+- `sw.js` cache v87.
+- **Carlos Ruiz replaces J.T. Realmuto** (owner request). Ruiz is the starting C in slot 8. Realmuto's Phillies card and roster row are removed; his Marlins card is untouched.
+  - Hitting card: franchise method, window 2009-2012 and 2014 (league OPS+ 111, 136, 114, 159, 108). QA PASS. Card vs real: AVG .283/.284, OBP .374/.374, SLG .429/.432, HR .021/.021.
+  - **User-directed override:** catcher range A, error 5, arm 1, the best value on each rulebook scale. Derived values were range C, error 4, arm 6 (default).
+- **Roberto Clemente (PIT)** outfield arm set to 3 (**user-directed override**). Rulebook page 8 says 3 is the best outfield arm. He was 4. No other card is rated 3.
+- **Phillies lineup, owner's CF choice:** Ashburn now starts in CF and leads off. Callison bats 2nd in RF. Abreu moves to the 4TH OF bench role, swapping places with Ashburn. Howard stays DH: his card OPS is .963 to Abreu's .957.
+- `engines/sim/test_game.py`: the `tournament_results.json` fingerprint is updated to main's current file (b19407d). The results file itself is unchanged.
+
+## 2026-10-27 — R1-01 player pages get their missing tournament lines
+
+A stat-recording audit found every existing tournament block in `data/cards.json` exact (149 stints, 2,281 fields, zero mismatches) but the whole R1-01 Yankees/Marlins casts, 42 stints, carried `tournament: null`, so their player pages showed no tournament stats while LEADERS.md already counted the series. Root cause: the Yankees and Marlins cards were created by the empty-team batch builder after the last tournament refresh, and no refresh ran afterward. Fix: one run of the preserve path in `scripts/build_cards.py`, which replaces only the tournament block from the repo's own `tournament_results.json`. Exactly 42 cards changed (NYY 20, MIA 22), every one a null-to-block transition with the card body byte-identical; the other 12 Yankees/Marlins cards belong to men who never appeared in R1-01 and stay null. Verified independently of the builder: each new block was recomputed from the raw game lines (batting, pitching, W/L/SV, game lists) with zero mismatches, the two clubs' block AB total ties the archive's R1-01 total exactly (297), and cross-team men keep separate blocks per club (Cabrera's Miami block carries R1-01 only, his Detroit block R1-04 only). Validator: all checks passed. A second run refreshes 0 and leaves the file byte-identical.
+
+## 2026-10-27 — Thirteen bullpen cards get their missing stamina lines
+
+A full-population audit found 13 pitcher cards in `data/cards.json` with `stamina {start: null, relief: null}`, so the fatigue rules (rulebook pp.10–11) had nothing to read: Stewart (BAL), Locker (CWS), Dotel (HOU), Leibrandt (KC), Corbett (LAA), Burnett (MIA), Peralta (MIL), Marberry (MIN), Fernandez (NYM), Reynolds (NYY), Nelson (OAK), Madson (PHI), Moore (SEA). Root cause: the empty-team batch builder leaves stamina and the addenda empty on purpose, expecting `scripts/derive_pitcher_ratings.py` to fill them, but that pass only visits players listed in `data/rosters.json`; these men were the seventh bullpen arm dropped when their clubs went to a six-man bench, and a card outlives its roster spot (`build_cards.py` never deletes one), so the pass never reached them again. Fix: the derive pass now also visits any pitcher card no roster row covers whose stamina is still completely empty, deriving from that card's own peak window by the same 1986-fitted method as the rest of the population. The same visit filled the 13 cards' other empty derived ratings (WP, DP, Hold, Injury, pickoff line, pitcher fielding), the way it treats any card it visits. No other card changed; a second run is a no-op. Values: Start 1–9 from innings per start, Relief Long for every man who both started and relieved in his window, Short for Locker, the one pure reliever. Report: `historical-cards/accuracy/pitcher_ratings.json`.
 ## 2026-10-27 — Box names; blowout bullpen usage
 
 These came out of the test series Game 3.

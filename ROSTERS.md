@@ -376,10 +376,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 3 later games)
 - Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 3 later games)
 
-### Substitutes who have batted
-
-- Ted Simmons (`simmote01`), slot 1
-
 ### Starts, in the order the games were played
 
 - Bob Gibson (`gibsobo01`) started R1-05-G1
@@ -389,9 +385,8 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Relievers who have appeared
 
-- Jason Isringhausen (`isrinja01`), first seen in R1-05-G1
-- Ryan Helsley (`helslry01`), first seen in R1-05-G1
 - Al Brazle (`brazlal01`), first seen in R1-05-G2
+- Ryan Helsley (`helslry01`), first seen in R1-05-G3
 - Bruce Sutter (`suttebr01`), first seen in R1-05-G4
 
 ### Rotation carry recorded on the series
@@ -683,14 +678,14 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup
 
-- 1 Billy Hamilton CF S 6
-- 2 Bobby Abreu RF L 9
+- 1 Richie Ashburn CF L 12
+- 2 Johnny Callison RF L 10
 - 3 Ed Delahanty LF L 13
 - 4 Mike Schmidt 3B R 18
 - 5 Bryce Harper 1B L 8
 - 6 Ryan Howard DH L 13
 - 7 Chase Utley 2B L 13
-- 8 J.T. Realmuto C R 8
+- 8 Carlos Ruiz C R 11
 - 9 Jimmy Rollins SS S 15
 
 ### Bench
@@ -699,7 +694,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MIF Larry Bowa SS R 12
 - DEF IF Scott Rolen 3B R 7
 - BAT/CI Dick Allen 1B R 9
-- 4TH OF Richie Ashburn CF L 12
+- 4TH OF Bobby Abreu RF L 9
 - BAT2 Chuck Klein RF/LF L (Contact/Power)
 
 ### Rotation
@@ -1550,7 +1545,7 @@ Bracket: winners. Series losses: 0. Full 26 Index: 543.2.
 
 The Full 26 Index stored for this club is a calibrated estimate. See TOURNAMENT_SEEDS.md.
 
-Manager: Felipe Alou.
+Manager: Dick Williams.
 
 Official roster provided by the tournament owner. The lines are copied from that card. No tournament stats were added. Peak 162 franchise lines are on the club page.
 
@@ -1670,9 +1665,8 @@ González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 
 ### Relievers who have appeared
 
 - Boone Logan (`loganbo02`), first seen in R1-05-G1
-- Rafael Betancourt (`betanra01`), first seen in R1-05-G1
-- Huston Street (`streehu01`), first seen in R1-05-G1
 - Matt Belisle (`belisma01`), first seen in R1-05-G2
+- Rafael Betancourt (`betanra01`), first seen in R1-05-G2
 
 ### Rotation carry recorded on the series
 

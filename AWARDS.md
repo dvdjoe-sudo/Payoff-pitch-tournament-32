@@ -17,12 +17,12 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
-| Rogers Hornsby | St. Louis Cardinals | 24.5 | 12 | 6 | 5 | 1 |
 | Charlie Gehringer | Detroit Tigers | 24.0 | 14 | 3 | 3 | 1 |
 | Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
 | Jason Bartlett | Tampa Bay Rays | 24.0 | 14 | 4 | 4 | 1 |
 | David Ortiz | Boston Red Sox | 23.5 | 14 | 4 | 4 | 2 |
-| Albert Pujols | St. Louis Cardinals | 23.0 | 12 | 5 | 5 | 1 |
+| Ketel Marte | Arizona Diamondbacks | 22.5 | 16 | 3 | 4 | 2 |
+| Yogi Berra | New York Yankees | 20.5 | 11 | 4 | 4 | 2 |
 
 ## Cy Young
 
@@ -38,13 +38,13 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
+| Bob Gibson | St. Louis Cardinals | 14.0 | 9.0 | 1 | 9 | 2 |
 | Adam Wainwright | St. Louis Cardinals | 13.8 | 8.0 | 1 | 2 | 0 |
 | Mickey Lolich | Detroit Tigers | 13.4 | 7.0 | 1 | 8 | 1 |
 | David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
 | Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
 | Hal Newhouser | Detroit Tigers | 12.2 | 10.0 | 1 | 11 | 4 |
 | Dizzy Dean | St. Louis Cardinals | 11.7 | 6.0 | 1 | 10 | 2 |
-| Shane McClanahan | Tampa Bay Rays | 11.7 | 8.2 | 1 | 7 | 3 |
 
 ## Reliever
 
@@ -60,10 +60,10 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
-| Ryan Helsley | St. Louis Cardinals | 8.6 | 1 | 2.1 | 1 | 1 |
+| Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
+| Rafael Betancourt | Colorado Rockies | 8.5 | 0 | 3.2 | 3 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
 | Chad Cordero | Washington Nationals | 7.4 | 1 | 1.0 | 1 | 0 |
 | Mariano Rivera | New York Yankees | 7.4 | 1 | 1.0 | 1 | 0 |
 | Pete Fairbanks | Tampa Bay Rays | 7.1 | 1 | 2.1 | 1 | 2 |
-| Jake McGee | Tampa Bay Rays | 6.9 | 0 | 2.2 | 4 | 0 |

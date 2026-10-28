@@ -406,76 +406,96 @@ def main():
     cards = json.load(open(CARDS, encoding="utf-8"))
     rosters = json.load(open(ROSTERS, encoding="utf-8"))
     report, counts = [], Counter()
+    targets = []
     for club, team in rosters.items():
         for row in team["players"]:
-            if row["group"] not in ("rotation", "bullpen"):
-                continue
-            key = "%s|%s" % (club, row["id"])
-            card = cards[key]
-            cp = card["card_pit"]
-            add = cp.setdefault("addendum", {})
-            stam = cp.setdefault("stamina", {"start": None, "relief": None})
-            years = (card.get("peak_pit") or {}).get("window_years") or []
-            seasons, notes = window_seasons(row["id"], club, years, pit, fld, teams, side)
-            st = window_stats(seasons, lg)
-            peak_outs = round(float((card.get("peak_pit") or {}).get("ip") or 0) * 3)
-            flags = list(notes)
-            if abs(st["IPouts"] - peak_outs) > 1:
-                flags.append("Window IP %s outs does not match the card peak line %s outs." % (int(st["IPouts"]), peak_outs))
-            filled = {}
-            needs_stamina = stam.get("start") is None and stam.get("relief") is None
-            if needs_stamina:
+            if row["group"] in ("rotation", "bullpen"):
+                targets.append((club, row))
+    # Cards outlive roster spots: a man dropped when a club went to a
+    # six-man bench keeps his card in cards.json (build_cards never
+    # deletes one), but the roster-driven loop above never visits him
+    # again, so a card built with empty ratings (the empty-team batch
+    # builder leaves stamina and the addenda empty on purpose) would
+    # stay empty forever. Visit any pitcher card no roster row covers
+    # whose stamina is still completely empty, on its own peak window.
+    covered = {"%s|%s" % (club, row["id"]) for club, row in targets}
+    for key in sorted(cards):
+        if key in covered:
+            continue
+        cp0 = cards[key].get("card_pit")
+        if not cp0:
+            continue
+        stam0 = cp0.get("stamina") or {}
+        if stam0.get("start") is None and stam0.get("relief") is None:
+            club, pid = key.split("|", 1)
+            targets.append((club, {"id": pid, "group": "bullpen"}))
+    for club, row in targets:
+        key = "%s|%s" % (club, row["id"])
+        card = cards[key]
+        cp = card["card_pit"]
+        add = cp.setdefault("addendum", {})
+        stam = cp.setdefault("stamina", {"start": None, "relief": None})
+        years = (card.get("peak_pit") or {}).get("window_years") or []
+        seasons, notes = window_seasons(row["id"], club, years, pit, fld, teams, side)
+        st = window_stats(seasons, lg)
+        peak_outs = round(float((card.get("peak_pit") or {}).get("ip") or 0) * 3)
+        flags = list(notes)
+        if abs(st["IPouts"] - peak_outs) > 1:
+            flags.append("Window IP %s outs does not match the card peak line %s outs." % (int(st["IPouts"]), peak_outs))
+        filled = {}
+        needs_stamina = stam.get("start") is None and stam.get("relief") is None
+        if needs_stamina:
+            if st["GS"]:
+                stam["start"] = classify(st["ip_per_start"], method["start"]["labels"], method["start"]["cuts"])
+                filled["start"] = stam["start"]
+            if st["G"] > st["GS"]:
                 if st["GS"]:
-                    stam["start"] = classify(st["ip_per_start"], method["start"]["labels"], method["start"]["cuts"])
-                    filled["start"] = stam["start"]
-                if st["G"] > st["GS"]:
-                    if st["GS"]:
-                        stam["relief"] = "Long"
-                    else:
-                        stam["relief"] = classify(st["ip_per_relief"], method["relief"]["labels"], method["relief"]["cuts"])
-                    filled["relief"] = stam["relief"]
-                if row["group"] == "rotation" and stam.get("start") is None:
-                    flags.append("Rotation spot but no franchise start in the window; no Start stamina.")
-                if row["group"] == "bullpen" and stam.get("relief") is None:
-                    flags.append("Bullpen spot but every window game was a start; Relief is not rated.")
-            if add.get("wp") in (None, ""):
-                add["wp"] = wp_label(st["wp"], method["wp"]) if st["wp"] is not None else None
-                filled["wp"] = add["wp"]
-                if add["wp"] is None:
-                    flags.append("WP rate is below the 30 cut: no WP rating (page 10: Rare Play wild pitches only).")
-            for key2, stat, mk in (("dp", "dp", "dp"), ("hold", "att", "hold")):
-                if add.get(key2) is None:
-                    if st[stat] is not None and st[stat + "_cov"] >= 0.5:
-                        add[key2] = classify(st[stat], method[mk]["labels"], method[mk]["cuts"])
-                        if st[stat + "_cov"] < 0.999:
-                            flags.append("%s uses %d%% of window batters faced (other seasons have no data)." % (key2.upper(), round(100 * st[stat + "_cov"])))
-                    else:
-                        add[key2] = method[mk]["default"]
-                        flags.append("%s defaulted to league-average %s: %s." % (
-                            key2.upper(), add[key2],
-                            "no SB/CS-against data before 1974" if key2 == "hold" else "no GIDP data for the window"))
-                    filled[key2] = add[key2]
-            if add.get("pickoff") is None:
-                add["pickoff"] = PICKOFF
-            if add.get("inj") is None:
-                add["inj"] = classify(st["bf_per_season"], method["inj"]["labels"], method["inj"]["cuts"])
-                filled["inj"] = add["inj"]
-            if not cp.get("fielding"):
-                if st["rf"] is not None and st["rf_cov"] >= 0.5:
-                    rng = classify(st["rf"], method["range"]["labels"], method["range"]["cuts"])
-                    err = classify(st["e"], method["e"]["labels"], method["e"]["cuts"])
-                    if st["rf_cov"] < 0.999:
-                        flags.append("Fielding uses %d%% of window batters faced." % round(100 * st["rf_cov"]))
+                    stam["relief"] = "Long"
                 else:
-                    rng, err = method["range"]["default"], method["e"]["default"]
-                    flags.append("Fielding defaulted to league-average %s %s: no fielding line." % (rng, err))
-                cp["fielding"] = [{"pos": "P", "range": rng, "e": err}]
-                filled["fielding"] = "%s %s" % (rng, err)
-            if filled:
-                counts.update(filled.keys())
-                report.append({"key": key, "name": card["name"], "group": row["group"], "window_years": years,
-                               "filled": filled, "basis": {k: (round(v, 3) if isinstance(v, float) else v) for k, v in st.items()},
-                               "flags": flags})
+                    stam["relief"] = classify(st["ip_per_relief"], method["relief"]["labels"], method["relief"]["cuts"])
+                filled["relief"] = stam["relief"]
+            if row["group"] == "rotation" and stam.get("start") is None:
+                flags.append("Rotation spot but no franchise start in the window; no Start stamina.")
+            if row["group"] == "bullpen" and stam.get("relief") is None:
+                flags.append("Bullpen spot but every window game was a start; Relief is not rated.")
+        if add.get("wp") in (None, ""):
+            add["wp"] = wp_label(st["wp"], method["wp"]) if st["wp"] is not None else None
+            filled["wp"] = add["wp"]
+            if add["wp"] is None:
+                flags.append("WP rate is below the 30 cut: no WP rating (page 10: Rare Play wild pitches only).")
+        for key2, stat, mk in (("dp", "dp", "dp"), ("hold", "att", "hold")):
+            if add.get(key2) is None:
+                if st[stat] is not None and st[stat + "_cov"] >= 0.5:
+                    add[key2] = classify(st[stat], method[mk]["labels"], method[mk]["cuts"])
+                    if st[stat + "_cov"] < 0.999:
+                        flags.append("%s uses %d%% of window batters faced (other seasons have no data)." % (key2.upper(), round(100 * st[stat + "_cov"])))
+                else:
+                    add[key2] = method[mk]["default"]
+                    flags.append("%s defaulted to league-average %s: %s." % (
+                        key2.upper(), add[key2],
+                        "no SB/CS-against data before 1974" if key2 == "hold" else "no GIDP data for the window"))
+                filled[key2] = add[key2]
+        if add.get("pickoff") is None:
+            add["pickoff"] = PICKOFF
+        if add.get("inj") is None:
+            add["inj"] = classify(st["bf_per_season"], method["inj"]["labels"], method["inj"]["cuts"])
+            filled["inj"] = add["inj"]
+        if not cp.get("fielding"):
+            if st["rf"] is not None and st["rf_cov"] >= 0.5:
+                rng = classify(st["rf"], method["range"]["labels"], method["range"]["cuts"])
+                err = classify(st["e"], method["e"]["labels"], method["e"]["cuts"])
+                if st["rf_cov"] < 0.999:
+                    flags.append("Fielding uses %d%% of window batters faced." % round(100 * st["rf_cov"]))
+            else:
+                rng, err = method["range"]["default"], method["e"]["default"]
+                flags.append("Fielding defaulted to league-average %s %s: no fielding line." % (rng, err))
+            cp["fielding"] = [{"pos": "P", "range": rng, "e": err}]
+            filled["fielding"] = "%s %s" % (rng, err)
+        if filled:
+            counts.update(filled.keys())
+            report.append({"key": key, "name": card["name"], "group": row["group"], "window_years": years,
+                           "filled": filled, "basis": {k: (round(v, 3) if isinstance(v, float) else v) for k, v in st.items()},
+                           "flags": flags})
     json.dump(method, open(METHOD, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     open(METHOD, "a").write("\n")
     with open(REPORT, "w", encoding="utf-8") as handle:
