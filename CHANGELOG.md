@@ -2,6 +2,23 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-28 — Hitting engine v1.2: HR and walk bands extrapolate past the 1986 range (engine only, no cards rebuilt)
+
+The owner requested this change. A trust test of 16 tournament players against the 1986 pitching found the elite and power hitters short on HR and walks. Two causes in `engines/hitting_engine_v1_2.py`:
+- `DecileTable.predict` went flat above the highest 1986 rate.
+- The 99-face overflow trim cut the widest strand, usually the HR or the walk strand.
+
+Fix:
+- **`EXTRAPOLATE_CEILING`** (default on, `Engine.fit(..., extrapolate=False)` restores the old behavior). Above the top 1986 rate, the WHEELHOUSE HR and PATIENT BB (walk target BB+IBB) widths keep growing in proportion to the rate. The section then gives up its singles, then doubles and triples (and HBP), before the HR or walk strand is cut. Only sides with at least `MIN_FIT_AB` AB extrapolate.
+- **`TRIM_SINGLES_FIRST`** (default off) is an opt-in for in-range sections. It changes 89 printed 1986 sides, so it is left for the owner to decide on.
+
+Checks:
+- With the default, 0 of 1,160 printed 1986 sides change, and `--demo` output is identical.
+- In the 1986 blind test (14 hitters), only Schmidt vs LHP changes: HR 1-62 to 1-75 (official card 1-96), sim HR 29.7 to 31.4 (real 37). Everything else is byte-identical.
+- New `engines/test_hitting_engine_extrapolation.py`.
+
+`data/cards.json` is untouched. No card in the live set is rebuilt by this change.
+
 ## 2026-10-27 — Phillies: Johnny Callison replaces Billy Hamilton
 
 The owner requested this change.
