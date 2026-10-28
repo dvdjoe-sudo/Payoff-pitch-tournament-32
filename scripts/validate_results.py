@@ -1855,8 +1855,16 @@ def check_twins_roster_amendment(check: Check) -> None:
     check.expect(allison_peak.get("lahman_id") == "allisbo01"
                  and allison_peak.get("years") == [1963, 1964, 1965, 1966, 1967],
                  "Bob Allison's genuine Minnesota franchise five-season Peak 162 is active")
-    check.expect("MR1 Firpo Marberry 1923-1932, 1936 (11)" not in peaks,
-                 "Inactive Marberry no longer appears in Twins current Peak 162")
+    # Corrected 2026-10-28 (deploy repair): the expectation below previously
+    # asserted Marberry's Peak 162 entry absent, a leftover from the superseded
+    # app arrangement in which he was inactive. Under Joe's 2026-10-28 ruling
+    # Marberry is ACTIVE, build_peak162.py generates his entry, and the stale
+    # assertion made the validator and the generated-files gate unsatisfiable
+    # at once (deploys for 2914e16 and the first repair both failed).
+    check.expect("MR1 Firpo Marberry 1923-1932, 1936 (11)" in peaks,
+                 "Active Marberry appears in Twins current Peak 162")
+    check.expect("LR/SP Jim Perry 1963-1972 (10)" not in peaks,
+                 "Inactive Perry absent from active Twins Peak 162")
     doc = (ROOT / "ROSTERS.md").read_text(encoding="utf-8")
     check.expect("Bob Allison (`allisbo01`) joins Minnesota" in doc,
                  "Minnesota approval appears in published roster")
