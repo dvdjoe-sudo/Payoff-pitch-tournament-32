@@ -76,6 +76,29 @@ LAYOUT = {
 }
 MIN_FIT_AB = 40  # per-side AB floor for fitting (tiny samples are noise)
 
+# Ceiling extrapolation (v1.2.1, 2026-10-28, sandbox PR). The 1986 cards top
+# out near 40 HR and ~100-110 walks, so the decile tables went flat above the
+# fattest 1986 rate and a Ruth/Bonds/McGwire line got a 1986-max HR or BB band
+# (plus filler singles where the missing HR room was). With this on, the two
+# strands WHEEL HR and PATIENT BB keep rising past the highest rate seen in
+# training, in proportion to the real rate (slope = top-decile width / rate),
+# and a section pushed past 99 faces gives up singles first, never the
+# extrapolated strand. A line inside the training range is generated exactly
+# as before (as is any side under the MIN_FIT_AB floor). Set False (or Engine.fit(..., extrapolate=False)) for the old
+# v1.2 behavior.
+EXTRAPOLATE_CEILING = True
+# Separate, default OFF: when a section inside the training range overflows 99,
+# trim singles first instead of the widest strand (usually HR or BB). It changes
+# 89 of 1,160 printed 1986 sides, and fits the printed widths better there
+# (on the 61 fit-size sides, WHEELHOUSE+PATIENT abs error 2,220 -> 1,804; 741 -> 595 on the
+# md5 holdout), but it is not a ceiling fix, so it waits for the owner's call.
+TRIM_SINGLES_FIRST = False
+EXTRAPOLATED = (("WHEELHOUSE", "HR", "wheel_hr", "hr_rate"),
+                ("PATIENT", "BB", "patient_bb", "bb_rate"))
+# when a section overflows because of an extrapolated strand, trim in this order
+TRIM_ORDER = {"WHEELHOUSE": ("1B", "2B", "3B"),
+              "PATIENT": ("1B", "2B", "3B", "HBP")}
+
 
 # ---------------------------------------------------------------- data
 def load_cards():
@@ -167,6 +190,7 @@ class DecileTable:
         pairs = sorted(zip(xs, ys))
         n = len(pairs)
         self.centers, self.values = [], []
+        self.x_max = pairs[-1][0] if pairs else 0.0
         for i in range(k):
             chunk = pairs[i * n // k:(i + 1) * n // k]
             if not chunk:
@@ -177,10 +201,14 @@ class DecileTable:
         for i in range(1, len(self.values)):
             self.values[i] = max(self.values[i], self.values[i - 1])
 
-    def predict(self, x):
+    def predict(self, x, extrapolate=False):
         c, v = self.centers, self.values
         if x <= c[0]:
             return v[0]
+        if extrapolate and x > self.x_max and c[-1] > 0:
+            # beyond every training rate: keep rising in proportion to the
+            # real rate, continuous with the flat top at the training max
+            return v[-1] + (x - self.x_max) * v[-1] / c[-1]
         if x >= c[-1]:
             return v[-1]
         for i in range(1, len(c)):
@@ -234,13 +262,16 @@ def _mae(preds, actuals):
 
 # ---------------------------------------------------------------- engine
 class Engine:
-    def __init__(self):
+    def __init__(self, extrapolate=None, trim_singles_first=None):
         self.tables = {}
         self.diagnostics = {}
+        self.extrapolate = EXTRAPOLATE_CEILING if extrapolate is None else extrapolate
+        self.trim_singles_first = (TRIM_SINGLES_FIRST if trim_singles_first is None
+                                   else trim_singles_first)
 
     @classmethod
-    def fit(cls, train_cards):
-        eng = cls()
+    def fit(cls, train_cards, extrapolate=None, trim_singles_first=None):
+        eng = cls(extrapolate, trim_singles_first)
         rows = []  # (features, widths, archetype)
         for c in train_cards:
             arch = classify(card_totals(c))
@@ -392,7 +423,9 @@ class Engine:
 
         # PATIENT: walks off the walk rate (no power premium in print);
         # hit strands off their own rates; HBP is the archetype median.
-        gen["PATIENT"]["BB"] = rnd(t["patient_bb"].predict(f["bb_rate"]))
+        # tiny samples (under the fit floor) are noise, not a real rate
+        ext = self.extrapolate and f["ab"] >= MIN_FIT_AB
+        gen["PATIENT"]["BB"] = rnd(t["patient_bb"].predict(f["bb_rate"], ext))
         gen["PATIENT"]["2B"] = rnd(t["patient_2b"].predict(f["b2_rate"]))
         gen["PATIENT"]["3B"] = rnd(t["patient_3b"].predict(f["b3_rate"]))
         p1 = t["patient_1b"]
@@ -405,7 +438,7 @@ class Engine:
         gen["PATIENT"]["SO"] = 0
 
         # WHEELHOUSE: power lives here; every strand off its own rate.
-        gen["WHEELHOUSE"]["HR"] = rnd(t["wheel_hr"].predict(f["hr_rate"]))
+        gen["WHEELHOUSE"]["HR"] = rnd(t["wheel_hr"].predict(f["hr_rate"], ext))
         gen["WHEELHOUSE"]["2B"] = rnd(t["wheel_2b"].predict(f["b2_rate"]))
         gen["WHEELHOUSE"]["3B"] = rnd(t["wheel_3b"].predict(f["b3_rate"]))
         w1 = t["wheel_1b"]
@@ -415,10 +448,33 @@ class Engine:
         gen["WHEELHOUSE"]["BB"] = 0
         gen["WHEELHOUSE"]["SO"] = 0
 
+        # beyond-range strands: cap at 99, then other strands make room,
+        # singles first (they were filling the HR / BB room)
+        beyond = set()
+        if ext:
+            for sec, oc, label, rate in EXTRAPOLATED:
+                if f[rate] > t[label].x_max:
+                    beyond.add(sec)
+                    gen[sec][oc] = min(gen[sec][oc], 99)
+                    over = sum(gen[sec].values()) - 99
+                    for k in TRIM_ORDER[sec]:
+                        if over <= 0:
+                            break
+                        cut = min(over, gen[sec][k])
+                        gen[sec][k] -= cut
+                        over -= cut
         # no section may cover more than the 99 live points
         for sec in SECTIONS:
             tot = sum(gen[sec].values())
-            if tot > 99:
+            if tot > 99 and sec not in beyond and self.trim_singles_first and sec in TRIM_ORDER:
+                # HR / BB are the strands the line is about: singles give
+                # way first (old rule cut the widest strand, usually HR/BB)
+                over = tot - 99
+                for k in TRIM_ORDER[sec]:
+                    cut = min(over, gen[sec][k])
+                    gen[sec][k] -= cut
+                    over -= cut
+            elif tot > 99 and sec not in beyond:
                 biggest = max(LAYOUT[sec], key=lambda oc: gen[sec][oc])
                 gen[sec][biggest] -= tot - 99
         return gen
