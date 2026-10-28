@@ -2693,7 +2693,7 @@
     "id": "figgich01",
     "kind": "hitter",
     "name": "Chone Figgins",
-    "pos": "UT",
+    "pos": "3B",
     "slot": 2
    },
    {
@@ -2701,7 +2701,7 @@
     "id": "edmonji01",
     "kind": "hitter",
     "name": "Jim Edmonds",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 3
    },
    {
@@ -2709,7 +2709,7 @@
     "id": "simmoan01",
     "kind": "hitter",
     "name": "Andrelton Simmons",
-    "pos": "IF",
+    "pos": "SS",
     "slot": 4
    },
    {
@@ -2717,7 +2717,7 @@
     "id": "salmoti01",
     "kind": "hitter",
     "name": "Tim Salmon",
-    "pos": "OF",
+    "pos": "RF",
     "slot": 5
    },
    {
