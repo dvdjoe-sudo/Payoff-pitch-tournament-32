@@ -27,6 +27,57 @@ A stat-recording audit found every existing tournament block in `data/cards.json
 ## 2026-10-27 — Thirteen bullpen cards get their missing stamina lines
 
 A full-population audit found 13 pitcher cards in `data/cards.json` with `stamina {start: null, relief: null}`, so the fatigue rules (rulebook pp.10–11) had nothing to read: Stewart (BAL), Locker (CWS), Dotel (HOU), Leibrandt (KC), Corbett (LAA), Burnett (MIA), Peralta (MIL), Marberry (MIN), Fernandez (NYM), Reynolds (NYY), Nelson (OAK), Madson (PHI), Moore (SEA). Root cause: the empty-team batch builder leaves stamina and the addenda empty on purpose, expecting `scripts/derive_pitcher_ratings.py` to fill them, but that pass only visits players listed in `data/rosters.json`; these men were the seventh bullpen arm dropped when their clubs went to a six-man bench, and a card outlives its roster spot (`build_cards.py` never deletes one), so the pass never reached them again. Fix: the derive pass now also visits any pitcher card no roster row covers whose stamina is still completely empty, deriving from that card's own peak window by the same 1986-fitted method as the rest of the population. The same visit filled the 13 cards' other empty derived ratings (WP, DP, Hold, Injury, pickoff line, pitcher fielding), the way it treats any card it visits. No other card changed; a second run is a no-op. Values: Start 1–9 from innings per start, Relief Long for every man who both started and relieved in his window, Short for Locker, the one pure reliever. Report: `historical-cards/accuracy/pitcher_ratings.json`.
+## 2026-10-27 — Box names; blowout bullpen usage
+
+These came out of the test series Game 3.
+- **Box score showed player IDs** (e.g. `crowape01`). A batter's line could be created first by a run, steal or pickoff, under his ID with no name. Lines now always carry the display name. The test checks 40 games for any ID-named line.
+- **Blowouts (margin 6+ either way, option `blowout`).**
+  - A usage pull (fatigue, Start rating, Short man's inning) goes ahead only when a Long man is left, and he is the reliever brought in.
+  - The closer and top Short men are never used.
+  - With no Long man, the pitcher wears it until `blowout_cap` (8 runs, the book maximum of 6 plus 2). A removal by a play still forces a change.
+  - Close games are unchanged.
+- **Stress (2,976 games, before → after):**
+  - relievers 3.23 → 2.90 per team-game;
+  - in games with a final margin of 6+, relievers 3.36 → 2.11;
+  - in games with a final margin of 2 or less, relievers 3.23 → 3.22 and starter IP 4.94 → 4.94;
+  - starter IP 4.87 → 4.89; complete games 7.4% → 7.8%;
+  - relief outings with 4+ runs 3.0% → 4.7%;
+  - R 5.03 → 5.11; AVG/SLG .253/.419 → .255/.424.
+- **Sample game.** The score is unchanged at Boston 9, Toronto 1. Quantrill now finishes for Toronto. The WP tally has shifted (fired 2 → 0) because the card sequence changed.
+- Tests in `test_game.box_names_and_blowout_usage`.
+
+## 2026-10-27 — Late bullpen usage: closer re-check, tired relievers
+
+These came out of the test series Game 2.
+- **Closer call is re-checked on the current score.** The 9th-inning closer call is decided at the end of a half. It is now re-checked against the score when the change is made. If the lead is no longer a save spot (lead 1-3, or the tying run on base, at bat or on deck), the starter stays in. In Game 2, Sean Marshall came in with a 5-run lead after the call was made at 5-4.
+- **Tired relievers come out mid-inning.** A reliever who reaches page 11 fatigue (Short: 2 runs; Long: 3 runs) is pulled before the next batter, like a starter. Once-per-game is kept. If the bullpen has no unused arm, he stays in.
+- **Stress (2,976 games, before → after):**
+  - starter IP 4.86 → 4.87;
+  - complete games 6.7% → 7.4%;
+  - relievers 3.02 → 3.23 per team-game;
+  - runs per relief appearance 0.80 → 0.72;
+  - relief outings with 4+ runs 5.1% → 3.0%;
+  - R 5.12 → 5.03 per team-game; AVG/SLG .255/.425 → .253/.419.
+- Tests in `test_game.late_bullpen_usage`.
+
+## 2026-10-27 — Box score scoring, responsible pitcher, manager bullpen
+
+These came out of the test series Game 1 (Montreal at Chicago).
+- **RBI were never credited.** The field existed and was never added to. Now RBI follow rule 9.04: none on a run that scores on a steal, pickoff or wild pitch, when the batter reached on an error, or when he grounded into a double play.
+- **Runs were charged to the pitcher on the mound.** Inherited runners now count against the pitcher who put them on (rule 9.16).
+- **Pitcher lines.** They now show H, ER, BB, SO, HR and HBP. Earned runs are reconstructed for errors: a runner who reached on an error, or a run after outs plus errors reach three, is unearned.
+- **Decisions.** W/L/S and holds are assigned (rules 9.17-9.19) and printed in the rendered box.
+- **Bullpen.** The engine only changed pitchers on page 10-11 fatigue (3+ runs at his Start inning, or 6 runs). A starter who never met those conditions threw complete games of 10+ innings (Game 1: Jenkins and Rogers). This was rule-faithful, not a crash, but unrealistic. New option `bullpen`, default `"manager"`, adds usage:
+  - a fatigued starter comes out at once, and so does one who has allowed 5 runs;
+  - a starter goes his Start rating;
+  - a closer comes in for 9th-inning saves;
+  - Short men work late and close games, Long men early.
+
+  `bullpen="book"` keeps the old behaviour. Once-per-game is unchanged.
+- **Stress (2,976 games).** Runs 5.28 → 5.15 per team-game, AVG .258 → .255, SLG .436 → .425. Starter IP 5.66 → 4.86, complete games 25.9% → 6.7%, relievers 2.59 → 3.02 per team-game.
+  - 168-game check: a save in 33% of games, holds 0.14 per game, starter wins 63%.
+- **Walk-off.** The bottom of the 9th or an extra inning kept going after the home side took the lead (Game 1 replay: two extra batters after the winning run). The game now ends at once (rule 7.01(g)). Rate stats are unchanged in the stress run.
+- Tests in `test_game.official_scoring_and_bullpen`. Sample game: Boston 9, Toronto 1.
 
 ## 2026-10-27 — Intentional walks count as walks on hitter cards
 

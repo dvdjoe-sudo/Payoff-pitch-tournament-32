@@ -73,7 +73,25 @@ The rate harness in `pa_sim.py` is a different tool. It is unchanged. Its error 
 
 - **Starter fatigue (pages 10–11 and 21).** Implemented when Start stamina exists. He tires in the inning equal to Start if he has allowed 3 or more runs, and at 6 runs in any inning. A fatigued BALLPARK is read on WHEELHOUSE with the same percentile. PATIENT and TOUGH are re-read on the page 21 chart. A fatigue single uses the original PATIENT or TOUGH advancement. Slash and OUT qualities are ignored while he is tired (page 21).
 - **Short and long relief (page 11).** Implemented. Each inning he appears in counts as one. Short tires at 2 runs, or after the second inning ends. Long tires at 3 runs, or after the third inning ends.
-- **Removing a tired pitcher.** Not required. The book lets him stay on the fatigue card. This game brings a fatigued starter out at the end of the half-inning, a Short man out after one completed inning, and a Long man out after three. The next arm is the next name in the roster’s bullpen. That order is a usage choice.
+- **Removing a tired pitcher.** Not required. The book lets him stay on the fatigue card. All of this is usage, not rule. Option `bullpen`, default `"manager"` (owner choice 2026-10-27):
+  - A fatigued starter is pulled before the next batter, and so is a starter who has allowed 5 runs.
+  - A starter goes his Start rating in innings, then comes out at the end of a half. He may continue only while leading with 1 run or fewer allowed.
+  - From the 9th, a lead of 1-3 brings the closer, the first unused Short man in roster order, for a starter who has gone 7.
+  - The reliever is a Short man (roster order) from the 7th inning with the score from -1 to +3, a Long man before the 7th, and otherwise the last Short man.
+  - Blowout (margin 6+, `blowout`): a usage pull goes ahead only when a Long man is left, and the closer and top Short men are never used. With no Long man, the pitcher wears it until `blowout_cap` (8 runs, the book maximum of 6 plus 2) or a removal by a play.
+  - The closer call is re-checked on the score at the moment of the change. A reliever who is fatigued (page 11) comes out before the next batter if the pen has an unused arm.
+  - A Short man still comes out after one inning and a Long man after three. A pitcher who leaves cannot return.
+  - `bullpen="book"` keeps the old behaviour: a fatigued starter comes out only at the end of a half, and the next name in the bullpen comes in.
+- **Official scoring (not in the book; MLB rules 9.04, 9.16-9.19).**
+  - RBI: none on a run that scores on a steal, pickoff or wild pitch, when the batter reached on an error, or when he grounded into a double play.
+  - Runs: each run is charged to the pitcher who put the runner on base, so inherited runners count against the earlier pitcher.
+  - Earned runs: a run is unearned when the runner reached on an error, or when the outs plus the errors in the half reach three. This is an approximation of rule 9.16; passed balls are not counted.
+  - Pitcher lines: H, BB, SO, HR and HBP come from the batter lines.
+  - W/L/S/H: the decisions use the run that put the winner ahead for good.
+    - A starter under 5 innings gets no win; the win goes to the most effective reliever.
+    - A save needs a save situation at entry: a lead of 1-3, or the tying run on base, at bat or on deck. The pitcher must then work an inning, or work 3 innings with any lead.
+    - Holds use the same save situation.
+  - The fatigue counter (pages 10-11) still counts every run that scores while the pitcher is in.
 - **Save symbol #, †, or + (pages 11 and 39).** **Missing data.** No card stores it. It is not derived: on the 1986 cards the `+` does not follow saves (Bedrosian and Franco, 29 saves, have none; some starters with one save print `Long+`). The save-situation exception is not applied.
 - **Empty stamina.** Filled. Pitchers built for clubs without a printed stamina line (Whitey Ford and the other once-empty rosters) now carry Start and Relief stamina derived from franchise-window innings per start and per relief game, cut to match the printed 1986 FATIGUE line (Start 79.2% exact, 94.3% within one; Short/Long 100%). Following 1986, a pitcher gets Start if he started and Relief if he relieved; one who did both is Long. If a card still has no stamina, the log says pages 10–11 cannot say when he tires. Pedro Martinez (Start 6) and Dave Stieb (Start 7) have stamina. The sample game uses them.
 - **Pitcher rest chart (page 21).** Not applied. It is days of rest between games. This is one game.
@@ -114,9 +132,9 @@ Lasting sentences that are coded only in part: the extra out on a dropped third 
 
 `engines/sim/samples/tor-at-bos-seed1.txt`
 
-Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Boston 5, Toronto 1, nine innings. Pedro Martinez pitched all nine; Dave Stieb seven innings, Tom Henke one.
+Toronto at Boston, Fenway Park, seed 1, Fast Action Cards. Final: Boston 9, Toronto 1, nine innings. Pedro Martinez pitched all nine (W). Dave Stieb (L) went 4.2 innings; Paul Quantrill wore the last 3.1 in the blowout.
 
-Before intentional walks were counted as walks on hitter cards (2026-10-27), it was Toronto 7, Boston 1 (the capacity repair and default supplemental SO had left that unchanged). Before the platoon re-split and per-hand pitcher calibration (2026-10-27), it was Toronto 7, Boston 3. The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
+Before manager bullpen usage and official scoring (2026-10-27), it was Boston 5, Toronto 1. Before intentional walks were counted as walks on hitter cards (2026-10-27), it was Toronto 7, Boston 1 (the capacity repair and default supplemental SO had left that unchanged). Before the platoon re-split and per-hand pitcher calibration (2026-10-27), it was Toronto 7, Boston 3. The same seed with dice, before the deck was wired, was Toronto 5, Boston 8. With the FAC deck and catcher arms still on the old 4–8 word scale, it was Toronto 0, Boston 4. Before set-file error digits were put on the rulebook direction (2026-10-27), it was Toronto 0, Boston 2. Before the pitcher 2d6 tables were re-solved with solver v0.3 (2026-10-27), it was Toronto 0, Boston 4. Every change to a card or to the deck sequence changes the line score.
 
 `WP?` on this seed: thirteen marked cards drawn, none fired. Five came up with the bases empty. Eight missed the pitcher’s rating (Pedro Martinez and Dave Stieb are rated 30). No drawn card met a pitcher who has no WP rating.
 

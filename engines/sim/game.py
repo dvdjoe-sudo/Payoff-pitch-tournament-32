@@ -253,6 +253,13 @@ class Game:
             "tough_shift": True,
             "slash_in_play": "normal",
             "zero_hr": False,
+            # Usage, not a rule (owner choice 2026-10-27): "manager" pulls a
+            # fatigued or struggling starter, lets him go his Start rating, and
+            # uses the closer in a save spot. "book" keeps the old behaviour
+            # (a reliever only after a starter tires, at the end of a half).
+            "bullpen": "manager",
+            "blowout": 6,       # manager: margin that counts as a blowout (usage choice)
+            "blowout_cap": 8,   # in a blowout, pull anyway at this many runs (book max 6 + 2)
         }
         self.opts.update(opts)
         if self.opts["fac"]:
@@ -292,6 +299,14 @@ class Game:
         self.box = {}
         self.pitch_box = {}
         self.notes = []
+        self._resp = {}        # runner id -> pitcher box key responsible for him
+        self._ue = set()       # runner ids who reached on an error (their run is unearned)
+        self._half_err = 0     # errors this half (earned-run reconstruction)
+        self._pa = None        # the plate appearance in progress (RBI)
+        self._no_rbi = 0       # >0 inside a steal, pickoff or wild pitch
+        self._entries = []     # pitcher appearances for W/L/S/H
+        self._lead_runs = []   # (scoring team, run number, W candidate key, responsible key)
+        self._scorer_wraps()
         self.hr_called = {away["code"]: False, home["code"]: False}
         self.over = False
         self.postponed = False
@@ -321,6 +336,7 @@ class Game:
             "fatigued": False,
             "batters": 0,
         }
+        self._enter(club["code"], arm)
         start = (arm["stamina"] or {}).get("start")
         if start is None:
             self.gap(
@@ -443,16 +459,39 @@ class Game:
         return self.report()
 
     def _half(self):
+        self._ue.clear()
+        self._resp.clear()
+        self._half_err = 0
         while self.outs < 3:
             self._substitute_removed()
             self._maybe_change_pitcher(before_batter=True)
             self._plate()
+            if self._walk_off():
+                self.say("Home team leads in the bottom of the %d. The game is over (walk-off)." % self.inning)
+                return
         state = self.pitcher[self.fielding["code"]]
         state["innings"].add(self.inning)
         self._mark_fatigue(state, end_of_half=True)
         self._maybe_change_pitcher(before_batter=False)
 
+    def _walk_off(self):
+        # Official rule 7.01(g): the game ends when the home side takes the lead in the bottom of the ninth or later.
+        return (self.half == "bottom" and self.inning >= 9
+                and self.score[self.home["code"]] > self.score[self.away["code"]])
+
     def _plate(self):
+        batter = self.batting["lineup"][self.order_index[self.batting["code"]] % 9]
+        outer = self._pa
+        self._pa = {"batter": batter, "rbi": [], "outs0": self.outs, "log0": len(self.log), "on_error": False}
+        self._resp[batter["id"]] = self._pkey()
+        self._ue.discard(batter["id"])
+        try:
+            self._plate_inner()
+        finally:
+            pa, self._pa = self._pa, outer
+            self._settle_rbi(pa)
+
+    def _plate_inner(self):
         club = self.batting
         idx = self.order_index[club["code"]] % 9
         batter = club["lineup"][idx]
@@ -613,6 +652,15 @@ class Game:
         if player["removed"]:
             remove = True
             reason = "The pitcher was removed by a play."
+        forced = bool(player["removed"])
+        if not remove:
+            why = self._usage_reason(before_batter)
+            if why:
+                remove, reason = True, why
+        cap = self.opts.get("blowout_cap", 8)
+        if before_batter and self._blowout() and state["runs"] >= cap and not forced and self._pen_left():
+            remove, forced = True, True
+            reason = "Manager: blowout, but %s has allowed %d runs (cap %d) and is pulled." % (player["name"], state["runs"], cap)
         if not before_batter and self._no_more_batters():
             return
         code = self.fielding["code"]
@@ -620,6 +668,12 @@ class Game:
         self._pending_change = pending
         if not remove and before_batter and code in pending:
             remove, reason = True, pending[code]
+            if reason.startswith(self.SAVE_CALL) and not self._save_spot_now():
+                pending.pop(code, None)
+                self.say("Manager: the save situation is gone (score %s %d, %s %d). %s stays in." % (
+                    self.away["code"], self.score[self.away["code"]], self.home["code"],
+                    self.score[self.home["code"]], player["name"]))
+                return
         if not remove:
             return
         if not before_batter:
@@ -629,6 +683,13 @@ class Game:
             pending[code] = reason
             return
         pending.pop(code, None)
+        if not forced and self._blowout() and not self._long_left():
+            # Blowout: no mop-up/long man left, so he wears it (usage choice).
+            seen = self._wears = getattr(self, "_wears", set())
+            if player["id"] not in seen:
+                seen.add(player["id"])
+                self.say("Manager: blowout (%s). No long man is left, so %s stays in and wears it." % (self._margin_text(), player["name"]))
+            return
         # A pitcher who has left cannot come back in the same game.
         self._pitched = getattr(self, "_pitched", {})
         gone = self._pitched.setdefault(code, set())
@@ -637,14 +698,203 @@ class Game:
         if not pen:
             self.gap("%s stays in. The bullpen has no remaining arm. The book does not name a replacement." % player["name"])
             return
-        nxt = pen[0]
+        nxt = self._pick_reliever(pen)
         if (nxt["stamina"] or {}).get("relief") is None and (nxt["stamina"] or {}).get("start") is None:
             self.gap("%s has no relief stamina. He enters anyway. Pages 10-11 do not say when he tires." % nxt["name"])
         self.pitcher[self.fielding["code"]] = {
             "player": nxt, "runs": 0, "innings": set(), "outs": 0, "fatigued": False, "batters": 0,
         }
         self._pitch_line()
+        self._enter(self.fielding["code"], nxt)
         self.say("Pitching change: %s replaces %s. %s" % (nxt["name"], player["name"], reason))
+
+    # ---- official scoring (owner ruling 2026-10-27) ----------------------
+    def _pkey(self, code=None):
+        code = code or self.fielding["code"]
+        state = self.pitcher.get(code)
+        return code + "|" + state["player"]["id"] if state else None
+
+    def _scorer_wraps(self):
+        """Runs that score inside a steal, pickoff, wild pitch or balk are
+        not batted in (rule 9.04(b))."""
+        for name in ("_wild_pitch", "_wild_reroll", "_resolve_steal", "_auto_steal", "_hold_steal",
+                     "_pickoff_runner", "_pickoff", "_fac_steal_error", "_fac_steal_drop"):
+            orig = getattr(self, name, None)
+            if orig is None:
+                continue
+
+            def wrap(*a, _o=orig, **k):
+                self._no_rbi += 1
+                try:
+                    return _o(*a, **k)
+                finally:
+                    self._no_rbi -= 1
+            setattr(self, name, wrap)
+
+    def _run_scores(self, runner):
+        """One run: score, the current pitcher's fatigue count (pages 10-11
+        count runs while he pitches), the responsible pitcher's R and ER
+        (rules 9.16), and the batter's RBI (rule 9.04)."""
+        code = self.batting["code"]
+        self.score[code] += 1
+        self.pitcher[self.fielding["code"]]["runs"] += 1
+        self._line_id(code, runner["id"], name=runner.get("name"), r=1)
+        resp = self._resp.pop(runner["id"], None) or self._pkey()
+        # Earned unless the runner reached on an error, or the inning would
+        # already have ended had the errors been outs (rule 9.16(a)).
+        earned = runner["id"] not in self._ue and self.outs + self._half_err < 3
+        self._ue.discard(runner["id"])
+        row = self.pitch_box.get(resp)
+        if row is None:  # a runner placed by a rule (no pitcher put him on)
+            resp = self._pkey()
+            self._pitch_line(r=1, er=1 if earned else 0)
+        else:
+            row["r"] += 1
+            row["er"] += 1 if earned else 0
+        if self._pa is not None and not self._no_rbi:
+            self._pa["rbi"].append(runner["id"])
+        fld = self.fielding["code"]
+        # every run; the winner's run number (loser's final + 1) is the one
+        # that put them ahead for good (rule 9.17)
+        self._lead_runs.append((code, self.score[code], self._pkey(code), resp))
+        if self._entries:
+            cur = self._entries[-1] if self._entries[-1]["code"] == fld else None
+            for e in reversed(self._entries):
+                if e["code"] == fld:
+                    cur = e
+                    break
+            if cur and cur["save_spot"] and self.score[code] >= self.score[fld]:
+                cur["blown"] = True
+
+    def _settle_rbi(self, pa):
+        """No RBI when the batter reached on an error or grounded into a
+        double play (rule 9.04(b)); otherwise every run in the play counts."""
+        if not pa:
+            return
+        text = " ".join(self.log[pa["log0"]:]).lower()
+        dp = "double play" in text and self.outs - pa["outs0"] >= 2 if self.outs < 3 else "double play" in text
+        if pa["on_error"] or dp:
+            return
+        n = len(pa["rbi"])
+        if n:
+            self._line(pa["batter"], rbi=n)
+
+    def _enter(self, code, player):
+        fld_lead = self.score[code] - self.score[self.away["code"] if code == self.home["code"] else self.home["code"]]
+        on = sum(1 for b in self.bases if b) if code == self.fielding["code"] else 0
+        # rule 9.19: lead of 3 or less, or the tying run on base, at bat or on deck
+        spot = len(self._entries) > 0 and fld_lead >= 1 and (fld_lead <= 3 or fld_lead <= on + 2)
+        self._entries.append({"code": code, "key": code + "|" + player["id"], "lead": fld_lead,
+                              "save_spot": spot, "blown": False, "inning": self.inning})
+
+    def _decisions(self):
+        """W, L, S and holds by rule 9.17-9.19, from the run that put the
+        winner ahead for good."""
+        a, h = self.away["code"], self.home["code"]
+        if self.score[a] == self.score[h]:
+            return {}
+        win, lose = (a, h) if self.score[a] > self.score[h] else (h, a)
+        go = [r for r in self._lead_runs if r[0] == win and r[1] == self.score[lose] + 1]
+        if not go:
+            return {}
+        _team, _n, wkey, lkey = go[-1]
+        wins = [e for e in self._entries if e["code"] == win]
+        starter = wins[0]["key"]
+        if wkey == starter and self.pitch_box.get(starter, {}).get("outs", 0) < 15 and len(wins) > 1:
+            # starter short of 5 innings: the most effective reliever
+            rel = [e["key"] for e in wins[1:]]
+            wkey = max(rel, key=lambda k: (self.pitch_box[k]["outs"] - 3 * self.pitch_box[k]["r"]))
+        out = {"W": wkey, "L": lkey, "S": None, "H": []}
+        last = wins[-1]
+        if last["key"] != wkey and not last["blown"]:
+            outs = self.pitch_box.get(last["key"], {}).get("outs", 0)
+            if (last["save_spot"] and (outs >= 3 or last["lead"] < 3)) or outs >= 9:
+                out["S"] = last["key"]
+        for e in wins[1:-1]:
+            if e["save_spot"] and not e["blown"] and e["key"] != wkey and self.pitch_box.get(e["key"], {}).get("outs", 0) >= 1:
+                out["H"].append(e["key"])
+        return out
+
+    # ---- bullpen usage --------------------------------------------------
+    def _usage_reason(self, before_batter):
+        if self.opts.get("bullpen") != "manager":
+            return None
+        code = self.fielding["code"]
+        state = self.pitcher[code]
+        player = state["player"]
+        stamina = player["stamina"] or {}
+        starter = bool(self._entries) and [e for e in self._entries if e["code"] == code][0]["key"] == self._pkey()
+        if not starter:
+            if before_batter and not state["fatigued"] and state["batters"] > 0:
+                self._mark_fatigue(state, end_of_half=False)
+            if before_batter and state["fatigued"] and state["batters"] > 0 and self._pen_left():
+                return "Manager: the reliever is fatigued (page 11), so he is pulled before the next batter."
+            return None
+        if before_batter:
+            if state["fatigued"]:
+                return "Manager: the starter is fatigued (pages 10-11), so he is pulled before the next batter."
+            if state["runs"] >= 5:
+                return "Manager: the starter has allowed %d runs and is pulled." % state["runs"]
+            return None
+        nxt = self.inning + 1
+        done = len(state["innings"])
+        start = stamina.get("start") or 0
+        lead = self.score[code] - self.score[self.batting["code"]]
+        if start and done >= start and not (lead > 0 and state["runs"] <= 1 and done < 9):
+            return "Manager: the starter has gone his Start rating (%s innings)." % start
+        if nxt >= 9 and 1 <= lead <= 3 and done >= 7:
+            return "Manager: save situation in inning %d; the closer comes in." % nxt
+        return None
+
+    SAVE_CALL = "Manager: save situation in inning"
+
+    def _pen_left(self):
+        gone = getattr(self, "_pitched", {}).get(self.fielding["code"], set())
+        me = self.pitcher[self.fielding["code"]]["player"]["id"]
+        return any(not p["removed"] and p["id"] not in gone and p["id"] != me for p in self.fielding["bullpen"])
+
+    def _blowout(self):
+        if self.opts.get("bullpen") != "manager":
+            return False
+        return abs(self.score[self.home["code"]] - self.score[self.away["code"]]) >= self.opts.get("blowout", 6)
+
+    def _margin_text(self):
+        return "%s %d, %s %d" % (self.away["code"], self.score[self.away["code"]], self.home["code"], self.score[self.home["code"]])
+
+    def _long_left(self):
+        gone = getattr(self, "_pitched", {}).get(self.fielding["code"], set())
+        me = self.pitcher[self.fielding["code"]]["player"]["id"]
+        return any(not p["removed"] and p["id"] not in gone and p["id"] != me
+                   and (p["stamina"] or {}).get("relief") == "Long" for p in self.fielding["bullpen"])
+
+    def _save_spot_now(self):
+        """Re-check the save situation with the current score when the change is made."""
+        code = self.fielding["code"]
+        lead = self.score[code] - self.score[self.batting["code"]]
+        on = sum(1 for b in self.bases if b)
+        return lead >= 1 and (lead <= 3 or lead <= on + 2)
+
+    def _pick_reliever(self, pen):
+        code = self.fielding["code"]
+        lead = self.score[code] - self.score[self.batting["code"]]
+        late = self.inning >= 7
+        short = [p for p in pen if (p["stamina"] or {}).get("relief") == "Short"]
+        long_ = [p for p in pen if (p["stamina"] or {}).get("relief") == "Long"]
+        if self.opts.get("bullpen") == "manager":
+            if self._blowout():
+                # Never the closer or top relievers in a blowout: long men first.
+                if long_:
+                    return long_[0]
+                if short:
+                    return short[-1]
+                return pen[-1]
+            if late and -1 <= lead <= 3 and short:
+                return short[0]            # closer / setup, in roster order
+            if not late and long_:
+                return long_[0]
+            if short:
+                return short[-1]           # low-leverage: last man
+        return pen[0]
 
     INFIELD = {"1B", "2B", "3B", "SS"}
     OUTFIELD = {"LF", "CF", "RF", "OF"}
@@ -1400,10 +1650,7 @@ class Game:
         self.bases[base] = None
         dest = base + n
         if dest >= 3:
-            self.score[self.batting["code"]] += 1
-            self.pitcher[self.fielding["code"]]["runs"] += 1
-            self._pitch_line(r=1)
-            self._line_id(self.batting["code"], runner["id"], r=1)
+            self._run_scores(runner)
             self.say("%s scores from %s (%s)." % (runner["name"], _base_name(base), text))
         else:
             if self.bases[dest] is not None:
@@ -2137,6 +2384,9 @@ class Game:
         self._place(batter, batter_bases)
         self._line(batter, ab=1, h=1 if hit else 0, tb=batter_bases if hit else 0)
         if error and not hit:
+            self._ue.add(batter["id"])
+            if self._pa is not None:
+                self._pa["on_error"] = True
             self._line_field(self.fielding["code"], e=1)
         self._after_reach(batter)
 
@@ -2174,10 +2424,8 @@ class Game:
         self._line(batter, ab=1, so=1)
 
     def _score_batter(self, batter, hit):
-        self.score[self.batting["code"]] += 1
-        self.pitcher[self.fielding["code"]]["runs"] += 1
-        self._pitch_line(r=1)
-        self._line(batter, r=1)
+        self._resp.setdefault(batter["id"], self._pkey())
+        self._run_scores(batter)
         self.say("%s scores." % batter["name"])
 
     def _runners_advance(self, n):
@@ -2190,10 +2438,7 @@ class Game:
             runner = self.bases[base]
             self.bases[base] = None
             if dest >= 3:
-                self.score[self.batting["code"]] += 1
-                self.pitcher[self.fielding["code"]]["runs"] += 1
-                self._pitch_line(r=1)
-                self._line_id(self.batting["code"], runner["id"], r=1)
+                self._run_scores(runner)
                 self.say("%s scores from %s." % (runner["name"], _base_name(base)))
             else:
                 self.bases[dest] = runner
@@ -2214,10 +2459,7 @@ class Game:
             runner = self.bases[base]
             self.bases[base] = None
             if base == 2:
-                self.score[self.batting["code"]] += 1
-                self.pitcher[self.fielding["code"]]["runs"] += 1
-                self._pitch_line(r=1)
-                self._line_id(self.batting["code"], runner["id"], r=1)
+                self._run_scores(runner)
                 self.say("%s scores on the force." % runner["name"])
             else:
                 self.bases[base + 1] = runner
@@ -2246,10 +2488,7 @@ class Game:
         if runner is None or self.outs >= 3:
             return
         self.bases[base] = None
-        self.score[self.batting["code"]] += 1
-        self.pitcher[self.fielding["code"]]["runs"] += 1
-        self._pitch_line(r=1)
-        self._line_id(self.batting["code"], runner["id"], r=1)
+        self._run_scores(runner)
         self.say("%s %s." % (runner["name"], text))
 
     def _move_runner(self, src, dest, text):
@@ -2677,25 +2916,37 @@ class Game:
         if not state:
             return
         player = state["player"]
-        row = self.pitch_box.setdefault(self.fielding["code"] + "|" + player["id"], {
-            "name": player["name"], "outs": 0, "r": 0, "bf": 0,
-        })
+        row = self.pitch_box.setdefault(self.fielding["code"] + "|" + player["id"], _empty_pitch(player["name"]))
         for key, amount in add.items():
             row[key] = row.get(key, 0) + amount
 
     def _line(self, batter, **add):
         row = self.box.setdefault(self.batting["code"] + "|" + batter["id"], _empty_line(batter))
+        if row.get("name") in (None, "", row.get("id")):  # created first by _line_id
+            row.update({k: v for k, v in _empty_line(batter).items() if k in ("name", "pos")})
         for key, amount in add.items():
             row[key] = row.get(key, 0) + amount
+        charge = {k: add[k] for k in ("h", "bb", "so", "hr", "hbp") if add.get(k)}
+        if charge:
+            self._pitch_line(**charge)
 
-    def _line_id(self, code, pid, **add):
-        row = self.box.setdefault(code + "|" + pid, {"id": pid, "name": pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0})
+    def _line_id(self, code, pid, name=None, **add):
+        key = code + "|" + pid
+        who = None
+        if key not in self.box:
+            club = self.home if self.home["code"] == code else self.away
+            who = next((p for grp in ("people", "lineup", "bench") for p in club.get(grp) or [] if p.get("id") == pid), None)
+            if who is not None and who.get("pos") is not None:
+                self.box[key] = _empty_line(who)
+        row = self.box.setdefault(key, {"id": pid, "name": (who or {}).get("name") or name or pid, "ab": 0, "r": 0, "h": 0, "hr": 0, "rbi": 0, "bb": 0, "so": 0, "hbp": 0, "sb": 0, "cs": 0, "po": 0, "sf": 0, "sh": 0, "tb": 0})
         for key, amount in add.items():
             row[key] = row.get(key, 0) + amount
 
     def _line_field(self, code, e=0):
         self.box.setdefault(code + "|field", {"e": 0})
         self.box[code + "|field"]["e"] += e
+        if code == self.fielding["code"]:
+            self._half_err += e
 
     def report(self):
         return {
@@ -2710,6 +2961,7 @@ class Game:
             "gaps": self.gaps,
             "box": self.box,
             "pitching": self.pitch_box,
+            "decisions": self._decisions(),
             "options": self.opts,
             "postponed": self.postponed,
             "wp": {
@@ -2721,6 +2973,10 @@ class Game:
                 "unmarked": self.wp_unmarked,
             },
         }
+
+
+def _empty_pitch(name):
+    return {"name": name, "outs": 0, "bf": 0, "h": 0, "r": 0, "er": 0, "bb": 0, "so": 0, "hr": 0, "hbp": 0}
 
 
 def _empty_line(batter):
@@ -2774,8 +3030,13 @@ def render(report):
     lines.append("Pitching")
     for key, row in sorted(report.get("pitching", {}).items()):
         outs = row.get("outs") or 0
-        lines.append("%s %s IP %d.%d R %s BF %s" % (
-            key, row.get("name"), outs // 3, outs % 3, row.get("r"), row.get("bf")))
+        lines.append("%s %s IP %d.%d H %s R %s ER %s BB %s SO %s HR %s BF %s" % (
+            key, row.get("name"), outs // 3, outs % 3, row.get("h", 0), row.get("r"), row.get("er", 0),
+            row.get("bb", 0), row.get("so", 0), row.get("hr", 0), row.get("bf")))
+    dec = report.get("decisions") or {}
+    if dec:
+        lines.append("W %s  L %s  S %s  H %s" % (dec.get("W"), dec.get("L"), dec.get("S") or "-",
+                                                  ", ".join(dec.get("H") or []) or "-"))
     lines.append("")
     lines.append("Box")
     for key, row in sorted(report["box"].items()):
@@ -2783,9 +3044,9 @@ def render(report):
             lines.append("%s errors %s" % (key, row.get("e")))
             continue
         lines.append(
-            "%s %s AB %s R %s H %s HR %s BB %s SO %s SB %s CS %s"
+            "%s %s AB %s R %s H %s HR %s RBI %s BB %s SO %s SB %s CS %s"
             % (key, row.get("name"), row.get("ab"), row.get("r"), row.get("h"),
-               row.get("hr"), row.get("bb"), row.get("so"), row.get("sb"), row.get("cs"))
+               row.get("hr"), row.get("rbi"), row.get("bb"), row.get("so"), row.get("sb"), row.get("cs"))
         )
     if report["gaps"]:
         lines.append("")
