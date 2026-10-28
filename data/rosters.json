@@ -2261,7 +2261,7 @@
     "id": "gonzama01",
     "kind": "hitter",
     "name": "Marwin Gonz\u00e1lez",
-    "pos": "UT",
+    "pos": "1B",
     "slot": 2
    },
    {
@@ -2269,7 +2269,7 @@
     "id": "springe01",
     "kind": "hitter",
     "name": "George Springer",
-    "pos": "OF",
+    "pos": "RF",
     "slot": 3
    },
    {
@@ -2277,7 +2277,7 @@
     "id": "penaje02",
     "kind": "hitter",
     "name": "Jeremy Pe\u00f1a",
-    "pos": "IF",
+    "pos": "SS",
     "slot": 4
    },
    {
@@ -2285,7 +2285,7 @@
     "id": "wynnji01",
     "kind": "hitter",
     "name": "Jim Wynn",
-    "pos": "PH",
+    "pos": "CF",
     "slot": 5
    },
    {
@@ -3125,7 +3125,7 @@
     "id": "lopezot01",
     "kind": "hitter",
     "name": "Otto Lopez",
-    "pos": "UT",
+    "pos": "2B",
     "slot": 2
    },
    {
@@ -3133,7 +3133,7 @@
     "id": "ugglada01",
     "kind": "hitter",
     "name": "Dan Uggla",
-    "pos": "IF",
+    "pos": "2B",
     "slot": 3
    },
    {
@@ -3141,7 +3141,7 @@
     "id": "ozunama01",
     "kind": "hitter",
     "name": "Marcell Ozuna",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 4
    },
    {
@@ -4205,7 +4205,7 @@
     "id": "lazzeto01",
     "kind": "hitter",
     "name": "Tony Lazzeri",
-    "pos": "IF",
+    "pos": "2B",
     "slot": 2
    },
    {
@@ -4221,7 +4221,7 @@
     "id": "willibe02",
     "kind": "hitter",
     "name": "Bernie Williams",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 4
    },
    {
@@ -4229,7 +4229,7 @@
     "id": "jacksre01",
     "kind": "hitter",
     "name": "Reggie Jackson",
-    "pos": "OF",
+    "pos": "RF",
     "slot": 5
    },
    {
