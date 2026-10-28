@@ -168,5 +168,29 @@
    "hitters": "five best franchise seasons by league OPS+ (one decimal), PA>=300",
    "pitchers": "five best franchise seasons by one-decimal ERA+ times IP, bullpen floor 30 IP"
   }
+ },
+ "fielding_note": {
+  "script": "scripts/derive_hitter_fielding.py (run 2026-10-27 for this card only; its report file was left at the main version)",
+  "positions": [
+   {
+    "arm": 4,
+    "e": 4,
+    "pos": "RF",
+    "range": "B"
+   }
+  ],
+  "of_arm_basis": {
+   "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+   "of_a": 100,
+   "of_g": 739,
+   "rel_assist_rate": 2.356,
+   "years_used": [
+    1962,
+    1963,
+    1964,
+    1965,
+    1968
+   ]
+  }
  }
 }
