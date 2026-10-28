@@ -24,13 +24,10 @@ At least 10 plate appearances.
 | Player | Team | AVG | H | AB | PA |
 | --- | --- | --- | --- | --- | --- |
 | Derek Jeter | New York Yankees | .529 | 9 | 17 | 23 |
-| Albert Pujols | St. Louis Cardinals | .500 | 8 | 16 | 18 |
 | Babe Ruth | New York Yankees | .500 | 8 | 16 | 21 |
-| Troy Tulowitzki | Colorado Rockies | .500 | 8 | 16 | 16 |
+| Albert Pujols | St. Louis Cardinals | .500 | 7 | 14 | 17 |
 | Lou Gehrig | New York Yankees | .444 | 8 | 18 | 21 |
 | Mel Ott | San Francisco Giants | .438 | 7 | 16 | 19 |
-| Stan Musial | St. Louis Cardinals | .412 | 7 | 17 | 19 |
-| Rogers Hornsby | St. Louis Cardinals | .400 | 6 | 15 | 18 |
 | Jimmie Foxx | Boston Red Sox | .391 | 9 | 23 | 27 |
 | Willie Mays | San Francisco Giants | .389 | 7 | 18 | 20 |
 | Nomar Garciaparra | Boston Red Sox | .368 | 7 | 19 | 25 |
@@ -48,53 +45,54 @@ At least 10 plate appearances.
 | Ted Williams | Boston Red Sox | .318 | 7 | 22 | 30 |
 | Toby Hall | Tampa Bay Rays | .318 | 7 | 22 | 23 |
 | Christian Yelich | Miami Marlins | .313 | 5 | 16 | 19 |
+| Stan Musial | St. Louis Cardinals | .313 | 5 | 16 | 19 |
 | Ty Cobb | Detroit Tigers | .308 | 8 | 26 | 29 |
-| Enos Slaughter | St. Louis Cardinals | .308 | 4 | 13 | 16 |
 | Juan Soto | Washington Nationals | .294 | 5 | 17 | 20 |
 | Willie Randolph | New York Yankees | .294 | 5 | 17 | 20 |
 | Steve Finley | Arizona Diamondbacks | .292 | 7 | 24 | 25 |
 | George Kell | Detroit Tigers | .286 | 6 | 21 | 26 |
 | Cliff Floyd | Miami Marlins | .286 | 4 | 14 | 16 |
+| Joe Medwick | St. Louis Cardinals | .286 | 4 | 14 | 16 |
+| Rogers Hornsby | St. Louis Cardinals | .286 | 4 | 14 | 18 |
 | Al Kaline | Detroit Tigers | .280 | 7 | 25 | 27 |
 | Mickey Mantle | New York Yankees | .278 | 5 | 18 | 21 |
 | Yogi Berra | New York Yankees | .278 | 5 | 18 | 19 |
 | Tris Speaker | Boston Red Sox | .276 | 8 | 29 | 31 |
-| Ken Boyer | St. Louis Cardinals | .273 | 3 | 11 | 16 |
+| Troy Tulowitzki | Colorado Rockies | .267 | 4 | 15 | 15 |
 | Joe DiMaggio | New York Yankees | .263 | 5 | 19 | 21 |
 | Joey Wendle | Tampa Bay Rays | .250 | 5 | 20 | 23 |
 | Harry Heilmann | Detroit Tigers | .250 | 4 | 16 | 16 |
-| Charlie Blackmon | Colorado Rockies | .250 | 3 | 12 | 13 |
 | Ryan Zimmerman | Washington Nationals | .235 | 4 | 17 | 20 |
-| Larry Walker | Colorado Rockies | .231 | 3 | 13 | 16 |
 | David Ortiz | Boston Red Sox | .222 | 6 | 27 | 30 |
 | Bill Freehan | Detroit Tigers | .222 | 4 | 18 | 22 |
+| Ozzie Smith | St. Louis Cardinals | .222 | 4 | 18 | 19 |
 | Will Clark | San Francisco Giants | .222 | 4 | 18 | 20 |
 | Willie McCovey | San Francisco Giants | .222 | 4 | 18 | 19 |
 | Buster Posey | San Francisco Giants | .214 | 3 | 14 | 16 |
-| Joe Medwick | St. Louis Cardinals | .214 | 3 | 14 | 16 |
+| Enos Slaughter | St. Louis Cardinals | .214 | 3 | 14 | 16 |
+| Larry Walker | Colorado Rockies | .214 | 3 | 14 | 15 |
 | Luis Castillo | Miami Marlins | .214 | 3 | 14 | 18 |
-| Ozzie Smith | St. Louis Cardinals | .214 | 3 | 14 | 15 |
 | Bryce Harper | Washington Nationals | .211 | 4 | 19 | 20 |
 | Trea Turner | Washington Nationals | .211 | 4 | 19 | 20 |
 | Jeff Conine | Miami Marlins | .200 | 3 | 15 | 16 |
+| Yadier Molina | St. Louis Cardinals | .200 | 3 | 15 | 16 |
 | Bobby Veach | Detroit Tigers | .200 | 2 | 10 | 10 |
 | Denard Span | Washington Nationals | .190 | 4 | 21 | 21 |
 | Alex Rodriguez | New York Yankees | .188 | 3 | 16 | 21 |
 | Barry Bonds | San Francisco Giants | .188 | 3 | 16 | 19 |
 | Jeff Kent | San Francisco Giants | .188 | 3 | 16 | 18 |
-| Todd Helton | Colorado Rockies | .182 | 2 | 11 | 16 |
+| Todd Helton | Colorado Rockies | .182 | 2 | 11 | 15 |
 | Anthony Rendon | Washington Nationals | .176 | 3 | 17 | 19 |
-| DJ LeMahieu | Colorado Rockies | .176 | 3 | 17 | 18 |
+| DJ LeMahieu | Colorado Rockies | .176 | 3 | 17 | 17 |
 | Dustin Pedroia | Boston Red Sox | .167 | 5 | 30 | 30 |
 | Miguel Cabrera | Detroit Tigers | .167 | 4 | 24 | 26 |
 | Corbin Carroll | Arizona Diamondbacks | .154 | 4 | 26 | 28 |
-| Matt Holliday | Colorado Rockies | .154 | 2 | 13 | 15 |
+| Matt Holliday | Colorado Rockies | .154 | 2 | 13 | 14 |
 | Alan Trammell | Detroit Tigers | .150 | 3 | 20 | 24 |
 | Ben Zobrist | Tampa Bay Rays | .150 | 3 | 20 | 24 |
 | Geraldo Perdomo | Arizona Diamondbacks | .150 | 3 | 20 | 22 |
+| Nolan Arenado | Colorado Rockies | .143 | 2 | 14 | 15 |
 | Art Fletcher | San Francisco Giants | .133 | 2 | 15 | 15 |
-| Nolan Arenado | Colorado Rockies | .133 | 2 | 15 | 16 |
-| Yadier Molina | St. Louis Cardinals | .133 | 2 | 15 | 16 |
 | Christian Walker | Arizona Diamondbacks | .125 | 3 | 24 | 26 |
 | Luis Gonzalez | Arizona Diamondbacks | .125 | 3 | 24 | 27 |
 | Evan Longoria | Tampa Bay Rays | .120 | 3 | 25 | 27 |
@@ -104,10 +102,12 @@ At least 10 plate appearances.
 | Hank Greenberg | Detroit Tigers | .100 | 2 | 20 | 27 |
 | Carlos Pena | Tampa Bay Rays | .095 | 2 | 21 | 21 |
 | Dwight Evans | Boston Red Sox | .091 | 2 | 22 | 26 |
+| Charlie Blackmon | Colorado Rockies | .091 | 1 | 11 | 12 |
+| Ken Boyer | St. Louis Cardinals | .091 | 1 | 11 | 16 |
 | Carl Crawford | Tampa Bay Rays | .083 | 2 | 24 | 24 |
 | Paul Goldschmidt | Arizona Diamondbacks | .083 | 2 | 24 | 28 |
+| Andres Galarraga | Colorado Rockies | .083 | 1 | 12 | 14 |
 | Daniel Murphy | Washington Nationals | .083 | 1 | 12 | 18 |
-| Andres Galarraga | Colorado Rockies | .071 | 1 | 14 | 14 |
 | Matt Williams | San Francisco Giants | .071 | 1 | 14 | 15 |
 | Wilson Ramos | Washington Nationals | .071 | 1 | 14 | 16 |
 | J.T. Realmuto | Miami Marlins | .000 | 0 | 10 | 10 |
@@ -121,26 +121,24 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | --- | --- | --- | --- |
 | Derek Jeter | New York Yankees | .619 | 23 |
 | Babe Ruth | New York Yankees | .619 | 21 |
-| Albert Pujols | St. Louis Cardinals | .556 | 18 |
-| Troy Tulowitzki | Colorado Rockies | .500 | 16 |
+| Albert Pujols | St. Louis Cardinals | .588 | 17 |
 | Ted Williams | Boston Red Sox | .500 | 30 |
-| Rogers Hornsby | St. Louis Cardinals | .500 | 18 |
 | Wade Boggs | Boston Red Sox | .478 | 25 |
 | Lou Gehrig | New York Yankees | .476 | 21 |
 | Mel Ott | San Francisco Giants | .474 | 19 |
-| Stan Musial | St. Louis Cardinals | .474 | 19 |
-| Ken Boyer | St. Louis Cardinals | .467 | 16 |
 | Willie Mays | San Francisco Giants | .450 | 20 |
 | Jimmie Foxx | Boston Red Sox | .444 | 27 |
 | Gary Sheffield | Miami Marlins | .444 | 18 |
-| Todd Helton | Colorado Rockies | .438 | 16 |
+| Rogers Hornsby | St. Louis Cardinals | .444 | 18 |
 | Christian Yelich | Miami Marlins | .421 | 19 |
+| Stan Musial | St. Louis Cardinals | .421 | 19 |
 | Jason Bartlett | Tampa Bay Rays | .409 | 23 |
 | Ketel Marte | Arizona Diamondbacks | .407 | 27 |
 | Nomar Garciaparra | Boston Red Sox | .400 | 25 |
 | Aaron Judge | New York Yankees | .400 | 20 |
 | George Kell | Detroit Tigers | .400 | 26 |
 | Juan Soto | Washington Nationals | .400 | 20 |
+| Todd Helton | Colorado Rockies | .400 | 15 |
 | Charlie Gehringer | Detroit Tigers | .393 | 28 |
 | Matt Williams | Arizona Diamondbacks | .391 | 24 |
 | Luis Castillo | Miami Marlins | .389 | 18 |
@@ -162,48 +160,50 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Toby Hall | Tampa Bay Rays | .318 | 23 |
 | Yogi Berra | New York Yankees | .316 | 19 |
 | Hanley Ramirez | Miami Marlins | .313 | 16 |
-| Larry Walker | Colorado Rockies | .313 | 16 |
-| Enos Slaughter | St. Louis Cardinals | .308 | 16 |
-| Charlie Blackmon | Colorado Rockies | .308 | 13 |
+| Joe Medwick | St. Louis Cardinals | .313 | 16 |
 | David Ortiz | Boston Red Sox | .300 | 30 |
 | Bill Freehan | Detroit Tigers | .300 | 22 |
 | Will Clark | San Francisco Giants | .300 | 20 |
 | Ben Zobrist | Tampa Bay Rays | .292 | 24 |
+| Ken Boyer | St. Louis Cardinals | .286 | 16 |
+| Troy Tulowitzki | Colorado Rockies | .267 | 15 |
 | Buster Posey | San Francisco Giants | .267 | 16 |
-| Ozzie Smith | St. Louis Cardinals | .267 | 15 |
+| Larry Walker | Colorado Rockies | .267 | 15 |
+| Ozzie Smith | St. Louis Cardinals | .263 | 19 |
 | Anthony Rendon | Washington Nationals | .263 | 19 |
 | Barry Bonds | San Francisco Giants | .263 | 19 |
 | Bryce Harper | Washington Nationals | .250 | 20 |
 | Harry Heilmann | Detroit Tigers | .250 | 16 |
 | Trea Turner | Washington Nationals | .250 | 20 |
 | Jeff Conine | Miami Marlins | .250 | 16 |
-| Joe Medwick | St. Louis Cardinals | .250 | 16 |
 | Jeff Kent | San Francisco Giants | .235 | 18 |
 | Miguel Cabrera | Detroit Tigers | .231 | 26 |
 | Dwight Evans | Boston Red Sox | .231 | 26 |
 | Willie McCovey | San Francisco Giants | .222 | 19 |
-| DJ LeMahieu | Colorado Rockies | .222 | 18 |
 | Luis Gonzalez | Arizona Diamondbacks | .222 | 27 |
 | Corbin Carroll | Arizona Diamondbacks | .214 | 28 |
-| Matt Holliday | Colorado Rockies | .214 | 15 |
+| Enos Slaughter | St. Louis Cardinals | .214 | 16 |
+| Matt Holliday | Colorado Rockies | .214 | 14 |
 | Paul Goldschmidt | Arizona Diamondbacks | .214 | 28 |
+| Andres Galarraga | Colorado Rockies | .214 | 14 |
+| Yadier Molina | St. Louis Cardinals | .200 | 16 |
 | Bobby Veach | Detroit Tigers | .200 | 10 |
 | Christian Walker | Arizona Diamondbacks | .192 | 26 |
 | Denard Span | Washington Nationals | .190 | 21 |
-| Yadier Molina | St. Louis Cardinals | .188 | 16 |
 | Evan Longoria | Tampa Bay Rays | .185 | 27 |
 | Geraldo Perdomo | Arizona Diamondbacks | .182 | 22 |
+| DJ LeMahieu | Colorado Rockies | .176 | 17 |
 | Dustin Pedroia | Boston Red Sox | .167 | 30 |
 | Giancarlo Stanton | Miami Marlins | .167 | 18 |
+| Charlie Blackmon | Colorado Rockies | .167 | 12 |
 | Carlton Fisk | Boston Red Sox | .158 | 24 |
 | Alan Trammell | Detroit Tigers | .150 | 24 |
 | Brandon Lowe | Tampa Bay Rays | .150 | 20 |
 | Art Fletcher | San Francisco Giants | .133 | 15 |
-| Nolan Arenado | Colorado Rockies | .125 | 16 |
+| Nolan Arenado | Colorado Rockies | .133 | 15 |
 | Carlos Pena | Tampa Bay Rays | .095 | 21 |
 | Carl Crawford | Tampa Bay Rays | .083 | 24 |
 | Daniel Murphy | Washington Nationals | .083 | 18 |
-| Andres Galarraga | Colorado Rockies | .071 | 14 |
 | Wilson Ramos | Washington Nationals | .071 | 16 |
 | Matt Williams | San Francisco Giants | .067 | 15 |
 | J.T. Realmuto | Miami Marlins | .000 | 10 |
@@ -223,21 +223,20 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Derek Jeter | New York Yankees | .882 | 15 | 17 |
 | Babe Ruth | New York Yankees | .875 | 14 | 16 |
 | Christian Yelich | Miami Marlins | .875 | 14 | 16 |
-| Troy Tulowitzki | Colorado Rockies | .875 | 14 | 16 |
-| Rogers Hornsby | St. Louis Cardinals | .800 | 12 | 15 |
 | Mickey Mantle | New York Yankees | .778 | 14 | 18 |
-| Albert Pujols | St. Louis Cardinals | .750 | 12 | 16 |
 | Mel Ott | San Francisco Giants | .750 | 12 | 16 |
 | Aaron Judge | New York Yankees | .706 | 12 | 17 |
 | Jason Bartlett | Tampa Bay Rays | .700 | 14 | 20 |
 | Ketel Marte | Arizona Diamondbacks | .667 | 16 | 24 |
+| Rogers Hornsby | St. Louis Cardinals | .643 | 9 | 14 |
 | Barry Bonds | San Francisco Giants | .625 | 10 | 16 |
 | Yogi Berra | New York Yankees | .611 | 11 | 18 |
-| Stan Musial | St. Louis Cardinals | .588 | 10 | 17 |
 | Wade Boggs | Boston Red Sox | .579 | 11 | 19 |
 | George Kell | Detroit Tigers | .571 | 12 | 21 |
+| Albert Pujols | St. Louis Cardinals | .571 | 8 | 14 |
 | Harry Heilmann | Detroit Tigers | .563 | 9 | 16 |
 | Charlie Gehringer | Detroit Tigers | .538 | 14 | 26 |
+| Troy Tulowitzki | Colorado Rockies | .533 | 8 | 15 |
 | Nomar Garciaparra | Boston Red Sox | .526 | 10 | 19 |
 | David Ortiz | Boston Red Sox | .519 | 14 | 27 |
 | Joey Wendle | Tampa Bay Rays | .500 | 10 | 20 |
@@ -247,29 +246,27 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Juan Soto | Washington Nationals | .471 | 8 | 17 |
 | Willie Randolph | New York Yankees | .471 | 8 | 17 |
 | Hanley Ramirez | Miami Marlins | .467 | 7 | 15 |
-| Larry Walker | Colorado Rockies | .462 | 6 | 13 |
 | Steve Finley | Arizona Diamondbacks | .458 | 11 | 24 |
 | Toby Hall | Tampa Bay Rays | .455 | 10 | 22 |
 | Bill Freehan | Detroit Tigers | .444 | 8 | 18 |
+| Joe Medwick | St. Louis Cardinals | .429 | 6 | 14 |
+| Larry Walker | Colorado Rockies | .429 | 6 | 14 |
 | Ted Williams | Boston Red Sox | .409 | 9 | 22 |
 | Will Clark | San Francisco Giants | .389 | 7 | 18 |
-| Ken Boyer | St. Louis Cardinals | .364 | 4 | 11 |
-| Joe Medwick | St. Louis Cardinals | .357 | 5 | 14 |
+| Stan Musial | St. Louis Cardinals | .375 | 6 | 16 |
+| Todd Helton | Colorado Rockies | .364 | 4 | 11 |
+| Nolan Arenado | Colorado Rockies | .357 | 5 | 14 |
 | Ty Cobb | Detroit Tigers | .346 | 9 | 26 |
 | Matt Williams | Arizona Diamondbacks | .333 | 7 | 21 |
 | Gabriel Moreno | Arizona Diamondbacks | .333 | 5 | 15 |
 | Miguel Cabrera | Miami Marlins | .333 | 5 | 15 |
 | Nick Johnson | Washington Nationals | .333 | 5 | 15 |
-| Nolan Arenado | Colorado Rockies | .333 | 5 | 15 |
-| Charlie Blackmon | Colorado Rockies | .333 | 4 | 12 |
 | Al Kaline | Detroit Tigers | .320 | 8 | 25 |
 | Jeff Kent | San Francisco Giants | .313 | 5 | 16 |
 | Tris Speaker | Boston Red Sox | .310 | 9 | 29 |
-| Enos Slaughter | St. Louis Cardinals | .308 | 4 | 13 |
 | Matt Holliday | Colorado Rockies | .308 | 4 | 13 |
 | Giancarlo Stanton | Miami Marlins | .294 | 5 | 17 |
 | Ryan Zimmerman | Washington Nationals | .294 | 5 | 17 |
-| Andres Galarraga | Colorado Rockies | .286 | 4 | 14 |
 | Carlton Fisk | Boston Red Sox | .278 | 5 | 18 |
 | Corbin Carroll | Arizona Diamondbacks | .269 | 7 | 26 |
 | Jeff Conine | Miami Marlins | .267 | 4 | 15 |
@@ -281,24 +278,27 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Evan Longoria | Tampa Bay Rays | .240 | 6 | 25 |
 | Carlos Pena | Tampa Bay Rays | .238 | 5 | 21 |
 | Denard Span | Washington Nationals | .238 | 5 | 21 |
+| Ozzie Smith | St. Louis Cardinals | .222 | 4 | 18 |
 | Buster Posey | San Francisco Giants | .214 | 3 | 14 |
+| Enos Slaughter | St. Louis Cardinals | .214 | 3 | 14 |
 | Luis Castillo | Miami Marlins | .214 | 3 | 14 |
-| Ozzie Smith | St. Louis Cardinals | .214 | 3 | 14 |
 | Alan Trammell | Detroit Tigers | .200 | 4 | 20 |
 | Geraldo Perdomo | Arizona Diamondbacks | .200 | 4 | 20 |
 | Hank Greenberg | Detroit Tigers | .200 | 4 | 20 |
+| Yadier Molina | St. Louis Cardinals | .200 | 3 | 15 |
 | Bobby Veach | Detroit Tigers | .200 | 2 | 10 |
-| Todd Helton | Colorado Rockies | .182 | 2 | 11 |
+| Ken Boyer | St. Louis Cardinals | .182 | 2 | 11 |
 | Anthony Rendon | Washington Nationals | .176 | 3 | 17 |
 | Dustin Pedroia | Boston Red Sox | .167 | 5 | 30 |
 | Carl Crawford | Tampa Bay Rays | .167 | 4 | 24 |
+| Andres Galarraga | Colorado Rockies | .167 | 2 | 12 |
 | Matt Williams | San Francisco Giants | .143 | 2 | 14 |
 | Dwight Evans | Boston Red Sox | .136 | 3 | 22 |
 | Art Fletcher | San Francisco Giants | .133 | 2 | 15 |
-| Yadier Molina | St. Louis Cardinals | .133 | 2 | 15 |
 | Christian Walker | Arizona Diamondbacks | .125 | 3 | 24 |
 | Luis Gonzalez | Arizona Diamondbacks | .125 | 3 | 24 |
 | Brandon Lowe | Tampa Bay Rays | .105 | 2 | 19 |
+| Charlie Blackmon | Colorado Rockies | .091 | 1 | 11 |
 | Paul Goldschmidt | Arizona Diamondbacks | .083 | 2 | 24 |
 | Daniel Murphy | Washington Nationals | .083 | 1 | 12 |
 | Wilson Ramos | Washington Nationals | .071 | 1 | 14 |
@@ -316,13 +316,22 @@ Top 10, ties included.
 | Charlie Gehringer | Detroit Tigers | 9 |
 | Derek Jeter | New York Yankees | 9 |
 | Jimmie Foxx | Boston Red Sox | 9 |
-| Albert Pujols | St. Louis Cardinals | 8 |
 | Babe Ruth | New York Yankees | 8 |
 | Ketel Marte | Arizona Diamondbacks | 8 |
 | Lou Gehrig | New York Yankees | 8 |
 | Tris Speaker | Boston Red Sox | 8 |
-| Troy Tulowitzki | Colorado Rockies | 8 |
 | Ty Cobb | Detroit Tigers | 8 |
+| Al Kaline | Detroit Tigers | 7 |
+| Albert Pujols | St. Louis Cardinals | 7 |
+| Jason Bartlett | Tampa Bay Rays | 7 |
+| Matt Williams | Arizona Diamondbacks | 7 |
+| Mel Ott | San Francisco Giants | 7 |
+| Nomar Garciaparra | Boston Red Sox | 7 |
+| Steve Finley | Arizona Diamondbacks | 7 |
+| Ted Williams | Boston Red Sox | 7 |
+| Toby Hall | Tampa Bay Rays | 7 |
+| Wade Boggs | Boston Red Sox | 7 |
+| Willie Mays | San Francisco Giants | 7 |
 
 ### Home runs
 
@@ -372,15 +381,14 @@ Top 10, ties included.
 | Babe Ruth | New York Yankees | 9 |
 | Aaron Judge | New York Yankees | 8 |
 | Jimmie Foxx | Boston Red Sox | 6 |
-| Rogers Hornsby | St. Louis Cardinals | 6 |
 | Christian Yelich | Miami Marlins | 6 |
-| Albert Pujols | St. Louis Cardinals | 5 |
 | Lou Gehrig | New York Yankees | 5 |
-| Stan Musial | St. Louis Cardinals | 5 |
+| Albert Pujols | St. Louis Cardinals | 5 |
 | Gary Sheffield | Miami Marlins | 5 |
 | Joe DiMaggio | New York Yankees | 5 |
 | Mickey Mantle | New York Yankees | 5 |
 | Willie Randolph | New York Yankees | 5 |
+| Rogers Hornsby | St. Louis Cardinals | 5 |
 
 ### Stolen bases
 
@@ -389,13 +397,13 @@ Top 10, ties included.
 | Player | Team | SB |
 | --- | --- | --- |
 | Willie Mays | San Francisco Giants | 5 |
-| Enos Slaughter | St. Louis Cardinals | 4 |
 | Charlie Gehringer | Detroit Tigers | 3 |
 | Ty Cobb | Detroit Tigers | 3 |
 | Al Kaline | Detroit Tigers | 3 |
 | Buster Posey | San Francisco Giants | 3 |
 | Paul Goldschmidt | Arizona Diamondbacks | 3 |
 | Harry Heilmann | Detroit Tigers | 2 |
+| Enos Slaughter | St. Louis Cardinals | 2 |
 | Geraldo Perdomo | Arizona Diamondbacks | 2 |
 | Lou Brock | St. Louis Cardinals | 2 |
 | Art Fletcher | San Francisco Giants | 2 |
@@ -421,6 +429,7 @@ At least 5 innings.
 | Carl Hubbell | San Francisco Giants | 1.12 | 8.0 | 1 | 9 |
 | Mickey Lolich | Detroit Tigers | 1.29 | 7.0 | 1 | 8 |
 | Pedro Martinez | Boston Red Sox | 1.59 | 17.0 | 3 | 22 |
+| Bob Gibson | St. Louis Cardinals | 2.00 | 9.0 | 2 | 9 |
 | Zac Gallen | Arizona Diamondbacks | 2.00 | 9.0 | 2 | 8 |
 | Christy Mathewson | San Francisco Giants | 2.25 | 8.0 | 2 | 14 |
 | Whitey Ford | New York Yankees | 2.35 | 7.2 | 2 | 8 |
@@ -450,10 +459,10 @@ At least 5 innings.
 | Lefty Grove | Boston Red Sox | 6.75 | 5.1 | 4 | 8 |
 | Harry Brecheen | St. Louis Cardinals | 7.36 | 7.1 | 6 | 9 |
 | Ron Guidry | New York Yankees | 7.88 | 8.0 | 7 | 10 |
+| Ubaldo Jimenez | Colorado Rockies | 7.94 | 5.2 | 5 | 3 |
 | Smoky Joe Wood | Boston Red Sox | 8.10 | 6.2 | 6 | 10 |
-| Bob Gibson | St. Louis Cardinals | 8.44 | 5.1 | 5 | 5 |
+| Boone Logan | Colorado Rockies | 9.00 | 6.0 | 6 | 5 |
 | Antonio Alfonseca | Miami Marlins | 11.81 | 5.1 | 7 | 5 |
-| Boone Logan | Colorado Rockies | 11.81 | 5.1 | 7 | 5 |
 
 ### WHIP
 
@@ -488,6 +497,7 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Lefty Grove | Boston Red Sox | 1.13 | 5.1 |
 | Juan Cruz | Arizona Diamondbacks | 1.18 | 11.0 |
 | Hal Newhouser | Detroit Tigers | 1.20 | 10.0 |
+| Bob Gibson | St. Louis Cardinals | 1.22 | 9.0 |
 | Jordan Zimmermann | Washington Nationals | 1.25 | 8.0 |
 | Livan Hernandez | Washington Nationals | 1.29 | 7.0 |
 | Max Scherzer | Washington Nationals | 1.35 | 6.2 |
@@ -502,10 +512,10 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Curt Schilling | Arizona Diamondbacks | 1.59 | 5.2 |
 | Smoky Joe Wood | Boston Red Sox | 1.65 | 6.2 |
 | Antonio Alfonseca | Miami Marlins | 1.69 | 5.1 |
+| Ubaldo Jimenez | Colorado Rockies | 1.76 | 5.2 |
 | James Shields | Tampa Bay Rays | 1.97 | 10.2 |
+| Boone Logan | Colorado Rockies | 2.00 | 6.0 |
 | Denny McLain | Detroit Tigers | 2.05 | 6.1 |
-| Bob Gibson | St. Louis Cardinals | 2.25 | 5.1 |
-| Boone Logan | Colorado Rockies | 2.25 | 5.1 |
 | J.P. Howell | Tampa Bay Rays | 2.25 | 5.1 |
 
 ## Pitching: counting
@@ -537,13 +547,13 @@ Top 10, ties included. A win is the W decision.
 | Roger Clemens | Boston Red Sox | 2 | 0 |
 | Adam Wainwright | St. Louis Cardinals | 1 | 0 |
 | Blake Snell | Tampa Bay Rays | 1 | 0 |
+| Bob Gibson | St. Louis Cardinals | 1 | 0 |
 | Carl Hubbell | San Francisco Giants | 1 | 0 |
 | Christy Mathewson | San Francisco Giants | 1 | 0 |
 | Dizzy Dean | St. Louis Cardinals | 1 | 0 |
 | Gaylord Perry | San Francisco Giants | 1 | 0 |
 | Harry Brecheen | St. Louis Cardinals | 1 | 0 |
 | Jack Morris | Detroit Tigers | 1 | 0 |
-| Jason Isringhausen | St. Louis Cardinals | 1 | 0 |
 | Jonathan Papelbon | Boston Red Sox | 1 | 0 |
 | Jordan Zimmermann | Washington Nationals | 1 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 1 | 0 |
@@ -573,7 +583,7 @@ Top 10, ties included. A save is the S decision, and S can be null.
 | Al Brazle | St. Louis Cardinals | 1 | 3.0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 1 | 3.0 |
 | Pete Fairbanks | Tampa Bay Rays | 1 | 2.1 |
-| Ryan Helsley | St. Louis Cardinals | 1 | 2.1 |
+| Ryan Helsley | St. Louis Cardinals | 1 | 1.2 |
 | Goose Gossage | New York Yankees | 1 | 1.1 |
 | Jose Valverde | Arizona Diamondbacks | 1 | 1.1 |
 | Chad Cordero | Washington Nationals | 1 | 1.0 |
@@ -595,6 +605,7 @@ Top 10, ties included.
 | Hal Newhouser | Detroit Tigers | 10.0 | 11 |
 | Tim Lincecum | San Francisco Giants | 9.0 | 16 |
 | Lefty Gomez | New York Yankees | 9.0 | 13 |
+| Bob Gibson | St. Louis Cardinals | 9.0 | 9 |
 | Blake Snell | Tampa Bay Rays | 9.0 | 8 |
 | Zac Gallen | Arizona Diamondbacks | 9.0 | 8 |
 | Aaron Cook | Colorado Rockies | 9.0 | 3 |

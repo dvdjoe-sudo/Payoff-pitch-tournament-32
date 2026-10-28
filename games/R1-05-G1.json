@@ -4,203 +4,27 @@
  "game_in_series": 1,
  "rolls": [
   [
-   54,
+   133,
    "2d6"
   ],
   [
-   4,
+   109,
    "%"
   ],
   [
-   255,
+   34,
    "2d6"
   ],
   [
-   240,
+   150,
    "%"
   ],
   [
-   71,
+   147,
    "2d6"
-  ],
-  [
-   198,
-   "%"
-  ],
-  [
-   15,
-   "2d6"
-  ],
-  [
-   92,
-   "%"
-  ],
-  [
-   98,
-   "%"
-  ],
-  [
-   145,
-   "2d6"
-  ],
-  [
-   239,
-   "%"
-  ],
-  [
-   64,
-   "2d6"
-  ],
-  [
-   10,
-   "%"
-  ],
-  [
-   220,
-   "%"
-  ],
-  [
-   61,
-   "2d6"
-  ],
-  [
-   202,
-   "%"
-  ],
-  [
-   5,
-   "2d6"
-  ],
-  [
-   67,
-   "%"
-  ],
-  [
-   18,
-   "%"
-  ],
-  [
-   157,
-   "2d6"
-  ],
-  [
-   130,
-   "%"
   ],
   [
    63,
-   "2d6"
-  ],
-  [
-   83,
-   "%"
-  ],
-  [
-   194,
-   "2d6"
-  ],
-  [
-   48,
-   "%"
-  ],
-  [
-   144,
-   "2d6"
-  ],
-  [
-   11,
-   "%"
-  ],
-  [
-   230,
-   "2d6"
-  ],
-  [
-   76,
-   "%"
-  ],
-  [
-   32,
-   "2d6"
-  ],
-  [
-   36,
-   "%"
-  ],
-  [
-   173,
-   "%"
-  ],
-  [
-   45,
-   "2d6"
-  ],
-  [
-   114,
-   "%"
-  ],
-  [
-   161,
-   "2d6"
-  ],
-  [
-   165,
-   "%"
-  ],
-  [
-   169,
-   "2d6"
-  ],
-  [
-   12,
-   "%"
-  ],
-  [
-   221,
-   "2d6"
-  ],
-  [
-   42,
-   "%"
-  ],
-  [
-   215,
-   "2d6"
-  ],
-  [
-   219,
-   "%"
-  ],
-  [
-   197,
-   "2d6"
-  ],
-  [
-   58,
-   "%"
-  ],
-  [
-   21,
-   "%"
-  ],
-  [
-   168,
-   "2d6"
-  ],
-  [
-   69,
-   "%"
-  ],
-  [
-   140,
-   "2d6"
-  ],
-  [
-   246,
-   "2d6"
-  ],
-  [
-   133,
    "%"
   ],
   [
@@ -208,159 +32,7 @@
    "2d6"
   ],
   [
-   55,
-   "%"
-  ],
-  [
-   210,
-   "2d6"
-  ],
-  [
-   233,
-   "%"
-  ],
-  [
-   131,
-   "2d6"
-  ],
-  [
-   123,
-   "%"
-  ],
-  [
-   209,
-   "2d6"
-  ],
-  [
-   211,
-   "%"
-  ],
-  [
-   207,
-   "2d6"
-  ],
-  [
-   195,
-   "%"
-  ],
-  [
-   105,
-   "2d6"
-  ],
-  [
-   175,
-   "%"
-  ],
-  [
    227,
-   "2d6"
-  ],
-  [
-   125,
-   "%"
-  ],
-  [
-   0,
-   "RESHUFFLE: after 3 full innings (printed protocol)"
-  ],
-  [
-   245,
-   "2d6"
-  ],
-  [
-   26,
-   "%"
-  ],
-  [
-   32,
-   "2d6"
-  ],
-  [
-   237,
-   "%"
-  ],
-  [
-   101,
-   "%"
-  ],
-  [
-   90,
-   "2d6"
-  ],
-  [
-   62,
-   "%"
-  ],
-  [
-   160,
-   "%"
-  ],
-  [
-   46,
-   "2d6"
-  ],
-  [
-   179,
-   "%"
-  ],
-  [
-   6,
-   "2d6"
-  ],
-  [
-   10,
-   "%"
-  ],
-  [
-   37,
-   "2d6"
-  ],
-  [
-   25,
-   "%"
-  ],
-  [
-   88,
-   "2d6"
-  ],
-  [
-   86,
-   "%"
-  ],
-  [
-   31,
-   "2d6"
-  ],
-  [
-   67,
-   "%"
-  ],
-  [
-   97,
-   "%"
-  ],
-  [
-   65,
-   "2d6"
-  ],
-  [
-   118,
-   "%"
-  ],
-  [
-   94,
-   "2d6"
-  ],
-  [
-   68,
-   "%"
-  ],
-  [
-   19,
-   "2d6"
-  ],
-  [
-   129,
    "%"
   ],
   [
@@ -368,335 +40,15 @@
    "2d6"
   ],
   [
-   198,
+   54,
    "%"
   ],
   [
-   249,
+   74,
    "2d6"
-  ],
-  [
-   55,
-   "%"
-  ],
-  [
-   256,
-   "2d6"
-  ],
-  [
-   122,
-   "%"
-  ],
-  [
-   39,
-   "%"
-  ],
-  [
-   98,
-   "2d6"
-  ],
-  [
-   113,
-   "1d6"
-  ],
-  [
-   217,
-   "%"
-  ],
-  [
-   184,
-   "2d6"
-  ],
-  [
-   92,
-   "%"
-  ],
-  [
-   230,
-   "%"
-  ],
-  [
-   252,
-   "2d6"
-  ],
-  [
-   15,
-   "%"
-  ],
-  [
-   106,
-   "2d6"
-  ],
-  [
-   3,
-   "%"
-  ],
-  [
-   60,
-   "2d6"
-  ],
-  [
-   204,
-   "%"
-  ],
-  [
-   8,
-   "2d6"
-  ],
-  [
-   224,
-   "%"
-  ],
-  [
-   83,
-   "2d6"
-  ],
-  [
-   153,
-   "%"
-  ],
-  [
-   251,
-   "%"
-  ],
-  [
-   242,
-   "2d6"
-  ],
-  [
-   13,
-   "%"
-  ],
-  [
-   48,
-   "2d6"
-  ],
-  [
-   218,
-   "%"
-  ],
-  [
-   51,
-   "2d6"
-  ],
-  [
-   9,
-   "%"
-  ],
-  [
-   203,
-   "2d6"
-  ],
-  [
-   66,
-   "%"
-  ],
-  [
-   219,
-   "2d6"
-  ],
-  [
-   27,
-   "%"
-  ],
-  [
-   141,
-   "2d6"
-  ],
-  [
-   221,
-   "%"
-  ],
-  [
-   159,
-   "2d6"
-  ],
-  [
-   227,
-   "%"
-  ],
-  [
-   241,
-   "2d6"
-  ],
-  [
-   84,
-   "%"
-  ],
-  [
-   213,
-   "2d6"
-  ],
-  [
-   105,
-   "%"
-  ],
-  [
-   126,
-   "2d6"
-  ],
-  [
-   21,
-   "%"
-  ],
-  [
-   0,
-   "RESHUFFLE: after 6 full innings (printed protocol)"
-  ],
-  [
-   77,
-   "2d6"
-  ],
-  [
-   207,
-   "%"
-  ],
-  [
-   2,
-   "2d6"
-  ],
-  [
-   152,
-   "%"
   ],
   [
    155,
-   "2d6"
-  ],
-  [
-   195,
-   "%"
-  ],
-  [
-   38,
-   "%"
-  ],
-  [
-   245,
-   "2d6"
-  ],
-  [
-   148,
-   "%"
-  ],
-  [
-   95,
-   "%"
-  ],
-  [
-   84,
-   "2d6"
-  ],
-  [
-   158,
-   "%"
-  ],
-  [
-   173,
-   "2d6"
-  ],
-  [
-   29,
-   "%"
-  ],
-  [
-   98,
-   "2d6"
-  ],
-  [
-   113,
-   "%"
-  ],
-  [
-   58,
-   "2d6"
-  ],
-  [
-   59,
-   "%"
-  ],
-  [
-   240,
-   "2d6"
-  ],
-  [
-   80,
-   "%"
-  ],
-  [
-   249,
-   "2d6"
-  ],
-  [
-   45,
-   "%"
-  ],
-  [
-   103,
-   "2d6"
-  ],
-  [
-   186,
-   "%"
-  ],
-  [
-   235,
-   "%"
-  ],
-  [
-   191,
-   "2d6"
-  ],
-  [
-   120,
-   "1d6"
-  ],
-  [
-   179,
-   "%"
-  ],
-  [
-   201,
-   "2d6"
-  ],
-  [
-   157,
-   "%"
-  ],
-  [
-   190,
-   "1d6"
-  ],
-  [
-   216,
-   "2d6"
-  ],
-  [
-   196,
-   "%"
-  ],
-  [
-   41,
-   "2d6"
-  ],
-  [
-   136,
-   "%"
-  ],
-  [
-   6,
-   "2d6"
-  ],
-  [
-   22,
-   "%"
-  ],
-  [
-   46,
-   "%"
-  ],
-  [
-   42,
    "%"
   ],
   [
@@ -704,31 +56,7 @@
    "2d6"
   ],
   [
-   10,
-   "%"
-  ],
-  [
-   21,
-   "2d6"
-  ],
-  [
-   246,
-   "%"
-  ],
-  [
-   250,
-   "2d6"
-  ],
-  [
-   14,
-   "%"
-  ],
-  [
-   162,
-   "2d6"
-  ],
-  [
-   71,
+   76,
    "%"
   ],
   [
@@ -736,31 +64,31 @@
    "2d6"
   ],
   [
-   117,
+   57,
    "%"
   ],
   [
-   11,
+   220,
    "2d6"
   ],
   [
-   253,
+   142,
    "%"
   ],
   [
-   180,
-   "%"
-  ],
-  [
-   213,
+   205,
    "2d6"
   ],
   [
-   187,
+   39,
    "%"
   ],
   [
-   35,
+   12,
+   "%"
+  ],
+  [
+   165,
    "2d6"
   ],
   [
@@ -768,31 +96,7 @@
    "%"
   ],
   [
-   68,
-   "2d6"
-  ],
-  [
-   247,
-   "%"
-  ],
-  [
-   151,
-   "2d6"
-  ],
-  [
-   108,
-   "%"
-  ],
-  [
-   169,
-   "2d6"
-  ],
-  [
-   66,
-   "%"
-  ],
-  [
-   56,
+   249,
    "2d6"
   ],
   [
@@ -800,27 +104,595 @@
    "%"
   ],
   [
-   168,
+   192,
    "2d6"
   ],
   [
-   114,
+   47,
    "%"
   ],
   [
-   70,
+   152,
+   "2d6"
+  ],
+  [
+   198,
+   "%"
+  ],
+  [
+   86,
+   "2d6"
+  ],
+  [
+   236,
+   "1d6"
+  ],
+  [
+   14,
+   "%"
+  ],
+  [
+   99,
+   "2d6"
+  ],
+  [
+   22,
+   "1d6"
+  ],
+  [
+   129,
+   "%"
+  ],
+  [
+   231,
+   "2d6"
+  ],
+  [
+   64,
+   "%"
+  ],
+  [
+   141,
+   "2d6"
+  ],
+  [
+   188,
+   "%"
+  ],
+  [
+   251,
+   "2d6"
+  ],
+  [
+   240,
+   "%"
+  ],
+  [
+   11,
+   "2d6"
+  ],
+  [
+   1,
+   "%"
+  ],
+  [
+   49,
+   "2d6"
+  ],
+  [
+   230,
+   "%"
+  ],
+  [
+   111,
+   "%"
+  ],
+  [
+   174,
+   "2d6"
+  ],
+  [
+   202,
+   "%"
+  ],
+  [
+   134,
+   "2d6"
+  ],
+  [
+   186,
+   "2d6"
+  ],
+  [
+   154,
+   "%"
+  ],
+  [
+   210,
+   "2d6"
+  ],
+  [
+   245,
+   "%"
+  ],
+  [
+   171,
+   "2d6"
+  ],
+  [
+   9,
+   "%"
+  ],
+  [
+   46,
+   "2d6"
+  ],
+  [
+   144,
+   "%"
+  ],
+  [
+   40,
+   "2d6"
+  ],
+  [
+   159,
+   "%"
+  ],
+  [
+   235,
+   "2d6"
+  ],
+  [
+   209,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 3 full innings (printed protocol)"
+  ],
+  [
+   165,
+   "2d6"
+  ],
+  [
+   108,
+   "%"
+  ],
+  [
+   87,
+   "2d6"
+  ],
+  [
+   7,
+   "%"
+  ],
+  [
+   135,
+   "2d6"
+  ],
+  [
+   236,
+   "%"
+  ],
+  [
+   77,
+   "%"
+  ],
+  [
+   255,
+   "2d6"
+  ],
+  [
+   219,
+   "%"
+  ],
+  [
+   89,
+   "2d6"
+  ],
+  [
+   220,
+   "%"
+  ],
+  [
+   95,
+   "2d6"
+  ],
+  [
+   83,
+   "1d6"
+  ],
+  [
+   126,
+   "%"
+  ],
+  [
+   229,
+   "2d6"
+  ],
+  [
+   105,
+   "%"
+  ],
+  [
+   248,
+   "2d6"
+  ],
+  [
+   215,
+   "%"
+  ],
+  [
+   52,
+   "2d6"
+  ],
+  [
+   60,
+   "%"
+  ],
+  [
+   65,
+   "2d6"
+  ],
+  [
+   195,
+   "%"
+  ],
+  [
+   153,
+   "%"
+  ],
+  [
+   93,
+   "2d6"
+  ],
+  [
+   187,
+   "%"
+  ],
+  [
+   61,
+   "2d6"
+  ],
+  [
+   123,
+   "%"
+  ],
+  [
+   132,
+   "2d6"
+  ],
+  [
+   122,
+   "%"
+  ],
+  [
+   155,
+   "2d6"
+  ],
+  [
+   206,
+   "%"
+  ],
+  [
+   24,
+   "2d6"
+  ],
+  [
+   58,
+   "%"
+  ],
+  [
+   80,
+   "2d6"
+  ],
+  [
+   15,
+   "%"
+  ],
+  [
+   184,
+   "2d6"
+  ],
+  [
+   233,
+   "%"
+  ],
+  [
+   120,
+   "2d6"
+  ],
+  [
+   250,
+   "%"
+  ],
+  [
+   228,
+   "2d6"
+  ],
+  [
+   194,
+   "%"
+  ],
+  [
+   158,
+   "2d6"
+  ],
+  [
+   227,
+   "%"
+  ],
+  [
+   11,
+   "2d6"
+  ],
+  [
+   147,
+   "%"
+  ],
+  [
+   129,
+   "2d6"
+  ],
+  [
+   100,
+   "%"
+  ],
+  [
+   66,
+   "2d6"
+  ],
+  [
+   101,
+   "%"
+  ],
+  [
+   181,
+   "%"
+  ],
+  [
+   20,
+   "2d6"
+  ],
+  [
+   121,
+   "%"
+  ],
+  [
+   191,
+   "2d6"
+  ],
+  [
+   133,
+   "%"
+  ],
+  [
+   67,
+   "%"
+  ],
+  [
+   127,
+   "1d6"
+  ],
+  [
+   45,
+   "2d6"
+  ],
+  [
+   201,
+   "%"
+  ],
+  [
+   40,
+   "%"
+  ],
+  [
+   5,
+   "2d6"
+  ],
+  [
+   225,
+   "%"
+  ],
+  [
+   134,
+   "2d6"
+  ],
+  [
+   51,
+   "%"
+  ],
+  [
+   139,
+   "2d6"
+  ],
+  [
+   110,
+   "%"
+  ],
+  [
+   1,
+   "2d6"
+  ],
+  [
+   131,
+   "%"
+  ],
+  [
+   0,
+   "RESHUFFLE: after 6 full innings (printed protocol)"
+  ],
+  [
+   133,
+   "2d6"
+  ],
+  [
+   101,
+   "%"
+  ],
+  [
+   31,
+   "2d6"
+  ],
+  [
+   248,
+   "%"
+  ],
+  [
+   217,
+   "2d6"
+  ],
+  [
+   191,
+   "%"
+  ],
+  [
+   197,
+   "2d6"
+  ],
+  [
+   188,
+   "2d6"
+  ],
+  [
+   54,
+   "%"
+  ],
+  [
+   203,
+   "2d6"
+  ],
+  [
+   169,
+   "%"
+  ],
+  [
+   145,
+   "2d6"
+  ],
+  [
+   240,
+   "%"
+  ],
+  [
+   208,
+   "2d6"
+  ],
+  [
+   107,
+   "%"
+  ],
+  [
+   53,
+   "2d6"
+  ],
+  [
+   187,
+   "%"
+  ],
+  [
+   221,
+   "2d6"
+  ],
+  [
+   229,
+   "%"
+  ],
+  [
+   219,
+   "2d6"
+  ],
+  [
+   1,
+   "%"
+  ],
+  [
+   254,
    "2d6"
   ],
   [
    125,
    "%"
+  ],
+  [
+   59,
+   "2d6"
+  ],
+  [
+   18,
+   "%"
+  ],
+  [
+   12,
+   "2d6"
+  ],
+  [
+   92,
+   "%"
+  ],
+  [
+   156,
+   "2d6"
+  ],
+  [
+   148,
+   "%"
+  ],
+  [
+   24,
+   "2d6"
+  ],
+  [
+   177,
+   "%"
+  ],
+  [
+   111,
+   "2d6"
+  ],
+  [
+   80,
+   "%"
+  ],
+  [
+   195,
+   "2d6"
+  ],
+  [
+   196,
+   "%"
+  ],
+  [
+   236,
+   "2d6"
+  ],
+  [
+   16,
+   "%"
+  ],
+  [
+   52,
+   "2d6"
+  ],
+  [
+   214,
+   "%"
+  ],
+  [
+   27,
+   "2d6"
+  ],
+  [
+   119,
+   "%"
   ]
  ],
  "manager_log": [
   "SETUP ASSERTION BLOCK: all checks PASS (v2 engine + v2 cards bound for BOTH clubs, the park in force verified as the 1986 Busch Stadium card against the app source entry, FAC deck stream installed, FAC-chart absent, addendum live and merging for BOTH clubs, traits ON with Tony La Russa governing St. Louis from the home slot and Bud Black governing Colorado from the guest slot, the official bunt-grade overlay loaded and live at the bunt seam, McGraw's and Williams's packages managing NEITHER club and no other stray manager package live, fatigue fix layer installed under the trait layers with both starters' stamina lines served, elimination gating CLOSED for both clubs). Printed in full in the game record.",
-  "PAYOFF PITCH TOP 32 TOURNAMENT, SERIES R1-05, GAME 1 (OFFICIAL): Colorado Rockies at St. Louis Cardinals, Busch Stadium (the 1986 Busch Stadium park card), DH on. Best of 7, home pattern 2-2-1-1-1, St. Louis home for Games 1, 2, 5 and 7, Colorado home for Games 3, 4 and 6 (at Coors Field on the printed 2024 card Joe adopted). St. Louis is the #5 seed, Colorado the #28 seed. Neither club has played a tournament game yet: this game opens the series.",
+  "PAYOFF PITCH TOP 32 TOURNAMENT, SERIES R1-05, GAME 1 (CANDIDATE REPLACEMENT, seed 20261311, NOT official): Colorado Rockies at St. Louis Cardinals, Busch Stadium (the 1986 Busch Stadium park card), DH on. Best of 7, home pattern 2-2-1-1-1, St. Louis home for Games 1, 2, 5 and 7, Colorado home for Games 3, 4 and 6 (at Coors Field on the printed 2024 card Joe adopted). St. Louis is the #5 seed, Colorado the #28 seed. Neither club has played a tournament game yet: this game opens the series.",
   "Venue and slot note: Colorado plays in the host engine's guest slot ('OPP') and St. Louis in the 'STL' slot: Colorado bats in the top half as the visitor and St. Louis in the bottom half as the home club, and the park card in force is the 1986 Busch Stadium card itself, loaded by name from the tracker app's ballparks.json and verified field-for-field against that source entry in the assertion block. John McGraw's package is present only as an import of the manager layers; its active gate was re-pointed to False at module level in this process, and Dick Williams's decision entry points in the traits2 substrate were re-pointed to no-ops the same way, so neither package manages either club in this game. McGraw manages San Francisco and Williams manages Montreal in this project (Joe's graphics rulings). No engine or traits file was edited.",
-  "Starters: Bob Gibson (STL) vs Ubaldo Jimenez (COL), each club's rotation top as posted in its set's graphic order (STL rotation: Bob Gibson, Dizzy Dean, Adam Wainwright, Harry Brecheen, Chris Carpenter; COL rotation: Ubaldo Jimenez, Kyle Freeland, Aaron Cook, German Marquez, Jhoulys Chacin); FAC deck seed 20261301 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Colorado's ratings merged into the layer for the guest slot from the Rockies' own pitcher_addendum.json). Stamina lines as served are printed in the assertion block.",
+  "Starters: Bob Gibson (STL) vs Ubaldo Jimenez (COL), each club's rotation top as posted in its set's graphic order (STL rotation: Bob Gibson, Dizzy Dean, Adam Wainwright, Harry Brecheen, Chris Carpenter; COL rotation: Ubaldo Jimenez, Kyle Freeland, Aaron Cook, German Marquez, Jhoulys Chacin); FAC deck seed 20261311 (256-card deck; dice values read from the flipped cards, the engine's own charts govern: FAC DICE/DRAW mode, not FAC-chart); pitcher cards are the v2 builds of both sets, hitter cards unchanged from v1; the pitcher data addendum is ON for both clubs (Colorado's ratings merged into the layer for the guest slot from the Rockies' own pitcher_addendum.json). Stamina lines as served are printed in the assertion block.",
   "Availability in (Game 1): every pitcher on both clubs is available; there is no previous game and no carry of any kind. The starters go by the rotations' tops. Both clubs field the governing 26 under Joe's six-and-six rule (six bench, six relievers): Colorado's bench carries Ellis Burks, seated there by Joe's 2026-10-26 ruling (Mike DeJean's chair), and St. Louis's carries Mark McGwire, seated by Joe's bench ruling over Tip O'Neill.",
   "FATIGUE FIX LIVE (Joe's commission, FATIGUE_FIX.md): the fatigue_fix layer is installed over the substrate stack, so all four book fatigue triggers are in force: the engine's 6-run universal rule, the starter-stamina trigger (Start inning reached at 3+ runs, evaluated before the inning's first plate appearance as well as after every one), the Short/Long reliever triggers (appearance innings and runs), and the save-symbol exemption machinery (no converted card carries a symbol, so the exemption correctly cannot fire; no symbol was invented). The layer records the Section 1.6 fatigue standard in the game state.",
   "Managers: St. Louis is managed by TONY LA RUSSA (the library layer, traits_la_russa.py: Micro-Manager, Second Leadoff, Double-Switch Master, Postseason Alchemy), governing from the 'STL' slot. The universal DH is in force (Joe's ruling, 2026-10-26), so Second Leadoff can never fire (the 8-hole is a hitter, never the pitcher) and stands as encoded dead machinery, and the Double-Switch Master fires only in its combined-move form. Postseason Alchemy eligibility as encoded: the age-32+ Cardinals (Enos Slaughter, Jim Edmonds, Ken Boyer, Lou Brock, Mark McGwire, Ozzie Smith, Yadier Molina) plus Joe's named leaders Albert Pujols and Yadier Molina; Stan Musial (30) qualifies by neither test and that is recorded plainly. Colorado is managed by BUD BLACK (traits_bud_black.py: The Coors Field Buffer, Super Bullpen, Even-Keel Counterpunch, Sprawling Outfield Veterans), governing from the guest slot as Colorado. Brian Fuentes (B* in the frozen pool) is Colorado's only Super Bullpen eligible arm; Ellis Burks stands in Black's veteran table at age 33.",
@@ -828,382 +700,318 @@
   "Hierarchy in force: book mechanics (fatigue, Rest Chart); the one hard rule (no starting pitcher relieves except for a club facing elimination, with a one-day rotation setback); manager traits where they speak; the hook policy and Joe's closer branch as the DEFAULT policy everywhere else.",
   "Elimination mark: Game 1 of a best-of-7; this is an elimination game for NEITHER club. The hard rule's exception is CLOSED for both: no starting pitcher may relieve tonight for either club, and the game's traits elimination list is empty.",
   "[1T 0 out, bases ---] Charlie Blackmon vs Bob Gibson",
-  "  dice 2d6=6 (3+5) %=65 -> TOUGH",
-  "  TOUGH %=65 -> 1B",
-  "  Charlie Blackmon singles (RF fields it)",
-  "[1T 0 out, bases 1--] DJ LeMahieu vs Bob Gibson",
-  "  dice 2d6=8 (3+1) %=09 -> TOUGH",
-  "  TOUGH %=09 -> SO",
+  "  dice 2d6=7 (2+3) %=53 -> IN-PLAY",
+  "  IN-PLAY %=53 above the ranges -> OUT G3",
+  "  ground out 1B",
+  "[1T 1 out, bases ---] DJ LeMahieu vs Bob Gibson",
+  "  dice 2d6=8 (1+6) %=26 -> TOUGH",
+  "  TOUGH %=26 -> SO",
   "  DJ LeMahieu strikes out",
-  "[1T 1 out, bases 1--] Todd Helton vs Bob Gibson",
-  "  dice 2d6=4 (6+5) %=55 -> PATIENT",
-  "  PATIENT %=55 -> BB",
-  "  Todd Helton walks",
-  "[1T 1 out, bases 11-] Nolan Arenado vs Bob Gibson",
-  "  dice 2d6=3 (2+5) %=05 -> IN-PLAY",
-  "  IN-PLAY %=05 -> 1B",
-  "  Nolan Arenado singles (LF fields it)",
-  "  Nolan Arenado steals 2 safely",
-  "[1T 1 out, bases -11] Larry Walker vs Bob Gibson",
-  "  dice 2d6=2 (1+4) %=94 -> IN-PLAY",
-  "  IN-PLAY %=94 above the ranges -> OUT F7",
-  "  fly out LF, run tags and scores",
-  "[1T 2 out, bases -1-] Troy Tulowitzki vs Bob Gibson",
-  "  dice 2d6=9 (6+6) %=40 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=34",
-  "  IN-PLAY %=34 -> 1B",
-  "  Troy Tulowitzki singles (CF fields it)",
-  "[1T 2 out, bases 1--] Matt Holliday vs Bob Gibson",
-  "  dice 2d6=8 (2+4) %=69 -> TOUGH",
-  "  TOUGH %=69 above the ranges -> OUT G4",
-  "  ground out 2B",
+  "[1T 2 out, bases ---] Todd Helton vs Bob Gibson",
+  "  dice 2d6=7 (5+3) %=01 -> IN-PLAY",
+  "  IN-PLAY %=01 -> 3B",
+  "  Todd Helton triples, 0 run(s) score",
+  "[1T 2 out, bases --1] Nolan Arenado vs Bob Gibson",
+  "  dice 2d6=3 (2+6) %=56 -> IN-PLAY",
+  "  IN-PLAY %=56 above the ranges -> OUT G5",
+  "  ground out 3B",
   "[1B 0 out, bases ---] Ozzie Smith vs Ubaldo Jimenez",
-  "  dice 2d6=6 (pair 3+6) %=00 -> TOUGH: RARE PLAY (initial percentile 00)",
-  "  Rare Plays, Bases Empty, TOUGH: percentile 10 (same FAC stream) -> 06-12: the umpire calls a borderline pitch a strike; Smith strikes out, questions the call, and is EJECTED by the overreacting umpire",
-  "  Ozzie Smith strikes out (rare play 06-12) and is ejected before the bottom of the 1st has a second batter",
-  "  substitution (St. Louis): Ted Simmons replaces Ozzie Smith (ejected (rare play 06-12); replacement takes his slot and the shortstop position)",
+  "  dice 2d6=11 (4+3) %=15 -> TOUGH-OUT",
+  "  Ozzie Smith strikes out",
   "[1B 1 out, bases ---] Stan Musial vs Ubaldo Jimenez",
-  "  dice 2d6=7 (2+3) %=33 -> TOUGH",
-  "  TOUGH %=33 above the ranges -> OUT P4",
-  "  pop out 2B, runners hold",
+  "  dice 2d6=11 (5+3) %=39 -> TOUGH-OUT",
+  "  TOUGH-OUT: OUT section -> P2",
+  "  pop out C, runners hold",
   "[1B 2 out, bases ---] Rogers Hornsby vs Ubaldo Jimenez",
-  "  dice 2d6=7 (3+2) %=26 -> TOUGH",
-  "  TOUGH %=26 -> 2B",
-  "  Rogers Hornsby doubles (CF fields it)",
-  "[1B 2 out, bases -1-] Albert Pujols vs Ubaldo Jimenez",
-  "  dice 2d6=4 (4+3) %=12 -> PATIENT",
+  "  dice 2d6=7 (1+2) %=70 -> TOUGH",
+  "  TOUGH %=70 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[2T 0 out, bases ---] Larry Walker vs Bob Gibson",
+  "  dice 2d6=3 (2+4) %=98 -> IN-PLAY",
+  "  IN-PLAY %=98 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[2T 1 out, bases ---] Troy Tulowitzki vs Bob Gibson",
+  "  dice 2d6=11 (4+5) %=60 -> TOUGH",
+  "  TOUGH %=60 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[2T 2 out, bases ---] Matt Holliday vs Bob Gibson",
+  "  dice 2d6=9 (4+2) %=20 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): WHEELHOUSE, re-roll %=60",
+  "  WHEELHOUSE %=60 -> 2B",
+  "  Matt Holliday doubles (LF fields it)",
+  "[2T 2 out, bases -1-] Elias Diaz vs Bob Gibson",
+  "  dice 2d6=11 (4+4) %=64 -> TOUGH",
+  "  TOUGH %=56 -> SO",
+  "  Elias Diaz strikes out",
+  "[2B 0 out, bases ---] Albert Pujols vs Ubaldo Jimenez",
+  "  dice 2d6=8 (2+3) %=11 -> IN-PLAY",
+  "  IN-PLAY %=11 -> 1B",
+  "  Albert Pujols singles (LF fields it)",
+  "[2B 0 out, bases 1--] Jim Edmonds vs Ubaldo Jimenez",
+  "  dice 2d6=5 (1+6) %=12 -> PATIENT",
   "  PATIENT %=12 -> BB",
-  "  Albert Pujols walks",
-  "[1B 2 out, bases 11-] Jim Edmonds vs Ubaldo Jimenez",
-  "  dice 2d6=6 (2+1) %=49 -> TOUGH",
-  "  TOUGH %=49 -> SO",
-  "  Jim Edmonds strikes out",
-  "[2T 0 out, bases ---] Elias Diaz vs Bob Gibson",
-  "  dice 2d6=4 (5+2) %=70 -> PATIENT",
-  "  PATIENT %=70 above the ranges -> OUT G4",
-  "  ground out 2B",
-  "[2T 1 out, bases ---] Andres Galarraga vs Bob Gibson",
-  "  dice 2d6=9 (4+6) %=78 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=89",
-  "  IN-PLAY %=89 above the ranges -> OUT G6",
-  "  ground out SS",
-  "[2T 2 out, bases ---] Charlie Blackmon vs Bob Gibson",
-  "  dice 2d6=6 (5+1) %=57 -> TOUGH",
-  "  TOUGH %=57 -> 1B",
-  "  Charlie Blackmon singles (RF fields it)",
-  "[2T 2 out, bases 1--] DJ LeMahieu vs Bob Gibson",
-  "  dice 2d6=8 (5+4) %=42 -> TOUGH",
-  "  TOUGH %=34 -> SO",
-  "  DJ LeMahieu strikes out",
-  "[2B 0 out, bases ---] Joe Medwick vs Ubaldo Jimenez",
-  "  dice 2d6=12 (6+6) %=60 -> PATIENT-OUT",
-  "  PATIENT-OUT: not a walk, OUT section -> F7",
-  "  fly out LF",
-  "[2B 1 out, bases ---] Enos Slaughter vs Ubaldo Jimenez",
-  "  dice 2d6=7 (1+2) %=74 -> TOUGH",
-  "  TOUGH %=74 above the ranges -> OUT G6",
-  "  ground out SS",
-  "[2B 2 out, bases ---] Yadier Molina vs Ubaldo Jimenez",
-  "  dice 2d6=6 (2+3) %=87 -> TOUGH",
-  "  TOUGH %=87 above the ranges -> OUT G6",
-  "  ground out SS",
-  "[3T 0 out, bases ---] Todd Helton vs Bob Gibson",
-  "  dice 2d6=9 (6+3) %=41 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, LHB): IN-PLAY, re-roll %=09",
-  "  IN-PLAY %=09 -> 1B",
-  "  Todd Helton singles (CF fields it)",
-  "[3T 0 out, bases 1--] Nolan Arenado vs Bob Gibson",
-  "  dice 2d6=6 (2+2) %=86 -> TOUGH",
-  "  TOUGH %=86 above the ranges -> OUT G6",
-  "  double play turned",
-  "  GIDP SS",
-  "[3T 2 out, bases ---] Larry Walker vs Bob Gibson",
-  "  dice 2d6=10 (2+2) %=28 -> PATIENT",
-  "  PATIENT %=28 -> BB",
-  "  Larry Walker walks",
-  "[3T 2 out, bases 1--] Troy Tulowitzki vs Bob Gibson",
-  "  dice 2d6=3 (2+1) %=09 -> IN-PLAY",
-  "  IN-PLAY %=09 -> 3B",
-  "  Troy Tulowitzki triples, 1 run(s) score",
-  "[3T 2 out, bases --1] Matt Holliday vs Bob Gibson",
-  "  dice 2d6=5 (4+6) %=18 -> TOUGH",
-  "  TOUGH %=18 -> SO",
-  "  Matt Holliday strikes out",
-  "[3B 0 out, bases ---] Ken Boyer vs Ubaldo Jimenez",
-  "  dice 2d6=8 (4+6) %=68 -> IN-PLAY",
-  "  IN-PLAY %=68 above the ranges -> OUT F9",
-  "  fly out RF",
-  "[3B 1 out, bases ---] Ted Simmons vs Ubaldo Jimenez",
-  "  dice 2d6=7 (4+1) %=15 -> TOUGH",
-  "  TOUGH %=15 -> SO",
-  "  Ted Simmons strikes out",
-  "[3B 2 out, bases ---] Stan Musial vs Ubaldo Jimenez",
-  "  dice 2d6=5 (3+6) %=50 -> PATIENT",
-  "  PATIENT %=50 -> BB",
-  "  Stan Musial walks",
-  "[3B 2 out, bases 1--] Rogers Hornsby vs Ubaldo Jimenez",
-  "  dice 2d6=6 (5+2) %=21 -> TOUGH",
-  "  TOUGH %=21 -> 2B",
-  "  Rogers Hornsby doubles (RF fields it)",
-  "[3B 2 out, bases -1-] Albert Pujols vs Ubaldo Jimenez",
-  "  dice 2d6=6 (6+3) %=83 -> TOUGH",
-  "  TOUGH %=83 above the ranges -> OUT F8",
-  "  fly out CF",
-  "  FAC deck reshuffled after 3 full innings (printed protocol)",
-  "[4T 0 out, bases ---] Elias Diaz vs Bob Gibson",
-  "  dice 2d6=11 (5+6) %=84 -> TOUGH",
-  "  TOUGH %=84 above the ranges -> OUT G6",
-  "  ground out SS",
-  "[4T 1 out, bases ---] Andres Galarraga vs Bob Gibson",
-  "  dice 2d6=9 (4+6) %=18 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, RHB): WHEELHOUSE, re-roll %=21",
-  "  WHEELHOUSE %=21 -> HR",
-  "  Andres Galarraga homers",
-  "[4T 1 out, bases ---] Charlie Blackmon vs Bob Gibson",
-  "  dice 2d6=9 (4+1) %=93 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, LHB): IN-PLAY, re-roll %=27",
-  "  SPRAWLING OUTFIELD VETERANS (Black): Charlie Blackmon's single is stretched to a double",
-  "  IN-PLAY %=27 -> 2B",
-  "  Charlie Blackmon doubles (RF fields it)",
-  "[4T 1 out, bases -1-] DJ LeMahieu vs Bob Gibson",
-  "  dice 2d6=4 (4+6) %=20 -> PATIENT",
-  "  PATIENT %=20 -> BB",
-  "  DJ LeMahieu walks",
-  "[4T 1 out, bases 11-] Todd Helton vs Bob Gibson",
-  "  dice 2d6=12 (6+6) %=40 -> TOUGH",
-  "  TOUGH %=31 -> SO",
-  "  Todd Helton strikes out",
-  "[4T 2 out, bases 11-] Nolan Arenado vs Bob Gibson",
-  "  dice 2d6=6 (1+2) %=82 -> TOUGH",
-  "  TOUGH %=82 above the ranges -> OUT F8",
-  "  fly out CF",
-  "[4B 0 out, bases ---] Jim Edmonds vs Ubaldo Jimenez",
-  "  dice 2d6=6 (2+5) %=71 -> TOUGH",
-  "  TOUGH %=71 -> SO",
-  "  Jim Edmonds strikes out",
-  "[4B 1 out, bases ---] Joe Medwick vs Ubaldo Jimenez",
-  "  dice 2d6=11 (pair 4+6) %=00 -> TOUGH-OUT: RARE PLAY (initial percentile 00)",
-  "  Rare Plays, Bases Empty, TOUGH: percentile 94 (same FAC stream) -> 90-99: a foul tip hits catcher Elias Diaz in a tender spot; check him for injury",
-  "  Injury check on Diaz cannot be performed (converted hitter cards carry no Inj ratings; the addendum rates pitchers only): the not-injured branch applies, Diaz stays in the game, shaken",
-  "  dice 2d6=9 (4+1) %=87 -> TOUGH",
-  "  TOUGH %=87 above the ranges -> OUT G4",
-  "  ground out 2B",
-  "  Lingering clause live: remaining batters this inning roll on their TOUGH sections against Ubaldo Jimenez (the shaken catcher stays in) until the half-inning ends or there is a pitching change",
-  "[4B 2 out, bases ---] Enos Slaughter vs Ubaldo Jimenez",
-  "  Rare-play lingering clause (Bases Empty TOUGH 90-99) is live: Enos Slaughter rolls on his TOUGH section against Ubaldo Jimenez (the shaken catcher stays in)",
-  "  dice 2d6=9 (6+5) %=31 -> TOUGH",
-  "  TOUGH %=31 -> 1B",
-  "  Enos Slaughter singles (LF fields it)",
-  "[4B 2 out, bases 1--] Yadier Molina vs Ubaldo Jimenez",
-  "  Enos Slaughter steals 2 safely",
-  "  Rare-play lingering clause (Bases Empty TOUGH 90-99) is live: Yadier Molina rolls on his TOUGH section against Ubaldo Jimenez (the shaken catcher stays in)",
-  "  dice 2d6=11 (4+5) %=55 -> TOUGH",
-  "  TOUGH %=55 above the ranges -> OUT G5",
-  "  ground out 3B",
-  "[5T 0 out, bases ---] Larry Walker vs Bob Gibson",
-  "  dice 2d6=8 (2+1) %=09 -> TOUGH",
-  "  TOUGH %=09 -> SO",
-  "  Larry Walker strikes out",
-  "[5T 1 out, bases ---] Troy Tulowitzki vs Bob Gibson",
-  "  dice 2d6=9 (5+3) %=71 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=20",
-  "  IN-PLAY %=20 -> 1B",
-  "  Troy Tulowitzki singles (RF fields it)",
-  "[5T 1 out, bases 1--] Matt Holliday vs Bob Gibson",
-  "  bunt: fielder 3B, %=67 -> SH",
-  "  sacrifice works: batter out at 1st, runners advance",
-  "[5T 2 out, bases -1-] Elias Diaz vs Bob Gibson",
-  "  dice 2d6=9 (3+5) %=05 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, RHB): WHEELHOUSE, re-roll %=85",
-  "  WHEELHOUSE %=85 above the ranges -> OUT G6",
-  "  ground out SS",
-  "[5B 0 out, bases ---] Ken Boyer vs Ubaldo Jimenez",
-  "  dice 2d6=7 (6+2) %=46 -> TOUGH",
-  "  TOUGH %=46 -> 1B",
-  "  Ken Boyer singles (CF fields it)",
-  "[5B 0 out, bases 1--] Ted Simmons vs Ubaldo Jimenez",
-  "  dice 2d6=7 (3+3) %=77 -> TOUGH",
-  "  TOUGH %=77 above the ranges -> OUT F8",
-  "  fly out CF",
-  "[5B 1 out, bases 1--] Stan Musial vs Ubaldo Jimenez",
-  "  dice 2d6=8 (2+2) %=34 -> IN-PLAY",
-  "  IN-PLAY %=34 -> 1B",
-  "  Stan Musial singles (CF fields it)",
-  "[5B 1 out, bases 1-1] Rogers Hornsby vs Ubaldo Jimenez",
-  "  dice 2d6=2 (1+4) %=72 -> WHEELHOUSE",
-  "  WHEELHOUSE %=72 -> 2B",
-  "  Rogers Hornsby doubles (LF fields it)",
-  "[5B 1 out, bases -11] Albert Pujols vs Ubaldo Jimenez",
-  "  WILD PITCH by Ubaldo Jimenez (book p10, addendum WP rating): all runners advance one base",
-  "  dice 2d6=8 (2+6) %=23 -> IN-PLAY",
-  "  IN-PLAY %=23 -> 1B",
-  "  Albert Pujols singles (CF fields it)",
-  "  FATIGUE (book): Ubaldo Jimenez is fatigued under the book's starter-stamina rule: Start 5 reached (inning 5) with 4 runs allowed, 3 or more (2024 rulebook p10)",
-  "Pitching change (Colorado): Boone Logan replaces Ubaldo Jimenez",
-  "[5B 1 out, bases 1--] Jim Edmonds vs Boone Logan",
-  "  dice 2d6=4 (5+1) %=89 -> TOUGH",
-  "  TOUGH %=89 above the ranges -> OUT G6",
-  "  fielder's choice: runner out at 2nd, batter safe",
-  "  fielder's choice SS",
-  "  Jim Edmonds steals 2 safely",
-  "[5B 2 out, bases -1-] Joe Medwick vs Boone Logan",
-  "  dice 2d6=11 (4+5) %=17 -> TOUGH-OUT",
-  "  Joe Medwick strikes out",
-  "  EVEN-KEEL COUNTERPUNCH (Black): Andres Galarraga leads off after a 3-run half; WHEELHOUSE +5 this at-bat",
-  "[6T 0 out, bases ---] Andres Galarraga vs Bob Gibson",
-  "  dice 2d6=10 (3+2) %=92 -> PATIENT",
-  "  PATIENT %=92 above the ranges -> OUT G6",
-  "  ground out SS",
-  "Pitching change (St. Louis): Jason Isringhausen replaces Bob Gibson",
-  "[6T 1 out, bases ---] Charlie Blackmon vs Jason Isringhausen",
-  "  dice 2d6=6 (3+3) %=29 -> TOUGH-OUT",
-  "  Charlie Blackmon strikes out",
-  "[6T 2 out, bases ---] DJ LeMahieu vs Jason Isringhausen",
-  "  dice 2d6=10 (2+1) %=27 -> TOUGH",
-  "  TOUGH %=27 -> SO",
-  "  DJ LeMahieu strikes out",
-  "[6B 0 out, bases ---] Enos Slaughter vs Boone Logan",
-  "  dice 2d6=7 (1+6) %=56 -> TOUGH",
-  "  TOUGH %=56 above the ranges -> OUT G5",
-  "  ground out 3B",
-  "[6B 1 out, bases ---] Yadier Molina vs Boone Logan",
-  "  dice 2d6=5 (3+1) %=43 -> PATIENT",
-  "  PATIENT %=43 above the ranges -> OUT G1",
-  "  ground out P",
-  "[6B 2 out, bases ---] Ken Boyer vs Boone Logan",
-  "  dice 2d6=6 (1+5) %=47 -> PATIENT",
-  "  PATIENT %=47 -> BB",
-  "  Ken Boyer walks",
-  "[6B 2 out, bases 1--] Ted Simmons vs Boone Logan",
-  "  dice 2d6=9 (5+3) %=09 -> TOUGH",
-  "  TOUGH %=09 -> SO",
-  "  Ted Simmons strikes out",
-  "  FAC deck reshuffled after 6 full innings (printed protocol)",
-  "[7T 0 out, bases ---] Todd Helton vs Jason Isringhausen",
-  "  dice 2d6=9 (5+3) %=45 -> TOUGH",
-  "  TOUGH %=45 above the ranges -> OUT G1",
-  "  ground out P",
-  "[7T 1 out, bases ---] Nolan Arenado vs Jason Isringhausen",
-  "  dice 2d6=7 (3+2) %=92 -> TOUGH",
-  "  TOUGH %=92 above the ranges -> OUT G6",
-  "  ground out SS",
-  "[7T 2 out, bases ---] Larry Walker vs Jason Isringhausen",
-  "  dice 2d6=3 (3+6) %=50 -> TOUGH",
-  "  TOUGH %=50 -> 1B",
-  "  Larry Walker singles (RF fields it)",
-  "  Larry Walker steals 2 safely",
-  "[7T 2 out, bases -1-] Troy Tulowitzki vs Jason Isringhausen",
-  "  dice 2d6=11 (5+5) %=13 -> BALLPARK",
-  "  BALLPARK (Busch Stadium, RHB): WHEELHOUSE, re-roll %=77",
-  "  WHEELHOUSE %=77 -> 1B",
-  "  Troy Tulowitzki singles (LF fields it)",
-  "[7T 2 out, bases 1--] Matt Holliday vs Jason Isringhausen",
-  "  dice 2d6=5 (1+6) %=48 -> PATIENT",
-  "  PATIENT %=48 above the ranges -> OUT G1",
-  "  ground out P",
-  "  FATIGUE (book): Boone Logan is fatigued under the book's relief rule: a Short reliever whose appeared innings are [5, 6, 7]; 2 of them have ended, reaching the 2-inning limit as the last of them ended (2024 rulebook p11)",
-  "[7B 0 out, bases ---] Stan Musial vs Boone Logan",
-  "  dice 2d6=7 (5+5) %=16 -> TOUGH",
-  "  TOUGH %=16 -> 3B",
-  "  Stan Musial triples, 0 run(s) score",
-  "[7B 0 out, bases --1] Rogers Hornsby vs Boone Logan",
-  "  dice 2d6=7 (3+5) %=38 -> TOUGH",
-  "  TOUGH %=38 -> 1B",
-  "  Rogers Hornsby singles (RF fields it)",
-  "[7B 0 out, bases 1--] Albert Pujols vs Boone Logan",
-  "  dice 2d6=10 (3+2) %=56 -> BALLPARK",
-  "  WHEELHOUSE %=56 -> HR",
-  "  Albert Pujols homers",
-  "Pitching change (Colorado): Rafael Betancourt replaces Boone Logan",
-  "[7B 0 out, bases ---] Jim Edmonds vs Rafael Betancourt",
-  "  dice 2d6=8 (1+4) %=82 -> DEFENSE",
-  "  DEFENSE: 1-base error on SS, batter reaches",
-  "[7B 0 out, bases 1--] Joe Medwick vs Rafael Betancourt",
+  "  Jim Edmonds walks",
+  "[2B 0 out, bases 11-] Joe Medwick vs Ubaldo Jimenez",
   "  hit and run is on",
-  "  dice 2d6=5 (2+4) %=48 -> PATIENT-OUT",
-  "  hit and run: PATIENT is a foul ball, re-roll %=38 on IN-PLAY",
-  "  IN-PLAY %=38 above the ranges -> OUT P3",
-  "  pop out 1B, runners hold",
-  "[7B 1 out, bases 1--] Enos Slaughter vs Rafael Betancourt",
-  "  bunt: fielder C, %=20 -> LEAD",
-  "  bunt: lead runner thrown out, batter safe",
-  "[7B 2 out, bases 1--] Yadier Molina vs Rafael Betancourt",
-  "  DROP?: 2B drops the throw (E), Enos Slaughter safe at 2",
-  "  dice 2d6=5 (4+6) %=02 -> PATIENT-OUT",
-  "  Yadier Molina walks",
-  "[7B 2 out, bases 11-] Ken Boyer vs Rafael Betancourt",
-  "  dice 2d6=7 (2+2) %=44 -> TOUGH",
-  "  TOUGH %=44 -> 1B",
-  "  Ken Boyer singles (CF fields it)",
-  "  auto-steal: Ken Boyer has the jump but is held (2 outs, runner on 3rd)",
-  "[7B 2 out, bases 1-1] Ted Simmons vs Rafael Betancourt",
-  "  WILD PITCH by Rafael Betancourt (book p10, addendum WP rating): all runners advance one base",
-  "  dice 2d6=12 (6+1) %=36 -> TOUGH",
-  "  TOUGH %=36 -> 1B",
-  "  Ted Simmons singles (CF fields it)",
-  "  pickoff move on Ted Simmons: he gets back safely (book p18)",
-  "  FATIGUE (book): Rafael Betancourt is fatigued under the book's relief rule: a Short reliever at 3 runs allowed, the 2-run limit (2024 rulebook p11)",
-  "Pitching change (Colorado): Huston Street replaces Rafael Betancourt",
-  "[7B 2 out, bases 1--] Stan Musial vs Huston Street",
-  "  dice 2d6=7 (1+6) %=40 -> TOUGH-OUT",
-  "  TOUGH-OUT: OUT section -> P3",
-  "  pop out 1B, runners hold",
-  "  EVEN-KEEL COUNTERPUNCH (Black): Elias Diaz leads off after a 6-run half; WHEELHOUSE +5 this at-bat",
-  "  FATIGUE (book): Jason Isringhausen is fatigued under the book's relief rule: a Short reliever whose appeared innings are [6, 7, 8]; 2 of them have ended, reaching the 2-inning limit as the last of them ended (2024 rulebook p11)",
-  "[8T 0 out, bases ---] Elias Diaz vs Jason Isringhausen",
-  "  dice 2d6=5 (3+2) %=04 -> PATIENT",
-  "  PATIENT %=04 -> BB",
-  "  Elias Diaz walks",
-  "[8T 0 out, bases 1--] Andres Galarraga vs Jason Isringhausen",
-  "  dice 2d6=3 (2+5) %=01 -> TOUGH",
-  "  TOUGH %=01 -> SO",
-  "  Andres Galarraga strikes out",
-  "[8T 1 out, bases 1--] Charlie Blackmon vs Jason Isringhausen",
-  "  dice 2d6=10 (2+6) %=42 -> TOUGH",
-  "  TOUGH %=42 -> SO",
-  "  Charlie Blackmon strikes out",
-  "[8T 2 out, bases 1--] DJ LeMahieu vs Jason Isringhausen",
-  "  dice 2d6=3 (2+3) %=45 -> TOUGH",
-  "  TOUGH %=45 -> 1B",
-  "  DJ LeMahieu singles (LF fields it)",
-  "  auto-steal: DJ LeMahieu has the jump but is held (2 outs, runner on 3rd)",
-  "[8T 2 out, bases 1-1] Todd Helton vs Jason Isringhausen",
-  "  WILD PITCH by Jason Isringhausen (book p10, addendum WP rating): all runners advance one base",
-  "  dice 2d6=6 (1+4) %=96 -> TOUGH-OUT",
-  "  WHEELHOUSE %=96 above the ranges -> OUT F7",
-  "  fly out LF",
-  "[8B 0 out, bases ---] Rogers Hornsby vs Huston Street",
-  "  dice 2d6=6 (1+6) %=72 -> PATIENT",
-  "  PATIENT %=72 above the ranges -> OUT G4",
-  "  ground out 2B",
-  "[8B 1 out, bases ---] Albert Pujols vs Huston Street",
-  "  dice 2d6=8 (5+4) %=64 -> IN-PLAY",
-  "  IN-PLAY %=64 above the ranges -> OUT F9",
-  "  fly out RF",
-  "[8B 2 out, bases ---] Jim Edmonds vs Huston Street",
-  "  dice 2d6=8 (5+6) %=86 -> IN-PLAY",
-  "  IN-PLAY %=86 above the ranges -> OUT G6",
+  "  dice 2d6=7 (2+5) %=55 -> TOUGH",
+  "  TOUGH %=55 -> 1B",
+  "  hit and run: Joe Medwick with a 1B, runners take the extra base",
+  "[2B 0 out, bases 1-1] Enos Slaughter vs Ubaldo Jimenez",
+  "  bunt: fielder C, %=01 -> PO",
+  "  bunt popped out, runners hold",
+  "[2B 1 out, bases 1-1] Yadier Molina vs Ubaldo Jimenez",
+  "  bunt: fielder P, %=75 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[2B 2 out, bases -1-] Ken Boyer vs Ubaldo Jimenez",
+  "  dice 2d6=3 (2+6) %=86 -> DEFENSE",
+  "  DEFENSE: SS converts it: Popout",
+  "[3T 0 out, bases ---] Andres Galarraga vs Bob Gibson",
+  "  dice 2d6=10 (3+1) %=09 -> PATIENT",
+  "  PATIENT %=09 -> BB",
+  "  Andres Galarraga walks",
+  "[3T 0 out, bases 1--] Charlie Blackmon vs Bob Gibson",
+  "  dice 2d6=6 (1+2) %=76 -> TOUGH",
+  "  TOUGH %=76 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[3T 1 out, bases 1--] DJ LeMahieu vs Bob Gibson",
+  "  dice 2d6=9 (3+5) %=85 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=30",
+  "  IN-PLAY %=30 -> 1B",
+  "  DJ LeMahieu singles (RF fields it)",
+  "[3T 1 out, bases 11-] Todd Helton vs Bob Gibson",
+  "  dice 2d6=8 (5+4) %=69 -> TOUGH",
+  "  TOUGH %=69 above the ranges -> OUT G4",
+  "  double play turned",
+  "  GIDP 2B",
+  "[3B 0 out, bases ---] Ozzie Smith vs Ubaldo Jimenez",
+  "  dice 2d6=4 (4+5) %=73 -> PATIENT",
+  "  PATIENT %=73 above the ranges -> OUT G6",
   "  ground out SS",
-  "[9T 0 out, bases ---] Nolan Arenado vs Jason Isringhausen",
-  "  dice 2d6=6 (3+1) %=13 -> TOUGH-OUT",
+  "[3B 1 out, bases ---] Stan Musial vs Ubaldo Jimenez",
+  "  dice 2d6=5 (4+5) %=43 -> PATIENT",
+  "  PATIENT %=43 -> BB",
+  "  Stan Musial walks",
+  "[3B 1 out, bases 1--] Rogers Hornsby vs Ubaldo Jimenez",
+  "  dice 2d6=6 (3+5) %=17 -> TOUGH",
+  "  TOUGH %=17 -> 2B",
+  "  Rogers Hornsby doubles (LF fields it)",
+  "[3B 1 out, bases -1-] Albert Pujols vs Ubaldo Jimenez",
+  "  dice 2d6=4 (4+2) %=14 -> PATIENT",
+  "  PATIENT %=14 -> BB",
+  "  Albert Pujols walks",
+  "[3B 1 out, bases 11-] Jim Edmonds vs Ubaldo Jimenez",
+  "  dice 2d6=7 (6+1) %=19 -> TOUGH",
+  "  TOUGH %=19 -> SO",
+  "  Jim Edmonds strikes out",
+  "[3B 2 out, bases 11-] Joe Medwick vs Ubaldo Jimenez",
+  "  dice 2d6=9 (6+4) %=96 -> TOUGH",
+  "  TOUGH %=96 above the ranges -> OUT F9",
+  "  fly out RF",
+  "  FAC deck reshuffled after 3 full innings (printed protocol)",
+  "[4T 0 out, bases ---] Nolan Arenado vs Bob Gibson",
+  "  dice 2d6=11 (4+1) %=13 -> TOUGH",
   "  TOUGH %=13 -> SO",
   "  Nolan Arenado strikes out",
-  "Pitching change (St. Louis): Ryan Helsley replaces Jason Isringhausen",
-  "[9T 1 out, bases ---] Larry Walker vs Ryan Helsley",
-  "  dice 2d6=12 (6+2) %=92 -> TOUGH",
-  "  TOUGH %=92 above the ranges -> OUT G6",
+  "[4T 1 out, bases ---] Larry Walker vs Bob Gibson",
+  "  dice 2d6=8 (1+1) %=45 -> TOUGH",
+  "  TOUGH %=40 -> SO",
+  "  Larry Walker strikes out",
+  "[4T 2 out, bases ---] Troy Tulowitzki vs Bob Gibson",
+  "  dice 2d6=3 (2+6) %=14 -> IN-PLAY",
+  "  IN-PLAY %=14 -> 1B",
+  "  Troy Tulowitzki singles (CF fields it)",
+  "  caught stealing: Troy Tulowitzki out at 2",
+  "[4B 0 out, bases ---] Enos Slaughter vs Ubaldo Jimenez",
+  "  dice 2d6=8 (3+3) %=87 -> IN-PLAY",
+  "  IN-PLAY %=87 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[4B 1 out, bases ---] Yadier Molina vs Ubaldo Jimenez",
+  "  dice 2d6=6 (3+4) %=34 -> TOUGH",
+  "  TOUGH %=34 -> 1B",
+  "  Yadier Molina singles (CF fields it)",
+  "[4B 1 out, bases 1--] Ken Boyer vs Ubaldo Jimenez",
+  "  bunt: fielder C, %=83 -> SH",
+  "  sacrifice works: batter out at 1st, runners advance",
+  "[4B 2 out, bases -1-] Ozzie Smith vs Ubaldo Jimenez",
+  "  dice 2d6=9 (3+5) %=47 -> TOUGH",
+  "  TOUGH %=47 above the ranges -> OUT G1",
+  "  ground out P",
+  "[5T 0 out, bases ---] Matt Holliday vs Bob Gibson",
+  "  dice 2d6=7 (1+2) %=50 -> IN-PLAY",
+  "  IN-PLAY %=50 above the ranges -> OUT G3",
+  "  ground out 1B",
+  "[5T 1 out, bases ---] Elias Diaz vs Bob Gibson",
+  "  dice 2d6=6 (5+2) %=10 -> TOUGH",
+  "  TOUGH %=10 -> SO",
+  "  Elias Diaz strikes out",
+  "[5T 2 out, bases ---] Andres Galarraga vs Bob Gibson",
+  "  dice 2d6=9 (4+6) %=50 -> BALLPARK",
+  "  BALLPARK (Busch Stadium, RHB): IN-PLAY, re-roll %=32",
+  "  SPRAWLING OUTFIELD VETERANS (Black): Andres Galarraga's single is stretched to a double",
+  "  IN-PLAY %=32 -> 2B",
+  "  Andres Galarraga doubles (LF fields it)",
+  "[5T 2 out, bases -1-] Charlie Blackmon vs Bob Gibson",
+  "  dice 2d6=8 (1+6) %=72 -> TOUGH",
+  "  TOUGH %=72 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "  FATIGUE (book): Ubaldo Jimenez is fatigued under the book's starter-stamina rule: Start 5 reached (inning 5) with 3 runs allowed, 3 or more (2024 rulebook p10)",
+  "[5B 0 out, bases ---] Stan Musial vs Ubaldo Jimenez",
+  "  dice 2d6=8 (2+6) %=68 -> IN-PLAY",
+  "  IN-PLAY %=68 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[5B 1 out, bases ---] Rogers Hornsby vs Ubaldo Jimenez",
+  "  dice 2d6=7 (6+3) %=71 -> TOUGH",
+  "  WHEELHOUSE %=71 -> 2B",
+  "  Rogers Hornsby doubles (RF fields it)",
+  "[5B 1 out, bases -1-] Albert Pujols vs Ubaldo Jimenez",
+  "  dice 2d6=3 (3+1) %=91 -> DEFENSE",
+  "  DEFENSE: LF converts it: ShortFly",
+  "[5B 2 out, bases -1-] Jim Edmonds vs Ubaldo Jimenez",
+  "  dice 2d6=5 (4+2) %=46 -> PATIENT",
+  "  PATIENT %=46 -> BB",
+  "  Jim Edmonds walks",
+  "[5B 2 out, bases 11-] Joe Medwick vs Ubaldo Jimenez",
+  "  dice 2d6=9 (3+6) %=18 -> TOUGH",
+  "  TOUGH %=18 -> SO",
+  "  Joe Medwick strikes out",
+  "[6T 0 out, bases ---] DJ LeMahieu vs Bob Gibson",
+  "  dice 2d6=5 (2+2) %=02 -> TOUGH",
+  "  TOUGH %=02 -> SO",
+  "  DJ LeMahieu strikes out",
+  "[6T 1 out, bases ---] Todd Helton vs Bob Gibson",
+  "  dice 2d6=11 (5+4) %=76 -> TOUGH",
+  "  TOUGH %=76 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[6T 2 out, bases ---] Nolan Arenado vs Bob Gibson",
+  "  dice 2d6=6 (6+6) %=56 -> TOUGH",
+  "  TOUGH %=51 -> SO",
+  "  Nolan Arenado strikes out",
+  "[6B 0 out, bases ---] Enos Slaughter vs Ubaldo Jimenez",
+  "  dice 2d6=6 (1+5) %=97 -> TOUGH",
+  "  WHEELHOUSE %=97 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[6B 1 out, bases ---] Yadier Molina vs Ubaldo Jimenez",
+  "  dice 2d6=3 (3+1) %=63 -> DEFENSE",
+  "  DEFENSE: 1-base error on 3B, batter reaches",
+  "  Yadier Molina steals 2 safely",
+  "[6B 1 out, bases -1-] Ken Boyer vs Ubaldo Jimenez",
+  "  dice 2d6=5 (1+5) %=61 -> PATIENT",
+  "  PATIENT %=61 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[6B 2 out, bases --1] Ozzie Smith vs Ubaldo Jimenez",
+  "  dice 2d6=2 (1+2) %=28 -> WHEELHOUSE",
+  "  WHEELHOUSE %=28 -> 1B",
+  "  Ozzie Smith singles (RF fields it)",
+  "  DROP?: SS drops the throw (E), Ozzie Smith safe at 2",
+  "Pitching change (Colorado): Boone Logan replaces Ubaldo Jimenez",
+  "[6B 2 out, bases -1-] Stan Musial vs Boone Logan",
+  "  WILD PITCH by Boone Logan (book p10, addendum WP rating): all runners advance one base",
+  "  dice 2d6=6 (5+1) %=54 -> PATIENT",
+  "  PATIENT %=54 -> BB",
+  "  Stan Musial walks",
+  "  auto-steal: Stan Musial has the jump but is held (2 outs, runner on 3rd)",
+  "[6B 2 out, bases 1-1] Rogers Hornsby vs Boone Logan",
+  "  dice 2d6=6 (3+5) %=35 -> PATIENT",
+  "  PATIENT %=35 -> BB",
+  "  Rogers Hornsby walks",
+  "[6B 2 out, bases 111] Albert Pujols vs Boone Logan",
+  "  dice 2d6=6 (5+4) %=25 -> PATIENT",
+  "  PATIENT %=25 -> BB",
+  "  Albert Pujols walks",
+  "[6B 2 out, bases 111] Jim Edmonds vs Boone Logan",
+  "  dice 2d6=7 (2+4) %=64 -> TOUGH",
+  "  TOUGH %=64 -> 1B",
+  "  Jim Edmonds singles (CF fields it)",
+  "  auto-steal: Jim Edmonds has the jump but is held (2 outs, runner on 3rd)",
+  "  FATIGUE (book): Boone Logan is fatigued under the book's relief rule: a Short reliever at 2 runs allowed, the 2-run limit (2024 rulebook p11)",
+  "[6B 2 out, bases 1-1] Joe Medwick vs Boone Logan",
+  "  dice 2d6=8 (2+4) %=66 -> IN-PLAY",
+  "  IN-PLAY %=66 above the ranges -> OUT G6",
   "  ground out SS",
-  "[9T 2 out, bases ---] Troy Tulowitzki vs Ryan Helsley",
-  "  dice 2d6=9 (4+3) %=11 -> IN-PLAY",
-  "  IN-PLAY %=11 -> 1B",
-  "  Troy Tulowitzki singles (LF fields it)",
-  "[9T 2 out, bases 1--] Matt Holliday vs Ryan Helsley",
-  "  dice 2d6=6 (2+1) %=57 -> TOUGH",
-  "  TOUGH %=57 -> 2B",
-  "  Matt Holliday doubles (LF fields it)",
-  "[9T 2 out, bases -1-] Elias Diaz vs Ryan Helsley",
-  "  dice 2d6=7 (4+3) %=83 -> TOUGH",
-  "  TOUGH %=83 above the ranges -> OUT G6",
-  "  ground out SS"
+  "  FAC deck reshuffled after 6 full innings (printed protocol)",
+  "  EVEN-KEEL COUNTERPUNCH (Black): Larry Walker leads off after a 4-run half; WHEELHOUSE +5 this at-bat",
+  "[7T 0 out, bases ---] Larry Walker vs Bob Gibson",
+  "  dice 2d6=7 (2+3) %=21 -> IN-PLAY",
+  "  IN-PLAY %=21 -> 1B",
+  "  Larry Walker singles (LF fields it)",
+  "[7T 0 out, bases 1--] Troy Tulowitzki vs Bob Gibson",
+  "  hit and run is on",
+  "  dice 2d6=11 (4+1) %=63 -> TOUGH",
+  "  TOUGH %=63 above the ranges -> OUT F9",
+  "  fly out RF",
+  "[7T 1 out, bases 1--] Matt Holliday vs Bob Gibson",
+  "  hit and run is on",
+  "  dice 2d6=8 (5+1) %=73 -> TOUGH",
+  "  TOUGH %=73 above the ranges -> OUT G4",
+  "  hit and run: batter out at 1st, runners advance",
+  "[7T 2 out, bases -1-] Elias Diaz vs Bob Gibson",
+  "  dice 2d6=7 (4+3) %=15 -> IN-PLAY",
+  "  IN-PLAY %=15 -> 1B",
+  "  Elias Diaz singles (LF fields it)",
+  "[7T 2 out, bases 1--] Andres Galarraga vs Bob Gibson",
+  "  dice 2d6=10 (3+6) %=08 -> PATIENT",
+  "  PATIENT %=08 -> BB",
+  "  Andres Galarraga walks",
+  "[7T 2 out, bases 11-] Charlie Blackmon vs Bob Gibson",
+  "  dice 2d6=2 (1+1) %=09 -> IN-PLAY",
+  "  IN-PLAY %=09 -> 1B",
+  "  Charlie Blackmon singles (CF fields it)",
+  "  auto-steal: Charlie Blackmon has the jump but is held (2 outs, runner on 3rd)",
+  "[7T 2 out, bases 1-1] DJ LeMahieu vs Bob Gibson",
+  "  dice 2d6=5 (4+4) %=58 -> TOUGH",
+  "  TOUGH %=58 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[7B 0 out, bases ---] Enos Slaughter vs Boone Logan",
+  "  dice 2d6=12 (6+6) %=72 -> IN-PLAY",
+  "  IN-PLAY %=72 above the ranges -> OUT G6",
+  "  ground out SS",
+  "[7B 1 out, bases ---] Yadier Molina vs Boone Logan",
+  "  dice 2d6=7 (1+3) %=27 -> TOUGH",
+  "  TOUGH %=27 -> SO",
+  "  Yadier Molina strikes out",
+  "[7B 2 out, bases ---] Ken Boyer vs Boone Logan",
+  "  dice 2d6=6 (3+2) %=76 -> PATIENT",
+  "  IN-PLAY %=76 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[8T 0 out, bases ---] Todd Helton vs Bob Gibson",
+  "  dice 2d6=6 (1+3) %=83 -> TOUGH",
+  "  TOUGH %=83 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[8T 1 out, bases ---] Nolan Arenado vs Bob Gibson",
+  "  dice 2d6=7 (2+2) %=10 -> IN-PLAY",
+  "  IN-PLAY %=10 -> 1B",
+  "  Nolan Arenado singles (RF fields it)",
+  "[8T 1 out, bases 1--] Larry Walker vs Bob Gibson",
+  "  dice 2d6=8 (6+5) %=05 -> TOUGH",
+  "  TOUGH %=05 -> SO",
+  "  Larry Walker strikes out",
+  "[8T 2 out, bases 1--] Troy Tulowitzki vs Bob Gibson",
+  "  dice 2d6=6 (5+5) %=13 -> TOUGH",
+  "  TOUGH %=13 -> SO",
+  "  Troy Tulowitzki strikes out",
+  "[8B 0 out, bases ---] Ozzie Smith vs Boone Logan",
+  "  dice 2d6=5 (4+3) %=56 -> PATIENT",
+  "  IN-PLAY %=56 above the ranges -> OUT G5",
+  "  ground out 3B",
+  "[8B 1 out, bases ---] Stan Musial vs Boone Logan",
+  "  dice 2d6=8 (4+4) %=82 -> IN-PLAY",
+  "  IN-PLAY %=82 above the ranges -> OUT F8",
+  "  fly out CF",
+  "[8B 2 out, bases ---] Rogers Hornsby vs Boone Logan",
+  "  dice 2d6=4 (6+6) %=02 -> TOUGH",
+  "  TOUGH %=02 -> SO",
+  "  Rogers Hornsby strikes out",
+  "[9T 0 out, bases ---] Matt Holliday vs Bob Gibson",
+  "  dice 2d6=4 (6+1) %=99 -> PATIENT",
+  "  PATIENT %=99 above the ranges -> OUT F7",
+  "  fly out LF",
+  "[9T 1 out, bases ---] Elias Diaz vs Bob Gibson",
+  "  dice 2d6=6 (5+4) %=70 -> TOUGH",
+  "  TOUGH %=70 above the ranges -> OUT G4",
+  "  ground out 2B",
+  "[9T 2 out, bases ---] Andres Galarraga vs Bob Gibson",
+  "  dice 2d6=7 (3+3) %=81 -> IN-PLAY",
+  "  IN-PLAY %=81 above the ranges -> OUT F8",
+  "  fly out CF"
  ]
 }

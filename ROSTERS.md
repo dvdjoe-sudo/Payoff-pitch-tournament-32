@@ -376,10 +376,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 3 later games)
 - Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 3 later games)
 
-### Substitutes who have batted
-
-- Ted Simmons (`simmote01`), slot 1
-
 ### Starts, in the order the games were played
 
 - Bob Gibson (`gibsobo01`) started R1-05-G1
@@ -389,9 +385,8 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Relievers who have appeared
 
-- Jason Isringhausen (`isrinja01`), first seen in R1-05-G1
-- Ryan Helsley (`helslry01`), first seen in R1-05-G1
 - Al Brazle (`brazlal01`), first seen in R1-05-G2
+- Ryan Helsley (`helslry01`), first seen in R1-05-G3
 - Bruce Sutter (`suttebr01`), first seen in R1-05-G4
 
 ### Rotation carry recorded on the series
@@ -1670,9 +1665,8 @@ González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 
 ### Relievers who have appeared
 
 - Boone Logan (`loganbo02`), first seen in R1-05-G1
-- Rafael Betancourt (`betanra01`), first seen in R1-05-G1
-- Huston Street (`streehu01`), first seen in R1-05-G1
 - Matt Belisle (`belisma01`), first seen in R1-05-G2
+- Rafael Betancourt (`betanra01`), first seen in R1-05-G2
 
 ### Rotation carry recorded on the series
 
