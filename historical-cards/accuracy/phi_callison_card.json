@@ -1,0 +1,196 @@
+{
+ "players": [
+  {
+   "card": {
+    "1b": 0.153,
+    "2b": 0.0424,
+    "3b": 0.0163,
+    "avg": 0.2739,
+    "bb": 0.075,
+    "hr": 0.0397,
+    "obp": 0.3337,
+    "slg": 0.4853,
+    "so": 0.1538
+   },
+   "delta": {
+    "1b": 0.0002,
+    "2b": -0.0002,
+    "3b": 0.0002,
+    "avg": -0.0009,
+    "hr": -0.0,
+    "obp_real": 0.0001,
+    "obp_ubb": 0.0045,
+    "slg": -0.0016,
+    "so": -0.0003
+   },
+   "fit_error": 0.0004,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "Run is 10, the formula's cap."
+   ],
+   "key": "PHI|callijo01",
+   "kind": "hitter",
+   "name": "Johnny Callison",
+   "nulls": [],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1528,
+    "2b": 0.0425,
+    "3b": 0.0161,
+    "avg": 0.2748,
+    "bb": 0.0753,
+    "hr": 0.0397,
+    "obp": 0.3336,
+    "obp_ubb": 0.3292,
+    "slg": 0.4869,
+    "so": 0.1541,
+    "ubb": 0.0709
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "123.3",
+     "other_clubs": [],
+     "pa": 333,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1960
+    },
+    {
+     "nulls": [],
+     "ops_plus": "114.5",
+     "other_clubs": [],
+     "pa": 532,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1961
+    },
+    {
+     "nulls": [],
+     "ops_plus": "136.7",
+     "other_clubs": [],
+     "pa": 664,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1962
+    },
+    {
+     "nulls": [],
+     "ops_plus": "149.6",
+     "other_clubs": [],
+     "pa": 679,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1963
+    },
+    {
+     "nulls": [],
+     "ops_plus": "134.0",
+     "other_clubs": [],
+     "pa": 699,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1964
+    },
+    {
+     "nulls": [],
+     "ops_plus": "142.3",
+     "other_clubs": [],
+     "pa": 687,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1965
+    },
+    {
+     "nulls": [],
+     "ops_plus": "117.5",
+     "other_clubs": [],
+     "pa": 675,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1966
+    },
+    {
+     "nulls": [],
+     "ops_plus": "119.3",
+     "other_clubs": [],
+     "pa": 617,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1967
+    },
+    {
+     "nulls": [],
+     "ops_plus": "128.7",
+     "other_clubs": [],
+     "pa": 445,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1968
+    },
+    {
+     "nulls": [],
+     "ops_plus": "124.2",
+     "other_clubs": [],
+     "pa": 551,
+     "teams": [
+      "PHI"
+     ],
+     "year": 1969
+    }
+   ],
+   "window_years": [
+    1962,
+    1963,
+    1964,
+    1965,
+    1968
+   ]
+  }
+ ],
+ "summary": {
+  "lahman_max_year": 2025,
+  "lahman_sha256": "48d05d6ffafb977846b14cfb273d2faf21b5519604cbb337792cb3ec8d25dd31",
+  "players": [
+   "PHI|callijo01"
+  ],
+  "window_rule": {
+   "hitters": "five best franchise seasons by league OPS+ (one decimal), PA>=300",
+   "pitchers": "five best franchise seasons by one-decimal ERA+ times IP, bullpen floor 30 IP"
+  }
+ },
+ "fielding_note": {
+  "script": "scripts/derive_hitter_fielding.py (run 2026-10-27 for this card only; its report file was left at the main version)",
+  "positions": [
+   {
+    "arm": 4,
+    "e": 4,
+    "pos": "RF",
+    "range": "B"
+   }
+  ],
+  "of_arm_basis": {
+   "method": "scripts/derive_of_arm.py: OF assists/G vs league, fitted to 1986 printed arms",
+   "of_a": 100,
+   "of_g": 739,
+   "rel_assist_rate": 2.356,
+   "years_used": [
+    1962,
+    1963,
+    1964,
+    1965,
+    1968
+   ]
+  }
+ }
+}

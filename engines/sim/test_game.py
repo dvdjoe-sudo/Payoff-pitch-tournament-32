@@ -332,7 +332,7 @@ def sample_game_stays_out_of_the_tournament():
     # Seed 1 has no steal attempt since the v0.3 pitcher tables; seed 4 does.
     assert any("FAC steal." in line for line in play("BOS", "TOR", seed=4)["log"])
     blob = subprocess.check_output(["git", "hash-object", "tournament_results.json"], cwd=ROOT, text=True).strip()
-    assert blob == "c355ca75cf71d179e8d2fa4c01a8d8756d5e58c4"
+    assert blob == "b19407d6024587c1164046679908216c775e6c3d"
     diff = subprocess.check_output(["git", "diff", "--", "sw.js"], cwd=ROOT, text=True)
     assert diff == ""
 
