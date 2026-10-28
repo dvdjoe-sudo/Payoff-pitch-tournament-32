@@ -372,14 +372,14 @@
  "PHI": {
   "manager": "Charlie Manuel",
   "lineup": [
-   "1 Johnny Callison RF L 10",
-   "2 Bobby Abreu RF L 9",
+   "1 Richie Ashburn CF L 12",
+   "2 Johnny Callison RF L 10",
    "3 Ed Delahanty LF L 13",
    "4 Mike Schmidt 3B R 18",
    "5 Bryce Harper 1B L 8",
    "6 Ryan Howard DH L 13",
    "7 Chase Utley 2B L 13",
-   "8 J.T. Realmuto C R 8",
+   "8 Carlos Ruiz C R 11",
    "9 Jimmy Rollins SS S 15"
   ],
   "bench": [
@@ -387,7 +387,7 @@
    "MIF Larry Bowa SS R 12",
    "DEF IF Scott Rolen 3B R 7",
    "BAT/CI Dick Allen 1B R 9",
-   "4TH OF Richie Ashburn CF L 12",
+   "4TH OF Bobby Abreu RF L 9",
    "BAT2 Chuck Klein RF/LF L (Contact/Power)"
   ],
   "rotation": [

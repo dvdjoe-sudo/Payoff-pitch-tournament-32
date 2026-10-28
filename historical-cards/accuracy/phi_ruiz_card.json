@@ -1,0 +1,201 @@
+{
+ "players": [
+  {
+   "card": {
+    "1b": 0.1623,
+    "2b": 0.0625,
+    "3b": 0.0009,
+    "avg": 0.2828,
+    "bb": 0.1054,
+    "hr": 0.0209,
+    "obp": 0.3742,
+    "slg": 0.4285,
+    "so": 0.1175
+   },
+   "delta": {
+    "1b": 0.0013,
+    "2b": -0.0,
+    "3b": -0.0005,
+    "avg": -0.0012,
+    "hr": -0.0001,
+    "obp_real": 0.0008,
+    "obp_ubb": 0.0185,
+    "slg": -0.0036,
+    "so": 0.0003
+   },
+   "fit_error": 0.0046,
+   "flags": [
+    "Fielding, arm, double-play, and sac bunt are the engine defaults (Average, range C, error 4, arm 6, DP 7, sac F), not a measured label.",
+    "Steal and run come from the solver's SB, CS, and triple formula.",
+    "OBP is 0.019 off the unintentional-walk target."
+   ],
+   "key": "PHI|ruizca01",
+   "kind": "hitter",
+   "name": "Carlos Ruiz",
+   "nulls": [],
+   "qa_status": "PASS",
+   "real": {
+    "1b": 0.1611,
+    "2b": 0.0626,
+    "3b": 0.0014,
+    "avg": 0.2839,
+    "bb": 0.105,
+    "hr": 0.021,
+    "obp": 0.3735,
+    "obp_ubb": 0.3557,
+    "slg": 0.4321,
+    "so": 0.1172,
+    "ubb": 0.0873
+   },
+   "seasons": [
+    {
+     "nulls": [],
+     "ops_plus": "96.3",
+     "other_clubs": [],
+     "pa": 76,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2006
+    },
+    {
+     "nulls": [],
+     "ops_plus": "95.4",
+     "other_clubs": [],
+     "pa": 424,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2007
+    },
+    {
+     "nulls": [],
+     "ops_plus": "69.3",
+     "other_clubs": [],
+     "pa": 369,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2008
+    },
+    {
+     "nulls": [],
+     "ops_plus": "111.4",
+     "other_clubs": [],
+     "pa": 375,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2009
+    },
+    {
+     "nulls": [],
+     "ops_plus": "135.5",
+     "other_clubs": [],
+     "pa": 433,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2010
+    },
+    {
+     "nulls": [],
+     "ops_plus": "114.3",
+     "other_clubs": [],
+     "pa": 469,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2011
+    },
+    {
+     "nulls": [],
+     "ops_plus": "158.9",
+     "other_clubs": [],
+     "pa": 421,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2012
+    },
+    {
+     "nulls": [],
+     "ops_plus": "96.4",
+     "other_clubs": [],
+     "pa": 337,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2013
+    },
+    {
+     "nulls": [],
+     "ops_plus": "108.0",
+     "other_clubs": [],
+     "pa": 444,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2014
+    },
+    {
+     "nulls": [],
+     "ops_plus": "63.7",
+     "other_clubs": [],
+     "pa": 317,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2015
+    },
+    {
+     "nulls": [],
+     "ops_plus": "99.5",
+     "other_clubs": [
+      "LAN"
+     ],
+     "pa": 193,
+     "teams": [
+      "PHI"
+     ],
+     "year": 2016
+    }
+   ],
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2014
+   ]
+  }
+ ],
+ "summary": {
+  "lahman_max_year": 2025,
+  "lahman_sha256": "48d05d6ffafb977846b14cfb273d2faf21b5519604cbb337792cb3ec8d25dd31",
+  "players": [
+   "PHI|ruizca01"
+  ],
+  "window_rule": {
+   "hitters": "five best franchise seasons by league OPS+ (one decimal), PA>=300",
+   "pitchers": "five best franchise seasons by one-decimal ERA+ times IP, bullpen floor 30 IP"
+  }
+ },
+ "user_override": {
+  "date": "2026-10-27",
+  "by": "owner (Joe Willey)",
+  "fields": "C range, error, arm",
+  "set_to": {
+   "range": "A",
+   "e": 5,
+   "arm": 1
+  },
+  "derived_before_override": {
+   "arm": 6,
+   "e": 4,
+   "pos": "C",
+   "range": "C"
+  },
+  "note": "User-directed override: best catcher defense on the rulebook scales (range A best of F-A; error 5 = fewest errors on the page-20 ERR chart; catcher arm 1 = best, page 8). Not from his stats. Hitting is unchanged and comes from the franchise card method."
+ }
+}

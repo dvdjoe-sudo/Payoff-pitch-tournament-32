@@ -335378,931 +335378,6 @@
   "team": "PHI",
   "tournament": null
  },
- "PHI|realmjt01": {
-  "card_bat": {
-   "arm": "2",
-   "bats": "R",
-   "capacity_basis": {
-    "expected_after": {
-     "avg": 0.266,
-     "obp": 0.332,
-     "slg": 0.459
-    },
-    "expected_before": {
-     "avg": 0.264,
-     "obp": 0.325,
-     "slg": 0.455
-    },
-    "ibb": 12,
-    "method": "IBB counted as BB (owner ruling 2026-10-27): PATIENT BB widened from empty faces to BB/PA; IN-PLAY/TOUGH hit bands re-tuned within printed 1986 maxima where a full section clipped hits",
-    "previous_out_table": [
-     {
-      "range": [
-       26,
-       27
-      ],
-      "result": "P4"
-     },
-     {
-      "range": [
-       28,
-       29
-      ],
-      "result": "P6"
-     },
-     {
-      "range": [
-       30,
-       30
-      ],
-      "result": "P2"
-     },
-     {
-      "range": [
-       31,
-       32
-      ],
-      "result": "P3"
-     },
-     {
-      "range": [
-       33,
-       34
-      ],
-      "result": "P5"
-     },
-     {
-      "range": [
-       35,
-       38
-      ],
-      "result": "G1"
-     },
-     {
-      "range": [
-       39,
-       39
-      ],
-      "result": "L4"
-     },
-     {
-      "range": [
-       40,
-       44
-      ],
-      "result": "G3"
-     },
-     {
-      "range": [
-       45,
-       45
-      ],
-      "result": "L6"
-     },
-     {
-      "range": [
-       46,
-       53
-      ],
-      "result": "G5"
-     },
-     {
-      "range": [
-       54,
-       61
-      ],
-      "result": "F7"
-     },
-     {
-      "range": [
-       62,
-       71
-      ],
-      "result": "G6"
-     },
-     {
-      "range": [
-       72,
-       81
-      ],
-      "result": "F8"
-     },
-     {
-      "range": [
-       82,
-       91
-      ],
-      "result": "G4"
-     },
-     {
-      "range": [
-       92,
-       99
-      ],
-      "result": "F9"
-     }
-    ],
-    "previous_sections": {
-     "IN-PLAY": {
-      "vsLHP": {
-       "1B": [
-        7,
-        25
-       ],
-       "2B": [
-        1,
-        6
-       ],
-       "3B": null
-      },
-      "vsRHP": {
-       "1B": [
-        6,
-        25
-       ],
-       "2B": [
-        1,
-        5
-       ],
-       "3B": null
-      }
-     },
-     "PATIENT": {
-      "vsLHP": {
-       "1B": [
-        41,
-        57
-       ],
-       "2B": [
-        31,
-        38
-       ],
-       "3B": [
-        39,
-        40
-       ],
-       "BB": [
-        1,
-        30
-       ],
-       "HBP": [
-        58,
-        60
-       ]
-      },
-      "vsRHP": {
-       "1B": [
-        39,
-        57
-       ],
-       "2B": [
-        30,
-        36
-       ],
-       "3B": [
-        37,
-        38
-       ],
-       "BB": [
-        1,
-        29
-       ],
-       "HBP": [
-        58,
-        65
-       ]
-      }
-     },
-     "TOUGH": {
-      "vsLHP": {
-       "1B": [
-        65,
-        72
-       ],
-       "2B": [
-        63,
-        64
-       ],
-       "3B": null,
-       "SO": [
-        1,
-        62
-       ]
-      },
-      "vsRHP": {
-       "1B": [
-        71,
-        77
-       ],
-       "2B": [
-        69,
-        70
-       ],
-       "3B": null,
-       "SO": [
-        1,
-        68
-       ]
-      }
-     },
-     "WHEELHOUSE": {
-      "vsLHP": {
-       "1B": [
-        61,
-        77
-       ],
-       "2B": [
-        48,
-        57
-       ],
-       "3B": [
-        58,
-        60
-       ],
-       "HR": [
-        1,
-        47
-       ]
-      },
-      "vsRHP": {
-       "1B": [
-        59,
-        76
-       ],
-       "2B": [
-        47,
-        55
-       ],
-       "3B": [
-        56,
-        58
-       ],
-       "HR": [
-        1,
-        46
-       ]
-      }
-     }
-    },
-    "retune_target": {
-     "avg": 0.266,
-     "obp": 0.329,
-     "slg": 0.46
-    },
-    "retuned": false,
-    "target": {
-     "avg": 0.266,
-     "obp": 0.329,
-     "slg": 0.46
-    },
-    "walk_cap_hit": false,
-    "walk_expected_bbp": 0.0748,
-    "walk_shortfall": 0.0,
-    "walk_target_bbp": 0.0727
-   },
-   "catcher_arm_method": {
-    "att": 384,
-    "basis": "franchise window",
-    "calibrated_on": "1986 printed catcher arms (historical-cards/reference/cards_1986.json); 70/74 match at att>=15",
-    "cs": 122,
-    "cs_pct": 0.3177,
-    "cuts_rel": [
-     0.44,
-     0.07,
-     -0.23,
-     -0.37
-    ],
-    "defaulted": false,
-    "flags": [],
-    "lg_cs_pct": 0.2302,
-    "metric": "CS/(CS+SB) vs league",
-    "rel": 0.3802,
-    "sb": 262,
-    "scale": "rulebook page 8 (1 best .. 5)",
-    "sources": [
-     "Lahman Fielding.csv"
-    ],
-    "uncertain": false,
-    "window": [
-     2019,
-     2021,
-     2022,
-     2023,
-     2024
-    ],
-    "years_used": [
-     2019,
-     2021,
-     2022,
-     2023,
-     2024
-    ]
-   },
-   "dp": 7,
-   "fielding": "Derived",
-   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
-   "out_table": [
-    {
-     "range": [
-      26,
-      27
-     ],
-     "result": "P4"
-    },
-    {
-     "range": [
-      28,
-      29
-     ],
-     "result": "P6"
-    },
-    {
-     "range": [
-      30,
-      30
-     ],
-     "result": "P2"
-    },
-    {
-     "range": [
-      31,
-      32
-     ],
-     "result": "P3"
-    },
-    {
-     "range": [
-      33,
-      34
-     ],
-     "result": "P5"
-    },
-    {
-     "range": [
-      35,
-      38
-     ],
-     "result": "G1"
-    },
-    {
-     "range": [
-      39,
-      39
-     ],
-     "result": "L4"
-    },
-    {
-     "range": [
-      40,
-      44
-     ],
-     "result": "G3"
-    },
-    {
-     "range": [
-      45,
-      45
-     ],
-     "result": "L6"
-    },
-    {
-     "range": [
-      46,
-      53
-     ],
-     "result": "G5"
-    },
-    {
-     "range": [
-      54,
-      61
-     ],
-     "result": "F7"
-    },
-    {
-     "range": [
-      62,
-      71
-     ],
-     "result": "G6"
-    },
-    {
-     "range": [
-      72,
-      81
-     ],
-     "result": "F8"
-    },
-    {
-     "range": [
-      82,
-      91
-     ],
-     "result": "G4"
-    },
-    {
-     "range": [
-      92,
-      99
-     ],
-     "result": "F9"
-    }
-   ],
-   "platoon_basis": {
-    "method": "1986 same-side ratio, 0.28/0.72 weighted total kept",
-    "previous_out_table": [
-     {
-      "range": [
-       26,
-       27
-      ],
-      "result": "P4"
-     },
-     {
-      "range": [
-       28,
-       29
-      ],
-      "result": "P6"
-     },
-     {
-      "range": [
-       30,
-       30
-      ],
-      "result": "P2"
-     },
-     {
-      "range": [
-       31,
-       32
-      ],
-      "result": "P3"
-     },
-     {
-      "range": [
-       33,
-       34
-      ],
-      "result": "P5"
-     },
-     {
-      "range": [
-       35,
-       38
-      ],
-      "result": "G1"
-     },
-     {
-      "range": [
-       39,
-       39
-      ],
-      "result": "L4"
-     },
-     {
-      "range": [
-       40,
-       44
-      ],
-      "result": "G3"
-     },
-     {
-      "range": [
-       45,
-       45
-      ],
-      "result": "L6"
-     },
-     {
-      "range": [
-       46,
-       53
-      ],
-      "result": "G5"
-     },
-     {
-      "range": [
-       54,
-       61
-      ],
-      "result": "F7"
-     },
-     {
-      "range": [
-       62,
-       71
-      ],
-      "result": "G6"
-     },
-     {
-      "range": [
-       72,
-       81
-      ],
-      "result": "F8"
-     },
-     {
-      "range": [
-       82,
-       91
-      ],
-      "result": "G4"
-     },
-     {
-      "range": [
-       92,
-       99
-      ],
-      "result": "F9"
-     }
-    ],
-    "previous_sections": {
-     "IN-PLAY": {
-      "vsLHP": {
-       "1B": [
-        6,
-        26
-       ],
-       "2B": [
-        1,
-        5
-       ],
-       "3B": null
-      },
-      "vsRHP": {
-       "1B": [
-        7,
-        25
-       ],
-       "2B": [
-        1,
-        6
-       ],
-       "3B": null
-      }
-     },
-     "PATIENT": {
-      "vsLHP": {
-       "1B": [
-        31,
-        46
-       ],
-       "2B": [
-        21,
-        28
-       ],
-       "3B": [
-        29,
-        30
-       ],
-       "BB": [
-        1,
-        20
-       ],
-       "HBP": [
-        47,
-        47
-       ]
-      },
-      "vsRHP": {
-       "1B": [
-        43,
-        61
-       ],
-       "2B": [
-        34,
-        40
-       ],
-       "3B": [
-        41,
-        42
-       ],
-       "BB": [
-        1,
-        33
-       ],
-       "HBP": [
-        62,
-        70
-       ]
-      }
-     },
-     "TOUGH": {
-      "vsLHP": {
-       "1B": [
-        73,
-        80
-       ],
-       "2B": [
-        71,
-        72
-       ],
-       "3B": null,
-       "SO": [
-        1,
-        70
-       ]
-      },
-      "vsRHP": {
-       "1B": [
-        68,
-        74
-       ],
-       "2B": [
-        66,
-        67
-       ],
-       "3B": null,
-       "SO": [
-        1,
-        65
-       ]
-      }
-     },
-     "WHEELHOUSE": {
-      "vsLHP": {
-       "1B": [
-        81,
-        95
-       ],
-       "2B": [
-        71,
-        77
-       ],
-       "3B": [
-        78,
-        80
-       ],
-       "HR": [
-        1,
-        70
-       ]
-      },
-      "vsRHP": {
-       "1B": [
-        51,
-        69
-       ],
-       "2B": [
-        38,
-        47
-       ],
-       "3B": [
-        48,
-        50
-       ],
-       "HR": [
-        1,
-        37
-       ]
-      }
-     }
-    },
-    "side": "R"
-   },
-   "positions": [
-    {
-     "arm": 2,
-     "e": 4,
-     "pos": "C",
-     "range": "C"
-    }
-   ],
-   "qa_status": "PASS",
-   "run": 10,
-   "sac_bunt": "F",
-   "sections": {
-    "IN-PLAY": {
-     "vsLHP": {
-      "1B": [
-       7,
-       25
-      ],
-      "2B": [
-       1,
-       6
-      ],
-      "3B": null
-     },
-     "vsRHP": {
-      "1B": [
-       6,
-       25
-      ],
-      "2B": [
-       1,
-       5
-      ],
-      "3B": null
-     }
-    },
-    "PATIENT": {
-     "vsLHP": {
-      "1B": [
-       44,
-       60
-      ],
-      "2B": [
-       34,
-       41
-      ],
-      "3B": [
-       42,
-       43
-      ],
-      "BB": [
-       1,
-       33
-      ],
-      "HBP": [
-       61,
-       63
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       42,
-       60
-      ],
-      "2B": [
-       33,
-       39
-      ],
-      "3B": [
-       40,
-       41
-      ],
-      "BB": [
-       1,
-       32
-      ],
-      "HBP": [
-       61,
-       68
-      ]
-     }
-    },
-    "TOUGH": {
-     "vsLHP": {
-      "1B": [
-       65,
-       72
-      ],
-      "2B": [
-       63,
-       64
-      ],
-      "3B": null,
-      "SO": [
-       1,
-       62
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       71,
-       77
-      ],
-      "2B": [
-       69,
-       70
-      ],
-      "3B": null,
-      "SO": [
-       1,
-       68
-      ]
-     }
-    },
-    "WHEELHOUSE": {
-     "vsLHP": {
-      "1B": [
-       61,
-       77
-      ],
-      "2B": [
-       48,
-       57
-      ],
-      "3B": [
-       58,
-       60
-      ],
-      "HR": [
-       1,
-       47
-      ]
-     },
-     "vsRHP": {
-      "1B": [
-       59,
-       76
-      ],
-      "2B": [
-       47,
-       55
-      ],
-      "3B": [
-       56,
-       58
-      ],
-      "HR": [
-       1,
-       46
-      ]
-     }
-    }
-   },
-   "steal": {
-    "jump": 3,
-    "jump_basis": {
-     "attempt_rate": 0.1176,
-     "attempts": "SB+CS",
-     "calibration": "1986 printed cards vs 1986 SB+CS per time on first (scripts/calibrate_steal_1986.py) (scripts/fix_jump_from_attempts.py)",
-     "set_file_jump": 5
-    },
-    "jump_mod": null,
-    "letter_basis": {
-     "calibration": "1986 printed letters vs 1986 SB%/attempt rate (scripts/calibrate_steal_1986.py) (scripts/fix_steal_letter.py)",
-     "score": 1.2659,
-     "set_file_letter": "C"
-    },
-    "rating": "C"
-   },
-   "throws": "R"
-  },
-  "card_pit": null,
-  "id": "realmjt01",
-  "name": "J.T. Realmuto",
-  "peak_bat": {
-   "2B": 133,
-   "3B": 18,
-   "AB": 2387,
-   "BB": 192,
-   "CS": 12,
-   "G": 652,
-   "GIDP": 44,
-   "H": 636,
-   "HBP": 42,
-   "HR": 98,
-   "IBB": 12,
-   "PA": 2642,
-   "R": 351,
-   "RBI": 350,
-   "SB": 61,
-   "SF": 21,
-   "SO": 611,
-   "team_line": "Philadelphia Phillies",
-   "window_years": [
-    2019,
-    2021,
-    2022,
-    2023,
-    2024
-   ]
-  },
-  "peak_bat_162": {
-   "2B": 33,
-   "3B": 4,
-   "AB": 593,
-   "BB": 48,
-   "CS": 3,
-   "G": 162,
-   "GIDP": 11,
-   "H": 158,
-   "HBP": 10,
-   "HR": 24,
-   "IBB": 3,
-   "PA": 656,
-   "R": 87,
-   "RBI": 87,
-   "SB": 15,
-   "SF": 5,
-   "SO": 152,
-   "team_line": "Philadelphia Phillies",
-   "window_games": 652,
-   "window_years": [
-    2019,
-    2021,
-    2022,
-    2023,
-    2024
-   ]
-  },
-  "peak_pit": null,
-  "peak_pit_162": null,
-  "spots": [
-   {
-    "group": "lineup",
-    "kind": "hitter",
-    "pos": "C",
-    "slot": 8
-   }
-  ],
-  "team": "PHI",
-  "tournament": null
- },
  "PHI|reedro01": {
   "card_bat": null,
   "card_pit": {
@@ -338359,6 +337434,880 @@
     "kind": "hitter",
     "pos": "SS",
     "slot": 9
+   }
+  ],
+  "team": "PHI",
+  "tournament": null
+ },
+ "PHI|ruizca01": {
+  "card_bat": {
+   "arm": "Average",
+   "bats": "R",
+   "capacity_basis": {
+    "expected_after": {
+     "avg": 0.283,
+     "obp": 0.376,
+     "slg": 0.427
+    },
+    "expected_before": {
+     "avg": 0.282,
+     "obp": 0.374,
+     "slg": 0.426
+    },
+    "ibb": 38,
+    "method": "IBB counted as BB (owner ruling 2026-10-27): PATIENT BB widened from empty faces to BB/PA; IN-PLAY/TOUGH hit bands re-tuned within printed 1986 maxima where a full section clipped hits",
+    "previous_out_table": [
+     {
+      "range": [
+       32,
+       34
+      ],
+      "result": "P4"
+     },
+     {
+      "range": [
+       35,
+       36
+      ],
+      "result": "P6"
+     },
+     {
+      "range": [
+       37,
+       37
+      ],
+      "result": "P2"
+     },
+     {
+      "range": [
+       38,
+       39
+      ],
+      "result": "P3"
+     },
+     {
+      "range": [
+       40,
+       41
+      ],
+      "result": "P5"
+     },
+     {
+      "range": [
+       42,
+       45
+      ],
+      "result": "G1"
+     },
+     {
+      "range": [
+       46,
+       46
+      ],
+      "result": "L4"
+     },
+     {
+      "range": [
+       47,
+       50
+      ],
+      "result": "G3"
+     },
+     {
+      "range": [
+       51,
+       51
+      ],
+      "result": "L6"
+     },
+     {
+      "range": [
+       52,
+       58
+      ],
+      "result": "G5"
+     },
+     {
+      "range": [
+       59,
+       65
+      ],
+      "result": "F7"
+     },
+     {
+      "range": [
+       66,
+       74
+      ],
+      "result": "G6"
+     },
+     {
+      "range": [
+       75,
+       83
+      ],
+      "result": "F8"
+     },
+     {
+      "range": [
+       84,
+       91
+      ],
+      "result": "G4"
+     },
+     {
+      "range": [
+       92,
+       99
+      ],
+      "result": "F9"
+     }
+    ],
+    "previous_sections": {
+     "IN-PLAY": {
+      "vsLHP": {
+       "1B": [
+        10,
+        32
+       ],
+       "2B": [
+        1,
+        9
+       ],
+       "3B": null
+      },
+      "vsRHP": {
+       "1B": [
+        9,
+        31
+       ],
+       "2B": [
+        1,
+        8
+       ],
+       "3B": null
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "1B": [
+        55,
+        70
+       ],
+       "2B": [
+        47,
+        54
+       ],
+       "3B": null,
+       "BB": [
+        1,
+        46
+       ],
+       "HBP": [
+        71,
+        74
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        53,
+        70
+       ],
+       "2B": [
+        46,
+        52
+       ],
+       "3B": null,
+       "BB": [
+        1,
+        45
+       ],
+       "HBP": [
+        71,
+        82
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "1B": [
+        35,
+        43
+       ],
+       "2B": [
+        32,
+        34
+       ],
+       "3B": null,
+       "SO": [
+        1,
+        31
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        39,
+        46
+       ],
+       "2B": [
+        36,
+        38
+       ],
+       "3B": null,
+       "SO": [
+        1,
+        35
+       ]
+      }
+     },
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "1B": [
+        39,
+        59
+       ],
+       "2B": [
+        27,
+        38
+       ],
+       "3B": null,
+       "HR": [
+        1,
+        26
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        37,
+        58
+       ],
+       "2B": [
+        27,
+        36
+       ],
+       "3B": null,
+       "HR": [
+        1,
+        26
+       ]
+      }
+     }
+    },
+    "retune_target": {
+     "avg": 0.284,
+     "obp": 0.373,
+     "slg": 0.432
+    },
+    "retuned": false,
+    "target": {
+     "avg": 0.284,
+     "obp": 0.373,
+     "slg": 0.432
+    },
+    "walk_cap_hit": false,
+    "walk_expected_bbp": 0.1072,
+    "walk_shortfall": 0.0,
+    "walk_target_bbp": 0.105
+   },
+   "dp": 7,
+   "fielding": "Derived",
+   "fielding_method": "derived: engines/sim/hitter_fielding_method.json",
+   "out_table": [
+    {
+     "range": [
+      32,
+      34
+     ],
+     "result": "P4"
+    },
+    {
+     "range": [
+      35,
+      36
+     ],
+     "result": "P6"
+    },
+    {
+     "range": [
+      37,
+      37
+     ],
+     "result": "P2"
+    },
+    {
+     "range": [
+      38,
+      39
+     ],
+     "result": "P3"
+    },
+    {
+     "range": [
+      40,
+      41
+     ],
+     "result": "P5"
+    },
+    {
+     "range": [
+      42,
+      45
+     ],
+     "result": "G1"
+    },
+    {
+     "range": [
+      46,
+      46
+     ],
+     "result": "L4"
+    },
+    {
+     "range": [
+      47,
+      50
+     ],
+     "result": "G3"
+    },
+    {
+     "range": [
+      51,
+      51
+     ],
+     "result": "L6"
+    },
+    {
+     "range": [
+      52,
+      58
+     ],
+     "result": "G5"
+    },
+    {
+     "range": [
+      59,
+      65
+     ],
+     "result": "F7"
+    },
+    {
+     "range": [
+      66,
+      74
+     ],
+     "result": "G6"
+    },
+    {
+     "range": [
+      75,
+      83
+     ],
+     "result": "F8"
+    },
+    {
+     "range": [
+      84,
+      91
+     ],
+     "result": "G4"
+    },
+    {
+     "range": [
+      92,
+      99
+     ],
+     "result": "F9"
+    }
+   ],
+   "platoon_basis": {
+    "method": "1986 same-side ratio, 0.28/0.72 weighted total kept",
+    "previous_out_table": [
+     {
+      "range": [
+       29,
+       34
+      ],
+      "result": "P4"
+     },
+     {
+      "range": [
+       35,
+       36
+      ],
+      "result": "P6"
+     },
+     {
+      "range": [
+       37,
+       37
+      ],
+      "result": "P2"
+     },
+     {
+      "range": [
+       38,
+       39
+      ],
+      "result": "P3"
+     },
+     {
+      "range": [
+       40,
+       41
+      ],
+      "result": "P5"
+     },
+     {
+      "range": [
+       42,
+       45
+      ],
+      "result": "G1"
+     },
+     {
+      "range": [
+       46,
+       46
+      ],
+      "result": "L4"
+     },
+     {
+      "range": [
+       47,
+       50
+      ],
+      "result": "G3"
+     },
+     {
+      "range": [
+       51,
+       51
+      ],
+      "result": "L6"
+     },
+     {
+      "range": [
+       52,
+       58
+      ],
+      "result": "G5"
+     },
+     {
+      "range": [
+       59,
+       65
+      ],
+      "result": "F7"
+     },
+     {
+      "range": [
+       66,
+       74
+      ],
+      "result": "G6"
+     },
+     {
+      "range": [
+       75,
+       83
+      ],
+      "result": "F8"
+     },
+     {
+      "range": [
+       84,
+       91
+      ],
+      "result": "G4"
+     },
+     {
+      "range": [
+       92,
+       99
+      ],
+      "result": "F9"
+     }
+    ],
+    "previous_sections": {
+     "IN-PLAY": {
+      "vsLHP": {
+       "1B": [
+        8,
+        28
+       ],
+       "2B": [
+        1,
+        7
+       ],
+       "3B": null
+      },
+      "vsRHP": {
+       "1B": [
+        10,
+        33
+       ],
+       "2B": [
+        1,
+        9
+       ],
+       "3B": null
+      }
+     },
+     "PATIENT": {
+      "vsLHP": {
+       "1B": [
+        61,
+        75
+       ],
+       "2B": [
+        53,
+        59
+       ],
+       "3B": [
+        60,
+        60
+       ],
+       "BB": [
+        1,
+        52
+       ],
+       "HBP": [
+        76,
+        86
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        51,
+        68
+       ],
+       "2B": [
+        44,
+        50
+       ],
+       "3B": null,
+       "BB": [
+        1,
+        43
+       ],
+       "HBP": [
+        69,
+        77
+       ]
+      }
+     },
+     "TOUGH": {
+      "vsLHP": {
+       "1B": [
+        40,
+        48
+       ],
+       "2B": [
+        37,
+        39
+       ],
+       "3B": null,
+       "SO": [
+        1,
+        36
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        37,
+        44
+       ],
+       "2B": [
+        34,
+        36
+       ],
+       "3B": null,
+       "SO": [
+        1,
+        33
+       ]
+      }
+     },
+     "WHEELHOUSE": {
+      "vsLHP": {
+       "1B": [
+        29,
+        50
+       ],
+       "2B": [
+        19,
+        27
+       ],
+       "3B": [
+        28,
+        28
+       ],
+       "HR": [
+        1,
+        18
+       ]
+      },
+      "vsRHP": {
+       "1B": [
+        41,
+        62
+       ],
+       "2B": [
+        30,
+        40
+       ],
+       "3B": null,
+       "HR": [
+        1,
+        29
+       ]
+      }
+     }
+    },
+    "side": "R"
+   },
+   "positions": [
+    {
+     "arm": 1,
+     "e": 5,
+     "pos": "C",
+     "range": "A"
+    }
+   ],
+   "qa_status": "PASS",
+   "run": 6,
+   "sac_bunt": "F",
+   "sections": {
+    "IN-PLAY": {
+     "vsLHP": {
+      "1B": [
+       10,
+       32
+      ],
+      "2B": [
+       1,
+       9
+      ],
+      "3B": null
+     },
+     "vsRHP": {
+      "1B": [
+       9,
+       31
+      ],
+      "2B": [
+       1,
+       8
+      ],
+      "3B": null
+     }
+    },
+    "PATIENT": {
+     "vsLHP": {
+      "1B": [
+       56,
+       71
+      ],
+      "2B": [
+       48,
+       55
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       47
+      ],
+      "HBP": [
+       72,
+       75
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       54,
+       71
+      ],
+      "2B": [
+       47,
+       53
+      ],
+      "3B": null,
+      "BB": [
+       1,
+       46
+      ],
+      "HBP": [
+       72,
+       83
+      ]
+     }
+    },
+    "TOUGH": {
+     "vsLHP": {
+      "1B": [
+       35,
+       43
+      ],
+      "2B": [
+       32,
+       34
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       31
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       39,
+       46
+      ],
+      "2B": [
+       36,
+       38
+      ],
+      "3B": null,
+      "SO": [
+       1,
+       35
+      ]
+     }
+    },
+    "WHEELHOUSE": {
+     "vsLHP": {
+      "1B": [
+       39,
+       59
+      ],
+      "2B": [
+       27,
+       38
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       26
+      ]
+     },
+     "vsRHP": {
+      "1B": [
+       37,
+       58
+      ],
+      "2B": [
+       27,
+       36
+      ],
+      "3B": null,
+      "HR": [
+       1,
+       26
+      ]
+     }
+    }
+   },
+   "steal": {
+    "jump": 2,
+    "jump_basis": {
+     "attempt_rate": 0.0275,
+     "attempts": "SB+CS",
+     "calibration": "1986 printed cards vs 1986 SB+CS per time on first (scripts/calibrate_steal_1986.py) (scripts/fix_jump_from_attempts.py)",
+     "set_file_jump": 3
+    },
+    "jump_mod": null,
+    "letter_basis": {
+     "calibration": "1986 printed letters vs 1986 SB%/attempt rate (scripts/calibrate_steal_1986.py) (scripts/fix_steal_letter.py)",
+     "score": 0.7857,
+     "set_file_letter": "D"
+    },
+    "rating": "D"
+   },
+   "throws": "R",
+   "user_override": {
+    "by": "owner (Joe Willey)",
+    "date": "2026-10-27",
+    "derived_before_override": {
+     "arm": 6,
+     "e": 4,
+     "pos": "C",
+     "range": "C"
+    },
+    "fields": "C range, error, arm",
+    "note": "User-directed override: best catcher defense on the rulebook scales (range A best of F-A; error 5 = fewest errors on the page-20 ERR chart; catcher arm 1 = best, page 8). Not from his stats. Hitting is unchanged and comes from the franchise card method.",
+    "set_to": {
+     "arm": 1,
+     "e": 5,
+     "range": "A"
+    }
+   }
+  },
+  "card_pit": null,
+  "id": "ruizca01",
+  "name": "Carlos Ruiz",
+  "peak_bat": {
+   "2B": 134,
+   "3B": 3,
+   "AB": 1856,
+   "BB": 225,
+   "CS": 5,
+   "G": 584,
+   "GIDP": 40,
+   "H": 527,
+   "HBP": 48,
+   "HR": 45,
+   "IBB": 38,
+   "PA": 2142,
+   "R": 223,
+   "RBI": 235,
+   "SB": 12,
+   "SF": 13,
+   "SO": 251,
+   "team_line": "Philadelphia Phillies",
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2014
+   ]
+  },
+  "peak_bat_162": {
+   "2B": 37,
+   "3B": 1,
+   "AB": 515,
+   "BB": 62,
+   "CS": 1,
+   "G": 162,
+   "GIDP": 11,
+   "H": 146,
+   "HBP": 13,
+   "HR": 12,
+   "IBB": 11,
+   "PA": 594,
+   "R": 62,
+   "RBI": 65,
+   "SB": 3,
+   "SF": 4,
+   "SO": 70,
+   "team_line": "Philadelphia Phillies",
+   "window_games": 584,
+   "window_years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2014
+   ]
+  },
+  "peak_pit": null,
+  "peak_pit_162": null,
+  "spots": [
+   {
+    "group": "lineup",
+    "kind": "hitter",
+    "pos": "C",
+    "slot": 8
    }
   ],
   "team": "PHI",
@@ -342884,7 +342833,7 @@
    },
    "positions": [
     {
-     "arm": 4,
+     "arm": 3,
      "e": 4,
      "pos": "RF",
      "range": "A"
@@ -343051,7 +343000,24 @@
     },
     "rating": "D"
    },
-   "throws": "R"
+   "throws": "R",
+   "user_override": {
+    "before": [
+     {
+      "arm": 4,
+      "e": 4,
+      "pos": "RF",
+      "range": "A"
+     }
+    ],
+    "by": "owner (Joe Willey)",
+    "date": "2026-10-27",
+    "fields": "outfield arm",
+    "note": "User-directed override: best outfield arm on the rulebook page 8 scale (3 best to 10 worst). Not from his stats.",
+    "set_to": {
+     "arm": 3
+    }
+   }
   },
   "card_pit": null,
   "id": "clemero01",

@@ -4770,17 +4770,17 @@
   "players": [
    {
     "group": "lineup",
-    "id": "callijo01",
+    "id": "ashburi01",
     "kind": "hitter",
-    "name": "Johnny Callison",
-    "pos": "RF",
+    "name": "Richie Ashburn",
+    "pos": "CF",
     "slot": 1
    },
    {
     "group": "lineup",
-    "id": "abreubo01",
+    "id": "callijo01",
     "kind": "hitter",
-    "name": "Bobby Abreu",
+    "name": "Johnny Callison",
     "pos": "RF",
     "slot": 2
    },
@@ -4826,9 +4826,9 @@
    },
    {
     "group": "lineup",
-    "id": "realmjt01",
+    "id": "ruizca01",
     "kind": "hitter",
-    "name": "J.T. Realmuto",
+    "name": "Carlos Ruiz",
     "pos": "C",
     "slot": 8
    },
@@ -4874,10 +4874,10 @@
    },
    {
     "group": "bench",
-    "id": "ashburi01",
+    "id": "abreubo01",
     "kind": "hitter",
-    "name": "Richie Ashburn",
-    "pos": "CF",
+    "name": "Bobby Abreu",
+    "pos": "RF",
     "slot": 5
    },
    {

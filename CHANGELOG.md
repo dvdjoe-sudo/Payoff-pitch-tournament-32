@@ -13,6 +13,12 @@ The owner requested this change.
   - Card vs real: AVG .274/.275, OBP .334/.334, SLG .485/.487, HR .040/.040, SO .154/.154.
 - **Peak 162 line.** 1961-1965, the consecutive-window display method.
 - `sw.js` cache v87.
+- **Carlos Ruiz replaces J.T. Realmuto** (owner request). Ruiz is the starting C in slot 8. Realmuto's Phillies card and roster row are removed; his Marlins card is untouched.
+  - Hitting card: franchise method, window 2009-2012 and 2014 (league OPS+ 111, 136, 114, 159, 108). QA PASS. Card vs real: AVG .283/.284, OBP .374/.374, SLG .429/.432, HR .021/.021.
+  - **User-directed override:** catcher range A, error 5, arm 1, the best value on each rulebook scale. Derived values were range C, error 4, arm 6 (default).
+- **Roberto Clemente (PIT)** outfield arm set to 3 (**user-directed override**). Rulebook page 8 says 3 is the best outfield arm. He was 4. No other card is rated 3.
+- **Phillies lineup, owner's CF choice:** Ashburn now starts in CF and leads off. Callison bats 2nd in RF. Abreu moves to the 4TH OF bench role, swapping places with Ashburn. Howard stays DH: his card OPS is .963 to Abreu's .957.
+- `engines/sim/test_game.py`: the `tournament_results.json` fingerprint is updated to main's current file (b19407d). The results file itself is unchanged.
 
 ## 2026-10-27 — R1-01 player pages get their missing tournament lines
 
