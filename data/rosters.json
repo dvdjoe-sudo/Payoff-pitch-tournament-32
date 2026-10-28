@@ -1397,7 +1397,7 @@
     "id": "turnete01",
     "kind": "hitter",
     "name": "Terry Turner",
-    "pos": "UT",
+    "pos": "SS",
     "slot": 2
    },
    {
@@ -1405,7 +1405,7 @@
     "id": "speaktr01",
     "kind": "hitter",
     "name": "Tris Speaker",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 3
    },
    {
@@ -1413,7 +1413,7 @@
     "id": "vizquom01",
     "kind": "hitter",
     "name": "Omar Vizquel",
-    "pos": "IF",
+    "pos": "SS",
     "slot": 4
    },
    {
@@ -1421,7 +1421,7 @@
     "id": "averiea01",
     "kind": "hitter",
     "name": "Earl Averill",
-    "pos": "PH",
+    "pos": "CF",
     "slot": 5
    },
    {
@@ -1429,7 +1429,7 @@
     "id": "dobyla01",
     "kind": "hitter",
     "name": "Larry Doby",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 6
    },
    {
