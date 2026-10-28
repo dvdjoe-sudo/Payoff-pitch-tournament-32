@@ -194,6 +194,22 @@ class DecileTable:
                 for c, v in zip(self.centers, self.values)]
 
 
+def wheel_hr_width(tab, hr_rate):
+    """Elite Power Edit, tail (Joe's adoption, 2026-10-28): the
+    fitted wheel_hr decile table clamps at its top value (73 points
+    at the top center, 0.0652 HR/AB on the current fit). Above the
+    top center, continue the table's own last-segment slope
+    (883 points per unit HR rate) instead of clamping. At or below
+    the top center this is exactly DecileTable.predict, so cards
+    under the gate are unchanged. Used by Engine.generate for the
+    WHEELHOUSE HR strand only; no other table is extrapolated."""
+    c, v = tab.centers, tab.values
+    if hr_rate <= c[-1]:
+        return tab.predict(hr_rate)
+    slope = (v[-1] - v[-2]) / (c[-1] - c[-2]) if c[-1] > c[-2] else 0.0
+    return v[-1] + slope * (hr_rate - c[-1])
+
+
 class TwoWayTable:
     """Median table over driver A quintiles x driver B terciles,
     monotone-smoothed: non-decreasing in A, non-increasing in B."""
@@ -405,7 +421,12 @@ class Engine:
         gen["PATIENT"]["SO"] = 0
 
         # WHEELHOUSE: power lives here; every strand off its own rate.
-        gen["WHEELHOUSE"]["HR"] = rnd(t["wheel_hr"].predict(f["hr_rate"]))
+        # Elite Power Edit (Joe's adoption, 2026-10-28): the HR
+        # strand prices through wheel_hr_width, which continues the
+        # wheel_hr table's last-segment slope past its top center
+        # instead of clamping at 73.
+        gen["WHEELHOUSE"]["HR"] = rnd(wheel_hr_width(t["wheel_hr"],
+                                                     f["hr_rate"]))
         gen["WHEELHOUSE"]["2B"] = rnd(t["wheel_2b"].predict(f["b2_rate"]))
         gen["WHEELHOUSE"]["3B"] = rnd(t["wheel_3b"].predict(f["b3_rate"]))
         w1 = t["wheel_1b"]
@@ -419,8 +440,27 @@ class Engine:
         for sec in SECTIONS:
             tot = sum(gen[sec].values())
             if tot > 99:
-                biggest = max(LAYOUT[sec], key=lambda oc: gen[sec][oc])
-                gen[sec][biggest] -= tot - 99
+                over = tot - 99
+                # Elite Power Edit, displacement (Joe's adoption,
+                # 2026-10-28): when a WHEELHOUSE section overflows
+                # past 99 AND its HR strand (rounded width) exceeds
+                # the wheel_hr table's fitted top value (73), the
+                # overflow comes out of the hit strands first (1B
+                # floor 2, 2B floor 1, 3B floor 0) and only the
+                # remainder out of HR, the way the printed game's
+                # extreme HR cards are built. In all other cases the
+                # stock trim (cut the largest strand) applies exactly.
+                if (sec == "WHEELHOUSE"
+                        and gen[sec]["HR"] > t["wheel_hr"].values[-1]):
+                    for oc, floor in (("1B", 2), ("2B", 1), ("3B", 0)):
+                        take = min(over, max(0, gen[sec][oc] - floor))
+                        gen[sec][oc] -= take
+                        over -= take
+                    if over:
+                        gen[sec]["HR"] -= over
+                else:
+                    biggest = max(LAYOUT[sec], key=lambda oc: gen[sec][oc])
+                    gen[sec][biggest] -= over
         return gen
 
     # ------------------------------------------------------ IN-PLAY v1.1

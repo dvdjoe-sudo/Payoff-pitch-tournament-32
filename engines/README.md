@@ -63,6 +63,13 @@ instead of solving backward from a target line.
   (contact, balanced, power, free-swinger), the style supplies the
   band shapes, and his exact numbers are fit inside that shape.
   Reads `dataset.json` and `out_dataset.json` from beside itself.
+  Carries the Elite Power Edit (adopted 2026-10-28 after a measured
+  two-variant probe; the tail-only variant is the recorded loser):
+  past the wheel_hr table's top rate, the WHEELHOUSE HR band
+  continues on the table's own last-segment slope instead of
+  clamping at 73 points, and when the section overflows, the
+  overflow is displaced from 1B (floor 2), 2B (floor 1), then 3B
+  (floor 0) before HR. Cards at or below the gate are unchanged.
 - `dataset.json`: the 596 printed 1986 hitter cards the hitting
   engine fits from.
 - `out_dataset.json`: the printed OUT charts of the 1986 set.
