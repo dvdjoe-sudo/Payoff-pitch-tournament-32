@@ -41,7 +41,15 @@ GAMES = ROOT / "games"
 # or existing line changed. The old value was
 # 7b12e577dbfe542585fb0fb1dd4bce53b9fd5515b5a894940685968e28182f4d.
 # PDF-based recovery 2026-10-26: restored original R1-03 G3-G7 FAC histories (128, 164, 183, 137, 159 entries) from the owner-provided 101-page record. Only per-game detail rolls and the locked fingerprint changed; official game summaries and manager_log stay unchanged.
-FINGERPRINT = "70d18c865b46f9fb73c9cae8b124c6e4077b930f21a60ba67f7b87b5799a44dc"
+# Reset 2026-10-27 under Joe's correction ruling: a sacrifice fly is
+# scored a plate appearance, not an at-bat (extending his 2026-10-25
+# sacrifice ruling), so four locked batting lines moved AB to SF
+# (R1-02: Ott G2, Bonds G4, Williams G5; R1-03: Foxx G2). The same
+# correction moved four more lines in the unlocked series (R1-04:
+# Perdomo G3; R1-05: Walker G1, Medwick G4, Arenado G4). No score,
+# result, or pitching line changed. The old value was
+# 70d18c865b46f9fb73c9cae8b124c6e4077b930f21a60ba67f7b87b5799a44dc.
+FINGERPRINT = "5cf9eb317919fe731906b59dffbc3745cf50171a5891cb7cb8b35a5a85dda0ae"
 # Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
 # The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
 FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
