@@ -24,6 +24,8 @@ A club's Payoff Pitch set is built when its fixture comes up, to the standing co
 - Fielding and arm labels come from the standing one-time mapping and are measured where the data measures; Joe reviews each set's label file, and a label he vetoes is re-run. A stress test verdict never authorizes a card edit by itself.
 - A pitcher carded in a swing or long role is a bullpen arm, not a starter, and the starters-in-relief rule below does not bar him from pitching in relief.
 
+**Card system (Joe's ruling, 2026-10-28).** As of 2026-10-28, all tournament cards are built with the new-generation engines only: the research hitting engine v1.2 (including the OUT coordination rule) and the smoothed pitcher grammar. The frozen Hitter v0.5 and Pitcher v0.2.3 engines and the v2 solver build path are retired as card-building tools; they are preserved, read-only, as the provenance of cards already played and as app downloads, and are never used to build, rebuild, or refit a card. The old governing cards are quarantined, labeled do-not-use, as the audit record. Series already played (R1-01 through R1-05) stand as played, on the cards of their day; the game-play engines that play games with current cards are unaffected.
+
 ## Play resolution
 
 Games resolve on the FAC deck: the 256-card Fast Action Card deck mode is the tournament's mode, with the full governed stack for every game: version 2 pitcher cards, the pitcher addendum, the fatigue fix layer, both addenda rulings, and the managers' encoded traits. FAC chart mode exists and is proven, but deck mode is what tournament games use. Every governed game is reproducible from its recorded seed.
