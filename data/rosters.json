@@ -1829,7 +1829,7 @@
     "id": "davisge01",
     "kind": "hitter",
     "name": "George Davis",
-    "pos": "UT",
+    "pos": "SS",
     "slot": 2
    },
    {
@@ -1837,7 +1837,7 @@
     "id": "foxne01",
     "kind": "hitter",
     "name": "Nellie Fox",
-    "pos": "IF",
+    "pos": "2B",
     "slot": 3
    },
    {
@@ -1845,7 +1845,7 @@
     "id": "lemonch01",
     "kind": "hitter",
     "name": "Chet Lemon",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 4
    },
    {
@@ -1853,7 +1853,7 @@
     "id": "konerpa01",
     "kind": "hitter",
     "name": "Paul Konerko",
-    "pos": "PH",
+    "pos": "1B",
     "slot": 5
    },
    {
@@ -5505,7 +5505,7 @@
     "id": "reynoha01",
     "kind": "hitter",
     "name": "Harold Reynolds",
-    "pos": "UT",
+    "pos": "2B",
     "slot": 2
    },
    {
@@ -5521,7 +5521,7 @@
     "id": "rodriju01",
     "kind": "hitter",
     "name": "Julio Rodr\u00edguez",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 4
    },
    {
@@ -5529,7 +5529,7 @@
     "id": "buhneja01",
     "kind": "hitter",
     "name": "Jay Buhner",
-    "pos": "OF",
+    "pos": "RF",
     "slot": 5
    },
    {
