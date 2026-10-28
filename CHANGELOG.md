@@ -2,6 +2,18 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-10-27 — Phillies: Johnny Callison replaces Billy Hamilton
+
+The owner requested this change.
+- **Roster.** Johnny Callison (RF, bats L, 10 Phillies seasons) takes Billy Hamilton's lineup slot 1. Hamilton is removed from `rosters.json`, `announced_rosters.json`, `ROSTERS.md`, `peak162.json` and `cards.json`. The bench (6) and bullpen (6) are unchanged.
+- **Card.** It uses the franchise-card method (`scripts/build_callison_card.py`, a wrapper for `build_sixth_bench_cards.py`).
+  - Window: the five best Phillies seasons by league OPS+ with PA>=300, which are 1962, 1963, 1964, 1965 and 1968. Baseball-Reference OPS+ gives the same five.
+  - Solver: Hitter v0.5, then `card_postpass` (platoon re-split, IBB as walks, jump and steal letter from SB+CS, OF arm), then `derive_hitter_fielding`. QA PASS.
+  - Fielding: RF range B, error 4, arm 4 (top bucket: 100 assists in 739 games, 2.36x league). Jump 3, steal C.
+  - Card vs real: AVG .274/.275, OBP .334/.334, SLG .485/.487, HR .040/.040, SO .154/.154.
+- **Peak 162 line.** 1961-1965, the consecutive-window display method.
+- `sw.js` cache v87.
+
 ## 2026-10-27 — R1-01 player pages get their missing tournament lines
 
 A stat-recording audit found every existing tournament block in `data/cards.json` exact (149 stints, 2,281 fields, zero mismatches) but the whole R1-01 Yankees/Marlins casts, 42 stints, carried `tournament: null`, so their player pages showed no tournament stats while LEADERS.md already counted the series. Root cause: the Yankees and Marlins cards were created by the empty-team batch builder after the last tournament refresh, and no refresh ran afterward. Fix: one run of the preserve path in `scripts/build_cards.py`, which replaces only the tournament block from the repo's own `tournament_results.json`. Exactly 42 cards changed (NYY 20, MIA 22), every one a null-to-block transition with the card body byte-identical; the other 12 Yankees/Marlins cards belong to men who never appeared in R1-01 and stay null. Verified independently of the builder: each new block was recomputed from the raw game lines (batting, pitching, W/L/SV, game lists) with zero mismatches, the two clubs' block AB total ties the archive's R1-01 total exactly (297), and cross-team men keep separate blocks per club (Cabrera's Miami block carries R1-01 only, his Detroit block R1-04 only). Validator: all checks passed. A second run refreshes 0 and leaves the file byte-identical.

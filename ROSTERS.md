@@ -678,7 +678,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup
 
-- 1 Billy Hamilton CF S 6
+- 1 Johnny Callison RF L 10
 - 2 Bobby Abreu RF L 9
 - 3 Ed Delahanty LF L 13
 - 4 Mike Schmidt 3B R 18

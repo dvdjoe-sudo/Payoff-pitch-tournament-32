@@ -6577,16 +6577,16 @@
    }
   },
   "PHI": {
-   "1 Billy Hamilton CF S 6": {
-    "lahman_id": "hamilbi01",
+   "1 Johnny Callison RF L 10": {
+    "lahman_id": "callijo01",
     "status": "ok",
-    "text": "Peak 162 with Philadelphia Phillies (1891–1895): 162 G, 809 PA, 668 AB, 199 R, 246 H, 30 2B, 11 3B, 6 HR, 85 RBI, 109 SB, 125 BB, 30 SO, .368/.475/.471/.946",
+    "text": "Peak 162 with Philadelphia Phillies (1961–1965): 162 G, 690 PA, 619 AB, 99 R, 172 H, 29 2B, 12 3B, 25 HR, 86 RBI, 8 SB, 56 BB, 104 SO, .278/.340/.486/.826",
     "years": [
-     1891,
-     1892,
-     1893,
-     1894,
-     1895
+     1961,
+     1962,
+     1963,
+     1964,
+     1965
     ]
    },
    "2 Bobby Abreu RF L 9": {
