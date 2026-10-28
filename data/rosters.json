@@ -3557,7 +3557,7 @@
     "id": "ricesa01",
     "kind": "hitter",
     "name": "Sam Rice",
-    "pos": "OF",
+    "pos": "RF",
     "slot": 2
    },
    {
@@ -3565,7 +3565,7 @@
     "id": "buxtoby01",
     "kind": "hitter",
     "name": "Byron Buxton",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 3
    },
    {
@@ -3581,7 +3581,7 @@
     "id": "tovarce01",
     "kind": "hitter",
     "name": "C\u00e9sar Tovar",
-    "pos": "UT",
+    "pos": "CF",
     "slot": 5
    },
    {
@@ -3658,25 +3658,25 @@
    },
    {
     "group": "bullpen",
+    "id": "marbefi01",
+    "kind": "pitcher",
+    "name": "Firpo Marberry",
+    "pos": "RP",
+    "slot": 4
+   },
+   {
+    "group": "bullpen",
     "id": "duranjh01",
     "kind": "pitcher",
     "name": "Jhoan Duran",
     "pos": "RP",
-    "slot": 4
+    "slot": 5
    },
    {
     "group": "bullpen",
     "id": "rogerta01",
     "kind": "pitcher",
     "name": "Taylor Rogers",
-    "pos": "RP",
-    "slot": 5
-   },
-   {
-    "group": "bullpen",
-    "id": "perryji01",
-    "kind": "pitcher",
-    "name": "Jim Perry",
     "pos": "RP",
     "slot": 6
    }
@@ -3989,7 +3989,7 @@
     "id": "mcneije01",
     "kind": "hitter",
     "name": "Jeff McNeil",
-    "pos": "UT",
+    "pos": "2B",
     "slot": 2
    },
    {
@@ -3997,7 +3997,7 @@
     "id": "reyesjo01",
     "kind": "hitter",
     "name": "Jos\u00e9 Reyes",
-    "pos": "IF",
+    "pos": "SS",
     "slot": 3
    },
    {
@@ -4005,7 +4005,7 @@
     "id": "wilsomo01",
     "kind": "hitter",
     "name": "Mookie Wilson",
-    "pos": "OF",
+    "pos": "CF",
     "slot": 4
    },
    {
@@ -4013,7 +4013,7 @@
     "id": "olerujo01",
     "kind": "hitter",
     "name": "John Olerud",
-    "pos": "UT",
+    "pos": "1B",
     "slot": 5
    },
    {

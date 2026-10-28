@@ -1913,17 +1913,22 @@ def apply_white_sox_roster_amendment(cards, rosters):
 
 
 def apply_twins_roster_amendment(cards, rosters):
-    """Joe-approved Twins Allison replaces Marberry, future active 9/6/5/6.
+    """Joe-approved Twins active 9/6/5/6: Allison sixth bench, Marberry
+    holds the sixth bullpen chair, Perry off the 26.
 
-    Archive all genuine converted cards (including Firpo Marberry),
-    older data and any completed game; never create a guessed hitter
-    card for Bob Allison. Franchise seasons include Senators/Twins.
+    Updated 2026-10-28 (wave-2 conversion): Joe ruled for Marberry,
+    per his 2026-10-27 amendment to the canonical MIN_twins.md,
+    superseding the earlier app arrangement (Allison in for Marberry,
+    Perry kept). Archive all genuine converted cards (including Jim
+    Perry), older data and any completed game; never create a guessed
+    hitter card for Bob Allison. Franchise seasons include
+    Senators/Twins.
     """
     roster = rosters.get("MIN")
     if roster is None:
         return
     players = roster["players"]
-    players[:] = [p for p in players if p["id"] != "marbefi01"]
+    players[:] = [p for p in players if p["id"] != "perryji01"]
     allison_id = "allisbo01"
     existing = [p for p in players if p["id"] == allison_id]
     if not existing:
@@ -1935,11 +1940,19 @@ def apply_twins_roster_amendment(cards, rosters):
         raise SystemExit("duplicate Bob Allison Minnesota roster entries")
     else:
         existing[0].update(group="bench", kind="hitter", pos="RF", slot=6)
+    marberry = [p for p in players if p["id"] == "marbefi01"]
+    if not marberry:
+        players.append({
+            "group": "bullpen", "id": "marbefi01", "kind": "pitcher",
+            "name": "Firpo Marberry", "pos": "RP", "slot": 4,
+        })
+    elif len(marberry) != 1:
+        raise SystemExit("duplicate Firpo Marberry Minnesota roster entries")
     for player_id, group, slot, pos, kind in (
         (allison_id, "bench", 6, "RF", "hitter"),
-        ("duranjh01", "bullpen", 4, "RP", "pitcher"),
-        ("rogerta01", "bullpen", 5, "RP", "pitcher"),
-        ("perryji01", "bullpen", 6, "RP", "pitcher"),
+        ("marbefi01", "bullpen", 4, "RP", "pitcher"),
+        ("duranjh01", "bullpen", 5, "RP", "pitcher"),
+        ("rogerta01", "bullpen", 6, "RP", "pitcher"),
     ):
         found = [p for p in players if p["id"] == player_id]
         if len(found) != 1:
@@ -1950,7 +1963,7 @@ def apply_twins_roster_amendment(cards, rosters):
             card["spots"] = [{
                 "group": group, "slot": slot, "pos": pos, "kind": kind,
             }]
-    # MIN|marbefi01 remains untouched as a historical converted card.
+    # MIN|perryji01 remains untouched as a historical converted card.
     order = {"lineup": 0, "bench": 1, "rotation": 2, "bullpen": 3}
     players.sort(key=lambda p: (order[p["group"]], p["slot"]))
     counts = {g: sum(p["group"] == g for p in players) for g in order}

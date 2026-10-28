@@ -1809,7 +1809,14 @@ def check_white_sox_roster_amendment(check: Check) -> None:
 
 
 def check_twins_roster_amendment(check: Check) -> None:
-    """Owner-approved Bob Allison for Firpo Marberry active Minnesota 26."""
+    """Owner-approved Bob Allison sixth bench, Minnesota active 26.
+
+    Updated 2026-10-28 (wave-2 conversion): Joe ruled Marberry holds
+    the sixth bullpen chair, per his 2026-10-27 amendment to the
+    canonical MIN_twins.md; Jim Perry is off the 26. This supersedes
+    the earlier app arrangement (Allison in for Marberry, Perry kept),
+    which the checks below previously encoded.
+    """
     rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
     announced = json.loads((ROOT / "data" / "announced_rosters.json").read_text(encoding="utf-8"))["MIN"]
     cards = json.loads((ROOT / "data" / "cards.json").read_text(encoding="utf-8"))
@@ -1828,18 +1835,21 @@ def check_twins_roster_amendment(check: Check) -> None:
                  and allison[0]["slot"] == 6 and allison[0]["pos"] == "RF"
                  and allison[0]["kind"] == "hitter",
                  "Bob Allison is the Minnesota sixth active bench hitter")
-    check.expect("marbefi01" not in ids,
-                 "Firpo Marberry no longer occupies an active relief spot")
+    check.expect("perryji01" not in ids,
+                 "Jim Perry no longer occupies an active relief spot (2026-10-28 ruling)")
     relief_ids = [p["id"] for p in players if p["group"] == "bullpen"]
     check.expect(relief_ids == ["nathajo01", "worthal01", "aguilri01",
-                                "duranjh01", "rogerta01", "perryji01"],
+                                "marbefi01", "duranjh01", "rogerta01"],
                  "Minnesota approved six bullpen pitchers stay in correct order")
     check.expect(len(announced["bench"]) == 6 and len(announced["bullpen"]) == 6
                  and any("Bob Allison" in line for line in announced["bench"])
-                 and not any("Firpo Marberry" in line for line in announced["bullpen"]),
+                 and any("Firpo Marberry" in line for line in announced["bullpen"])
+                 and not any("Jim Perry" in line for line in announced["bullpen"]),
                  "Minnesota owner roster agrees with active 9/6/5/6")
     check.expect("MIN|marbefi01" in cards,
                  "Firpo Marberry historic converted pitching card is preserved")
+    check.expect("MIN|perryji01" in cards,
+                 "Jim Perry historic converted pitching card is preserved as archived")
     peaks = json.loads((ROOT / "data" / "peak162.json").read_text(encoding="utf-8"))["clubs"]["MIN"]
     allison_peak = peaks.get("BAT2 Bob Allison OF/1B 1958-1970 (13)") or {}
     check.expect(allison_peak.get("lahman_id") == "allisbo01"
