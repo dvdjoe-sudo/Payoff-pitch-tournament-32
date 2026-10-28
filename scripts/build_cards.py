@@ -1730,41 +1730,58 @@ def apply_pirates_roster_amendment(cards, rosters):
 
 
 def apply_phillies_roster_amendment(cards, rosters):
-    """Joe-approved Phillies Chuck Klein/Ryan Madson 9/6/5/6 active 26.
+    """Joe-ruled Phillies active 26 (PHI_phillies.md as amended
+    2026-10-23, plus Joe's wave-1 rulings 2026-10-28): Klein starts in
+    LF, Ruiz catches, Callison leads off, Delahanty is the sixth bench
+    bat; Realmuto, Victorino, and Madson are out (Madson's original
+    card remains archived in cards.json, inactive). This supersedes
+    the announced-graphic arrangement (Klein as sixth bench bat) that
+    an earlier version of this amendment encoded.
 
     Keep all original converted player cards (including Ryan Madson)
-    and historical games unchanged. Klein's authentic Phillies-only
-    Hitter v0.5 card must be converted later without invented values.
+    and historical games unchanged.
     """
     roster = rosters.get("PHI")
     if roster is None:
         return
     players = roster["players"]
-    players[:] = [p for p in players if p["id"] != "madsory01"]
-    klein_id = "kleinch01"
-    matches = [p for p in players if p["id"] == klein_id]
-    if not matches:
-        players.append({
-            "group": "bench", "id": klein_id, "kind": "hitter",
-            "name": "Chuck Klein", "pos": "RF", "slot": 6,
-        })
-    elif len(matches) != 1:
-        raise SystemExit("duplicate Chuck Klein Phillies roster entries")
-    else:
-        matches[0].update(group="bench", kind="hitter", pos="RF", slot=6)
-    # Genuine historic converted cards remain, including PHI|madsory01.
-    # All existing active late-bullpen pitchers shift up one slot.
-    for player_id, group, slot, pos, kind in (
-        (klein_id, "bench", 6, "RF", "hitter"),
+    names = {p["id"]: p["name"] for p in players}
+    for key, card in cards.items():
+        if key.startswith("PHI|"):
+            names.setdefault(key.split("|", 1)[1], card.get("name"))
+    ruled = [
+        ("callijo01", "lineup", 1, "CF", "hitter"),
+        ("abreubo01", "lineup", 2, "RF", "hitter"),
+        ("kleinch01", "lineup", 3, "LF", "hitter"),
+        ("schmimi01", "lineup", 4, "3B", "hitter"),
+        ("harpebr03", "lineup", 5, "1B", "hitter"),
+        ("howarry01", "lineup", 6, "DH", "hitter"),
+        ("utleych01", "lineup", 7, "2B", "hitter"),
+        ("ruizca01", "lineup", 8, "C", "hitter"),
+        ("rolliji01", "lineup", 9, "SS", "hitter"),
+        ("daultda01", "bench", 1, "C", "hitter"),
+        ("bowala01", "bench", 2, "SS", "hitter"),
+        ("rolensc01", "bench", 3, "3B", "hitter"),
+        ("allendi01", "bench", 4, "3B", "hitter"),
+        ("ashburi01", "bench", 5, "CF", "hitter"),
+        ("delahed01", "bench", 6, "LF", "hitter"),
+        ("carltst01", "rotation", 1, "SP", "pitcher"),
+        ("roberro01", "rotation", 2, "SP", "pitcher"),
+        ("alexape01", "rotation", 3, "SP", "pitcher"),
+        ("hamelco01", "rotation", 4, "SP", "pitcher"),
+        ("schilcu01", "rotation", 5, "SP", "pitcher"),
+        ("papeljo01", "bullpen", 1, "RP", "pitcher"),
+        ("garbege01", "bullpen", 2, "RP", "pitcher"),
         ("mcgratu01", "bullpen", 3, "RP", "pitcher"),
         ("reedro01", "bullpen", 4, "RP", "pitcher"),
         ("lidgebr01", "bullpen", 5, "RP", "pitcher"),
         ("suarera01", "bullpen", 6, "RP", "pitcher"),
-    ):
-        found = [p for p in players if p["id"] == player_id]
-        if len(found) != 1:
-            raise SystemExit("Phillies active role missing: " + player_id)
-        found[0].update(group=group, slot=slot, pos=pos, kind=kind)
+    ]
+    players[:] = [{
+        "group": group, "id": player_id, "kind": kind,
+        "name": names.get(player_id, player_id), "pos": pos, "slot": slot,
+    } for player_id, group, slot, pos, kind in ruled]
+    for player_id, group, slot, pos, kind in ruled:
         card = cards.get("PHI|" + player_id)
         if card:
             card["spots"] = [{

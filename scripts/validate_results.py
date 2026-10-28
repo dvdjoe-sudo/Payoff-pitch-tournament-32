@@ -1021,11 +1021,20 @@ def check_phillies_roster_amendment(check: Check) -> None:
     check.expect(all(sorted(p["slot"] for p in players if p["group"] == g)
                      == list(range(1, counts[g] + 1)) for g in groups),
                  "Phillies role slots are consecutive and nonduplicated")
+    # Joe's ruling 2026-10-28 (wave-1 conversion, PHI_phillies.md as
+    # amended 2026-10-23 + 2026-10-28) supersedes the announced-graphic
+    # arrangement this check originally encoded: Klein STARTS in LF,
+    # and Ed Delahanty is the sixth bench bat.
     klein = [p for p in players if p["id"] == "kleinch01"]
-    check.expect(len(klein) == 1 and klein[0]["group"] == "bench"
-                 and klein[0]["slot"] == 6 and klein[0]["pos"] == "RF"
+    check.expect(len(klein) == 1 and klein[0]["group"] == "lineup"
+                 and klein[0]["slot"] == 3 and klein[0]["pos"] == "LF"
                  and klein[0]["kind"] == "hitter",
-                 "Chuck Klein is the Phillies sixth bench hitter")
+                 "Chuck Klein is the Phillies starting left fielder (Joe ruling 2026-10-28)")
+    delahanty = [p for p in players if p["id"] == "delahed01"]
+    check.expect(len(delahanty) == 1 and delahanty[0]["group"] == "bench"
+                 and delahanty[0]["slot"] == 6
+                 and delahanty[0]["kind"] == "hitter",
+                 "Ed Delahanty is the Phillies sixth bench hitter (Joe ruling 2026-10-28)")
     check.expect("madsory01" not in ids,
                  "Ryan Madson is inactive, not deleted from historical cards")
     relief_ids = [p["id"] for p in players if p["group"] == "bullpen"]
