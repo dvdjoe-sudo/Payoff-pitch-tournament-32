@@ -1486,6 +1486,95 @@ per series:
   the divergence evidence is this note, and whether the mode
   ships on it is Joe's ruling, not the build's.
 
+  *Build note (2026-10-28, clean-baseline re-run; Joe's
+  ruling after the gate above came in marginally unpassed:
+  re-run the distribution check against a clean baseline
+  before anything merges).* The clean baseline was run
+  fresh for this comparison, on the governing stack only:
+  chance_setup on the real Cubs home (the
+  series_chc_mon_setup_g1 assembly — v2 engine, FAC deck
+  as dice surface, addendum, traits5, fatigue fix),
+  Montreal injected into the guest slot, Williams traits2
+  re-pointed beneath Chance, driven by the stack's own
+  driver, which never calls Williams' pre_pa — the volume
+  environment, mirrored flag for flag against the port run
+  (no bunt overlay, no force clauses, bulk rare-play
+  auto-resolution). Both parks were hosted on this one
+  stack: Wrigley as loaded; Stade Olympique by swapping
+  the park global to the adopted Stade card (the same
+  ballparks.json both sides read — verified identical to
+  the port's shipped park data for both parks) and
+  flipping the bat/field mapping so Montreal is the home
+  club, the flipped-mapping technique run_sm itself uses.
+  The Giants-Expos set's own engine (the run_sm path)
+  contributed zero games. Conditions matched the port
+  run's design exactly: 200 independent games (no Rest
+  Chart book; empty sit lists), venues alternating (odd
+  games Wrigley, even games Stade), starters rotating by
+  chair ((i-1) mod 5 for both clubs; game 1 Jenkins vs
+  Rogers), seeds 20264001-20264200, and the staged lineups
+  (verified identical across the v1/v2 constants and the
+  shipped fixture). Provenance checks: the promotion audit
+  passed 7,185 of 7,185 checks across the 200 games; the
+  newgen identity checks passed every game; bench plate
+  appearances were zero for both clubs, the volume book's
+  signature; and the pilot copy's pitcher file differs
+  from the real home's only in a renamed provenance label,
+  so the baseline's one construction difference from the
+  volume run's Wrigley side is metadata, not cards. Clean
+  baseline, 200 games: Chicago 6.00 runs/game, Montreal
+  3.90, Chicago win share 69.5% (at Wrigley: 6.26 / 4.43 /
+  70.0%; at Stade: 5.73 / 3.37 / 69.0%). The port's gate
+  sample was re-run and reproduced its recorded figures
+  exactly (5.71 / 4.49 / 62.5%; at Wrigley 6.14 / 4.80 /
+  68.0%; at Stade 5.29 / 4.18 / 57.0%), so the comparison
+  is the recorded gate sample against the clean baseline,
+  bands re-anchored on the clean baseline at the same
+  construction (±0.50 runs, ±7 win-share points): Chicago
+  runs 5.71 inside 5.50-6.50, PASS; Chicago win share
+  62.5% at the floor of 62.5-76.5, PASS; Montreal runs
+  4.49 outside 3.40-4.40, FAIL by 0.09. The gate therefore
+  still stands unpassed, on the Montreal figure alone,
+  and the merge is held.
+
+  What the clean run settled, and what it did not. The
+  blend diagnosis above is half right: it fully explains
+  Chicago's line (the old engine's Stade games, Chicago
+  4.33, dragged the blended reference; on the governing
+  stack Chicago scores 5.73 at Stade, and the win share
+  recovers to a floor pass). It does not explain Montreal.
+  On the governing stack Montreal scores 3.37 at Stade —
+  the old engine's measured twin (3.35) — and 3.90
+  overall; two independent Python constructions agree on
+  Montreal, and the port is the outlier. The per-PA
+  localization, recomputed against the clean baseline,
+  sharpens the same channel the first diagnosis found:
+  Montreal's hit rate is .245 per PA in the port against
+  .226 in the baseline (about 2.7 sampling standard
+  errors; walks .079 against .077 and strikeouts .163
+  against .157 match), hot in both parks (Wrigley .249
+  against .232; Stade .240 against .220), with an added
+  Stade home-run component (.017 per PA against .010,
+  about 2.6 standard errors) that the runs split shows
+  plainly: Montreal's excess is +0.37 runs/game at
+  Wrigley and +0.81 at Stade, while Chicago's own rates
+  match or run cold. The residual therefore lives in the
+  port's resolution of Montreal plate appearances — when
+  Chicago fields: the defense channel's range/error
+  conversion of hits is the prime suspect, with the Stade
+  home-run component pointing at the ballpark/deep-fly
+  neighborhood — a rate-level divergence the replay gate
+  cannot see, because both recorded games are Wrigley
+  games and a rule firing a few times a game at a slightly
+  wrong rate is invisible over two games and compounds
+  over two hundred. No tolerance, figure, card, or engine
+  on either side was adjusted. Whether the mode ships on
+  this diagnosis or the port's Montreal channel is hunted
+  first is Joe's ruling, not the build's. Baseline
+  machinery and full evidence: clean_baseline_game.py,
+  clean_baseline_driver.py, and clean_baseline/ in the
+  managers sandbox.
+
 ### 11.4 Ship checklist
 
 - `scripts/build_playable_data.py` output committed, and the playable
