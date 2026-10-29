@@ -1224,15 +1224,25 @@ a.player-link, a.team-link { color: inherit; }
 .play-lu-n { width: 1.4rem; text-align: right; opacity: 0.7; }
 .play-lu-name { min-width: 10rem; font-weight: 600; }
 .play-lu-pos { width: 2.2rem; opacity: 0.85; }
-.play-scorebug { display: flex; flex-wrap: wrap; gap: 1rem; align-items: baseline;
-  border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.5rem 0.8rem; margin-bottom: 0.6rem; }
+/* Compressed play header: the scorebug and the matchup strip
+   share one slim bar (state, score, the pair on the table, save
+   state), and the linescore and diamond run tight under it, so
+   the cards own the screen. No information is removed, only air. */
+.play-scorebug { display: flex; flex-wrap: wrap; gap: 0.3rem 0.65rem; align-items: center;
+  border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.3rem 0.6rem; margin-bottom: 0.35rem;
+  font-size: 0.92rem; }
 .play-bug-state { font-weight: 700; }
-.play-bug-score { font-size: 1.15rem; font-weight: 700; }
-.play-bug-save { margin-left: auto; opacity: 0.75; }
+.play-bug-score { font-size: 1.02rem; font-weight: 700; }
+.play-bug-save { margin-left: auto; opacity: 0.75; font-size: 0.85rem; }
+.play-scorebug .play-matchup { border: 0; background: transparent; padding: 0; margin: 0;
+  border-radius: 0; justify-content: flex-start; text-align: left; font-size: 0.88rem; }
 table.play-linescore td.num, table.play-linescore th { text-align: center; }
-.play-diamond { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem;
-  max-width: 34rem; margin: 0.6rem 0; text-align: center; }
-.play-base { border: 1px solid var(--line, #999); border-radius: 0.4rem; padding: 0.3rem; min-height: 1.6rem; }
+.play-page .table-wrap.play-ls-wrap { margin: 0 0 0.35rem; }
+.play-page table.play-linescore { min-width: 0; font-size: 0.8rem; }
+.play-page table.play-linescore th, .play-page table.play-linescore td { padding: 0.12rem 0.3rem; }
+.play-diamond { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.25rem;
+  max-width: 34rem; margin: 0.3rem 0; text-align: center; font-size: 0.92rem; }
+.play-base { border: 1px solid var(--line, #999); border-radius: 0.4rem; padding: 0.15rem 0.3rem; min-height: 1.25rem; }
 .play-base.b2 { grid-column: 2; }
 .play-base.b1 { grid-column: 3; grid-row: 2; }
 .play-base.b3 { grid-column: 1; grid-row: 2; }
