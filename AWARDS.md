@@ -44,7 +44,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
 | Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
 | Hal Newhouser | Detroit Tigers | 12.2 | 10.0 | 1 | 11 | 4 |
-| Dizzy Dean | St. Louis Cardinals | 11.7 | 6.0 | 1 | 10 | 2 |
+| Pedro Martinez | Montreal Expos | 12.2 | 8.0 | 1 | 7 | 2 |
 
 ## Reliever
 
@@ -60,10 +60,10 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
+| Bruce Sutter | Chicago Cubs | 9.8 | 1 | 2.0 | 2 | 0 |
 | Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
 | Rafael Betancourt | Colorado Rockies | 8.5 | 0 | 3.2 | 3 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
 | Chad Cordero | Washington Nationals | 7.4 | 1 | 1.0 | 1 | 0 |
-| Mariano Rivera | New York Yankees | 7.4 | 1 | 1.0 | 1 | 0 |
-| Pete Fairbanks | Tampa Bay Rays | 7.1 | 1 | 2.1 | 1 | 2 |
+| John Wetteland | Montreal Expos | 7.4 | 1 | 1.0 | 1 | 0 |

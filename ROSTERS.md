@@ -461,24 +461,27 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Ryne Sandberg (`sandbry01`) in R1-06-G1
-- Slot 2: Mark Grace (`gracema01`) in R1-06-G1
-- Slot 3: Ron Santo (`santoro01`) in R1-06-G1
-- Slot 4: Sammy Sosa (`sosasa01`) in R1-06-G1
-- Slot 5: Billy Williams (`willibi01`) in R1-06-G1
-- Slot 6: Ernie Banks (`bankser01`) in R1-06-G1
-- Slot 7: Hack Wilson (`wilsoha01`) in R1-06-G1
-- Slot 8: Gabby Hartnett (`hartnga01`) in R1-06-G1
-- Slot 9: Pete Crow-Armstrong (`crowape01`) in R1-06-G1
+- Slot 1: Ryne Sandberg (`sandbry01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 2: Mark Grace (`gracema01`) in R1-06-G1; Anthony Rizzo (`rizzoan01`) in R1-06-G2
+- Slot 3: Ron Santo (`santoro01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 4: Sammy Sosa (`sosasa01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 5: Billy Williams (`willibi01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 6: Ernie Banks (`bankser01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 7: Hack Wilson (`wilsoha01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 8: Gabby Hartnett (`hartnga01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 9: Pete Crow-Armstrong (`crowape01`) in R1-06-G1 (same starter in 1 later game)
 
 ### Starts, in the order the games were played
 
 - Fergie Jenkins (`jenkife01`) started R1-06-G1
+- Mordecai Brown (`brownmo01`) started R1-06-G2
 
 ### Relievers who have appeared
 
 - Kerry Wood (`woodke02`), first seen in R1-06-G1
 - Bruce Sutter (`suttebr01`), first seen in R1-06-G1
+- Pedro Strop (`stroppe01`), first seen in R1-06-G2
+- Lee Smith (`smithle02`), first seen in R1-06-G2
 
 ## 7. Atlanta Braves (ATL)
 
@@ -1614,28 +1617,32 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Tim Raines (`raineti01`) in R1-06-G1
-- Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1
-- Slot 3: Larry Walker (`walkela01`) in R1-06-G1
-- Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1
-- Slot 5: Gary Carter (`cartega01`) in R1-06-G1
-- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1
-- Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1
-- Slot 8: Tim Wallach (`wallati01`) in R1-06-G1
-- Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1
+- Slot 1: Tim Raines (`raineti01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 3: Larry Walker (`walkela01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 5: Gary Carter (`cartega01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 8: Tim Wallach (`wallati01`) in R1-06-G1 (same starter in 1 later game)
+- Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1 (same starter in 1 later game)
 
 ### Substitutes who have batted
 
 - Brian Schneider (`schnebr01`), slot 9
 - Rusty Staub (`staubru01`), slot 9
+- Brian Schneider (`schnebr01`), slot 5
+- Mike Lansing (`lansimi01`), slot 2
 
 ### Starts, in the order the games were played
 
 - Steve Rogers (`rogerst01`) started R1-06-G1
+- Pedro Martinez (`martipe02`) started R1-06-G2
 
 ### Relievers who have appeared
 
 - Tim Burke (`burketi01`), first seen in R1-06-G1
+- John Wetteland (`wettejo01`), first seen in R1-06-G2
 
 ## 28. Colorado Rockies (COL)
 
