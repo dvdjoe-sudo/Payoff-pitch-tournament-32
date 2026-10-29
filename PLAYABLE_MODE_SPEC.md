@@ -1575,6 +1575,48 @@ per series:
   clean_baseline_driver.py, and clean_baseline/ in the
   managers sandbox.
 
+  *Ruling (2026-10-28, Joe): ship on the large-N
+  evidence.* Joe chose the hunt, and the hunt ran first.
+  It found no code divergence at any level: the port and
+  the Python governing stack agree on identical flip
+  streams (535 plate appearances, zero divergence), on
+  ten full games in lockstep at both parks, on all 578
+  engineered branch cases of the defense and ballpark
+  battery, on the addendum wild-pitch arm compared step
+  for step, on the deck stream generation tested across
+  random generators, and on the v2-versus-base engine
+  question (the defense-relevant functions are
+  byte-identical). The gate failure above therefore
+  stands as recorded — Montreal 4.49 against the 4.40
+  band top anchored on the 200-game clean baseline — and
+  decomposes into two finite-sample draws: the 200-game
+  Python baseline ran cold and the 200-game port sample
+  ran hot. At scale the two sides meet. A Python baseline
+  extension at N=1000 (seeds 777001-778000, audit clean)
+  gives Montreal 3.947 runs/game, Chicago 5.998, Chicago
+  win share 70.0%; the port at N=2000 across three
+  generator configurations gives Montreal 4.16-4.21,
+  Chicago 5.82-5.90, win share 65.5-67.2% — within about
+  one standard error of the large-N baseline on the hit
+  rate, and every port configuration inside the bands
+  re-anchored on the N=1000 baseline at this section's
+  own construction (±0.50 runs, ±7 win-share points):
+  Montreal 3.45-4.45, Chicago 5.50-6.50, win share
+  63-77%. Joe ruled on 2026-10-28 to accept that large-N
+  verification as this section's evidence, and the mode
+  ships on it. One residual is recorded as an open
+  observation, not a blocker: pooled at large N,
+  Montreal runs (+0.23 per game) and Chicago win share
+  (-3.5 points) lean the same direction at roughly two
+  standard errors — a single correlated signal, not two,
+  with every mechanism proposed for it directly tested
+  and cleared. The only instrument that could resolve it
+  further is matched mega-runs at N≥5000 per side, named
+  here in case it is ever pursued. No tolerance, figure,
+  card, or engine on either side was adjusted to reach
+  this outcome. Full hunt evidence: defect_hunt/ in the
+  managers sandbox.
+
 ### 11.4 Ship checklist
 
 - `scripts/build_playable_data.py` output committed, and the playable
