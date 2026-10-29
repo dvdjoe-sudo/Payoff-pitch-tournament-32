@@ -57,9 +57,14 @@ global.document = {
   querySelectorAll: () => [],
 };
 Object.defineProperty(globalThis, 'navigator', { value: {}, configurable: true });
+let seriesFileOverride = null;
 global.fetch = async (url) => {
   if (String(url).includes('playable_r106.json')) {
     return { json: async () => JSON.parse(fs.readFileSync(new URL('../data/playable_r106.json', import.meta.url), 'utf8')) };
+  }
+  if (String(url).includes('series_r106.json')) {
+    return { ok: true, json: async () => seriesFileOverride
+      || JSON.parse(fs.readFileSync(new URL('../data/series_r106.json', import.meta.url), 'utf8')) };
   }
   throw new Error('unexpected fetch ' + url);
 };
@@ -238,5 +243,40 @@ while (serves++ < 40 && !findText(view, 'after PA 1')) {
   if (rare.length) rare[0].click();
 }
 check('manual serves complete the first PA', findText(view, 'after PA 1'), 'serves=' + serves);
+
+// Part 3: Series Play. The play route with the series signal
+// opens the series setup for the offered game; starting it puts
+// the series strip on the game screen.
+global.location = { hash: '#/play?series=R1-06' };
+PUI.UI.GS = null;
+PUI.UI.seriesCtx = null;
+storageMap.clear();
+PUI.renderPlay(view);
+await tick(); await tick(); await tick();
+check('series setup names the offered game', findText(view, 'R1-06 — Game 3'));
+check('series setup shows the tied series score', findText(view, 'The series is tied 1-1'));
+check('series setup shows the park', findText(view, 'Stade Olympique'));
+check('series setup proposes the rested starters', findText(view, 'Rick Reuschel') && findText(view, 'Dennis Martinez'));
+check('series setup annotates an unavailable arm', findText(view, 'Mordecai Brown — unavailable'));
+const start3 = findButtons(view, 'Start Game 3');
+check('series setup offers the start button', start3.length === 1 && !start3[0].disabled);
+if (start3.length) start3[0].click();
+check('the series game screen carries the series strip', findText(view, 'R1-06 Game 3') && findText(view, 'Series: Chicago 1 — 1 Montreal'));
+check('the series game autosaves under its book id', [...storageMap.keys()].some((k) => k === 'pp-play-r106-R1-06-G3'));
+
+// Part 4: the starter-blocked hold names the club and offers no
+// start.
+PUI.UI.GS = null;
+PUI.UI.seriesCtx = null;
+storageMap.clear();
+const blocked = JSON.parse(fs.readFileSync(new URL('../data/series_r106.json', import.meta.url), 'utf8'));
+blocked.next_game.proposed_starters.MON = null;
+blocked.next_game.starter_blocked = ['MON'];
+seriesFileOverride = blocked;
+PUI.renderPlay(view);
+await tick(); await tick(); await tick();
+check('starter-blocked hold names the club in full', findText(view, 'On hold: Montreal Expos has no rested starter'));
+check('starter-blocked hold offers no start', findButtons(view, 'Start Game 3').length === 0);
+seriesFileOverride = null;
 console.log(fails === 0 ? 'UI SMOKE: PASS' : 'UI SMOKE: FAIL (' + fails + ')');
 process.exit(fails ? 1 : 0);

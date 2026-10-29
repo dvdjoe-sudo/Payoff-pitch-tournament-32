@@ -1053,6 +1053,24 @@
     return { mvp: list[0], runner: list[1] || null };
   }
 
+  /* The "Play Next Game" offer (SERIES_PLAY_SPEC section 3.1):
+   * rendered from the play screen's own operation
+   * (window.PlayUI.seriesOffer), so the bracket, the series page,
+   * and the play screen never disagree about what is offered.
+   * A play offer is a link into series mode; an awaiting offer is
+   * a note naming the game; no offer renders nothing. */
+  function fillSeriesOffer(slot, seriesId) {
+    if (!slot || !window.PlayUI || typeof window.PlayUI.seriesOffer !== "function") return;
+    window.PlayUI.seriesOffer(seriesId).then(function (offer) {
+      if (!offer || offer.kind === "none") return;
+      if (offer.kind === "play") {
+        slot.appendChild(el("a", { class: "play-btn", href: offer.href, text: offer.label }));
+      } else if (offer.kind === "awaiting") {
+        slot.appendChild(el("p", { class: "note", text: offer.label + "." }));
+      }
+    }).catch(function () { /* no offer renders nothing */ });
+  }
+
   function seriesCard(series, activeId) {
     var classes = "series-card";
     if (series.id === activeId) classes += " selected";
@@ -1226,7 +1244,14 @@
         column.appendChild(el("h3", { text: stage.title }));
         state.data.series.filter(function (series) { return stage.test(series.id); })
           .sort(function (a, b) { return a.id.localeCompare(b.id); })
-          .forEach(function (series) { column.appendChild(seriesCard(series, activeId)); });
+          .forEach(function (series) {
+            var wrap = el("div", { class: "series-card-wrap" });
+            wrap.appendChild(seriesCard(series, activeId));
+            var offerSlot = el("div", { class: "series-play-offer" });
+            wrap.appendChild(offerSlot);
+            fillSeriesOffer(offerSlot, series.id);
+            column.appendChild(wrap);
+          });
         scroller.appendChild(column);
       });
       block.appendChild(scroller);
@@ -1288,6 +1313,9 @@
     page.appendChild(el("p", null, el("a", { href: "#/bracket", text: "Back to the bracket" })));
     page.appendChild(el("h2", { text: series.label || series.id }));
     page.appendChild(el("p", { class: "meta", text: (STATUS[series.status] || series.status) + " · " + series.id }));
+    var playOfferSlot = el("div", { class: "series-play-offer" });
+    page.appendChild(playOfferSlot);
+    fillSeriesOffer(playOfferSlot, series.id);
     if (series.team_a) {
       page.appendChild(el("p", null, linkTeam(series.team_a), " vs ", linkTeam(series.team_b)));
       if ((series.status === "scheduled" || series.status === "in-progress") && series.team_b) {

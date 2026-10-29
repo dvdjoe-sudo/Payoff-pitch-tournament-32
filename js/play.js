@@ -42,6 +42,13 @@ function shuffleInPlace(arr, rand) {
 }
 function deepCopy(o) { return JSON.parse(JSON.stringify(o)); }
 function pad2(n) { return (n < 10 ? '0' : '') + n; }
+/* Device-local calendar date, YYYY-MM-DD. The series seal stamps
+ * a game's finish date with it (GS.finished_on, SERIES_PLAY_SPEC
+ * section 3.4), the local counterpart of the UTC exhibition date. */
+function todayStamp() {
+  const d = new Date();
+  return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+}
 function has(o, k) { return Object.prototype.hasOwnProperty.call(o, k); }
 
 /* ------------------------------------------------------- PlayData */
@@ -446,25 +453,40 @@ function newState(G, cfg) {
     def_outs: { CHC: 0, OPP: 0 }, pitcher_spans: [], pa_count: 0,
     home: cfg.homeSlot, flips: [], fc_count: {}, declarations: null,
     traits: cfg.traits, outs_needed: 3 };
+  // Series Play state (SERIES_PLAY_SPEC): span_entries parallels
+  // pitcher_spans with each pitcher's entry state (runners on base
+  // and the score when he entered) for the save derivation; spans
+  // themselves are a recorded shape and gain no fields.
+  // appearances tracks every batting-order entrant by slot, in
+  // entry order, for the series export's batting table.
+  // series_caps carries a series game's capped arms
+  // ({slot: {name: capOuts}}), null in exhibition play.
+  S.span_entries = [];
+  S.appearances = {};
+  S.series_caps = cfg.caps || null;
   S.teams = {};
   for (const slot of ['CHC', 'OPP']) {
     const club = PlayData.clubOf(slot);
     const lineup = (cfg.lineups && cfg.lineups[club]) || fx.lineups[club];
     const bench = (cfg.benches && cfg.benches[club]) || fx.benches[club];
+    const pen = (cfg.pens && cfg.pens[club]) || fx.pens[club];
     const order = lineup.map((s) => ({ name: s.name, pos: s.pos, in_game: true }));
     const field = {};
     for (const s of lineup) if (s.pos !== 'DH') field[s.pos] = s.name;
     const starter = cfg.starters[slot];
     field.P = starter;
     S.teams[slot] = { order: order, next_idx: 0, bench: bench.slice(),
-      pen: fx.pens[club].slice(), field: field, pitcher: starter, removed: [],
+      pen: pen.slice(), field: field, pitcher: starter, removed: [],
       batting: {}, pitching: {}, team_errors: 0 };
     S.teams[slot].pitching[starter] = blankPstat();
+    S.appearances[slot] = order.map((s, i) => ({ slot: i + 1, name: s.name, sub: false }));
   }
   // init_spans: both starters, entered_inning 1
   for (const slot of ['CHC', 'OPP']) {
     S.pitcher_spans.push({ team: slot, name: cfg.starters[slot],
       start: [1, slot === 'OPP' ? 'top' : 'bottom', 0], end: null });
+    S.span_entries.push({ team: slot, name: cfg.starters[slot],
+      runners: 0, score: { CHC: 0, OPP: 0 } });
     pstat(S, slot, cfg.starters[slot]).entered_inning = 1;
   }
   deckNew(S, cfg.seed);
@@ -1725,6 +1747,16 @@ function* hnrGroundOut(G, S, batterName) {
   }
 }
 
+/* Record a batting-order entrant for the series export's batting
+ * table (S.appearances): every order slot that takes a name after
+ * the starters is a substitute appearance, in entry order. Guarded:
+ * a restored pre-feature save has no appearances table. */
+function noteAppearance(S, team, slotObj, name) {
+  if (!S.appearances) return;
+  const tm = T(S, team);
+  S.appearances[team].push({ slot: tm.order.indexOf(slotObj) + 1, name: name, sub: true });
+}
+
 /* ------------------------------------------------- pitching changes */
 function pickReliever(G, S, fteam, want) {
   const tm = T(S, fteam);
@@ -1748,6 +1780,11 @@ function changePitcherRaw(G, S, fteam, newName) {
   const ps = pstat(S, fteam, newName);
   ps.entered_inning = S.inning;
   S.pitcher_spans.push({ team: fteam, name: newName, start: [S.inning, S.half, S.def_outs[fteam]], end: null });
+  if (S.span_entries) {
+    S.span_entries.push({ team: fteam, name: newName,
+      runners: S.bases.filter((b) => b !== null).length,
+      score: { CHC: S.score.CHC, OPP: S.score.OPP } });
+  }
   elog(S, 'Pitching change (' + TEAMNAME[fteam] + '): ' + newName + ' replaces ' + old);
 }
 /* traits2's change_pitcher wrapper: the Fireman entry can
@@ -1958,7 +1995,7 @@ function* substitute(G, S, team, outName, reason) {
   }
   tm.bench.splice(tm.bench.indexOf(pick), 1);
   tm.removed.push(outName);
-  if (slot) slot.name = pick;
+  if (slot) { slot.name = pick; noteAppearance(S, team, slot, pick); }
   if (slide) {
     const [starter, oldSpot] = slide;
     tm.field[spot] = starter;
@@ -2166,6 +2203,7 @@ function pinchHit(S, team, outName, pick, reason) {
   for (const slot of tm.order) {
     if (slot.name === outName) {
       slot.name = pick;
+      noteAppearance(S, team, slot, pick);
       for (const p of Object.keys(tm.field)) if (tm.field[p] === outName) tm.field[p] = pick;
       break;
     }
@@ -2183,6 +2221,7 @@ function pinchRun(S, team, outName, pick, reason) {
   for (const slot of tm.order) {
     if (slot.name === outName) {
       slot.name = pick;
+      noteAppearance(S, team, slot, pick);
       for (const p of Object.keys(tm.field)) if (tm.field[p] === outName) tm.field[p] = pick;
       break;
     }
@@ -3210,8 +3249,11 @@ function auditGame(G, S) {
 }
 /* W/L/SV derivation, ported from the table game's audit module:
  * go-ahead-for-good from the run events and spans; the save by
- * the house entry-state standard (entered with a lead of 1-3,
- * or pitched 3+ innings to finish). Labeled derived. */
+ * the tournament's standing save standard, entry state governs:
+ * a save when the reliever enters with the tying run on base, at
+ * bat, or on deck, OR pitches three or more innings to finish,
+ * OR enters with a lead of three or fewer and pitches at least
+ * one full inning. Labeled derived. */
 function deriveDecisions(S) {
   const winner = S.score.CHC >= S.score.OPP ? 'CHC' : 'OPP';
   const loser = winner === 'CHC' ? 'OPP' : 'CHC';
@@ -3243,18 +3285,64 @@ function deriveDecisions(S) {
       const lastSp = wspans[wspans.length - 1];
       if (lastSp.name !== wp) {
         const outsPitched = S.def_outs[winner] - lastSp.start[2];
-        const startKey = key(lastSp.start.slice(0, 2));
-        let sc = { CHC: 0, OPP: 0 };
-        for (const e2 of evs) {
-          if (keyCmp(key([e2.inning, e2.half]), startKey) <= 0) sc = Object.assign({}, e2.score);
+        // Entry state governs (the tournament's standing save
+        // standard): the score and the runners on base at the
+        // moment the finishing reliever entered, recorded in
+        // S.span_entries. A save when the reliever entered with
+        // the tying run on base, at bat, or on deck, OR pitched
+        // three or more innings to finish, OR entered with a lead
+        // of three or fewer and pitched at least one full inning.
+        // Legacy saves without recorded entry state fall back to
+        // the run-events score reconstruction, tying run at bat.
+        const wIdx = S.pitcher_spans.indexOf(lastSp);
+        const entry = (S.span_entries && S.span_entries.length === S.pitcher_spans.length)
+          ? S.span_entries[wIdx] : null;
+        let entryLead, entryRunners;
+        if (entry) {
+          entryLead = entry.score[winner] - entry.score[loser];
+          entryRunners = entry.runners;
+        } else {
+          const startKey = key(lastSp.start.slice(0, 2));
+          let sc = { CHC: 0, OPP: 0 };
+          for (const e2 of evs) {
+            if (keyCmp(key([e2.inning, e2.half]), startKey) <= 0) sc = Object.assign({}, e2.score);
+          }
+          entryLead = sc[winner] - sc[loser];
+          entryRunners = 0;
         }
-        const entryLead = sc[winner] - sc[loser];
-        if ((entryLead >= 1 && entryLead <= 3) || outsPitched >= 9) save = lastSp.name;
+        const tyingRunClose = entryLead >= 1 && entryLead <= entryRunners + 2;
+        if (tyingRunClose || outsPitched >= 9 || (entryLead >= 1 && entryLead <= 3 && outsPitched >= 3)) save = lastSp.name;
       }
     }
   }
   return { winner: winner, W: wp, L: lp, SV: save,
-    basis: 'derived from run events and pitcher spans (go-ahead-for-good); save by the house entry-state standard' };
+    basis: 'derived from run events and pitcher spans (go-ahead-for-good); save by the standing entry-state standard: tying run on base, at bat, or on deck at entry, or 3+ innings to finish, or a lead of 3 or fewer held for at least one full inning' };
+}
+/* Series rest cap (SERIES_PLAY_SPEC section 3.2): returns the
+ * forced change when the club currently fielding has a capped arm
+ * on the mound who has reached his cap, else null. The cap binds
+ * the next plate appearance the capped pitcher would face: the
+ * play layer consults this only when a new PA is about to start
+ * with his club fielding, so reaching the cap exactly on a game's
+ * final out forces nothing (no next PA exists) and reaching it on
+ * an inning's third out forces nothing then either; the change is
+ * forced at the first decision point where he would pitch beyond
+ * the cap. Overshoot is possible inside one PA (a double play
+ * adds two outs), so the comparison is >=. */
+function capForce(S) {
+  if (!S.series_caps) return null;
+  const f = fldTeam(S);
+  const caps = S.series_caps[f];
+  if (!caps) return null;
+  const name = curPitcher(S, f);
+  const cap = caps[name];
+  if (cap == null) return null;
+  let outs = 0;
+  for (const sp of S.pitcher_spans) {
+    if (sp.team === f && sp.name === name) outs += (sp.end ? sp.end[2] : S.def_outs[f]) - sp.start[2];
+  }
+  if (outs >= cap) return { slot: f, name: name, outs: outs, cap: cap };
+  return null;
 }
 /* Snapshots for undo (spec 5.4): the whole state minus the
  * source object; deck state rides inside S.deck. Feed entries
@@ -3326,8 +3414,10 @@ function createGame(cfg, storage) {
   const seed = cfg.seed;
   const rng = cfg.suffixRng || Math.random;
   let suffix = cfg.suffix || makeSuffix(rng);
-  let gameId = 'r106-' + seed + '-' + suffix;
-  if (storage) {
+  // A series game carries its book identity (cfg.gameId, e.g.
+  // R1-06-G3) as its save-slot id; an exhibition mints one.
+  let gameId = cfg.gameId || ('r106-' + seed + '-' + suffix);
+  if (storage && !cfg.gameId) {
     let guard = 0;
     while (storage.getItem(SAVE_PREFIX + gameId) && guard++ < 50) {
       suffix = makeSuffix(rng); gameId = 'r106-' + seed + '-' + suffix;
@@ -3338,7 +3428,8 @@ function createGame(cfg, storage) {
     buntOverlay: true, prePa: true, clauses: true, defenseNumbers: true,
     human: { CHC: managers.CHC === 'human', OPP: managers.OPP === 'human' } });
   const S = newState(G, { seed, homeSlot: cfg.homeSlot, starters: cfg.starters,
-    traits: fixtureTraits(), lineups: cfg.lineups, benches: cfg.benches });
+    traits: fixtureTraits(), lineups: cfg.lineups, benches: cfg.benches,
+    pens: cfg.pens || null, caps: cfg.caps || null });
   const sources = {
     deck: DeckSource,
     dice: makeDiceSource((seed ^ 0x9e3779b9) >>> 0),
@@ -3346,9 +3437,13 @@ function createGame(cfg, storage) {
   };
   const GS = {
     G, S, cfg: { seed, homeSlot: cfg.homeSlot, starters: cfg.starters,
-      lineups: cfg.lineups || null, benches: cfg.benches || null, managers },
+      lineups: cfg.lineups || null, benches: cfg.benches || null, managers,
+      gameId: cfg.gameId || null, series: cfg.series || null,
+      pens: cfg.pens || null, caps: cfg.caps || null },
     gameId, suffix, seed,
-    exportId: 'EXHIBITION-CHC-MON-' + seed + '-' + suffix,
+    series: cfg.series || null,
+    finished_on: null,
+    exportId: cfg.series ? gameId : 'EXHIBITION-CHC-MON-' + seed + '-' + suffix,
     sources, sourceKind: cfg.sourceKind || 'deck',
     feed: [], undoStack: [], paCount: 0, undoCount: 0,
     gen: null, logMark: 0, pendingStep: null, pendingDecision: null,
@@ -3382,7 +3477,7 @@ function createGame(cfg, storage) {
     try {
       const payload = { version: 1, gameId: GS.gameId, cfg: GS.cfg, sourceKind: GS.sourceKind,
         state: snapshotState(S), feed: GS.feed, paCount: GS.paCount, undoCount: GS.undoCount,
-        setupBlock: GS.setupBlock, finished: GS.finished };
+        setupBlock: GS.setupBlock, finished: GS.finished, finishedOn: GS.finished_on };
       delete payload.state.source;
       GS._storage.setItem(SAVE_PREFIX + GS.gameId, JSON.stringify(payload));
       GS.storageOk = true;
@@ -3435,15 +3530,48 @@ function createGame(cfg, storage) {
     GS.gen = null;
     GS.paCount += 1;
     GS._feedBlock(false);
-    if (res === 'FINAL') GS.finished = true;
+    if (res === 'FINAL') { GS.finished = true; GS.finished_on = todayStamp(); }
+    else GS._seriesCapAuto();
     GS.save();
     return { status: res };
+  };
+  /* Series cap machinery (SERIES_PLAY_SPEC section 3.2): when a
+   * profile-managed club's capped arm has reached his cap at a PA
+   * boundary, the machinery makes the forced change itself, as
+   * its own snapshot and feed block. A human-managed club is
+   * gated instead (GS._capGate): play cannot start the next PA
+   * until the manager makes the change. Exhibition games carry
+   * no caps and both paths are inert. */
+  GS._seriesCapAuto = function () {
+    const force = capForce(S);
+    if (!force) return false;
+    if (GS.cfg.managers[force.slot] === 'human') return false;
+    const pen = T(S, force.slot).pen;
+    if (!pen.length) return false;
+    const pick = pickReliever(G, S, force.slot, 'setup');
+    if (!pick || pick === force.name || !pen.includes(pick)) return false;
+    GS._snapshot();
+    GS.logMark = S.log.length;
+    changePitcherRaw(G, S, force.slot, pick);
+    led(S, 'series_cap', force.name + ' reached his cap of ' + force.cap + ' outs (' + force.outs + ' recorded); forced change: ' + pick + ' takes the mound');
+    elog(S, '  Series rest rule: ' + force.name + ' is at his ' + force.cap + '-out cap; the change is forced.');
+    GS._feedBlock(true);
+    return true;
+  };
+  GS._capGate = function () {
+    const force = capForce(S);
+    if (!force) return null;
+    if (GS.cfg.managers[force.slot] !== 'human') return null;
+    return { status: 'CAP', force: force };
   };
   /* Play one plate appearance (or resume a parked one). */
   GS.step = function () {
     if (GS.sealed) return { status: 'SEALED' };
     if (GS.finished) return { status: 'FINAL' };
     if (!GS.gen) {
+      const gate = GS._capGate();
+      if (gate) return gate;
+      GS._seriesCapAuto();
       GS._snapshot();
       GS.logMark = S.log.length;
       GS.gen = gameStep(G, S, { stopAtRare: true });
@@ -3479,6 +3607,9 @@ function createGame(cfg, storage) {
     if (!src) return { status: 'STEP', kind: GS.pendingStep, error: 'unknown source ' + kind };
     if (S.deck.peek) return { status: 'STEP', kind: GS.pendingStep, error: 'a manual 2d6 peek is outstanding (FAC ' + S.deck.peek + '); flip it by manual entry, or undo the PA, before rolling or drawing' };
     if (!GS.gen) {
+      const gate = GS._capGate();
+      if (gate) return gate;
+      GS._seriesCapAuto();
       GS._snapshot();
       GS.logMark = S.log.length;
       GS.gen = gameStep(G, S, { stopAtRare: true });
@@ -3503,6 +3634,9 @@ function createGame(cfg, storage) {
     if (GS.sealed) return { status: 'SEALED' };
     if (GS.finished) return { status: 'FINAL' };
     if (GS.gen) return { status: 'STEP', kind: GS.pendingStep, awaiting: true };
+    const gate = GS._capGate();
+    if (gate) return gate;
+    GS._seriesCapAuto();
     GS._snapshot();
     GS.logMark = S.log.length;
     GS.gen = gameStep(G, S, { stopAtRare: true });
@@ -3526,7 +3660,13 @@ function createGame(cfg, storage) {
     GS._snapshot();
     GS.logMark = S.log.length;
     if (action.kind === 'pitch') {
-      changePitcher(G, S, action.slot, action.name);
+      // A manager's named pick enters as named. changePitcher's
+      // third argument is a role want for the machinery's own
+      // hooks (pickReliever matches it against pen roles and
+      // falls back to the first pen arm), so a named arm from the
+      // pen goes through the raw change instead.
+      if (action.name && T(S, action.slot).pen.includes(action.name)) changePitcherRaw(G, S, action.slot, action.name);
+      else changePitcher(G, S, action.slot, action.name);
     } else if (action.kind === 'ph') {
       pinchHit(S, action.slot, action.out, action.name, action.reason || 'pinch hit');
     } else if (action.kind === 'pr') {
@@ -3540,7 +3680,7 @@ function createGame(cfg, storage) {
       tm.bench.splice(tm.bench.indexOf(action.name), 1);
       tm.bench.push(action.out);
       tm.removed.push(action.out);
-      if (slotE) slotE.name = action.name;
+      if (slotE) { slotE.name = action.name; noteAppearance(S, action.slot, slotE, action.name); }
       if (pos && pos !== 'DH' && tm.field[pos] === action.out) tm.field[pos] = action.name;
       elog(S, '  substitution (' + TEAMNAME[action.slot] + '): ' + action.name + ' replaces ' + action.out + ' (defensive substitution, manager\'s call)');
       led(S, 'substitution', action.name + ' for ' + action.out + ' (defensive substitution)');
@@ -3608,7 +3748,7 @@ function loadSave(storage) {
   const peek = peekSave(storage);
   if (!peek) return null;
   const p = JSON.parse(storage.getItem(SAVE_PREFIX + peek.gameId));
-  const GS = createGame(Object.assign({}, p.cfg, { suffix: p.gameId.split('-').pop() }), storage);
+  const GS = createGame(Object.assign({}, p.cfg, { suffix: p.gameId.split('-').pop(), gameId: p.cfg.gameId || p.gameId }), storage);
   restoreState(GS.S, p.state);
   GS.S.source = GS.sources[p.sourceKind || 'deck'];
   GS.sourceKind = p.sourceKind || 'deck';
@@ -3616,6 +3756,7 @@ function loadSave(storage) {
   GS.paCount = p.paCount || 0;
   GS.undoCount = p.undoCount || 0;
   GS.finished = !!p.finished;
+  GS.finished_on = p.finishedOn || null;
   GS.setupBlock = p.setupBlock || GS.setupBlock;
   GS.logMark = GS.S.log.length;
   GS.feed.push({ pa: GS.paCount, lines: ['Resumed. The undo stack starts empty: nothing before this point can be undone.'], live: true, action: true });
@@ -3625,6 +3766,301 @@ function discardSave(storage) {
   const peek = peekSave(storage);
   if (peek) storage.removeItem(SAVE_PREFIX + peek.gameId);
   return peek;
+}
+/* Targeted save-slot variants for Series Play, where several
+ * slots can exist (an exhibition in progress and a series game)
+ * and the offered game's slot is addressed by its book id. */
+function peekSaveById(storage, gameId) {
+  if (!storage) return null;
+  try {
+    const raw = storage.getItem(SAVE_PREFIX + gameId);
+    if (!raw) return null;
+    const p = JSON.parse(raw);
+    const st = p.state;
+    return { gameId: p.gameId, finished: !!p.finished,
+      label: PlayData.data.fixture.label,
+      inning: st.inning, half: st.half,
+      score: st.score, paCount: p.paCount };
+  } catch (e) { return null; }
+}
+function loadSaveById(storage, gameId) {
+  if (!peekSaveById(storage, gameId)) return null;
+  const p = JSON.parse(storage.getItem(SAVE_PREFIX + gameId));
+  const GS = createGame(Object.assign({}, p.cfg, { suffix: String(p.gameId).split('-').pop(), gameId: p.cfg.gameId || p.gameId }), storage);
+  restoreState(GS.S, p.state);
+  GS.S.source = GS.sources[p.sourceKind || 'deck'];
+  GS.sourceKind = p.sourceKind || 'deck';
+  GS.feed = p.feed || [];
+  GS.paCount = p.paCount || 0;
+  GS.undoCount = p.undoCount || 0;
+  GS.finished = !!p.finished;
+  GS.finished_on = p.finishedOn || null;
+  GS.setupBlock = p.setupBlock || GS.setupBlock;
+  GS.logMark = GS.S.log.length;
+  GS.feed.push({ pa: GS.paCount, lines: ['Resumed. The undo stack starts empty: nothing before this point can be undone.'], live: true, action: true });
+  return GS;
+}
+function discardSaveById(storage, gameId) {
+  const peek = peekSaveById(storage, gameId);
+  if (peek && storage) storage.removeItem(SAVE_PREFIX + gameId);
+  return peek;
+}
+
+/* ------------------------------------------------- Series Play
+ * The "Play Next Game" operations (SERIES_PLAY_SPEC sections 3.1,
+ * 3.3, 3.4). Named and exported so the validation batteries drive
+ * exactly the paths the screens use: applySeriesFile (the offered
+ * state), createSeriesGame (series-mode creation),
+ * applySeriesStarterPick (the starter-override control),
+ * dispatchSeriesGame (file name and content), sealSeriesGame
+ * (the seal flow that sets the dispatched flag), dismissDispatch
+ * (the dismiss action). */
+/* The dispatched flag lives beside the autosave slots but must
+ * never be mistaken for one, so its key does not start with the
+ * autosave prefix: pp-series-dispatched-<game id>, value JSON
+ * {"game_id", "dispatched_on", "file_name"}. */
+const DISPATCH_PREFIX = 'pp-series-dispatched-';
+function seriesFileNameFor(seriesId) {
+  return 'series_' + String(seriesId).toLowerCase().replace(/[^a-z0-9]/g, '') + '.json';
+}
+/* The offered state for a series, from its baked series file and
+ * this device's storage. Side effects, in order: every autosave
+ * slot and dispatched flag naming a game the book already stores
+ * is discarded (a dispatched game has landed; an undispatched
+ * mid-game slot for a since-booked game is stale), and a corrupt
+ * dispatched flag for the offered game is removed and noted.
+ * Awaiting booking holds only when the live dispatched flag names
+ * the file's currently offered game: that game was dispatched
+ * from this device and is not yet in the book. */
+function applySeriesFile(seriesFile, storage) {
+  const notices = [];
+  const get = (k) => { try { return storage ? storage.getItem(k) : null; } catch (e) { return null; } };
+  const drop = (k) => { try { if (storage) storage.removeItem(k); } catch (e) { /* gone either way */ } };
+  if (seriesFile && storage) {
+    for (const g of (seriesFile.stored_games || [])) {
+      if (get(SAVE_PREFIX + g.id) != null) drop(SAVE_PREFIX + g.id);
+      if (get(DISPATCH_PREFIX + g.id) != null) drop(DISPATCH_PREFIX + g.id);
+    }
+  }
+  if (!seriesFile) return { kind: 'none', number: null, id: null, blocked_reason: 'no-series-file', notices: notices };
+  const ng = seriesFile.next_game || null;
+  if (!ng) return { kind: 'none', number: null, id: null, blocked_reason: seriesFile.blocked_reason || null, notices: notices };
+  let flag = null;
+  const raw = get(DISPATCH_PREFIX + ng.id);
+  if (raw != null) {
+    let ok = false;
+    try {
+      const parsed = JSON.parse(raw);
+      ok = !!parsed && parsed.game_id === ng.id &&
+        typeof parsed.dispatched_on === 'string' && typeof parsed.file_name === 'string';
+      if (ok) flag = parsed;
+    } catch (e) { ok = false; }
+    if (!ok) {
+      drop(DISPATCH_PREFIX + ng.id);
+      notices.push('Removed an unreadable dispatch marker for ' + ng.id + '.');
+    }
+  }
+  if (flag) return { kind: 'awaiting', number: ng.number, id: ng.id, blocked_reason: null, notices: notices };
+  return { kind: 'play', number: ng.number, id: ng.id, blocked_reason: null, notices: notices };
+}
+/* Series-mode game creation from a series file's offered game.
+ * Returns null when the file offers no game. The selectable staff
+ * comes from the file: the chosen starter (opts.starters, club
+ * keyed, defaulting to the file's proposal) is removed from his
+ * club's pen, and capped arms carry their caps from the file's
+ * availability rows. */
+function createSeriesGame(seriesFile, storage, opts) {
+  opts = opts || {};
+  const ng = seriesFile && seriesFile.next_game;
+  if (!ng) return null;
+  const slotOf = (club) => (club === 'CHC' ? 'CHC' : 'OPP');
+  const otherSlot = (slot) => (slot === 'CHC' ? 'OPP' : 'CHC');
+  const homeSlot = slotOf(ng.home);
+  const startersClub = opts.starters || ng.proposed_starters;
+  const starters = {};
+  starters[homeSlot] = startersClub[ng.home];
+  starters[otherSlot(homeSlot)] = startersClub[ng.away];
+  const pens = {};
+  const caps = {};
+  for (const club of [ng.home, ng.away]) {
+    pens[club] = (ng.pens[club] || []).filter((n) => n !== startersClub[club]);
+    const slotCaps = {};
+    for (const row of (ng.availability[club] || [])) {
+      if (row.status === 'capped') slotCaps[row.name] = row.cap_outs;
+    }
+    caps[slotOf(club)] = slotCaps;
+  }
+  const managersClub = opts.managers || null;
+  const managers = { CHC: 'human', OPP: 'human' };
+  if (managersClub) {
+    managers[homeSlot] = managersClub[ng.home] || 'human';
+    managers[otherSlot(homeSlot)] = managersClub[ng.away] || 'human';
+  }
+  return createGame({
+    seed: opts.seed != null ? opts.seed : 100000 + Math.floor(Math.random() * 900000),
+    homeSlot: homeSlot,
+    starters: starters,
+    lineups: opts.lineups || deepCopy(ng.lineups),
+    benches: opts.benches || deepCopy(ng.benches),
+    managers: managers,
+    sourceKind: opts.sourceKind || 'deck',
+    gameId: ng.id,
+    pens: pens,
+    caps: caps,
+    series: { series_id: seriesFile.series_id, number: ng.number, id: ng.id,
+      home: ng.home, away: ng.away, park: ng.park,
+      wins: deepCopy(seriesFile.wins || {}), status: seriesFile.status },
+  }, storage);
+}
+/* The starter-override universe: any FREE pitcher in the club's
+ * full carded pool in the fixture data (rotation, pen, and
+ * closer), with availability from the series file's derived rows.
+ * Unavailable and capped arms are refused as starters. */
+function seriesStarterPool(seriesFile, club) {
+  const fx = PlayData.data.fixture;
+  const out = [];
+  const seen = new Set();
+  const add = (n) => { if (n && !seen.has(n)) { seen.add(n); out.push(n); } };
+  for (const n of (fx.rotations && fx.rotations[club]) || []) add(n);
+  for (const n of (fx.pens && fx.pens[club]) || []) add(n);
+  add(fx.closers && fx.closers[club]);
+  return out;
+}
+function seriesStarterStatus(seriesFile, club, name) {
+  const ng = seriesFile && seriesFile.next_game;
+  if (!ng) return 'free';
+  const row = (ng.availability[club] || []).find((r) => r.name === name);
+  return row ? row.status : 'free';
+}
+/* The starter-override control. load is the setup screen's (or
+ * the battery's) load state: {file, starters} with starters keyed
+ * by club. A refused pick leaves the proposal standing and says
+ * why, in words. */
+function applySeriesStarterPick(load, club, name) {
+  const status = seriesStarterStatus(load.file, club, name);
+  if (status !== 'free') {
+    return { ok: false, reason: name + ' is ' + status + ' for this game and cannot start.' };
+  }
+  load.starters[club] = name;
+  return { ok: true, reason: null };
+}
+/* The dispatch content for a finished series game: the bookable
+ * file the supervised import reads (SERIES_PLAY_SPEC section
+ * 3.4). Returns {fileName, content}. */
+function dispatchSeriesGame(GS) {
+  const S = GS.S, fx = PlayData.data.fixture, ser = GS.series;
+  const clubFull = (club) => fx.clubs[club].name;
+  const slotOfClub = (club) => (club === 'CHC' ? 'CHC' : 'OPP');
+  const clubOfSlot = (slot) => (slot === 'CHC' ? 'CHC' : 'MON');
+  const awaySlot = slotOfClub(ser.away), homeSlot = slotOfClub(ser.home);
+  const awayFull = clubFull(ser.away), homeFull = clubFull(ser.home);
+  const dec = deriveDecisions(S);
+  const winnerClub = clubOfSlot(dec.winner);
+  const lines = [];
+  lines.push('# ' + ser.series_id + ' Game ' + ser.number + ': ' + awayFull + ' at ' + homeFull);
+  lines.push('**Date:** ' + (GS.finished_on || todayStamp()));
+  lines.push('**Seed:** ' + GS.seed);
+  lines.push('**Game recap:** ' + ser.series_id + ' Game ' + ser.number + '. ' +
+    awayFull + ' ' + S.score[awaySlot] + ' at ' + homeFull + ' ' + S.score[homeSlot] + '.');
+  const newWins = Object.assign({}, ser.wins);
+  newWins[winnerClub] = (newWins[winnerClub] || 0) + 1;
+  const loserClub = winnerClub === ser.home ? ser.away : ser.home;
+  if (newWins[winnerClub] >= 4) {
+    lines.push('**Series state after this game:** ' + clubFull(winnerClub) + ' wins the series ' +
+      newWins[winnerClub] + '-' + (newWins[loserClub] || 0) + '.');
+  } else if ((newWins[ser.home] || 0) === (newWins[ser.away] || 0)) {
+    lines.push('**Series state after this game:** Series tied ' + (newWins[ser.home] || 0) + '-' +
+      (newWins[ser.away] || 0) + ' after Game ' + ser.number + '.');
+  } else {
+    const leader = (newWins[ser.home] || 0) > (newWins[ser.away] || 0) ? ser.home : ser.away;
+    const other = leader === ser.home ? ser.away : ser.home;
+    lines.push('**Series state after this game:** ' + clubFull(leader) + ' leads the series ' +
+      (newWins[leader] || 0) + '-' + (newWins[other] || 0) + ' after Game ' + ser.number + '.');
+  }
+  lines.push('');
+  const innings = Math.max(S.linescore[awaySlot].length, S.linescore[homeSlot].length);
+  const lsRow = (slot, full) => {
+    const cells = [full];
+    let h = 0;
+    for (const bs of Object.values(S.teams[slot].batting)) h += bs.H || 0;
+    for (let i = 0; i < innings; i++) {
+      const v = S.linescore[slot][i];
+      cells.push(v === undefined || v === null ? 'x' : String(v));
+    }
+    cells.push(String(S.score[slot]), String(h), String(S.teams[slot].team_errors));
+    return '| ' + cells.join(' | ') + ' |';
+  };
+  const lsHead = ['Team'];
+  for (let i = 1; i <= innings; i++) lsHead.push(String(i));
+  lsHead.push('R', 'H', 'E');
+  lines.push('| ' + lsHead.join(' | ') + ' |');
+  lines.push('|' + ' --- |'.repeat(lsHead.length));
+  lines.push(lsRow(awaySlot, awayFull));
+  lines.push(lsRow(homeSlot, homeFull));
+  lines.push('');
+  const decParts = [];
+  if (dec.W) decParts.push('W: ' + dec.W + ' (' + clubFull(winnerClub) + ')');
+  if (dec.L) decParts.push('L: ' + dec.L + ' (' + clubFull(loserClub) + ')');
+  if (dec.SV) decParts.push('SV: ' + dec.SV + ' (' + clubFull(winnerClub) + ')');
+  lines.push('**Decisions:** ' + decParts.join(' · '));
+  const batHead = '| # | Player | AB | R | H | 2B | 3B | HR | RBI | BB | SO | HBP | SB | CS | SAC | GIDP |';
+  const pitHead = '| Player | IP | H | R | ER | BB | SO | HR | HB | BF |';
+  for (const club of [ser.away, ser.home]) {
+    const slot = slotOfClub(club);
+    const tm = S.teams[slot];
+    lines.push('');
+    lines.push('## ' + clubFull(club) + ' batting');
+    lines.push(batHead);
+    lines.push('|' + ' --- |'.repeat(16));
+    const apps = (S.appearances && S.appearances[slot]) || [];
+    const rows = apps.slice().sort((a, b) => a.slot - b.slot);
+    for (const app of rows) {
+      const bs = tm.batting[app.name] || blankBstat();
+      lines.push('| ' + [app.slot, app.name + (app.sub ? ' *' : ''), bs.AB || 0, bs.R || 0, bs.H || 0,
+        bs['2B'] || 0, bs['3B'] || 0, bs.HR || 0, bs.RBI || 0, bs.BB || 0, bs.SO || 0, bs.HBP || 0,
+        bs.SB || 0, bs.CS || 0, (bs.SH || 0) + (bs.SF || 0), bs.GDP || 0].join(' | ') + ' |');
+    }
+    lines.push('');
+    lines.push('## ' + clubFull(club) + ' pitching');
+    lines.push(pitHead);
+    lines.push('|' + ' --- |'.repeat(10));
+    for (const sp of S.pitcher_spans) {
+      if (sp.team !== slot) continue;
+      const outs = (sp.end ? sp.end[2] : S.def_outs[slot]) - sp.start[2];
+      const ps = tm.pitching[sp.name] || blankPstat();
+      lines.push('| ' + [sp.name, ipText(outs), ps.H || 0, ps.R || 0, ps.ER || 0, ps.BB || 0,
+        ps.SO || 0, ps.HR || 0, ps.HBP || 0, ps.BF || 0].join(' | ') + ' |');
+    }
+  }
+  return { fileName: ser.id + '.md', content: lines.join('\n') + '\n' };
+}
+/* The series seal: dispatch the finished game and mark it
+ * dispatched on this device. Unlike the exhibition seal, the
+ * finished autosave slot is RETAINED: the game stays re-enterable
+ * to view the final and re-download the file until the book takes
+ * it (applySeriesFile then clears slot and flag together). */
+function sealSeriesGame(GS, storage) {
+  const out = dispatchSeriesGame(GS);
+  GS.sealed = true;
+  if (storage) {
+    try {
+      storage.setItem(DISPATCH_PREFIX + GS.series.id, JSON.stringify({
+        game_id: GS.series.id,
+        dispatched_on: todayStamp(),
+        file_name: out.fileName,
+      }));
+    } catch (e) { /* the download still carries the game */ }
+  }
+  GS.save();
+  return out;
+}
+/* The dismiss action: the manager decides not to book a
+ * dispatched game. Clears the flag and discards the retained
+ * finished slot; the offer then recomputes from the series file
+ * alone, a fresh start at the same game. */
+function dismissDispatch(storage, gameId) {
+  if (storage) { try { storage.removeItem(DISPATCH_PREFIX + gameId); } catch (e) { /* gone either way */ } }
+  discardSaveById(storage, gameId);
 }
 
 /* ---------------------------------------------------------- exports */
@@ -3930,6 +4366,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
   const UI = { GS: null, setup: null, cardTab: 'batter', rarePending: false,
     stepError: null, modal: null, confirmDiscard: false, lastPitcher: null, view: null,
+    seriesCtx: null, seriesNotice: null, bookConfirm: false,
     feedOpen: false,
     _hl: null, _hlGs: null, _hlSeenPa: 0, _shownCards: null, _parkedDecision: false,
     _diceShow: null, _facShow: null, _animDice: null, _animFac: null,
@@ -3998,6 +4435,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       page.appendChild(banner);
     }
 
+    if (UI.seriesNotice) page.appendChild(el('p', { class: 'note', text: UI.seriesNotice }));
     const S = UI.setup || (UI.setup = freshSetup());
     const f = fx();
     page.appendChild(el('h2', { text: 'Play the game' }));
@@ -4139,6 +4577,289 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   PUI._store = store;
   PUI._clubOfSlot = clubOfSlot;
 
+  // -- Series Play screens (SERIES_PLAY_SPEC section 3.1) ------
+  /* The play route's series signal: #/play?series=<series id>.
+   * Read defensively: no location global, no signal, no series
+   * mode; the plain Play nav never carries one. */
+  function seriesSignalFromHash() {
+    try {
+      if (typeof location === 'undefined' || !location.hash) return null;
+      const q = String(location.hash).split('?')[1];
+      if (!q) return null;
+      return new URLSearchParams(q).get('series') || null;
+    } catch (e) { return null; }
+  }
+  function seriesScoreLine(file) {
+    const a = file.team_a, b = file.team_b;
+    const wa = (file.wins || {})[a] || 0, wb = (file.wins || {})[b] || 0;
+    if (wa === wb) return 'The series is tied ' + wa + '-' + wb + '.';
+    const lead = wa > wb ? a : b;
+    return clubName(lead) + ' leads the series ' + Math.max(wa, wb) + '-' + Math.min(wa, wb) + '.';
+  }
+  /* The bracket's and the series page's play offer, from the same
+   * operation the play screen itself uses: fetch the series file,
+   * apply it, and describe the offered state. A fetch failure or a
+   * file for a different series is no file at all. */
+  PUI.seriesOffer = function (seriesId) {
+    const toOffer = (file) => {
+      const state = applySeriesFile(file, store);
+      if (state.kind === 'play') return { kind: 'play', number: state.number, id: state.id, href: '#/play?series=' + seriesId, label: 'Play Game ' + state.number, notices: state.notices };
+      if (state.kind === 'awaiting') return { kind: 'awaiting', number: state.number, id: state.id, label: 'Game ' + state.number + ' was played here and is awaiting booking', notices: state.notices };
+      return { kind: 'none', notices: state.notices };
+    };
+    return fetch('data/' + seriesFileNameFor(seriesId))
+      .then((r) => { if (!r.ok) throw new Error('series file unavailable'); return r.json(); })
+      .then((file) => toOffer(file && file.series_id === seriesId ? file : null))
+      .catch(() => toOffer(null));
+  };
+  PUI.applySeriesFile = applySeriesFile;
+  PUI.seriesFileNameFor = seriesFileNameFor;
+
+  function renderPlaySeries(view, seriesId) {
+    UI.view = view;
+    const ctx = UI.seriesCtx;
+    if (ctx && ctx.seriesId === seriesId && ctx.file !== undefined) { renderSeriesEntry(view, ctx); return; }
+    view.replaceChildren(el('p', { text: 'Loading the series…' }));
+    fetch('data/' + seriesFileNameFor(seriesId))
+      .then((r) => { if (!r.ok) throw new Error('series file unavailable'); return r.json(); })
+      .then((file) => {
+        UI.seriesCtx = { seriesId: seriesId, file: file && file.series_id === seriesId ? file : null, load: null };
+        renderSeriesEntry(view, UI.seriesCtx);
+      })
+      .catch(() => {
+        UI.seriesCtx = { seriesId: seriesId, file: null, load: null };
+        renderSeriesEntry(view, UI.seriesCtx);
+      });
+  }
+  function renderSeriesEntry(view, ctx) {
+    const state = applySeriesFile(ctx.file, store);
+    ctx.state = state;
+    if (state.kind === 'play') { renderSeriesSetup(view, ctx); return; }
+    if (state.kind === 'awaiting') { renderSeriesAwaiting(view, ctx); return; }
+    // No offer: the exhibition screen, with the reason named.
+    UI.seriesNotice = state.blocked_reason === 'no-series-file'
+      ? 'No series file for ' + ctx.seriesId + ' is on the site yet, so the play screen opens as an exhibition.'
+      : 'Series ' + ctx.seriesId + ' offers no game right now (' + (state.blocked_reason || 'no offer') + '), so the play screen opens as an exhibition.';
+    renderSetup(view);
+  }
+  function renderSeriesAwaiting(view, ctx) {
+    UI.view = view;
+    clearHighlight();
+    view.replaceChildren();
+    const state = ctx.state;
+    const page = el('article', { class: 'panel play-page' });
+    (state.notices || []).forEach((n) => page.appendChild(el('p', { class: 'note', text: n })));
+    page.appendChild(el('h2', { text: ctx.seriesId + ' — Game ' + state.number + ' awaiting booking' }));
+    page.appendChild(el('p', { text: 'Game ' + state.number + ' was played on this device and its file was downloaded, but the book does not have it yet. Until it is booked, the series stays on this game.' }));
+    page.appendChild(el('p', { class: 'note', text: 'Booking runs through the supervised import: hand the downloaded file to Cooper in chat and it is imported and checked there. Nothing books itself.' }));
+    const peek = peekSaveById(store, state.id);
+    if (peek && peek.finished) {
+      page.appendChild(button('Reopen the finished game (view or re-download)', () => {
+        const GS = loadSaveById(store, state.id);
+        if (GS) { UI.GS = GS; UI.rarePending = false; renderGame(view); }
+      }));
+    }
+    page.appendChild(button('Dismiss — do not book this game', () => {
+      dismissDispatch(store, state.id);
+      ctx.load = null;
+      renderSeriesEntry(view, ctx);
+    }));
+    page.appendChild(el('p', { class: 'note', text: 'Dismissing clears the dispatched marker and the saved finished game on this device; the series then offers Game ' + state.number + ' again as a fresh start.' }));
+    const back = el('a', { href: '#/series/' + ctx.seriesId, class: 'play-btn', text: 'Back to the series' });
+    page.appendChild(back);
+    view.appendChild(page);
+  }
+  function freshSeriesLoad(file) {
+    const ng = file.next_game;
+    return {
+      file: file,
+      starters: Object.assign({}, ng.proposed_starters),
+      lineups: deepCopy(ng.lineups),
+      benches: deepCopy(ng.benches),
+      managers: { CHC: 'human', MON: 'human' },
+      sourceKind: 'deck',
+      seed: Math.floor(100000 + Math.random() * 900000),
+      pickNotes: {},
+    };
+  }
+  /* The runtime hold's gap list: anything else the game needs
+   * that is missing or malformed in the playable fixture (card
+   * bodies, the FAC deck, pen roles, the park record). A non-empty
+   * list holds the load with the gaps named, never a partial
+   * start. */
+  function seriesRuntimeGaps(file) {
+    const gaps = [];
+    const d = PlayData.data;
+    if (!d) return ['the playable fixture itself'];
+    const ng = file.next_game;
+    for (const club of [file.team_a, file.team_b]) {
+      for (const s of (ng.lineups[club] || [])) {
+        if (!d.hitters[club] || !d.hitters[club][s.name]) gaps.push(clubName(club) + ' hitter card for ' + s.name);
+      }
+      for (const n of (ng.pens[club] || [])) {
+        if (!d.pitchers[club] || !d.pitchers[club][n]) gaps.push(clubName(club) + ' pitcher card for ' + n);
+      }
+      const starter = ng.proposed_starters[club];
+      if (starter && (!d.pitchers[club] || !d.pitchers[club][starter])) gaps.push(clubName(club) + ' pitcher card for ' + starter);
+      if (!d.fixture.pen_roles || !d.fixture.pen_roles[club]) gaps.push(clubName(club) + ' pen roles');
+    }
+    if (!d.deck || d.deck.length !== 256) gaps.push('the 256-card FAC deck');
+    if (!d.parks || !d.parks[ng.park]) gaps.push('the park record for ' + ng.park);
+    return gaps;
+  }
+  function renderSeriesSetup(view, ctx) {
+    UI.view = view;
+    clearHighlight();
+    view.replaceChildren();
+    const file = ctx.file, ng = file.next_game, f = fx();
+    const page = el('article', { class: 'panel play-page' });
+    (ctx.state.notices || []).forEach((n) => page.appendChild(el('p', { class: 'note', text: n })));
+    page.appendChild(el('h2', { text: file.series_id + ' — Game ' + ng.number }));
+    page.appendChild(el('p', { class: 'note', text: seriesScoreLine(file) + ' ' + clubName(ng.away) + ' at ' + clubName(ng.home) + ', ' + ng.park + '.' }));
+    // A saved slot for this game: resume or discard it first.
+    const peek = peekSaveById(store, ng.id);
+    if (peek) {
+      const banner = el('section', { class: 'play-banner' });
+      banner.appendChild(el('h3', { text: peek.finished ? 'This game is finished on this device' : 'This game is in progress on this device' }));
+      banner.appendChild(el('p', { text: peek.finished
+        ? 'The finished game is saved here. Open it to view the final and export it, or discard it to start the game over.'
+        : 'After PA ' + peek.paCount + ': ' + (peek.half === 'top' ? 'Top' : 'Bottom') + ' ' + peek.inning + ', Chicago ' + peek.score.CHC + ', Montreal ' + peek.score.OPP + '.' }));
+      banner.appendChild(button(peek.finished ? 'Open the finished game' : 'Resume the game', () => {
+        const GS = loadSaveById(store, ng.id);
+        if (GS) { UI.GS = GS; UI.rarePending = false; renderGame(view); }
+      }));
+      banner.appendChild(button('Discard it and set up fresh', () => { discardSaveById(store, ng.id); ctx.load = null; renderSeriesSetup(view, ctx); }, { cls: 'danger' }));
+      page.appendChild(banner);
+    }
+    // Holds: no rested starter, or missing fixture content.
+    if (ng.starter_blocked && ng.starter_blocked.length) {
+      const names = ng.starter_blocked.map((c) => clubName(c)).join(' and ');
+      page.appendChild(el('p', { class: 'play-problem', text: 'On hold: ' + names + ' has no rested starter for Game ' + ng.number + ' — every arm is unavailable or capped, and a capped arm cannot start. The game cannot be set up until the book changes.' }));
+      view.appendChild(page);
+      return;
+    }
+    const gaps = seriesRuntimeGaps(file);
+    if (gaps.length) {
+      page.appendChild(el('p', { class: 'play-problem', text: 'On hold: the playable data is missing ' + gaps.join('; ') + '. The game cannot start until the data is whole.' }));
+      view.appendChild(page);
+      return;
+    }
+    page.appendChild(parkCardBlock(PlayData.data.parks[ng.park]));
+    const load = ctx.load || (ctx.load = freshSeriesLoad(file));
+    // Rest and availability, from the previous game.
+    page.appendChild(el('h3', { text: 'Rest from Game ' + (ng.number - 1) }));
+    [ng.away, ng.home].forEach(function (club) {
+      page.appendChild(el('p', { class: 'play-lu-name', text: clubName(club) }));
+      const rows = ng.availability[club] || [];
+      if (!rows.length) page.appendChild(el('p', { class: 'note', text: 'No appearances last game; the whole staff is rested.' }));
+      rows.forEach(function (r) {
+        const cap = r.status === 'capped' ? ', capped at ' + r.cap_outs + ' outs' : '';
+        page.appendChild(el('p', { class: 'note', text: r.name + ' — ' + r.prev_outs + ' outs last game — ' + r.status + cap }));
+      });
+    });
+    // Starters: the proposal stands unless a FREE arm from the
+    // club's full carded pool is picked instead.
+    page.appendChild(el('h3', { text: 'Starting pitchers' }));
+    [ng.away, ng.home].forEach(function (club) {
+      const lab = el('label', { class: 'play-field', text: clubName(club) + ' ' });
+      const sel = el('select');
+      seriesStarterPool(file, club).forEach(function (name) {
+        const st = seriesStarterStatus(file, club, name);
+        const o = el('option', { value: name, text: name + (st === 'free' ? '' : ' — ' + st) });
+        if (st !== 'free') o.disabled = true;
+        if (load.starters[club] === name) o.selected = true;
+        sel.appendChild(o);
+      });
+      sel.addEventListener('change', () => {
+        const res = applySeriesStarterPick(load, club, sel.value);
+        load.pickNotes[club] = res.ok ? null : res.reason;
+        if (!res.ok) sel.value = load.starters[club];
+        renderSeriesSetup(view, ctx);
+      });
+      lab.appendChild(sel);
+      page.appendChild(lab);
+      if (load.pickNotes[club]) page.appendChild(el('p', { class: 'play-problem', text: load.pickNotes[club] }));
+    });
+    // Lineups (the file's, editable like the exhibition screen).
+    const problems = { CHC: [], MON: [] };
+    [ng.away, ng.home].forEach(function (club) {
+      page.appendChild(el('h3', { text: clubName(club) + ' lineup' }));
+      const list = el('div', { class: 'play-lineup' });
+      load.lineups[club].forEach(function (slotEntry, i) {
+        const row = el('div', { class: 'play-lu-row' });
+        row.appendChild(el('span', { class: 'play-lu-n', text: String(i + 1) }));
+        row.appendChild(el('span', { class: 'play-lu-name', text: slotEntry.name }));
+        row.appendChild(el('span', { class: 'play-lu-pos', text: slotEntry.pos }));
+        row.appendChild(button('↑', () => { if (i > 0) { const t = load.lineups[club][i - 1]; load.lineups[club][i - 1] = load.lineups[club][i]; load.lineups[club][i] = t; renderSeriesSetup(view, ctx); } }, { disabled: i === 0 }));
+        row.appendChild(button('↓', () => { if (i < 8) { const t = load.lineups[club][i + 1]; load.lineups[club][i + 1] = load.lineups[club][i]; load.lineups[club][i] = t; renderSeriesSetup(view, ctx); } }, { disabled: i === 8 }));
+        row.appendChild(button('Swap', () => openSeriesSetupSwap(view, ctx, club, i)));
+        list.appendChild(row);
+      });
+      page.appendChild(list);
+      page.appendChild(el('p', { class: 'note', text: 'Bench: ' + load.benches[club].join(', ') }));
+      problems[club] = lineupLegality(load.lineups[club], club);
+      problems[club].forEach(function (p) { page.appendChild(el('p', { class: 'play-problem', text: clubShort(club) + ': ' + p })); });
+      page.appendChild(button('Restore the series lineup', () => {
+        load.lineups[club] = deepCopy(ng.lineups[club]); load.benches[club] = ng.benches[club].slice(); renderSeriesSetup(view, ctx);
+      }));
+    });
+    // Managers
+    page.appendChild(el('h3', { text: 'Managers' }));
+    [ng.away, ng.home].forEach(function (club) {
+      const profile = f.clubs[club].manager;
+      const row = el('div', { class: 'play-toggle-row' });
+      row.appendChild(el('span', { class: 'play-lu-name', text: clubName(club) + ': ' }));
+      row.appendChild(button('You manage', () => { load.managers[club] = 'human'; renderSeriesSetup(view, ctx); }, { cls: load.managers[club] === 'human' ? 'on' : '' }));
+      row.appendChild(button(profile + ' (profile)', () => { load.managers[club] = 'profile'; renderSeriesSetup(view, ctx); }, { cls: load.managers[club] === 'profile' ? 'on' : '' }));
+      page.appendChild(row);
+    });
+    // Dice source
+    page.appendChild(el('h3', { text: 'Dice and cards' }));
+    const srcRow = el('div', { class: 'play-toggle-row' });
+    [['deck', 'FAC deck'], ['dice', 'Dice roller'], ['manual', 'Manual entry']].forEach(function (pair) {
+      srcRow.appendChild(button(pair[1], () => { load.sourceKind = pair[0]; renderSeriesSetup(view, ctx); }, { cls: load.sourceKind === pair[0] ? 'on' : '' }));
+    });
+    page.appendChild(srcRow);
+    // Seed + start
+    const seedLab = el('label', { class: 'play-field', text: 'Seed ' });
+    const seedIn = el('input', { type: 'number', value: String(load.seed) });
+    seedIn.addEventListener('change', () => { const v = parseInt(seedIn.value, 10); if (Number.isFinite(v)) load.seed = v; });
+    seedLab.appendChild(seedIn);
+    page.appendChild(seedLab);
+    const legal = problems.CHC.length === 0 && problems.MON.length === 0;
+    page.appendChild(button('Start Game ' + ng.number, () => {
+      const GS = createSeriesGame(file, store, {
+        starters: Object.assign({}, load.starters),
+        lineups: load.lineups, benches: load.benches,
+        managers: Object.assign({}, load.managers),
+        sourceKind: load.sourceKind, seed: load.seed,
+      });
+      if (!GS) return;
+      UI.GS = GS; UI.rarePending = false;
+      GS.save();
+      renderGame(view);
+    }, { disabled: !legal, cls: 'primary' }));
+    view.appendChild(page);
+  }
+  function openSeriesSetupSwap(view, ctx, club, idx) {
+    const load = ctx.load;
+    const out = load.lineups[club][idx];
+    openModal(view, 'Swap for ' + out.name + ' (' + out.pos + ')', (body, close) => {
+      load.benches[club].forEach(function (cand) {
+        const err = swapLegality(load.lineups[club], club, out.name, cand);
+        const row = el('div', { class: 'play-modal-row' });
+        row.appendChild(el('span', { class: 'play-lu-name', text: cand }));
+        if (err) row.appendChild(el('span', { class: 'play-problem', text: err }));
+        else row.appendChild(button('Bring in', () => {
+          load.lineups[club][idx] = { name: cand, pos: out.pos };
+          load.benches[club] = load.benches[club].filter((n) => n !== cand).concat([out.name]);
+          close(); renderSeriesSetup(view, ctx);
+        }));
+        body.appendChild(row);
+      });
+    });
+  }
+
   // -- S2 game screen -----------------------------------------
   const runnerName = (entry) => entry == null ? null : (entry.name || entry[0]);
   function ffFat(S, name) {
@@ -4218,6 +4939,19 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     bug.appendChild(el('span', { class: 'play-bug-score', text: clubShort('CHC') + ' ' + S.score.CHC + ' — ' + S.score.OPP + ' ' + clubShort('MON') }));
     const bugSave = el('span', { class: 'play-bug-save', text: GS.sealed ? 'Sealed' : (GS.storageOk ? 'Saved — after PA ' + GS.paCount : 'Unsaved — storage unavailable') });
     page.appendChild(bug);
+    if (GS.series) {
+      const ser = GS.series, w = ser.wins || {};
+      const strip = el('div', { class: 'play-series-strip' });
+      strip.appendChild(el('span', { text: ser.series_id + ' Game ' + ser.number + ' · ' + clubName(ser.away) + ' at ' + clubName(ser.home) + ' · ' + ser.park }));
+      strip.appendChild(el('span', { text: ' · Series: ' + clubShort('CHC') + ' ' + (w.CHC || 0) + ' — ' + (w.MON || 0) + ' ' + clubShort('MON') }));
+      const caps = [];
+      for (const slot of ['CHC', 'OPP']) {
+        const c = (S.series_caps || {})[slot] || {};
+        for (const n of Object.keys(c)) caps.push(n + ' capped at ' + c[n] + ' outs');
+      }
+      if (caps.length) strip.appendChild(el('span', { text: ' · ' + caps.join(' · ') }));
+      page.appendChild(strip);
+    }
     page.appendChild(linescoreTable(S));
     // Diamond
     const dia = el('div', { class: 'play-diamond' });
@@ -4388,7 +5122,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const GS = UI.GS, S = GS.S;
     const box = el('section', { class: 'play-controls' });
     box.appendChild(el('h3', { text: 'Dice and cards' }));
-    const busy = !!(GS.pendingDecision || UI.rarePending || GS.sealed || GS.finished);
+    const busy = !!(GS.pendingDecision || UI.rarePending || GS.sealed || GS.finished || (GS._capGate && GS._capGate()));
     const row = el('div', { class: 'ctl-row' });
     const diceBtn = el('button', { type: 'button', class: 'play-btn ctl ctl-dice' });
     diceBtn.appendChild(el('span', { class: 'die', text: UI._diceShow && UI._diceShow.dice ? String(UI._diceShow.dice[0]) : '–' }));
@@ -4733,6 +5467,15 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       bar.appendChild(el('p', { class: 'note', text: 'Waiting on an input from the controls: roll the dice, flip the FAC deck, or enter the result by hand.' }));
       return bar;
     }
+    // Series rest cap: a human club's capped arm at his cap ends
+    // the choice. Only the forced change is offered; the input
+    // controls are disabled until it is made.
+    const force = GS._capGate ? GS._capGate() : null;
+    if (force) {
+      bar.appendChild(el('p', { class: 'play-decision-q', text: force.name + ' has reached his rest cap: ' + force.outs + ' outs against a cap of ' + force.cap + '. The change is forced — he cannot face another batter.' }));
+      bar.appendChild(button('Make the forced pitching change', () => openPitchModal(view, force.slot), { cls: 'primary' }));
+      return bar;
+    }
     // Managerial actions for human clubs, between PAs. (The
     // plate appearance itself is driven from the input controls
     // under the pitching card; Undo lives there too.)
@@ -4916,23 +5659,67 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     page.appendChild(el('p', { class: 'note', text: 'Record: seed ' + GS.seed + ' · dice mode ' + GS.sourceKind + ' · FAC draws ' + S.deck.draws
       + ' · reshuffles ' + S.deck.reshuffles + ' · undos ' + GS.undoCount + ' · venue ' + f.clubs[UI.GS.cfg.homeSlot === 'CHC' ? 'CHC' : 'MON'].park
       + ' · managers: Chicago ' + (GS.cfg.managers.CHC === 'human' ? 'you' : f.clubs.CHC.manager) + ', Montreal ' + (GS.cfg.managers.OPP === 'human' ? 'you' : f.clubs.MON.manager) + '.' }));
-    page.appendChild(el('p', { class: 'play-notice', text: 'Exhibition. This game is not in the tournament record. Adoption is Joe\'s ruling, outside the app.' }));
-    if (GS.sealed) {
-      page.appendChild(el('p', { class: 'note', text: 'Exported and sealed. The autosave is cleared; undo is closed.' }));
+    if (GS.series) {
+      renderOverSeries(page, view);
     } else {
-      const ex = GS.exports();
-      page.appendChild(button('Download the box score (.md)', () => { download(GS.exportId + '.md', ex.markdown, 'text/markdown'); GS.seal(); renderOver(view); }));
-      page.appendChild(button('Download the detail file (.json)', () => { download(GS.exportId + '.json', JSON.stringify(ex.json, null, 1), 'application/json'); GS.seal(); renderOver(view); }));
-      page.appendChild(button('Copy the box score', () => {
-        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ex.markdown);
-        GS.seal(); renderOver(view);
-      }));
-      if (GS.undoStack.length) page.appendChild(button('Step back in (undo the last PA)', () => { if (GS.undo()) { UI.rarePending = false; clearHighlight(); renderGame(view); } }));
+      page.appendChild(el('p', { class: 'play-notice', text: 'Exhibition. This game is not in the tournament record. Adoption is Joe\'s ruling, outside the app.' }));
+      if (GS.sealed) {
+        page.appendChild(el('p', { class: 'note', text: 'Exported and sealed. The autosave is cleared; undo is closed.' }));
+      } else {
+        const ex = GS.exports();
+        page.appendChild(button('Download the box score (.md)', () => { download(GS.exportId + '.md', ex.markdown, 'text/markdown'); GS.seal(); renderOver(view); }));
+        page.appendChild(button('Download the detail file (.json)', () => { download(GS.exportId + '.json', JSON.stringify(ex.json, null, 1), 'application/json'); GS.seal(); renderOver(view); }));
+        page.appendChild(button('Copy the box score', () => {
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ex.markdown);
+          GS.seal(); renderOver(view);
+        }));
+        if (GS.undoStack.length) page.appendChild(button('Step back in (undo the last PA)', () => { if (GS.undo()) { UI.rarePending = false; clearHighlight(); renderGame(view); } }));
+      }
+      page.appendChild(button('Play again', () => { UI.GS = null; UI.setup = null; renderSetup(view); }));
     }
-    page.appendChild(button('Play again', () => { UI.GS = null; UI.setup = null; renderSetup(view); }));
     const back = el('a', { href: '#/bracket', class: 'play-btn', text: 'Back to bracket' });
     page.appendChild(back);
     view.appendChild(page);
+  }
+
+  /* The game-over screen for a series game (SERIES_PLAY_SPEC
+   * section 3.4): the book-this-game dispatch. Booking runs
+   * through the supervised import only: the downloaded file is
+   * handed to Cooper in chat, who imports and checks it. The
+   * dispatched game stays saved on this device for re-download
+   * until the book takes it. */
+  function renderOverSeries(page, view) {
+    const GS = UI.GS, ser = GS.series;
+    page.appendChild(el('p', { class: 'play-notice', text: ser.series_id + ' Game ' + ser.number + ' — ' + clubName(ser.away) + ' at ' + clubName(ser.home) + ', ' + ser.park + '. This game counts: it books into the tournament record through the supervised import.' }));
+    if (GS.sealed) {
+      let when = '';
+      try {
+        const flag = JSON.parse(store.getItem(DISPATCH_PREFIX + ser.id) || 'null');
+        if (flag && flag.dispatched_on) when = ' on ' + flag.dispatched_on;
+      } catch (e) { /* the note stands without the date */ }
+      page.appendChild(el('p', { class: 'note', text: 'Dispatched from this device' + when + '. The finished game stays saved here for re-download until the book takes it; once it is booked, the bracket moves on by itself.' }));
+      page.appendChild(button('Download the game file again (.md)', () => {
+        const out = dispatchSeriesGame(GS);
+        download(out.fileName, out.content, 'text/markdown');
+      }));
+    } else if (UI.bookConfirm) {
+      page.appendChild(el('p', { class: 'play-decision-q', text: 'Book Game ' + ser.number + '? This downloads the game file (' + ser.id + '.md) and marks the game dispatched on this device. Hand the file to Cooper in chat to import it into the book. The game stays saved here until the book takes it.' }));
+      page.appendChild(button('Yes — download the game file', () => {
+        const out = sealSeriesGame(GS, store);
+        download(out.fileName, out.content, 'text/markdown');
+        UI.bookConfirm = false;
+        renderOver(view);
+      }, { cls: 'primary' }));
+      page.appendChild(button('Not yet', () => { UI.bookConfirm = false; renderOver(view); }));
+      if (GS.undoStack.length) page.appendChild(button('Step back in (undo the last PA)', () => { UI.bookConfirm = false; if (GS.undo()) { UI.rarePending = false; clearHighlight(); renderGame(view); } }));
+    } else {
+      page.appendChild(button('Book this game', () => { UI.bookConfirm = true; renderOver(view); }, { cls: 'primary' }));
+      if (GS.undoStack.length) page.appendChild(button('Step back in (undo the last PA)', () => { if (GS.undo()) { UI.rarePending = false; clearHighlight(); renderGame(view); } }));
+    }
+    page.appendChild(button('Back to the series', () => {
+      UI.GS = null; UI.bookConfirm = false;
+      if (UI.seriesCtx) renderSeriesEntry(view, UI.seriesCtx); else renderSetup(view);
+    }));
   }
 
   // -- Entry ---------------------------------------------------
@@ -4951,8 +5738,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       });
       return;
     }
-    if (UI.GS) renderGame(view);
-    else renderSetup(view);
+    if (UI.GS) { renderGame(view); return; }
+    const sig = seriesSignalFromHash();
+    if (sig) { renderPlaySeries(view, sig); return; }
+    renderSetup(view);
   };
   // Leaving the play route retires any held card highlight, so it
   // cannot resurrect over the page navigated to.
@@ -4970,6 +5759,10 @@ if (typeof module !== 'undefined' && module.exports) {
     gameStep, runGame, resolvePA, resolvePaInner, autoResolveRare, prePa, updateFatigue,
     ffPrecheck, ffEvaluate, ffState, sectionLookupRaw, fieldingLine,
     createGame, loadSave, peekSave, discardSave, lineupLegality, swapLegality, makeSuffix, SAVE_PREFIX,
+    loadSaveById, peekSaveById, discardSaveById, capForce, todayStamp,
+    DISPATCH_PREFIX, seriesFileNameFor, applySeriesFile, createSeriesGame,
+    seriesStarterPool, seriesStarterStatus, applySeriesStarterPick,
+    dispatchSeriesGame, sealSeriesGame, dismissDispatch,
     CHARTS: { STEAL_COL, STEAL_HOME, BUNT, DEF_POS, HIT_G, DEF_HIT, DEF_ERR, DEF_OUT, catcherArm },
     maybeHook, enforceCloser, closeCheck, changePitcher, changePitcherRaw,
     pickReliever, removePitcher, substitute, pinchHit, pinchRun,

@@ -707,6 +707,7 @@ def regenerate() -> None:
         "build_series_previews.py",
         "build_bracket_image.py",
         "build_cards.py",
+        "build_series_data.py",
     )
     for name in scripts:
         completed = subprocess.run([sys.executable, str(ROOT / "scripts" / name)], cwd=ROOT)

@@ -1553,3 +1553,9 @@ table.play-linescore td.num, table.play-linescore th { text-align: center; }
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background: #fff;
 }
+
+/* Series Play (Play Next Game): the offer slot under a series
+   card and on the series page, and the in-game series strip. */
+.series-play-offer { margin-top: 0.4rem; }
+.series-play-offer:empty { margin-top: 0; }
+.play-series-strip { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; padding: 0.3rem 0.6rem; margin: 0.4rem 0; border: 1px solid var(--line, #ccc); border-radius: 6px; font-size: 0.85rem; }
