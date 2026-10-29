@@ -3860,7 +3860,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   };
 
   const UI = { GS: null, setup: null, cardTab: 'batter', rarePending: false,
-    stepError: null, modal: null, confirmDiscard: false, lastPitcher: null, view: null };
+    stepError: null, modal: null, confirmDiscard: false, lastPitcher: null, view: null,
+    _flash: null, _flashSeenPa: 0, _shownCards: null, _parkedDecision: false };
   PUI.UI = UI;
   const fx = () => PlayData.data.fixture;
   const slotOfClub = (club) => club === 'CHC' ? 'CHC' : 'OPP';
@@ -4126,7 +4127,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   }
   function renderGame(view) {
     UI.view = view;
+    if (UI._flash) cancelFlash();
     const GS = UI.GS, S = GS.S, G = GS.G;
+    UI._parkedDecision = !!GS.pendingDecision;
+    if (UI._flashSeenPa > GS.paCount) UI._flashSeenPa = GS.paCount;
     if (GS.finished) { renderOver(view); return; }
     view.replaceChildren();
     const page = el('article', { class: 'panel play-page' });
@@ -4155,10 +4159,13 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     tabRow.appendChild(button('Pitcher', () => { UI.cardTab = 'pitcher'; renderGame(view); }, { cls: UI.cardTab === 'pitcher' ? 'on' : '' }));
     page.appendChild(tabRow);
     const cards = el('div', { class: 'play-cards show-' + UI.cardTab });
-    const bCard = hitterCardBlock(hcard(G, currentBatter(S)[0], bat));
+    const batCardData = hcard(G, currentBatter(S)[0], bat);
+    const bCard = hitterCardBlock(batCardData);
     bCard.classList.add('play-card-batter');
-    const pCard = pitcherCardBlock(pitcherCard(G, S, fld, pitcherNow));
+    const pitCardData = pitcherCard(G, S, fld, pitcherNow);
+    const pCard = pitcherCardBlock(pitCardData);
     pCard.classList.add('play-card-pitcher');
+    UI._shownCards = { bat: batCardData, pit: pitCardData };
     cards.appendChild(bCard);
     cards.appendChild(pCard);
     page.appendChild(cards);
@@ -4246,9 +4253,209 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     return box;
   }
   function afterPump(st) {
+    const wasParked = UI.rarePending || UI._parkedDecision;
     UI.rarePending = !!(st && st.status === 'RARE');
     if (st && st.status === 'STEP') UI.stepError = st.error || null; else UI.stepError = null;
+    const wasFlashing = !!UI._flash;
+    if (wasFlashing) cancelFlash();
+    const completed = !!(st && UI.GS && (st.status === 'PA_DONE' || st.status === 'FINAL') &&
+      UI.GS.paCount > UI._flashSeenPa);
+    if (completed) {
+      UI._flashSeenPa = UI.GS.paCount;
+      // The flash decorates the cards still on screen, which are the
+      // resolved PA's pair until the next render. It is skipped when
+      // a flash is already running (the screen is a PA behind) and
+      // when this pump resumed a parked rare play or decision (the
+      // parked control is still on screen and must retire at once).
+      if (!wasFlashing && !wasParked) {
+        const data = flashDataForLastPa();
+        if (data && startFlash(data)) return;
+      }
+    }
     renderGame(UI.view);
+  }
+
+  /* ---- Per-at-bat card highlight (display only) ----
+   * When a plate appearance completes, flash first the pitcher's
+   * 2d6 cell that was rolled, then the batter's section and the
+   * exact band row the percentile landed in (or the OUT row the
+   * read fell to). Everything is read back from the resolution
+   * lines the engine already wrote into the PA's feed block and
+   * checked against the cards still on screen; any mismatch and
+   * the flash is downgraded or skipped, never wrong. No engine
+   * state, resolution order, or recorded data is touched. */
+
+  function findByClass(root, cls) {
+    let hit = null;
+    (function walk(n) {
+      if (hit || !n) return;
+      if (n.classList && n.classList.contains(cls)) { hit = n; return; }
+      const kids = n.children || [];
+      for (let i = 0; i < kids.length && !hit; i++) walk(kids[i]);
+    })(root);
+    return hit;
+  }
+
+  function cancelFlash() {
+    if (!UI._flash) return;
+    UI._flash.timers.forEach(clearTimeout);
+    UI._flash = null;
+  }
+
+  // Pure mirror of the engine's outLookup pick (which also writes
+  // a ledger line, so it cannot be called from the display layer).
+  function outPick(card, pct) {
+    const rows = (card && card.out_table) || [];
+    for (const row of rows) if (row.range[0] <= pct && pct <= row.range[1]) return row;
+    const above = rows.filter((r) => r.range[0] > pct);
+    if (above.length) return above.reduce((a, b) => (a.range[0] <= b.range[0] ? a : b));
+    return rows[rows.length - 1] || null;
+  }
+
+  function flashDataForLastPa() {
+    const GS = UI.GS, shown = UI._shownCards;
+    if (!GS || !shown || !shown.bat || !shown.pit) return null;
+    let block = null;
+    for (let i = GS.feed.length - 1; i >= 0; i--) {
+      if (GS.feed[i].live && !GS.feed[i].action) { block = GS.feed[i]; break; }
+    }
+    if (!block) return null;
+    const lines = block.lines || [];
+    let di = -1, total = 0, dpct = 0, presult = '';
+    for (let i = lines.length - 1; i >= 0; i--) {
+      const m = /^ {2}dice 2d6=(\d+) \(\d+\+\d+\) %=(\d+) -> (.+?)\s*$/.exec(lines[i]);
+      if (m) { di = i; total = +m[1]; dpct = +m[2]; presult = m[3]; break; }
+    }
+    if (di < 0) return null;
+    let read = null, effPct = null;
+    for (let i = di + 1; i < lines.length; i++) {
+      const L = lines[i];
+      let m = /strikeout read at (\d+)\s*$/.exec(L);
+      if (m) { effPct = +m[1]; continue; }
+      m = /^ {2}(WHEELHOUSE|PATIENT|TOUGH|IN-PLAY) %=(\d+) -> ([A-Z0-9]+)\s*$/.exec(L);
+      if (m) { read = { section: m[1], pct: +m[2], result: m[3], out: false }; continue; }
+      m = /^ {2}(WHEELHOUSE|PATIENT|TOUGH|IN-PLAY) %=(\d+) above the ranges -> OUT ([A-Z0-9]+)\s*$/.exec(L);
+      if (m) { read = { section: m[1], pct: +m[2], out: true, code: m[3] }; continue; }
+      m = /^ {2}(PATIENT-OUT|TOUGH-OUT): .*OUT section -> ([A-Z0-9]+)\s*$/.exec(L);
+      if (m) read = { section: m[1] === 'PATIENT-OUT' ? 'PATIENT' : 'TOUGH', pct: effPct != null ? effPct : dpct, out: true, code: m[2] };
+    }
+    // The pitcher cell must agree with the card still on screen.
+    const table = shown.pit.card_table_2d6;
+    if (!table || table[String(total)] !== presult) return null;
+    // Verify the batter read against the shown card; a read that
+    // does not check out (an edited or shifted percentile) drops
+    // to a pitcher-only flash rather than lighting the wrong row.
+    if (read && !read.out) {
+      const hand = shown.pit.throws === 'L' ? 'vsLHP' : 'vsRHP';
+      const sec = shown.bat.sections && shown.bat.sections[read.section];
+      const bands = sec && sec[hand];
+      let hit = null;
+      if (bands) Object.keys(bands).forEach((k) => {
+        const b = bands[k];
+        if (b && b[0] <= read.pct && read.pct <= b[1]) hit = k;
+      });
+      if (hit !== read.result) read = null;
+    } else if (read && read.out) {
+      const pick = outPick(shown.bat, read.pct);
+      if (!pick || pick.result !== read.code) read = null;
+      else read.pick = pick;
+    }
+    return { total, presult, read };
+  }
+
+  function startFlash(data) {
+    const view = UI.view;
+    const pCard = findByClass(view, 'play-card-pitcher');
+    const grid = pCard && findByClass(pCard, 'dice-grid');
+    if (!grid) return false;
+    let cell = null;
+    for (let i = 0; i < grid.children.length; i++) {
+      const k = findByClass(grid.children[i], 'card-k');
+      if (k && k.textContent.trim() === String(data.total)) { cell = grid.children[i]; break; }
+    }
+    if (!cell) return false;
+    UI._flash = { timers: [] };
+    cell.classList.add('hl-flash');
+    setCardsTab('pitcher');
+    UI._flash.timers.push(setTimeout(() => {
+      if (!UI._flash) return;
+      cell.classList.remove('hl-flash');
+      let wait = 250;
+      if (data.read && decorateBatter(data.read)) { setCardsTab('batter'); wait = 900; }
+      UI._flash.timers.push(setTimeout(() => {
+        if (!UI._flash) return;
+        UI._flash = null;
+        renderGame(UI.view);
+      }, wait));
+    }, 600));
+    return true;
+  }
+
+  function setCardsTab(which) {
+    const cards = findByClass(UI.view, 'play-cards');
+    if (cards) cards.className = 'play-cards show-' + which;
+    const tabs = findByClass(UI.view, 'play-card-tabs');
+    if (tabs) for (let i = 0; i < tabs.children.length; i++) {
+      const b = tabs.children[i];
+      const on = (which === 'batter' && b.textContent.trim() === 'Batter') ||
+        (which === 'pitcher' && b.textContent.trim() === 'Pitcher');
+      if (on) b.classList.add('on'); else b.classList.remove('on');
+    }
+  }
+
+  function decorateBatter(read) {
+    const bCard = findByClass(UI.view, 'play-card-batter');
+    if (!bCard) return false;
+    const kids = bCard.children || [];
+    if (!read.out) {
+      for (let i = 0; i < kids.length; i++) {
+        const n = kids[i];
+        if (n.classList && n.classList.contains('meta') && n.textContent.indexOf(read.section + ' ') === 0) {
+          const table = kids[i + 1];
+          if (!table) return false;
+          const rows = [];
+          (function walk(x) {
+            if (x.tagName === 'TR') rows.push(x);
+            (x.children || []).forEach(walk);
+          })(table);
+          for (const tr of rows) {
+            const td = (tr.children || [])[0];
+            if (td && td.textContent.trim() === read.result) {
+              n.classList.add('hl-meta');
+              tr.classList.add('hl-flash');
+              return true;
+            }
+          }
+          return false;
+        }
+      }
+      return false;
+    }
+    // OUT read: repaint the out-table note with the landed row lit.
+    if (!read.pick) return false;
+    for (let i = 0; i < kids.length; i++) {
+      const n = kids[i];
+      if (n.classList && n.classList.contains('note') && n.textContent.indexOf('Out table: ') === 0) {
+        const segs = n.textContent.slice('Out table: '.length).split(' · ');
+        const target = read.pick.range[0] + '-' + read.pick.range[1] + ' ' + read.pick.result;
+        if (segs.indexOf(target) < 0) return false;
+        n.textContent = '';
+        n.appendChild(document.createTextNode('Out table: '));
+        segs.forEach((s, j) => {
+          if (j) n.appendChild(document.createTextNode(' · '));
+          const sp = el('span', { text: s });
+          if (s === target) sp.classList.add('hl-out');
+          n.appendChild(sp);
+        });
+        for (let j = 0; j < kids.length; j++) {
+          const mm = kids[j];
+          if (mm.classList && mm.classList.contains('meta') && read.section &&
+            mm.textContent.indexOf(read.section + ' ') === 0) mm.classList.add('hl-meta');
+        }
+        return true;
+      }
+    }
+    return false;
   }
   function decisionPanel(view) {
     const GS = UI.GS;
@@ -4522,6 +4729,11 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (UI.GS) renderGame(view);
     else renderSetup(view);
   };
+  // Leaving the play route retires any pending card flash, so its
+  // timers can never repaint over the page navigated to.
+  if (typeof window.addEventListener === 'function') {
+    window.addEventListener('hashchange', () => { if (UI._flash) cancelFlash(); });
+  }
 }
 
 /* Node export guard: the headless verification gate (replay

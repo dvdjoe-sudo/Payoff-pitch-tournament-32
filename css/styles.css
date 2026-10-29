@@ -1239,3 +1239,26 @@ table.play-linescore td.num, table.play-linescore th { text-align: center; }
 .play-banner-line { font-weight: 700; }
 .play-notice { font-weight: 700; border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.5rem 0.8rem; }
 .play-decisions-line { font-size: 1.05rem; font-weight: 700; }
+/* Per-at-bat card highlight: the rolled 2d6 cell, then the band
+   row (or OUT row) the percentile landed in. Brief and gold. */
+.play-page .dice-cell.hl-flash {
+  background: rgba(198, 161, 90, 0.92);
+  color: #12263f;
+  font-weight: 700;
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+  animation: pp-hl-pulse 0.3s ease-in-out 2 alternate;
+}
+.play-page tr.hl-flash td { background: rgba(198, 161, 90, 0.55); font-weight: 700; }
+.play-page .hl-meta { background: rgba(198, 161, 90, 0.35); border-radius: 6px; font-weight: 700; }
+.play-page .hl-out {
+  background: rgba(198, 161, 90, 0.9);
+  color: #12263f;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0 0.2rem;
+}
+@keyframes pp-hl-pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.14); }
+}
