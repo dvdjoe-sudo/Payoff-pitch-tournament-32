@@ -3821,15 +3821,26 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const grid = el('div', { class: 'dice-grid' });
     ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'].forEach(function (total) {
       const text = table[total] || '—';
-      grid.appendChild(el('div', { class: 'dice-cell' + (text.length > 12 ? ' wide' : '') },
+      const slug = text.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-+|-+$/g, '');
+      grid.appendChild(el('div', { class: 'dice-cell' + (slug ? ' sec-' + slug : '') + (text.length > 12 ? ' wide' : '') },
         el('span', { class: 'card-k', text: total }),
         el('span', { class: 'card-v', text: text })));
     });
     return grid;
   }
+  function cardHead(hand, name, team) {
+    const head = el('div', { class: 'ppc-head' });
+    head.appendChild(el('span', { class: 'ppc-hand', text: hand || '' }));
+    const title = el('div', { class: 'ppc-title' });
+    title.appendChild(el('div', { class: 'ppc-name', text: name || '' }));
+    if (team) title.appendChild(el('div', { class: 'ppc-sub', text: team }));
+    head.appendChild(title);
+    return head;
+  }
+
   function hitterCardBlock(bat) {
-    const block = el('section', { class: 'payoff-card hit-card' });
-    block.appendChild(el('h4', { text: 'Hitter card' }));
+    const block = el('section', { class: 'payoff-card hit-card ppc' });
+    block.appendChild(cardHead(bat.bats, bat.name, bat.team));
     const bits = [];
     if (bat.bats) bits.push(factChip('Bats', bat.bats));
     if (bat.throws) bits.push(factChip('Throws', bat.throws));
@@ -3845,24 +3856,28 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     ['WHEELHOUSE', 'PATIENT', 'TOUGH', 'IN-PLAY'].forEach(function (name) {
       const section = bat.sections && bat.sections[name];
       if (!section) return;
-      block.appendChild(el('p', { class: 'meta', text: name + ' (percentile bands)' }));
+      block.appendChild(el('p', { class: 'meta ppc-sec-head sec-' + name.toLowerCase(), text: name + ' (percentile bands)' }));
       const rows = ['HR', '3B', '2B', '1B', 'BB', 'HBP', 'SO'].filter(function (result) {
         return (section.vsLHP && section.vsLHP[result]) || (section.vsRHP && section.vsRHP[result]);
       }).map(function (result) {
         return [result, bandText(section.vsLHP && section.vsLHP[result]), bandText(section.vsRHP && section.vsRHP[result])];
       });
-      if (rows.length) block.appendChild(cardBandTable(rows));
+      if (rows.length) {
+        const band = cardBandTable(rows);
+        band.classList.add('sec-' + name.toLowerCase());
+        block.appendChild(band);
+      }
     });
     if (bat.out_table && bat.out_table.length) {
-      block.appendChild(el('p', { class: 'note', text: 'Out table: ' + bat.out_table.map(function (row) {
+      block.appendChild(el('p', { class: 'note ppc-out', text: 'Out table: ' + bat.out_table.map(function (row) {
         return row.range[0] + '-' + row.range[1] + ' ' + row.result;
       }).join(' · ') }));
     }
     return block;
   }
   function pitcherCardBlock(pit) {
-    const block = el('section', { class: 'payoff-card' });
-    block.appendChild(el('h4', { text: 'Pitcher card' }));
+    const block = el('section', { class: 'payoff-card ppc' });
+    block.appendChild(cardHead(pit.throws, pit.name, pit.team));
     const pbits = [];
     if (pit.throws) pbits.push(factChip('Throws', pit.throws));
     if (pit.card_type) pbits.push(factChip('Type', pit.card_type));
@@ -3880,6 +3895,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     });
     const pfacts = factRow(pbits);
     if (pfacts) block.appendChild(pfacts);
+    if (pit.fielding && pit.fielding.length) block.appendChild(fieldingLine(pit.fielding));
     if (pit.card_table_2d6) {
       block.appendChild(el('p', { class: 'meta', text: '2d6 section' }));
       block.appendChild(diceGrid(pit.card_table_2d6));
@@ -4397,6 +4413,28 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       { cls: 'ctl ctl-undo', disabled: GS.undoStack.length === 0 || GS.sealed || !!GS.gen }));
     box.appendChild(row);
     box.appendChild(el('p', { class: 'play-lastflip', text: flipText(S.flips[S.flips.length - 1]) }));
+    // The drawn card's real face, imported from the game PDF.
+    // The text line above stays as the record and as the
+    // fallback: if the image is missing it removes itself.
+    const lastFlip = S.flips[S.flips.length - 1];
+    if (lastFlip && lastFlip.fac_id >= 1 && lastFlip.fac_id <= 256) {
+      const face = el('img', { class: 'fac-face', src: 'assets/fac/fac-' + ('00' + lastFlip.fac_id).slice(-3) + '.webp', alt: 'FAC ' + lastFlip.fac_id + ' card face', loading: 'lazy' });
+      face.addEventListener('error', function () { face.remove(); });
+      box.appendChild(face);
+    }
+    // The park's real card face, imported from the 1986 set
+    // PDF, while the held highlight is a BALLPARK read: the
+    // 2d6 landed on the pitcher's BALLPARK face and the PA
+    // resolved on this park's chart. It holds until the next
+    // input clears the highlight, same as the lit rows above.
+    // If the image is missing it removes itself, silently.
+    const hl = UI._hl;
+    if (hl && hl.data && hl.data.presult === 'BALLPARK' && GS.G && GS.G.park && GS.G.park.name) {
+      const slug = GS.G.park.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      const parkFace = el('img', { class: 'park-face', src: 'assets/parks/' + slug + '.webp', alt: GS.G.park.name + ' ballpark card', loading: 'lazy' });
+      parkFace.addEventListener('error', function () { parkFace.remove(); });
+      box.appendChild(parkFace);
+    }
     if (GS.pendingStep) box.appendChild(manualForm(GS));
     if (UI.stepError) box.appendChild(el('p', { class: 'play-problem', text: UI.stepError }));
     return box;

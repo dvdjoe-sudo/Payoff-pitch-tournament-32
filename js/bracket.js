@@ -1692,11 +1692,22 @@
     var grid = el("div", { class: "dice-grid" });
     ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"].forEach(function (total) {
       var text = table[total] || "—";
-      grid.appendChild(el("div", { class: "dice-cell" + (text.length > 12 ? " wide" : "") },
+      var slug = text.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-+|-+$/g, "");
+      grid.appendChild(el("div", { class: "dice-cell" + (slug ? " sec-" + slug : "") + (text.length > 12 ? " wide" : "") },
         el("span", { class: "card-k", text: total }),
         el("span", { class: "card-v", text: text })));
     });
     return grid;
+  }
+
+  function cardHead(hand, name, team) {
+    var head = el("div", { class: "ppc-head" });
+    head.appendChild(el("span", { class: "ppc-hand", text: hand || "" }));
+    var title = el("div", { class: "ppc-title" });
+    title.appendChild(el("div", { class: "ppc-name", text: name || "" }));
+    if (team) title.appendChild(el("div", { class: "ppc-sub", text: team }));
+    head.appendChild(title);
+    return head;
   }
 
   function cardSections(page, card) {
@@ -1705,8 +1716,8 @@
     block.appendChild(el("h3", { text: "Payoff Pitch card" }));
     if (card.card_bat) {
       var bat = card.card_bat;
-      var hit = el("div", { class: "hit-card" });
-      hit.appendChild(el("h4", { text: "Hitter card" }));
+      var hit = el("div", { class: "hit-card ppc" });
+      hit.appendChild(cardHead(bat.bats, card.name, card.team));
       var bits = [];
       if (bat.bats) bits.push(factChip("Bats", bat.bats));
       if (bat.throws) bits.push(factChip("Throws", bat.throws));
@@ -1722,25 +1733,29 @@
       ["WHEELHOUSE", "PATIENT", "TOUGH", "IN-PLAY"].forEach(function (name) {
         var section = bat.sections && bat.sections[name];
         if (!section) return;
-        hit.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
+        hit.appendChild(el("p", { class: "meta ppc-sec-head sec-" + name.toLowerCase(), text: name + " (percentile bands)" }));
         var rows = ["HR", "3B", "2B", "1B", "BB", "HBP", "SO"].filter(function (result) {
           return (section.vsLHP && section.vsLHP[result]) || (section.vsRHP && section.vsRHP[result]);
         }).map(function (result) {
           return [result, bandText(section.vsLHP && section.vsLHP[result]), bandText(section.vsRHP && section.vsRHP[result])];
         });
-        if (rows.length) hit.appendChild(cardBandTable(rows));
+        if (rows.length) {
+          var band = cardBandTable(rows);
+          band.classList.add("sec-" + name.toLowerCase());
+          hit.appendChild(band);
+        }
       });
       if (bat.out_table && bat.out_table.length) {
-        hit.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
+        hit.appendChild(el("p", { class: "note ppc-out", text: "Out table: " + bat.out_table.map(function (row) {
           return row.range[0] + "-" + row.range[1] + " " + row.result;
         }).join(" · ") }));
       }
-      if (bat.qa_status) hit.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
       block.appendChild(hit);
     }
     if (card.card_pit) {
       var pit = card.card_pit;
-      block.appendChild(el("h4", { text: "Pitcher card (v2)" }));
+      var pitBlock = el("div", { class: "ppc pit-card" });
+      pitBlock.appendChild(cardHead(pit.throws, card.name, card.team));
       var pbits = [];
       if (pit.throws) pbits.push(factChip("Throws", pit.throws));
       if (pit.card_type) pbits.push(factChip("Type", pit.card_type));
@@ -1757,12 +1772,13 @@
         });
       }
       var pfacts = factRow(pbits);
-      if (pfacts) block.appendChild(pfacts);
+      if (pfacts) pitBlock.appendChild(pfacts);
+      if (pit.fielding && pit.fielding.length) pitBlock.appendChild(fieldingLine(pit.fielding));
       if (pit.table_2d6) {
-        block.appendChild(el("p", { class: "meta", text: "2d6 section" }));
-        block.appendChild(diceGrid(pit.table_2d6));
+        pitBlock.appendChild(el("p", { class: "meta", text: "2d6 section" }));
+        pitBlock.appendChild(diceGrid(pit.table_2d6));
       }
-      if (pit.qa_status) block.appendChild(el("p", { class: "note", text: "Card QA: " + pit.qa_status + "." }));
+      block.appendChild(pitBlock);
     }
     page.appendChild(block);
   }
