@@ -732,6 +732,7 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .play-page .fac-card.flipping, .play-page .ctl-dice.rolling .die { animation: none; }
 }
 
 :root[data-theme="dark"] {
@@ -1242,8 +1243,38 @@ table.play-linescore td.num, table.play-linescore th { text-align: center; }
   .play-cards.show-batter .play-card-pitcher { display: none; }
   .play-cards.show-pitcher .play-card-batter { display: none; }
 }
-.play-roll, .play-decision, .play-actions { border: 1px solid var(--line, #999);
+.play-decision, .play-actions { border: 1px solid var(--line, #999);
   border-radius: 0.5rem; padding: 0.6rem 0.9rem; margin: 0.8rem 0; }
+/* Input controls under the pitching card: each control serves
+   the current step itself. Dice tumble, the FAC card flips up;
+   both animations are cosmetic, the serve is instant. */
+.play-pit-col { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+.play-controls { border: 1px solid var(--line, #999); border-radius: 0.5rem;
+  padding: 0.6rem 0.9rem; background: var(--card); }
+.play-controls h3 { margin: 0 0 0.25rem; }
+.ctl-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: stretch; margin: 0.4rem 0; }
+.ctl { display: inline-flex; align-items: center; gap: 0.45rem; }
+.ctl-label { font-weight: 700; }
+.ctl-sub { opacity: 0.75; font-size: 0.8rem; }
+.die { display: inline-flex; align-items: center; justify-content: center;
+  width: 1.7rem; height: 1.7rem; border: 2px solid currentColor;
+  border-radius: 0.35rem; font-weight: 700; font-size: 1.05rem; }
+.ctl-dice.rolling .die { animation: pp-die-tumble 0.12s linear infinite; }
+@keyframes pp-die-tumble {
+  0% { transform: rotate(-7deg) translateY(0); }
+  50% { transform: rotate(6deg) translateY(-2px); }
+  100% { transform: rotate(-5deg) translateY(1px); }
+}
+.die-val { font-weight: 600; min-width: 2.2rem; }
+.fac-card { display: inline-flex; align-items: center; justify-content: center;
+  min-width: 3.4rem; height: 1.9rem; padding: 0 0.4rem;
+  border: 2px solid currentColor; border-radius: 0.3rem;
+  font-weight: 700; font-size: 0.8rem; }
+.fac-card.flipping { animation: pp-fac-flip 0.45s ease; }
+@keyframes pp-fac-flip {
+  from { transform: rotateY(0); }
+  to { transform: rotateY(360deg); }
+}
 .play-lastflip { font-weight: 600; }
 .play-manual input { width: 6.5rem; margin-right: 0.4rem; }
 .play-decision-q { font-weight: 700; }
@@ -1264,8 +1295,9 @@ table.play-linescore td.num, table.play-linescore th { text-align: center; }
 .play-banner-line { font-weight: 700; }
 .play-notice { font-weight: 700; border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.5rem 0.8rem; }
 .play-decisions-line { font-size: 1.05rem; font-weight: 700; }
-/* Per-at-bat card highlight: the rolled 2d6 cell, then the band
-   row (or OUT row) the percentile landed in. Brief and gold. */
+/* Per-at-bat card highlight: the rolled 2d6 cell and the band
+   row (or OUT row) the percentile landed in. Gold, and it stays
+   lit until the next input clears it. */
 .play-page .dice-cell.hl-flash {
   background: rgba(198, 161, 90, 0.92);
   color: #12263f;

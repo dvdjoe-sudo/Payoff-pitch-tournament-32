@@ -101,20 +101,50 @@ const start = findButtons(view, 'Start the game');
 check('start button present and enabled', start.length === 1 && !start[0].disabled);
 start[0].click();
 check('game screen renders the scorebug', findText(view, 'Saved — after PA 0') || findText(view, 'Top 1'));
-let clicks = 0, sawDecision = false;
-while (clicks++ < 500) {
-  if (findText(view, 'Final —')) break;
+function findByClass(root, cls) {
+  const out = [];
+  (function walk(n) {
+    if (n.classList && n.classList.contains(cls)) out.push(n);
+    n.children.forEach(walk);
+  })(root);
+  return out;
+}
+const facControls = () => findByClass(view, 'ctl-fac');
+const hasHl = () => findByClass(view, 'hl-flash').length > 0;
+check('no play button: the input controls are the triggers', findButtons(view, 'Play plate appearance').length === 0 && facControls().length === 1);
+function driveOne() {
   const rare = findButtons(view, 'Resolve rare play');
-  if (rare.length) { rare[0].click(); continue; }
-  const play = findButtons(view, 'Play plate appearance');
-  if (play.length) { play[0].click(); continue; }
-  break;
+  if (rare.length) { rare[0].click(); return true; }
+  const fac = facControls();
+  if (fac.length && !fac[0].disabled) { fac[0].click(); return true; }
+  return false;
+}
+// Highlight persistence: a completed PA leaves its read lit;
+// the light survives a bare re-render, clears on the next
+// input, and clears on Undo.
+let guard = 0;
+while (guard++ < 300 && !(PUI.UI.GS && PUI.UI.GS.paCount >= 1 && hasHl())) { if (!driveOne()) break; }
+check('a completed PA leaves its read lit', hasHl(), 'pa=' + (PUI.UI.GS && PUI.UI.GS.paCount));
+const showBtn = findButtons(view, 'Show');
+if (showBtn.length) showBtn[0].click();
+check('the highlight survives a re-render with no input', hasHl());
+if (facControls().length) facControls()[0].click();
+check('the next input clears the highlight', !hasHl());
+guard = 0;
+const paNow = PUI.UI.GS.paCount;
+while (guard++ < 300 && PUI.UI.GS.paCount <= paNow) { if (!driveOne()) break; }
+const undoBtn = findButtons(view, 'Undo');
+if (undoBtn.length && !undoBtn[0].disabled) undoBtn[0].click();
+check('undo clears the highlight', !hasHl());
+let clicks = 0;
+while (clicks++ < 4000) {
+  if (findText(view, 'Final —')) break;
+  if (!driveOne()) break;
 }
 check('the game plays to a final', findText(view, 'Final —'), 'clicks=' + clicks);
 check('game over shows the standing exhibition notice', findText(view, 'Exhibition. This game is not in the tournament record. Adoption is Joe'));
 check('game over shows the audit line', findText(view, 'Internal audit: every Section 10 equality passes'));
 check('an autosave exists for the finished game', storageMap.size >= 1);
-void sawDecision;
 
 // Part 2: a manual-entry game. Start one, serve the parked
 // steps through the form, and confirm a PA completes.
@@ -127,8 +157,8 @@ for (const label of ['Frank Chance (profile)', 'Dick Williams (profile)', 'Manua
 }
 const start2 = findButtons(view, 'Start the game');
 start2[0].click();
-const playBtn = findButtons(view, 'Play plate appearance');
-if (playBtn.length) playBtn[0].click();
+const manBtn = findButtons(view, 'Manual entry');
+if (manBtn.length) manBtn[0].click();
 check('manual game parks at the first step with the entry form', findText(view, 'Next step: 2d6') && findButtons(view, 'Serve it').length === 1);
 function inputs() {
   const out = [];

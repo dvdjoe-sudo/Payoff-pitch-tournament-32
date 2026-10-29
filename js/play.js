@@ -3399,18 +3399,23 @@ function createGame(cfg, storage) {
     return batTeam(S);
   };
   GS._pump = function (answer) { return GS._pumpFrom(GS.gen.next(answer)); };
-  GS._pumpFrom = function (r0) {
+  GS._pumpFrom = function (r0, budget) {
     let r = r0;
     let guard = 0;
     while (!r.done) {
       const y = r.value;
       if (y && y.step) {
+        if (budget !== undefined && budget <= 0) {
+          GS.pendingStep = y.step;
+          return { status: 'STEP', kind: y.step, awaiting: true };
+        }
         let v;
         try { v = S.source.serve(y.step, S); }
         catch (e) {
           if (GS.sourceKind === 'manual') { GS.pendingStep = y.step; return { status: 'STEP', kind: y.step, error: e.message }; }
           throw e;
         }
+        if (budget !== undefined) budget -= 1;
         r = GS.gen.next(v);
       } else if (y && y.decision) {
         const club = GS._decisionClub(y.decision);
@@ -3455,11 +3460,59 @@ function createGame(cfg, storage) {
     const kind = GS.pendingStep;
     GS.manualProvide(input);
     let v;
-    try { v = S.source.serve(kind, S); }
+    try { v = GS.sources.manual.serve(kind, S); }
     catch (e) { return { status: 'STEP', kind, error: e.message }; }
     GS.pendingStep = null;
-    return GS._pumpFrom(GS.gen.next(v));
+    return GS._pumpFrom(GS.gen.next(v), 0);
   };
+  /* UI input controls: serve exactly one step from the named
+   * source ('deck' or 'dice'), starting a new plate appearance
+   * when none is in progress, then park at the next step. The
+   * generator, the step stream, and the recorded flips are the
+   * same as a full pump's; only the serving is metered, one
+   * input per step. */
+  GS.serveStep = function (kind) {
+    if (GS.sealed) return { status: 'SEALED' };
+    if (GS.finished) return { status: 'FINAL' };
+    if (GS.pendingDecision) return { status: 'DECISION', decision: GS.pendingDecision };
+    const src = GS.sources[kind];
+    if (!src) return { status: 'STEP', kind: GS.pendingStep, error: 'unknown source ' + kind };
+    if (S.deck.peek) return { status: 'STEP', kind: GS.pendingStep, error: 'a manual 2d6 peek is outstanding (FAC ' + S.deck.peek + '); flip it by manual entry, or undo the PA, before rolling or drawing' };
+    if (!GS.gen) {
+      GS._snapshot();
+      GS.logMark = S.log.length;
+      GS.gen = gameStep(G, S, { stopAtRare: true });
+      S.source = src;
+      try { return GS._pumpFrom(GS.gen.next(undefined), 1); }
+      finally { S.source = GS.sources[GS.sourceKind]; }
+    }
+    if (GS.pendingStep) {
+      const stepKind = GS.pendingStep;
+      let v;
+      try { v = src.serve(stepKind, S); }
+      catch (e) { return { status: 'STEP', kind: stepKind, error: e.message }; }
+      GS.pendingStep = null;
+      return GS._pumpFrom(GS.gen.next(v), 0);
+    }
+    return { status: 'BUSY' };
+  };
+  /* Start a plate appearance and park at its first step, for
+   * the manual-entry control: nothing is served until the
+   * entry itself is confirmed. */
+  GS.parkStart = function () {
+    if (GS.sealed) return { status: 'SEALED' };
+    if (GS.finished) return { status: 'FINAL' };
+    if (GS.gen) return { status: 'STEP', kind: GS.pendingStep, awaiting: true };
+    GS._snapshot();
+    GS.logMark = S.log.length;
+    GS.gen = gameStep(G, S, { stopAtRare: true });
+    return GS._pumpFrom(GS.gen.next(undefined), 0);
+  };
+  GS.answerMetered = function (ans) {
+    GS.pendingDecision = null;
+    return GS._pumpFrom(GS.gen.next(ans), 0);
+  };
+  GS.resumeMetered = function () { return GS._pumpFrom(GS.gen.next(undefined), 0); };
   GS.manualProvide = function (input) {
     const src = sources.manual;
     const v = Object.assign({}, input);
@@ -3862,7 +3915,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   const UI = { GS: null, setup: null, cardTab: 'batter', rarePending: false,
     stepError: null, modal: null, confirmDiscard: false, lastPitcher: null, view: null,
     feedOpen: false,
-    _flash: null, _flashSeenPa: 0, _shownCards: null, _parkedDecision: false };
+    _hl: null, _hlGs: null, _hlSeenPa: 0, _shownCards: null, _parkedDecision: false,
+    _diceShow: null, _facShow: null, _animDice: null, _animFac: null };
   PUI.UI = UI;
   const fx = () => PlayData.data.fixture;
   const slotOfClub = (club) => club === 'CHC' ? 'CHC' : 'OPP';
@@ -3894,6 +3948,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   // -- S6 resume banner + S1 setup ----------------------------
   function renderSetup(view) {
     UI.view = view;
+    clearHighlight();
     view.replaceChildren();
     const page = el('article', { class: 'panel play-page' });
     const save = peekSave(store);
@@ -4128,10 +4183,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   }
   function renderGame(view) {
     UI.view = view;
-    if (UI._flash) cancelFlash();
     const GS = UI.GS, S = GS.S, G = GS.G;
+    if (UI._hl && UI._hlGs !== GS) UI._hl = null;
     UI._parkedDecision = !!GS.pendingDecision;
-    if (UI._flashSeenPa > GS.paCount) UI._flashSeenPa = GS.paCount;
+    if (UI._hlSeenPa > GS.paCount) UI._hlSeenPa = GS.paCount;
     if (GS.finished) { renderOver(view); return; }
     view.replaceChildren();
     const page = el('article', { class: 'panel play-page' });
@@ -4166,33 +4221,25 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     page.appendChild(layout);
     mainCol.appendChild(tabRow);
     const cards = el('div', { class: 'play-cards show-' + UI.cardTab });
-    const batCardData = hcard(G, currentBatter(S)[0], bat);
+    // While a highlight is held, the cards on screen stay the
+    // resolved PA's pair, lit, until the next input clears it.
+    const held = UI._hl;
+    const batCardData = held ? held.bat : hcard(G, currentBatter(S)[0], bat);
     const bCard = hitterCardBlock(batCardData);
     bCard.classList.add('play-card-batter');
-    const pitCardData = pitcherCard(G, S, fld, pitcherNow);
+    const pitCardData = held ? held.pit : pitcherCard(G, S, fld, pitcherNow);
     const pCard = pitcherCardBlock(pitCardData);
     pCard.classList.add('play-card-pitcher');
     UI._shownCards = { bat: batCardData, pit: pitCardData };
     cards.appendChild(bCard);
-    cards.appendChild(pCard);
+    // The input controls live in the dead space under the
+    // pitching card: each control is its own trigger.
+    const pitCol = el('div', { class: 'play-pit-col' });
+    pitCol.appendChild(pCard);
+    pitCol.appendChild(controlsCluster(view));
+    cards.appendChild(pitCol);
     mainCol.appendChild(cards);
-    // Roll panel
-    const roll = el('section', { class: 'play-roll' });
-    roll.appendChild(el('h3', { text: 'Dice and cards' }));
-    const srcRow = el('div', { class: 'play-toggle-row' });
-    [['deck', 'FAC deck'], ['dice', 'Dice roller'], ['manual', 'Manual entry']].forEach(function (pair) {
-      srcRow.appendChild(button(pair[1], () => {
-        const err = GS.setSource(pair[0]);
-        UI.stepError = err || null;
-        renderGame(view);
-      }, { cls: GS.sourceKind === pair[0] ? 'on' : '' }));
-    });
-    roll.appendChild(srcRow);
-    roll.appendChild(el('p', { class: 'play-lastflip', text: flipText(S.flips[S.flips.length - 1]) }));
-    if (GS.pendingStep) roll.appendChild(manualForm(GS));
-    if (UI.stepError) roll.appendChild(el('p', { class: 'play-problem', text: UI.stepError }));
-    mainCol.appendChild(roll);
-    // Decision / advance bar
+    // Decision / managerial bar
     mainCol.appendChild(actionBar(view));
     // Play feed: a collapsible side panel. Collapsed by default so
     // the cards own the screen; the feed's blocks and live updates
@@ -4216,6 +4263,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     mainCol.appendChild(rosterPanels(GS));
     view.appendChild(page);
     if (feedList) feedList.scrollTop = feedList.scrollHeight;
+    if (UI._hl) applyHighlight();
+    startControlAnims();
     void G;
   }
   function manualForm(GS) {
@@ -4265,43 +4314,172 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       } else {
         input = { form: 'value', value: parseInt(vIn.value, 10) };
       }
+      clearHighlight();
       const st = GS.provide(input);
       afterPump(st);
     }, { cls: 'primary' }));
     return box;
   }
+  function diceValText() {
+    const f = UI._diceShow;
+    if (!f) return '';
+    if (f.dice) return '= ' + (f.dice[0] + f.dice[1]);
+    if (f.value != null) return (f.purpose || '') + ' ' + f.value;
+    return '';
+  }
+  /* The input controls, under the pitching card. Each control
+   * is its own trigger: the dice roll, the FAC flip, and the
+   * confirmed manual entry each serve the current step at once.
+   * Undo stays its own button, PA boundaries only. */
+  function controlsCluster(view) {
+    const GS = UI.GS, S = GS.S;
+    const box = el('section', { class: 'play-controls' });
+    box.appendChild(el('h3', { text: 'Dice and cards' }));
+    const busy = !!(GS.pendingDecision || UI.rarePending || GS.sealed || GS.finished);
+    const row = el('div', { class: 'ctl-row' });
+    const diceBtn = el('button', { type: 'button', class: 'play-btn ctl ctl-dice' });
+    diceBtn.appendChild(el('span', { class: 'die', text: UI._diceShow && UI._diceShow.dice ? String(UI._diceShow.dice[0]) : '–' }));
+    diceBtn.appendChild(el('span', { class: 'die', text: UI._diceShow && UI._diceShow.dice ? String(UI._diceShow.dice[1]) : '–' }));
+    diceBtn.appendChild(el('span', { class: 'die-val', text: diceValText() }));
+    diceBtn.appendChild(el('span', { class: 'ctl-label', text: 'Dice' }));
+    if (busy) diceBtn.disabled = true;
+    else diceBtn.addEventListener('click', () => serveFrom(view, 'dice'));
+    row.appendChild(diceBtn);
+    const facBtn = el('button', { type: 'button', class: 'play-btn ctl ctl-fac' });
+    facBtn.appendChild(el('span', { class: 'fac-card' + (UI._animFac != null ? ' flipping' : ''), text: UI._facShow != null ? 'FAC ' + UI._facShow : 'FAC' }));
+    facBtn.appendChild(el('span', { class: 'ctl-label', text: 'FAC deck' }));
+    facBtn.appendChild(el('span', { class: 'ctl-sub', text: (S.deck.order.length - S.deck.pos) + ' left' }));
+    if (busy) facBtn.disabled = true;
+    else facBtn.addEventListener('click', () => serveFrom(view, 'deck'));
+    row.appendChild(facBtn);
+    const manBtn = button('Manual entry', () => manualStart(view), { disabled: busy });
+    manBtn.classList.add('ctl');
+    manBtn.classList.add('ctl-manual');
+    row.appendChild(manBtn);
+    row.appendChild(button('Undo', () => { if (GS.undo()) { UI.rarePending = false; clearHighlight(); renderGame(view); } },
+      { cls: 'ctl ctl-undo', disabled: GS.undoStack.length === 0 || GS.sealed || !!GS.gen }));
+    box.appendChild(row);
+    box.appendChild(el('p', { class: 'play-lastflip', text: flipText(S.flips[S.flips.length - 1]) }));
+    if (GS.pendingStep) box.appendChild(manualForm(GS));
+    if (UI.stepError) box.appendChild(el('p', { class: 'play-problem', text: UI.stepError }));
+    return box;
+  }
+  /* One input, one step: clear the held highlight, serve the
+   * current step from the clicked source, and note what the
+   * serve produced so the control can animate to it. */
+  function serveFrom(view, kind) {
+    const GS = UI.GS, S = GS.S;
+    clearHighlight();
+    const before = S.flips.length;
+    const st = GS.serveStep(kind);
+    const fresh = S.flips.slice(before);
+    if (kind === 'dice') {
+      const f = fresh.filter((x) => x.source === 'dice' && (x.dice || x.value != null)).pop();
+      if (f) { UI._diceShow = f; UI._animDice = f; }
+    } else if (kind === 'deck') {
+      const f = fresh.filter((x) => x.fac_id).pop();
+      if (f) { UI._facShow = f.fac_id; UI._animFac = f.fac_id; }
+    }
+    afterPump(st);
+  }
+  function manualStart(view) {
+    clearHighlight();
+    afterPump(UI.GS.parkStart());
+  }
+  function clearHighlight() { UI._hl = null; UI._hlGs = null; }
+  /* Re-light the held highlight on a fresh render: the rolled
+   * pitcher cell and the batter's landed row stay lit until the
+   * next input clears them. */
+  function applyHighlight() {
+    const hl = UI._hl;
+    if (!hl) return;
+    const pCard = findByClass(UI.view, 'play-card-pitcher');
+    const grid = pCard && findByClass(pCard, 'dice-grid');
+    if (grid) {
+      for (let i = 0; i < grid.children.length; i++) {
+        const k = findByClass(grid.children[i], 'card-k');
+        if (k && k.textContent.trim() === String(hl.data.total)) { grid.children[i].classList.add('hl-flash'); break; }
+      }
+    }
+    if (hl.data.read) decorateBatter(hl.data.read);
+  }
+  /* Cosmetic only: the dice tumble and settle on the served
+   * values, the flipped FAC card turns up. The serve itself
+   * already happened, synchronously, on the click. */
+  function startControlAnims() {
+    if (UI._animDice) {
+      const f = UI._animDice; UI._animDice = null;
+      const diceBtn = findByClass(UI.view, 'ctl-dice');
+      if (diceBtn) {
+        const dice = [];
+        (function walk(n) {
+          if (n.classList && n.classList.contains('die')) dice.push(n);
+          (n.children || []).forEach(walk);
+        })(diceBtn);
+        const val = findByClass(diceBtn, 'die-val');
+        diceBtn.classList.add('rolling');
+        let ticks = 0;
+        const iv = setInterval(() => {
+          ticks += 1;
+          if (f.dice) {
+            if (dice[0]) dice[0].textContent = String(1 + Math.floor(Math.random() * 6));
+            if (dice[1]) dice[1].textContent = String(1 + Math.floor(Math.random() * 6));
+          } else if (val) {
+            const max = f.purpose === '1d6' ? 6 : f.purpose === '1d10' ? 10 : 100;
+            val.textContent = String(Math.floor(Math.random() * max));
+          }
+          if (ticks >= 7) {
+            clearInterval(iv);
+            diceBtn.classList.remove('rolling');
+            if (f.dice) {
+              if (dice[0]) dice[0].textContent = String(f.dice[0]);
+              if (dice[1]) dice[1].textContent = String(f.dice[1]);
+              if (val) val.textContent = '= ' + (f.dice[0] + f.dice[1]);
+            } else if (val) {
+              val.textContent = (f.purpose || '') + ' ' + f.value;
+            }
+          }
+        }, 75);
+      }
+    }
+    if (UI._animFac != null) {
+      UI._animFac = null;
+      const card = findByClass(UI.view, 'fac-card');
+      if (card) setTimeout(() => card.classList.remove('flipping'), 480);
+    }
+  }
   function afterPump(st) {
-    const wasParked = UI.rarePending || UI._parkedDecision;
     UI.rarePending = !!(st && st.status === 'RARE');
     if (st && st.status === 'STEP') UI.stepError = st.error || null; else UI.stepError = null;
-    const wasFlashing = !!UI._flash;
-    if (wasFlashing) cancelFlash();
     const completed = !!(st && UI.GS && (st.status === 'PA_DONE' || st.status === 'FINAL') &&
-      UI.GS.paCount > UI._flashSeenPa);
+      UI.GS.paCount > UI._hlSeenPa);
     if (completed) {
-      UI._flashSeenPa = UI.GS.paCount;
-      // The flash decorates the cards still on screen, which are the
-      // resolved PA's pair until the next render. It is skipped when
-      // a flash is already running (the screen is a PA behind) and
-      // when this pump resumed a parked rare play or decision (the
-      // parked control is still on screen and must retire at once).
-      if (!wasFlashing && !wasParked) {
-        const data = flashDataForLastPa();
-        if (data && startFlash(data)) return;
+      UI._hlSeenPa = UI.GS.paCount;
+      // Capture the resolved PA's cards and its read before the
+      // render advances the matchup. The render then holds that
+      // pair on screen with the highlights lit, until the next
+      // input clears them: the play stays readable at the table's
+      // pace, not the clock's.
+      const data = highlightDataForLastPa();
+      if (data && UI._shownCards) {
+        UI._hl = { bat: UI._shownCards.bat, pit: UI._shownCards.pit, data };
+        UI._hlGs = UI.GS;
+        UI.cardTab = 'batter';
       }
     }
     renderGame(UI.view);
   }
 
   /* ---- Per-at-bat card highlight (display only) ----
-   * When a plate appearance completes, flash first the pitcher's
-   * 2d6 cell that was rolled, then the batter's section and the
-   * exact band row the percentile landed in (or the OUT row the
-   * read fell to). Everything is read back from the resolution
-   * lines the engine already wrote into the PA's feed block and
-   * checked against the cards still on screen; any mismatch and
-   * the flash is downgraded or skipped, never wrong. No engine
-   * state, resolution order, or recorded data is touched. */
+   * When a plate appearance completes, the pitcher's 2d6 cell
+   * that was rolled and the batter's section and exact band row
+   * the percentile landed in (or the OUT row the read fell to)
+   * light up and STAY lit until the next input. Everything is
+   * read back from the resolution lines the engine already
+   * wrote into the PA's feed block and checked against the
+   * cards on screen; any mismatch and the highlight is
+   * downgraded or skipped, never wrong. No engine state,
+   * resolution order, or recorded data is touched. */
 
   function findByClass(root, cls) {
     let hit = null;
@@ -4314,12 +4492,6 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     return hit;
   }
 
-  function cancelFlash() {
-    if (!UI._flash) return;
-    UI._flash.timers.forEach(clearTimeout);
-    UI._flash = null;
-  }
-
   // Pure mirror of the engine's outLookup pick (which also writes
   // a ledger line, so it cannot be called from the display layer).
   function outPick(card, pct) {
@@ -4330,7 +4502,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     return rows[rows.length - 1] || null;
   }
 
-  function flashDataForLastPa() {
+  function highlightDataForLastPa() {
     const GS = UI.GS, shown = UI._shownCards;
     if (!GS || !shown || !shown.bat || !shown.pit) return null;
     let block = null;
@@ -4362,7 +4534,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (!table || table[String(total)] !== presult) return null;
     // Verify the batter read against the shown card; a read that
     // does not check out (an edited or shifted percentile) drops
-    // to a pitcher-only flash rather than lighting the wrong row.
+    // to a pitcher-only highlight rather than lighting the wrong row.
     if (read && !read.out) {
       const hand = shown.pit.throws === 'L' ? 'vsLHP' : 'vsRHP';
       const sec = shown.bat.sections && shown.bat.sections[read.section];
@@ -4379,48 +4551,6 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       else read.pick = pick;
     }
     return { total, presult, read };
-  }
-
-  function startFlash(data) {
-    const view = UI.view;
-    const pCard = findByClass(view, 'play-card-pitcher');
-    const grid = pCard && findByClass(pCard, 'dice-grid');
-    if (!grid) return false;
-    let cell = null;
-    for (let i = 0; i < grid.children.length; i++) {
-      const k = findByClass(grid.children[i], 'card-k');
-      if (k && k.textContent.trim() === String(data.total)) { cell = grid.children[i]; break; }
-    }
-    if (!cell) return false;
-    UI._flash = { timers: [] };
-    cell.classList.add('hl-flash');
-    setCardsTab('pitcher');
-    // Each step holds about a second: the at-bat gets its moment,
-    // and the game still only advances when the player says so.
-    UI._flash.timers.push(setTimeout(() => {
-      if (!UI._flash) return;
-      cell.classList.remove('hl-flash');
-      let wait = 250;
-      if (data.read && decorateBatter(data.read)) { setCardsTab('batter'); wait = 1000; }
-      UI._flash.timers.push(setTimeout(() => {
-        if (!UI._flash) return;
-        UI._flash = null;
-        renderGame(UI.view);
-      }, wait));
-    }, 1000));
-    return true;
-  }
-
-  function setCardsTab(which) {
-    const cards = findByClass(UI.view, 'play-cards');
-    if (cards) cards.className = 'play-cards show-' + which;
-    const tabs = findByClass(UI.view, 'play-card-tabs');
-    if (tabs) for (let i = 0; i < tabs.children.length; i++) {
-      const b = tabs.children[i];
-      const on = (which === 'batter' && b.textContent.trim() === 'Batter') ||
-        (which === 'pitcher' && b.textContent.trim() === 'Pitcher');
-      if (on) b.classList.add('on'); else b.classList.remove('on');
-    }
   }
 
   function decorateBatter(read) {
@@ -4491,27 +4621,27 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const L = labels[dec.call] || ['Manager call: ' + dec.call, 'Go', 'Hold'];
       box.appendChild(el('p', { class: 'play-decision-q', text: L[0] }));
       if (dec.policy !== undefined) box.appendChild(el('p', { class: 'note', text: 'Profile policy would ' + (dec.policy ? 'go.' : 'hold.') }));
-      box.appendChild(button(L[1], () => afterPump(GS.answer({ go: true })), { cls: 'primary' }));
-      box.appendChild(button(L[2], () => afterPump(GS.answer({ go: false }))));
+      box.appendChild(button(L[1], () => afterPump(GS.answerMetered({ go: true })), { cls: 'primary' }));
+      box.appendChild(button(L[2], () => afterPump(GS.answerMetered({ go: false }))));
     } else if (dec.kind === 'send_hold') {
       box.appendChild(el('p', { class: 'play-decision-q', text: 'Third base coach: ' + dec.runner + ' rounds ' + (dec.from === 1 ? 'second' : 'first') + ' — send him to ' + (dec.to === 3 ? 'third' : 'second') + '?' }));
-      box.appendChild(button('Send', () => afterPump(GS.answer({ go: true })), { cls: 'primary' }));
-      box.appendChild(button('Hold', () => afterPump(GS.answer({ go: false }))));
+      box.appendChild(button('Send', () => afterPump(GS.answerMetered({ go: true })), { cls: 'primary' }));
+      box.appendChild(button('Hold', () => afterPump(GS.answerMetered({ go: false }))));
     } else if (dec.kind === 'coverage') {
       box.appendChild(el('p', { class: 'play-decision-q', text: dec.out + ' is out of the game. The fit pick for ' + dec.spot + ' is ' + dec.pick + ' — ' + (dec.reason || '') }));
       const row = el('div', { class: 'play-modal-row' });
       row.appendChild(el('span', { class: 'play-lu-name', text: dec.pick + ' (fit pick)' }));
-      row.appendChild(button('Confirm', () => afterPump(GS.answer({ pick: dec.pick })), { cls: 'primary' }));
+      row.appendChild(button('Confirm', () => afterPump(GS.answerMetered({ pick: dec.pick })), { cls: 'primary' }));
       box.appendChild(row);
       (dec.bench || []).filter((n) => n !== dec.pick).forEach(function (cand) {
         const r = el('div', { class: 'play-modal-row' });
         r.appendChild(el('span', { class: 'play-lu-name', text: cand }));
-        r.appendChild(button('Pick him instead', () => afterPump(GS.answer({ pick: cand }))));
+        r.appendChild(button('Pick him instead', () => afterPump(GS.answerMetered({ pick: cand }))));
         box.appendChild(r);
       });
     } else {
       box.appendChild(el('p', { text: 'Decision: ' + dec.kind }));
-      box.appendChild(button('Go with the policy', () => afterPump(GS.answer(undefined)), { cls: 'primary' }));
+      box.appendChild(button('Go with the policy', () => afterPump(GS.answerMetered(undefined)), { cls: 'primary' }));
     }
     return box;
   }
@@ -4520,16 +4650,17 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const bar = el('section', { class: 'play-actions' });
     if (GS.pendingDecision) { bar.appendChild(decisionPanel(view)); return bar; }
     if (UI.rarePending) {
-      bar.appendChild(el('p', { class: 'play-decision-q', text: 'A rare play is on the table. The feed above has the trigger; the chart resolves it.' }));
-      bar.appendChild(button('Resolve rare play', () => afterPump(GS.resumeRare()), { cls: 'primary' }));
+      bar.appendChild(el('p', { class: 'play-decision-q', text: 'A rare play is on the table. The feed has the trigger; the chart resolves it, then the controls drive the rest of the at-bat.' }));
+      bar.appendChild(button('Resolve rare play', () => afterPump(GS.resumeMetered()), { cls: 'primary' }));
       return bar;
     }
     if (GS.pendingStep) {
-      bar.appendChild(el('p', { class: 'note', text: 'Waiting on the manual entry above.' }));
+      bar.appendChild(el('p', { class: 'note', text: 'Waiting on an input from the controls: roll the dice, flip the FAC deck, or enter the result by hand.' }));
       return bar;
     }
-    bar.appendChild(button('Play plate appearance', () => afterPump(GS.step()), { cls: 'primary' }));
-    // Managerial actions for human clubs, between PAs.
+    // Managerial actions for human clubs, between PAs. (The
+    // plate appearance itself is driven from the input controls
+    // under the pitching card; Undo lives there too.)
     const bat = batTeam(S), fld = fldTeam(S);
     if (GS.cfg.managers[bat] === 'human') {
       bar.appendChild(button('Pinch hit', () => openPickTwo(view, bat, 'ph')));
@@ -4540,9 +4671,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       bar.appendChild(button('Pitching change', () => openPitchModal(view, fld)));
       bar.appendChild(button('Defensive sub', () => openPickTwo(view, fld, 'defsub')));
     }
-    bar.appendChild(button('Undo', () => { if (GS.undo()) { UI.rarePending = false; renderGame(view); } },
-      { disabled: GS.undoStack.length === 0 || GS.sealed }));
     if (GS.sealed) bar.appendChild(el('span', { class: 'note', text: 'Exported — this game is sealed.' }));
+    if (!bar.children.length) return el('div');
     return bar;
   }
   function rosterPanels(GS) {
@@ -4722,7 +4852,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ex.markdown);
         GS.seal(); renderOver(view);
       }));
-      if (GS.undoStack.length) page.appendChild(button('Step back in (undo the last PA)', () => { if (GS.undo()) { UI.rarePending = false; renderGame(view); } }));
+      if (GS.undoStack.length) page.appendChild(button('Step back in (undo the last PA)', () => { if (GS.undo()) { UI.rarePending = false; clearHighlight(); renderGame(view); } }));
     }
     page.appendChild(button('Play again', () => { UI.GS = null; UI.setup = null; renderSetup(view); }));
     const back = el('a', { href: '#/bracket', class: 'play-btn', text: 'Back to bracket' });
@@ -4749,10 +4879,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (UI.GS) renderGame(view);
     else renderSetup(view);
   };
-  // Leaving the play route retires any pending card flash, so its
-  // timers can never repaint over the page navigated to.
+  // Leaving the play route retires any held card highlight, so it
+  // cannot resurrect over the page navigated to.
   if (typeof window.addEventListener === 'function') {
-    window.addEventListener('hashchange', () => { if (UI._flash) cancelFlash(); });
+    window.addEventListener('hashchange', () => { clearHighlight(); });
   }
 }
 
