@@ -4148,7 +4148,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       void r;
       return cells;
     });
-    const wrap = el('div', { class: 'table-wrap' });
+    const wrap = el('div', { class: 'table-wrap play-ls-wrap' });
     const t = el('table', { class: 'play-linescore' });
     const hr = el('tr');
     head.forEach((h) => hr.appendChild(el('th', { text: h })));
@@ -4191,12 +4191,16 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (GS.finished) { renderOver(view); return; }
     view.replaceChildren();
     const page = el('article', { class: 'panel play-page' });
-    // Scorebug
+    // Compressed header bar: state, score, and (appended below,
+    // once it is built) the matchup strip share one slim bar
+    // instead of two stacked bars. The save span is held and
+    // appended after the strip so the bar reads state, score,
+    // pair, save.
     const bat = batTeam(S), fld = fldTeam(S);
     const bug = el('div', { class: 'play-scorebug' });
     bug.appendChild(el('span', { class: 'play-bug-state', text: (S.half === 'top' ? 'Top' : 'Bottom') + ' ' + S.inning + ' · ' + S.outs + (S.outs === 1 ? ' out' : ' outs') }));
     bug.appendChild(el('span', { class: 'play-bug-score', text: clubShort('CHC') + ' ' + S.score.CHC + ' — ' + S.score.OPP + ' ' + clubShort('MON') }));
-    bug.appendChild(el('span', { class: 'play-bug-save', text: GS.sealed ? 'Sealed' : (GS.storageOk ? 'Saved — after PA ' + GS.paCount : 'Unsaved — storage unavailable') }));
+    const bugSave = el('span', { class: 'play-bug-save', text: GS.sealed ? 'Sealed' : (GS.storageOk ? 'Saved — after PA ' + GS.paCount : 'Unsaved — storage unavailable') });
     page.appendChild(bug);
     page.appendChild(linescoreTable(S));
     // Diamond
@@ -4213,7 +4217,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     UI.lastPitcher = pitcherNow;
     // Matchup moment: the displayed pair (the live pair, or the
     // resolved PA's pair while a highlight is held) is named on a
-    // slim strip above the cards. When the live pair changes, the
+    // slim strip inside the header bar. When the live pair changes, the
     // cards present themselves: the batter's card flips up onto
     // the table, the pitcher's slides in from the other side.
     // Pure presentation: the entrance classes live only on this
@@ -4245,7 +4249,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     layout.appendChild(mainCol);
     page.appendChild(layout);
     mainCol.appendChild(tabRow);
-    mainCol.appendChild(mxStrip);
+    // The strip rides inside the header bar (see the scorebug
+    // block above); the save span follows it.
+    bug.appendChild(mxStrip);
+    bug.appendChild(bugSave);
     const cards = el('div', { class: 'play-cards show-' + UI.cardTab });
     // While a highlight is held, the cards on screen stay the
     // resolved PA's pair, lit, until the next input clears it.

@@ -101,6 +101,28 @@ const start = findButtons(view, 'Start the game');
 check('start button present and enabled', start.length === 1 && !start[0].disabled);
 start[0].click();
 check('game screen renders the scorebug', findText(view, 'Saved — after PA 0') || findText(view, 'Top 1'));
+// Compressed header: the one slim bar still carries the full
+// game state (inning/half, outs, score, save state) with the
+// matchup strip riding inside it, and the shrunken linescore
+// still shows every column and both clubs.
+check('compressed header carries state, score, and save state', (() => {
+  const bug = findByClass(view, 'play-scorebug')[0];
+  return !!bug && bug.textContent.includes('Top 1') && bug.textContent.includes('0 outs')
+    && bug.textContent.includes('Chicago 0') && bug.textContent.includes('Montreal')
+    && bug.textContent.includes('Saved — after PA 0');
+})());
+check('matchup strip rides inside the compressed header', (() => {
+  const bug = findByClass(view, 'play-scorebug')[0];
+  return !!bug && findByClass(bug, 'play-matchup').length === 1;
+})());
+check('linescore keeps every column and both clubs', (() => {
+  const ls = findByClass(view, 'play-linescore')[0];
+  if (!ls) return false;
+  const headRow = ls.children[0] && ls.children[0].children[0];
+  const headCells = headRow ? headRow.children.map((c) => c.textContent) : [];
+  return headCells.length === 13 && headCells[10] === 'R' && headCells[11] === 'H' && headCells[12] === 'E'
+    && ls.textContent.includes('Chicago') && ls.textContent.includes('Montreal');
+})());
 function findByClass(root, cls) {
   const out = [];
   (function walk(n) {
