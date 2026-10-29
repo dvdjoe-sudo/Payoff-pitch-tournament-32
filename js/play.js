@@ -3112,7 +3112,7 @@ function* gameStep(G, S, opts) {
   let res = yield* resolvePA(G, S);
   let guard = 0;
   while (res === 'PENDING') {
-    if (opts.stopAtRare) return 'PENDING_RARE';
+    if (opts.stopAtRare) yield { pause: 'rare' };
     yield* autoResolveRare(G, S);
     res = S.pending ? (yield* resolvePA(G, S)) : 'DONE';
     guard += 1;
@@ -3270,6 +3270,403 @@ function restoreState(S, snap) {
   S.source = keepSource;
 }
 
+/* ================================================================
+ * Part 5b: Profiles / GameState / Feed / Export (spec sections
+ * 5.3-5.4, 7, 9, 10). Headless-safe: the UI at the bottom of the
+ * file is the only DOM consumer. GameState owns the timeline:
+ * snapshots at PA boundaries and managerial actions, the feed
+ * blocks (live/undone), the autosave, and the seal on export.
+ * ================================================================ */
+const SAVE_PREFIX = 'pp-play-r106-';
+const SUFFIX_CHARS = 'abcdefghjkmnpqrstuvwxyz23456789';
+function makeSuffix(rng) {
+  let s = '';
+  for (let i = 0; i < 4; i++) s += SUFFIX_CHARS[Math.floor(rng() * SUFFIX_CHARS.length)];
+  return s;
+}
+/* S1 lineup legality (a)-(c): coverage exactly once, fielders
+ * only at printed positions (DH any hitter), no duplicates,
+ * all rostered. Returns a list of violated-rule strings. */
+function lineupLegality(lineup, club) {
+  const problems = [];
+  const roster = PlayData.data.hitters[club];
+  const need = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH'];
+  if (!Array.isArray(lineup) || lineup.length !== 9) return ['the lineup must name nine men'];
+  const seen = new Set(), covered = new Set();
+  for (const slot of lineup) {
+    if (!roster[slot.name]) { problems.push(slot.name + ' is not rostered for ' + club); continue; }
+    if (seen.has(slot.name)) problems.push(slot.name + ' appears twice');
+    seen.add(slot.name);
+    if (!need.includes(slot.pos)) { problems.push(slot.pos + ' is not a lineup position'); continue; }
+    if (covered.has(slot.pos)) problems.push(slot.pos + ' is covered twice');
+    covered.add(slot.pos);
+    if (slot.pos !== 'DH') {
+      const carded = (roster[slot.name].positions || []).some((p) => p.pos === slot.pos);
+      if (!carded) problems.push(slot.name + ' is not carded at ' + slot.pos);
+    }
+  }
+  for (const p of need) if (!covered.has(p)) problems.push(p + ' is not covered');
+  return problems;
+}
+/* S1 (e): a bench swap is legal when the incoming man is
+ * carded at the outgoing man's position (any hitter for DH). */
+function swapLegality(lineup, club, outName, inName) {
+  const slot = lineup.find((s) => s.name === outName);
+  if (!slot) return outName + ' is not in the lineup';
+  if (lineup.some((s) => s.name === inName)) return inName + ' is already in the lineup';
+  const card = PlayData.data.hitters[club][inName];
+  if (!card) return inName + ' is not rostered for ' + club;
+  if (slot.pos === 'DH') return null;
+  return (card.positions || []).some((p) => p.pos === slot.pos) ? null
+    : inName + ' is not carded at ' + slot.pos;
+}
+
+function createGame(cfg, storage) {
+  const fx = PlayData.data.fixture;
+  const seed = cfg.seed;
+  const rng = cfg.suffixRng || Math.random;
+  let suffix = cfg.suffix || makeSuffix(rng);
+  let gameId = 'r106-' + seed + '-' + suffix;
+  if (storage) {
+    let guard = 0;
+    while (storage.getItem(SAVE_PREFIX + gameId) && guard++ < 50) {
+      suffix = makeSuffix(rng); gameId = 'r106-' + seed + '-' + suffix;
+    }
+  }
+  const managers = cfg.managers;
+  const G = makeContext({ homeSlot: cfg.homeSlot, starters: cfg.starters,
+    buntOverlay: true, prePa: true, clauses: true, defenseNumbers: true,
+    human: { CHC: managers.CHC === 'human', OPP: managers.OPP === 'human' } });
+  const S = newState(G, { seed, homeSlot: cfg.homeSlot, starters: cfg.starters,
+    traits: fixtureTraits(), lineups: cfg.lineups, benches: cfg.benches });
+  const sources = {
+    deck: DeckSource,
+    dice: makeDiceSource((seed ^ 0x9e3779b9) >>> 0),
+    manual: makeManualSource(),
+  };
+  const GS = {
+    G, S, cfg: { seed, homeSlot: cfg.homeSlot, starters: cfg.starters,
+      lineups: cfg.lineups || null, benches: cfg.benches || null, managers },
+    gameId, suffix, seed,
+    exportId: 'EXHIBITION-CHC-MON-' + seed + '-' + suffix,
+    sources, sourceKind: cfg.sourceKind || 'deck',
+    feed: [], undoStack: [], paCount: 0, undoCount: 0,
+    gen: null, logMark: 0, pendingStep: null, pendingDecision: null,
+    sealed: false, storageOk: true, storageWarned: false, finished: false,
+    setupBlock: { fixture: fx.id, label: fx.label, home: cfg.homeSlot,
+      venue: fx.clubs[cfg.homeSlot === 'CHC' ? 'CHC' : 'MON'].park,
+      starters: cfg.starters, closers: fx.closers, managers,
+      diceMode: cfg.sourceKind || 'deck', seed },
+  };
+  S.source = sources[GS.sourceKind];
+  GS._storage = storage || null;
+
+  GS.setSource = function (kind) {
+    if (S.deck.peek) return 'a manual 2d6 peek is outstanding (FAC ' + S.deck.peek + '); flip it or undo the PA before switching';
+    if (!sources[kind]) return 'unknown source ' + kind;
+    GS.sourceKind = kind; S.source = sources[kind];
+    GS.setupBlock.diceMode = kind;
+    return null;
+  };
+  GS._snapshot = function () {
+    GS.undoStack.push({ snap: snapshotState(S), feedLen: GS.feed.length, paCount: GS.paCount });
+    if (GS.undoStack.length > 200) GS.undoStack.shift();
+  };
+  GS._feedBlock = function (action) {
+    const lines = S.log.slice(GS.logMark);
+    GS.logMark = S.log.length;
+    if (lines.length) GS.feed.push({ pa: GS.paCount, lines, live: true, action: !!action });
+  };
+  GS.save = function () {
+    if (!GS._storage) return;
+    try {
+      const payload = { version: 1, gameId: GS.gameId, cfg: GS.cfg, sourceKind: GS.sourceKind,
+        state: snapshotState(S), feed: GS.feed, paCount: GS.paCount, undoCount: GS.undoCount,
+        setupBlock: GS.setupBlock, finished: GS.finished };
+      delete payload.state.source;
+      GS._storage.setItem(SAVE_PREFIX + GS.gameId, JSON.stringify(payload));
+      GS.storageOk = true;
+    } catch (e) {
+      GS.storageOk = false;
+      if (!GS.storageWarned) {
+        GS.storageWarned = true;
+        GS.feed.push({ pa: GS.paCount, lines: ['Saved indicator: storage unavailable — this game is being kept in memory only (' + (e && e.message ? e.message : 'write failed') + ').'], live: true, action: true });
+      }
+    }
+  };
+  GS._decisionClub = function (dec) {
+    if (dec.kind === 'coverage') return dec.team;
+    return batTeam(S);
+  };
+  GS._pump = function (answer) { return GS._pumpFrom(GS.gen.next(answer)); };
+  GS._pumpFrom = function (r0) {
+    let r = r0;
+    let guard = 0;
+    while (!r.done) {
+      const y = r.value;
+      if (y && y.step) {
+        let v;
+        try { v = S.source.serve(y.step, S); }
+        catch (e) {
+          if (GS.sourceKind === 'manual') { GS.pendingStep = y.step; return { status: 'STEP', kind: y.step, error: e.message }; }
+          throw e;
+        }
+        r = GS.gen.next(v);
+      } else if (y && y.decision) {
+        const club = GS._decisionClub(y.decision);
+        if (GS.cfg.managers[club] === 'human') {
+          GS.pendingDecision = y.decision;
+          return { status: 'DECISION', decision: y.decision };
+        }
+        r = GS.gen.next(undefined);
+      } else if (y && y.pause === 'rare') {
+        return { status: 'RARE' };
+      } else {
+        r = GS.gen.next();
+      }
+      if (++guard > 20000) throw new Error('game pump guard tripped');
+    }
+    const res = r.value;
+    GS.gen = null;
+    GS.paCount += 1;
+    GS._feedBlock(false);
+    if (res === 'FINAL') GS.finished = true;
+    GS.save();
+    return { status: res };
+  };
+  /* Play one plate appearance (or resume a parked one). */
+  GS.step = function () {
+    if (GS.sealed) return { status: 'SEALED' };
+    if (GS.finished) return { status: 'FINAL' };
+    if (!GS.gen) {
+      GS._snapshot();
+      GS.logMark = S.log.length;
+      GS.gen = gameStep(G, S, { stopAtRare: true });
+    }
+    return GS._pump(undefined);
+  };
+  GS.answer = function (ans) {
+    GS.pendingDecision = null;
+    return GS._pump(ans);
+  };
+  GS.resumeRare = function () { return GS._pump(undefined); };
+  GS.provide = function (input) {
+    if (!GS.pendingStep) return { status: 'NO_STEP' };
+    const kind = GS.pendingStep;
+    GS.manualProvide(input);
+    let v;
+    try { v = S.source.serve(kind, S); }
+    catch (e) { return { status: 'STEP', kind, error: e.message }; }
+    GS.pendingStep = null;
+    return GS._pumpFrom(GS.gen.next(v));
+  };
+  GS.manualProvide = function (input) {
+    const src = sources.manual;
+    const v = Object.assign({}, input);
+    if (v.form === 'card') { v.pa = GS.paCount + 1; v.stepLabel = GS.pendingStep; }
+    src.provide(v);
+  };
+  /* Managerial actions between plate appearances. Each is a
+   * snapshot point and an autosave point. */
+  GS.act = function (action, decide) {
+    if (GS.sealed || GS.finished || GS.gen) return { status: 'BUSY' };
+    GS._snapshot();
+    GS.logMark = S.log.length;
+    if (action.kind === 'pitch') {
+      changePitcher(G, S, action.slot, action.name);
+    } else if (action.kind === 'ph') {
+      drive(pinchHit(G, S, action.slot, action.out, action.inn, action.reason || 'pinch hit'), S, decide);
+    } else if (action.kind === 'pr') {
+      drive(pinchRun(G, S, action.slot, action.out, action.inn, action.reason || 'pinch run'), S, decide);
+    } else if (action.kind === 'sub') {
+      drive(substitute(G, S, action.slot, action.out, action.reason || 'substitution'), S, decide);
+    } else {
+      GS.undoStack.pop();
+      return { status: 'UNKNOWN_ACTION' };
+    }
+    GS._feedBlock(true);
+    GS.save();
+    return { status: 'OK' };
+  };
+  GS.undo = function () {
+    if (GS.sealed || !GS.undoStack.length) return false;
+    const flipsBefore = S.flips.length;
+    const consumedIds = S.flips.slice(GS.undoStack[GS.undoStack.length - 1].snap.flips.length)
+      .map((f) => f.fac_id).filter((x) => x);
+    const u = GS.undoStack.pop();
+    restoreState(S, u.snap);
+    S.source = sources[GS.sourceKind];
+    for (let i = u.feedLen; i < GS.feed.length; i++) GS.feed[i].live = false;
+    GS.paCount = u.paCount;
+    GS.gen = null; GS.pendingStep = null; GS.pendingDecision = null;
+    GS.finished = false;
+    GS.undoCount += 1;
+    const note = ['Undo: back to the end of PA ' + GS.paCount + '.'];
+    if (GS.sourceKind === 'manual' && consumedIds.length) {
+      note.push('Undo: return FAC ' + consumedIds.join(', FAC ') + ' to your deck; they are back in this cycle and may be flipped again.');
+    } else if (consumedIds.length) {
+      note.push('The ' + consumedIds.length + ' card(s) drawn in the undone span are restored to the deck.');
+    }
+    void flipsBefore;
+    GS.feed.push({ pa: GS.paCount, lines: note, live: true, action: true });
+    GS.logMark = S.log.length;
+    GS.save();
+    return true;
+  };
+  GS.audit = function () { return auditGame(G, S); };
+  GS.decisions = function () { return deriveDecisions(S); };
+  GS.exports = function () { return buildExports(GS); };
+  GS.seal = function () {
+    GS.sealed = true;
+    if (GS._storage) { try { GS._storage.removeItem(SAVE_PREFIX + GS.gameId); } catch (e) { /* gone either way */ } }
+  };
+  return GS;
+}
+/* Resume support (S6): peek at the one saved game, if any. */
+function peekSave(storage) {
+  if (!storage) return null;
+  try {
+    for (let i = 0; i < storage.length; i++) {
+      const k = storage.key(i);
+      if (k && k.startsWith(SAVE_PREFIX)) {
+        const p = JSON.parse(storage.getItem(k));
+        const st = p.state;
+        return { gameId: p.gameId, finished: !!p.finished,
+          label: PlayData.data.fixture.label,
+          inning: st.inning, half: st.half,
+          score: st.score, paCount: p.paCount };
+      }
+    }
+  } catch (e) { return null; }
+  return null;
+}
+function loadSave(storage) {
+  const peek = peekSave(storage);
+  if (!peek) return null;
+  const p = JSON.parse(storage.getItem(SAVE_PREFIX + peek.gameId));
+  const GS = createGame(Object.assign({}, p.cfg, { suffix: p.gameId.split('-').pop() }), storage);
+  restoreState(GS.S, p.state);
+  GS.S.source = GS.sources[p.sourceKind || 'deck'];
+  GS.sourceKind = p.sourceKind || 'deck';
+  GS.feed = p.feed || [];
+  GS.paCount = p.paCount || 0;
+  GS.undoCount = p.undoCount || 0;
+  GS.finished = !!p.finished;
+  GS.setupBlock = p.setupBlock || GS.setupBlock;
+  GS.logMark = GS.S.log.length;
+  GS.feed.push({ pa: GS.paCount, lines: ['Resumed. The undo stack starts empty: nothing before this point can be undone.'], live: true, action: true });
+  return GS;
+}
+function discardSave(storage) {
+  const peek = peekSave(storage);
+  if (peek) storage.removeItem(SAVE_PREFIX + peek.gameId);
+  return peek;
+}
+
+/* ---------------------------------------------------------- exports */
+function ipText(outs) { return Math.floor(outs / 3) + '.' + (outs % 3); }
+function batLineRow(name, bs) {
+  const pa = (bs.AB || 0) + (bs.BB || 0) + (bs.HBP || 0) + (bs.SH || 0) + (bs.SF || 0);
+  return [name, pa, bs.AB || 0, bs.R || 0, bs.H || 0, bs['2B'] || 0, bs['3B'] || 0, bs.HR || 0,
+    bs.RBI || 0, bs.BB || 0, bs.HBP || 0, bs.SO || 0, bs.SB || 0, bs.CS || 0, bs.GDP || 0];
+}
+function buildExports(GS) {
+  const S = GS.S, fx = PlayData.data.fixture;
+  const audit = auditGame(GS.G, S);
+  const auditBad = audit.filter((a) => !a.ok);
+  const dec = deriveDecisions(S);
+  const clubName = (slot) => fx.clubs[PlayData.clubOf(slot)].name;
+  const away = GS.cfg.homeSlot === 'CHC' ? 'OPP' : 'CHC';
+  const home = GS.cfg.homeSlot;
+  const today = new Date().toISOString().slice(0, 10);
+  const md = [];
+  md.push('# Exhibition Game: ' + clubName(away) + ' at ' + clubName(home));
+  md.push('');
+  md.push('**Game ID:** ' + GS.exportId);
+  md.push('**Date:** ' + today);
+  md.push('**Seed:** ' + GS.seed);
+  md.push('**Game recap:** R1-06 fixture, exhibition. ' + clubName(home) + ' ' + S.score[home] + ', ' + clubName(away) + ' ' + S.score[away] + '.');
+  md.push('**Series state after this game:** Exhibition, not a tournament game.');
+  md.push('');
+  const innings = Math.max(S.linescore[away].length, S.linescore[home].length, 9);
+  const head = ['| ', ''];
+  for (let i = 1; i <= innings; i++) head.push(String(i));
+  head.push('R', 'H', 'E');
+  md.push('| ' + head.slice(1).join(' | ') + ' |');
+  md.push('|' + '---|'.repeat(innings + 4));
+  for (const slot of [away, home]) {
+    const cells = [fx.clubs[PlayData.clubOf(slot)].short];
+    for (let i = 0; i < innings; i++) cells.push(String(S.linescore[slot][i] != null ? S.linescore[slot][i] : ''));
+    const hTotal = Object.values(S.teams[slot].batting).reduce((a, b) => a + (b.H || 0), 0);
+    cells.push(String(S.score[slot]), String(hTotal), String(S.teams[slot].team_errors));
+    md.push('| ' + cells.join(' | ') + ' |');
+  }
+  md.push('');
+  const decLine = [];
+  if (dec.W) decLine.push('W: ' + dec.W + ' (' + clubName(dec.winner) + ')');
+  if (dec.L) decLine.push('L: ' + dec.L + ' (' + clubName(dec.winner === 'CHC' ? 'OPP' : 'CHC') + ')');
+  if (dec.SV) decLine.push('SV: ' + dec.SV + ' (' + clubName(dec.winner) + ')');
+  md.push(decLine.length ? decLine.join(' · ') : 'Decisions: none recorded.');
+  for (const slot of [away, home]) {
+    md.push('');
+    md.push('## ' + clubName(slot) + ' batting');
+    md.push('');
+    md.push('| Player | PA | AB | R | H | 2B | 3B | HR | RBI | BB | HBP | SO | SB | CS | GDP |');
+    md.push('|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|');
+    const tm = S.teams[slot];
+    const orderNames = [];
+    for (const s of tm.order) if (!orderNames.includes(s.name)) orderNames.push(s.name);
+    for (const nm of Object.keys(tm.batting)) if (!orderNames.includes(nm)) orderNames.push(nm);
+    const tot = blankBstat();
+    for (const nm of orderNames) {
+      const bs = tm.batting[nm]; if (!bs) continue;
+      md.push('| ' + batLineRow(nm, bs).join(' | ') + ' |');
+      for (const k of Object.keys(tot)) tot[k] = (tot[k] || 0) + (bs[k] || 0);
+    }
+    md.push('| **Team** | ' + batLineRow('', tot).slice(1).join(' | ') + ' |');
+    md.push('');
+    md.push('## ' + clubName(slot) + ' pitching');
+    md.push('');
+    md.push('| Pitcher | IP | BF | H | R | ER | BB | SO |');
+    md.push('|---|---|---|---|---|---|---|---|');
+    for (const sp of S.pitcher_spans.filter((x) => x.team === slot)) {
+      const ps = tm.pitching[sp.name]; if (!ps) continue;
+      const outs = (sp.end ? sp.end[2] : S.def_outs[slot]) - sp.start[2];
+      md.push('| ' + [sp.name, ipText(outs), ps.BF || 0, ps.H || 0, ps.R || 0, ps.ER || 0, ps.BB || 0, ps.SO || 0].join(' | ') + ' |');
+    }
+  }
+  md.push('');
+  md.push('Exhibition. This game is not in the tournament record. Adoption is Joe\'s ruling, outside the app.');
+  if (auditBad.length) {
+    md.push('');
+    md.push('AUDIT: FAILED — ' + auditBad.map((a) => a.check + ' (' + a.detail + ')').join('; '));
+    md.push('This export failed an internal audit check and is not adoption-ready.');
+  }
+  const governance = {
+    audit: audit.map((a) => ({ check: a.check, ok: a.ok, detail: a.detail })),
+    ledger: S.ledger,
+    fatigue: S.fatigue_fix || null,
+    spans: S.pitcher_spans,
+    undo_count: GS.undoCount,
+    fac: { draws: S.deck.draws, reshuffles: S.deck.reshuffles, mid_cycle: S.deck.midCycle },
+    setup: GS.setupBlock,
+  };
+  const json = {
+    id: GS.exportId, series: 'EXHIBITION', fixture: fx.id, seed: GS.seed,
+    date: today, home: PlayData.clubOf(home), away: PlayData.clubOf(away),
+    venue: GS.setupBlock.venue,
+    score: { [PlayData.clubOf(away)]: S.score[away], [PlayData.clubOf(home)]: S.score[home] },
+    linescore: { [PlayData.clubOf(away)]: S.linescore[away], [PlayData.clubOf(home)]: S.linescore[home] },
+    decisions: dec,
+    batting: { [PlayData.clubOf(away)]: S.teams[away].batting, [PlayData.clubOf(home)]: S.teams[home].batting },
+    pitching: { [PlayData.clubOf(away)]: S.teams[away].pitching, [PlayData.clubOf(home)]: S.teams[home].pitching },
+    rolls: S.flips,
+    manager_log: GS.feed.filter((b) => b.live).map((b) => ({ pa: b.pa, action: !!b.action, lines: b.lines })),
+    governance,
+  };
+  return { markdown: md.join('\n'), json, audit };
+}
+
 /* Node export guard: the headless verification gate (replay
  * driver, batteries, distribution) loads the engine from here.
  * In the browser this file runs as a plain script and the guard
@@ -3278,6 +3675,7 @@ if (typeof module !== 'undefined' && module.exports) {
   module.exports = { PlayData, makeContext, fixtureTraits, newState, drive,
     gameStep, runGame, resolvePA, resolvePaInner, autoResolveRare, prePa, updateFatigue,
     ffPrecheck, ffEvaluate, ffState, sectionLookupRaw, fieldingLine,
+    createGame, loadSave, peekSave, discardSave, lineupLegality, swapLegality, makeSuffix, SAVE_PREFIX,
     CHARTS: { STEAL_COL, STEAL_HOME, BUNT, DEF_POS, HIT_G, DEF_HIT, DEF_ERR, DEF_OUT, catcherArm },
     maybeHook, enforceCloser, closeCheck, changePitcher, changePitcherRaw,
     pickReliever, removePitcher, substitute, pinchHit, pinchRun,

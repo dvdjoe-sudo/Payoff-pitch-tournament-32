@@ -983,7 +983,8 @@ function batteryBunts() {
 
 /* ============================================================ RUNNER */
 const BATTERIES = { vacancy: batteryVacancy, fatigue: batteryFatigue, chance: batteryChance,
-  outchart: batteryOutchart, rare: batteryRare, defense: batteryDefense, steals: batterySteals, bunts: batteryBunts };
+  outchart: batteryOutchart, rare: batteryRare, defense: batteryDefense, steals: batterySteals, bunts: batteryBunts,
+  uistate: batteryUIState };
 const wanted = process.argv.slice(2);
 const names = wanted.length ? wanted : Object.keys(BATTERIES);
 for (const n of names) {
@@ -997,3 +998,219 @@ for (const [b, v] of Object.entries(byBattery)) console.log(b + ': ' + v.pass + 
 const fails = RESULTS.filter((r) => !r.pass);
 console.log('BATTERIES: ' + (RESULTS.length - fails.length) + '/' + RESULTS.length + ' checks pass');
 process.exit(fails.length ? 1 : 0);
+
+/* ============================================================ UI STATE */
+function fakeStorage(fail) {
+  return { _m: new Map(), writes: 0,
+    get length() { return this._m.size; },
+    key(i) { return [...this._m.keys()][i]; },
+    getItem(k) { return this._m.has(k) ? this._m.get(k) : null; },
+    setItem(k, v) { this.writes++; if (fail) throw new Error('quota exceeded'); this._m.set(k, String(v)); },
+    removeItem(k) { this._m.delete(k); } };
+}
+function batteryUIState() {
+  const manualGame = (store) => P.createGame({ seed: 777, homeSlot: 'CHC',
+    starters: { CHC: 'Fergie Jenkins', OPP: 'Steve Rogers' },
+    managers: { CHC: 'profile', OPP: 'profile' }, sourceKind: 'manual' }, store || fakeStorage(false));
+  const playManualPA = (GS, first) => {
+    let st = first || GS.step();
+    let guard = 0;
+    while (st.status === 'STEP' && guard++ < 40) {
+      if (st.kind === '2d6' && !GS.S.deck.peek) st = GS.provide({ form: 'card', fac_id: 10, peek_id: 20 });
+      else if (st.kind === '2d6') st = GS.provide({ form: 'value', dice: [3, 4] });
+      else if (st.kind === '%') st = GS.provide({ form: 'value', value: 50 });
+      else st = GS.provide({ form: 'value', value: 3 });
+      if (st.status === 'RARE') st = GS.resumeRare();
+    }
+    return st;
+  };
+  // Manual card protocol: removal, duplicate refusal naming
+  // the consuming step, peek constraint and its refusal.
+  {
+    const GS = manualGame();
+    const st0 = GS.step();
+    check('uistate', 'a manual game parks at the first step', st0.status === 'STEP' && st0.kind === '2d6', JSON.stringify(st0));
+    const st1 = GS.provide({ form: 'card', fac_id: 10, peek_id: 20 });
+    check('uistate', 'the flipped card leaves the remaining deck and is consumed',
+      !GS.S.deck.order.slice(GS.S.deck.pos).includes(10) && !!GS.S.deck.consumed[10]
+      && GS.S.deck.consumed[10].pa === 1, JSON.stringify(GS.S.deck.consumed[10]));
+    check('uistate', 'the 2d6 serve sets the peek to the named next card', GS.S.deck.peek === 20);
+    const refuse = GS.provide({ form: 'card', fac_id: 30 });
+    check('uistate', 'flipping a different card under an outstanding peek is refused, naming the peeked card',
+      refuse.status === 'STEP' && /peeked FAC 20/.test(refuse.error || ''), JSON.stringify(refuse));
+    check('uistate', 'source switching is refused while the peek is outstanding',
+      typeof GS.setSource('dice') === 'string' && /peek/.test(GS.setSource('dice')));
+    const st2 = GS.provide({ form: 'card', fac_id: 20 });
+    check('uistate', 'flipping the peeked card clears the peek', GS.S.deck.peek === null && st2.status !== undefined);
+    const fin = playManualPA(GS, st2);
+    check('uistate', 'the manual PA completes', fin.status === 'PA_DONE' || fin.status === 'FINAL', JSON.stringify(fin));
+    // Duplicate: card 10 was consumed on PA 1; serving it on a
+    // later PA names the consuming step.
+    const st3 = GS.step();
+    if (st3.status === 'STEP' && st3.kind === '2d6') {
+      const dup = GS.provide({ form: 'card', fac_id: 10, peek_id: 11 });
+      check('uistate', 'a duplicate card is refused, naming its consuming PA and step',
+        dup.status === 'STEP' && /already flipped/.test(dup.error || '') && /PA 1/.test(dup.error || ''), JSON.stringify(dup));
+    } else {
+      check('uistate', 'a duplicate card is refused, naming its consuming PA and step', false, JSON.stringify(st3));
+    }
+  }
+  // Reshuffle restoration (protocol) and exhaustion.
+  {
+    const [G, S] = game({});
+    S.source = P.DeckSource;
+    const v = S.source.serve('2d6', S);
+    void v;
+    const consumedBefore = Object.keys(S.deck.consumed).length;
+    S.source.reshuffle(S, 'after the 3rd inning', 4);
+    check('uistate', 'a protocol reshuffle restores the full deck (consumed cards drawable again)',
+      consumedBefore >= 1 && Object.keys(S.deck.consumed).length === 0 && S.deck.order.length === 256,
+      'consumed before=' + consumedBefore + ' after=' + Object.keys(S.deck.consumed).length);
+    const [G2, S2] = game({});
+    S2.source = P.DeckSource;
+    for (let i = 0; i < 256; i++) S2.source.serve('%', S2);
+    const drawsBefore = S2.deck.draws;
+    S2.source.serve('%', S2);
+    check('uistate', 'exhaustion reshuffles mid-cycle and keeps serving',
+      S2.deck.midCycle >= 1 && S2.deck.draws === drawsBefore + 1
+      && S2.flips.some((f) => /RESHUFFLE: deck exhausted/.test(f.purpose || '')),
+      'midCycle=' + S2.deck.midCycle);
+    void G; void G2;
+  }
+  // Raw-value form: refusals and deck untouched on acceptance.
+  {
+    const GS = manualGame();
+    GS.step();
+    const bad1 = GS.provide({ form: 'value', value: 7 });
+    check('uistate', 'a 2d6 step refuses a pair-as-total (the low die would be lost)',
+      bad1.status === 'STEP' && !!bad1.error, JSON.stringify(bad1));
+    const bad2 = GS.provide({ form: 'value', dice: [3, 7] });
+    check('uistate', 'a 2d6 step refuses a die face above 6', bad2.status === 'STEP' && !!bad2.error);
+    const bad3 = GS.provide({ form: 'value', dice: [3] });
+    check('uistate', 'a 2d6 step refuses a single die', bad3.status === 'STEP' && !!bad3.error);
+    const deckBefore = JSON.stringify([GS.S.deck.order, GS.S.deck.pos, GS.S.deck.consumed, GS.S.deck.draws]);
+    const ok = GS.provide({ form: 'value', dice: [3, 4] });
+    check('uistate', 'an accepted raw 2d6 leaves deck order, position, consumed set and draws bitwise unchanged',
+      JSON.stringify([GS.S.deck.order, GS.S.deck.pos, GS.S.deck.consumed, GS.S.deck.draws]) === deckBefore && ok.status === 'STEP',
+      JSON.stringify(ok));
+    if (ok.status === 'STEP' && ok.kind === '%') {
+      const bad4 = GS.provide({ form: 'value', value: 100 });
+      check('uistate', 'a % step refuses 100', bad4.status === 'STEP' && !!bad4.error);
+      const ok2 = GS.provide({ form: 'value', value: 0 });
+      check('uistate', 'a % step accepts 00 (a live rare-play read)', ok2.status !== 'STEP' || ok2.kind !== '%', JSON.stringify(ok2));
+    } else {
+      check('uistate', 'a % step refuses 100', false, JSON.stringify(ok));
+      check('uistate', 'a % step accepts 00 (a live rare-play read)', false, JSON.stringify(ok));
+    }
+  }
+  // DiceSource: ranges, 00 live, deck untouched.
+  {
+    const [G, S] = game({});
+    const dice = P.makeDiceSource(1234);
+    const deckBefore = JSON.stringify([S.deck.order, S.deck.pos, S.deck.consumed, S.deck.draws]);
+    let zeros = 0, inRange = true;
+    for (let i = 0; i < 400; i++) { const v = dice.serve('%', S); if (v === 0) zeros++; if (!(v >= 0 && v <= 99)) inRange = false; }
+    check('uistate', 'the dice roller serves % in 0..99 with 00 live', inRange && zeros >= 1, 'zeros=' + zeros);
+    check('uistate', 'the dice roller leaves the deck untouched',
+      JSON.stringify([S.deck.order, S.deck.pos, S.deck.consumed, S.deck.draws]) === deckBefore);
+    void G;
+  }
+  // Snapshot restore: deck exactness, undo across a reshuffle,
+  // undone feed blocks, export on the live timeline only.
+  {
+    const store = fakeStorage(false);
+    const GS = P.createGame({ seed: 99, homeSlot: 'CHC',
+      starters: { CHC: 'Fergie Jenkins', OPP: 'Steve Rogers' },
+      managers: { CHC: 'profile', OPP: 'profile' }, sourceKind: 'deck' }, store);
+    const deckAt = [], feedAt = [];
+    let reshufflePA = -1, guard = 0;
+    while (guard++ < 200) {
+      let st = GS.step();
+      if (st.status === 'RARE') st = GS.resumeRare();
+      if (st.status !== 'PA_DONE' && st.status !== 'FINAL') break;
+      deckAt.push(JSON.stringify(GS.S.deck.order) + '|' + JSON.stringify(GS.S.deck.consumed) + '|' + GS.S.deck.pos);
+      feedAt.push(GS.feed.length);
+      if (GS.S.deck.reshuffles >= 1 && reshufflePA < 0) reshufflePA = GS.paCount;
+      if (st.status === 'FINAL' || (reshufflePA > 0 && GS.paCount >= reshufflePA + 2)) break;
+    }
+    check('uistate', 'a protocol reshuffle occurred during play', reshufflePA > 0, 'reshufflePA=' + reshufflePA);
+    const target = reshufflePA - 1; // the PA just before the reshuffle boundary step
+    let undone = 0;
+    while (GS.paCount > target && GS.undo()) undone++;
+    check('uistate', 'undo across the reshuffle restores the exact pre-reshuffle deck',
+      undone >= 2 && (JSON.stringify(GS.S.deck.order) + '|' + JSON.stringify(GS.S.deck.consumed) + '|' + GS.S.deck.pos) === deckAt[target - 1],
+      'paCount=' + GS.paCount + ' target=' + target);
+    check('uistate', 'feed blocks after the restore point are marked undone, not deleted',
+      GS.feed.some((b) => b.live === false) && GS.feed.length >= feedAt[feedAt.length - 1]);
+    const liveLog = GS.exports().json.manager_log.length;
+    const liveBlocks = GS.feed.filter((b) => b.live).length;
+    check('uistate', 'the export after a restore contains only live-timeline blocks',
+      liveLog === liveBlocks, 'export=' + liveLog + ' live=' + liveBlocks);
+  }
+  // Autosave after every PA and every managerial action.
+  {
+    const store = fakeStorage(false);
+    const GS = P.createGame({ seed: 5, homeSlot: 'CHC',
+      starters: { CHC: 'Fergie Jenkins', OPP: 'Steve Rogers' },
+      managers: { CHC: 'human', OPP: 'profile' }, sourceKind: 'deck' }, store);
+    let st = GS.step();
+    if (st.status === 'RARE') st = GS.resumeRare();
+    const saved1 = JSON.parse(store.getItem(P.SAVE_PREFIX + GS.gameId));
+    check('uistate', 'autosave fires after a resolved PA', !!saved1 && saved1.paCount === GS.paCount && GS.paCount === 1);
+    const w0 = store.writes;
+    GS.act({ kind: 'pitch', slot: 'CHC', name: 'Hippo Vaughn' });
+    check('uistate', 'autosave fires after a managerial action', store.writes > w0
+      && JSON.parse(store.getItem(P.SAVE_PREFIX + GS.gameId)).state.teams.CHC.pitcher === 'Hippo Vaughn');
+  }
+  // Resume: empty undo stack, banner says so.
+  {
+    const store = fakeStorage(false);
+    const GS = P.createGame({ seed: 5, homeSlot: 'CHC',
+      starters: { CHC: 'Fergie Jenkins', OPP: 'Steve Rogers' },
+      managers: { CHC: 'profile', OPP: 'profile' }, sourceKind: 'deck' }, store);
+    GS.step();
+    const GS2 = P.loadSave(store);
+    check('uistate', 'resume restores the game with an empty undo stack and the banner says so',
+      !!GS2 && GS2.undoStack.length === 0 && GS2.undo() === false
+      && GS2.feed.some((b) => b.lines.some((l) => /undo stack starts empty/.test(l))));
+  }
+  // Storage failure: playable in memory, named once.
+  {
+    const store = fakeStorage(true);
+    const GS = P.createGame({ seed: 5, homeSlot: 'CHC',
+      starters: { CHC: 'Fergie Jenkins', OPP: 'Steve Rogers' },
+      managers: { CHC: 'profile', OPP: 'profile' }, sourceKind: 'deck' }, store);
+    let st = GS.step();
+    if (st.status === 'RARE') st = GS.resumeRare();
+    const named = GS.feed.filter((b) => b.lines.some((l) => /storage unavailable/.test(l))).length;
+    const st2 = GS.step();
+    check('uistate', 'a storage failure degrades to unsaved play, is named once, and never blocks',
+      GS.storageOk === false && named === 1 && (st.status === 'PA_DONE' || st.status === 'FINAL') && st2.status !== undefined,
+      'named=' + named);
+  }
+  // gameId collision: the suffix regenerates.
+  {
+    const store = fakeStorage(false);
+    store.setItem(P.SAVE_PREFIX + 'r106-5-aaaa', '{}');
+    const seq = [0, 0, 0, 0, 0.04, 0.04, 0.04, 0.04];
+    let i = 0;
+    const GS = P.createGame({ seed: 5, homeSlot: 'CHC',
+      starters: { CHC: 'Fergie Jenkins', OPP: 'Steve Rogers' },
+      managers: { CHC: 'profile', OPP: 'profile' }, sourceKind: 'deck',
+      suffixRng: () => seq[Math.min(i++, seq.length - 1)] }, store);
+    check('uistate', 'a colliding gameId regenerates its suffix', GS.gameId !== 'r106-5-aaaa' && GS.suffix.length === 4, GS.gameId);
+  }
+  // S1 legality checks.
+  {
+    const fx = P.PlayData.data.fixture;
+    check('uistate', 'the staged lineups are legal', P.lineupLegality(fx.lineups.CHC, 'CHC').length === 0
+      && P.lineupLegality(fx.lineups.MON, 'MON').length === 0);
+    const bad1 = fx.lineups.CHC.map((s) => s.pos === 'DH' ? { name: s.name, pos: 'CF' } : s);
+    check('uistate', 'a coverage violation is named', P.lineupLegality(bad1, 'CHC').length >= 1);
+    const bad2 = fx.lineups.CHC.map((s) => s.name === 'Mark Grace' ? { name: 'Ryne Sandberg', pos: '1B' } : s);
+    check('uistate', 'a duplicate is named', P.lineupLegality(bad2, 'CHC').some((p) => /twice/.test(p)));
+    check('uistate', 'a swap to an uncarded position is refused in words',
+      typeof P.swapLegality(fx.lineups.CHC, 'CHC', 'Ernie Banks', 'Johnny Kling') === 'string');
+    check('uistate', 'a legal bench swap passes', P.swapLegality(fx.lineups.CHC, 'CHC', 'Gabby Hartnett', 'Johnny Kling') === null);
+  }
+}
