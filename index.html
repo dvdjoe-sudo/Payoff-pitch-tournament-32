@@ -52,30 +52,27 @@
         <input id="search" name="q" type="search" placeholder="Name, club, or id" autocomplete="off">
         <button type="submit">Search</button>
       </form>
-      <p class="header-links">
-        <a href="#/about">About this tournament</a>
-        <a href="#/formulas">Formulas</a>
-        <a href="feed/tournament.json">JSON feed</a>
-        <a href="feed/games.xml">RSS</a>
-      </p>
-      <nav class="views" aria-label="Sections">
-        <a href="#/bracket" data-view="bracket">Bracket</a>
-        <a href="#/standings" data-view="standings">Standings</a>
-        <a href="#/rosters" data-view="rosters">Rosters</a>
-        <a href="#/awards" data-view="awards">Awards</a>
-        <a href="#/records" data-view="records">Records</a>
-        <a href="#/stats" data-view="stats">Stats</a>
-        <a href="#/team-stats" data-view="team-stats">Team stats</a>
-        <a href="#/leaders" data-view="leaders">Leaders</a>
-        <a href="#/results" data-view="results">Results</a>
-        <a href="#/history" data-view="history">History</a>
-        <a href="#/previews" data-view="previews">Previews</a>
-        <a href="#/h2h" data-view="h2h">Head to head</a>
-        <a href="#/recap" data-view="recap">Recap</a>
-        <a href="#/engines" data-view="engines">Engines</a>
-        <a href="#/add" data-view="add">Add game</a>
-        <a href="#/play" data-view="play">Play</a>
-      </nav>
+      <div class="nav-menu" id="nav-menu">
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel">Sections</button>
+        <nav class="views" id="nav-panel" aria-label="Sections">
+          <a href="#/bracket" data-view="bracket">Bracket</a>
+          <a href="#/standings" data-view="standings">Standings</a>
+          <a href="#/rosters" data-view="rosters">Rosters</a>
+          <a href="#/awards" data-view="awards">Awards</a>
+          <a href="#/records" data-view="records">Records</a>
+          <a href="#/stats" data-view="stats">Stats</a>
+          <a href="#/team-stats" data-view="team-stats">Team stats</a>
+          <a href="#/leaders" data-view="leaders">Leaders</a>
+          <a href="#/results" data-view="results">Results</a>
+          <a href="#/history" data-view="history">History</a>
+          <a href="#/previews" data-view="previews">Previews</a>
+          <a href="#/h2h" data-view="h2h">Head to head</a>
+          <a href="#/recap" data-view="recap">Recap</a>
+          <a href="#/engines" data-view="engines">Engines</a>
+          <a href="#/add" data-view="add">Add game</a>
+          <a href="#/play" data-view="play">Play</a>
+        </nav>
+      </div>
     </div>
   </header>
   <p id="milestone-banner" class="milestone-banner" hidden></p>
@@ -84,6 +81,12 @@
     <div id="view"></div>
   </main>
   <footer class="site-footer">
+    <p class="header-links">
+      <a href="#/about">About this tournament</a>
+      <a href="#/formulas">Formulas</a>
+      <a href="feed/tournament.json">JSON feed</a>
+      <a href="feed/games.xml">RSS</a>
+    </p>
     <p id="footer-note"></p>
   </footer>
   <script src="js/play.js"></script>
