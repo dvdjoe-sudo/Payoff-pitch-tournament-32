@@ -1,8 +1,16 @@
 {
  "title": "Payoff Pitch Tournament 32",
  "site": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/",
- "games_played": 26,
- "next_up": null,
+ "games_played": 27,
+ "next_up": {
+  "series_id": "R1-06",
+  "game_in_series": 2,
+  "home": "CHC",
+  "away": "MON",
+  "home_name": "Chicago Cubs",
+  "away_name": "Montreal Expos",
+  "starters": {}
+ },
  "games": [
   {
    "id": "R1-01-G1",
@@ -419,6 +427,22 @@
    "recap": "The St. Louis Cardinals beat the Colorado Rockies 10-7. The go-ahead run scored in the 1st inning. Albert Pujols led the St. Louis Cardinals offense with 3 hits and 1 RBI in 4 at-bats. Harry Brecheen earned the win, allowing 6 earned runs in 7.1 innings.",
    "rng_seed": 20261304,
    "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-05-G4"
+  },
+  {
+   "id": "R1-06-G1",
+   "series_id": "R1-06",
+   "game_in_series": 1,
+   "date": "2026-10-29",
+   "away": "MON",
+   "home": "CHC",
+   "away_name": "Montreal Expos",
+   "home_name": "Chicago Cubs",
+   "away_runs": 4,
+   "home_runs": 5,
+   "winner": "CHC",
+   "recap": "Played by Joe in the playable app (Wrigley Field, managers Frank Chance and Dick Williams; dice mode deck, 47 FAC draws, 1 reshuffle, 0 undos) and ruled official R1-06 Game 1 by Joe in chat on 2026-10-29. Box score record: no play by play or manager log in the source export, and declarations are unstated in the source. Chicago came back with two in the 7th and one in the 8th to win 5 to 4; Kerry Wood got the win in relief and Bruce Sutter the save.",
+   "rng_seed": 229154,
+   "url": "https://dvdjoe-sudo.github.io/Payoff-pitch-tournament-32/#/game/R1-06-G1"
   }
  ]
 }

@@ -21,7 +21,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 3 | BOS | Boston Red Sox | Appearances only |
 | 4 | DET | Detroit Tigers | Official roster, plus game appearances |
 | 5 | STL | St. Louis Cardinals | Official roster, plus game appearances |
-| 6 | CHC | Chicago Cubs | Official roster |
+| 6 | CHC | Chicago Cubs | Official roster, plus game appearances |
 | 7 | ATL | Atlanta Braves | Official roster |
 | 8 | PIT | Pittsburgh Pirates | Official roster |
 | 9 | CIN | Cincinnati Reds | Official roster |
@@ -42,7 +42,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 24 | TEX | Texas Rangers | Official roster |
 | 25 | TOR | Toronto Blue Jays | Official roster |
 | 26 | SD | San Diego Padres | Official roster |
-| 27 | MON | Montreal Expos | Official roster |
+| 27 | MON | Montreal Expos | Official roster, plus game appearances |
 | 28 | COL | Colorado Rockies | Official roster, plus game appearances |
 | 29 | ARI | Arizona Diamondbacks | Appearances only |
 | 30 | TB | Tampa Bay Rays | Appearances only |
@@ -456,6 +456,29 @@ These names are not on the active roster.
 ### Greatest what if
 
 - Mark Prior (5 Cubs seasons)
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Ryne Sandberg (`sandbry01`) in R1-06-G1
+- Slot 2: Mark Grace (`gracema01`) in R1-06-G1
+- Slot 3: Ron Santo (`santoro01`) in R1-06-G1
+- Slot 4: Sammy Sosa (`sosasa01`) in R1-06-G1
+- Slot 5: Billy Williams (`willibi01`) in R1-06-G1
+- Slot 6: Ernie Banks (`bankser01`) in R1-06-G1
+- Slot 7: Hack Wilson (`wilsoha01`) in R1-06-G1
+- Slot 8: Gabby Hartnett (`hartnga01`) in R1-06-G1
+- Slot 9: Pete Crow-Armstrong (`crowape01`) in R1-06-G1
+
+### Starts, in the order the games were played
+
+- Fergie Jenkins (`jenkife01`) started R1-06-G1
+
+### Relievers who have appeared
+
+- Kerry Wood (`woodke02`), first seen in R1-06-G1
+- Bruce Sutter (`suttebr01`), first seen in R1-06-G1
 
 ## 7. Atlanta Braves (ATL)
 
@@ -1586,6 +1609,33 @@ Official roster provided by the tournament owner. The lines are copied from that
 - MR1 Mel Rojas 7
 - MR2 Andy McGaffigan 5
 - LHP Woodie Fryman 8
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Tim Raines (`raineti01`) in R1-06-G1
+- Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1
+- Slot 3: Larry Walker (`walkela01`) in R1-06-G1
+- Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1
+- Slot 5: Gary Carter (`cartega01`) in R1-06-G1
+- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1
+- Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1
+- Slot 8: Tim Wallach (`wallati01`) in R1-06-G1
+- Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1
+
+### Substitutes who have batted
+
+- Brian Schneider (`schnebr01`), slot 9
+- Rusty Staub (`staubru01`), slot 9
+
+### Starts, in the order the games were played
+
+- Steve Rogers (`rogerst01`) started R1-06-G1
+
+### Relievers who have appeared
+
+- Tim Burke (`burketi01`), first seen in R1-06-G1
 
 ## 28. Colorado Rockies (COL)
 
