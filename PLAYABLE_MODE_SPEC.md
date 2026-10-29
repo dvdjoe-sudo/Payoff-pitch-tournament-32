@@ -1445,6 +1445,40 @@ per series:
   rarely) pushes the environment outside it, loose enough that
   honest sampling noise does not fail the build.
 
+  *Build note (2026-10-28, distribution gate as run).* The
+  prescribed run (scripts/distribution.mjs: 200 games, seeds
+  20263001-20263200, venues alternating, chairs uniform,
+  DeckSource throughout, the reference volume's own recorded
+  environment — the promotion_series_game stack, which never
+  calls Williams' pre_pa: the volume book records zero bench
+  plate appearances in 622 team-games) landed Chicago 5.71
+  (in band), Montreal 4.49 (band top 4.48), Chicago win share
+  62.5% (band floor 63%): two figures marginally outside.
+  Diagnosis, from the recorded evidence rather than the port:
+  (1) Chicago's line matches the reference across every
+  sample (five independent 200-game port samples pool to
+  5.79 against the reference 5.80); the residual sits
+  entirely in Montreal scoring (port samples 4.24-4.53,
+  pooled 4.41, against the reference 3.98, whose own sampling
+  error at 311 games is about ±0.17). (2) The reference
+  blends two different Python engine builds: its 169 Wrigley
+  games ran on the Cubs set's engine_v2.py (the stack this
+  port ports, arbitrated exact by both scripted replays),
+  while its 142 Stade Olympique games ran through run_sm on
+  the Giants-Expos set's older engine.py. Measured directly,
+  that engine at Stade over 40 games yields Chicago 4.33 and
+  Montreal 3.35, a lower-scoring environment for both clubs
+  than the same card on the governing stack (port at Stade:
+  5.29 and 4.18); the blend accounts for much of the
+  residual. (3) The app-game environment of Section 7.2
+  (Williams' pre_pa live, bunt overlay on) was also measured
+  on the gate seeds: Chicago 6.12, Montreal 4.53, win share
+  69.5% (in band). No tolerance, reference figure, or
+  recorded datum was adjusted. The gate as specified stands
+  marginally unpassed on the Montreal and win-share figures;
+  the divergence evidence is this note, and whether the mode
+  ships on it is Joe's ruling, not the build's.
+
 ### 11.4 Ship checklist
 
 - `scripts/build_playable_data.py` output committed, and the playable
