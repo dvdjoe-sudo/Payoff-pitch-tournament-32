@@ -395,6 +395,21 @@ details.card-set summary {
 
 .phone-label { display: none; }
 
+/* Compact hitter card: smaller type and tighter spacing so the whole
+   card fits with less scrolling. Hitter sections only; the pitcher
+   card keeps the roomier layout. */
+.hit-card { font-size: 0.86rem; }
+.hit-card h4 { margin: 0.45rem 0 0.2rem; font-size: 0.95rem; }
+.hit-card .card-facts { gap: 0.28rem; margin-bottom: 0.5rem; }
+.hit-card .card-chip { padding: 0.1rem 0.5rem; }
+.hit-card .fielding-line { gap: 0.25rem; margin-bottom: 0.5rem; }
+.hit-card .field-row { gap: 0.28rem; }
+.hit-card .meta { margin-bottom: 0.3rem; }
+.hit-card .card-band th,
+.hit-card .card-band td { padding: 0.16rem 0.35rem; }
+.hit-card .card-band .num { padding-left: 0.5rem; }
+.hit-card .note { margin-bottom: 0.35rem; }
+
 .dice-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));

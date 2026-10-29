@@ -3775,7 +3775,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     return grid;
   }
   function hitterCardBlock(bat) {
-    const block = el('section', { class: 'payoff-card' });
+    const block = el('section', { class: 'payoff-card hit-card' });
     block.appendChild(el('h4', { text: 'Hitter card' }));
     const bits = [];
     if (bat.bats) bits.push(factChip('Bats', bat.bats));
