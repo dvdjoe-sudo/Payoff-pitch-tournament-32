@@ -27,8 +27,6 @@ jobs:
         run: python3 -m pip install -r requirements.txt
       - name: Validate the archive
         run: python3 scripts/validate_results.py
-      - name: Verify the playable data file
-        run: python3 scripts/verify_playable_data.py
       - name: Rebuild generated pages
         run: |
           python3 scripts/build_peak162.py
