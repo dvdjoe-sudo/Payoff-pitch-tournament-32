@@ -3916,7 +3916,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     stepError: null, modal: null, confirmDiscard: false, lastPitcher: null, view: null,
     feedOpen: false,
     _hl: null, _hlGs: null, _hlSeenPa: 0, _shownCards: null, _parkedDecision: false,
-    _diceShow: null, _facShow: null, _animDice: null, _animFac: null };
+    _diceShow: null, _facShow: null, _animDice: null, _animFac: null,
+    _mxPair: null, _mxGs: null };
   PUI.UI = UI;
   const fx = () => PlayData.data.fixture;
   const slotOfClub = (club) => club === 'CHC' ? 'CHC' : 'OPP';
@@ -4210,6 +4211,30 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const pitcherNow = curPitcher(S);
     if (UI.lastPitcher && UI.lastPitcher !== pitcherNow) UI.cardTab = 'pitcher';
     UI.lastPitcher = pitcherNow;
+    // Matchup moment: the displayed pair (the live pair, or the
+    // resolved PA's pair while a highlight is held) is named on a
+    // slim strip above the cards. When the live pair changes, the
+    // cards present themselves: the batter's card flips up onto
+    // the table, the pitcher's slides in from the other side.
+    // Pure presentation: the entrance classes live only on this
+    // render's DOM, so the next input's re-render dismisses them
+    // at once, and the held result highlight is never touched.
+    // The spotlight is a soft stadium-light edge on the displayed
+    // pair, the batter's card lit stronger than the pitcher's;
+    // it swaps with the half inning because the cards do.
+    if (UI._mxGs !== GS) { UI._mxGs = GS; UI._mxPair = null; }
+    const heldPair = UI._hl;
+    const mxBatName = heldPair ? heldPair.bat.name : currentBatter(S)[0];
+    const mxBatClub = heldPair ? heldPair.bat.team : clubOfSlot(bat);
+    const mxPitName = heldPair ? heldPair.pit.name : pitcherNow;
+    const mxPitClub = heldPair ? heldPair.pit.team : clubOfSlot(fld);
+    const mxKey = mxBatClub + ':' + mxBatName + '|' + mxPitClub + ':' + mxPitName;
+    const mxAnim = !heldPair && UI._mxPair !== mxKey;
+    UI._mxPair = mxKey;
+    const mxStrip = el('div', { class: 'play-matchup' + (mxAnim ? ' mx-in' : '') });
+    mxStrip.appendChild(el('span', { class: 'mx-side mx-bat', text: mxBatName + ' · ' + clubShort(mxBatClub) }));
+    mxStrip.appendChild(el('span', { class: 'mx-vs', text: 'vs' }));
+    mxStrip.appendChild(el('span', { class: 'mx-side mx-pit', text: mxPitName + ' · ' + clubShort(mxPitClub) }));
     const tabRow = el('div', { class: 'play-toggle-row play-card-tabs' });
     tabRow.appendChild(button('Batter', () => { UI.cardTab = 'batter'; renderGame(view); }, { cls: UI.cardTab === 'batter' ? 'on' : '' }));
     tabRow.appendChild(button('Pitcher', () => { UI.cardTab = 'pitcher'; renderGame(view); }, { cls: UI.cardTab === 'pitcher' ? 'on' : '' }));
@@ -4220,6 +4245,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     layout.appendChild(mainCol);
     page.appendChild(layout);
     mainCol.appendChild(tabRow);
+    mainCol.appendChild(mxStrip);
     const cards = el('div', { class: 'play-cards show-' + UI.cardTab });
     // While a highlight is held, the cards on screen stay the
     // resolved PA's pair, lit, until the next input clears it.
@@ -4227,9 +4253,13 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const batCardData = held ? held.bat : hcard(G, currentBatter(S)[0], bat);
     const bCard = hitterCardBlock(batCardData);
     bCard.classList.add('play-card-batter');
+    bCard.classList.add('spot-bat');
+    if (mxAnim) bCard.classList.add('mx-flip');
     const pitCardData = held ? held.pit : pitcherCard(G, S, fld, pitcherNow);
     const pCard = pitcherCardBlock(pitCardData);
     pCard.classList.add('play-card-pitcher');
+    pCard.classList.add('spot-pit');
+    if (mxAnim) pCard.classList.add('mx-slide');
     UI._shownCards = { bat: batCardData, pit: pitCardData };
     cards.appendChild(bCard);
     // The input controls live in the dead space under the
