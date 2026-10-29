@@ -111,6 +111,17 @@ def player_index(data: dict) -> dict[tuple[str, str], str]:
             award = (game.get("wls") or {}).get(side)
             if award:
                 found[(award["team"], norm_key(award["name"]))] = award["player_id"]
+    # Roster ids fill the gaps for players with no stored line yet, so a
+    # club's first imported game keys to the same ids as its cards and
+    # player pages. Stored lines always win: they are already in `found`.
+    rosters_path = ROOT / "data" / "rosters.json"
+    if rosters_path.exists():
+        rosters = json.loads(rosters_path.read_text(encoding="utf-8"))
+        for code, club in rosters.items():
+            for player in club.get("players", []):
+                key = (code, norm_key(player["name"]))
+                if key not in found:
+                    found[key] = player["id"]
     return found
 
 
