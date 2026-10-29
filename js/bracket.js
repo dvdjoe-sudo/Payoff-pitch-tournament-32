@@ -1705,7 +1705,8 @@
     block.appendChild(el("h3", { text: "Payoff Pitch card" }));
     if (card.card_bat) {
       var bat = card.card_bat;
-      block.appendChild(el("h4", { text: "Hitter card" }));
+      var hit = el("div", { class: "hit-card" });
+      hit.appendChild(el("h4", { text: "Hitter card" }));
       var bits = [];
       if (bat.bats) bits.push(factChip("Bats", bat.bats));
       if (bat.throws) bits.push(factChip("Throws", bat.throws));
@@ -1716,25 +1717,26 @@
       if (bat.fielding) bits.push(factChip("Fielding", bat.fielding));
       if (bat.arm) bits.push(factChip("Arm", bat.arm));
       var facts = factRow(bits);
-      if (facts) block.appendChild(facts);
-      if (bat.positions && bat.positions.length) block.appendChild(fieldingLine(bat.positions));
+      if (facts) hit.appendChild(facts);
+      if (bat.positions && bat.positions.length) hit.appendChild(fieldingLine(bat.positions));
       ["WHEELHOUSE", "PATIENT", "TOUGH", "IN-PLAY"].forEach(function (name) {
         var section = bat.sections && bat.sections[name];
         if (!section) return;
-        block.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
+        hit.appendChild(el("p", { class: "meta", text: name + " (percentile bands)" }));
         var rows = ["HR", "3B", "2B", "1B", "BB", "HBP", "SO"].filter(function (result) {
           return (section.vsLHP && section.vsLHP[result]) || (section.vsRHP && section.vsRHP[result]);
         }).map(function (result) {
           return [result, bandText(section.vsLHP && section.vsLHP[result]), bandText(section.vsRHP && section.vsRHP[result])];
         });
-        if (rows.length) block.appendChild(cardBandTable(rows));
+        if (rows.length) hit.appendChild(cardBandTable(rows));
       });
       if (bat.out_table && bat.out_table.length) {
-        block.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
+        hit.appendChild(el("p", { class: "note", text: "Out table: " + bat.out_table.map(function (row) {
           return row.range[0] + "-" + row.range[1] + " " + row.result;
         }).join(" · ") }));
       }
-      if (bat.qa_status) block.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
+      if (bat.qa_status) hit.appendChild(el("p", { class: "note", text: "Card QA: " + bat.qa_status + "." }));
+      block.appendChild(hit);
     }
     if (card.card_pit) {
       var pit = card.card_pit;
