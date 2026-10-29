@@ -77,6 +77,30 @@ def num(value: str) -> int:
     return int(float(text))
 
 
+def num_or_none(value) -> int | None:
+    """A stat the source box does not carry stays null, never a played zero."""
+    text = (value or "").strip().replace("*", "").replace(",", "")
+    if text in {"", "—", "–", "-"}:
+        return None
+    return num(text)
+
+
+def null_write_warning(game_id: str, batting: list, pitching: list) -> None:
+    """Name every stat field this import wrote as null for the game."""
+    notes = []
+    for kind, lines, fields in (
+        ("batting", batting, ("sac", "sf")),
+        ("pitching", pitching, ("hr", "hb")),
+    ):
+        for field in fields:
+            count = sum(1 for line in lines if line.get(field) is None)
+            if count:
+                notes.append(f"{field} on {count} {kind} line(s)")
+    if notes:
+        print(f"warning: {game_id}: written as null, absent from the source box: "
+              + "; ".join(notes))
+
+
 def norm_key(name: str) -> str:
     cleaned = name.replace("**", "").replace("*", "")
     cleaned = re.sub(r"\((?:W|L|SV|S)\)", "", cleaned)
@@ -255,7 +279,7 @@ def build(meta: dict, rows: list[dict], players: dict | None = None):
                 "er": num(row.get("er") or "0"),
                 "bb": num(row.get("p_bb") or row.get("bb") or "0"),
                 "k": num(row.get("p_k") or row.get("k") or "0"),
-                "hr": num(row["hr"]) if row.get("hr") not in (None, "") else 0,
+                "hr": num_or_none(row.get("hr")),
                 "hb": None,
                 "bf": num(row.get("bf") or "0"),
                 "entry_diff": None,
@@ -281,7 +305,7 @@ def build(meta: dict, rows: list[dict], players: dict | None = None):
                 "hbp": num(row.get("hbp") or "0"),
                 "sb": num(row.get("sb") or "0"),
                 "cs": num(row.get("cs") or "0"),
-                "sac": num(row.get("sac") or "0"),
+                "sac": num_or_none(row.get("sac")),
                 "sf": None,
                 "gidp": num(row.get("gidp") or "0"),
                 "ibb": None,
@@ -311,6 +335,7 @@ def build(meta: dict, rows: list[dict], players: dict | None = None):
         {away: 0, home: 0}, meta.get("recap", ""), meta.get("series_recap", ""), int(meta.get("rng_seed") or 0),
         meta.get("date") or None,
     )
+    null_write_warning(game_id, batting, pitching)
     return game, detail, problems
 
 
@@ -463,7 +488,7 @@ def parse_markdown(text: str, data: dict, clubs: dict[str, str], players: dict[t
                         "hbp": num(row.get("hbp")),
                         "sb": num(row.get("sb")),
                         "cs": num(row.get("cs")),
-                        "sac": num(row.get("sac")),
+                        "sac": num_or_none(row.get("sac")),
                         "sf": None,
                         "gidp": num(row.get("gidp")),
                         "ibb": None,
@@ -487,7 +512,7 @@ def parse_markdown(text: str, data: dict, clubs: dict[str, str], players: dict[t
                         "er": num(row.get("er")),
                         "bb": num(row.get("bb")),
                         "k": num(row.get("k")),
-                        "hr": num(row.get("hr")),
+                        "hr": num_or_none(row.get("hr")),
                         "hb": None,
                         "bf": num(row.get("bf")),
                         "entry_diff": None,
@@ -531,6 +556,7 @@ def parse_markdown(text: str, data: dict, clubs: dict[str, str], players: dict[t
             int(seed_match.group(1)) if seed_match else 0,
             date_match.group(1) if date_match else None,
         )
+        null_write_warning(label, batting, pitching)
         parsed.append((game, detail, problems))
     return parsed
 

@@ -432,10 +432,10 @@ function wpInRange(pct, wp) {
 
 /* ------------------------------------------------------------ state */
 function blankBstat() {
-  return { PA: 0, AB: 0, H: 0, '2B': 0, '3B': 0, HR: 0, R: 0, RBI: 0, BB: 0, HBP: 0, SO: 0, SB: 0, CS: 0, GDP: 0, SH: 0 };
+  return { PA: 0, AB: 0, H: 0, '2B': 0, '3B': 0, HR: 0, R: 0, RBI: 0, BB: 0, HBP: 0, SO: 0, SB: 0, CS: 0, GDP: 0, SH: 0, SF: 0 };
 }
 function blankPstat() {
-  return { outs: 0, H: 0, R: 0, ER: 0, BB: 0, SO: 0, HR: 0, BF: 0, innings_seen: [], fatigued: false, entered_inning: null };
+  return { outs: 0, H: 0, R: 0, ER: 0, BB: 0, SO: 0, HR: 0, HBP: 0, BF: 0, innings_seen: [], fatigued: false, entered_inning: null };
 }
 function newState(G, cfg) {
   const fx = PlayData.data.fixture;
@@ -3191,7 +3191,7 @@ function auditGame(G, S) {
     out.push({ check: t + ' score == linescore sum', ok: S.score[t] === ls, detail: S.score[t] + ' vs ' + ls });
     const bR = sum(S.teams[t].batting, 'R');
     out.push({ check: t + ' batting R == score', ok: bR === S.score[t], detail: bR + ' vs ' + S.score[t] });
-    for (const k of ['H', 'BB', 'SO']) {
+    for (const k of ['H', 'BB', 'SO', 'HR', 'HBP']) {
       const b = sum(S.teams[t].batting, k), p = sum(S.teams[o].pitching, k);
       out.push({ check: t + ' batting ' + k + ' == opposing pitching', ok: b === p, detail: b + ' vs ' + p });
     }
@@ -3632,7 +3632,7 @@ function ipText(outs) { return Math.floor(outs / 3) + '.' + (outs % 3); }
 function batLineRow(name, bs) {
   const pa = (bs.AB || 0) + (bs.BB || 0) + (bs.HBP || 0) + (bs.SH || 0) + (bs.SF || 0);
   return [name, pa, bs.AB || 0, bs.R || 0, bs.H || 0, bs['2B'] || 0, bs['3B'] || 0, bs.HR || 0,
-    bs.RBI || 0, bs.BB || 0, bs.HBP || 0, bs.SO || 0, bs.SB || 0, bs.CS || 0, bs.GDP || 0];
+    bs.RBI || 0, bs.BB || 0, bs.HBP || 0, bs.SH || 0, bs.SF || 0, bs.SO || 0, bs.SB || 0, bs.CS || 0, bs.GDP || 0];
 }
 function buildExports(GS) {
   const S = GS.S, fx = PlayData.data.fixture;
@@ -3675,8 +3675,8 @@ function buildExports(GS) {
     md.push('');
     md.push('## ' + clubName(slot) + ' batting');
     md.push('');
-    md.push('| Player | PA | AB | R | H | 2B | 3B | HR | RBI | BB | HBP | SO | SB | CS | GDP |');
-    md.push('|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|');
+    md.push('| Player | PA | AB | R | H | 2B | 3B | HR | RBI | BB | HBP | SH | SF | SO | SB | CS | GDP |');
+    md.push('|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|');
     const tm = S.teams[slot];
     const orderNames = [];
     for (const s of tm.order) if (!orderNames.includes(s.name)) orderNames.push(s.name);
@@ -3691,12 +3691,12 @@ function buildExports(GS) {
     md.push('');
     md.push('## ' + clubName(slot) + ' pitching');
     md.push('');
-    md.push('| Pitcher | IP | BF | H | R | ER | BB | SO |');
-    md.push('|---|---|---|---|---|---|---|---|');
+    md.push('| Pitcher | IP | BF | H | R | ER | BB | SO | HR | HB |');
+    md.push('|---|---|---|---|---|---|---|---|---|---|');
     for (const sp of S.pitcher_spans.filter((x) => x.team === slot)) {
       const ps = tm.pitching[sp.name]; if (!ps) continue;
       const outs = (sp.end ? sp.end[2] : S.def_outs[slot]) - sp.start[2];
-      md.push('| ' + [sp.name, ipText(outs), ps.BF || 0, ps.H || 0, ps.R || 0, ps.ER || 0, ps.BB || 0, ps.SO || 0].join(' | ') + ' |');
+      md.push('| ' + [sp.name, ipText(outs), ps.BF || 0, ps.H || 0, ps.R || 0, ps.ER || 0, ps.BB || 0, ps.SO || 0, ps.HR || 0, ps.HBP || 0].join(' | ') + ' |');
     }
   }
   md.push('');
@@ -4859,7 +4859,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       wrap.appendChild(el('h3', { text: clubName(club) + ' batting' }));
       const t = el('table');
       const hr = el('tr');
-      ['Player', 'PA', 'AB', 'R', 'H', '2B', '3B', 'HR', 'RBI', 'BB', 'HBP', 'SO', 'SB', 'CS', 'GDP'].forEach((h) => hr.appendChild(el('th', { text: h })));
+      ['Player', 'PA', 'AB', 'R', 'H', '2B', '3B', 'HR', 'RBI', 'BB', 'HBP', 'SH', 'SF', 'SO', 'SB', 'CS', 'GDP'].forEach((h) => hr.appendChild(el('th', { text: h })));
       t.appendChild(el('thead', null, hr));
       const body = el('tbody');
       const tot = blankBstat();
@@ -4873,14 +4873,14 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       wrap.appendChild(el('h3', { text: clubName(club) + ' pitching' }));
       const pt = el('table');
       const ph = el('tr');
-      ['Pitcher', 'IP', 'BF', 'H', 'R', 'ER', 'BB', 'SO'].forEach((h) => ph.appendChild(el('th', { text: h })));
+      ['Pitcher', 'IP', 'BF', 'H', 'R', 'ER', 'BB', 'SO', 'HR', 'HB'].forEach((h) => ph.appendChild(el('th', { text: h })));
       pt.appendChild(el('thead', null, ph));
       const pb = el('tbody');
       S.pitcher_spans.filter((sp) => sp.team === slot).forEach(function (sp) {
         const p2 = S.teams[slot].pitching[sp.name];
         if (!p2) return;
         const outs = sp.end ? sp.end[2] - sp.start[2] : S.def_outs[slot] - sp.start[2];
-        pb.appendChild(el('tr', null, ...[sp.name, ipText(outs), p2.BF, p2.H, p2.R, p2.ER, p2.BB, p2.SO].map((c, i) => el('td', { class: i ? 'num' : null, text: String(c) }))));
+        pb.appendChild(el('tr', null, ...[sp.name, ipText(outs), p2.BF, p2.H, p2.R, p2.ER, p2.BB, p2.SO, p2.HR || 0, p2.HBP || 0].map((c, i) => el('td', { class: i ? 'num' : null, text: String(c) }))));
       });
       pt.appendChild(pb);
       wrap.appendChild(el('div', { class: 'table-wrap' }, pt));

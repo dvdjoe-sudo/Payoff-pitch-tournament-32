@@ -201,6 +201,46 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         strike_p = sum(line["k"] or 0 for line in game["pitching"])
         check.expect(hits_b == hits_p, f"{game['id']} hits")
         check.expect(strike_b == strike_p, f"{game['id']} strikeouts")
+        # Cross-checks added 2026-10-29 under Joe's scorekeeping fix
+        # ruling: pitching HR and HB reconcile against the opposing
+        # batting lines, and each club's derived plate appearances
+        # against the opposing batters faced. A field the book does
+        # not carry (null) makes that one equality UNCHECKED for the
+        # game: a printed warning, never a silent pass and never a
+        # failure. Two standing archive conventions apply. SF is null
+        # wherever the source did not split sacrifice flies out of SAC
+        # (the LEADERS definitions note), so a null SF contributes 0
+        # to derived PA, while a null SAC is genuinely unknown and
+        # leaves PA unchecked. Derived PA includes catcher's
+        # interference, the archive's standing PA definition
+        # (publish.py; Joe's ruling, 2026-10-25).
+        for code in (game["home"], game["away"]):
+            opponent = game["away"] if code == game["home"] else game["home"]
+            pit = [line for line in game["pitching"] if line["team"] == code]
+            opp_bat = [line for line in game["batting"] if line["team"] == opponent]
+            own_bat = [line for line in game["batting"] if line["team"] == code]
+            opp_pit = [line for line in game["pitching"] if line["team"] == opponent]
+            hr_nulls = sum(1 for line in pit if line.get("hr") is None)
+            if hr_nulls:
+                print(f"warning: {game['id']} {code} pitching HR vs {opponent} batting HR unchecked: hr is null on {hr_nulls} pitching line(s)")
+            else:
+                check.expect(sum(line["hr"] for line in pit) == sum(line["hr"] or 0 for line in opp_bat),
+                             f"{game['id']} {code} pitching HR")
+            hb_nulls = sum(1 for line in pit if line.get("hb") is None)
+            if hb_nulls:
+                print(f"warning: {game['id']} {code} pitching HB vs {opponent} batting HBP unchecked: hb is null on {hb_nulls} pitching line(s)")
+            else:
+                check.expect(sum(line["hb"] for line in pit) == sum(line["hbp"] or 0 for line in opp_bat),
+                             f"{game['id']} {code} pitching HB")
+            sac_nulls = sum(1 for line in own_bat if line.get("sac") is None)
+            bf_nulls = sum(1 for line in opp_pit if line.get("bf") is None)
+            if sac_nulls or bf_nulls:
+                print(f"warning: {game['id']} {code} derived PA vs {opponent} BF unchecked: sac is null on {sac_nulls} batting line(s), bf is null on {bf_nulls} pitching line(s)")
+            else:
+                pa = sum(line["ab"] + line["bb"] + line["hbp"] + line["sac"]
+                         + (line["sf"] or 0) + (line.get("ci") or 0) for line in own_bat)
+                bf = sum(line["bf"] for line in opp_pit)
+                check.expect(pa == bf, f"{game['id']} {code} derived PA {pa} vs opposing BF {bf}")
         if game["id"] in set(LOCKED_GAME_IDS):
             for line in game["batting"]:
                 totals["H"] += line["h"] or 0
