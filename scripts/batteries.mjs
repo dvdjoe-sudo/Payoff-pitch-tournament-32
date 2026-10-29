@@ -984,7 +984,7 @@ function batteryBunts() {
 /* ============================================================ RUNNER */
 const BATTERIES = { vacancy: batteryVacancy, fatigue: batteryFatigue, chance: batteryChance,
   outchart: batteryOutchart, rare: batteryRare, defense: batteryDefense, steals: batterySteals, bunts: batteryBunts,
-  uistate: batteryUIState };
+  uistate: batteryUIState, series: batterySeries };
 const wanted = process.argv.slice(2);
 const names = wanted.length ? wanted : Object.keys(BATTERIES);
 for (const n of names) {
@@ -998,6 +998,196 @@ for (const [b, v] of Object.entries(byBattery)) console.log(b + ': ' + v.pass + 
 const fails = RESULTS.filter((r) => !r.pass);
 console.log('BATTERIES: ' + (RESULTS.length - fails.length) + '/' + RESULTS.length + ' checks pass');
 process.exit(fails.length ? 1 : 0);
+
+/* ============================================================ SERIES
+ * SERIES_PLAY_SPEC section 4.3's harness procedure, plus the
+ * corrupt-flag case, section 4.6f's override refusals, 4.6g's
+ * stale-slot discard, and the cap boundary cases of section 3.2
+ * as refined by the build instructions (the cap binds the next PA
+ * the capped pitcher would face). The series files come from the
+ * repo (pre-booking, offers Game 3) and from the scratch clones
+ * scripts/test_series_play.py leaves under /tmp/series-play-test
+ * (run that first). The clock is pinned to 2026-10-29 so the
+ * dispatched flag's date stamp is exact. */
+function batterySeries() {
+  const preFile = JSON.parse(fs.readFileSync(new URL('../data/series_r106.json', import.meta.url), 'utf8'));
+  const postPath = '/tmp/series-play-test/after_g3/series_r106.json';
+  const g2Path = '/tmp/series-play-test/g2load/series_r106.json';
+  const postFile = fs.existsSync(postPath) ? JSON.parse(fs.readFileSync(postPath, 'utf8')) : null;
+  const g2File = fs.existsSync(g2Path) ? JSON.parse(fs.readFileSync(g2Path, 'utf8')) : null;
+  check('series', 'scratch series files from test_series_play.py are present', !!postFile && !!g2File,
+    'run scripts/test_series_play.py first');
+  if (!postFile || !g2File) return;
+  const RealDate = Date;
+  class FixedDate extends RealDate {
+    constructor(...a) { super(...(a.length ? a : ['2026-10-29T12:00:00'])); }
+    static now() { return new RealDate('2026-10-29T12:00:00').getTime(); }
+  }
+  globalThis.Date = FixedDate;
+  try {
+    const finishGame = (GS) => {
+      let guard = 0;
+      while (!GS.finished && guard++ < 600) {
+        let st = GS.step();
+        if (st.status === 'RARE') st = GS.resumeRare();
+        if (st.status !== 'PA_DONE' && st.status !== 'FINAL') return st;
+      }
+      return { status: 'FINAL' };
+    };
+    // (1) A fresh device is offered Game 3; one PA in, the
+    // autosave slot carries the book id.
+    const store = fakeStorage(false);
+    let st = P.applySeriesFile(preFile, store);
+    check('series', '4.3.1 a fresh device is offered Game 3',
+      st.kind === 'play' && st.number === 3 && st.id === 'R1-06-G3', JSON.stringify(st));
+    const GS = P.createSeriesGame(preFile, store, { seed: 424242, managers: { CHC: 'profile', MON: 'profile' }, sourceKind: 'deck' });
+    check('series', '4.3.1 the series game carries its book identity',
+      !!GS && GS.gameId === 'R1-06-G3' && !!GS.series && GS.series.number === 3);
+    let r = GS.step();
+    if (r.status === 'RARE') r = GS.resumeRare();
+    check('series', '4.3.1 one plate appearance plays', (r.status === 'PA_DONE' || r.status === 'FINAL') && GS.paCount === 1, JSON.stringify(r));
+    const peek = P.peekSave(store);
+    check('series', '4.3.1 the autosave slot is the book id, unfinished',
+      !!store.getItem(P.SAVE_PREFIX + 'R1-06-G3') && !!peek && peek.gameId === 'R1-06-G3' && peek.finished === false,
+      JSON.stringify(peek));
+    // (2) Finish it, dispatch it, seal it.
+    finishGame(GS);
+    check('series', '4.3.2 the series game completes', GS.finished === true);
+    check('series', '4.3.2 finished_on is the device-local finish date',
+      GS.finished_on === '2026-10-29', String(GS.finished_on));
+    const disp = P.dispatchSeriesGame(GS);
+    check('series', '4.3.2 the dispatch names the game file',
+      disp.fileName === 'R1-06-G3.md', disp.fileName);
+    check('series', '4.3.2 the dispatch heading is the bookable heading',
+      disp.content.split('\n')[0] === '# R1-06 Game 3: Chicago Cubs at Montreal Expos',
+      disp.content.split('\n')[0]);
+    fs.writeFileSync('/tmp/series-dispatch-R1-06-G3.md', disp.content);
+    const sealed = P.sealSeriesGame(GS, store);
+    check('series', '4.3.2 the seal returns the same dispatch',
+      sealed.fileName === disp.fileName && sealed.content === disp.content);
+    const flag = JSON.parse(store.getItem(P.DISPATCH_PREFIX + 'R1-06-G3'));
+    check('series', '4.3.2 the dispatched flag is the pinned shape',
+      !!flag && flag.game_id === 'R1-06-G3' && flag.dispatched_on === '2026-10-29' && flag.file_name === 'R1-06-G3.md',
+      JSON.stringify(flag));
+    check('series', '4.3.2 the finished slot is retained after the seal',
+      !!store.getItem(P.SAVE_PREFIX + 'R1-06-G3'));
+    // (3) Same file, live flag: awaiting booking.
+    st = P.applySeriesFile(preFile, store);
+    check('series', '4.3.3 the offered state is awaiting booking',
+      st.kind === 'awaiting' && st.number === 3 && st.id === 'R1-06-G3', JSON.stringify(st));
+    // (4) The regenerated file (Game 3 in the book) lands the
+    // dispatch: flag and slot clear, Game 4 is offered.
+    st = P.applySeriesFile(postFile, store);
+    check('series', '4.3.4 the regenerated file offers Game 4',
+      st.kind === 'play' && st.number === 4 && st.id === 'R1-06-G4', JSON.stringify(st));
+    check('series', '4.3.4 landed clearing removes flag and slot together',
+      store.getItem(P.DISPATCH_PREFIX + 'R1-06-G3') === null && store.getItem(P.SAVE_PREFIX + 'R1-06-G3') === null);
+    // (5) Dismiss: back to a fresh offer of the same game.
+    const store2 = fakeStorage(false);
+    const GS2 = P.createSeriesGame(preFile, store2, { seed: 515151, managers: { CHC: 'profile', MON: 'profile' }, sourceKind: 'deck' });
+    finishGame(GS2);
+    P.sealSeriesGame(GS2, store2);
+    P.dismissDispatch(store2, 'R1-06-G3');
+    check('series', '4.3.5 dismiss clears the flag and the retained slot',
+      store2.getItem(P.DISPATCH_PREFIX + 'R1-06-G3') === null && store2.getItem(P.SAVE_PREFIX + 'R1-06-G3') === null);
+    st = P.applySeriesFile(preFile, store2);
+    check('series', '4.3.5 after dismiss the same game is offered fresh',
+      st.kind === 'play' && st.number === 3 && st.id === 'R1-06-G3', JSON.stringify(st));
+    // Corrupt flag: treated as absent, removed, noticed.
+    const store3 = fakeStorage(false);
+    store3.setItem(P.DISPATCH_PREFIX + 'R1-06-G3', '{not json');
+    st = P.applySeriesFile(preFile, store3);
+    check('series', 'a corrupt dispatched flag is treated as absent',
+      st.kind === 'play' && st.number === 3, JSON.stringify(st));
+    check('series', 'the corrupt flag is removed and the removal is noticed',
+      store3.getItem(P.DISPATCH_PREFIX + 'R1-06-G3') === null
+      && st.notices.some((n) => n === 'Removed an unreadable dispatch marker for R1-06-G3.'),
+      JSON.stringify(st.notices));
+    const store3b = fakeStorage(false);
+    store3b.setItem(P.DISPATCH_PREFIX + 'R1-06-G3', JSON.stringify({ game_id: 'R1-06-G9', dispatched_on: '2026-10-29', file_name: 'R1-06-G9.md' }));
+    st = P.applySeriesFile(preFile, store3b);
+    check('series', 'a flag naming a different game is not this game\'s dispatch',
+      st.kind === 'play' && st.number === 3 && store3b.getItem(P.DISPATCH_PREFIX + 'R1-06-G3') === null,
+      JSON.stringify(st));
+    // 4.6f: the starter override refuses unavailable and capped.
+    const load3 = { file: preFile, starters: Object.assign({}, preFile.next_game.proposed_starters) };
+    let pick = P.applySeriesStarterPick(load3, 'CHC', 'Mordecai Brown');
+    check('series', '4.6f an unavailable arm is refused as a starter, proposal standing',
+      pick.ok === false && /unavailable/.test(pick.reason) && load3.starters.CHC === 'Rick Reuschel',
+      JSON.stringify(pick));
+    const load2 = { file: g2File, starters: Object.assign({}, g2File.next_game.proposed_starters) };
+    pick = P.applySeriesStarterPick(load2, 'CHC', 'Kerry Wood');
+    check('series', '4.6f a capped arm is refused as a starter, proposal standing',
+      pick.ok === false && /capped/.test(pick.reason) && load2.starters.CHC === 'Mordecai Brown',
+      JSON.stringify(pick));
+    pick = P.applySeriesStarterPick(load2, 'CHC', 'Hippo Vaughn');
+    check('series', '4.6f a free arm from the full carded pool may start',
+      pick.ok === true && load2.starters.CHC === 'Hippo Vaughn', JSON.stringify(pick));
+    // 4.6g: an undispatched mid-game slot for a since-booked game
+    // is discarded when the regenerated file is applied.
+    const store4 = fakeStorage(false);
+    const GS4 = P.createSeriesGame(preFile, store4, { seed: 616161, managers: { CHC: 'profile', MON: 'profile' }, sourceKind: 'deck' });
+    let r4 = GS4.step();
+    if (r4.status === 'RARE') r4 = GS4.resumeRare();
+    check('series', '4.6g the mid-game slot exists before the file lands',
+      !!store4.getItem(P.SAVE_PREFIX + 'R1-06-G3'));
+    st = P.applySeriesFile(postFile, store4);
+    check('series', '4.6g the stale slot is discarded and Game 4 is offered',
+      st.kind === 'play' && st.number === 4 && store4.getItem(P.SAVE_PREFIX + 'R1-06-G3') === null
+      && store4.getItem(P.DISPATCH_PREFIX + 'R1-06-G3') === null, JSON.stringify(st));
+    // Cap boundaries (the Game 2 load caps Kerry Wood at 3 outs).
+    const capSetup = (manager) => {
+      const s = fakeStorage(false);
+      const g = P.createSeriesGame(g2File, s, { seed: 717171, managers: { CHC: manager, MON: 'profile' }, sourceKind: 'deck' });
+      g.act({ kind: 'pitch', slot: 'CHC', name: 'Kerry Wood' });
+      const span = g.S.pitcher_spans[g.S.pitcher_spans.length - 1];
+      return [g, span];
+    };
+    {
+      const [g, span] = capSetup('human');
+      g.S.def_outs.CHC = span.start[2] + 2;
+      check('series', 'cap: two outs against a cap of three forces nothing',
+        P.capForce(g.S) === null && g.S.teams.CHC.pitcher === 'Kerry Wood');
+      // The double play: one PA, two more outs, four against three.
+      g.S.def_outs.CHC = span.start[2] + 4;
+      const force = P.capForce(g.S);
+      check('series', 'cap overshoot: 2 outs plus a double play to 4 forces the change at the next decision point',
+        !!force && force.name === 'Kerry Wood' && force.outs === 4 && force.cap === 3, JSON.stringify(force));
+      const gated = g.step();
+      check('series', 'cap: a human club is gated before the next PA',
+        gated.status === 'CAP' && g.S.teams.CHC.pitcher === 'Kerry Wood', JSON.stringify(gated));
+      const before = g.S.teams.CHC.pen[0];
+      g.act({ kind: 'pitch', slot: 'CHC', name: before });
+      check('series', 'cap: the forced change is the remedy and play resumes',
+        g.S.teams.CHC.pitcher === before && P.capForce(g.S) === null);
+    }
+    {
+      // Reaching the cap exactly on an inning's third out forces
+      // nothing then: the next PA belongs to the other club, and
+      // the cap is consulted only when his club fields again.
+      const [g, span] = capSetup('human');
+      g.S.def_outs.CHC = span.start[2] + 3;
+      const half = g.S.half;
+      g.S.half = half === 'top' ? 'bottom' : 'top';
+      check('series', 'cap: at the cap exactly, the other club\'s PA is not gated',
+        P.capForce(g.S) === null);
+      g.S.half = half;
+      check('series', 'cap: the change is forced at the first PA he would pitch beyond the cap',
+        P.capForce(g.S) !== null && g.step().status === 'CAP');
+    }
+    {
+      const [g, span] = capSetup('profile');
+      g.S.def_outs.CHC = span.start[2] + 4;
+      let stp = g.step();
+      if (stp.status === 'RARE') stp = g.resumeRare();
+      check('series', 'cap: a profile club\'s forced change is made by the machinery',
+        g.S.teams.CHC.pitcher !== 'Kerry Wood' && ledCount(g.S, 'series_cap') === 1,
+        'pitcher=' + g.S.teams.CHC.pitcher);
+    }
+  } finally {
+    globalThis.Date = RealDate;
+  }
+}
 
 /* ============================================================ UI STATE */
 function fakeStorage(fail) {
