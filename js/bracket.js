@@ -53,6 +53,9 @@
   var searchInput = document.getElementById("search");
   var themeButton = document.getElementById("theme-toggle");
   var menuButton = document.getElementById("menu-toggle");
+  var navToggle = document.getElementById("nav-toggle");
+  var navMenu = document.getElementById("nav-menu");
+  var navPanel = document.getElementById("nav-panel");
   var siteHeader = document.getElementById("site-header");
   var banner = document.getElementById("milestone-banner");
 
@@ -4317,10 +4320,9 @@
     if (where.name === "bracket" && activeSeries) {
       /* bracket already showing */
     }
-    var played = state.data.games.length;
     var r103 = state.data.series.filter(function (series) { return series.id === "R1-03"; })[0];
     var r103Text = r103 && r103.status === "complete" ? "R1-03 is complete, Boston 4-3." : "R1-03 is in progress.";
-    lede.textContent = played + " games on record. " + r103Text + " Open a series, a game, or a club.";
+    lede.textContent = r103Text + " Open a series, a game, or a club.";
   }
 
   function applyTheme(theme) {
@@ -4345,6 +4347,27 @@
 
   menuButton.addEventListener("click", function () {
     setMenu(!siteHeader.classList.contains("menu-open"));
+  });
+
+  function setNav(open) {
+    navMenu.classList.toggle("open", open);
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  navToggle.addEventListener("click", function () {
+    setNav(!navMenu.classList.contains("open"));
+  });
+
+  navPanel.addEventListener("click", function (event) {
+    if (event.target.closest("a")) setNav(false);
+  });
+
+  document.addEventListener("click", function (event) {
+    if (navMenu.classList.contains("open") && !navMenu.contains(event.target)) setNav(false);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") setNav(false);
   });
 
   searchForm.addEventListener("submit", function (event) {

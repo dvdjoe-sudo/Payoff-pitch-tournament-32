@@ -135,6 +135,36 @@ h1 {
   border-color: var(--gold);
 }
 
+.nav-menu { position: relative; margin-top: 0.6rem; }
+
+.nav-toggle {
+  min-height: 34px;
+  font: inherit;
+  font-size: 0.88rem;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: #f6f1e6;
+  padding: 0.2rem 0.85rem;
+  cursor: pointer;
+}
+
+.nav-menu .views {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 40;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(10, 20, 40, 0.35);
+  padding: 0.55rem;
+  max-width: min(92vw, 34rem);
+}
+
+.nav-menu.open .views { display: flex; }
+
 main { padding: 0.5rem 1.25rem 2.5rem; }
 
 .load-error {
@@ -624,6 +654,10 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
   font-size: 0.9rem;
 }
 
+.site-footer .header-links { margin: 0 0 0.4rem; }
+
+.site-footer .header-links a { color: var(--ink); }
+
 :focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
@@ -705,9 +739,10 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
 .next-up {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(243, 224, 168, 0.7);
-  border-radius: 10px;
-  padding: 0.4rem 0.7rem;
-  margin-top: 0.55rem;
+  border-radius: 8px;
+  padding: 0.18rem 0.6rem;
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
   color: #f6f1e6;
 }
 
@@ -723,18 +758,20 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
 .next-up a { color: #fff; font-weight: 700; }
 
 .next-toggle {
-  min-height: 36px;
+  min-height: 26px;
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   border-radius: 999px;
   border: 1px solid #f3e0a8;
   background: transparent;
   color: #f6f1e6;
-  padding: 0.15rem 0.7rem;
+  padding: 0.05rem 0.6rem;
   cursor: pointer;
 }
 
-.next-detail { margin: 0.35rem 0 0; }
+.next-detail { display: none; margin: 0.25rem 0 0; }
+
+.next-up.open .next-detail { display: block; }
 
 .theme-toggle, .search-form button {
   min-height: 44px;
@@ -758,15 +795,18 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
 .search-form label { color: #f3e0a8; font-size: 0.85rem; }
 
 .search-form input {
-  min-height: 44px;
-  flex: 1 1 12rem;
+  min-height: 38px;
+  flex: 0 1 11rem;
+  width: 11rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.08);
   color: #f6f1e6;
   font: inherit;
-  padding: 0.35rem 0.7rem;
+  padding: 0.3rem 0.7rem;
 }
+
+.search-form button { min-height: 38px; }
 
 .series-card.on-path { box-shadow: inset 4px 0 0 var(--gold); }
 .series-card .winner-club { color: var(--winner); }
@@ -1106,13 +1146,11 @@ a.player-link, a.team-link { color: inherit; }
   .site-header .brand .eyebrow,
   .site-menu .lede,
   .site-menu .search-form,
-  .site-menu .header-links,
-  .site-menu .views { display: none; }
+  .site-menu .nav-menu { display: none; }
   .site-header.menu-open .brand .eyebrow,
   .site-header.menu-open .lede { display: block; }
-  .site-header.menu-open .search-form,
-  .site-header.menu-open .header-links,
-  .site-header.menu-open .views { display: flex; }
+  .site-header.menu-open .search-form { display: flex; }
+  .site-header.menu-open .nav-menu { display: block; }
   .menu-toggle { display: inline-flex; align-items: center; }
   .next-up { margin-top: 0.35rem; padding: 0.28rem 0.5rem; }
   .next-detail { display: none; }
@@ -1201,3 +1239,26 @@ table.play-linescore td.num, table.play-linescore th { text-align: center; }
 .play-banner-line { font-weight: 700; }
 .play-notice { font-weight: 700; border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.5rem 0.8rem; }
 .play-decisions-line { font-size: 1.05rem; font-weight: 700; }
+/* Per-at-bat card highlight: the rolled 2d6 cell, then the band
+   row (or OUT row) the percentile landed in. Brief and gold. */
+.play-page .dice-cell.hl-flash {
+  background: rgba(198, 161, 90, 0.92);
+  color: #12263f;
+  font-weight: 700;
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+  animation: pp-hl-pulse 0.3s ease-in-out 2 alternate;
+}
+.play-page tr.hl-flash td { background: rgba(198, 161, 90, 0.55); font-weight: 700; }
+.play-page .hl-meta { background: rgba(198, 161, 90, 0.35); border-radius: 6px; font-weight: 700; }
+.play-page .hl-out {
+  background: rgba(198, 161, 90, 0.9);
+  color: #12263f;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0 0.2rem;
+}
+@keyframes pp-hl-pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.14); }
+}
