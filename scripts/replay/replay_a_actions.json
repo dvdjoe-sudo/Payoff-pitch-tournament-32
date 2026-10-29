@@ -1,0 +1,22 @@
+[
+ {
+  "pa": 57,
+  "team": "CHC",
+  "in": "Kerry Wood",
+  "span_start": [
+   7,
+   "top",
+   20
+  ]
+ },
+ {
+  "pa": 62,
+  "team": "OPP",
+  "in": "Tim Burke",
+  "span_start": [
+   7,
+   "bottom",
+   19
+  ]
+ }
+]

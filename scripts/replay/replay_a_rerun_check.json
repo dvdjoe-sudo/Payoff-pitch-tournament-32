@@ -1,0 +1,11 @@
+{
+ "score": true,
+ "linescore": true,
+ "batting": true,
+ "pitching": true,
+ "pitcher_spans": true,
+ "ledger_counts": true,
+ "fac_history": true,
+ "final": true,
+ "log": true
+}

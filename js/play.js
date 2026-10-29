@@ -1026,7 +1026,22 @@ function* resolveOutCode(G, S, batterName, code, pitcherResult, pct) {
 }
 
 /* ------------------------------------------------------ defense chain */
+/* The G1 stack's defense-numbers wrapper (logging only): one
+ * ledger entry per defense resolution, carrying the numbers the
+ * chain used. Installed in the G1 stack and in app play
+ * (G.defenseNumbers); absent from the Replay A stack. */
 function* resolveDefense(G, S, batterName, pitcherResult, initPct) {
+  const flipsBefore = S.flips.length;
+  const out = yield* resolveDefenseCore(G, S, batterName, pitcherResult, initPct);
+  if (G.defenseNumbers && S._defense_summary) {
+    const d = S._defense_summary;
+    const chain = S.flips.slice(flipsBefore).map((f, i) => '#' + (flipsBefore + i + 1) + ' FAC ' + f.fac_id + ' (' + f.purpose + ')').join('; ');
+    const inside = d.bandLo <= d.npct && d.npct <= d.bandHi;
+    led(S, 'defense_numbers', 'DEFENSE NUMBERS: init %=' + pad2(initPct) + ' lands in DEF_POS band ' + d.posLo + '-' + d.posHi + ' (' + d.chk + ' on ' + d.pos + '); ' + d.chk + ' check on ' + d.pos + ' (' + d.fielder + '), carded range ' + d.frng + ', error E' + d.fe + ', arm ' + d.farm + '; ' + G.park.name.replace(' Field', '') + ' ' + d.chk + ' band for that grade: ' + pad2(d.bandLo) + '-' + pad2(d.bandHi) + '; chain flips: ' + chain + '; re-roll 2d6=' + d.n2 + ' %=' + pad2(d.npct) + ': ' + pad2(d.npct) + ' is ' + (inside ? 'INSIDE' : 'OUTSIDE') + ' the band (reads ' + d.reads + '); chain outcome ' + out);
+  }
+  return out;
+}
+function* resolveDefenseCore(G, S, batterName, pitcherResult, initPct) {
   const bteam = batTeam(S), fteam = fldTeam(S);
   let [chk, pos] = defPos(Math.max(1, initPct));
   if (pitcherResult === 'ERROR') chk = 'ERROR';
@@ -1042,6 +1057,15 @@ function* resolveDefense(G, S, batterName, pitcherResult, initPct) {
   } else {
     const ch = G.park.error_chart['E' + fe];
     outcome = (ch.ERR[0] <= npct && npct <= ch.ERR[1]) ? 'ERR' : 'OUT';
+  }
+  {
+    let lo = 1, posLo = 1, posHi = 99;
+    for (const [hi] of DEF_POS) { if (initPct <= hi) { posLo = lo; posHi = hi; break; } lo = hi + 1; }
+    void posLo;
+    const band = chk === 'RANGE' ? G.park.range_chart[frng].HIT : G.park.error_chart['E' + fe].ERR;
+    S._defense_summary = { chk: chk, pos: pos, frng: frng, fe: fe, farm: farm,
+      fielder: T(S, fteam).field[pos], posLo: lo, posHi: posHi, bandLo: band[0], bandHi: band[1],
+      n2: n2, npct: npct, reads: outcome };
   }
   const bs = bstat(S, bteam, batterName);
   const old = S.bases.slice();
@@ -1958,127 +1982,164 @@ function* substitute(G, S, team, outName, reason) {
 /* ------------------------------------------- fatigue book (fatigue_fix) */
 function ffState(S) {
   if (!S.fatigue_fix) {
-    S.fatigue_fix = { version: 1, date: '2026-10-25', pa_index: 0, run_events_seen: 0,
+    S.fatigue_fix = { version: 1, date: null, pa_index: 0, run_events_seen: 0,
       chart_count_seen: 0, pitchers: {}, adjustments: [], availability_next: {} };
   }
   return S.fatigue_fix;
 }
 function ffIsStarter(G, S, team, name) {
   if (G.starters[team] === name) return true;
-  const spans = S.pitcher_spans.filter((sp) => sp.team === team);
-  if (spans.length && spans[0].name === name) return true;
+  for (const sp of S.pitcher_spans) {
+    if (sp.team === team) return sp.name === name;
+  }
   const ps = S.teams[team].pitching[name];
-  return !!ps && ps.entered_inning === 1;
+  return !!(ps && ps.entered_inning === 1);
 }
-function ffAttritionRuns(S, team, name) {
-  const att = (S.flags.v2_attrition || {})[team + '|' + name] || 0;
-  const grind = Math.floor(((S.flags.francona_grind || {})[name] || 0) / 3);
-  return att + grind;
-}
-function ffCurrentRuns(G, S, team, name) {
-  const ps = S.teams[team].pitching[name];
-  return (ps ? ps.R : 0) + ffAttritionRuns(S, team, name);
+function ffSymbolOf(card) {
+  if (!card) return null;
+  return card.save_symbol || card.symbol ||
+    (Array.isArray(card.symbols) ? card.symbols[0] : card.symbols) || null;
 }
 function ffRecord(G, S, team, name) {
   const ff = ffState(S);
   const key = team + '|' + name;
   if (!ff.pitchers[key]) {
-    const card = pitcherCard(G, S, team, name);
-    const stam = (card && card.stamina) || {};
-    ff.pitchers[key] = { team: team, name: name, is_starter: ffIsStarter(G, S, team, name),
-      stamina: { start: stam.start != null ? stam.start : null, relief: stam.relief != null ? stam.relief : null },
-      appearance_innings: [], book_fatigued: false, exemption: null, save_exemption_spent: false,
-      triggers: [], first_trigger_pa: null };
+    const card = name === 'EMERGENCY' ? null : pitcherCard(G, S, team, name);
+    const st = card && card.stamina && typeof card.stamina === 'object' ? card.stamina : null;
+    ff.pitchers[key] = { team: team, name: name,
+      stamina: st ? { start: st.start != null ? st.start : null, relief: st.relief != null ? st.relief : null } : null,
+      symbol: ffSymbolOf(card), is_starter: ffIsStarter(G, S, team, name),
+      appearances: [], timeline: [], states: [], book_fatigued: false,
+      trigger: null, exempt_active: false, exempt_noted: false, exemption_spent: false };
   }
   return ff.pitchers[key];
+}
+function ffPhantom(S, team, name) {
+  const fl = S.flags || {};
+  const attr = (fl.v2_attrition || {})[team + '|' + name] || 0;
+  const grind = Math.floor(((fl.francona_grind || {})[name] || 0) / 3);
+  return [attr, grind, attr + grind];
 }
 function ffPrecheck(G, S) {
   const ff = ffState(S);
   const fteam = fldTeam(S);
-  const name = curPitcher(S);
-  const rec = ffRecord(G, S, fteam, name);
-  if (ff.run_events_seen < S.run_events.length) {
-    for (const ev of S.run_events.slice(ff.run_events_seen)) {
-      const r2 = ffRecord(G, S, ev.team, ev.resp);
-      if (!r2.appearance_innings.includes(ev.inning)) r2.appearance_innings.push(ev.inning);
-    }
-    ff.run_events_seen = S.run_events.length;
+  const cur = curPitcher(S);
+  while (ff.run_events_seen < S.run_events.length) {
+    const ev = S.run_events[ff.run_events_seen];
+    const evTeam = ev.team === 'CHC' ? 'OPP' : 'CHC';
+    const rec = ffRecord(G, S, evTeam, ev.resp);
+    rec.timeline.push({ pa: ff.pa_index, inning: ev.inning, half: ev.half,
+      charged_to: ev.resp, runs_after: pstat(S, evTeam, ev.resp).R });
+    ff.run_events_seen += 1;
   }
-  if (!rec.appearance_innings.includes(S.inning)) rec.appearance_innings.push(S.inning);
-  if (rec.exemption === null && !rec.save_exemption_spent) {
-    const card = pitcherCard(G, S, fteam, name);
-    const sym = card ? (card.save_symbol || card.symbols || card.symbol || null) : null;
-    rec.exemption = sym ? { symbol: sym, decided_pa: ff.pa_index } : false;
+  const pre = { fteam: fteam, cur: cur, rec: null, suppressed: false, lead: 0, sit: false };
+  if (cur === 'EMERGENCY') return pre;
+  const rec = ffRecord(G, S, fteam, cur);
+  pre.rec = rec;
+  if (!rec.appearances.includes(S.inning)) rec.appearances.push(S.inning);
+  const lead = S.score[fteam] - S.score[fteam === 'CHC' ? 'OPP' : 'CHC'];
+  const sit = S.inning >= 9 && lead >= 1 && lead <= 3;
+  pre.lead = lead; pre.sit = sit;
+  if (rec.symbol && !rec.is_starter && sit && !rec.exemption_spent) {
+    pre.suppressed = true;
+    rec.exempt_active = true;
+  } else if (rec.exempt_active && !rec.exemption_spent && S.inning >= 9 && lead <= 0) {
+    rec.exemption_spent = true;
+    const msg = cur + ": the game is tied or the lead is lost; the save-symbol exemption is spent and the book's fatigue rules apply from here (2024 rulebook pp11, 39)";
+    led(S, 'fatigue_fix', msg);
+    elog(S, '  FATIGUE (book): ' + msg);
   }
-  let suppressed = false;
-  if (rec.exemption && !rec.save_exemption_spent) {
-    if (S.inning >= 9 && (S.score[fteam] - S.score[batTeam(S)]) <= 0) {
-      rec.save_exemption_spent = true;
-      suppressed = true;
-      led(S, 'fatigue_fix', name + ': save-situation exemption spent (9th inning, no lead); the book resumes');
-    }
-  }
-  return { team: fteam, name: name, record: rec, suppressed: suppressed };
+  return pre;
 }
-function ffTriggers(G, S, team, name, rec) {
+const FF_RELIEF_LIMITS = { Short: [2, 2], Long: [3, 3] };
+function ffTriggers(G, S, pre) {
+  const fteam = pre.fteam, cur = pre.cur, rec = pre.rec;
+  const ps = pstat(S, fteam, cur);
+  const [attr, grind, ph] = ffPhantom(S, fteam, cur);
+  const eff = ps.R + ph;
+  const evalNote = ph ? 'evaluation runs ' + eff + ' = ' + ps.R + ' charged + ' + ph + ' trait evaluation runs (attrition ' + attr + ', grind ' + grind + ')' : eff + ' runs allowed';
   const out = [];
-  const runs = ffCurrentRuns(G, S, team, name);
   const stam = rec.stamina || {};
   if (rec.is_starter) {
     const start = stam.start;
-    if (typeof start === 'string' && start.startsWith('Inning')) {
-      const n = parseInt(start.split(/\s+/)[1], 10);
-      if (!Number.isNaN(n) && S.inning >= n && runs >= 3) {
-        out.push(['starter_stamina', name + ' is fatigued: his Start stamina rating (' + start + ') is reached in inning ' + S.inning + ' and he has allowed ' + runs + ' runs (3-run effectiveness line, book p9, fatigue layer)']);
-      }
+    if (start !== null && start !== undefined && S.inning >= start && eff >= 3) {
+      out.push(['starter_stamina', cur + " is fatigued under the book's starter-stamina rule: Start " + start + ' reached (inning ' + S.inning + ') with ' + evalNote + ', 3 or more (2024 rulebook p10)']);
     }
   } else {
-    const relief = stam.relief;
-    const limits = { Short: [2, 2], Long: [3, 3] }[relief];
-    if (limits) {
-      const ended = rec.appearance_innings.filter((i) => i < S.inning).length;
-      if (ended >= limits[0]) out.push(['relief_appearances', name + ' is fatigued: ' + relief + ' relief stamina allows ' + limits[0] + ' innings and he has completed ' + ended + ' (book p9, fatigue layer)']);
-      if (runs >= limits[1]) out.push(['relief_runs', name + ' is fatigued: ' + relief + ' relief stamina allows ' + limits[1] + ' runs and he has allowed ' + runs + ' (book p9, fatigue layer)']);
+    const rel = stam.relief;
+    if (FF_RELIEF_LIMITS[rel]) {
+      const [limI, limR] = FF_RELIEF_LIMITS[rel];
+      const ended = rec.appearances.filter((i) => i < S.inning).length;
+      if (ended >= limI) {
+        out.push(['relief_appearances', cur + " is fatigued under the book's relief rule: a " + rel + ' reliever whose appeared innings are ' + JSON.stringify(rec.appearances) + '; ' + ended + ' of them have ended, reaching the ' + limI + '-inning limit as the last of them ended (2024 rulebook p11)']);
+      }
+      if (eff >= limR) {
+        out.push(['relief_runs', cur + " is fatigued under the book's relief rule: a " + rel + ' reliever at ' + evalNote + ', the ' + limR + '-run limit (2024 rulebook p11)']);
+      }
     }
   }
-  if (runs >= 6) out.push(['universal_runs', name + ' is fatigued: ' + runs + ' runs allowed (the universal 6-run line, fatigue layer)']);
+  if (eff >= 6) {
+    out.push(['universal_runs', cur + ' is fatigued at ' + evalNote + ': the universal 6-run line (2024 rulebook p10)']);
+  }
   return out;
-}
-function ffEvaluate(G, S, when, pre) {
-  const ff = ffState(S);
-  const { team, name, record: rec } = pre;
-  const ps = pstat(S, team, name);
-  if (rec.book_fatigued && !ps.fatigued) {
-    ps.fatigued = true;
-    led(S, 'fatigue_fix_reassert', name + ': book fatigue re-asserted after the engine flag was found cleared (' + when + ' pass, PA ' + ff.pa_index + ')');
-  }
-  for (const [trig, detail] of ffTriggers(G, S, team, name, rec)) {
-    if (rec.triggers.includes(trig)) continue;
-    rec.triggers.push(trig);
-    if (rec.first_trigger_pa === null) rec.first_trigger_pa = ff.pa_index;
-    if (!ps.fatigued) {
-      ps.fatigued = true;
-      elog(S, '  ' + detail);
-    }
-    led(S, 'fatigue_fix', detail + ' [' + when + ' pass, PA ' + ff.pa_index + ']');
-    rec.book_fatigued = true;
-  }
-  for (const sp of S.pitcher_spans) {
-    if (sp.team !== team || sp.name !== name) continue;
-    const outs = (sp.end ? sp.end[2] : S.def_outs[team]) - sp.start[2];
-    if (outs < 6) ff.availability_next[name] = { status: 'available', outs_cap: null };
-    else if (outs <= 8) ff.availability_next[name] = { status: 'capped', outs_cap: 3 };
-    else ff.availability_next[name] = { status: 'unavailable', outs_cap: 0 };
-  }
 }
 function ffMirror(G, S) {
   const ff = ffState(S);
   const rows = (S.ledger.fatigue_chart || { details: [] }).details;
-  if (ff.chart_count_seen < rows.length) {
+  if (rows.length > ff.chart_count_seen) {
     for (const d of rows.slice(ff.chart_count_seen)) {
-      ff.adjustments.push({ pa_index: ff.pa_index, detail: d });
+      ff.adjustments.push({ pa: ff.pa_index, detail: d });
     }
     ff.chart_count_seen = rows.length;
+  }
+}
+function ffAvailability(G, S) {
+  const ff = ffState(S);
+  const rows = {};
+  for (const sp of S.pitcher_spans) {
+    const end = sp.end ? sp.end[2] : S.def_outs[sp.team];
+    const outs = end - sp.start[2];
+    const row = outs < 6 ? 'free' : (outs <= 8 ? 'available next game, capped at 3 outs' : 'unavailable next game');
+    rows[sp.team + '|' + sp.name] = { outs: outs, row: row };
+  }
+  ff.availability_next = rows;
+}
+function ffEvaluate(G, S, phase, pre) {
+  const ff = ffState(S);
+  const cur = pre.cur, rec = pre.rec;
+  if (cur === 'EMERGENCY' || rec === null) return;
+  const ps = pstat(S, pre.fteam, cur);
+  const trigs = ffTriggers(G, S, pre);
+  if (pre.suppressed) {
+    if (trigs.length && !rec.exempt_noted) {
+      rec.exempt_noted = true;
+      const msg = cur + ' carries a save symbol (' + rec.symbol + ') and is in a save situation (inning ' + S.inning + ', lead ' + pre.lead + "): the book's exemption holds and fatigue does not attach, although a book trigger is met (" + trigs[0][0] + ') (2024 rulebook pp11, 39)';
+      led(S, 'fatigue_fix_exempt', msg);
+      elog(S, '  FATIGUE (book, exemption): ' + msg);
+    }
+  } else {
+    if (trigs.length && !rec.book_fatigued) {
+      const [kind, detail] = trigs[0];
+      rec.book_fatigued = true;
+      rec.trigger = { kind: kind, detail: detail, pa: ff.pa_index, inning: S.inning, half: S.half };
+      const wasSet = !!ps.fatigued;
+      if (!wasSet) ps.fatigued = true;
+      led(S, 'fatigue_fix', detail + (wasSet && kind !== 'universal_runs' ? ' (the flag was already set by the wrapped chain; the book trigger attaches on the same evaluation)' : ''));
+      elog(S, '  FATIGUE (book): ' + detail);
+    } else if (rec.book_fatigued && !ps.fatigued) {
+      ps.fatigued = true;
+      const msg = cur + ': book fatigue (' + rec.trigger.kind + ') re-asserted after an external clearance of the flag';
+      led(S, 'fatigue_fix_reassert', msg);
+      elog(S, '  FATIGUE (book): ' + msg);
+    }
+  }
+  if (phase === 'post') {
+    rec.states.push({ pa: ff.pa_index, inning: S.inning, half: S.half,
+      fatigued: !!ps.fatigued, book_fatigued: rec.book_fatigued,
+      trigger: rec.trigger ? rec.trigger.kind : null,
+      save_situation: pre.sit, lead: pre.lead, symbol_exempt: pre.suppressed });
+    ffMirror(G, S);
+    ffAvailability(G, S);
   }
 }
 
@@ -2110,7 +2171,7 @@ function pinchHit(S, team, outName, pick, reason) {
     }
   }
   elog(S, '  pinch hitter (' + TEAMNAME[team] + '): ' + pick + ' bats for ' + outName + ' (' + reason + ')');
-  led(S, 'pinch_hit', pick + ' for ' + outName + ' (' + reason + ')');
+  led(S, 'substitution', pick + ' for ' + outName + ' (' + reason + ')');
 }
 function pinchRun(S, team, outName, pick, reason) {
   const tm = T(S, team);
@@ -2127,7 +2188,7 @@ function pinchRun(S, team, outName, pick, reason) {
     }
   }
   elog(S, '  pinch runner (' + TEAMNAME[team] + '): ' + pick + ' runs for ' + outName + ' (' + reason + ')');
-  led(S, 'pinch_run', pick + ' for ' + outName + ' (' + reason + ')');
+  led(S, 'substitution', pick + ' runs for ' + outName + ' (' + reason + ')');
 }
 function* williamsDefenseCheck(G, S) {
   const fl = S.flags;
@@ -2289,7 +2350,6 @@ function chanceAcctCycle(G, S) {
     if (curPitcher(S) === rt.acct_armed.pitcher) {
       rt.acct_pa = { pitcher: rt.acct_armed.pitcher, serial: S.pa_count + 1 };
       rt.acct_armed = null;
-      led(S, 'chance_acct_armed', 'the owed strikeout chance is live for ' + rt.acct_pa.pitcher + ' this PA (TOUGH SO band +5)');
     } else {
       rt.acct_lapsed += 1;
       led(S, 'chance_acct_lapsed', 'the owed chance lapses: ' + rt.acct_armed.pitcher + ' is no longer pitching');
@@ -2374,8 +2434,7 @@ function* groundOut(G, S, batterName, pos, pct, pitcherResult) {
   const asg = chanceAsg(S);
   const qualifies = asg && fldTeam(S) === asg.team && !!S.bases[0] && S.outs < 2;
   if (!qualifies) {
-    yield* groundOutAdd(G, S, batterName, pos, pct, pitcherResult);
-    return;
+    return yield* groundOutAdd(G, S, batterName, pos, pct, pitcherResult);
   }
   const rt = chanceRt(S);
   const pname = curPitcher(S);
@@ -2390,9 +2449,10 @@ function* groundOut(G, S, batterName, pos, pct, pitcherResult) {
   if (pname !== 'EMERGENCY' && pcardNow.dp != null) { oldPitcherDp = pcardNow.dp; pcardNow.dp = eff + 1; }
   rt.dp_bumps += 1;
   led(S, 'chance_dp_bump', 'Tinker to Evers to Chance: the double-play combination is set; the DP check reads one higher (' + eff + ' -> ' + (eff + 1) + ')');
+  let result;
   const bsBefore = bstat(S, batTeam(S), batterName).GDP;
   try {
-    yield* groundOutAdd(G, S, batterName, pos, pct, pitcherResult);
+    result = yield* groundOutAdd(G, S, batterName, pos, pct, pitcherResult);
   } finally {
     bcard.dp = oldBatterDp;
     if (oldPitcherDp !== undefined) pcardNow.dp = oldPitcherDp;
@@ -2419,6 +2479,7 @@ function* groundOut(G, S, batterName, pos, pct, pitcherResult) {
       }
     }
   }
+  return result;
 }
 
 /* ------------------------------------------------------- PA resolution */
@@ -2852,7 +2913,6 @@ function updateFatigue(G, S) {
   const pre = ffPrecheck(G, S);
   if (!pre.suppressed) engineUpdateFatigue(G, S);
   ffEvaluate(G, S, 'post', pre);
-  ffMirror(G, S);
   if (masterOn(S)) {
     const fteam = fldTeam(S);
     const cur = curPitcher(S);
@@ -2997,12 +3057,20 @@ function* autoResolveRare(G, S) {
     const res = yield* resolvePaInner(G, S, batterName, bcard, pitcherCard(G, S, fteam, curPitcher(S)), section, btot, pct, bd1, bd2, false, null);
     if (res === 'RESTART') {
       restarts += 1;
-      if (restarts > 3) break;
+      if (restarts > 3) {
+        led(S, 'dropped_foul', 'auto-resolve: restart cap reached');
+        break;
+      }
       continue;
     }
     break;
   }
-  advanceOrder(S);
+  /* The governed stack's completion does NOT advance the batting
+   * order (chance_setup._complete_pa_on_section): the same batter
+   * leads off the next inning after a rare-ended half. Recorded
+   * behavior, ported as-is (Replay A PA73 -> PA77 is the proof
+   * case: Grace lines out to end the 8th on a rare completion and
+   * leads off the 9th). */
   if (S.bases.some((e) => e && e.name === batterName) && S.outs < 3) {
     yield* autoStealCheck(G, S, batterName, btot, [bd1, bd2]);
   }
@@ -3076,6 +3144,7 @@ function makeContext(cfg) {
     allPenNames: new Set([...fx.pens.CHC, ...fx.pens.MON]),
     park: PlayData.data.parks[fx.clubs[homeClub].park],
     buntOverlay: !!cfg.buntOverlay,
+    defenseNumbers: !!cfg.defenseNumbers,
     clauses: !!cfg.clauses,
     prePa: !!cfg.prePa,
     human: cfg.human || { CHC: false, OPP: false },

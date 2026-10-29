@@ -1,0 +1,61 @@
+[
+ {
+  "pa": 47,
+  "batter": "Tim Raines",
+  "pitcher": "Hippo Vaughn",
+  "trigger": {
+   "inning": 7,
+   "half": "top",
+   "outs": 1,
+   "bases": [
+    null,
+    null,
+    null
+   ],
+   "score": {
+    "CHC": 0,
+    "OPP": 5
+   }
+  },
+  "recorded_resolution": {
+   "dice": [
+    2,
+    3,
+    7
+   ],
+   "pct": 51,
+   "section": "TOUGH",
+   "result": "OUT G4"
+  },
+  "splice": {
+   "fac_2d6": 39,
+   "fac_pct": 171
+  },
+  "live_die": {
+   "seq": 107,
+   "fac_id": 152,
+   "purpose": "1d6",
+   "expected": 2
+  },
+  "conversion": {
+   "result": "infield single",
+   "booked": {
+    "AB": 1,
+    "H": 1
+   },
+   "post_bases": [
+    "Tim Raines",
+    null,
+    null
+   ],
+   "post_outs": 1
+  },
+  "steal_step": {
+   "seq": 108,
+   "fac_id": 171,
+   "purpose": "2d6",
+   "last_total": 6,
+   "attempt_booked": false
+  }
+ }
+]
