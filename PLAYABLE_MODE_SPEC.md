@@ -1473,7 +1473,14 @@ per series:
   residual. (3) The app-game environment of Section 7.2
   (Williams' pre_pa live, bunt overlay on) was also measured
   on the gate seeds: Chicago 6.12, Montreal 4.53, win share
-  69.5% (in band). No tolerance, reference figure, or
+  69.5% (in band). (4) The per-PA event rates localize the
+  residual: walks and strikeouts match the reference for
+  both clubs and Chicago matches on every rate (hits .252
+  vs .253 per PA, home runs .031 vs .035, walks .099 vs
+  .103, strikeouts .168 vs .162); only Montreal's hit rate
+  runs hot (.245 vs .233, about 1.9 sampling standard
+  errors), the channel where the two engine builds' defense
+  handling diverges. No tolerance, reference figure, or
   recorded datum was adjusted. The gate as specified stands
   marginally unpassed on the Montreal and win-share figures;
   the divergence evidence is this note, and whether the mode
