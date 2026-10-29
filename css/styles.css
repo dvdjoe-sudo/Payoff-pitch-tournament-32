@@ -733,6 +733,8 @@ tr.eliminated td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .play-page .fac-card.flipping, .play-page .ctl-dice.rolling .die { animation: none; }
+  .play-page .play-card-batter.mx-flip, .play-page .play-card-pitcher.mx-slide,
+  .play-page .play-matchup.mx-in { animation: none; }
 }
 
 :root[data-theme="dark"] {
@@ -1235,7 +1237,38 @@ table.play-linescore td.num, table.play-linescore th { text-align: center; }
 .play-base.b1 { grid-column: 3; grid-row: 2; }
 .play-base.b3 { grid-column: 1; grid-row: 2; }
 .play-home { grid-column: 1 / -1; grid-row: 3; font-weight: 600; }
-.play-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+.play-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; perspective: 900px; }
+/* Matchup moment: a slim strip names the pair on the table,
+   and at each new plate appearance the batter's card flips up
+   while the pitcher's slides in. The spotlight is a soft
+   stadium-light edge on the displayed pair (batter stronger,
+   pitcher subtler), deliberately unlike the gold fill of the
+   result highlight. All of it is transform/opacity only, so a
+   settled card sits at exactly its plain geometry. */
+.play-matchup { display: flex; flex-wrap: wrap; gap: 0.35rem 0.6rem; align-items: baseline;
+  justify-content: center; border: 1px solid var(--line, #999); border-radius: 0.5rem;
+  background: var(--card); padding: 0.3rem 0.7rem; margin-bottom: 0.6rem; text-align: center; }
+.play-matchup .mx-side { font-weight: 600; }
+.play-matchup .mx-vs { font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em;
+  text-transform: uppercase; opacity: 0.65; }
+.play-matchup.mx-in { animation: pp-mx-strip 0.4s ease-out both; }
+@keyframes pp-mx-strip {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.play-card-batter.spot-bat { box-shadow: 0 0 0 2px rgba(206, 226, 255, 0.8), 0 0 26px 8px rgba(196, 220, 255, 0.35); border-radius: 0.5rem; }
+.play-card-pitcher.spot-pit { box-shadow: 0 0 0 1px rgba(206, 226, 255, 0.4), 0 0 13px 4px rgba(196, 220, 255, 0.16); border-radius: 0.5rem; }
+.play-card-batter.mx-flip { animation: pp-mx-flip 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) both; transform-origin: 50% 100%; }
+@keyframes pp-mx-flip {
+  from { transform: rotateX(74deg) translateY(12px); opacity: 0; }
+  55% { opacity: 1; }
+  to { transform: rotateX(0) translateY(0); opacity: 1; }
+}
+.play-card-pitcher.mx-slide { animation: pp-mx-slide 0.5s ease-out 0.07s both; }
+@keyframes pp-mx-slide {
+  from { transform: translateX(36px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
 .play-card-tabs { display: none; }
 @media (max-width: 1023px) {
   .play-cards { grid-template-columns: 1fr; }

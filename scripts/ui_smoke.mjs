@@ -111,6 +111,34 @@ function findByClass(root, cls) {
 }
 const facControls = () => findByClass(view, 'ctl-fac');
 const hasHl = () => findByClass(view, 'hl-flash').length > 0;
+// Matchup moment: the strip names the pair on the table, the
+// cards present themselves once per new pair, and a settled
+// card's plain structure is exactly what it was before the
+// flair (the entrance lives in mx-* classes, stripped here).
+const strip = () => findByClass(view, 'play-matchup')[0];
+const batCardEl = () => findByClass(view, 'play-card-batter')[0];
+const pitCardEl = () => findByClass(view, 'play-card-pitcher')[0];
+function livePairNames() {
+  const dia = findByClass(view, 'play-home')[0];
+  const m = dia && /^(.*) batting · (.*) pitching$/.exec(dia.textContent);
+  return m ? [m[1], m[2]] : [null, null];
+}
+function skeleton(node) {
+  const cls = node.className.split(/\s+/).filter((c) => c && !c.startsWith('mx-')).sort().join(' ');
+  return node.tagName + '|' + cls + '|style:' + Object.keys(node.style).length + '(' + node.children.map(skeleton).join(',') + ')';
+}
+{
+  const [bn, pn] = livePairNames();
+  const s = strip();
+  const vsEl = s && findByClass(s, 'mx-vs')[0];
+  check('matchup strip names the pair on the table', !!s && !!bn && s.textContent.includes(bn) && s.textContent.includes(pn) && !!vsEl && vsEl.textContent === 'vs', s && s.textContent);
+  check('matchup strip names both clubs', !!s && s.textContent.includes('Chicago') && s.textContent.includes('Montreal'), s && s.textContent);
+  check('new PA: the batter card flips up and the pitcher card slides in',
+    !!batCardEl() && batCardEl().classList.contains('mx-flip') && !!pitCardEl() && pitCardEl().classList.contains('mx-slide'));
+  check('the spotlight rides the pair', !!batCardEl() && batCardEl().classList.contains('spot-bat') && !!pitCardEl() && pitCardEl().classList.contains('spot-pit'));
+}
+const settledBat = skeleton(batCardEl());
+const settledPit = skeleton(pitCardEl());
 check('no play button: the input controls are the triggers', findButtons(view, 'Play plate appearance').length === 0 && facControls().length === 1);
 function driveOne() {
   const rare = findButtons(view, 'Resolve rare play');
@@ -119,6 +147,12 @@ function driveOne() {
   if (fac.length && !fac[0].disabled) { fac[0].click(); return true; }
   return false;
 }
+// One input mid-PA: the entrance is dismissed at once and
+// does not replay, and the settled cards keep the plain
+// geometry they had under the animation.
+if (facControls().length) facControls()[0].click();
+check('the next input dismisses the matchup entrance', !!batCardEl() && !batCardEl().classList.contains('mx-flip') && !!pitCardEl() && !pitCardEl().classList.contains('mx-slide'));
+check('settled layout matches the pre-change geometry', skeleton(batCardEl()) === settledBat && skeleton(pitCardEl()) === settledPit);
 // Highlight persistence: a completed PA leaves its read lit;
 // the light survives a bare re-render, clears on the next
 // input, and clears on Undo.
@@ -128,8 +162,14 @@ check('a completed PA leaves its read lit', hasHl(), 'pa=' + (PUI.UI.GS && PUI.U
 const showBtn = findButtons(view, 'Show');
 if (showBtn.length) showBtn[0].click();
 check('the highlight survives a re-render with no input', hasHl());
+check('the held pair keeps its strip and its spotlight', !!strip() && findByClass(strip(), 'mx-vs').length === 1 && !!batCardEl() && batCardEl().classList.contains('spot-bat') && !batCardEl().classList.contains('mx-flip'));
 if (facControls().length) facControls()[0].click();
 check('the next input clears the highlight', !hasHl());
+{
+  const [bn2, pn2] = livePairNames();
+  check('the strip names the new pair once play resumes', !!strip() && !!bn2 && strip().textContent.includes(bn2) && strip().textContent.includes(pn2), strip() && strip().textContent);
+  check('a new PA presents its cards again', !!batCardEl() && batCardEl().classList.contains('mx-flip') && !!pitCardEl() && pitCardEl().classList.contains('mx-slide'));
+}
 guard = 0;
 const paNow = PUI.UI.GS.paCount;
 while (guard++ < 300 && PUI.UI.GS.paCount <= paNow) { if (!driveOne()) break; }
