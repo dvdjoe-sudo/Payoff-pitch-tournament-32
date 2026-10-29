@@ -3861,6 +3861,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
   const UI = { GS: null, setup: null, cardTab: 'batter', rarePending: false,
     stepError: null, modal: null, confirmDiscard: false, lastPitcher: null, view: null,
+    feedOpen: false,
     _flash: null, _flashSeenPa: 0, _shownCards: null, _parkedDecision: false };
   PUI.UI = UI;
   const fx = () => PlayData.data.fixture;
@@ -4157,7 +4158,13 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const tabRow = el('div', { class: 'play-toggle-row play-card-tabs' });
     tabRow.appendChild(button('Batter', () => { UI.cardTab = 'batter'; renderGame(view); }, { cls: UI.cardTab === 'batter' ? 'on' : '' }));
     tabRow.appendChild(button('Pitcher', () => { UI.cardTab = 'pitcher'; renderGame(view); }, { cls: UI.cardTab === 'pitcher' ? 'on' : '' }));
-    page.appendChild(tabRow);
+    // Layout: the game column, with the play feed in a collapsible
+    // side panel so the two cards get the room.
+    const layout = el('div', { class: 'play-layout' });
+    const mainCol = el('div', { class: 'play-main' });
+    layout.appendChild(mainCol);
+    page.appendChild(layout);
+    mainCol.appendChild(tabRow);
     const cards = el('div', { class: 'play-cards show-' + UI.cardTab });
     const batCardData = hcard(G, currentBatter(S)[0], bat);
     const bCard = hitterCardBlock(batCardData);
@@ -4168,7 +4175,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     UI._shownCards = { bat: batCardData, pit: pitCardData };
     cards.appendChild(bCard);
     cards.appendChild(pCard);
-    page.appendChild(cards);
+    mainCol.appendChild(cards);
     // Roll panel
     const roll = el('section', { class: 'play-roll' });
     roll.appendChild(el('h3', { text: 'Dice and cards' }));
@@ -4184,20 +4191,31 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     roll.appendChild(el('p', { class: 'play-lastflip', text: flipText(S.flips[S.flips.length - 1]) }));
     if (GS.pendingStep) roll.appendChild(manualForm(GS));
     if (UI.stepError) roll.appendChild(el('p', { class: 'play-problem', text: UI.stepError }));
-    page.appendChild(roll);
+    mainCol.appendChild(roll);
     // Decision / advance bar
-    page.appendChild(actionBar(view));
-    // Feed
-    const feed = el('section', { class: 'play-feed' });
-    feed.appendChild(el('h3', { text: 'Play feed' }));
-    const feedList = el('div', { class: 'play-feed-list' });
-    GS.feed.forEach((b) => feedList.appendChild(feedBlock(b)));
-    feed.appendChild(feedList);
-    page.appendChild(feed);
+    mainCol.appendChild(actionBar(view));
+    // Play feed: a collapsible side panel. Collapsed by default so
+    // the cards own the screen; the feed's blocks and live updates
+    // are unchanged when it is open.
+    const feedPanel = el('aside', { class: 'play-feed-panel' + (UI.feedOpen ? ' open' : '') });
+    const feedBar = el('div', { class: 'play-feed-bar' });
+    feedBar.appendChild(el('span', { class: 'play-feed-title', text: 'Play feed' }));
+    feedBar.appendChild(button(UI.feedOpen ? 'Hide' : 'Show', () => {
+      UI.feedOpen = !UI.feedOpen;
+      renderGame(view);
+    }, { cls: 'play-feed-toggle' }));
+    feedPanel.appendChild(feedBar);
+    let feedList = null;
+    if (UI.feedOpen) {
+      feedList = el('div', { class: 'play-feed-list' });
+      GS.feed.forEach((b) => feedList.appendChild(feedBlock(b)));
+      feedPanel.appendChild(feedList);
+    }
+    layout.appendChild(feedPanel);
     // Bench and bullpen panels
-    page.appendChild(rosterPanels(GS));
+    mainCol.appendChild(rosterPanels(GS));
     view.appendChild(page);
-    feedList.scrollTop = feedList.scrollHeight;
+    if (feedList) feedList.scrollTop = feedList.scrollHeight;
     void G;
   }
   function manualForm(GS) {
@@ -4377,17 +4395,19 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     UI._flash = { timers: [] };
     cell.classList.add('hl-flash');
     setCardsTab('pitcher');
+    // Each step holds about a second: the at-bat gets its moment,
+    // and the game still only advances when the player says so.
     UI._flash.timers.push(setTimeout(() => {
       if (!UI._flash) return;
       cell.classList.remove('hl-flash');
       let wait = 250;
-      if (data.read && decorateBatter(data.read)) { setCardsTab('batter'); wait = 900; }
+      if (data.read && decorateBatter(data.read)) { setCardsTab('batter'); wait = 1000; }
       UI._flash.timers.push(setTimeout(() => {
         if (!UI._flash) return;
         UI._flash = null;
         renderGame(UI.view);
       }, wait));
-    }, 600));
+    }, 1000));
     return true;
   }
 
