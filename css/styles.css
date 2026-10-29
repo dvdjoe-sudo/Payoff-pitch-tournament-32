@@ -165,6 +165,16 @@ h1 {
 
 .nav-menu.open .views { display: flex; }
 
+/* Play route: the site header shrinks to a slim strip so the
+   game gets the room. The brand link stays as the way back to
+   the rest of the site; every other route keeps the full header. */
+body:has(.play-page) .site-header { padding: 0.3rem 1.25rem 0.35rem; }
+body:has(.play-page) .site-header .brand .eyebrow { display: none; }
+body:has(.play-page) .site-header h1 { font-size: 1.05rem; line-height: 1.2; }
+body:has(.play-page) .site-header .next-up,
+body:has(.play-page) .site-header .site-menu,
+body:has(.play-page) .site-header .menu-toggle { display: none; }
+
 main { padding: 0.5rem 1.25rem 2.5rem; }
 
 .load-error {
@@ -1261,4 +1271,33 @@ table.play-linescore td.num, table.play-linescore th { text-align: center; }
 @keyframes pp-hl-pulse {
   from { transform: scale(1); }
   to { transform: scale(1.14); }
+}
+/* Play layout: game column plus the collapsible feed panel. */
+.play-layout { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.9rem; align-items: start; }
+.play-main { min-width: 0; }
+.play-feed-panel {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--card);
+  overflow: hidden;
+}
+.play-feed-bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; }
+.play-feed-title { font-weight: 700; white-space: nowrap; }
+.play-feed-toggle { font-size: 0.8rem; min-height: 30px; padding: 0.1rem 0.55rem; }
+.play-feed-panel.open { width: 21rem; }
+.play-feed-panel.open .play-feed-list {
+  max-height: 75vh;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+}
+@media (min-width: 1024px) {
+  .play-feed-panel { position: sticky; top: 0.75rem; }
+  .play-feed-panel:not(.open) .play-feed-bar { flex-direction: column; padding: 0.55rem 0.3rem; }
+  .play-feed-panel:not(.open) .play-feed-title { writing-mode: vertical-rl; }
+}
+@media (max-width: 1023px) {
+  .play-layout { grid-template-columns: minmax(0, 1fr); }
+  .play-feed-panel.open { width: auto; }
+  .play-feed-panel.open .play-feed-list { max-height: 40vh; }
 }
