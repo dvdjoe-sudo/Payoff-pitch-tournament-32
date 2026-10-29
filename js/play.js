@@ -2437,6 +2437,7 @@ function* groundOut(G, S, batterName, pos, pct, pitcherResult) {
     return yield* groundOutAdd(G, S, batterName, pos, pct, pitcherResult);
   }
   const rt = chanceRt(S);
+  if (rt.starter_1b === null) { const ct = S.teams[asg.team]; if (ct && ct.field['1B']) rt.starter_1b = ct.field['1B']; }
   const pname = curPitcher(S);
   const pcardNow = pitcherCard(G, S, fldTeam(S), pname);
   const pitcherDp = pname === 'EMERGENCY' ? null : (pcardNow.dp != null ? pcardNow.dp : null);
@@ -2448,7 +2449,7 @@ function* groundOut(G, S, batterName, pos, pct, pitcherResult) {
   bcard.dp = eff + 1;
   if (pname !== 'EMERGENCY' && pcardNow.dp != null) { oldPitcherDp = pcardNow.dp; pcardNow.dp = eff + 1; }
   rt.dp_bumps += 1;
-  led(S, 'chance_dp_bump', 'Tinker to Evers to Chance: the double-play combination is set; the DP check reads one higher (' + eff + ' -> ' + (eff + 1) + ')');
+  led(S, 'chance_dp_bump', 'Tinker to Evers to Chance: the double-play combination is set (' + S.teams[fldTeam(S)].field['2B'] + ' at 2B, ' + S.teams[fldTeam(S)].field.SS + ' at SS); the DP check reads one higher (' + eff + ' -> ' + (eff + 1) + ')');
   let result;
   const bsBefore = bstat(S, batTeam(S), batterName).GDP;
   try {
@@ -2473,7 +2474,6 @@ function* groundOut(G, S, batterName, pos, pct, pitcherResult) {
             led(S, 'chance_dp_tie', 'the DP check tied the unbumped rating (2d6=' + total + ' = DP ' + eff + ') and Chance himself holds the bag: the double play is completed');
           } else {
             rt.dp_tie_gate_closed += 1;
-            led(S, 'chance_dp_tie', 'the DP check tied the unbumped rating (2d6=' + total + ' = DP ' + eff + '), but the tie gate is closed (the first baseman is ' + rt.starter_1b + ', not Chance)');
           }
         }
       }
@@ -2884,7 +2884,7 @@ function* resolvePA(G, S) {
     fl.v2_shift_applied = false;
   }
   let res;
-  if (!S.pending) {
+  if (!S.pending && G.fatigueBook !== false) {
     const ff = ffState(S);
     ff.pa_index += 1;
     const pre = ffPrecheck(G, S);
@@ -2909,10 +2909,7 @@ function* resolvePA(G, S) {
 /* The composed update_fatigue: the book's precheck, the engine's
  * 6-run rule inside the book's post pass, then Williams'
  * attrition. Called by the driver after every PA. */
-function updateFatigue(G, S) {
-  const pre = ffPrecheck(G, S);
-  if (!pre.suppressed) engineUpdateFatigue(G, S);
-  ffEvaluate(G, S, 'post', pre);
+function traits2Attrition(G, S) {
   if (masterOn(S)) {
     const fteam = fldTeam(S);
     const cur = curPitcher(S);
@@ -2924,6 +2921,13 @@ function updateFatigue(G, S) {
       elog(S, '  ' + cur + ' is fatigued (runs plus Williams attrition reach the line)');
     }
   }
+}
+function updateFatigue(G, S) {
+  if (G.fatigueBook === false) { engineUpdateFatigue(G, S); traits2Attrition(G, S); return; }
+  const pre = ffPrecheck(G, S);
+  if (!pre.suppressed) engineUpdateFatigue(G, S);
+  ffEvaluate(G, S, 'post', pre);
+  traits2Attrition(G, S);
 }
 
 /* ------------------------------------------------------------ driver */
@@ -3051,6 +3055,7 @@ function* autoResolveRare(G, S) {
   if (pend.dice) { [bd1, bd2, btot] = pend.dice; }
   else { const r = yield* roll2d6(G, S); [bd1, bd2, btot] = r; }
   let restarts = 0;
+  let finalRes = 'DONE';
   while (true) {
     const pct = yield* rollpct(G, S);
     const bcard = hcard(G, batterName, batTeam(S));
@@ -3063,6 +3068,7 @@ function* autoResolveRare(G, S) {
       }
       continue;
     }
+    finalRes = res;
     break;
   }
   /* The governed stack's completion does NOT advance the batting
@@ -3088,6 +3094,7 @@ function* autoResolveRare(G, S) {
       led(S, 'gap_so9_clause', 'rare entry ' + rng + ' turns on a SO/9 the converted cards do not carry; its force clause is not applied (the recorded hand-resolutions logged the same gap)');
     }
   }
+  return finalRes;
 }
 /* One full driver step: closer rule, protocol reshuffle, the
  * pre-PA traits hook (governed mode), one PA including its
@@ -3143,6 +3150,7 @@ function makeContext(cfg) {
     penRole: { CHC: fx.pen_roles.CHC, OPP: fx.pen_roles.MON },
     allPenNames: new Set([...fx.pens.CHC, ...fx.pens.MON]),
     park: PlayData.data.parks[fx.clubs[homeClub].park],
+    fatigueBook: cfg.fatigueBook !== false,
     buntOverlay: !!cfg.buntOverlay,
     defenseNumbers: !!cfg.defenseNumbers,
     clauses: !!cfg.clauses,
@@ -3268,7 +3276,9 @@ function restoreState(S, snap) {
  * is inert. */
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { PlayData, makeContext, fixtureTraits, newState, drive,
-    gameStep, runGame, resolvePA, autoResolveRare, prePa, updateFatigue,
+    gameStep, runGame, resolvePA, resolvePaInner, autoResolveRare, prePa, updateFatigue,
+    ffPrecheck, ffEvaluate, ffState, sectionLookupRaw, fieldingLine,
+    CHARTS: { STEAL_COL, STEAL_HOME, BUNT, DEF_POS, HIT_G, DEF_HIT, DEF_ERR, DEF_OUT, catcherArm },
     maybeHook, enforceCloser, closeCheck, changePitcher, changePitcherRaw,
     pickReliever, removePitcher, substitute, pinchHit, pinchRun,
     resolveBunt, attemptSteal, autoStealCheck, resolveDefense, groundOut,
