@@ -3475,11 +3475,22 @@ function createGame(cfg, storage) {
     if (action.kind === 'pitch') {
       changePitcher(G, S, action.slot, action.name);
     } else if (action.kind === 'ph') {
-      drive(pinchHit(G, S, action.slot, action.out, action.inn, action.reason || 'pinch hit'), S, decide);
+      pinchHit(S, action.slot, action.out, action.name, action.reason || 'pinch hit');
     } else if (action.kind === 'pr') {
-      drive(pinchRun(G, S, action.slot, action.out, action.inn, action.reason || 'pinch run'), S, decide);
+      pinchRun(S, action.slot, action.out, action.name, action.reason || 'pinch run');
     } else if (action.kind === 'sub') {
       drive(substitute(G, S, action.slot, action.out, action.reason || 'substitution'), S, decide);
+    } else if (action.kind === 'defsub') {
+      const tm = T(S, action.slot);
+      const slotE = tm.order.find((s) => s.name === action.out);
+      const pos = slotE ? slotE.pos : null;
+      tm.bench.splice(tm.bench.indexOf(action.name), 1);
+      tm.bench.push(action.out);
+      tm.removed.push(action.out);
+      if (slotE) slotE.name = action.name;
+      if (pos && pos !== 'DH' && tm.field[pos] === action.out) tm.field[pos] = action.name;
+      elog(S, '  substitution (' + TEAMNAME[action.slot] + '): ' + action.name + ' replaces ' + action.out + ' (defensive substitution, manager\'s call)');
+      led(S, 'substitution', action.name + ' for ' + action.out + ' (defensive substitution)');
     } else {
       GS.undoStack.pop();
       return { status: 'UNKNOWN_ACTION' };
@@ -3665,6 +3676,852 @@ function buildExports(GS) {
     governance,
   };
   return { markdown: md.join('\n'), json, audit };
+}
+
+
+/* ============================================================
+ * Part 5b (browser UI): PlayUI — Screens S0-S6 of spec Section 8.
+ * Browser only; the Node export path above never touches it.
+ * The card renderer below is a deliberate copy of bracket.js's
+ * player-page renderer (cardSections and its helpers), adapted
+ * to the playable data file: the pitcher carries
+ * card_table_2d6 and merged scalar wp/dp/hold/inj. The parity
+ * script (scripts/check_cardview_parity.py) fails the build if
+ * the two renderers' orders or labels drift apart.
+ * ========================================================== */
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const PUI = {};
+  window.PlayUI = PUI;
+
+  function el(tag, attrs) {
+    const node = document.createElement(tag);
+    const children = Array.prototype.slice.call(arguments, 2);
+    if (attrs) {
+      Object.keys(attrs).forEach(function (key) {
+        const value = attrs[key];
+        if (value == null || value === false) return;
+        if (key === 'class') node.className = value;
+        else if (key === 'text') node.textContent = value;
+        else node.setAttribute(key, value === true ? '' : value);
+      });
+    }
+    children.forEach(function (child) {
+      if (child == null || child === false) return;
+      node.appendChild(typeof child === 'string' ? document.createTextNode(child) : child);
+    });
+    return node;
+  }
+  function bandText(band) { return band ? band[0] + '-' + band[1] : '—'; }
+  function factChip(label, value, wide) {
+    const text = value == null ? '—' : String(value);
+    return el('span', { class: 'card-chip' + (wide || text.length > 18 ? ' wide' : '') },
+      el('span', { class: 'card-k', text: label }),
+      el('span', { class: 'card-v', text: text }));
+  }
+  function factRow(chips) {
+    const kept = chips.filter(Boolean);
+    if (!kept.length) return null;
+    const row = el('div', { class: 'card-facts' });
+    kept.forEach(function (chip) { row.appendChild(chip); });
+    return row;
+  }
+  function bandHead(full, short, numeric) {
+    return el('th', { class: numeric ? 'num' : null, scope: 'col' },
+      el('span', { class: 'wide-label', text: full }),
+      el('span', { class: 'phone-label', text: short }));
+  }
+  function cardBandTable(rows) {
+    const wrap = el('div', { class: 'table-wrap card-band' });
+    const t = el('table');
+    t.appendChild(el('colgroup', null,
+      el('col', { class: 'band-result' }), el('col', { class: 'band-num' }), el('col', { class: 'band-num' })));
+    const head = el('tr');
+    head.appendChild(bandHead('Result', 'Result', false));
+    head.appendChild(bandHead('vs LHP', 'vs L', true));
+    head.appendChild(bandHead('vs RHP', 'vs R', true));
+    t.appendChild(el('thead', null, head));
+    const body = el('tbody');
+    rows.forEach(function (row) {
+      const tr = el('tr');
+      tr.appendChild(el('td', { text: row[0] }));
+      tr.appendChild(el('td', { class: 'num', text: row[1] }));
+      tr.appendChild(el('td', { class: 'num', text: row[2] }));
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    return wrap;
+  }
+  function fieldingLine(positions) {
+    const list = el('div', { class: 'fielding-line' });
+    positions.forEach(function (spot) {
+      const row = el('div', { class: 'field-row' });
+      row.appendChild(el('span', { class: 'field-pos', text: spot.pos || '' }));
+      if (spot.range != null && spot.range !== '') row.appendChild(factChip('Range', spot.range));
+      if (spot.e != null && spot.e !== '') row.appendChild(factChip('E', spot.e));
+      if (spot.arm != null && spot.arm !== '') row.appendChild(factChip('Arm', spot.arm));
+      list.appendChild(row);
+    });
+    return list;
+  }
+  function diceGrid(table) {
+    const grid = el('div', { class: 'dice-grid' });
+    ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'].forEach(function (total) {
+      const text = table[total] || '—';
+      grid.appendChild(el('div', { class: 'dice-cell' + (text.length > 12 ? ' wide' : '') },
+        el('span', { class: 'card-k', text: total }),
+        el('span', { class: 'card-v', text: text })));
+    });
+    return grid;
+  }
+  function hitterCardBlock(bat) {
+    const block = el('section', { class: 'payoff-card' });
+    block.appendChild(el('h4', { text: 'Hitter card' }));
+    const bits = [];
+    if (bat.bats) bits.push(factChip('Bats', bat.bats));
+    if (bat.throws) bits.push(factChip('Throws', bat.throws));
+    if (bat.run != null) bits.push(factChip('Run', bat.run));
+    if (bat.steal) bits.push(factChip('Steal', bat.steal.rating + (bat.steal.jump != null ? ', jump ' + bat.steal.jump : '')));
+    if (bat.sac_bunt) bits.push(factChip('Sac bunt', bat.sac_bunt));
+    if (bat.dp != null) bits.push(factChip('DP', bat.dp));
+    if (bat.fielding) bits.push(factChip('Fielding', bat.fielding));
+    if (bat.arm) bits.push(factChip('Arm', bat.arm));
+    const facts = factRow(bits);
+    if (facts) block.appendChild(facts);
+    if (bat.positions && bat.positions.length) block.appendChild(fieldingLine(bat.positions));
+    ['WHEELHOUSE', 'PATIENT', 'TOUGH', 'IN-PLAY'].forEach(function (name) {
+      const section = bat.sections && bat.sections[name];
+      if (!section) return;
+      block.appendChild(el('p', { class: 'meta', text: name + ' (percentile bands)' }));
+      const rows = ['HR', '3B', '2B', '1B', 'BB', 'HBP', 'SO'].filter(function (result) {
+        return (section.vsLHP && section.vsLHP[result]) || (section.vsRHP && section.vsRHP[result]);
+      }).map(function (result) {
+        return [result, bandText(section.vsLHP && section.vsLHP[result]), bandText(section.vsRHP && section.vsRHP[result])];
+      });
+      if (rows.length) block.appendChild(cardBandTable(rows));
+    });
+    if (bat.out_table && bat.out_table.length) {
+      block.appendChild(el('p', { class: 'note', text: 'Out table: ' + bat.out_table.map(function (row) {
+        return row.range[0] + '-' + row.range[1] + ' ' + row.result;
+      }).join(' · ') }));
+    }
+    return block;
+  }
+  function pitcherCardBlock(pit) {
+    const block = el('section', { class: 'payoff-card' });
+    block.appendChild(el('h4', { text: 'Pitcher card' }));
+    const pbits = [];
+    if (pit.throws) pbits.push(factChip('Throws', pit.throws));
+    if (pit.card_type) pbits.push(factChip('Type', pit.card_type));
+    if (pit.so_modifier) pbits.push(factChip('SO modifier', pit.so_modifier));
+    const special = pit.special && pit.special.length ? pit.special : pit.special_required;
+    if (special && special.length) pbits.push(factChip('Special', Array.isArray(special) ? special.join(', ') : String(special), true));
+    if (pit.stamina) {
+      if (pit.stamina.start != null) pbits.push(factChip('Start', pit.stamina.start));
+      if (pit.stamina.relief) pbits.push(factChip('Relief', pit.stamina.relief));
+    }
+    [['wp', 'WP'], ['dp', 'DP'], ['hold', 'Hold'], ['pickoff', 'Pickoff'], ['inj', 'Inj']].forEach(function (pair) {
+      let value = pit[pair[0]];
+      if (value == null && pit.addendum) value = pit.addendum[pair[0]];
+      if (value != null && value !== '') pbits.push(factChip(pair[1], value));
+    });
+    const pfacts = factRow(pbits);
+    if (pfacts) block.appendChild(pfacts);
+    if (pit.card_table_2d6) {
+      block.appendChild(el('p', { class: 'meta', text: '2d6 section' }));
+      block.appendChild(diceGrid(pit.card_table_2d6));
+    }
+    return block;
+  }
+  function parkCardBlock(park) {
+    const block = el('section', { class: 'payoff-card' });
+    block.appendChild(el('h4', { text: park.name }));
+    block.appendChild(el('p', { class: 'meta', text: 'BALLPARK (percentile bands)' }));
+    const order = [];
+    ['L', 'R'].forEach(function (side) {
+      (park.ballpark_chart[side] || []).forEach(function (row) { if (!order.includes(row.result)) order.push(row.result); });
+    });
+    const rows = order.map(function (result) {
+      const l = (park.ballpark_chart.L || []).find(function (r) { return r.result === result; });
+      const r = (park.ballpark_chart.R || []).find(function (r) { return r.result === result; });
+      return [result, l ? l.range[0] + '-' + l.range[1] : '—', r ? r.range[0] + '-' + r.range[1] : '—'];
+    });
+    block.appendChild(cardBandTable(rows));
+    return block;
+  }
+
+  // -- storage (never throws) --------------------------------
+  const store = {
+    get length() { try { return window.localStorage.length; } catch (e) { return 0; } },
+    key(i) { try { return window.localStorage.key(i); } catch (e) { return null; } },
+    getItem(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } },
+    setItem(k, v) { window.localStorage.setItem(k, v); },
+    removeItem(k) { try { window.localStorage.removeItem(k); } catch (e) { /* gone is fine */ } },
+  };
+
+  const UI = { GS: null, setup: null, cardTab: 'batter', rarePending: false,
+    stepError: null, modal: null, confirmDiscard: false, lastPitcher: null, view: null };
+  PUI.UI = UI;
+  const fx = () => PlayData.data.fixture;
+  const slotOfClub = (club) => club === 'CHC' ? 'CHC' : 'OPP';
+  const clubOfSlot = (slot) => slot === 'CHC' ? 'CHC' : 'MON';
+  const clubName = (club) => fx().clubs[club].name;
+  const clubShort = (club) => fx().clubs[club].short;
+
+  function freshSetup() {
+    const f = fx();
+    return {
+      homeClub: f.home_default,
+      starters: { CHC: f.default_starters.CHC, MON: f.default_starters.MON },
+      lineups: { CHC: deepCopy(f.lineups.CHC), MON: deepCopy(f.lineups.MON) },
+      benches: { CHC: f.benches.CHC.slice(), MON: f.benches.MON.slice() },
+      managers: { CHC: null, MON: null },
+      sourceKind: 'deck',
+      seed: Math.floor(100000 + Math.random() * 900000),
+    };
+  }
+
+  function button(label, onClick, opts) {
+    const b = el('button', { type: 'button', class: 'play-btn' + ((opts && opts.cls) ? ' ' + opts.cls : '') });
+    b.textContent = label;
+    if (opts && opts.disabled) b.disabled = true;
+    if (onClick) b.addEventListener('click', onClick);
+    return b;
+  }
+
+  // -- S6 resume banner + S1 setup ----------------------------
+  function renderSetup(view) {
+    UI.view = view;
+    view.replaceChildren();
+    const page = el('article', { class: 'panel play-page' });
+    const save = peekSave(store);
+    if (save && !save.finished) {
+      const banner = el('section', { class: 'play-banner' });
+      banner.appendChild(el('h3', { text: 'A saved game is waiting' }));
+      banner.appendChild(el('p', { text: save.label + ' — ' + (save.half === 'top' ? 'Top' : 'Bottom') + ' ' + save.inning
+        + ', Chicago ' + save.score.CHC + ', Montreal ' + save.score.OPP + ', after PA ' + save.paCount + '.' }));
+      if (UI.confirmDiscard) {
+        banner.appendChild(el('p', { class: 'note', text: 'Discarding deletes the app\'s only copy of this game, and if it was never exported, it is gone for good.' }));
+        banner.appendChild(button('Delete the saved game', () => { discardSave(store); UI.confirmDiscard = false; renderSetup(view); }, { cls: 'danger' }));
+        banner.appendChild(button('Keep it', () => { UI.confirmDiscard = false; renderSetup(view); }));
+      } else {
+        banner.appendChild(button('Resume the saved game', () => {
+          const GS = loadSave(store);
+          if (GS) { UI.GS = GS; UI.rarePending = false; renderGame(view); }
+        }));
+        banner.appendChild(button('Discard it', () => { UI.confirmDiscard = true; renderSetup(view); }));
+      }
+      page.appendChild(banner);
+    } else if (save && save.finished) {
+      const banner = el('section', { class: 'play-banner' });
+      banner.appendChild(el('h3', { text: 'A finished game is saved' }));
+      banner.appendChild(el('p', { text: save.label + ' — final, Chicago ' + save.score.CHC + ', Montreal ' + save.score.OPP + '. It is not resumable; open it to export it, then clear it.' }));
+      banner.appendChild(button('Open it for export', () => {
+        const GS = loadSave(store);
+        if (GS) { UI.GS = GS; renderGame(view); }
+      }));
+      banner.appendChild(button('Clear it', () => { discardSave(store); renderSetup(view); }));
+      page.appendChild(banner);
+    }
+
+    const S = UI.setup || (UI.setup = freshSetup());
+    const f = fx();
+    page.appendChild(el('h2', { text: 'Play the game' }));
+    page.appendChild(el('p', { class: 'note', text: f.label + '. Exhibition: this game is not in the tournament record, and nothing here writes to it.' }));
+
+    // Home club + park card
+    page.appendChild(el('h3', { text: 'Home club' }));
+    const homeRow = el('div', { class: 'play-toggle-row' });
+    ['CHC', 'MON'].forEach(function (club) {
+      const b = button(clubName(club) + ' (' + f.clubs[club].park + ')', () => { S.homeClub = club; renderSetup(view); },
+        { cls: S.homeClub === club ? 'on' : '' });
+      homeRow.appendChild(b);
+    });
+    page.appendChild(homeRow);
+    page.appendChild(parkCardBlock(PlayData.data.parks[f.clubs[S.homeClub].park]));
+
+    // Starters
+    page.appendChild(el('h3', { text: 'Starting pitchers' }));
+    ['CHC', 'MON'].forEach(function (club) {
+      const lab = el('label', { class: 'play-field', text: clubName(club) + ' ' });
+      const sel = el('select');
+      f.rotations[club].forEach(function (name) {
+        const o = el('option', { value: name, text: name });
+        if (S.starters[club] === name) o.selected = true;
+        sel.appendChild(o);
+      });
+      sel.addEventListener('change', () => { S.starters[club] = sel.value; });
+      lab.appendChild(sel);
+      page.appendChild(lab);
+    });
+
+    // Lineups
+    const problems = { CHC: [], MON: [] };
+    ['CHC', 'MON'].forEach(function (club) {
+      page.appendChild(el('h3', { text: clubName(club) + ' lineup' }));
+      const list = el('div', { class: 'play-lineup' });
+      S.lineups[club].forEach(function (slotEntry, i) {
+        const row = el('div', { class: 'play-lu-row' });
+        row.appendChild(el('span', { class: 'play-lu-n', text: String(i + 1) }));
+        row.appendChild(el('span', { class: 'play-lu-name', text: slotEntry.name }));
+        row.appendChild(el('span', { class: 'play-lu-pos', text: slotEntry.pos }));
+        row.appendChild(button('↑', () => { if (i > 0) { const t = S.lineups[club][i - 1]; S.lineups[club][i - 1] = S.lineups[club][i]; S.lineups[club][i] = t; renderSetup(view); } }, { disabled: i === 0 }));
+        row.appendChild(button('↓', () => { if (i < 8) { const t = S.lineups[club][i + 1]; S.lineups[club][i + 1] = S.lineups[club][i]; S.lineups[club][i] = t; renderSetup(view); } }, { disabled: i === 8 }));
+        row.appendChild(button('Swap', () => openSetupSwap(view, club, i)));
+        list.appendChild(row);
+      });
+      page.appendChild(list);
+      page.appendChild(el('p', { class: 'note', text: 'Bench: ' + S.benches[club].join(', ') }));
+      problems[club] = lineupLegality(S.lineups[club], club);
+      problems[club].forEach(function (p) { page.appendChild(el('p', { class: 'play-problem', text: clubShort(club) + ': ' + p })); });
+      page.appendChild(button('Restore the staged lineup', () => {
+        S.lineups[club] = deepCopy(f.lineups[club]); S.benches[club] = f.benches[club].slice(); renderSetup(view);
+      }));
+    });
+
+    // Managers
+    page.appendChild(el('h3', { text: 'Managers' }));
+    ['CHC', 'MON'].forEach(function (club) {
+      const profile = f.clubs[club].manager;
+      const row = el('div', { class: 'play-toggle-row' });
+      row.appendChild(el('span', { class: 'play-lu-name', text: clubName(club) + ': ' }));
+      row.appendChild(button('You manage', () => { S.managers[club] = 'human'; renderSetup(view); }, { cls: S.managers[club] === 'human' ? 'on' : '' }));
+      row.appendChild(button(profile + ' (profile)', () => { S.managers[club] = 'profile'; renderSetup(view); }, { cls: S.managers[club] === 'profile' ? 'on' : '' }));
+      page.appendChild(row);
+    });
+
+    // Dice source
+    page.appendChild(el('h3', { text: 'Dice and cards' }));
+    const srcRow = el('div', { class: 'play-toggle-row' });
+    [['deck', 'FAC deck'], ['dice', 'Dice roller'], ['manual', 'Manual entry']].forEach(function (pair) {
+      srcRow.appendChild(button(pair[1], () => { S.sourceKind = pair[0]; renderSetup(view); }, { cls: S.sourceKind === pair[0] ? 'on' : '' }));
+    });
+    page.appendChild(srcRow);
+    page.appendChild(el('p', { class: 'note', text: 'Declarations are not part of Phase 1 play. They arrive in a later phase.' }));
+
+    // Seed + start
+    const seedLab = el('label', { class: 'play-field', text: 'Seed ' });
+    const seedIn = el('input', { type: 'number', value: String(S.seed) });
+    seedIn.addEventListener('change', () => { const v = parseInt(seedIn.value, 10); if (Number.isFinite(v)) S.seed = v; });
+    seedLab.appendChild(seedIn);
+    page.appendChild(seedLab);
+    const legal = problems.CHC.length === 0 && problems.MON.length === 0;
+    const managed = S.managers.CHC && S.managers.MON;
+    const start = button('Start the game', () => {
+      const GS = createGame({
+        seed: S.seed, homeSlot: slotOfClub(S.homeClub),
+        starters: { CHC: S.starters.CHC, OPP: S.starters.MON },
+        lineups: S.lineups, benches: S.benches,
+        managers: { CHC: S.managers.CHC, OPP: S.managers.MON },
+        sourceKind: S.sourceKind,
+      }, store);
+      UI.GS = GS; UI.rarePending = false; UI.setup = null;
+      renderGame(view);
+    }, { disabled: !(legal && managed), cls: 'primary' });
+    page.appendChild(start);
+    if (!managed) page.appendChild(el('p', { class: 'note', text: 'Pick a manager for both clubs to start.' }));
+    view.appendChild(page);
+  }
+
+  function openSetupSwap(view, club, idx) {
+    const S = UI.setup;
+    const out = S.lineups[club][idx];
+    openModal(view, 'Swap for ' + out.name + ' (' + out.pos + ')', (body, close) => {
+      S.benches[club].forEach(function (cand) {
+        const err = swapLegality(S.lineups[club], club, out.name, cand);
+        const row = el('div', { class: 'play-modal-row' });
+        row.appendChild(el('span', { class: 'play-lu-name', text: cand }));
+        if (err) row.appendChild(el('span', { class: 'play-problem', text: err }));
+        else row.appendChild(button('Bring in', () => {
+          S.lineups[club][idx] = { name: cand, pos: out.pos };
+          S.benches[club] = S.benches[club].filter((n) => n !== cand).concat([out.name]);
+          close(); renderSetup(view);
+        }));
+        body.appendChild(row);
+      });
+    });
+  }
+
+  function openModal(view, title, build) {
+    closeModal();
+    const overlay = el('div', { class: 'play-modal-overlay' });
+    const box = el('div', { class: 'play-modal' });
+    box.appendChild(el('h3', { text: title }));
+    const body = el('div', { class: 'play-modal-body' });
+    box.appendChild(body);
+    const close = () => closeModal();
+    box.appendChild(button('Cancel', close));
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+    UI.modal = overlay;
+    build(body, close);
+  }
+  function closeModal() { if (UI.modal) { UI.modal.remove(); UI.modal = null; } }
+  PUI.renderSetup = renderSetup;
+  PUI._openModal = openModal;
+  PUI._el = el;
+  PUI._button = button;
+  PUI._blocks = { hitterCardBlock, pitcherCardBlock, parkCardBlock };
+  PUI._store = store;
+  PUI._clubOfSlot = clubOfSlot;
+
+  // -- S2 game screen -----------------------------------------
+  const runnerName = (entry) => entry == null ? null : (entry.name || entry[0]);
+  function ffFat(S, name) {
+    if (!S.fatigue_fix) return false;
+    const recs = S.fatigue_fix.pitchers || {};
+    for (const k of Object.keys(recs)) { const r = recs[k]; if ((k === name || (r && r.name === name)) && r && r.book_fatigued) return true; }
+    return false;
+  }
+  function linescoreTable(S, full) {
+    const innings = Math.max(9, S.linescore.CHC.length, S.linescore.OPP.length);
+    const away = S.home === 'CHC' ? 'OPP' : 'CHC';
+    const head = [''];
+    for (let i = 1; i <= innings; i++) head.push(String(i));
+    head.push('R', 'H', 'E');
+    const rows = [away, S.home].map(function (slot) {
+      const club = clubOfSlot(slot);
+      const cells = [clubShort(club)];
+      let r = 0;
+      for (let i = 0; i < innings; i++) { const v = S.linescore[slot][i]; cells.push(v == null ? '' : String(v)); if (v) r += v; }
+      let h = 0;
+      Object.values(S.teams[slot].batting).forEach((bs) => { h += bs.H || 0; });
+      cells.push(String(S.score[slot]), String(h), String(S.teams[slot].team_errors || 0));
+      void r;
+      return cells;
+    });
+    const wrap = el('div', { class: 'table-wrap' });
+    const t = el('table', { class: 'play-linescore' });
+    const hr = el('tr');
+    head.forEach((h) => hr.appendChild(el('th', { text: h })));
+    t.appendChild(el('thead', null, hr));
+    const body = el('tbody');
+    rows.forEach(function (cells) {
+      const tr = el('tr');
+      cells.forEach((c, i) => tr.appendChild(el('td', { class: i === 0 ? 'play-ls-club' : 'num', text: c })));
+      body.appendChild(tr);
+    });
+    t.appendChild(body);
+    wrap.appendChild(t);
+    void full;
+    return wrap;
+  }
+  function flipText(f) {
+    if (!f) return 'No flips yet.';
+    if (f.purpose && f.purpose.indexOf('RESHUFFLE') === 0) return f.purpose;
+    if (f.fac_id) {
+      const card = PlayData.deckById[f.fac_id];
+      if (card) return 'FAC ' + f.fac_id + ' — page ' + card.page + ' · 2d6 ' + card.d2d6 + ' · % ' + pad2(card.pct) + ' · 1d6 ' + card.d1d6 + (card.wp ? ' · WP face' : '') + '  (' + f.purpose + ')';
+      return 'FAC ' + f.fac_id + ' (' + f.purpose + ')';
+    }
+    if (f.dice) return 'Rolled 2d6: ' + f.dice[0] + ' + ' + f.dice[1] + ' = ' + (f.dice[0] + f.dice[1]) + '  (' + f.purpose + ')';
+    if (f.value != null) return 'Rolled ' + f.purpose + ': ' + f.value;
+    return f.purpose || '';
+  }
+  function feedBlock(b) {
+    const d = el('div', { class: 'play-feed-block' + (b.live ? '' : ' undone') });
+    d.appendChild(el('div', { class: 'play-feed-head', text: (b.action ? 'Managerial action' : 'PA ' + b.pa) + (b.live ? '' : ' — undone') }));
+    b.lines.forEach((l) => d.appendChild(el('div', { class: 'play-feed-line', text: l })));
+    return d;
+  }
+  function renderGame(view) {
+    UI.view = view;
+    const GS = UI.GS, S = GS.S, G = GS.G;
+    if (GS.finished) { renderOver(view); return; }
+    view.replaceChildren();
+    const page = el('article', { class: 'panel play-page' });
+    // Scorebug
+    const bat = batTeam(S), fld = fldTeam(S);
+    const bug = el('div', { class: 'play-scorebug' });
+    bug.appendChild(el('span', { class: 'play-bug-state', text: (S.half === 'top' ? 'Top' : 'Bottom') + ' ' + S.inning + ' · ' + S.outs + (S.outs === 1 ? ' out' : ' outs') }));
+    bug.appendChild(el('span', { class: 'play-bug-score', text: clubShort('CHC') + ' ' + S.score.CHC + ' — ' + S.score.OPP + ' ' + clubShort('MON') }));
+    bug.appendChild(el('span', { class: 'play-bug-save', text: GS.sealed ? 'Sealed' : (GS.storageOk ? 'Saved — after PA ' + GS.paCount : 'Unsaved — storage unavailable') }));
+    page.appendChild(bug);
+    page.appendChild(linescoreTable(S));
+    // Diamond
+    const dia = el('div', { class: 'play-diamond' });
+    const baseNames = [2, 1, 3].map((b) => runnerName(S.bases[b - 1]));
+    dia.appendChild(el('div', { class: 'play-base b2', text: baseNames[0] ? '◆ ' + baseNames[0] : '◇' }));
+    dia.appendChild(el('div', { class: 'play-base b1', text: baseNames[1] ? '◆ ' + baseNames[1] : '◇' }));
+    dia.appendChild(el('div', { class: 'play-base b3', text: baseNames[2] ? '◆ ' + baseNames[2] : '◇' }));
+    dia.appendChild(el('div', { class: 'play-home', text: currentBatter(S)[0] + ' batting · ' + curPitcher(S) + ' pitching' }));
+    page.appendChild(dia);
+    // Matchup cards
+    const pitcherNow = curPitcher(S);
+    if (UI.lastPitcher && UI.lastPitcher !== pitcherNow) UI.cardTab = 'pitcher';
+    UI.lastPitcher = pitcherNow;
+    const tabRow = el('div', { class: 'play-toggle-row play-card-tabs' });
+    tabRow.appendChild(button('Batter', () => { UI.cardTab = 'batter'; renderGame(view); }, { cls: UI.cardTab === 'batter' ? 'on' : '' }));
+    tabRow.appendChild(button('Pitcher', () => { UI.cardTab = 'pitcher'; renderGame(view); }, { cls: UI.cardTab === 'pitcher' ? 'on' : '' }));
+    page.appendChild(tabRow);
+    const cards = el('div', { class: 'play-cards show-' + UI.cardTab });
+    const bCard = hitterCardBlock(hcard(G, currentBatter(S)[0], bat));
+    bCard.classList.add('play-card-batter');
+    const pCard = pitcherCardBlock(pitcherCard(G, S, fld, pitcherNow));
+    pCard.classList.add('play-card-pitcher');
+    cards.appendChild(bCard);
+    cards.appendChild(pCard);
+    page.appendChild(cards);
+    // Roll panel
+    const roll = el('section', { class: 'play-roll' });
+    roll.appendChild(el('h3', { text: 'Dice and cards' }));
+    const srcRow = el('div', { class: 'play-toggle-row' });
+    [['deck', 'FAC deck'], ['dice', 'Dice roller'], ['manual', 'Manual entry']].forEach(function (pair) {
+      srcRow.appendChild(button(pair[1], () => {
+        const err = GS.setSource(pair[0]);
+        UI.stepError = err || null;
+        renderGame(view);
+      }, { cls: GS.sourceKind === pair[0] ? 'on' : '' }));
+    });
+    roll.appendChild(srcRow);
+    roll.appendChild(el('p', { class: 'play-lastflip', text: flipText(S.flips[S.flips.length - 1]) }));
+    if (GS.pendingStep) roll.appendChild(manualForm(GS));
+    if (UI.stepError) roll.appendChild(el('p', { class: 'play-problem', text: UI.stepError }));
+    page.appendChild(roll);
+    // Decision / advance bar
+    page.appendChild(actionBar(view));
+    // Feed
+    const feed = el('section', { class: 'play-feed' });
+    feed.appendChild(el('h3', { text: 'Play feed' }));
+    const feedList = el('div', { class: 'play-feed-list' });
+    GS.feed.forEach((b) => feedList.appendChild(feedBlock(b)));
+    feed.appendChild(feedList);
+    page.appendChild(feed);
+    // Bench and bullpen panels
+    page.appendChild(rosterPanels(GS));
+    view.appendChild(page);
+    feedList.scrollTop = feedList.scrollHeight;
+    void G;
+  }
+  function manualForm(GS) {
+    const kind = GS.pendingStep;
+    const S = GS.S;
+    const box = el('div', { class: 'play-manual' });
+    const label = kind === '2d6' ? 'Next step: 2d6' : kind === '%' ? 'Next step: percentile (%)' : kind === '1d6' ? 'Next step: 1d6' : 'Next step: 1d10';
+    box.appendChild(el('p', { class: 'play-manual-label', text: label }));
+    const modeRow = el('div', { class: 'play-toggle-row' });
+    const form = { mode: 'card' };
+    const cardBtn = button('FAC card', () => { form.mode = 'card'; cardBtn.classList.add('on'); valBtn.classList.remove('on'); cardBox.style.display = ''; valBox.style.display = 'none'; }, { cls: 'on' });
+    const valBtn = button('Raw value', () => { form.mode = 'value'; valBtn.classList.add('on'); cardBtn.classList.remove('on'); valBox.style.display = ''; cardBox.style.display = 'none'; });
+    modeRow.appendChild(cardBtn); modeRow.appendChild(valBtn);
+    box.appendChild(modeRow);
+    const cardBox = el('div');
+    const valBox = el('div');
+    valBox.style.display = 'none';
+    let facIn, peekIn, d1In, d2In, vIn;
+    if (S.deck.peek != null && S.deck.peek !== undefined) {
+      cardBox.appendChild(el('p', { class: 'note', text: 'Flip FAC ' + S.deck.peek + ' — it is the peeked card and must be flipped next.' }));
+      facIn = el('input', { type: 'number', value: String(S.deck.peek) });
+    } else {
+      facIn = el('input', { type: 'number', placeholder: 'FAC id (1-256)' });
+    }
+    cardBox.appendChild(el('label', { text: 'Card ' }, facIn));
+    if (kind === '2d6' && !(S.deck.peek != null && S.deck.peek !== undefined)) {
+      peekIn = el('input', { type: 'number', placeholder: 'Next card id (peek)' });
+      cardBox.appendChild(el('label', { text: ' Peek ' }, peekIn));
+    }
+    if (kind === '2d6') {
+      d1In = el('input', { type: 'number', placeholder: 'Die 1' });
+      d2In = el('input', { type: 'number', placeholder: 'Die 2' });
+      valBox.appendChild(el('label', { text: 'Dice ' }, d1In, d2In));
+    } else {
+      vIn = el('input', { type: 'number', placeholder: kind === '%' ? '0-99' : kind === '1d6' ? '1-6' : '0-9' });
+      valBox.appendChild(el('label', { text: 'Value ' }, vIn));
+    }
+    box.appendChild(cardBox);
+    box.appendChild(valBox);
+    box.appendChild(button('Serve it', () => {
+      let input;
+      if (form.mode === 'card') {
+        input = { form: 'card', fac_id: parseInt(facIn.value, 10) };
+        if (peekIn) input.peek_id = parseInt(peekIn.value, 10);
+      } else if (kind === '2d6') {
+        input = { form: 'value', dice: [parseInt(d1In.value, 10), parseInt(d2In.value, 10)] };
+      } else {
+        input = { form: 'value', value: parseInt(vIn.value, 10) };
+      }
+      const st = GS.provide(input);
+      afterPump(st);
+    }, { cls: 'primary' }));
+    return box;
+  }
+  function afterPump(st) {
+    UI.rarePending = !!(st && st.status === 'RARE');
+    if (st && st.status === 'STEP') UI.stepError = st.error || null; else UI.stepError = null;
+    renderGame(UI.view);
+  }
+  function decisionPanel(view) {
+    const GS = UI.GS;
+    const dec = GS.pendingDecision;
+    const box = el('section', { class: 'play-decision' });
+    if (dec.kind === 'manager_call') {
+      const labels = {
+        squeeze: ['Squeeze play: ' + dec.batter + ' bunts, the runner breaks home.', 'Squeeze', 'Swing away'],
+        sac: ['Sacrifice: ' + dec.batter + ' lays it down?', 'Lay it down', 'Swing away'],
+        send: ['Send ' + (dec.runner || 'the runner') + ' on the pitch?', 'Send him', 'Hold him'],
+        hnr: ['Hit-and-run with ' + dec.batter + ' at the plate?', 'Put it on', 'Leave it off'],
+      };
+      const L = labels[dec.call] || ['Manager call: ' + dec.call, 'Go', 'Hold'];
+      box.appendChild(el('p', { class: 'play-decision-q', text: L[0] }));
+      if (dec.policy !== undefined) box.appendChild(el('p', { class: 'note', text: 'Profile policy would ' + (dec.policy ? 'go.' : 'hold.') }));
+      box.appendChild(button(L[1], () => afterPump(GS.answer({ go: true })), { cls: 'primary' }));
+      box.appendChild(button(L[2], () => afterPump(GS.answer({ go: false }))));
+    } else if (dec.kind === 'send_hold') {
+      box.appendChild(el('p', { class: 'play-decision-q', text: 'Third base coach: ' + dec.runner + ' rounds ' + (dec.from === 1 ? 'second' : 'first') + ' — send him to ' + (dec.to === 3 ? 'third' : 'second') + '?' }));
+      box.appendChild(button('Send', () => afterPump(GS.answer({ go: true })), { cls: 'primary' }));
+      box.appendChild(button('Hold', () => afterPump(GS.answer({ go: false }))));
+    } else if (dec.kind === 'coverage') {
+      box.appendChild(el('p', { class: 'play-decision-q', text: dec.out + ' is out of the game. The fit pick for ' + dec.spot + ' is ' + dec.pick + ' — ' + (dec.reason || '') }));
+      const row = el('div', { class: 'play-modal-row' });
+      row.appendChild(el('span', { class: 'play-lu-name', text: dec.pick + ' (fit pick)' }));
+      row.appendChild(button('Confirm', () => afterPump(GS.answer({ pick: dec.pick })), { cls: 'primary' }));
+      box.appendChild(row);
+      (dec.bench || []).filter((n) => n !== dec.pick).forEach(function (cand) {
+        const r = el('div', { class: 'play-modal-row' });
+        r.appendChild(el('span', { class: 'play-lu-name', text: cand }));
+        r.appendChild(button('Pick him instead', () => afterPump(GS.answer({ pick: cand }))));
+        box.appendChild(r);
+      });
+    } else {
+      box.appendChild(el('p', { text: 'Decision: ' + dec.kind }));
+      box.appendChild(button('Go with the policy', () => afterPump(GS.answer(undefined)), { cls: 'primary' }));
+    }
+    return box;
+  }
+  function actionBar(view) {
+    const GS = UI.GS, S = GS.S;
+    const bar = el('section', { class: 'play-actions' });
+    if (GS.pendingDecision) { bar.appendChild(decisionPanel(view)); return bar; }
+    if (UI.rarePending) {
+      bar.appendChild(el('p', { class: 'play-decision-q', text: 'A rare play is on the table. The feed above has the trigger; the chart resolves it.' }));
+      bar.appendChild(button('Resolve rare play', () => afterPump(GS.resumeRare()), { cls: 'primary' }));
+      return bar;
+    }
+    if (GS.pendingStep) {
+      bar.appendChild(el('p', { class: 'note', text: 'Waiting on the manual entry above.' }));
+      return bar;
+    }
+    bar.appendChild(button('Play plate appearance', () => afterPump(GS.step()), { cls: 'primary' }));
+    // Managerial actions for human clubs, between PAs.
+    const bat = batTeam(S), fld = fldTeam(S);
+    if (GS.cfg.managers[bat] === 'human') {
+      bar.appendChild(button('Pinch hit', () => openPickTwo(view, bat, 'ph')));
+      const runners = S.bases.map(runnerName).filter(Boolean);
+      if (runners.length) bar.appendChild(button('Pinch run', () => openPickTwo(view, bat, 'pr')));
+    }
+    if (GS.cfg.managers[fld] === 'human') {
+      bar.appendChild(button('Pitching change', () => openPitchModal(view, fld)));
+      bar.appendChild(button('Defensive sub', () => openPickTwo(view, fld, 'defsub')));
+    }
+    bar.appendChild(button('Undo', () => { if (GS.undo()) { UI.rarePending = false; renderGame(view); } },
+      { disabled: GS.undoStack.length === 0 || GS.sealed }));
+    if (GS.sealed) bar.appendChild(el('span', { class: 'note', text: 'Exported — this game is sealed.' }));
+    return bar;
+  }
+  function rosterPanels(GS) {
+    const S = GS.S;
+    const wrap = el('div', { class: 'play-rosters' });
+    ['CHC', 'OPP'].forEach(function (slot) {
+      const club = clubOfSlot(slot);
+      const tm = S.teams[slot];
+      const sec = el('section', { class: 'play-roster' });
+      sec.appendChild(el('h3', { text: clubName(club) }));
+      sec.appendChild(el('p', { class: 'play-roster-h', text: 'Bench' }));
+      const bl = el('ul', { class: 'play-roster-list' });
+      if (!tm.bench.length) bl.appendChild(el('li', { text: 'Empty — everyone is in or gone.' }));
+      tm.bench.forEach((n) => bl.appendChild(el('li', { text: n })));
+      sec.appendChild(bl);
+      if (tm.removed.length) sec.appendChild(el('p', { class: 'note', text: 'Out of the game: ' + tm.removed.join(', ') }));
+      sec.appendChild(el('p', { class: 'play-roster-h', text: 'Bullpen' }));
+      const pl = el('ul', { class: 'play-roster-list' });
+      const entered = Object.keys(tm.pitching);
+      const all = entered.concat(tm.pen.filter((n) => !entered.includes(n)));
+      all.forEach(function (n) {
+        const ps = tm.pitching[n];
+        const role = (GS.G.penRole[slot] || {})[n] || '';
+        let state = 'available';
+        if (tm.pitcher === n) state = 'in now';
+        else if (!tm.pen.includes(n)) state = 'done';
+        const fat = ps && (ps.fatigued || ffFat(GS.S, n)) ? ' · fatigued' : '';
+        pl.appendChild(el('li', { text: n + (role ? ' (' + role + ')' : '') + ' — ' + state + (ps ? ', ' + ipText(ps.outs) + ' IP' : '') + fat }));
+      });
+      sec.appendChild(pl);
+      wrap.appendChild(sec);
+    });
+    return wrap;
+  }
+  function openPickTwo(view, slot, kind) {
+    const GS = UI.GS, S = GS.S;
+    const tm = S.teams[slot];
+    const titles = { ph: 'Pinch hit', pr: 'Pinch run', defsub: 'Defensive substitution' };
+    openModal(view, titles[kind], (body, close) => {
+      body.appendChild(el('p', { class: 'note', text: 'First the man coming in, then the man he replaces.' }));
+      tm.bench.forEach(function (cand) {
+        const row = el('div', { class: 'play-modal-row' });
+        const card = hcard(GS.G, cand, slot);
+        row.appendChild(el('span', { class: 'play-lu-name', text: cand + ' — Bats ' + (card.bats || '?') + ', Run ' + (card.run != null ? card.run : '?') }));
+        row.appendChild(button('In', () => {
+          body.replaceChildren();
+          body.appendChild(el('p', { class: 'note', text: cand + ' comes in for…' }));
+          let targets;
+          if (kind === 'pr') targets = S.bases.map(runnerName).filter(Boolean);
+          else targets = tm.order.map((s) => s.name);
+          targets.forEach(function (out) {
+            const r2 = el('div', { class: 'play-modal-row' });
+            r2.appendChild(el('span', { class: 'play-lu-name', text: out }));
+            if (kind === 'defsub') {
+              const lineupNow = tm.order.map((s) => ({ name: s.name, pos: s.pos }));
+              const err = swapLegality(lineupNow, clubOfSlot(slot), out, cand);
+              if (err) { r2.appendChild(el('span', { class: 'play-problem', text: err })); body.appendChild(r2); return; }
+            }
+            r2.appendChild(button('Replace', () => {
+              GS.act({ kind: kind, slot: slot, out: out, name: cand, reason: "manager's call" });
+              close(); renderGame(view);
+            }));
+            body.appendChild(r2);
+          });
+        }));
+        body.appendChild(row);
+      });
+    });
+  }
+  function openPitchModal(view, slot) {
+    const GS = UI.GS, S = GS.S, G = GS.G;
+    const tm = S.teams[slot];
+    const cur = tm.pitcher;
+    const ps = pstat(S, slot, cur);
+    openModal(view, 'Pitching change — ' + clubName(clubOfSlot(slot)), (body, close) => {
+      body.appendChild(el('p', { text: 'Now pitching: ' + cur + ' — ' + ipText(ps.outs) + ' IP, ' + ps.H + ' H, ' + ps.R + ' R (' + ps.ER + ' ER), ' + ps.BB + ' BB, ' + ps.SO + ' SO'
+        + ((ps.fatigued || ffFat(S, cur)) ? ' — fatigued.' : '.') }));
+      // Policy banner: the closer shape and the live hook.
+      const lead = S.score[slot] - S.score[batTeam(S)];
+      let span = null;
+      for (const sp of S.pitcher_spans) if (sp.team === slot && sp.name === cur && !sp.end) span = sp;
+      const spanOuts = span ? S.def_outs[slot] - span.start[2] : ps.outs;
+      if (S.inning >= 9 && lead >= 1 && lead <= 3 && ps.entered_inning === 1 && spanOuts >= 21) {
+        const closer = tm.pen.find((n) => (G.penRole[slot] || {})[n] === 'closer');
+        if (closer) body.appendChild(el('p', { class: 'play-banner-line', text: 'Closer branch: ' + closer + ' is the indicated arm.' }));
+      } else if (ps.fatigued) {
+        body.appendChild(el('p', { class: 'play-banner-line', text: 'The hook policy is live on ' + cur + ' (fatigued). Left alone, the machinery may lift him between PAs.' }));
+      }
+      body.appendChild(el('p', { class: 'note', text: 'The house hard rule keeps pitchers who have not appeared in this game off the starter list: only the bullpen is offered.' }));
+      tm.pen.forEach(function (name) {
+        const p2 = pstat(S, slot, name);
+        const row = el('div', { class: 'play-modal-row' });
+        row.appendChild(el('span', { class: 'play-lu-name', text: name + ' (' + ((G.penRole[slot] || {})[name] || 'pen') + ') — ' + ipText(p2.outs) + ' IP today' }));
+        row.appendChild(button('Bring in', () => {
+          GS.act({ kind: 'pitch', slot: slot, name: name });
+          close(); renderGame(view);
+        }));
+        body.appendChild(row);
+      });
+    });
+  }
+
+  // -- S5 game over -------------------------------------------
+  function boxTables(GS) {
+    const S = GS.S;
+    const wrap = el('div');
+    ['CHC', 'OPP'].forEach(function (slot) {
+      const club = clubOfSlot(slot);
+      wrap.appendChild(el('h3', { text: clubName(club) + ' batting' }));
+      const t = el('table');
+      const hr = el('tr');
+      ['Player', 'PA', 'AB', 'R', 'H', '2B', '3B', 'HR', 'RBI', 'BB', 'HBP', 'SO', 'SB', 'CS', 'GDP'].forEach((h) => hr.appendChild(el('th', { text: h })));
+      t.appendChild(el('thead', null, hr));
+      const body = el('tbody');
+      const tot = blankBstat();
+      Object.entries(S.teams[slot].batting).forEach(function ([name, bs]) {
+        body.appendChild(el('tr', null, ...batLineRow(name, bs).map((c, i) => el('td', { class: i ? 'num' : null, text: String(c) }))));
+        for (const k of Object.keys(tot)) tot[k] += bs[k] || 0;
+      });
+      body.appendChild(el('tr', null, ...batLineRow('Team', tot).map((c, i) => el('td', { class: i ? 'num' : null, text: String(c) }))));
+      t.appendChild(body);
+      wrap.appendChild(el('div', { class: 'table-wrap' }, t));
+      wrap.appendChild(el('h3', { text: clubName(club) + ' pitching' }));
+      const pt = el('table');
+      const ph = el('tr');
+      ['Pitcher', 'IP', 'BF', 'H', 'R', 'ER', 'BB', 'SO'].forEach((h) => ph.appendChild(el('th', { text: h })));
+      pt.appendChild(el('thead', null, ph));
+      const pb = el('tbody');
+      S.pitcher_spans.filter((sp) => sp.team === slot).forEach(function (sp) {
+        const p2 = S.teams[slot].pitching[sp.name];
+        if (!p2) return;
+        const outs = sp.end ? sp.end[2] - sp.start[2] : S.def_outs[slot] - sp.start[2];
+        pb.appendChild(el('tr', null, ...[sp.name, ipText(outs), p2.BF, p2.H, p2.R, p2.ER, p2.BB, p2.SO].map((c, i) => el('td', { class: i ? 'num' : null, text: String(c) }))));
+      });
+      pt.appendChild(pb);
+      wrap.appendChild(el('div', { class: 'table-wrap' }, pt));
+    });
+    return wrap;
+  }
+  function download(name, text, type) {
+    const blob = new Blob([text], { type: type });
+    const a = el('a', { href: URL.createObjectURL(blob), download: name });
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 400);
+  }
+  function renderOver(view) {
+    UI.view = view;
+    const GS = UI.GS, S = GS.S;
+    view.replaceChildren();
+    const page = el('article', { class: 'panel play-page' });
+    page.appendChild(el('h2', { text: 'Final — ' + clubName('CHC') + ' ' + S.score.CHC + ', ' + clubName('MON') + ' ' + S.score.OPP }));
+    page.appendChild(linescoreTable(S, true));
+    const dec = GS.decisions();
+    const decBits = [];
+    if (dec.W) decBits.push('W: ' + dec.W);
+    if (dec.L) decBits.push('L: ' + dec.L);
+    if (dec.SV) decBits.push('SV: ' + dec.SV);
+    if (decBits.length) page.appendChild(el('p', { class: 'play-decisions-line', text: decBits.join(' · ') }));
+    page.appendChild(boxTables(GS));
+    const audit = GS.audit();
+    const bad = audit.filter((a) => !a.ok);
+    page.appendChild(el('p', { class: bad.length ? 'play-problem' : 'note',
+      text: bad.length ? 'AUDIT: FAILED — ' + bad.map((a) => a.check + ' (' + a.detail + ')').join('; ') : 'Internal audit: every Section 10 equality passes.' }));
+    const f = fx();
+    page.appendChild(el('p', { class: 'note', text: 'Record: seed ' + GS.seed + ' · dice mode ' + GS.sourceKind + ' · FAC draws ' + S.deck.draws
+      + ' · reshuffles ' + S.deck.reshuffles + ' · undos ' + GS.undoCount + ' · venue ' + f.clubs[UI.GS.cfg.homeSlot === 'CHC' ? 'CHC' : 'MON'].park
+      + ' · managers: Chicago ' + (GS.cfg.managers.CHC === 'human' ? 'you' : f.clubs.CHC.manager) + ', Montreal ' + (GS.cfg.managers.OPP === 'human' ? 'you' : f.clubs.MON.manager) + '.' }));
+    page.appendChild(el('p', { class: 'play-notice', text: 'Exhibition. This game is not in the tournament record. Adoption is Joe\'s ruling, outside the app.' }));
+    if (GS.sealed) {
+      page.appendChild(el('p', { class: 'note', text: 'Exported and sealed. The autosave is cleared; undo is closed.' }));
+    } else {
+      const ex = GS.exports();
+      page.appendChild(button('Download the box score (.md)', () => { download(GS.exportId + '.md', ex.markdown, 'text/markdown'); GS.seal(); renderOver(view); }));
+      page.appendChild(button('Download the detail file (.json)', () => { download(GS.exportId + '.json', JSON.stringify(ex.json, null, 1), 'application/json'); GS.seal(); renderOver(view); }));
+      page.appendChild(button('Copy the box score', () => {
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ex.markdown);
+        GS.seal(); renderOver(view);
+      }));
+      if (GS.undoStack.length) page.appendChild(button('Step back in (undo the last PA)', () => { if (GS.undo()) { UI.rarePending = false; renderGame(view); } }));
+    }
+    page.appendChild(button('Play again', () => { UI.GS = null; UI.setup = null; renderSetup(view); }));
+    const back = el('a', { href: '#/bracket', class: 'play-btn', text: 'Back to bracket' });
+    page.appendChild(back);
+    view.appendChild(page);
+  }
+
+  // -- Entry ---------------------------------------------------
+  PUI.renderPlay = function (view) {
+    document.querySelectorAll('.views a').forEach(function (link) {
+      const on = link.getAttribute('data-view') === 'play';
+      if (on) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
+    });
+    if (!PlayData.data) {
+      view.replaceChildren(el('p', { text: 'Loading the playable fixture…' }));
+      fetch('data/playable_r106.json').then((r) => r.json()).then((j) => {
+        PlayData.load(j);
+        PUI.renderPlay(view);
+      }).catch((e) => {
+        view.replaceChildren(el('p', { class: 'play-problem', text: 'The playable data file did not load: ' + e.message }));
+      });
+      return;
+    }
+    if (UI.GS) renderGame(view);
+    else renderSetup(view);
+  };
 }
 
 /* Node export guard: the headless verification gate (replay

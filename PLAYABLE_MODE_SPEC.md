@@ -1489,6 +1489,21 @@ per series:
   stat lines) did in wave 2. The five existing CI generators
   re-run and their outputs unchanged (the playable build must
   not perturb rosters, peak162, leaders, previews, or the bracket image).
+
+  *Build note (2026-10-28).* The rebuild itself cannot run on a
+  clean CI runner: the build's inputs are the governing set
+  homes, which live outside this repo and stay read-only. As
+  shipped, the gate is two-part: the build is re-run locally at
+  ship time (deterministic; two runs, one md5) and its output
+  committed, and the CI check job runs
+  `scripts/verify_playable_data.py`, which re-checks the
+  committed file against the in-repo record (every fixture
+  hitter's batting surface against data/cards.json's card_bat,
+  position sequences, the 256-face deck, the fixture partition
+  over the shipped rosters). A stale or hand-edited playable
+  file fails the deploy on that step. The shipped file measures
+  196,624 bytes, under the 1 MB line below, so it joins the
+  service worker SHELL as written.
 - `scripts/check_cardview_parity.py` passes (Section 5.5): the matchup
   panel's card renderer and the player pages' renderer agree on
   section order, field order, and labels.

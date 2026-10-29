@@ -1200,6 +1200,28 @@ function batteryUIState() {
       suffixRng: () => seq[Math.min(i++, seq.length - 1)] }, store);
     check('uistate', 'a colliding gameId regenerates its suffix', GS.gameId !== 'r106-5-aaaa' && GS.suffix.length === 4, GS.gameId);
   }
+  // Managerial actions through GS.act: pinch hit, pinch run,
+  // defensive sub — each lands, feeds, and autosaves.
+  {
+    const store = fakeStorage(false);
+    const GS = P.createGame({ seed: 5, homeSlot: 'CHC',
+      starters: { CHC: 'Fergie Jenkins', OPP: 'Steve Rogers' },
+      managers: { CHC: 'human', OPP: 'profile' }, sourceKind: 'deck' }, store);
+    const w0 = store.writes;
+    const r1 = GS.act({ kind: 'ph', slot: 'CHC', out: 'Hack Wilson', name: 'Anthony Rizzo', reason: "manager's call" });
+    check('uistate', 'a pinch hit through act() lands in the order and the feed',
+      r1.status === 'OK' && GS.S.teams.CHC.order.some((s) => s.name === 'Anthony Rizzo')
+      && !GS.S.teams.CHC.bench.includes('Anthony Rizzo') && GS.feed.some((b) => b.action), JSON.stringify(r1));
+    GS.S.bases[0] = { name: 'Ryne Sandberg', resp: 'Steve Rogers' };
+    GS.act({ kind: 'pr', slot: 'CHC', out: 'Ryne Sandberg', name: 'Andre Dawson', reason: "manager's call" });
+    check('uistate', 'a pinch run through act() swaps the runner on base',
+      GS.S.bases[0] && GS.S.bases[0].name === 'Andre Dawson', JSON.stringify(GS.S.bases[0]));
+    GS.act({ kind: 'defsub', slot: 'CHC', out: 'Ernie Banks', name: 'Joe Tinker', reason: "manager's call" });
+    check('uistate', 'a defensive sub through act() swaps the field spot and the order',
+      GS.S.teams.CHC.field.SS === 'Joe Tinker' && GS.S.teams.CHC.order.some((s) => s.name === 'Joe Tinker')
+      && GS.S.teams.CHC.bench.includes('Ernie Banks'));
+    check('uistate', 'each managerial action autosaved', store.writes >= w0 + 3, 'writes=' + store.writes);
+  }
   // S1 legality checks.
   {
     const fx = P.PlayData.data.fixture;

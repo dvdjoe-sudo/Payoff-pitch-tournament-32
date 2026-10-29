@@ -1137,3 +1137,67 @@ a.player-link, a.team-link { color: inherit; }
   h2, h4 { break-after: avoid; }
   table, tr { break-inside: avoid; }
 }
+
+/* ---- Playable mode (Phase 1) ---- */
+.play-page .play-btn {
+  display: inline-block; margin: 0.15rem 0.25rem 0.15rem 0;
+  padding: 0.45rem 0.8rem; border: 1px solid var(--line, #999);
+  border-radius: 0.4rem; background: var(--panel, #fff); color: inherit;
+  font: inherit; cursor: pointer; text-decoration: none;
+}
+.play-page .play-btn.on { outline: 2px solid var(--accent, #2563eb); font-weight: 700; }
+.play-page .play-btn.primary { font-weight: 700; border-width: 2px; }
+.play-page .play-btn.danger { border-color: #b91c1c; color: #b91c1c; }
+.play-page .play-btn:disabled { opacity: 0.45; cursor: default; }
+.play-banner { border: 2px solid var(--accent, #2563eb); border-radius: 0.5rem; padding: 0.6rem 0.9rem; margin-bottom: 1rem; }
+.play-problem { color: #b91c1c; font-weight: 600; }
+.play-toggle-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; margin: 0.4rem 0; }
+.play-field { display: block; margin: 0.4rem 0; }
+.play-lineup { display: grid; gap: 0.2rem; margin: 0.4rem 0; }
+.play-lu-row { display: flex; align-items: center; gap: 0.4rem; }
+.play-lu-n { width: 1.4rem; text-align: right; opacity: 0.7; }
+.play-lu-name { min-width: 10rem; font-weight: 600; }
+.play-lu-pos { width: 2.2rem; opacity: 0.85; }
+.play-scorebug { display: flex; flex-wrap: wrap; gap: 1rem; align-items: baseline;
+  border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.5rem 0.8rem; margin-bottom: 0.6rem; }
+.play-bug-state { font-weight: 700; }
+.play-bug-score { font-size: 1.15rem; font-weight: 700; }
+.play-bug-save { margin-left: auto; opacity: 0.75; }
+table.play-linescore td.num, table.play-linescore th { text-align: center; }
+.play-diamond { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem;
+  max-width: 34rem; margin: 0.6rem 0; text-align: center; }
+.play-base { border: 1px solid var(--line, #999); border-radius: 0.4rem; padding: 0.3rem; min-height: 1.6rem; }
+.play-base.b2 { grid-column: 2; }
+.play-base.b1 { grid-column: 3; grid-row: 2; }
+.play-base.b3 { grid-column: 1; grid-row: 2; }
+.play-home { grid-column: 1 / -1; grid-row: 3; font-weight: 600; }
+.play-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+.play-card-tabs { display: none; }
+@media (max-width: 1023px) {
+  .play-cards { grid-template-columns: 1fr; }
+  .play-card-tabs { display: flex; }
+  .play-cards.show-batter .play-card-pitcher { display: none; }
+  .play-cards.show-pitcher .play-card-batter { display: none; }
+}
+.play-roll, .play-decision, .play-actions { border: 1px solid var(--line, #999);
+  border-radius: 0.5rem; padding: 0.6rem 0.9rem; margin: 0.8rem 0; }
+.play-lastflip { font-weight: 600; }
+.play-manual input { width: 6.5rem; margin-right: 0.4rem; }
+.play-decision-q { font-weight: 700; }
+.play-feed-list { max-height: 26rem; overflow-y: auto; border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.5rem 0.7rem; }
+.play-feed-block { margin-bottom: 0.6rem; }
+.play-feed-block.undone { opacity: 0.45; }
+.play-feed-head { font-weight: 700; margin-bottom: 0.15rem; }
+.play-feed-line { white-space: pre-wrap; }
+.play-rosters { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 700px) { .play-rosters { grid-template-columns: 1fr; } }
+.play-roster-h { font-weight: 700; margin: 0.5rem 0 0.2rem; }
+.play-roster-list { margin: 0.2rem 0; padding-left: 1.1rem; }
+.play-modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.55);
+  display: flex; align-items: flex-start; justify-content: center; padding: 2rem 1rem; z-index: 60; }
+.play-modal { background: var(--panel, #fff); color: inherit; border-radius: 0.6rem;
+  max-width: 40rem; width: 100%; max-height: 85vh; overflow-y: auto; padding: 1rem 1.2rem; }
+.play-modal-row { display: flex; align-items: center; gap: 0.5rem; margin: 0.3rem 0; }
+.play-banner-line { font-weight: 700; }
+.play-notice { font-weight: 700; border: 1px solid var(--line, #999); border-radius: 0.5rem; padding: 0.5rem 0.8rem; }
+.play-decisions-line { font-size: 1.05rem; font-weight: 700; }

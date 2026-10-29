@@ -4311,6 +4311,7 @@
     else if (where.name === "about") renderAbout();
     else if (where.name === "formulas") renderFormulas();
     else if (where.name === "engines") renderEngines();
+    else if (where.name === "play") { if (window.PlayUI) window.PlayUI.renderPlay(view); }
     else renderBracket(activeSeries);
     renderBanner();
     if (where.name === "bracket" && activeSeries) {
