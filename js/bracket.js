@@ -1449,6 +1449,21 @@
     return wrap;
   }
 
+  // Half-innings with runs, read from the line score: "Top 1st: Montreal Expos 1 (MON 1, CHC 0)". Used when a game has no scoring_plays.
+  function scoringByInning(game) {
+    var line = game.line || {};
+    var a = line[game.away] || [], h = line[game.home] || [];
+    var out = [], ra = 0, rh = 0, n = Math.max(a.length, h.length), i;
+    function ord(k) { var s = ["th", "st", "nd", "rd"], v = k % 100; return k + (s[(v - 20) % 10] || s[v] || s[0]); }
+    function tally() { return " (" + game.away + " " + ra + ", " + game.home + " " + rh + ")"; }
+    for (i = 0; i < n; i++) {
+      var x = Number(a[i]) || 0, y = Number(h[i]) || 0;
+      if (x > 0) { ra += x; out.push("Top " + ord(i + 1) + ": " + clubName(game.away) + " " + x + (x === 1 ? " run" : " runs") + tally()); }
+      if (y > 0) { rh += y; out.push("Bottom " + ord(i + 1) + ": " + clubName(game.home) + " " + y + (y === 1 ? " run" : " runs") + tally()); }
+    }
+    return out;
+  }
+
   function renderGame(id) {
     markNav("bracket");
     var game = state.games[id];
@@ -1470,7 +1485,15 @@
       game.scoring_plays.forEach(function (play) { list.appendChild(el("li", { text: play })); });
       card.appendChild(list);
     } else {
-      card.appendChild(el("p", { text: "No scoring plays were recorded." }));
+      var byInning = scoringByInning(game);
+      if (byInning.length) {
+        card.appendChild(el("p", { class: "meta", text: "Scoring by inning, from the line score (this game's source had no play-by-play)." }));
+        var inn = el("ol", { class: "scoring-by-inning" });
+        byInning.forEach(function (row) { inn.appendChild(el("li", { text: row })); });
+        card.appendChild(inn);
+      } else {
+        card.appendChild(el("p", { text: "No runs scored." }));
+      }
     }
     page.appendChild(card);
     var printButton = el("button", { type: "button", class: "copy-button", text: "Print / Save as PDF" });
