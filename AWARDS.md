@@ -16,13 +16,13 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Aaron Judge | New York Yankees | 27.0 | 12 | 8 | 6 | 2 |
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
+| Ron Santo | Chicago Cubs | 25.0 | 16 | 4 | 5 | 3 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
 | Charlie Gehringer | Detroit Tigers | 24.0 | 14 | 3 | 3 | 1 |
 | Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
 | Jason Bartlett | Tampa Bay Rays | 24.0 | 14 | 4 | 4 | 1 |
 | David Ortiz | Boston Red Sox | 23.5 | 14 | 4 | 4 | 2 |
 | Ketel Marte | Arizona Diamondbacks | 22.5 | 16 | 3 | 4 | 2 |
-| Yogi Berra | New York Yankees | 20.5 | 11 | 4 | 4 | 2 |
 
 ## Cy Young
 
@@ -56,14 +56,14 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
+| Bruce Sutter | Chicago Cubs | 16.1 | 2 | 2.2 | 2 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
+| John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
-| Bruce Sutter | Chicago Cubs | 9.8 | 1 | 2.0 | 2 | 0 |
 | Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
 | Rafael Betancourt | Colorado Rockies | 8.5 | 0 | 3.2 | 3 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
 | Chad Cordero | Washington Nationals | 7.4 | 1 | 1.0 | 1 | 0 |
-| John Wetteland | Montreal Expos | 7.4 | 1 | 1.0 | 1 | 0 |
