@@ -13,7 +13,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 | Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
-| Ron Santo | Chicago Cubs | 27.5 | 18 | 4 | 5 | 3 |
+| Ron Santo | Chicago Cubs | 29.5 | 20 | 4 | 5 | 3 |
 | Aaron Judge | New York Yankees | 27.0 | 12 | 8 | 6 | 2 |
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
@@ -54,9 +54,9 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | --- | --- | --- | --- | --- | --- | --- |
 | Willie Hernandez | Detroit Tigers | 32.0 | 2 | 10.1 | 7 | 1 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
+| Bruce Sutter | Chicago Cubs | 18.1 | 2 | 3.2 | 2 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
-| Bruce Sutter | Chicago Cubs | 16.1 | 2 | 2.2 | 2 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
