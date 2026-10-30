@@ -21,6 +21,7 @@ import json
 import re
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,7 +34,7 @@ ALIASES = {
     "team": "team", "club": "team", "ab": "ab", "r": "r", "h": "h", "hr": "hr",
     "rbi": "rbi", "bb": "bb", "so": "k", "k": "k", "so_b": "k", "hbp": "hbp",
     "sb": "sb", "cs": "cs", "2b": "doubles", "doubles": "doubles", "3b": "triples",
-    "triples": "triples", "sac": "sac", "gidp": "gidp", "ip": "ip", "outs": "outs",
+    "triples": "triples", "sac": "sac", "sh": "sh", "sf": "sf", "gidp": "gidp", "ip": "ip", "outs": "outs",
     "er": "er", "bf": "bf", "h_allowed": "p_h", "bb_allowed": "p_bb",
     "k_allowed": "p_k", "so_allowed": "p_k", "ra": "p_r", "r_allowed": "p_r",
     "runs_allowed": "p_r", "role": "role", "id": "player_id", "player_id": "player_id",
@@ -85,6 +86,26 @@ def num_or_none(value) -> int | None:
     return num(text)
 
 
+def sac_sf(row: dict) -> tuple[int | None, int | None]:
+    """Read one batting line's sacrifices from a parsed source row.
+
+    A combined SAC column stays combined and SF stays null: the
+    standing archive convention for a source that does not split
+    sacrifice flies out of SAC. A source that prints SH and SF as
+    their own columns (the playable app's box has since the
+    2026-10-29 scorekeeping fix) keeps the split, sac taking SH and
+    sf taking SF, which is how publish and the validator read the
+    pair. A column the source does not carry stays null, never a
+    played zero.
+    """
+    sf = num_or_none(row.get("sf")) if "sf" in row else None
+    if "sac" in row:
+        return num_or_none(row.get("sac")), sf
+    if "sh" in row:
+        return num_or_none(row.get("sh")), sf
+    return None, sf
+
+
 def null_write_warning(game_id: str, batting: list, pitching: list) -> None:
     """Name every stat field this import wrote as null for the game."""
     notes = []
@@ -125,6 +146,17 @@ def club_index(data: dict) -> dict[str, str]:
     return index
 
 
+_ROSTERS: dict | None = None
+
+
+def load_rosters() -> dict:
+    global _ROSTERS
+    if _ROSTERS is None:
+        rosters_path = ROOT / "data" / "rosters.json"
+        _ROSTERS = json.loads(rosters_path.read_text(encoding="utf-8")) if rosters_path.exists() else {}
+    return _ROSTERS
+
+
 def player_index(data: dict) -> dict[tuple[str, str], str]:
     found: dict[tuple[str, str], str] = {}
     for game in data["games"]:
@@ -138,19 +170,73 @@ def player_index(data: dict) -> dict[tuple[str, str], str]:
     # Roster ids fill the gaps for players with no stored line yet, so a
     # club's first imported game keys to the same ids as its cards and
     # player pages. Stored lines always win: they are already in `found`.
-    rosters_path = ROOT / "data" / "rosters.json"
-    if rosters_path.exists():
-        rosters = json.loads(rosters_path.read_text(encoding="utf-8"))
-        for code, club in rosters.items():
-            for player in club.get("players", []):
-                key = (code, norm_key(player["name"]))
-                if key not in found:
-                    found[key] = player["id"]
+    for code, club in load_rosters().items():
+        for player in club.get("players", []):
+            key = (code, norm_key(player["name"]))
+            if key not in found:
+                found[key] = player["id"]
     return found
 
 
+def loose_key(name: str) -> str:
+    """A name key that forgives accents and punctuation.
+
+    norm_key is the identity key and stays strict. loose_key exists
+    only to spot the same man behind a spelling variant when the
+    strict lookup has already missed.
+    """
+    text = unicodedata.normalize("NFKD", name)
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = re.sub(r"[^a-z0-9]+", " ", text.casefold())
+    return " ".join(text.split())
+
+
+_SLUG_WARNED: set[tuple[str, str]] = set()
+
+
+def warn_slug_fallback(team: str, name: str, players: dict[tuple[str, str], str]) -> None:
+    """Name the rostered identity a slug fallback failed to match.
+
+    A fallback id is harmless for a man no roster carries. For a
+    rostered man it silently splits his line from his card and his
+    player page, and for a player on two clubs (the multi-roster
+    case) a variant spelling on one club is exactly how that split
+    happens: a Philadelphia box that says Pete Alexander misses,
+    because the Phillies roster him as Grover Cleveland Alexander,
+    alexape01 on both clubs. Print the warning once per club and
+    name; the import still proceeds.
+    """
+    marker = (team, norm_key(name))
+    if marker in _SLUG_WARNED:
+        return
+    _SLUG_WARNED.add(marker)
+    rosters = load_rosters()
+    hits: list[tuple[str, str, str]] = []
+    # The same person under the club's own roster name: an id the
+    # index attaches to this exact name (for another club, or in a
+    # stored line) that also sits on this club's roster.
+    index_ids = {pid for (_club, key), pid in players.items() if key == norm_key(name)}
+    club_roster = {player["id"]: player["name"] for player in rosters.get(team, {}).get("players", [])}
+    for pid in sorted(index_ids & set(club_roster)):
+        hits.append((team, club_roster[pid], pid))
+    # The name itself, as some club's roster spells it, accents
+    # forgiven (Moises Alou in a box, Moisés Alou on the roster).
+    loose = loose_key(name)
+    for code, club in rosters.items():
+        for player in club.get("players", []):
+            if loose_key(player["name"]) == loose and (code, player["name"], player["id"]) not in hits:
+                hits.append((code, player["name"], player["id"]))
+    for code, roster_name, pid in hits:
+        print(f"warning: {team}: {name} matched no id for {team} and fell back to slug {slug(name)}; "
+              f"the name is rostered as {roster_name} ({pid}) for {code}")
+
+
 def resolve_id(team: str, name: str, players: dict[tuple[str, str], str]) -> str:
-    return players.get((team, norm_key(name))) or slug(name)
+    found = players.get((team, norm_key(name)))
+    if found:
+        return found
+    warn_slug_fallback(team, name, players)
+    return slug(name)
 
 
 def read_table(path: Path) -> tuple[dict, list[dict]]:
@@ -280,12 +366,13 @@ def build(meta: dict, rows: list[dict], players: dict | None = None):
                 "bb": num(row.get("p_bb") or row.get("bb") or "0"),
                 "k": num(row.get("p_k") or row.get("k") or "0"),
                 "hr": num_or_none(row.get("hr")),
-                "hb": None,
+                "hb": num_or_none(row.get("hb")),
                 "bf": num(row.get("bf") or "0"),
                 "entry_diff": None,
                 "entry_inning": 1 if not any(line["team"] == team for line in pitching) else None,
             })
         else:
+            sac, sf = sac_sf(row)
             batting.append({
                 "team": team,
                 "player_id": player_id,
@@ -305,8 +392,8 @@ def build(meta: dict, rows: list[dict], players: dict | None = None):
                 "hbp": num(row.get("hbp") or "0"),
                 "sb": num(row.get("sb") or "0"),
                 "cs": num(row.get("cs") or "0"),
-                "sac": num_or_none(row.get("sac")),
-                "sf": None,
+                "sac": sac,
+                "sf": sf,
                 "gidp": num(row.get("gidp") or "0"),
                 "ibb": None,
             })
@@ -469,6 +556,7 @@ def parse_markdown(text: str, data: dict, clubs: dict[str, str], players: dict[t
                     else:
                         slot = 1 + len([item for item in batting if item["team"] == code])
                     slot_seen[slot] = slot_seen.get(slot, 0) + 1
+                    sac, sf = sac_sf(row)
                     batting.append({
                         "team": code,
                         "player_id": resolve_id(code, name, players),
@@ -488,8 +576,8 @@ def parse_markdown(text: str, data: dict, clubs: dict[str, str], players: dict[t
                         "hbp": num(row.get("hbp")),
                         "sb": num(row.get("sb")),
                         "cs": num(row.get("cs")),
-                        "sac": num_or_none(row.get("sac")),
-                        "sf": None,
+                        "sac": sac,
+                        "sf": sf,
                         "gidp": num(row.get("gidp")),
                         "ibb": None,
                     })
@@ -513,7 +601,7 @@ def parse_markdown(text: str, data: dict, clubs: dict[str, str], players: dict[t
                         "bb": num(row.get("bb")),
                         "k": num(row.get("k")),
                         "hr": num_or_none(row.get("hr")),
-                        "hb": None,
+                        "hb": num_or_none(row.get("hb")),
                         "bf": num(row.get("bf")),
                         "entry_diff": None,
                         "entry_inning": 1 if not any(item["team"] == code for item in pitching) else None,

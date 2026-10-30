@@ -298,6 +298,57 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         check.expect("seed" in team, f"{code} still has its tournament seed")
 
 
+# Roster-membership exceptions, in the archive's documented style:
+# recorded lines are never rewritten when a roster moves on, so a
+# stored id can legitimately sit outside the club's current active
+# roster. Each entry names the (club, stored player id) pair and the
+# only series the exception covers; a later series booking the same
+# id for the same club still fails the check.
+ROSTER_MEMBERSHIP_EXCEPTIONS = {
+    # A.J. Burnett pitched for Miami in R1-01, the adopted APBA
+    # series, before the roster file existed. The 2026-10-27 Marlins
+    # amendment replaced him on the active roster with Mike Lowell;
+    # his recorded appearances stay (see build_rosters.py).
+    ("MIA", "burneaj01"): {"R1-01"},
+    # SCHEMA.md: Shane McClanahan's card, roster, and bio use
+    # mcclash01. Played R1-03 games store mcclasha01, and those
+    # lines are not rewritten; the viewer resolves either id to the
+    # same player.
+    ("TB", "mcclasha01"): {"R1-03"},
+    # Juan Cruz pitched for Arizona in R1-04, then left the active
+    # bullpen in the Diamondbacks roster amendment (David Peralta
+    # joined the bench). His recorded appearances stay.
+    ("ARI", "cruzju02"): {"R1-04"},
+}
+
+
+def check_roster_membership(data: dict, check: Check) -> None:
+    """Every booked line's player must be on that club's roster.
+
+    Added 2026-10-30 with the multi-roster guards. Identity is keyed
+    per (team, player_id) end to end, so nothing merged a shared
+    player's lines; the gap was that reconcile never checked a
+    line's (team, player_id) against data/rosters.json, so a shared
+    player's line booked under the wrong club would have passed
+    silently. R1-06 Game 4 (Dawson batting for both Chicago and
+    Montreal, Joe's ruling: they are different teams) is the case
+    this guards: both of his lines are on their clubs' rosters and
+    pass, and a swapped club on either line now fails.
+    """
+    rosters = json.loads((ROOT / "data" / "rosters.json").read_text(encoding="utf-8"))
+    members = {code: {player["id"] for player in club.get("players", [])} for code, club in rosters.items()}
+    for game in data["games"]:
+        for kind in ("batting", "pitching"):
+            for line in game[kind]:
+                if line["player_id"] in members.get(line["team"], set()):
+                    continue
+                allowed = ROSTER_MEMBERSHIP_EXCEPTIONS.get((line["team"], line["player_id"]))
+                check.expect(
+                    bool(allowed) and game["series_id"] in allowed,
+                    f"{game['id']} {kind} line {line['name']} ({line['player_id']}) is not on the {line['team']} roster",
+                )
+
+
 def data_game_svg(publish) -> tuple[str, str]:
     data = json.loads(RESULTS.read_text(encoding="utf-8"))
     game = next(item for item in data["games"] if item["id"] == "R1-03-G1")
@@ -1923,6 +1974,7 @@ def main() -> int:
             details[game["id"]] = detail
     if len(details) == len(data["games"]):
         reconcile(data, details, check)
+    check_roster_membership(data, check)
     documents(check)
     check_pha_roster_alignment(check)
     check_padres_roster_amendment(check)
