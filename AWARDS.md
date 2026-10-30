@@ -9,6 +9,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
 | Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
+| Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
@@ -18,11 +19,10 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
+| Freddie Freeman | Atlanta Braves | 24.5 | 15 | 4 | 5 | 3 |
 | Charlie Gehringer | Detroit Tigers | 24.0 | 14 | 3 | 3 | 1 |
 | Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
 | Jason Bartlett | Tampa Bay Rays | 24.0 | 14 | 4 | 4 | 1 |
-| Dale Murphy | Atlanta Braves | 23.5 | 14 | 4 | 5 | 3 |
-| David Ortiz | Boston Red Sox | 23.5 | 14 | 4 | 4 | 2 |
 
 ## Cy Young
 
@@ -57,7 +57,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Bruce Sutter | Chicago Cubs | 18.1 | 2 | 3.2 | 2 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
-| Craig Kimbrel | Atlanta Braves | 15.2 | 2 | 2.0 | 3 | 0 |
+| Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
