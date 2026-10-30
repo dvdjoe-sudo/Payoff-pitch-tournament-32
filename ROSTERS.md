@@ -23,7 +23,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 5 | STL | St. Louis Cardinals | Official roster, plus game appearances |
 | 6 | CHC | Chicago Cubs | Official roster, plus game appearances |
 | 7 | ATL | Atlanta Braves | Official roster, plus game appearances |
-| 8 | PIT | Pittsburgh Pirates | Official roster |
+| 8 | PIT | Pittsburgh Pirates | Official roster, plus game appearances |
 | 9 | CIN | Cincinnati Reds | Official roster |
 | 10 | LAD | Los Angeles Dodgers | Official roster |
 | 11 | PHI | Philadelphia Phillies | Official roster |
@@ -40,7 +40,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 22 | OAK | Oakland Athletics | Official roster |
 | 23 | MIL | Milwaukee Brewers | Official roster |
 | 24 | TEX | Texas Rangers | Official roster |
-| 25 | TOR | Toronto Blue Jays | Official roster |
+| 25 | TOR | Toronto Blue Jays | Official roster, plus game appearances |
 | 26 | SD | San Diego Padres | Official roster, plus game appearances |
 | 27 | MON | Montreal Expos | Official roster, plus game appearances |
 | 28 | COL | Colorado Rockies | Official roster, plus game appearances |
@@ -617,6 +617,35 @@ Official roster provided by the tournament owner. The lines are copied from that
 Paul Waner (`wanerpa01`) joins Pittsburgh's active bench as BAT2 / left-handed RF-LF #6. Al McBean (`mcbeaal01`) is removed from the active bullpen. The Pirates now carry 9 lineup hitters, 6 bench hitters, 5 starters and 6 relief pitchers, 26 distinct active players.
 
 Grant Jackson shifts to bullpen slot 5 and Sam Leever to bullpen slot 6, preserving their left-handed-specialist and long-relief roles. This owner-approved roster switch applies to future tournament games only. All original player cards (including Al McBean's), previous games, box scores, FAC/dice logs and recorded results are unchanged. Waner's genuine Hitter v0.5 playable card requires a Pittsburgh-franchise-only conversion; no chart or card ratings have been invented.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Honus Wagner (`wagneho01`) in R1-08-G1
+- Slot 2: Andrew McCutchen (`mccutan01`) in R1-08-G1
+- Slot 3: Roberto Clemente (`clemero01`) in R1-08-G1
+- Slot 4: Barry Bonds (`bondsba01`) in R1-08-G1
+- Slot 5: Willie Stargell (`stargwi01`) in R1-08-G1
+- Slot 6: Ralph Kiner (`kinerra01`) in R1-08-G1
+- Slot 7: Manny Sanguillen (`sanguma01`) in R1-08-G1
+- Slot 8: Pie Traynor (`traynpi01`) in R1-08-G1
+- Slot 9: Bill Mazeroski (`mazerbi01`) in R1-08-G1
+
+### Substitutes who have batted
+
+- Paul Waner (`wanerpa01`), slot 3
+- Arky Vaughan (`vaughar01`), slot 1
+
+### Starts, in the order the games were played
+
+- Paul Skenes (`skenepa01`) started R1-08-G1
+
+### Relievers who have appeared
+
+- Sam Leever (`leevesa01`), first seen in R1-08-G1
+- Roy Face (`facero01`), first seen in R1-08-G1
+- Mark Melancon (`melanma01`), first seen in R1-08-G1
 
 ## 9. Cincinnati Reds (CIN)
 
@@ -1543,6 +1572,33 @@ Joe Carter (`cartejo01`) joins the **Toronto Blue Jays** active 26 as **sixth be
 Jim Clancy (`clancji01`) leaves the active bullpen, while his authentic converted pitcher card remains in the historical card archive. The six relief pitchers remain in their previous order: **Tom Henke, Mark Eichhorn, Duane Ward, Roberto Osuna, Scott Downs and Paul Quantrill**. All **nine starting hitters and five rotation pitchers are unchanged**, including **José Bautista starting at DH batting fifth**. Toronto has **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct active players.
 
 All historical cards, prior box scores, completed games, FAC/dice logs and tournament results remain unchanged. Carter's verified Toronto-only **Peak 162** covers **1991–1995** (Lahman): 162 G, 168 H, 34 HR, 118 RBI, 14 SB, .263/.314/.488/.802. His frozen authentic **Hitter v0.5** playable card conversion remains pending; no simulated card ratings were invented.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Roberto Alomar (`alomaro01`) in R1-08-G1
+- Slot 2: Tony Fernandez (`fernato01`) in R1-08-G1
+- Slot 3: Josh Donaldson (`donaljo02`) in R1-08-G1
+- Slot 4: Carlos Delgado (`delgaca01`) in R1-08-G1
+- Slot 5: Jose Bautista (`bautijo02`) in R1-08-G1
+- Slot 6: George Bell (`bellge02`) in R1-08-G1
+- Slot 7: Jesse Barfield (`barfije01`) in R1-08-G1
+- Slot 8: Devon White (`whitede03`) in R1-08-G1
+- Slot 9: Ernie Whitt (`whitter01`) in R1-08-G1
+
+### Starts, in the order the games were played
+
+- Dave Stieb (`stiebda01`) started R1-08-G1
+
+### Relievers who have appeared
+
+- Duane Ward (`warddu01`), first seen in R1-08-G1
+- Scott Downs (`downssc01`), first seen in R1-08-G1
+- Mark Eichhorn (`eichhma01`), first seen in R1-08-G1
+- Paul Quantrill (`quantpa01`), first seen in R1-08-G1
+- Roberto Osuna (`osunaro01`), first seen in R1-08-G1
+- Kevin Gausman (`gausmke01`), first seen in R1-08-G1
 
 ## 26. San Diego Padres (SD)
 
