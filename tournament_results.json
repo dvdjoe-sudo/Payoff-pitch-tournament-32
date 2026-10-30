@@ -788,7 +788,13 @@
    ],
    "status": "complete",
    "winner": "CHC",
-   "loser": "MON"
+   "loser": "MON",
+   "mvp": {
+    "team": "CHC",
+    "player_id": "santoro01",
+    "name": "Ron Santo",
+    "line": "8 for 21, 3 2B, 3 HR, 5 RBI, 4 R, .381"
+   }
   },
   {
    "id": "R1-07",
