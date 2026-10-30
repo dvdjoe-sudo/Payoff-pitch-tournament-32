@@ -13,10 +13,10 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 | Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
+| Ron Santo | Chicago Cubs | 27.5 | 18 | 4 | 5 | 3 |
 | Aaron Judge | New York Yankees | 27.0 | 12 | 8 | 6 | 2 |
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
-| Ron Santo | Chicago Cubs | 25.0 | 16 | 4 | 5 | 3 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
 | Charlie Gehringer | Detroit Tigers | 24.0 | 14 | 3 | 3 | 1 |
 | Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
@@ -41,10 +41,10 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Bob Gibson | St. Louis Cardinals | 14.0 | 9.0 | 1 | 9 | 2 |
 | Adam Wainwright | St. Louis Cardinals | 13.8 | 8.0 | 1 | 2 | 0 |
 | Mickey Lolich | Detroit Tigers | 13.4 | 7.0 | 1 | 8 | 1 |
+| Pete Alexander | Chicago Cubs | 13.3 | 9.0 | 1 | 2 | 1 |
 | David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
 | Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
 | Hal Newhouser | Detroit Tigers | 12.2 | 10.0 | 1 | 11 | 4 |
-| Pedro Martinez | Montreal Expos | 12.2 | 8.0 | 1 | 7 | 2 |
 
 ## Reliever
 
