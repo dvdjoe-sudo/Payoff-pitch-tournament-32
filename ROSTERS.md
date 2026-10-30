@@ -22,7 +22,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 4 | DET | Detroit Tigers | Official roster, plus game appearances |
 | 5 | STL | St. Louis Cardinals | Official roster, plus game appearances |
 | 6 | CHC | Chicago Cubs | Official roster, plus game appearances |
-| 7 | ATL | Atlanta Braves | Official roster |
+| 7 | ATL | Atlanta Braves | Official roster, plus game appearances |
 | 8 | PIT | Pittsburgh Pirates | Official roster |
 | 9 | CIN | Cincinnati Reds | Official roster |
 | 10 | LAD | Los Angeles Dodgers | Official roster |
@@ -41,7 +41,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 23 | MIL | Milwaukee Brewers | Official roster |
 | 24 | TEX | Texas Rangers | Official roster |
 | 25 | TOR | Toronto Blue Jays | Official roster |
-| 26 | SD | San Diego Padres | Official roster |
+| 26 | SD | San Diego Padres | Official roster, plus game appearances |
 | 27 | MON | Montreal Expos | Official roster, plus game appearances |
 | 28 | COL | Colorado Rockies | Official roster, plus game appearances |
 | 29 | ARI | Arizona Diamondbacks | Appearances only |
@@ -538,6 +538,30 @@ Official roster provided by the tournament owner. The lines are copied from that
 Bob Horner (`hornebo01`) joins Atlanta as bench BAT2/3B/1B #6, replacing Mark Wohlers (`wohlema01`) on the active pitching staff. Phil Niekro remains the long-relief/emergency-start option. The active 26 are 9 lineup hitters, 6 bench players, 5 starters and 6 bullpen pitchers.
 
 Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are unchanged. This amendment applies to future tournament games only. All authentic earlier cards (including Wohlers's), completed games and original dice/FAC records remain historical and unchanged. Horner's authentic playable Hitter v0.5 conversion must use Braves franchise seasons only; no invented card numbers have been supplied.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Rabbit Maranville (`maranra01`) in R1-07-G1
+- Slot 2: Chipper Jones (`jonesch06`) in R1-07-G1
+- Slot 3: Hank Aaron (`aaronha01`) in R1-07-G1
+- Slot 4: Eddie Mathews (`matheed01`) in R1-07-G1
+- Slot 5: Joe Torre (`torrejo01`) in R1-07-G1
+- Slot 6: Freddie Freeman (`freemfr01`) in R1-07-G1
+- Slot 7: Dale Murphy (`murphda05`) in R1-07-G1
+- Slot 8: Andruw Jones (`jonesan01`) in R1-07-G1
+- Slot 9: Ozzie Albies (`albieoz01`) in R1-07-G1
+
+### Starts, in the order the games were played
+
+- Greg Maddux (`maddugr01`) started R1-07-G1
+
+### Relievers who have appeared
+
+- Jonny Venters (`ventejo01`), first seen in R1-07-G1
+- Raisel Iglesias (`iglesra01`), first seen in R1-07-G1
+- Craig Kimbrel (`kimbrcr01`), first seen in R1-07-G1
 
 ## 8. Pittsburgh Pirates (PIT)
 
@@ -1568,6 +1592,30 @@ Official roster provided by the tournament owner. The lines are copied from that
 Ken Caminiti (`caminke01`) is the **starting DH in batting-order slot 4**, with **eligible positions 3B/DH** (third base and designated hitter). Manny Machado (`machama01`) remains the **starting third baseman batting sixth**. Caminiti may be assigned to play 3B when needed; his starting role on this announced roster remains DH. The owner-announced original lineup card already lists Caminiti as DH.
 
 No personnel, batting-order, rotation, bench or bullpen changes were authorized: San Diego remains **9 lineup / 6 bench / 5 starting pitchers / 6 relievers** with **26 distinct active players**. This is position metadata only. All original historical cards, previously played games, box scores, scores, FAC/dice rolls and tournament results are unchanged.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Fernando Tatis Jr. (`tatisfe02`) in R1-07-G1
+- Slot 2: Tony Gwynn (`gwynnto01`) in R1-07-G1
+- Slot 3: Dave Winfield (`winfida01`) in R1-07-G1
+- Slot 4: Ken Caminiti (`caminke01`) in R1-07-G1
+- Slot 5: Adrian Gonzalez (`gonzaad01`) in R1-07-G1
+- Slot 6: Manny Machado (`machama01`) in R1-07-G1
+- Slot 7: Gene Tenace (`tenacge01`) in R1-07-G1
+- Slot 8: Steve Finley (`finlest01`) in R1-07-G1
+- Slot 9: Mark Loretta (`loretma01`) in R1-07-G1
+
+### Starts, in the order the games were played
+
+- Jake Peavy (`peavyja01`) started R1-07-G1
+
+### Relievers who have appeared
+
+- Mike Adams (`adamsmi03`), first seen in R1-07-G1
+- Heath Bell (`bellhe01`), first seen in R1-07-G1
+- Luke Gregerson (`gregelu01`), first seen in R1-07-G1
 
 ## 27. Montreal Expos (MON)
 

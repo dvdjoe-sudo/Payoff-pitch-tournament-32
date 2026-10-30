@@ -66,4 +66,4 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Rafael Betancourt | Colorado Rockies | 8.5 | 0 | 3.2 | 3 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
-| Chad Cordero | Washington Nationals | 7.4 | 1 | 1.0 | 1 | 0 |
+| Craig Kimbrel | Atlanta Braves | 7.8 | 1 | 1.0 | 2 | 0 |
