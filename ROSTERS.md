@@ -543,20 +543,21 @@ Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are
 
 ### Lineup slots that have batted
 
-- Slot 1: Rabbit Maranville (`maranra01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 2: Chipper Jones (`jonesch06`) in R1-07-G1 (same starter in 1 later game)
-- Slot 3: Hank Aaron (`aaronha01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 4: Eddie Mathews (`matheed01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 5: Joe Torre (`torrejo01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 6: Freddie Freeman (`freemfr01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 7: Dale Murphy (`murphda05`) in R1-07-G1 (same starter in 1 later game)
-- Slot 8: Andruw Jones (`jonesan01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 9: Ozzie Albies (`albieoz01`) in R1-07-G1 (same starter in 1 later game)
+- Slot 1: Rabbit Maranville (`maranra01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 2: Chipper Jones (`jonesch06`) in R1-07-G1 (same starter in 2 later games)
+- Slot 3: Hank Aaron (`aaronha01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 4: Eddie Mathews (`matheed01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 5: Joe Torre (`torrejo01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 6: Freddie Freeman (`freemfr01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 7: Dale Murphy (`murphda05`) in R1-07-G1 (same starter in 2 later games)
+- Slot 8: Andruw Jones (`jonesan01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 9: Ozzie Albies (`albieoz01`) in R1-07-G1 (same starter in 2 later games)
 
 ### Starts, in the order the games were played
 
 - Greg Maddux (`maddugr01`) started R1-07-G1
 - Kid Nichols (`nichoki01`) started R1-07-G2
+- Warren Spahn (`spahnwa01`) started R1-07-G3
 
 ### Relievers who have appeared
 
@@ -1598,20 +1599,21 @@ No personnel, batting-order, rotation, bench or bullpen changes were authorized:
 
 ### Lineup slots that have batted
 
-- Slot 1: Fernando Tatis Jr. (`tatisfe02`) in R1-07-G1 (same starter in 1 later game)
-- Slot 2: Tony Gwynn (`gwynnto01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 3: Dave Winfield (`winfida01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 4: Ken Caminiti (`caminke01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 5: Adrian Gonzalez (`gonzaad01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 6: Manny Machado (`machama01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 7: Gene Tenace (`tenacge01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 8: Steve Finley (`finlest01`) in R1-07-G1 (same starter in 1 later game)
-- Slot 9: Mark Loretta (`loretma01`) in R1-07-G1 (same starter in 1 later game)
+- Slot 1: Fernando Tatis Jr. (`tatisfe02`) in R1-07-G1 (same starter in 2 later games)
+- Slot 2: Tony Gwynn (`gwynnto01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 3: Dave Winfield (`winfida01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 4: Ken Caminiti (`caminke01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 5: Adrian Gonzalez (`gonzaad01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 6: Manny Machado (`machama01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 7: Gene Tenace (`tenacge01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 8: Steve Finley (`finlest01`) in R1-07-G1 (same starter in 2 later games)
+- Slot 9: Mark Loretta (`loretma01`) in R1-07-G1 (same starter in 2 later games)
 
 ### Starts, in the order the games were played
 
 - Jake Peavy (`peavyja01`) started R1-07-G1
 - Randy Jones (`jonesra01`) started R1-07-G2
+- Ed Whitson (`whitsed01`) started R1-07-G3
 
 ### Relievers who have appeared
 
@@ -1620,6 +1622,7 @@ No personnel, batting-order, rotation, bench or bullpen changes were authorized:
 - Luke Gregerson (`gregelu01`), first seen in R1-07-G1
 - Mark Davis (`davisma01`), first seen in R1-07-G2
 - Rollie Fingers (`fingero01`), first seen in R1-07-G2
+- Eric Show (`shower01`), first seen in R1-07-G3
 
 ## 27. Montreal Expos (MON)
 
