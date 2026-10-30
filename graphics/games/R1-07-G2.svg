@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img">
+<rect width="640" height="360" fill="#12263f"/>
+<rect width="640" height="8" fill="#c6a15a"/>
+<rect y="352" width="640" height="8" fill="#c6a15a"/>
+<text x="32" y="64" fill="#f6f1e6" font-family="Georgia, serif" font-size="22">Payoff Pitch</text>
+<text x="32" y="104" fill="#f6f1e6" font-family="Georgia, serif" font-size="28">R1-07-G2 final</text>
+<text x="32" y="150" fill="#f6f1e6" font-family="Georgia, serif" font-size="36">San Diego Padres 3</text>
+<text x="32" y="204" fill="#f6f1e6" font-family="Georgia, serif" font-size="36">Atlanta Braves 8</text>
+<text x="32" y="258" fill="#f6f1e6" font-family="Georgia, serif" font-size="22">Winner Atlanta Braves</text>
+</svg>
