@@ -18,11 +18,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Aaron Judge | New York Yankees | 27.0 | 12 | 8 | 6 | 2 |
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
+| Andrew McCutchen | Pittsburgh Pirates | 24.5 | 14 | 4 | 6 | 1 |
 | Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
 | Freddie Freeman | Atlanta Braves | 24.5 | 15 | 4 | 5 | 3 |
+| Honus Wagner | Pittsburgh Pirates | 24.5 | 14 | 5 | 6 | 0 |
 | Charlie Gehringer | Detroit Tigers | 24.0 | 14 | 3 | 3 | 1 |
-| Cliff Floyd | Miami Marlins | 24.0 | 13 | 3 | 7 | 3 |
-| Jason Bartlett | Tampa Bay Rays | 24.0 | 14 | 4 | 4 | 1 |
 
 ## Cy Young
 
@@ -63,7 +63,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
-| Tom Henke | Toronto Blue Jays | 9.4 | 1 | 2.0 | 1 | 0 |
+| Tom Henke | Toronto Blue Jays | 9.9 | 1 | 3.0 | 1 | 1 |
 | Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
 | Rafael Betancourt | Colorado Rockies | 8.5 | 0 | 3.2 | 3 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
