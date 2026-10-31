@@ -64,6 +64,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
 | Tom Henke | Toronto Blue Jays | 9.9 | 1 | 3.0 | 1 | 1 |
+| Jeff Zimmerman | Texas Rangers | 9.6 | 1 | 2.2 | 2 | 1 |
 | Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
 | Roy Face | Pittsburgh Pirates | 8.6 | 0 | 4.2 | 2 | 1 |
-| Rafael Betancourt | Colorado Rockies | 8.5 | 0 | 3.2 | 3 | 0 |

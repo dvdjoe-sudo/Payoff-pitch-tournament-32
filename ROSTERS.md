@@ -719,15 +719,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Pete Rose (`rosepe01`) in R1-09-G1
-- Slot 2: Joe Morgan (`morgajo02`) in R1-09-G1
-- Slot 3: Frank Robinson (`robinfr02`) in R1-09-G1
-- Slot 4: Johnny Bench (`benchjo01`) in R1-09-G1
-- Slot 5: Joey Votto (`vottojo01`) in R1-09-G1
-- Slot 6: George Foster (`fostege01`) in R1-09-G1
-- Slot 7: Tony Perez (`perezto01`) in R1-09-G1
-- Slot 8: Eric Davis (`daviser01`) in R1-09-G1
-- Slot 9: Barry Larkin (`larkiba01`) in R1-09-G1
+- Slot 1: Pete Rose (`rosepe01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 2: Joe Morgan (`morgajo02`) in R1-09-G1 (same starter in 1 later game)
+- Slot 3: Frank Robinson (`robinfr02`) in R1-09-G1 (same starter in 1 later game)
+- Slot 4: Johnny Bench (`benchjo01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 5: Joey Votto (`vottojo01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 6: George Foster (`fostege01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 7: Tony Perez (`perezto01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 8: Eric Davis (`daviser01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 9: Barry Larkin (`larkiba01`) in R1-09-G1 (same starter in 1 later game)
 
 ### Substitutes who have batted
 
@@ -736,6 +736,7 @@ These names are not on the active roster.
 ### Starts, in the order the games were played
 
 - Noodles Hahn (`hahnno01`) started R1-09-G1
+- Bucky Walters (`waltebu01`) started R1-09-G2
 
 ### Relievers who have appeared
 
@@ -743,6 +744,7 @@ These names are not on the active roster.
 - Rob Dibble (`dibblro01`), first seen in R1-09-G1
 - Francisco Cordero (`cordefr01`), first seen in R1-09-G1
 - John Franco (`francjo01`), first seen in R1-09-G1
+- Aroldis Chapman (`chapmar01`), first seen in R1-09-G2
 
 ## 10. Los Angeles Dodgers (LAD)
 
@@ -1559,25 +1561,27 @@ All original historical player cards, completed games, box scores, FAC/dice logs
 
 ### Lineup slots that have batted
 
-- Slot 1: Ian Kinsler (`kinslia01`) in R1-09-G1
-- Slot 2: Ivan Rodriguez (`rodriiv01`) in R1-09-G1
-- Slot 3: Alex Rodriguez (`rodrial01`) in R1-09-G1
-- Slot 4: Frank Howard (`howarfr01`) in R1-09-G1
-- Slot 5: Josh Hamilton (`hamiljo03`) in R1-09-G1
-- Slot 6: Juan Gonzalez (`gonzaju03`) in R1-09-G1
-- Slot 7: Rafael Palmeiro (`palmera01`) in R1-09-G1
-- Slot 8: Adrian Beltre (`beltrad01`) in R1-09-G1
-- Slot 9: Corey Seager (`seageco01`) in R1-09-G1
+- Slot 1: Ian Kinsler (`kinslia01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 2: Ivan Rodriguez (`rodriiv01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 3: Alex Rodriguez (`rodrial01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 4: Frank Howard (`howarfr01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 5: Josh Hamilton (`hamiljo03`) in R1-09-G1 (same starter in 1 later game)
+- Slot 6: Juan Gonzalez (`gonzaju03`) in R1-09-G1 (same starter in 1 later game)
+- Slot 7: Rafael Palmeiro (`palmera01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 8: Adrian Beltre (`beltrad01`) in R1-09-G1 (same starter in 1 later game)
+- Slot 9: Corey Seager (`seageco01`) in R1-09-G1 (same starter in 1 later game)
 
 ### Starts, in the order the games were played
 
 - Nolan Ryan (`ryanno01`) started R1-09-G1
+- Yu Darvish (`darviyu01`) started R1-09-G2
 
 ### Relievers who have appeared
 
 - Neftali Feliz (`felizne01`), first seen in R1-09-G1
 - John Wetteland (`wettejo01`), first seen in R1-09-G1
 - Jeff Zimmerman (`zimmeje02`), first seen in R1-09-G1
+- Jim Kern (`kernji01`), first seen in R1-09-G2
 
 ## 25. Toronto Blue Jays (TOR)
 
