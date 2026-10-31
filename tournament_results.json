@@ -869,7 +869,13 @@
    ],
    "status": "complete",
    "winner": "PIT",
-   "loser": "TOR"
+   "loser": "TOR",
+   "mvp": {
+    "team": "PIT",
+    "player_id": "wagneho01",
+    "name": "Honus Wagner",
+    "line": "10 for 17, 7 R, 2 2B, 3 3B, 6 RBI, .588"
+   }
   },
   {
    "id": "R1-09",
