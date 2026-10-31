@@ -63,7 +63,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
+| Tom Henke | Toronto Blue Jays | 9.4 | 1 | 2.0 | 1 | 0 |
 | Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
 | Rafael Betancourt | Colorado Rockies | 8.5 | 0 | 3.2 | 3 | 0 |
 | Goose Gossage | New York Yankees | 8.5 | 1 | 1.1 | 2 | 0 |
-| Jose Valverde | Arizona Diamondbacks | 8.1 | 1 | 1.1 | 1 | 0 |
