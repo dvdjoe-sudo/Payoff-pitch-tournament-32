@@ -24,7 +24,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 6 | CHC | Chicago Cubs | Official roster, plus game appearances |
 | 7 | ATL | Atlanta Braves | Official roster, plus game appearances |
 | 8 | PIT | Pittsburgh Pirates | Official roster, plus game appearances |
-| 9 | CIN | Cincinnati Reds | Official roster |
+| 9 | CIN | Cincinnati Reds | Official roster, plus game appearances |
 | 10 | LAD | Los Angeles Dodgers | Official roster |
 | 11 | PHI | Philadelphia Phillies | Official roster |
 | 12 | MIN | Minnesota Twins | Official roster |
@@ -39,7 +39,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 21 | NYM | New York Mets | Official roster |
 | 22 | OAK | Oakland Athletics | Official roster |
 | 23 | MIL | Milwaukee Brewers | Official roster |
-| 24 | TEX | Texas Rangers | Official roster |
+| 24 | TEX | Texas Rangers | Official roster, plus game appearances |
 | 25 | TOR | Toronto Blue Jays | Official roster, plus game appearances |
 | 26 | SD | San Diego Padres | Official roster, plus game appearances |
 | 27 | MON | Montreal Expos | Official roster, plus game appearances |
@@ -714,6 +714,35 @@ These names are not on the active roster.
 - Paul Derringer 10
 - Chris Sabo (Legacy Hero) 7
 - Ken Griffey Jr. (Legacy Hero) 9
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Pete Rose (`rosepe01`) in R1-09-G1
+- Slot 2: Joe Morgan (`morgajo02`) in R1-09-G1
+- Slot 3: Frank Robinson (`robinfr02`) in R1-09-G1
+- Slot 4: Johnny Bench (`benchjo01`) in R1-09-G1
+- Slot 5: Joey Votto (`vottojo01`) in R1-09-G1
+- Slot 6: George Foster (`fostege01`) in R1-09-G1
+- Slot 7: Tony Perez (`perezto01`) in R1-09-G1
+- Slot 8: Eric Davis (`daviser01`) in R1-09-G1
+- Slot 9: Barry Larkin (`larkiba01`) in R1-09-G1
+
+### Substitutes who have batted
+
+- Ted Kluszewski (`kluszte01`), slot 7
+
+### Starts, in the order the games were played
+
+- Noodles Hahn (`hahnno01`) started R1-09-G1
+
+### Relievers who have appeared
+
+- Eppa Rixey (`rixeyep01`), first seen in R1-09-G1
+- Rob Dibble (`dibblro01`), first seen in R1-09-G1
+- Francisco Cordero (`cordefr01`), first seen in R1-09-G1
+- John Franco (`francjo01`), first seen in R1-09-G1
 
 ## 10. Los Angeles Dodgers (LAD)
 
@@ -1525,6 +1554,30 @@ Rubén Sierra (`sierrru01`) joins the **Texas Rangers** active 26 as **sixth ben
 Kenny Rogers (`rogerke01`) leaves the **active bullpen** but keeps any existing original historical converted pitcher card. Darold Knowles advances from RP7 to **RP6**; the other five active relievers stay **John Wetteland, Neftalí Feliz, Jeff Zimmerman, Jim Kern and Jeff Russell**. **The entire starting nine and five-man rotation remain unchanged, including Corey Seager starting at DH batting ninth**. The Rangers now have **9 lineup / 6 bench / 5 rotation / 6 bullpen** with 26 unique players.
 
 All original historical player cards, completed games, box scores, FAC/dice logs and tournament results remain unchanged. Sierra's verified Texas Rangers-only **Peak 162** uses seasons **1989–1992 and 2000** (Lahman): 162 G, 186 H, 22 HR, 106 RBI, .292/.338/.477/.815. His genuine frozen **Hitter v0.5** playable card remains pending authentic conversion; **no invented dice ratings** have been supplied. PED eligibility questions remain separate.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Ian Kinsler (`kinslia01`) in R1-09-G1
+- Slot 2: Ivan Rodriguez (`rodriiv01`) in R1-09-G1
+- Slot 3: Alex Rodriguez (`rodrial01`) in R1-09-G1
+- Slot 4: Frank Howard (`howarfr01`) in R1-09-G1
+- Slot 5: Josh Hamilton (`hamiljo03`) in R1-09-G1
+- Slot 6: Juan Gonzalez (`gonzaju03`) in R1-09-G1
+- Slot 7: Rafael Palmeiro (`palmera01`) in R1-09-G1
+- Slot 8: Adrian Beltre (`beltrad01`) in R1-09-G1
+- Slot 9: Corey Seager (`seageco01`) in R1-09-G1
+
+### Starts, in the order the games were played
+
+- Nolan Ryan (`ryanno01`) started R1-09-G1
+
+### Relievers who have appeared
+
+- Neftali Feliz (`felizne01`), first seen in R1-09-G1
+- John Wetteland (`wettejo01`), first seen in R1-09-G1
+- Jeff Zimmerman (`zimmeje02`), first seen in R1-09-G1
 
 ## 25. Toronto Blue Jays (TOR)
 
