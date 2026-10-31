@@ -622,30 +622,33 @@ Grant Jackson shifts to bullpen slot 5 and Sam Leever to bullpen slot 6, preserv
 
 ### Lineup slots that have batted
 
-- Slot 1: Honus Wagner (`wagneho01`) in R1-08-G1
-- Slot 2: Andrew McCutchen (`mccutan01`) in R1-08-G1
-- Slot 3: Roberto Clemente (`clemero01`) in R1-08-G1
-- Slot 4: Barry Bonds (`bondsba01`) in R1-08-G1
-- Slot 5: Willie Stargell (`stargwi01`) in R1-08-G1
-- Slot 6: Ralph Kiner (`kinerra01`) in R1-08-G1
-- Slot 7: Manny Sanguillen (`sanguma01`) in R1-08-G1
-- Slot 8: Pie Traynor (`traynpi01`) in R1-08-G1
-- Slot 9: Bill Mazeroski (`mazerbi01`) in R1-08-G1
+- Slot 1: Honus Wagner (`wagneho01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 2: Andrew McCutchen (`mccutan01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 3: Roberto Clemente (`clemero01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 4: Barry Bonds (`bondsba01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 5: Willie Stargell (`stargwi01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 6: Ralph Kiner (`kinerra01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 7: Manny Sanguillen (`sanguma01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 8: Pie Traynor (`traynpi01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 9: Bill Mazeroski (`mazerbi01`) in R1-08-G1 (same starter in 1 later game)
 
 ### Substitutes who have batted
 
 - Paul Waner (`wanerpa01`), slot 3
 - Arky Vaughan (`vaughar01`), slot 1
+- Tommy Leach (`leachto01`), slot 8
 
 ### Starts, in the order the games were played
 
 - Paul Skenes (`skenepa01`) started R1-08-G1
+- Wilbur Cooper (`coopewi01`) started R1-08-G2
 
 ### Relievers who have appeared
 
 - Sam Leever (`leevesa01`), first seen in R1-08-G1
 - Roy Face (`facero01`), first seen in R1-08-G1
 - Mark Melancon (`melanma01`), first seen in R1-08-G1
+- Dave Giusti (`giustda01`), first seen in R1-08-G2
 
 ## 9. Cincinnati Reds (CIN)
 
@@ -1577,19 +1580,24 @@ All historical cards, prior box scores, completed games, FAC/dice logs and tourn
 
 ### Lineup slots that have batted
 
-- Slot 1: Roberto Alomar (`alomaro01`) in R1-08-G1
-- Slot 2: Tony Fernandez (`fernato01`) in R1-08-G1
-- Slot 3: Josh Donaldson (`donaljo02`) in R1-08-G1
-- Slot 4: Carlos Delgado (`delgaca01`) in R1-08-G1
-- Slot 5: Jose Bautista (`bautijo02`) in R1-08-G1
-- Slot 6: George Bell (`bellge02`) in R1-08-G1
-- Slot 7: Jesse Barfield (`barfije01`) in R1-08-G1
-- Slot 8: Devon White (`whitede03`) in R1-08-G1
-- Slot 9: Ernie Whitt (`whitter01`) in R1-08-G1
+- Slot 1: Roberto Alomar (`alomaro01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 2: Tony Fernandez (`fernato01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 3: Josh Donaldson (`donaljo02`) in R1-08-G1 (same starter in 1 later game)
+- Slot 4: Carlos Delgado (`delgaca01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 5: Jose Bautista (`bautijo02`) in R1-08-G1 (same starter in 1 later game)
+- Slot 6: George Bell (`bellge02`) in R1-08-G1 (same starter in 1 later game)
+- Slot 7: Jesse Barfield (`barfije01`) in R1-08-G1 (same starter in 1 later game)
+- Slot 8: Devon White (`whitede03`) in R1-08-G1 (same starter in 1 later game)
+- Slot 9: Ernie Whitt (`whitter01`) in R1-08-G1 (same starter in 1 later game)
+
+### Substitutes who have batted
+
+- Alejandro Kirk (`kirkal01`), slot 6
 
 ### Starts, in the order the games were played
 
 - Dave Stieb (`stiebda01`) started R1-08-G1
+- Roy Halladay (`hallaro01`) started R1-08-G2
 
 ### Relievers who have appeared
 
@@ -1599,6 +1607,7 @@ All historical cards, prior box scores, completed games, FAC/dice logs and tourn
 - Paul Quantrill (`quantpa01`), first seen in R1-08-G1
 - Roberto Osuna (`osunaro01`), first seen in R1-08-G1
 - Kevin Gausman (`gausmke01`), first seen in R1-08-G1
+- Tom Henke (`henketo01`), first seen in R1-08-G2
 
 ## 26. San Diego Padres (SD)
 
