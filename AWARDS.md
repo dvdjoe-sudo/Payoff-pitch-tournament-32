@@ -17,7 +17,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
 | Roberto Clemente | Pittsburgh Pirates | 31.0 | 17 | 8 | 5 | 3 |
 | Ron Santo | Chicago Cubs | 29.5 | 20 | 4 | 5 | 3 |
-| Frank Robinson | Cincinnati Reds | 28.0 | 17 | 5 | 6 | 3 |
+| Frank Robinson | Cincinnati Reds | 29.0 | 18 | 5 | 6 | 3 |
 | Aaron Judge | New York Yankees | 27.0 | 12 | 8 | 6 | 2 |
 | Ralph Kiner | Pittsburgh Pirates | 27.0 | 15 | 5 | 7 | 3 |
 | Andrew McCutchen | Pittsburgh Pirates | 26.5 | 15 | 4 | 7 | 1 |
@@ -32,6 +32,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | --- | --- | --- | --- | --- | --- | --- |
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
+| Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
 | Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
 | Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Mickey Lolich | Detroit Tigers | 13.4 | 7.0 | 1 | 8 | 1 |
 | Pete Alexander | Chicago Cubs | 13.3 | 9.0 | 1 | 2 | 1 |
 | David Price | Tampa Bay Rays | 13.1 | 13.1 | 1 | 11 | 6 |
-| Whitey Ford | New York Yankees | 12.3 | 7.2 | 1 | 8 | 2 |
 
 ## Reliever
 
