@@ -58,6 +58,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
+| Aroldis Chapman | Cincinnati Reds | 15.2 | 2 | 2.0 | 3 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Tom Henke | Toronto Blue Jays | 9.9 | 1 | 3.0 | 1 | 1 |
 | Jeff Zimmerman | Texas Rangers | 9.6 | 1 | 2.2 | 2 | 1 |
 | Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
-| Roy Face | Pittsburgh Pirates | 8.6 | 0 | 4.2 | 2 | 1 |
