@@ -719,15 +719,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Pete Rose (`rosepe01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 2: Joe Morgan (`morgajo02`) in R1-09-G1 (same starter in 5 later games)
-- Slot 3: Frank Robinson (`robinfr02`) in R1-09-G1 (same starter in 5 later games)
-- Slot 4: Johnny Bench (`benchjo01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 5: Joey Votto (`vottojo01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 6: George Foster (`fostege01`) in R1-09-G1; George Foster (`fostege01`) in R1-09-G2; George Foster (`fostege01`) in R1-09-G3; Vada Pinson (`pinsova01`) in R1-09-G4; Vada Pinson (`pinsova01`) in R1-09-G5; Vada Pinson (`pinsova01`) in R1-09-G6
-- Slot 7: Tony Perez (`perezto01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 8: Eric Davis (`daviser01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 9: Barry Larkin (`larkiba01`) in R1-09-G1 (same starter in 5 later games)
+- Slot 1: Pete Rose (`rosepe01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 2: Joe Morgan (`morgajo02`) in R1-09-G1 (same starter in 6 later games)
+- Slot 3: Frank Robinson (`robinfr02`) in R1-09-G1 (same starter in 6 later games)
+- Slot 4: Johnny Bench (`benchjo01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 5: Joey Votto (`vottojo01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 6: George Foster (`fostege01`) in R1-09-G1; George Foster (`fostege01`) in R1-09-G2; George Foster (`fostege01`) in R1-09-G3; Vada Pinson (`pinsova01`) in R1-09-G4; Vada Pinson (`pinsova01`) in R1-09-G5; Vada Pinson (`pinsova01`) in R1-09-G6; Ted Kluszewski (`kluszte01`) in R1-09-G7
+- Slot 7: Tony Perez (`perezto01`) in R1-09-G1; Tony Perez (`perezto01`) in R1-09-G2; Tony Perez (`perezto01`) in R1-09-G3; Tony Perez (`perezto01`) in R1-09-G4; Tony Perez (`perezto01`) in R1-09-G5; Tony Perez (`perezto01`) in R1-09-G6; George Foster (`fostege01`) in R1-09-G7
+- Slot 8: Eric Davis (`daviser01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 9: Barry Larkin (`larkiba01`) in R1-09-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
 
@@ -742,6 +742,7 @@ These names are not on the active roster.
 - Dolf Luque (`luquedo01`) started R1-09-G4
 - Jim Maloney (`malonji01`) started R1-09-G5
 - Noodles Hahn (`hahnno01`) started R1-09-G6
+- Eppa Rixey (`rixeyep01`) started R1-09-G7
 
 ### Relievers who have appeared
 
@@ -754,6 +755,7 @@ These names are not on the active roster.
 - Jim Maloney (`malonji01`), first seen in R1-09-G3
 - Noodles Hahn (`hahnno01`), first seen in R1-09-G4
 - Jose Rijo (`rijojo01`), first seen in R1-09-G6
+- Bucky Walters (`waltebu01`), first seen in R1-09-G7
 
 ## 10. Los Angeles Dodgers (LAD)
 
@@ -1514,7 +1516,7 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 
 ## 24. Texas Rangers (TEX)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 566.2.
+Bracket: losers. Series losses: 1. Full 26 Index: 566.2.
 
 Manager: Ron Washington.
 
@@ -1570,15 +1572,15 @@ All original historical player cards, completed games, box scores, FAC/dice logs
 
 ### Lineup slots that have batted
 
-- Slot 1: Ian Kinsler (`kinslia01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 2: Ivan Rodriguez (`rodriiv01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 3: Alex Rodriguez (`rodrial01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 4: Frank Howard (`howarfr01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 5: Josh Hamilton (`hamiljo03`) in R1-09-G1 (same starter in 5 later games)
-- Slot 6: Juan Gonzalez (`gonzaju03`) in R1-09-G1 (same starter in 5 later games)
-- Slot 7: Rafael Palmeiro (`palmera01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 8: Adrian Beltre (`beltrad01`) in R1-09-G1 (same starter in 5 later games)
-- Slot 9: Corey Seager (`seageco01`) in R1-09-G1; Corey Seager (`seageco01`) in R1-09-G2; Mark Teixeira (`teixema01`) in R1-09-G3; Rubén Sierra (`sierrru01`) in R1-09-G4; Rubén Sierra (`sierrru01`) in R1-09-G5; Rubén Sierra (`sierrru01`) in R1-09-G6
+- Slot 1: Ian Kinsler (`kinslia01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 2: Ivan Rodriguez (`rodriiv01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 3: Alex Rodriguez (`rodrial01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 4: Frank Howard (`howarfr01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 5: Josh Hamilton (`hamiljo03`) in R1-09-G1 (same starter in 6 later games)
+- Slot 6: Juan Gonzalez (`gonzaju03`) in R1-09-G1 (same starter in 6 later games)
+- Slot 7: Rafael Palmeiro (`palmera01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 8: Adrian Beltre (`beltrad01`) in R1-09-G1 (same starter in 6 later games)
+- Slot 9: Corey Seager (`seageco01`) in R1-09-G1; Corey Seager (`seageco01`) in R1-09-G2; Mark Teixeira (`teixema01`) in R1-09-G3; Rubén Sierra (`sierrru01`) in R1-09-G4; Rubén Sierra (`sierrru01`) in R1-09-G5; Rubén Sierra (`sierrru01`) in R1-09-G6; Corey Seager (`seageco01`) in R1-09-G7
 
 ### Starts, in the order the games were played
 
@@ -1588,6 +1590,7 @@ All original historical player cards, completed games, box scores, FAC/dice logs
 - Gaylord Perry (`perryga01`) started R1-09-G4
 - Charlie Hough (`houghch01`) started R1-09-G5
 - Nolan Ryan (`ryanno01`) started R1-09-G6
+- Yu Darvish (`darviyu01`) started R1-09-G7
 
 ### Relievers who have appeared
 
