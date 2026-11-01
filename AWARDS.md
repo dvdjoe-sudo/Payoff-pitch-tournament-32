@@ -17,12 +17,12 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
 | Roberto Clemente | Pittsburgh Pirates | 31.0 | 17 | 8 | 5 | 3 |
 | Ron Santo | Chicago Cubs | 29.5 | 20 | 4 | 5 | 3 |
+| Frank Robinson | Cincinnati Reds | 28.0 | 17 | 5 | 6 | 3 |
 | Aaron Judge | New York Yankees | 27.0 | 12 | 8 | 6 | 2 |
 | Ralph Kiner | Pittsburgh Pirates | 27.0 | 15 | 5 | 7 | 3 |
 | Andrew McCutchen | Pittsburgh Pirates | 26.5 | 15 | 4 | 7 | 1 |
 | Gary Sheffield | Miami Marlins | 26.5 | 14 | 5 | 6 | 2 |
 | Mickey Mantle | New York Yankees | 26.5 | 14 | 5 | 6 | 3 |
-| Christian Yelich | Miami Marlins | 24.5 | 14 | 6 | 3 | 3 |
 
 ## Cy Young
 
@@ -62,8 +62,8 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
+| Jeff Zimmerman | Texas Rangers | 12.0 | 1 | 3.2 | 3 | 1 |
+| Clay Carroll | Cincinnati Reds | 11.8 | 1 | 3.0 | 2 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
 | Tom Henke | Toronto Blue Jays | 9.9 | 1 | 3.0 | 1 | 1 |
-| Jeff Zimmerman | Texas Rangers | 9.6 | 1 | 2.2 | 2 | 1 |
-| Ryan Helsley | St. Louis Cardinals | 8.7 | 1 | 1.2 | 1 | 0 |
