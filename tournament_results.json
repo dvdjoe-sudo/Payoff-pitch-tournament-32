@@ -912,7 +912,13 @@
    ],
    "status": "complete",
    "winner": "CIN",
-   "loser": "TEX"
+   "loser": "TEX",
+   "mvp": {
+    "team": "CIN",
+    "player_id": "robinfr02",
+    "name": "Frank Robinson",
+    "line": "9 for 27, 1 2B, 3 HR, 6 RBI, 5 R, .333"
+   }
   },
   {
    "id": "R1-10",
