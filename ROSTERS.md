@@ -25,7 +25,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 7 | ATL | Atlanta Braves | Official roster, plus game appearances |
 | 8 | PIT | Pittsburgh Pirates | Official roster, plus game appearances |
 | 9 | CIN | Cincinnati Reds | Official roster, plus game appearances |
-| 10 | LAD | Los Angeles Dodgers | Official roster |
+| 10 | LAD | Los Angeles Dodgers | Official roster, plus game appearances |
 | 11 | PHI | Philadelphia Phillies | Official roster |
 | 12 | MIN | Minnesota Twins | Official roster |
 | 13 | CLE | Cleveland Guardians | Official roster |
@@ -38,7 +38,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 20 | LAA | Los Angeles Angels | Official roster |
 | 21 | NYM | New York Mets | Official roster |
 | 22 | OAK | Oakland Athletics | Official roster |
-| 23 | MIL | Milwaukee Brewers | Official roster |
+| 23 | MIL | Milwaukee Brewers | Official roster, plus game appearances |
 | 24 | TEX | Texas Rangers | Official roster, plus game appearances |
 | 25 | TOR | Toronto Blue Jays | Official roster, plus game appearances |
 | 26 | SD | San Diego Padres | Official roster, plus game appearances |
@@ -803,6 +803,29 @@ Official roster provided by the tournament owner. The lines are copied from that
 - RH BRG Clem Labine 11
 - LR Mike Marshall 3
 
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1
+- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1
+- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1
+- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1
+- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1
+- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1
+- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1
+- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1
+- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1
+
+### Starts, in the order the games were played
+
+- Sandy Koufax (`koufasa01`) started R1-10-G1
+
+### Relievers who have appeared
+
+- Kenley Jansen (`janseke01`), first seen in R1-10-G1
+- Eric Gagne (`gagneer01`), first seen in R1-10-G1
+
 ## 11. Philadelphia Phillies (PHI)
 
 Bracket: winners. Series losses: 0. Full 26 Index: 809.1.
@@ -1513,6 +1536,39 @@ Ben Oglivie (`oglivbe01`) joins the **Milwaukee Brewers** active 26 as **sixth b
 Freddy Peralta (`peralfr01`) leaves the active bullpen but keeps his original authentic historical converted pitcher card. The remaining six relievers are **Josh Hader, Devin Williams, Rollie Fingers, Dan Plesac, Ken Sanders and Jeremy Jeffress**, in the same RP1–RP6 order. The **entire starting nine, Prince Fielder at DH batting fourth, and five starting pitchers stay unchanged**. The active roster has **9 lineup / 6 bench / 5 rotation / 6 bullpen** and 26 unique players.
 
 All historical cards, played games, box scores, results and FAC/dice logs remain unchanged. Oglivie's verified Milwaukee-only five-year Peak 162 display uses **1978–1982** (Lahman). His playable **Hitter v0.5** card remains pending authentic conversion; **no fabricated dice ratings** are published. Any PED eligibility discussion is separate.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Christian Yelich (`yelicch01`) in R1-10-G1
+- Slot 2: Paul Molitor (`molitpa01`) in R1-10-G1
+- Slot 3: Robin Yount (`yountro01`) in R1-10-G1
+- Slot 4: Prince Fielder (`fieldpr01`) in R1-10-G1
+- Slot 5: George Scott (`scottge02`) in R1-10-G1
+- Slot 6: William Contreras (`contrwi02`) in R1-10-G1
+- Slot 7: Geoff Jenkins (`jenkige01`) in R1-10-G1
+- Slot 8: Brice Turang (`turanbr02`) in R1-10-G1
+- Slot 9: Carlos Gómez (`gomezca01`) in R1-10-G1
+
+### Substitutes who have batted
+
+- Ryan Braun (`braunry02`), slot 1
+- Ben Oglivie (`oglivbe01`), slot 1
+- Cecil Cooper (`coopece01`), slot 5
+- B.J. Surhoff (`surhobj01`), slot 6
+
+### Starts, in the order the games were played
+
+- Teddy Higuera (`higuete01`) started R1-10-G1
+
+### Relievers who have appeared
+
+- Jeremy Jeffress (`jeffrje01`), first seen in R1-10-G1
+- Devin Williams (`willide03`), first seen in R1-10-G1
+- Dan Plesac (`plesada01`), first seen in R1-10-G1
+- Josh Hader (`haderjo01`), first seen in R1-10-G1
+- Rollie Fingers (`fingero01`), first seen in R1-10-G1
 
 ## 24. Texas Rangers (TEX)
 

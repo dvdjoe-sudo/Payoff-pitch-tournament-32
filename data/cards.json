@@ -89378,7 +89378,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|breweji01": {
   "card_bat": null,
@@ -89822,7 +89846,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 1,
+    "r": 1,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|ceyro01": {
   "card_bat": {
@@ -90162,7 +90210,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 1,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|daviswi02": {
   "card_bat": {
@@ -90716,7 +90788,27 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 8,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 2,
+    "hr": 0,
+    "l": 0,
+    "outs": 6,
+    "r": 0,
+    "so": 4,
+    "sv": 0,
+    "w": 1
+   }
+  }
  },
  "LAD|garvest01": {
   "card_bat": {
@@ -91857,7 +91949,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|janseke01": {
   "card_bat": null,
@@ -91961,7 +92077,27 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 6,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 1,
+    "hr": 0,
+    "l": 0,
+    "outs": 4,
+    "r": 0,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "LAD|kershcl01": {
   "card_bat": null,
@@ -92169,7 +92305,27 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 2,
+    "bf": 30,
+    "er": 5,
+    "g": 1,
+    "gs": 1,
+    "h": 8,
+    "hr": 1,
+    "l": 0,
+    "outs": 20,
+    "r": 5,
+    "so": 6,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "LAD|labincl01": {
   "card_bat": null,
@@ -93061,7 +93217,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|perraro01": {
   "card_bat": null,
@@ -93845,7 +94025,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|robinja02": {
   "card_bat": {
@@ -94189,7 +94393,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 3,
+    "hbp": 0,
+    "hr": 1,
+    "r": 2,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|snidedu01": {
   "card_bat": {
@@ -94538,7 +94766,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 2,
+    "hbp": 0,
+    "hr": 2,
+    "r": 2,
+    "rbi": 4,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|vanceda01": {
   "card_bat": null,
@@ -94989,7 +95241,31 @@
    }
   ],
   "team": "LAD",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAD|willsma01": {
   "card_bat": {
@@ -102638,7 +102914,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 2,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|burneco01": {
   "card_bat": null,
@@ -103514,7 +103814,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|coopece01": {
   "card_bat": {
@@ -103860,7 +104184,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 1,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|fieldpr01": {
   "card_bat": {
@@ -104206,7 +104554,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|fingero01": {
   "card_bat": null,
@@ -104308,7 +104680,27 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 2,
+    "er": 1,
+    "g": 1,
+    "gs": 0,
+    "h": 1,
+    "hr": 1,
+    "l": 1,
+    "outs": 1,
+    "r": 1,
+    "so": 0,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIL|gomezca01": {
   "card_bat": {
@@ -104657,7 +105049,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|haderjo01": {
   "card_bat": null,
@@ -104761,7 +105177,27 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 6,
+    "er": 1,
+    "g": 1,
+    "gs": 0,
+    "h": 1,
+    "hr": 1,
+    "l": 0,
+    "outs": 4,
+    "r": 1,
+    "so": 2,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIL|higuete01": {
   "card_bat": null,
@@ -104865,7 +105301,27 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 4,
+    "bf": 22,
+    "er": 3,
+    "g": 1,
+    "gs": 1,
+    "h": 4,
+    "hr": 1,
+    "l": 0,
+    "outs": 14,
+    "r": 3,
+    "so": 3,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIL|jeffrje01": {
   "card_bat": null,
@@ -104972,7 +105428,27 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 6,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 1,
+    "hr": 0,
+    "l": 0,
+    "outs": 4,
+    "r": 0,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIL|jenkige01": {
   "card_bat": {
@@ -105318,7 +105794,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 2,
+    "hbp": 0,
+    "hr": 1,
+    "r": 1,
+    "rbi": 3,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|molitpa01": {
   "card_bat": {
@@ -105661,7 +106161,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 4,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 2,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|oglivbe01": {
   "card_bat": {
@@ -106007,7 +106531,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 1,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|peralfr01": {
   "card_bat": null,
@@ -106259,7 +106807,27 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 4,
+    "er": 1,
+    "g": 1,
+    "gs": 0,
+    "h": 2,
+    "hr": 1,
+    "l": 0,
+    "outs": 2,
+    "r": 1,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIL|sandeke01": {
   "card_bat": null,
@@ -106707,7 +107275,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|sheetbe01": {
   "card_bat": null,
@@ -107154,7 +107746,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 1,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|thomago01": {
   "card_bat": {
@@ -107832,7 +108448,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|willide03": {
   "card_bat": null,
@@ -107939,7 +108579,27 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 3,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 0,
+    "hr": 0,
+    "l": 0,
+    "outs": 3,
+    "r": 0,
+    "so": 2,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "MIL|woodrbr01": {
   "card_bat": null,
@@ -108392,7 +109052,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 2,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIL|yountro01": {
   "card_bat": {
@@ -108744,7 +109428,31 @@
    }
   ],
   "team": "MIL",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-10-G1"
+   ],
+   "pitching": null
+  }
  },
  "MIN|aguilri01": {
   "card_bat": null,
