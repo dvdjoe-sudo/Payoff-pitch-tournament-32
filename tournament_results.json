@@ -953,7 +953,13 @@
    ],
    "status": "complete",
    "winner": "LAD",
-   "loser": "MIL"
+   "loser": "MIL",
+   "mvp": {
+    "team": "LAD",
+    "player_id": "camparo01",
+    "name": "Roy Campanella",
+    "line": "6 for 20, 3 R, 1 3B, 3 HR, 3 RBI, .300"
+   }
   },
   {
    "id": "R1-11",
