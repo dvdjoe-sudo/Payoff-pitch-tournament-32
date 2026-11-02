@@ -807,24 +807,31 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1
-- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1
-- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1
-- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1
-- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1
-- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1
-- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1
-- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1
-- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1
+- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1 (same starter in 1 later game)
+- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1 (same starter in 1 later game)
+
+### Substitutes who have batted
+
+- Pedro Guerrero (`guerrpe01`), slot 2
 
 ### Starts, in the order the games were played
 
 - Sandy Koufax (`koufasa01`) started R1-10-G1
+- Clayton Kershaw (`kershcl01`) started R1-10-G2
 
 ### Relievers who have appeared
 
 - Kenley Jansen (`janseke01`), first seen in R1-10-G1
 - Eric Gagne (`gagneer01`), first seen in R1-10-G1
+- Jim Brewer (`breweji01`), first seen in R1-10-G2
+- Ron Perranoski (`perraro01`), first seen in R1-10-G2
 
 ## 11. Philadelphia Phillies (PHI)
 
@@ -1541,15 +1548,15 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 
 ### Lineup slots that have batted
 
-- Slot 1: Christian Yelich (`yelicch01`) in R1-10-G1
-- Slot 2: Paul Molitor (`molitpa01`) in R1-10-G1
-- Slot 3: Robin Yount (`yountro01`) in R1-10-G1
-- Slot 4: Prince Fielder (`fieldpr01`) in R1-10-G1
-- Slot 5: George Scott (`scottge02`) in R1-10-G1
-- Slot 6: William Contreras (`contrwi02`) in R1-10-G1
-- Slot 7: Geoff Jenkins (`jenkige01`) in R1-10-G1
-- Slot 8: Brice Turang (`turanbr02`) in R1-10-G1
-- Slot 9: Carlos Gómez (`gomezca01`) in R1-10-G1
+- Slot 1: Christian Yelich (`yelicch01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 2: Paul Molitor (`molitpa01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 3: Robin Yount (`yountro01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 4: Prince Fielder (`fieldpr01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 5: George Scott (`scottge02`) in R1-10-G1 (same starter in 1 later game)
+- Slot 6: William Contreras (`contrwi02`) in R1-10-G1 (same starter in 1 later game)
+- Slot 7: Geoff Jenkins (`jenkige01`) in R1-10-G1 (same starter in 1 later game)
+- Slot 8: Brice Turang (`turanbr02`) in R1-10-G1 (same starter in 1 later game)
+- Slot 9: Carlos Gómez (`gomezca01`) in R1-10-G1 (same starter in 1 later game)
 
 ### Substitutes who have batted
 
@@ -1561,6 +1568,7 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 ### Starts, in the order the games were played
 
 - Teddy Higuera (`higuete01`) started R1-10-G1
+- Ben Sheets (`sheetbe01`) started R1-10-G2
 
 ### Relievers who have appeared
 
