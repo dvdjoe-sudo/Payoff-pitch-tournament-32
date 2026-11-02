@@ -43,8 +43,8 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Gaylord Perry | Texas Rangers | 14.4 | 8.0 | 1 | 5 | 0 |
 | Bob Gibson | St. Louis Cardinals | 14.0 | 9.0 | 1 | 9 | 2 |
 | Adam Wainwright | St. Louis Cardinals | 13.8 | 8.0 | 1 | 2 | 0 |
+| Don Drysdale | Los Angeles Dodgers | 13.7 | 8.0 | 1 | 4 | 0 |
 | Mickey Lolich | Detroit Tigers | 13.4 | 7.0 | 1 | 8 | 1 |
-| Pete Alexander | Chicago Cubs | 13.3 | 9.0 | 1 | 2 | 1 |
 
 ## Reliever
 
@@ -60,10 +60,10 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
+| Mike Marshall | Los Angeles Dodgers | 14.0 | 2 | 2.0 | 0 | 0 |
 | Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Clay Carroll | Cincinnati Reds | 11.8 | 1 | 3.0 | 2 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
 | Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
-| Tom Henke | Toronto Blue Jays | 9.9 | 1 | 3.0 | 1 | 1 |
