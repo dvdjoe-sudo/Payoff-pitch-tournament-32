@@ -807,20 +807,21 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1 (same starter in 3 later games)
-- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1; Zack Wheat (`wheatza01`) in R1-10-G2; Zack Wheat (`wheatza01`) in R1-10-G3; Pedro Guerrero (`guerrpe01`) in R1-10-G4
-- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1 (same starter in 3 later games)
-- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1 (same starter in 3 later games)
-- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1 (same starter in 3 later games)
-- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1; Gil Hodges (`hodgegi01`) in R1-10-G2; Gil Hodges (`hodgegi01`) in R1-10-G3; Steve Garvey (`garvest01`) in R1-10-G4
-- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1 (same starter in 3 later games)
-- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1 (same starter in 3 later games)
-- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1 (same starter in 3 later games)
+- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1 (same starter in 4 later games)
+- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1; Zack Wheat (`wheatza01`) in R1-10-G2; Zack Wheat (`wheatza01`) in R1-10-G3; Pedro Guerrero (`guerrpe01`) in R1-10-G4; Pedro Guerrero (`guerrpe01`) in R1-10-G5
+- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1 (same starter in 4 later games)
+- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1 (same starter in 4 later games)
+- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1 (same starter in 4 later games)
+- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1; Gil Hodges (`hodgegi01`) in R1-10-G2; Gil Hodges (`hodgegi01`) in R1-10-G3; Steve Garvey (`garvest01`) in R1-10-G4; Steve Garvey (`garvest01`) in R1-10-G5
+- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1 (same starter in 4 later games)
+- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1 (same starter in 4 later games)
+- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1 (same starter in 4 later games)
 
 ### Substitutes who have batted
 
 - Pedro Guerrero (`guerrpe01`), slot 2
 - Mike Piazza (`piazzmi01`), slot 7
+- Zack Wheat (`wheatza01`), slot 2
 
 ### Starts, in the order the games were played
 
@@ -828,6 +829,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Clayton Kershaw (`kershcl01`) started R1-10-G2
 - Dazzy Vance (`vanceda01`) started R1-10-G3
 - Don Drysdale (`drysddo01`) started R1-10-G4
+- Orel Hershiser (`hershor01`) started R1-10-G5
 
 ### Relievers who have appeared
 
@@ -1496,7 +1498,7 @@ This approval does **not** resolve the separate PED eligibility discussion and d
 
 ## 23. Milwaukee Brewers (MIL)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 569.9.
+Bracket: losers. Series losses: 1. Full 26 Index: 569.9.
 
 Manager: Pat Murphy (2024-2026, 3).
 
@@ -1552,15 +1554,15 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 
 ### Lineup slots that have batted
 
-- Slot 1: Christian Yelich (`yelicch01`) in R1-10-G1; Christian Yelich (`yelicch01`) in R1-10-G2; Christian Yelich (`yelicch01`) in R1-10-G3; Paul Molitor (`molitpa01`) in R1-10-G4
-- Slot 2: Paul Molitor (`molitpa01`) in R1-10-G1; Paul Molitor (`molitpa01`) in R1-10-G2; Paul Molitor (`molitpa01`) in R1-10-G3; Robin Yount (`yountro01`) in R1-10-G4
-- Slot 3: Robin Yount (`yountro01`) in R1-10-G1; Robin Yount (`yountro01`) in R1-10-G2; Robin Yount (`yountro01`) in R1-10-G3; Christian Yelich (`yelicch01`) in R1-10-G4
-- Slot 4: Prince Fielder (`fieldpr01`) in R1-10-G1; Prince Fielder (`fieldpr01`) in R1-10-G2; Prince Fielder (`fieldpr01`) in R1-10-G3; Gorman Thomas (`thomago01`) in R1-10-G4
-- Slot 5: George Scott (`scottge02`) in R1-10-G1; George Scott (`scottge02`) in R1-10-G2; George Scott (`scottge02`) in R1-10-G3; Cecil Cooper (`coopece01`) in R1-10-G4
-- Slot 6: William Contreras (`contrwi02`) in R1-10-G1; William Contreras (`contrwi02`) in R1-10-G2; William Contreras (`contrwi02`) in R1-10-G3; Geoff Jenkins (`jenkige01`) in R1-10-G4
-- Slot 7: Geoff Jenkins (`jenkige01`) in R1-10-G1; Geoff Jenkins (`jenkige01`) in R1-10-G2; Geoff Jenkins (`jenkige01`) in R1-10-G3; Ryan Braun (`braunry02`) in R1-10-G4
-- Slot 8: Brice Turang (`turanbr02`) in R1-10-G1; Brice Turang (`turanbr02`) in R1-10-G2; Brice Turang (`turanbr02`) in R1-10-G3; William Contreras (`contrwi02`) in R1-10-G4
-- Slot 9: Carlos Gómez (`gomezca01`) in R1-10-G1; Carlos Gómez (`gomezca01`) in R1-10-G2; Carlos Gómez (`gomezca01`) in R1-10-G3; Brice Turang (`turanbr02`) in R1-10-G4
+- Slot 1: Christian Yelich (`yelicch01`) in R1-10-G1; Christian Yelich (`yelicch01`) in R1-10-G2; Christian Yelich (`yelicch01`) in R1-10-G3; Paul Molitor (`molitpa01`) in R1-10-G4; Paul Molitor (`molitpa01`) in R1-10-G5
+- Slot 2: Paul Molitor (`molitpa01`) in R1-10-G1; Paul Molitor (`molitpa01`) in R1-10-G2; Paul Molitor (`molitpa01`) in R1-10-G3; Robin Yount (`yountro01`) in R1-10-G4; Robin Yount (`yountro01`) in R1-10-G5
+- Slot 3: Robin Yount (`yountro01`) in R1-10-G1; Robin Yount (`yountro01`) in R1-10-G2; Robin Yount (`yountro01`) in R1-10-G3; Christian Yelich (`yelicch01`) in R1-10-G4; Christian Yelich (`yelicch01`) in R1-10-G5
+- Slot 4: Prince Fielder (`fieldpr01`) in R1-10-G1; Prince Fielder (`fieldpr01`) in R1-10-G2; Prince Fielder (`fieldpr01`) in R1-10-G3; Gorman Thomas (`thomago01`) in R1-10-G4; Gorman Thomas (`thomago01`) in R1-10-G5
+- Slot 5: George Scott (`scottge02`) in R1-10-G1; George Scott (`scottge02`) in R1-10-G2; George Scott (`scottge02`) in R1-10-G3; Cecil Cooper (`coopece01`) in R1-10-G4; Cecil Cooper (`coopece01`) in R1-10-G5
+- Slot 6: William Contreras (`contrwi02`) in R1-10-G1; William Contreras (`contrwi02`) in R1-10-G2; William Contreras (`contrwi02`) in R1-10-G3; Geoff Jenkins (`jenkige01`) in R1-10-G4; Geoff Jenkins (`jenkige01`) in R1-10-G5
+- Slot 7: Geoff Jenkins (`jenkige01`) in R1-10-G1; Geoff Jenkins (`jenkige01`) in R1-10-G2; Geoff Jenkins (`jenkige01`) in R1-10-G3; Ryan Braun (`braunry02`) in R1-10-G4; Ryan Braun (`braunry02`) in R1-10-G5
+- Slot 8: Brice Turang (`turanbr02`) in R1-10-G1; Brice Turang (`turanbr02`) in R1-10-G2; Brice Turang (`turanbr02`) in R1-10-G3; William Contreras (`contrwi02`) in R1-10-G4; William Contreras (`contrwi02`) in R1-10-G5
+- Slot 9: Carlos Gómez (`gomezca01`) in R1-10-G1; Carlos Gómez (`gomezca01`) in R1-10-G2; Carlos Gómez (`gomezca01`) in R1-10-G3; Brice Turang (`turanbr02`) in R1-10-G4; Brice Turang (`turanbr02`) in R1-10-G5
 
 ### Substitutes who have batted
 
@@ -1569,6 +1571,7 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 - Cecil Cooper (`coopece01`), slot 5
 - B.J. Surhoff (`surhobj01`), slot 6
 - Prince Fielder (`fieldpr01`), slot 7
+- Carlos Gómez (`gomezca01`), slot 4
 
 ### Starts, in the order the games were played
 
@@ -1576,6 +1579,7 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 - Ben Sheets (`sheetbe01`) started R1-10-G2
 - Brandon Woodruff (`woodrbr01`) started R1-10-G3
 - Corbin Burnes (`burneco01`) started R1-10-G4
+- Mike Caldwell (`caldwmi01`) started R1-10-G5
 
 ### Relievers who have appeared
 

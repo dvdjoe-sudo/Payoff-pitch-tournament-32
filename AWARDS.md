@@ -21,8 +21,8 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Frank Robinson | Cincinnati Reds | 30.0 | 19 | 5 | 6 | 3 |
 | Ron Santo | Chicago Cubs | 29.5 | 20 | 4 | 5 | 3 |
 | Barry Larkin | Cincinnati Reds | 28.5 | 17 | 4 | 5 | 2 |
+| Geoff Jenkins | Milwaukee Brewers | 28.0 | 19 | 3 | 7 | 3 |
 | Ian Kinsler | Texas Rangers | 28.0 | 15 | 7 | 3 | 1 |
-| Aaron Judge | New York Yankees | 27.0 | 12 | 8 | 6 | 2 |
 
 ## Cy Young
 
@@ -55,6 +55,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Willie Hernandez | Detroit Tigers | 32.0 | 2 | 10.1 | 7 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
+| Josh Hader | Milwaukee Brewers | 18.4 | 0 | 8.2 | 14 | 3 |
 | Bruce Sutter | Chicago Cubs | 18.1 | 2 | 3.2 | 2 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
 | Clay Carroll | Cincinnati Reds | 11.8 | 1 | 3.0 | 2 | 0 |
 | Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
-| Drew Storen | Washington Nationals | 10.0 | 0 | 4.0 | 5 | 0 |
