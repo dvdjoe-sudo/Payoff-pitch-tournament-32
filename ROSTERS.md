@@ -26,7 +26,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 8 | PIT | Pittsburgh Pirates | Official roster, plus game appearances |
 | 9 | CIN | Cincinnati Reds | Official roster, plus game appearances |
 | 10 | LAD | Los Angeles Dodgers | Official roster, plus game appearances |
-| 11 | PHI | Philadelphia Phillies | Official roster |
+| 11 | PHI | Philadelphia Phillies | Official roster, plus game appearances |
 | 12 | MIN | Minnesota Twins | Official roster |
 | 13 | CLE | Cleveland Guardians | Official roster |
 | 14 | CWS | Chicago White Sox | Official roster |
@@ -37,7 +37,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 19 | SEA | Seattle Mariners | Official roster |
 | 20 | LAA | Los Angeles Angels | Official roster |
 | 21 | NYM | New York Mets | Official roster |
-| 22 | OAK | Oakland Athletics | Official roster |
+| 22 | OAK | Oakland Athletics | Official roster, plus game appearances |
 | 23 | MIL | Milwaukee Brewers | Official roster, plus game appearances |
 | 24 | TEX | Texas Rangers | Official roster, plus game appearances |
 | 25 | TOR | Toronto Blue Jays | Official roster, plus game appearances |
@@ -891,6 +891,29 @@ Chuck Klein (`kleinch01`) is Philadelphia's approved sixth bench bat (left-hande
 
 Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4, 5 and 6 respectively, without changing their pitching roles. This amendment applies to future games only. Every earlier original converted card, including Madson's, and all tournament games, results, box scores and dice/FAC logs remain untouched. Klein's playable frozen Hitter v0.5 conversion will use Phillies-franchise seasons only and remains pending; no card numbers or ratings are invented.
 
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Johnny Callison (`callijo01`) in R1-11-G1
+- Slot 2: Bobby Abreu (`abreubo01`) in R1-11-G1
+- Slot 3: Chuck Klein (`kleinch01`) in R1-11-G1
+- Slot 4: Mike Schmidt (`schmimi01`) in R1-11-G1
+- Slot 5: Bryce Harper (`harpebr03`) in R1-11-G1
+- Slot 6: Ryan Howard (`howarry01`) in R1-11-G1
+- Slot 7: Chase Utley (`utleych01`) in R1-11-G1
+- Slot 8: Carlos Ruiz (`ruizca01`) in R1-11-G1
+- Slot 9: Jimmy Rollins (`rolliji01`) in R1-11-G1
+
+### Starts, in the order the games were played
+
+- Steve Carlton (`carltst01`) started R1-11-G1
+
+### Relievers who have appeared
+
+- Brad Lidge (`lidgebr01`), first seen in R1-11-G1
+- Jonathan Papelbon (`papeljo01`), first seen in R1-11-G1
+
 ## 12. Minnesota Twins (MIN)
 
 Bracket: winners. Series losses: 0. Full 26 Index: 808.5.
@@ -1495,6 +1518,34 @@ Eric Chavez (`chaveer01`) joins the **Oakland Athletics** active roster as **six
 Gene Nelson (`nelsoge01`) leaves the active bullpen, but his original authentic pitcher card stays in the historical card catalog. Rick Honeycutt shifts from RP7 to RP6, with the other five relievers still Dennis Eckersley, Rollie Fingers, Andrew Bailey, Sean Doolittle and Liam Hendriks. **All nine hitters and five starting pitchers remain exactly unchanged**, including **José Canseco starting at DH batting fifth**. The roster has **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 unique active players.
 
 This approval does **not** resolve the separate PED eligibility discussion and does not authorize removing or changing any starting hitter. All original historical player cards, completed games, original box scores, dice/FAC logs and results remain unchanged. Chavez's authentic Oakland-only playable **Hitter v0.5** conversion is pending and must not be fabricated.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Rickey Henderson (`henderi01`) in R1-11-G1
+- Slot 2: Sal Bando (`bandosa01`) in R1-11-G1
+- Slot 3: Reggie Jackson (`jacksre01`) in R1-11-G1
+- Slot 4: Mark McGwire (`mcgwima01`) in R1-11-G1
+- Slot 5: José Canseco (`cansejo01`) in R1-11-G1
+- Slot 6: Miguel Tejada (`tejadmi01`) in R1-11-G1
+- Slot 7: Dwayne Murphy (`murphdw01`) in R1-11-G1
+- Slot 8: Terry Steinbach (`steinte01`) in R1-11-G1
+- Slot 9: Mark Ellis (`ellisma01`) in R1-11-G1
+
+### Substitutes who have batted
+
+- Eric Chavez (`chaveer01`), slot 2
+
+### Starts, in the order the games were played
+
+- Catfish Hunter (`hunteca01`) started R1-11-G1
+
+### Relievers who have appeared
+
+- Sean Doolittle (`doolise01`), first seen in R1-11-G1
+- Liam Hendriks (`hendrli01`), first seen in R1-11-G1
+- Dennis Eckersley (`eckerde01`), first seen in R1-11-G1
 
 ## 23. Milwaukee Brewers (MIL)
 

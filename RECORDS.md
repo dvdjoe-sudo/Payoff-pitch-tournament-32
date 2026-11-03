@@ -33,3 +33,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Atlanta Braves scored 11 against San Diego Padres in R1-07-G4.
 - Pittsburgh Pirates scored 15 against Toronto Blue Jays in R1-08-G4.
 - Texas Rangers scored 11 against Cincinnati Reds in R1-09-G4.
+- Oakland Athletics scored 11 against Philadelphia Phillies in R1-11-G1.
