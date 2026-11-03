@@ -995,7 +995,13 @@
    ],
    "status": "complete",
    "winner": "OAK",
-   "loser": "PHI"
+   "loser": "PHI",
+   "mvp": {
+    "team": "OAK",
+    "player_id": "mcgwima01",
+    "name": "Mark McGwire",
+    "line": "6 for 24, 3 R, 2 2B, 3 HR, 10 RBI, .250"
+   }
   },
   {
    "id": "R1-12",
