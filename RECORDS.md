@@ -34,3 +34,5 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Pittsburgh Pirates scored 15 against Toronto Blue Jays in R1-08-G4.
 - Texas Rangers scored 11 against Cincinnati Reds in R1-09-G4.
 - Oakland Athletics scored 11 against Philadelphia Phillies in R1-11-G1.
+- Oakland Athletics scored 15 against Philadelphia Phillies in R1-11-G2.
+- Philadelphia Phillies scored 11 against Oakland Athletics in R1-11-G2.

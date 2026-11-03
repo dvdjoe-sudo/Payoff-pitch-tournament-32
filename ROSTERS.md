@@ -895,24 +895,27 @@ Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4
 
 ### Lineup slots that have batted
 
-- Slot 1: Johnny Callison (`callijo01`) in R1-11-G1
-- Slot 2: Bobby Abreu (`abreubo01`) in R1-11-G1
-- Slot 3: Chuck Klein (`kleinch01`) in R1-11-G1
-- Slot 4: Mike Schmidt (`schmimi01`) in R1-11-G1
-- Slot 5: Bryce Harper (`harpebr03`) in R1-11-G1
-- Slot 6: Ryan Howard (`howarry01`) in R1-11-G1
-- Slot 7: Chase Utley (`utleych01`) in R1-11-G1
-- Slot 8: Carlos Ruiz (`ruizca01`) in R1-11-G1
-- Slot 9: Jimmy Rollins (`rolliji01`) in R1-11-G1
+- Slot 1: Johnny Callison (`callijo01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 2: Bobby Abreu (`abreubo01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 3: Chuck Klein (`kleinch01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 4: Mike Schmidt (`schmimi01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 5: Bryce Harper (`harpebr03`) in R1-11-G1 (same starter in 1 later game)
+- Slot 6: Ryan Howard (`howarry01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 7: Chase Utley (`utleych01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 8: Carlos Ruiz (`ruizca01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 9: Jimmy Rollins (`rolliji01`) in R1-11-G1 (same starter in 1 later game)
 
 ### Starts, in the order the games were played
 
 - Steve Carlton (`carltst01`) started R1-11-G1
+- Robin Roberts (`roberro01`) started R1-11-G2
 
 ### Relievers who have appeared
 
 - Brad Lidge (`lidgebr01`), first seen in R1-11-G1
 - Jonathan Papelbon (`papeljo01`), first seen in R1-11-G1
+- Ranger Suárez (`suarera01`), first seen in R1-11-G2
+- Ron Reed (`reedro01`), first seen in R1-11-G2
 
 ## 12. Minnesota Twins (MIN)
 
@@ -1523,15 +1526,15 @@ This approval does **not** resolve the separate PED eligibility discussion and d
 
 ### Lineup slots that have batted
 
-- Slot 1: Rickey Henderson (`henderi01`) in R1-11-G1
-- Slot 2: Sal Bando (`bandosa01`) in R1-11-G1
-- Slot 3: Reggie Jackson (`jacksre01`) in R1-11-G1
-- Slot 4: Mark McGwire (`mcgwima01`) in R1-11-G1
-- Slot 5: José Canseco (`cansejo01`) in R1-11-G1
-- Slot 6: Miguel Tejada (`tejadmi01`) in R1-11-G1
-- Slot 7: Dwayne Murphy (`murphdw01`) in R1-11-G1
-- Slot 8: Terry Steinbach (`steinte01`) in R1-11-G1
-- Slot 9: Mark Ellis (`ellisma01`) in R1-11-G1
+- Slot 1: Rickey Henderson (`henderi01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 2: Sal Bando (`bandosa01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 3: Reggie Jackson (`jacksre01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 4: Mark McGwire (`mcgwima01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 5: José Canseco (`cansejo01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 6: Miguel Tejada (`tejadmi01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 7: Dwayne Murphy (`murphdw01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 8: Terry Steinbach (`steinte01`) in R1-11-G1 (same starter in 1 later game)
+- Slot 9: Mark Ellis (`ellisma01`) in R1-11-G1 (same starter in 1 later game)
 
 ### Substitutes who have batted
 
@@ -1540,12 +1543,16 @@ This approval does **not** resolve the separate PED eligibility discussion and d
 ### Starts, in the order the games were played
 
 - Catfish Hunter (`hunteca01`) started R1-11-G1
+- Vida Blue (`bluevi01`) started R1-11-G2
 
 ### Relievers who have appeared
 
 - Sean Doolittle (`doolise01`), first seen in R1-11-G1
 - Liam Hendriks (`hendrli01`), first seen in R1-11-G1
 - Dennis Eckersley (`eckerde01`), first seen in R1-11-G1
+- Andrew Bailey (`bailean01`), first seen in R1-11-G2
+- Rollie Fingers (`fingero01`), first seen in R1-11-G2
+- Rick Honeycutt (`honeyri01`), first seen in R1-11-G2
 
 ## 23. Milwaukee Brewers (MIL)
 
