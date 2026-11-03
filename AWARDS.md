@@ -11,6 +11,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
+| Chuck Klein | Philadelphia Phillies | 33.0 | 20 | 5 | 5 | 3 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 | Honus Wagner | Pittsburgh Pirates | 31.5 | 18 | 7 | 6 | 0 |
@@ -18,11 +19,10 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Roberto Clemente | Pittsburgh Pirates | 31.0 | 17 | 8 | 5 | 3 |
 | Frank Howard | Texas Rangers | 30.5 | 15 | 5 | 8 | 2 |
 | Juan Gonzalez | Texas Rangers | 30.5 | 19 | 5 | 8 | 1 |
+| Mark McGwire | Oakland Athletics | 30.5 | 17 | 3 | 10 | 3 |
 | Frank Robinson | Cincinnati Reds | 30.0 | 19 | 5 | 6 | 3 |
-| Chuck Klein | Philadelphia Phillies | 29.5 | 18 | 4 | 5 | 3 |
 | Ron Santo | Chicago Cubs | 29.5 | 20 | 4 | 5 | 3 |
 | Barry Larkin | Cincinnati Reds | 28.5 | 17 | 4 | 5 | 2 |
-| Geoff Jenkins | Milwaukee Brewers | 28.0 | 19 | 3 | 7 | 3 |
 
 ## Cy Young
 
@@ -60,7 +60,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
-| Jonathan Papelbon | Philadelphia Phillies | 17.2 | 2 | 3.1 | 5 | 1 |
+| Jonathan Papelbon | Philadelphia Phillies | 17.0 | 2 | 4.0 | 5 | 2 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | Mike Marshall | Los Angeles Dodgers | 14.0 | 2 | 2.0 | 0 | 0 |
 | Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
