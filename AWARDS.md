@@ -65,5 +65,5 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
+| Dennis Eckersley | Oakland Athletics | 12.2 | 1 | 3.0 | 3 | 0 |
 | Clay Carroll | Cincinnati Reds | 11.8 | 1 | 3.0 | 2 | 0 |
-| Al Brazle | St. Louis Cardinals | 10.3 | 1 | 3.0 | 2 | 1 |
