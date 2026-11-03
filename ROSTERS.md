@@ -895,15 +895,15 @@ Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4
 
 ### Lineup slots that have batted
 
-- Slot 1: Johnny Callison (`callijo01`) in R1-11-G1; Johnny Callison (`callijo01`) in R1-11-G2; Richie Ashburn (`ashburi01`) in R1-11-G3; Richie Ashburn (`ashburi01`) in R1-11-G4
-- Slot 2: Bobby Abreu (`abreubo01`) in R1-11-G1; Bobby Abreu (`abreubo01`) in R1-11-G2; Johnny Callison (`callijo01`) in R1-11-G3; Johnny Callison (`callijo01`) in R1-11-G4
-- Slot 3: Chuck Klein (`kleinch01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 4: Mike Schmidt (`schmimi01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 5: Bryce Harper (`harpebr03`) in R1-11-G1 (same starter in 3 later games)
-- Slot 6: Ryan Howard (`howarry01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 7: Chase Utley (`utleych01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 8: Carlos Ruiz (`ruizca01`) in R1-11-G1; Carlos Ruiz (`ruizca01`) in R1-11-G2; Darren Daulton (`daultda01`) in R1-11-G3; Darren Daulton (`daultda01`) in R1-11-G4
-- Slot 9: Jimmy Rollins (`rolliji01`) in R1-11-G1 (same starter in 3 later games)
+- Slot 1: Johnny Callison (`callijo01`) in R1-11-G1; Johnny Callison (`callijo01`) in R1-11-G2; Richie Ashburn (`ashburi01`) in R1-11-G3; Richie Ashburn (`ashburi01`) in R1-11-G4; Richie Ashburn (`ashburi01`) in R1-11-G5
+- Slot 2: Bobby Abreu (`abreubo01`) in R1-11-G1; Bobby Abreu (`abreubo01`) in R1-11-G2; Johnny Callison (`callijo01`) in R1-11-G3; Johnny Callison (`callijo01`) in R1-11-G4; Johnny Callison (`callijo01`) in R1-11-G5
+- Slot 3: Chuck Klein (`kleinch01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 4: Mike Schmidt (`schmimi01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 5: Bryce Harper (`harpebr03`) in R1-11-G1; Bryce Harper (`harpebr03`) in R1-11-G2; Bryce Harper (`harpebr03`) in R1-11-G3; Bryce Harper (`harpebr03`) in R1-11-G4; Dick Allen (`allendi01`) in R1-11-G5
+- Slot 6: Ryan Howard (`howarry01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 7: Chase Utley (`utleych01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 8: Carlos Ruiz (`ruizca01`) in R1-11-G1; Carlos Ruiz (`ruizca01`) in R1-11-G2; Darren Daulton (`daultda01`) in R1-11-G3; Darren Daulton (`daultda01`) in R1-11-G4; Darren Daulton (`daultda01`) in R1-11-G5
+- Slot 9: Jimmy Rollins (`rolliji01`) in R1-11-G1 (same starter in 4 later games)
 
 ### Substitutes who have batted
 
@@ -915,6 +915,7 @@ Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4
 - Robin Roberts (`roberro01`) started R1-11-G2
 - Grover Cleveland Alexander (`alexape01`) started R1-11-G3
 - Curt Schilling (`schilcu01`) started R1-11-G4
+- Steve Carlton (`carltst01`) started R1-11-G5
 
 ### Relievers who have appeared
 
@@ -1532,15 +1533,15 @@ This approval does **not** resolve the separate PED eligibility discussion and d
 
 ### Lineup slots that have batted
 
-- Slot 1: Rickey Henderson (`henderi01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 2: Sal Bando (`bandosa01`) in R1-11-G1; Sal Bando (`bandosa01`) in R1-11-G2; Eric Chavez (`chaveer01`) in R1-11-G3; Eric Chavez (`chaveer01`) in R1-11-G4
-- Slot 3: Reggie Jackson (`jacksre01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 4: Mark McGwire (`mcgwima01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 5: José Canseco (`cansejo01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 6: Miguel Tejada (`tejadmi01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 7: Dwayne Murphy (`murphdw01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 8: Terry Steinbach (`steinte01`) in R1-11-G1 (same starter in 3 later games)
-- Slot 9: Mark Ellis (`ellisma01`) in R1-11-G1 (same starter in 3 later games)
+- Slot 1: Rickey Henderson (`henderi01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 2: Sal Bando (`bandosa01`) in R1-11-G1; Sal Bando (`bandosa01`) in R1-11-G2; Eric Chavez (`chaveer01`) in R1-11-G3; Eric Chavez (`chaveer01`) in R1-11-G4; Eric Chavez (`chaveer01`) in R1-11-G5
+- Slot 3: Reggie Jackson (`jacksre01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 4: Mark McGwire (`mcgwima01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 5: José Canseco (`cansejo01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 6: Miguel Tejada (`tejadmi01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 7: Dwayne Murphy (`murphdw01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 8: Terry Steinbach (`steinte01`) in R1-11-G1 (same starter in 4 later games)
+- Slot 9: Mark Ellis (`ellisma01`) in R1-11-G1 (same starter in 4 later games)
 
 ### Substitutes who have batted
 
@@ -1554,6 +1555,7 @@ This approval does **not** resolve the separate PED eligibility discussion and d
 - Vida Blue (`bluevi01`) started R1-11-G2
 - Dave Stewart (`stewada01`) started R1-11-G3
 - Tim Hudson (`hudsoti01`) started R1-11-G4
+- Barry Zito (`zitoba01`) started R1-11-G5
 
 ### Relievers who have appeared
 
