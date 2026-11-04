@@ -27,7 +27,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 9 | CIN | Cincinnati Reds | Official roster, plus game appearances |
 | 10 | LAD | Los Angeles Dodgers | Official roster, plus game appearances |
 | 11 | PHI | Philadelphia Phillies | Official roster, plus game appearances |
-| 12 | MIN | Minnesota Twins | Official roster |
+| 12 | MIN | Minnesota Twins | Official roster, plus game appearances |
 | 13 | CLE | Cleveland Guardians | Official roster |
 | 14 | CWS | Chicago White Sox | Official roster |
 | 15 | BAL | Baltimore Orioles | Official roster |
@@ -36,7 +36,7 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 18 | KC | Kansas City Royals | Official roster |
 | 19 | SEA | Seattle Mariners | Official roster |
 | 20 | LAA | Los Angeles Angels | Official roster |
-| 21 | NYM | New York Mets | Official roster |
+| 21 | NYM | New York Mets | Official roster, plus game appearances |
 | 22 | OAK | Oakland Athletics | Official roster, plus game appearances |
 | 23 | MIL | Milwaukee Brewers | Official roster, plus game appearances |
 | 24 | TEX | Texas Rangers | Official roster, plus game appearances |
@@ -984,6 +984,32 @@ Bob Allison (`allisbo01`) joins Minnesota's active 26 as sixth bench hitter (RH 
 
 Firpo Marberry takes bullpen slot 4, and Jhoan Duran and Taylor Rogers move to bullpen slots 5 and 6 respectively without changing their roles. This amendment affects future games only and does not edit any original player cards, archived Jim Perry conversion, FAC/dice rolls, box scores, completed games or historical tournament results. The full Minnesota set, including Allison's genuine card, was built in the wave-2 new-generation conversion on 2026-10-28; no playable card ratings are invented.
 
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Rod Carew (`carewro01`) in R1-12-G1
+- Slot 2: Joe Mauer (`mauerjo01`) in R1-12-G1
+- Slot 3: Kirby Puckett (`puckeki01`) in R1-12-G1
+- Slot 4: Harmon Killebrew (`killeha01`) in R1-12-G1
+- Slot 5: Goose Goslin (`gosligo01`) in R1-12-G1
+- Slot 6: Tony Oliva (`olivato01`) in R1-12-G1
+- Slot 7: Kent Hrbek (`hrbekke01`) in R1-12-G1
+- Slot 8: Joe Cronin (`cronijo01`) in R1-12-G1
+- Slot 9: Gary Gaetti (`gaettga01`) in R1-12-G1
+
+### Substitutes who have batted
+
+- Sam Rice (`ricesa01`), slot 4
+
+### Starts, in the order the games were played
+
+- Walter Johnson (`johnswa01`) started R1-12-G1
+
+### Relievers who have appeared
+
+- Jhoan Duran (`duranjh01`), first seen in R1-12-G1
+
 ## 13. Cleveland Guardians (CLE)
 
 Bracket: winners. Series losses: 0. Full 26 Index: 801.2.
@@ -1476,6 +1502,34 @@ Howard Johnson (`johnsho01`) becomes the **sixth bench hitter** for the New York
 The entire starting nine and five-man rotation stay unchanged. **Pete Alonso remains the starting DH batting sixth**, while **John Olerud remains bench #5**. The owner-approved active roster now has **9 lineup / 6 bench / 5 rotation / 6 bullpen** and 26 distinct players.
 
 This prospective roster amendment preserves the original archive of every historical card, completed game, box score, final score and FAC/dice roll. Howard Johnson's authentic Mets-only frozen Hitter v0.5 playable conversion is **pending**; no fabricated dice-table numbers, percentage bands or fielding ratings are introduced.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Francisco Lindor (`lindofr01`) in R1-12-G1
+- Slot 2: Keith Hernandez (`hernake01`) in R1-12-G1
+- Slot 3: David Wright (`wrighda03`) in R1-12-G1
+- Slot 4: Darryl Strawberry (`strawda01`) in R1-12-G1
+- Slot 5: Mike Piazza (`piazzmi01`) in R1-12-G1
+- Slot 6: Pete Alonso (`alonspe01`) in R1-12-G1
+- Slot 7: Carlos Beltran (`beltrca01`) in R1-12-G1
+- Slot 8: Edgardo Alfonzo (`alfoned01`) in R1-12-G1
+- Slot 9: Cleon Jones (`jonescl01`) in R1-12-G1
+
+### Substitutes who have batted
+
+- John Olerud (`olerujo01`), slot 2
+
+### Starts, in the order the games were played
+
+- Tom Seaver (`seaveto01`) started R1-12-G1
+
+### Relievers who have appeared
+
+- Billy Wagner (`wagnebi02`), first seen in R1-12-G1
+- Armando Benítez (`benitar01`), first seen in R1-12-G1
+- Edwin Díaz (`diazed04`), first seen in R1-12-G1
 
 ## 22. Oakland Athletics (OAK)
 
