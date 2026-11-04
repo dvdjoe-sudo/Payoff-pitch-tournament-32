@@ -1036,7 +1036,13 @@
    ],
    "status": "complete",
    "winner": "MIN",
-   "loser": "NYM"
+   "loser": "NYM",
+   "mvp": {
+    "team": "MIN",
+    "player_id": "puckeki01",
+    "name": "Kirby Puckett",
+    "line": "7 for 21, 4 R, 1 2B, 3 HR, 4 RBI, .333"
+   }
   },
   {
    "id": "R1-13",
