@@ -988,15 +988,15 @@ Firpo Marberry takes bullpen slot 4, and Jhoan Duran and Taylor Rogers move to b
 
 ### Lineup slots that have batted
 
-- Slot 1: Rod Carew (`carewro01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 2: Joe Mauer (`mauerjo01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 3: Kirby Puckett (`puckeki01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 4: Harmon Killebrew (`killeha01`) in R1-12-G1; Harmon Killebrew (`killeha01`) in R1-12-G2; Byron Buxton (`buxtoby01`) in R1-12-G3; Byron Buxton (`buxtoby01`) in R1-12-G4
-- Slot 5: Goose Goslin (`gosligo01`) in R1-12-G1; Goose Goslin (`gosligo01`) in R1-12-G2; Harmon Killebrew (`killeha01`) in R1-12-G3; Harmon Killebrew (`killeha01`) in R1-12-G4
-- Slot 6: Tony Oliva (`olivato01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 7: Kent Hrbek (`hrbekke01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 8: Joe Cronin (`cronijo01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 9: Gary Gaetti (`gaettga01`) in R1-12-G1 (same starter in 3 later games)
+- Slot 1: Rod Carew (`carewro01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 2: Joe Mauer (`mauerjo01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 3: Kirby Puckett (`puckeki01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 4: Harmon Killebrew (`killeha01`) in R1-12-G1; Harmon Killebrew (`killeha01`) in R1-12-G2; Byron Buxton (`buxtoby01`) in R1-12-G3; Byron Buxton (`buxtoby01`) in R1-12-G4; Goose Goslin (`gosligo01`) in R1-12-G5
+- Slot 5: Goose Goslin (`gosligo01`) in R1-12-G1; Goose Goslin (`gosligo01`) in R1-12-G2; Harmon Killebrew (`killeha01`) in R1-12-G3; Harmon Killebrew (`killeha01`) in R1-12-G4; Harmon Killebrew (`killeha01`) in R1-12-G5
+- Slot 6: Tony Oliva (`olivato01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 7: Kent Hrbek (`hrbekke01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 8: Joe Cronin (`cronijo01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 9: Gary Gaetti (`gaettga01`) in R1-12-G1 (same starter in 4 later games)
 
 ### Substitutes who have batted
 
@@ -1010,6 +1010,7 @@ Firpo Marberry takes bullpen slot 4, and Jhoan Duran and Taylor Rogers move to b
 - Johan Santana (`santajo01`) started R1-12-G2
 - Bert Blyleven (`blylebe01`) started R1-12-G3
 - Frank Viola (`violafr01`) started R1-12-G4
+- Jim Kaat (`kaatji01`) started R1-12-G5
 
 ### Relievers who have appeared
 
@@ -1458,7 +1459,7 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 
 ## 21. New York Mets (NYM)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 600.6.
+Bracket: losers. Series losses: 1. Full 26 Index: 600.6.
 
 Manager: Davey Johnson.
 
@@ -1514,15 +1515,15 @@ This prospective roster amendment preserves the original archive of every histor
 
 ### Lineup slots that have batted
 
-- Slot 1: Francisco Lindor (`lindofr01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 2: Keith Hernandez (`hernake01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 3: David Wright (`wrighda03`) in R1-12-G1 (same starter in 3 later games)
-- Slot 4: Darryl Strawberry (`strawda01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 5: Mike Piazza (`piazzmi01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 6: Pete Alonso (`alonspe01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 7: Carlos Beltran (`beltrca01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 8: Edgardo Alfonzo (`alfoned01`) in R1-12-G1 (same starter in 3 later games)
-- Slot 9: Cleon Jones (`jonescl01`) in R1-12-G1 (same starter in 3 later games)
+- Slot 1: Francisco Lindor (`lindofr01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 2: Keith Hernandez (`hernake01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 3: David Wright (`wrighda03`) in R1-12-G1 (same starter in 4 later games)
+- Slot 4: Darryl Strawberry (`strawda01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 5: Mike Piazza (`piazzmi01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 6: Pete Alonso (`alonspe01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 7: Carlos Beltran (`beltrca01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 8: Edgardo Alfonzo (`alfoned01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 9: Cleon Jones (`jonescl01`) in R1-12-G1 (same starter in 4 later games)
 
 ### Substitutes who have batted
 
@@ -1536,12 +1537,15 @@ This prospective roster amendment preserves the original archive of every histor
 - Dwight Gooden (`goodedw01`) started R1-12-G2
 - Jacob deGrom (`degroja01`) started R1-12-G3
 - Jerry Koosman (`koosmje01`) started R1-12-G4
+- Al Leiter (`leiteal01`) started R1-12-G5
 
 ### Relievers who have appeared
 
 - Billy Wagner (`wagnebi02`), first seen in R1-12-G1
 - Armando Benítez (`benitar01`), first seen in R1-12-G1
 - Edwin Díaz (`diazed04`), first seen in R1-12-G1
+- Jesse Orosco (`oroscje01`), first seen in R1-12-G5
+- Tug McGraw (`mcgratu01`), first seen in R1-12-G5
 
 ## 22. Oakland Athletics (OAK)
 

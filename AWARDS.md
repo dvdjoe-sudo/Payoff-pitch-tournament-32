@@ -65,5 +65,5 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Mike Marshall | Los Angeles Dodgers | 14.0 | 2 | 2.0 | 0 | 0 |
 | Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
+| Joe Nathan | Minnesota Twins | 12.6 | 1 | 3.0 | 4 | 0 |
 | Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |
-| Dennis Eckersley | Oakland Athletics | 12.2 | 1 | 3.0 | 3 | 0 |
