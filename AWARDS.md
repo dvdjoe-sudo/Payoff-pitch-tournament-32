@@ -11,9 +11,9 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
+| Shohei Ohtani | Los Angeles Angels | 35.0 | 18 | 9 | 5 | 3 |
 | Chuck Klein | Philadelphia Phillies | 33.0 | 20 | 5 | 5 | 3 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
-| Shohei Ohtani | Los Angeles Angels | 33.0 | 17 | 8 | 5 | 3 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 | Honus Wagner | Pittsburgh Pirates | 31.5 | 18 | 7 | 6 | 0 |
 | Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
@@ -61,9 +61,9 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Jonathan Papelbon | Philadelphia Phillies | 17.0 | 2 | 4.0 | 5 | 2 |
+| Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | Mike Marshall | Los Angeles Dodgers | 14.0 | 2 | 2.0 | 0 | 0 |
 | Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
 | Joe Nathan | Minnesota Twins | 12.6 | 1 | 3.0 | 4 | 0 |
-| Byung-Hyun Kim | Arizona Diamondbacks | 12.2 | 1 | 3.0 | 3 | 0 |

@@ -1087,15 +1087,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3; Tris Speaker (`speaktr01`) in R1-13-G4; Tris Speaker (`speaktr01`) in R1-13-G5; Tris Speaker (`speaktr01`) in R1-13-G6
-- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 5 later games)
-- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 6: Albert Belle (`belleal01`) in R1-13-G1; Albert Belle (`belleal01`) in R1-13-G2; Albert Belle (`belleal01`) in R1-13-G3; Albert Belle (`belleal01`) in R1-13-G4; Albert Belle (`belleal01`) in R1-13-G5; Kenny Lofton (`loftoke01`) in R1-13-G6
-- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 5 later games)
+- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3; Tris Speaker (`speaktr01`) in R1-13-G4; Tris Speaker (`speaktr01`) in R1-13-G5; Tris Speaker (`speaktr01`) in R1-13-G6; Tris Speaker (`speaktr01`) in R1-13-G7
+- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 6 later games)
+- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 6: Albert Belle (`belleal01`) in R1-13-G1; Albert Belle (`belleal01`) in R1-13-G2; Albert Belle (`belleal01`) in R1-13-G3; Albert Belle (`belleal01`) in R1-13-G4; Albert Belle (`belleal01`) in R1-13-G5; Kenny Lofton (`loftoke01`) in R1-13-G6; Kenny Lofton (`loftoke01`) in R1-13-G7
+- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
 
@@ -1110,6 +1110,7 @@ These names are not on the active roster.
 - Corey Kluber (`klubeco01`) started R1-13-G4
 - Sam McDowell (`mcdowsa01`) started R1-13-G5
 - Bob Feller (`fellebo01`) started R1-13-G6
+- Stan Coveleski (`covelst01`) started R1-13-G7
 
 ### Relievers who have appeared
 
@@ -1443,7 +1444,7 @@ All previously created player cards and previously played games, scores, box sco
 
 ## 20. Los Angeles Angels (LAA)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 605.6.
+Bracket: losers. Series losses: 1. Full 26 Index: 605.6.
 
 Manager: Mike Scioscia.
 
@@ -1499,15 +1500,15 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 
 ### Lineup slots that have batted
 
-- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 5 later games)
-- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 5 later games)
+- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 6 later games)
+- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
 
@@ -1522,6 +1523,7 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 - Jered Weaver (`weaveje02`) started R1-13-G4
 - Mark Langston (`langsma01`) started R1-13-G5
 - Nolan Ryan (`ryanno01`) started R1-13-G6
+- Frank Tanana (`tananfr01`) started R1-13-G7
 
 ### Relievers who have appeared
 
