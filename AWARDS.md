@@ -39,12 +39,12 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
 | Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Bert Blyleven | Minnesota Twins | 15.9 | 8.0 | 1 | 8 | 0 |
+| Mark Langston | Los Angeles Angels | 15.7 | 8.0 | 2 | 7 | 3 |
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
 | Gaylord Perry | Texas Rangers | 14.4 | 8.0 | 1 | 5 | 0 |
 | Bob Gibson | St. Louis Cardinals | 14.0 | 9.0 | 1 | 9 | 2 |
 | Adam Wainwright | St. Louis Cardinals | 13.8 | 8.0 | 1 | 2 | 0 |
-| Don Drysdale | Los Angeles Dodgers | 13.7 | 8.0 | 1 | 4 | 0 |
 
 ## Reliever
 
