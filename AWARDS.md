@@ -13,6 +13,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Chuck Klein | Philadelphia Phillies | 33.0 | 20 | 5 | 5 | 3 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
+| Shohei Ohtani | Los Angeles Angels | 33.0 | 17 | 8 | 5 | 3 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 | Honus Wagner | Pittsburgh Pirates | 31.5 | 18 | 7 | 6 | 0 |
 | Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
@@ -22,7 +23,6 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mark McGwire | Oakland Athletics | 30.5 | 17 | 3 | 10 | 3 |
 | Frank Robinson | Cincinnati Reds | 30.0 | 19 | 5 | 6 | 3 |
 | Ron Santo | Chicago Cubs | 29.5 | 20 | 4 | 5 | 3 |
-| Barry Larkin | Cincinnati Reds | 28.5 | 17 | 4 | 5 | 2 |
 
 ## Cy Young
 
@@ -36,6 +36,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
 | Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
+| Bob Feller | Cleveland Guardians | 16.4 | 14.0 | 2 | 20 | 8 |
 | Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
 | Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Bert Blyleven | Minnesota Twins | 15.9 | 8.0 | 1 | 8 | 0 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
 | Gaylord Perry | Texas Rangers | 14.4 | 8.0 | 1 | 5 | 0 |
 | Bob Gibson | St. Louis Cardinals | 14.0 | 9.0 | 1 | 9 | 2 |
-| Adam Wainwright | St. Louis Cardinals | 13.8 | 8.0 | 1 | 2 | 0 |
 
 ## Reliever
 

@@ -38,3 +38,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Oakland Athletics scored 11 against Philadelphia Phillies in R1-11-G1.
 - Oakland Athletics scored 15 against Philadelphia Phillies in R1-11-G2.
 - Philadelphia Phillies scored 11 against Oakland Athletics in R1-11-G2.
+- Cleveland Guardians scored 10 against Los Angeles Angels in R1-13-G6.
