@@ -1087,15 +1087,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3
-- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 2 later games)
-- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 6: Albert Belle (`belleal01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3; Tris Speaker (`speaktr01`) in R1-13-G4
+- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 3 later games)
+- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 6: Albert Belle (`belleal01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 3 later games)
 
 ### Substitutes who have batted
 
@@ -1106,6 +1106,7 @@ These names are not on the active roster.
 - Bob Feller (`fellebo01`) started R1-13-G1
 - Stan Coveleski (`covelst01`) started R1-13-G2
 - Addie Joss (`jossad01`) started R1-13-G3
+- Corey Kluber (`klubeco01`) started R1-13-G4
 
 ### Relievers who have appeared
 
@@ -1113,6 +1114,7 @@ These names are not on the active roster.
 - Andrew Miller (`millean01`), first seen in R1-13-G2
 - Cade Smith (`smithca05`), first seen in R1-13-G2
 - Doug Jones (`jonesdo01`), first seen in R1-13-G2
+- Early Wynn (`wynnea01`), first seen in R1-13-G4
 
 ## 14. Chicago White Sox (CWS)
 
@@ -1492,25 +1494,27 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 
 ### Lineup slots that have batted
 
-- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 2 later games)
-- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 3 later games)
+- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 3 later games)
 
 ### Substitutes who have batted
 
 - Mike Napoli (`napolmi01`), slot 9
+- Tim Salmon (`salmoti01`), slot 3
 
 ### Starts, in the order the games were played
 
 - Chuck Finley (`finlech01`) started R1-13-G1
 - Nolan Ryan (`ryanno01`) started R1-13-G2
 - Frank Tanana (`tananfr01`) started R1-13-G3
+- Jered Weaver (`weaveje02`) started R1-13-G4
 
 ### Relievers who have appeared
 
