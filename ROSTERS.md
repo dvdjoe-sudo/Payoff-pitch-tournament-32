@@ -1087,15 +1087,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2
-- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 1 later game)
-- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 6: Albert Belle (`belleal01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 1 later game)
+- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3
+- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 2 later games)
+- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 6: Albert Belle (`belleal01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 2 later games)
 
 ### Substitutes who have batted
 
@@ -1105,6 +1105,7 @@ These names are not on the active roster.
 
 - Bob Feller (`fellebo01`) started R1-13-G1
 - Stan Coveleski (`covelst01`) started R1-13-G2
+- Addie Joss (`jossad01`) started R1-13-G3
 
 ### Relievers who have appeared
 
@@ -1491,15 +1492,15 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 
 ### Lineup slots that have batted
 
-- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 1 later game)
-- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 1 later game)
+- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 2 later games)
+- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 2 later games)
 
 ### Substitutes who have batted
 
@@ -1509,12 +1510,17 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 
 - Chuck Finley (`finlech01`) started R1-13-G1
 - Nolan Ryan (`ryanno01`) started R1-13-G2
+- Frank Tanana (`tananfr01`) started R1-13-G3
 
 ### Relievers who have appeared
 
 - Troy Percival (`percitr01`), first seen in R1-13-G1
 - Bryan Harvey (`harvebr01`), first seen in R1-13-G1
 - Francisco Rodríguez (`rodrifr03`), first seen in R1-13-G2
+- Scot Shields (`shielsc01`), first seen in R1-13-G3
+- Darren Oliver (`oliveda02`), first seen in R1-13-G3
+- Scott Downs (`downssc01`), first seen in R1-13-G3
+- Mark Langston (`langsma01`), first seen in R1-13-G3
 
 ## 21. New York Mets (NYM)
 
