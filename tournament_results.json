@@ -1079,7 +1079,13 @@
    ],
    "status": "complete",
    "winner": "CLE",
-   "loser": "LAA"
+   "loser": "LAA",
+   "mvp": {
+    "team": "CLE",
+    "player_id": "speaktr01",
+    "name": "Tris Speaker",
+    "line": "11 for 25, 6 R, 2 2B, 1 HR, 4 RBI, .440"
+   }
   },
   {
    "id": "R1-14",
