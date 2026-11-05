@@ -41912,7 +41912,27 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 4,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 1,
+    "hr": 0,
+    "l": 0,
+    "outs": 3,
+    "r": 0,
+    "so": 2,
+    "sv": 1,
+    "w": 0
+   }
+  }
  },
  "CLE|averiea01": {
   "card_bat": {
@@ -42604,7 +42624,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 1,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|boudrlo01": {
   "card_bat": {
@@ -42947,7 +42991,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|claseem01": {
   "card_bat": null,
@@ -43616,7 +43684,27 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": {
+    "bb": 5,
+    "bf": 34,
+    "er": 2,
+    "g": 1,
+    "gs": 1,
+    "h": 4,
+    "hr": 0,
+    "l": 0,
+    "outs": 24,
+    "r": 2,
+    "so": 11,
+    "sv": 0,
+    "w": 1
+   }
+  }
  },
  "CLE|jacksjo01": {
   "card_bat": {
@@ -43962,7 +44050,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 2,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 1,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|jonesdo01": {
   "card_bat": null,
@@ -44628,7 +44740,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|loftoke01": {
   "card_bat": {
@@ -44971,7 +45107,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 2,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 1,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|martivi01": {
   "card_bat": {
@@ -45305,7 +45465,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 2,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|mcdowsa01": {
   "card_bat": null,
@@ -45858,7 +46042,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 2,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|ramirma02": {
   "card_bat": {
@@ -46204,7 +46412,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|santaca01": {
   "card_bat": {
@@ -46993,7 +47225,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 0,
+    "bb": 1,
+    "ci": 0,
+    "cs": 1,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|thomeji01": {
   "card_bat": {
@@ -47330,7 +47586,31 @@
    }
   ],
   "team": "CLE",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "CLE|turnete01": {
   "card_bat": {
@@ -82942,7 +83222,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|boonebo01": {
   "card_bat": {
@@ -83270,7 +83574,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 2,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|carewro01": {
   "card_bat": {
@@ -84656,7 +84984,27 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": {
+    "bb": 4,
+    "bf": 29,
+    "er": 0,
+    "g": 1,
+    "gs": 1,
+    "h": 5,
+    "hr": 0,
+    "l": 1,
+    "outs": 18,
+    "r": 3,
+    "so": 4,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "LAA|fregoji01": {
   "card_bat": {
@@ -85002,7 +85350,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 1,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 1,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|glaustr01": {
   "card_bat": {
@@ -85342,7 +85714,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 2,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|grichbo01": {
   "card_bat": {
@@ -85682,7 +86078,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|guerrvl01": {
   "card_bat": {
@@ -86022,7 +86442,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 3
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|harvebr01": {
   "card_bat": null,
@@ -86129,7 +86573,27 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 6,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 2,
+    "hr": 0,
+    "l": 0,
+    "outs": 3,
+    "r": 0,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "LAA|joynewa01": {
   "card_bat": {
@@ -86469,7 +86933,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|langsma01": {
   "card_bat": null,
@@ -86913,7 +87401,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 1,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|ohtansh01": {
   "card_bat": {
@@ -87265,7 +87777,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|oliveda02": {
   "card_bat": null,
@@ -87474,7 +88010,27 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 3,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 0,
+    "hr": 0,
+    "l": 0,
+    "outs": 3,
+    "r": 0,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "LAA|rodrifr03": {
   "card_bat": null,
@@ -88928,7 +89484,31 @@
    }
   ],
   "team": "LAA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 2,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 1,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-13-G1"
+   ],
+   "pitching": null
+  }
  },
  "LAA|weaveje02": {
   "card_bat": null,

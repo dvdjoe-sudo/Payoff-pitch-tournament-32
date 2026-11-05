@@ -20,6 +20,7 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Pedro Martinez (Boston Red Sox), R1-03-G1: 11 K in 9.0 IP.
 - Pedro Martinez (Boston Red Sox), R1-03-G6: 11 K in 8.0 IP.
 - Josh Hader (Milwaukee Brewers), R1-10-G5: 11 K in 5.2 IP.
+- Bob Feller (Cleveland Guardians), R1-13-G1: 11 K in 8.0 IP.
 - Ron Guidry (New York Yankees), R1-01-G4: 10 K in 8.0 IP.
 - Smoky Joe Wood (Boston Red Sox), R1-03-G4: 10 K in 6.2 IP.
 - Dizzy Dean (St. Louis Cardinals), R1-05-G2: 10 K in 6.0 IP.

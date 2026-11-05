@@ -28,14 +28,14 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 10 | LAD | Los Angeles Dodgers | Official roster, plus game appearances |
 | 11 | PHI | Philadelphia Phillies | Official roster, plus game appearances |
 | 12 | MIN | Minnesota Twins | Official roster, plus game appearances |
-| 13 | CLE | Cleveland Guardians | Official roster |
+| 13 | CLE | Cleveland Guardians | Official roster, plus game appearances |
 | 14 | CWS | Chicago White Sox | Official roster |
 | 15 | BAL | Baltimore Orioles | Official roster |
 | 16 | HOU | Houston Astros | Official roster |
 | 17 | PHA | Philadelphia Athletics | Official roster |
 | 18 | KC | Kansas City Royals | Official roster |
 | 19 | SEA | Seattle Mariners | Official roster |
-| 20 | LAA | Los Angeles Angels | Official roster |
+| 20 | LAA | Los Angeles Angels | Official roster, plus game appearances |
 | 21 | NYM | New York Mets | Official roster, plus game appearances |
 | 22 | OAK | Oakland Athletics | Official roster, plus game appearances |
 | 23 | MIL | Milwaukee Brewers | Official roster, plus game appearances |
@@ -1083,6 +1083,32 @@ These names are not on the active roster.
 
 - Herb Score (1955-1960)
 
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1
+- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1
+- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1
+- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1
+- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1
+- Slot 6: Albert Belle (`belleal01`) in R1-13-G1
+- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1
+- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1
+- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1
+
+### Substitutes who have batted
+
+- Tris Speaker (`speaktr01`), slot 4
+
+### Starts, in the order the games were played
+
+- Bob Feller (`fellebo01`) started R1-13-G1
+
+### Relievers who have appeared
+
+- Cody Allen (`allenco01`), first seen in R1-13-G1
+
 ## 14. Chicago White Sox (CWS)
 
 Bracket: winners. Series losses: 0. Full 26 Index: 764.1.
@@ -1456,6 +1482,33 @@ Rod Carew (`carewro01`) joins the Angels' bench in **slot 6**, as a left-handed 
 Doug Corbett (`corbedo01`) leaves the active bullpen, but his original converted pitcher card remains preserved in the historical catalog. The other six relievers retain their identities and responsibilities: Troy Percival (RP1), Francisco Rodríguez (RP2), Scot Shields (RP3), Bryan Harvey (RP4), Scott Downs (RP5), Darren Oliver (RP6). All nine starters and five rotation pitchers remain unchanged; **Shohei Ohtani is still the starting DH batting first**. The Angels' roster totals **9 lineup / 6 bench / 5 starting pitchers / 6 relievers**, exactly 26 different players.
 
 Existing original cards and played games, results, box scores, scoresheets, FAC and dice-roll logs are unchanged. Carew's authentic California Angels-only playable Hitter v0.5 conversion is **pending**; do not invent ratings or dice-chart results.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1
+- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1
+- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1
+- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1
+- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1
+- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1
+- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1
+- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1
+- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1
+
+### Substitutes who have batted
+
+- Mike Napoli (`napolmi01`), slot 9
+
+### Starts, in the order the games were played
+
+- Chuck Finley (`finlech01`) started R1-13-G1
+
+### Relievers who have appeared
+
+- Troy Percival (`percitr01`), first seen in R1-13-G1
+- Bryan Harvey (`harvebr01`), first seen in R1-13-G1
 
 ## 21. New York Mets (NYM)
 
