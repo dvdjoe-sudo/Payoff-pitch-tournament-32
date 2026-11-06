@@ -1119,7 +1119,13 @@
    ],
    "status": "complete",
    "winner": "CWS",
-   "loser": "SEA"
+   "loser": "SEA",
+   "mvp": {
+    "team": "CWS",
+    "player_id": "jacksjo01",
+    "name": "Joe Jackson",
+    "line": "7 for 16, 3 R, 4 2B, 6 RBI, .438"
+   }
   },
   {
    "id": "R1-15",
