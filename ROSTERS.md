@@ -1178,24 +1178,27 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 
 ### Lineup slots that have batted
 
-- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 1 later game)
-- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 1 later game)
+- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 2 later games)
+- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 2 later games)
 
 ### Starts, in the order the games were played
 
 - Ed Walsh (`walshed01`) started R1-14-G1
 - Red Faber (`faberre01`) started R1-14-G2
+- Chris Sale (`salech01`) started R1-14-G3
 
 ### Relievers who have appeared
 
 - Bobby Jenks (`jenksbo01`), first seen in R1-14-G1
+- Dámaso Marte (`marteda01`), first seen in R1-14-G3
+- Keith Foulke (`foulkke01`), first seen in R1-14-G3
 
 ## 15. Baltimore Orioles (BAL)
 
@@ -1469,20 +1472,25 @@ All previously created player cards and previously played games, scores, box sco
 
 ### Lineup slots that have batted
 
-- Slot 1: Ichiro Suzuki (`suzukic01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 2: Alex Rodriguez (`rodrial01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 3: Ken Griffey Jr. (`griffke02`) in R1-14-G1 (same starter in 1 later game)
-- Slot 4: Edgar Martínez (`martied01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 5: Raúl Ibañez (`ibanera01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 6: Cal Raleigh (`raleica01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 7: John Olerud (`olerujo01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 8: Bret Boone (`boonebr01`) in R1-14-G1 (same starter in 1 later game)
-- Slot 9: Kyle Seager (`seageky01`) in R1-14-G1 (same starter in 1 later game)
+- Slot 1: Ichiro Suzuki (`suzukic01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 2: Alex Rodriguez (`rodrial01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 3: Ken Griffey Jr. (`griffke02`) in R1-14-G1 (same starter in 2 later games)
+- Slot 4: Edgar Martínez (`martied01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 5: Raúl Ibañez (`ibanera01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 6: Cal Raleigh (`raleica01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 7: John Olerud (`olerujo01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 8: Bret Boone (`boonebr01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 9: Kyle Seager (`seageky01`) in R1-14-G1 (same starter in 2 later games)
+
+### Substitutes who have batted
+
+- Jay Buhner (`buhneja01`), slot 1
 
 ### Starts, in the order the games were played
 
 - Randy Johnson (`johnsra05`) started R1-14-G1
 - Félix Hernández (`hernafe02`) started R1-14-G2
+- Jamie Moyer (`moyerja01`) started R1-14-G3
 
 ### Relievers who have appeared
 
@@ -1490,6 +1498,8 @@ All previously created player cards and previously played games, scores, box sco
 - Arthur Rhodes (`rhodear01`), first seen in R1-14-G1
 - J.J. Putz (`putzjj01`), first seen in R1-14-G1
 - Jeff Nelson (`nelsoje01`), first seen in R1-14-G1
+- Kazuhiro Sasaki (`sasakka01`), first seen in R1-14-G3
+- Edwin Díaz (`diazed04`), first seen in R1-14-G3
 
 ## 20. Los Angeles Angels (LAA)
 
