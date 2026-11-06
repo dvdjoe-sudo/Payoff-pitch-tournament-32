@@ -63,7 +63,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jonathan Papelbon | Philadelphia Phillies | 17.0 | 2 | 4.0 | 5 | 2 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
+| Bobby Jenks | Chicago White Sox | 14.0 | 2 | 2.0 | 0 | 0 |
 | Mike Marshall | Los Angeles Dodgers | 14.0 | 2 | 2.0 | 0 | 0 |
 | Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
 | John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
-| Joe Nathan | Minnesota Twins | 12.6 | 1 | 3.0 | 4 | 0 |
