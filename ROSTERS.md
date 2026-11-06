@@ -29,12 +29,12 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 11 | PHI | Philadelphia Phillies | Official roster, plus game appearances |
 | 12 | MIN | Minnesota Twins | Official roster, plus game appearances |
 | 13 | CLE | Cleveland Guardians | Official roster, plus game appearances |
-| 14 | CWS | Chicago White Sox | Official roster |
+| 14 | CWS | Chicago White Sox | Official roster, plus game appearances |
 | 15 | BAL | Baltimore Orioles | Official roster |
 | 16 | HOU | Houston Astros | Official roster |
 | 17 | PHA | Philadelphia Athletics | Official roster |
 | 18 | KC | Kansas City Royals | Official roster |
-| 19 | SEA | Seattle Mariners | Official roster |
+| 19 | SEA | Seattle Mariners | Official roster, plus game appearances |
 | 20 | LAA | Los Angeles Angels | Official roster, plus game appearances |
 | 21 | NYM | New York Mets | Official roster, plus game appearances |
 | 22 | OAK | Oakland Athletics | Official roster, plus game appearances |
@@ -1174,6 +1174,28 @@ Dick Allen (`allendi01`) joins Chicago's active bench as BAT2 / RH 1B-DH #6. Bob
 
 Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaining their original specialist and long/swing responsibilities. This amendment is for future games only. All historical converted cards (including Locker), original FAC/dice rolls, box scores, recorded games, tournament results and earlier decisions remain untouched. Allen requires a genuine White Sox-franchise-only Hitter v0.5 playable conversion, which has not been invented.
 
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1
+- Slot 2: Eddie Collins (`collied01`) in R1-14-G1
+- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1
+- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1
+- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1
+- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1
+- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1
+- Slot 8: Luke Appling (`applilu01`) in R1-14-G1
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1
+
+### Starts, in the order the games were played
+
+- Ed Walsh (`walshed01`) started R1-14-G1
+
+### Relievers who have appeared
+
+- Bobby Jenks (`jenksbo01`), first seen in R1-14-G1
+
 ## 15. Baltimore Orioles (BAL)
 
 Bracket: winners. Series losses: 0. Full 26 Index: 758.4.
@@ -1441,6 +1463,31 @@ Adrián Beltré (`beltrad01`) joins the **Seattle Mariners** active 26 in sixth 
 Mike Moore (`mooremi01`) becomes inactive; his original converted card stays in the historical archive. The six remaining relievers retain their existing sequence and responsibilities, now assigned RP1–RP6: J.J. Putz, Andrés Muñoz, Edwin Díaz, Jeff Nelson, Arthur Rhodes and Kazuhiro Sasaki. The entire nine-man starting batting order and all five starting pitchers remain unchanged, including **Edgar Martínez batting fourth as DH**. Seattle's active split is **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 distinct players.
 
 All previously created player cards and previously played games, scores, box scores, original dice/FAC logs and results remain untouched. Beltré's authentic Seattle-only Hitter v0.5 playable card is pending conversion: no unverified percentile bands, defensive ratings or dice-chart numbers have been introduced.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Ichiro Suzuki (`suzukic01`) in R1-14-G1
+- Slot 2: Alex Rodriguez (`rodrial01`) in R1-14-G1
+- Slot 3: Ken Griffey Jr. (`griffke02`) in R1-14-G1
+- Slot 4: Edgar Martínez (`martied01`) in R1-14-G1
+- Slot 5: Raúl Ibañez (`ibanera01`) in R1-14-G1
+- Slot 6: Cal Raleigh (`raleica01`) in R1-14-G1
+- Slot 7: John Olerud (`olerujo01`) in R1-14-G1
+- Slot 8: Bret Boone (`boonebr01`) in R1-14-G1
+- Slot 9: Kyle Seager (`seageky01`) in R1-14-G1
+
+### Starts, in the order the games were played
+
+- Randy Johnson (`johnsra05`) started R1-14-G1
+
+### Relievers who have appeared
+
+- Andrés Muñoz (`munozan01`), first seen in R1-14-G1
+- Arthur Rhodes (`rhodear01`), first seen in R1-14-G1
+- J.J. Putz (`putzjj01`), first seen in R1-14-G1
+- Jeff Nelson (`nelsoje01`), first seen in R1-14-G1
 
 ## 20. Los Angeles Angels (LAA)
 

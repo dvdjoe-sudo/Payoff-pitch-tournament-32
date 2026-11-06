@@ -56964,7 +56964,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 2,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|buehrma01": {
   "card_bat": null,
@@ -57520,7 +57544,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|davisge01": {
   "card_bat": {
@@ -58316,7 +58364,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|foulkke01": {
   "card_bat": null,
@@ -59115,7 +59187,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|jenksbo01": {
   "card_bat": null,
@@ -59219,7 +59315,27 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 4,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 1,
+    "hr": 0,
+    "l": 0,
+    "outs": 3,
+    "r": 0,
+    "so": 0,
+    "sv": 1,
+    "w": 0
+   }
+  }
  },
  "CWS|jonesfi01": {
   "card_bat": {
@@ -59556,7 +59672,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 3,
+    "hbp": 0,
+    "hr": 1,
+    "r": 1,
+    "rbi": 3,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|konerpa01": {
   "card_bat": {
@@ -60942,7 +61082,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 2,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 1,
+    "hr": 0,
+    "r": 0,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 1,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|ordonma01": {
   "card_bat": {
@@ -61288,7 +61452,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|salech01": {
   "card_bat": null,
@@ -62175,7 +62363,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|venturo01": {
   "card_bat": {
@@ -62515,7 +62727,31 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 0,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "CWS|walshed01": {
   "card_bat": null,
@@ -62621,7 +62857,27 @@
    }
   ],
   "team": "CWS",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 35,
+    "er": 5,
+    "g": 1,
+    "gs": 1,
+    "h": 10,
+    "hr": 1,
+    "l": 0,
+    "outs": 24,
+    "r": 5,
+    "so": 5,
+    "sv": 0,
+    "w": 1
+   }
+  }
  },
  "CWS|wilheho01": {
   "card_bat": null,
@@ -175652,7 +175908,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|buhneja01": {
   "card_bat": {
@@ -176887,7 +177167,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|hernafe02": {
   "card_bat": null,
@@ -177340,7 +177644,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 2
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|johnsra05": {
   "card_bat": null,
@@ -177447,7 +177775,27 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": {
+    "bb": 3,
+    "bf": 29,
+    "er": 2,
+    "g": 1,
+    "gs": 1,
+    "h": 5,
+    "hr": 0,
+    "l": 0,
+    "outs": 20,
+    "r": 2,
+    "so": 6,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "SEA|langsma01": {
   "card_bat": null,
@@ -177888,7 +178236,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 3,
+    "bb": 1,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|mooremi01": {
   "card_bat": null,
@@ -178246,7 +178618,27 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 2,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 0,
+    "hr": 0,
+    "l": 0,
+    "outs": 1,
+    "r": 0,
+    "so": 1,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "SEA|nelsoje01": {
   "card_bat": null,
@@ -178353,7 +178745,27 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 1,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 0,
+    "hr": 0,
+    "l": 0,
+    "outs": 1,
+    "r": 0,
+    "so": 0,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "SEA|olerujo01": {
   "card_bat": {
@@ -178681,7 +179093,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 1,
+    "r": 1,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|putzjj01": {
   "card_bat": null,
@@ -178788,7 +179224,27 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": {
+    "bb": 1,
+    "bf": 4,
+    "er": 4,
+    "g": 1,
+    "gs": 0,
+    "h": 3,
+    "hr": 1,
+    "l": 1,
+    "outs": 0,
+    "r": 4,
+    "so": 0,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "SEA|raleica01": {
   "card_bat": {
@@ -179122,7 +179578,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 1,
+    "g": 1,
+    "gidp": 0,
+    "h": 3,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 1,
+    "sac": 0,
+    "sb": 1,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|reynoha01": {
   "card_bat": {
@@ -179569,7 +180049,27 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": null,
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": {
+    "bb": 0,
+    "bf": 2,
+    "er": 0,
+    "g": 1,
+    "gs": 0,
+    "h": 0,
+    "hr": 0,
+    "l": 0,
+    "outs": 2,
+    "r": 0,
+    "so": 0,
+    "sv": 0,
+    "w": 0
+   }
+  }
  },
  "SEA|rodrial01": {
   "card_bat": {
@@ -179915,7 +180415,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 0
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|rodriju01": {
   "card_bat": {
@@ -180712,7 +181236,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 0,
+    "3b": 0,
+    "ab": 4,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 0,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|suzukic01": {
   "card_bat": {
@@ -181055,7 +181603,31 @@
    }
   ],
   "team": "SEA",
-  "tournament": null
+  "tournament": {
+   "batting": {
+    "2b": 1,
+    "3b": 0,
+    "ab": 5,
+    "bb": 0,
+    "ci": 0,
+    "cs": 0,
+    "g": 1,
+    "gidp": 0,
+    "h": 1,
+    "hbp": 0,
+    "hr": 0,
+    "r": 1,
+    "rbi": 0,
+    "sac": 0,
+    "sb": 0,
+    "sf": 0,
+    "so": 1
+   },
+   "games": [
+    "R1-14-G1"
+   ],
+   "pitching": null
+  }
  },
  "SEA|wilsoda01": {
   "card_bat": {
