@@ -1178,21 +1178,22 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 
 ### Lineup slots that have batted
 
-- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 2 later games)
-- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 3 later games)
+- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 3 later games)
 
 ### Starts, in the order the games were played
 
 - Ed Walsh (`walshed01`) started R1-14-G1
 - Red Faber (`faberre01`) started R1-14-G2
 - Chris Sale (`salech01`) started R1-14-G3
+- Mark Buehrle (`buehrma01`) started R1-14-G4
 
 ### Relievers who have appeared
 
@@ -1416,7 +1417,7 @@ These approvals are prospective only. All genuine original card bodies, includin
 
 ## 19. Seattle Mariners (SEA)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 606.1.
+Bracket: losers. Series losses: 1. Full 26 Index: 606.1.
 
 Manager: Lou Piniella.
 
@@ -1472,15 +1473,15 @@ All previously created player cards and previously played games, scores, box sco
 
 ### Lineup slots that have batted
 
-- Slot 1: Ichiro Suzuki (`suzukic01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 2: Alex Rodriguez (`rodrial01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 3: Ken Griffey Jr. (`griffke02`) in R1-14-G1 (same starter in 2 later games)
-- Slot 4: Edgar Martínez (`martied01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 5: Raúl Ibañez (`ibanera01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 6: Cal Raleigh (`raleica01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 7: John Olerud (`olerujo01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 8: Bret Boone (`boonebr01`) in R1-14-G1 (same starter in 2 later games)
-- Slot 9: Kyle Seager (`seageky01`) in R1-14-G1 (same starter in 2 later games)
+- Slot 1: Ichiro Suzuki (`suzukic01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 2: Alex Rodriguez (`rodrial01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 3: Ken Griffey Jr. (`griffke02`) in R1-14-G1 (same starter in 3 later games)
+- Slot 4: Edgar Martínez (`martied01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 5: Raúl Ibañez (`ibanera01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 6: Cal Raleigh (`raleica01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 7: John Olerud (`olerujo01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 8: Bret Boone (`boonebr01`) in R1-14-G1 (same starter in 3 later games)
+- Slot 9: Kyle Seager (`seageky01`) in R1-14-G1 (same starter in 3 later games)
 
 ### Substitutes who have batted
 
@@ -1491,6 +1492,7 @@ All previously created player cards and previously played games, scores, box sco
 - Randy Johnson (`johnsra05`) started R1-14-G1
 - Félix Hernández (`hernafe02`) started R1-14-G2
 - Jamie Moyer (`moyerja01`) started R1-14-G3
+- Mark Langston (`langsma01`) started R1-14-G4
 
 ### Relievers who have appeared
 
