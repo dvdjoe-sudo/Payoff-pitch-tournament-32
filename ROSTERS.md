@@ -31,8 +31,8 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 13 | CLE | Cleveland Guardians | Official roster, plus game appearances |
 | 14 | CWS | Chicago White Sox | Official roster, plus game appearances |
 | 15 | BAL | Baltimore Orioles | Official roster, plus game appearances |
-| 16 | HOU | Houston Astros | Official roster |
-| 17 | PHA | Philadelphia Athletics | Official roster |
+| 16 | HOU | Houston Astros | Official roster, plus game appearances |
+| 17 | PHA | Philadelphia Athletics | Official roster, plus game appearances |
 | 18 | KC | Kansas City Royals | Official roster, plus game appearances |
 | 19 | SEA | Seattle Mariners | Official roster, plus game appearances |
 | 20 | LAA | Los Angeles Angels | Official roster, plus game appearances |
@@ -1342,6 +1342,33 @@ Moisés Alou (`aloumo01`) becomes Houston bench hitter #6 (right-handed corner o
 
 Joe Sambito moves to bullpen spot 5 and Dave Smith to spot 6, retaining their left-handed and late relief roles. All previously converted cards (including Dotel and Alou's separate Montreal record), old games, scores, original dice/FAC logs, box scores and prior tournament results remain untouched. Houston Alou's genuine frozen Hitter v0.5 playable card requires its own Astros-only conversion; no guessed card values are supplied.
 
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Craig Biggio (`biggicr01`) in R1-16-G1
+- Slot 2: Yordan Alvarez (`alvaryo01`) in R1-16-G1
+- Slot 3: Jeff Bagwell (`bagweje01`) in R1-16-G1
+- Slot 4: José Altuve (`altuvjo01`) in R1-16-G1
+- Slot 5: Lance Berkman (`berkmla01`) in R1-16-G1
+- Slot 6: Alex Bregman (`bregmal01`) in R1-16-G1
+- Slot 7: Carlos Correa (`correca01`) in R1-16-G1
+- Slot 8: José Cruz (`cruzjo01`) in R1-16-G1
+- Slot 9: César Cedeño (`cedence01`) in R1-16-G1
+
+### Starts, in the order the games were played
+
+- Justin Verlander (`verlaju01`) started R1-16-G1
+
+### Relievers who have appeared
+
+- Josh Hader (`haderjo01`), first seen in R1-16-G1
+- Brad Lidge (`lidgebr01`), first seen in R1-16-G1
+- Joe Sambito (`sambijo01`), first seen in R1-16-G1
+- Ryan Pressly (`pressry01`), first seen in R1-16-G1
+- Nolan Ryan (`ryanno01`), first seen in R1-16-G1
+- Billy Wagner (`wagnebi02`), first seen in R1-16-G1
+
 ## 17. Philadelphia Athletics (PHA)
 
 Bracket: winners. Series losses: 0. Full 26 Index: 699.2.
@@ -1397,6 +1424,24 @@ Jimmie Foxx (`foxxji01`) is now the **designated hitter**, and Ferris Fain (`fai
 Bobby Shantz (`shantbo01`), a left-handed pitcher, joins the active bullpen as sixth arm in the **long/swing relief role**, replacing reserve shortstop Jack Barry (`barryja01`). **Only Shantz's Philadelphia Athletics seasons 1949–1954 count; no Kansas City or New York years qualify.** Max Bishop shifts to reserve slot 5 and Elmer Valo to slot 6. The active count is now **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 unique players.
 
 Barry's original converted card stays in the historical card catalog, and the original card bodies, scores, finished games, box scores, dice/FAC logs and tournament results are preserved unchanged. Shantz's genuine **Pitcher v0.2.3** playable conversion is pending; he may not be used in a game until the frozen-engine card is available. Because his Philadelphia peak includes substantial starting work, the display-only Peak 162 numbers are not a relief-only projection and must not be treated as an invented relief card.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Eddie Collins (`collied01`) in R1-16-G1
+- Slot 2: Mickey Cochrane (`cochrmi01`) in R1-16-G1
+- Slot 3: Al Simmons (`simmoal01`) in R1-16-G1
+- Slot 4: Jimmie Foxx (`foxxji01`) in R1-16-G1
+- Slot 5: Bob Johnson (`johnsbo01`) in R1-16-G1
+- Slot 6: Home Run Baker (`bakerfr01`) in R1-16-G1
+- Slot 7: Wally Moses (`moseswa01`) in R1-16-G1
+- Slot 8: Eddie Joost (`joosted01`) in R1-16-G1
+- Slot 9: Ferris Fain (`fainfe01`) in R1-16-G1
+
+### Starts, in the order the games were played
+
+- Lefty Grove (`grovele01`) started R1-16-G1
 
 ## 18. Kansas City Royals (KC)
 
