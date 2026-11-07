@@ -59176,10 +59176,144 @@
      "entry_inning": 1
     }
    ],
-   "errors_by": [],
+   "errors_by": [
+    {
+     "team": "MIA",
+     "player_id": "cabremi01",
+     "name": "Miguel Cabrera",
+     "errors": 1
+    },
+    {
+     "team": "PHI",
+     "player_id": "rolliji01",
+     "name": "Jimmy Rollins",
+     "errors": 1
+    }
+   ],
    "team_errors": {
     "MIA": 1,
     "PHI": 1
+   },
+   "defense": {
+    "MIA": {
+     "players": {
+      "cabremi01": {
+       "name": "Miguel Cabrera",
+       "po": 0,
+       "a": 1,
+       "e": 1
+      },
+      "coninje01": {
+       "name": "Jeff Conine",
+       "po": 7,
+       "a": 0,
+       "e": 0
+      },
+      "ramirha01": {
+       "name": "Hanley Ramirez",
+       "po": 1,
+       "a": 4,
+       "e": 0
+      },
+      "realmjt01": {
+       "name": "J.T. Realmuto",
+       "po": 12,
+       "a": 0,
+       "e": 0
+      },
+      "yelicch01": {
+       "name": "Christian Yelich",
+       "po": 1,
+       "a": 0,
+       "e": 0
+      },
+      "castilu01": {
+       "name": "Luis Castillo",
+       "po": 1,
+       "a": 2,
+       "e": 0
+      },
+      "stantmi03": {
+       "name": "Giancarlo Stanton",
+       "po": 2,
+       "a": 0,
+       "e": 0
+      },
+      "floydcl01": {
+       "name": "Cliff Floyd",
+       "po": 2,
+       "a": 0,
+       "e": 0
+      }
+     },
+     "wp": {
+      "johnsjo09": 0,
+      "scottta01": 0,
+      "ramosaj01": 0,
+      "nenro01": 0
+     },
+     "pb": {
+      "realmjt01": 0
+     }
+    },
+    "PHI": {
+     "players": {
+      "kleinch01": {
+       "name": "Chuck Klein",
+       "po": 1,
+       "a": 0,
+       "e": 0
+      },
+      "utleych01": {
+       "name": "Chase Utley",
+       "po": 3,
+       "a": 2,
+       "e": 0
+      },
+      "harpebr03": {
+       "name": "Bryce Harper",
+       "po": 12,
+       "a": 1,
+       "e": 0
+      },
+      "schmimi01": {
+       "name": "Mike Schmidt",
+       "po": 1,
+       "a": 4,
+       "e": 0
+      },
+      "ruizca01": {
+       "name": "Carlos Ruiz",
+       "po": 8,
+       "a": 0,
+       "e": 0
+      },
+      "rolliji01": {
+       "name": "Jimmy Rollins",
+       "po": 1,
+       "a": 5,
+       "e": 1
+      },
+      "carltst01": {
+       "name": "Steve Carlton",
+       "po": 0,
+       "a": 1,
+       "e": 0
+      },
+      "callijo01": {
+       "name": "Johnny Callison",
+       "po": 1,
+       "a": 0,
+       "e": 0
+      }
+     },
+     "wp": {
+      "carltst01": 0
+     },
+     "pb": {
+      "ruizca01": 0
+     }
+    }
    },
    "final_grades": {},
    "fatigue_end_states": {},
@@ -59832,10 +59966,152 @@
      "entry_inning": null
     }
    ],
-   "errors_by": [],
+   "errors_by": [
+    {
+     "team": "MIA",
+     "player_id": "cabremi01",
+     "name": "Miguel Cabrera",
+     "errors": 1
+    },
+    {
+     "team": "PHI",
+     "player_id": "rolliji01",
+     "name": "Jimmy Rollins",
+     "errors": 1
+    }
+   ],
    "team_errors": {
     "MIA": 1,
     "PHI": 1
+   },
+   "defense": {
+    "MIA": {
+     "players": {
+      "coninje01": {
+       "name": "Jeff Conine",
+       "po": 12,
+       "a": 0,
+       "e": 0
+      },
+      "realmjt01": {
+       "name": "J.T. Realmuto",
+       "po": 5,
+       "a": 0,
+       "e": 0
+      },
+      "cabremi01": {
+       "name": "Miguel Cabrera",
+       "po": 0,
+       "a": 5,
+       "e": 1
+      },
+      "stantmi03": {
+       "name": "Giancarlo Stanton",
+       "po": 2,
+       "a": 0,
+       "e": 0
+      },
+      "castilu01": {
+       "name": "Luis Castillo",
+       "po": 3,
+       "a": 4,
+       "e": 0
+      },
+      "yelicch01": {
+       "name": "Christian Yelich",
+       "po": 3,
+       "a": 0,
+       "e": 0
+      },
+      "ramirha01": {
+       "name": "Hanley Ramirez",
+       "po": 1,
+       "a": 4,
+       "e": 0
+      },
+      "floydcl01": {
+       "name": "Cliff Floyd",
+       "po": 1,
+       "a": 0,
+       "e": 0
+      }
+     },
+     "wp": {
+      "alcansa01": 0,
+      "scottta01": 0,
+      "ramosaj01": 0,
+      "nenro01": 0
+     },
+     "pb": {
+      "realmjt01": 0
+     }
+    },
+    "PHI": {
+     "players": {
+      "ruizca01": {
+       "name": "Carlos Ruiz",
+       "po": 8,
+       "a": 1,
+       "e": 0
+      },
+      "rolliji01": {
+       "name": "Jimmy Rollins",
+       "po": 2,
+       "a": 4,
+       "e": 1
+      },
+      "harpebr03": {
+       "name": "Bryce Harper",
+       "po": 12,
+       "a": 0,
+       "e": 0
+      },
+      "utleych01": {
+       "name": "Chase Utley",
+       "po": 0,
+       "a": 2,
+       "e": 0
+      },
+      "schmimi01": {
+       "name": "Mike Schmidt",
+       "po": 0,
+       "a": 2,
+       "e": 0
+      },
+      "roberro01": {
+       "name": "Robin Roberts",
+       "po": 0,
+       "a": 1,
+       "e": 0
+      },
+      "abreubo01": {
+       "name": "Bobby Abreu",
+       "po": 2,
+       "a": 0,
+       "e": 0
+      },
+      "kleinch01": {
+       "name": "Chuck Klein",
+       "po": 1,
+       "a": 0,
+       "e": 0
+      },
+      "callijo01": {
+       "name": "Johnny Callison",
+       "po": 2,
+       "a": 0,
+       "e": 0
+      }
+     },
+     "wp": {
+      "roberro01": 0,
+      "papeljo01": 0,
+      "lidgebr01": 0
+     },
+     "pb": {
+      "ruizca01": 0
+     }
+    }
    },
    "final_grades": {},
    "fatigue_end_states": {},
