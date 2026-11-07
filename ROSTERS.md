@@ -1257,15 +1257,15 @@ The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu 
 
 ### Lineup slots that have batted
 
-- Slot 1: Bobby Grich (`grichbo01`) in R1-15-G1
-- Slot 2: Brady Anderson (`anderbr01`) in R1-15-G1
-- Slot 3: Frank Robinson (`robinfr02`) in R1-15-G1
-- Slot 4: Eddie Murray (`murraed02`) in R1-15-G1
-- Slot 5: Boog Powell (`powelbo01`) in R1-15-G1
-- Slot 6: Cal Ripken Jr. (`ripkeca01`) in R1-15-G1
-- Slot 7: Brooks Robinson (`robinbr01`) in R1-15-G1
-- Slot 8: Rick Dempsey (`dempsri01`) in R1-15-G1
-- Slot 9: Paul Blair (`blairpa01`) in R1-15-G1
+- Slot 1: Bobby Grich (`grichbo01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 2: Brady Anderson (`anderbr01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 3: Frank Robinson (`robinfr02`) in R1-15-G1 (same starter in 1 later game)
+- Slot 4: Eddie Murray (`murraed02`) in R1-15-G1 (same starter in 1 later game)
+- Slot 5: Boog Powell (`powelbo01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 6: Cal Ripken Jr. (`ripkeca01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 7: Brooks Robinson (`robinbr01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 8: Rick Dempsey (`dempsri01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 9: Paul Blair (`blairpa01`) in R1-15-G1 (same starter in 1 later game)
 
 ### Substitutes who have batted
 
@@ -1274,6 +1274,12 @@ The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu 
 ### Starts, in the order the games were played
 
 - Jim Palmer (`palmeji01`) started R1-15-G1
+- Mike Mussina (`mussimi01`) started R1-15-G2
+
+### Relievers who have appeared
+
+- Dick Hall (`halldi01`), first seen in R1-15-G2
+- Félix Bautista (`bautife01`), first seen in R1-15-G2
 
 ## 16. Houston Astros (HOU)
 
@@ -1441,24 +1447,26 @@ These approvals are prospective only. All genuine original card bodies, includin
 
 ### Lineup slots that have batted
 
-- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1
-- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1
-- Slot 3: George Brett (`brettge01`) in R1-15-G1
-- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1
-- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1
-- Slot 6: Amos Otis (`otisam01`) in R1-15-G1
-- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1
-- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1
-- Slot 9: Frank White (`whitefr01`) in R1-15-G1
+- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1 (same starter in 1 later game)
+- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 3: George Brett (`brettge01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1 (same starter in 1 later game)
+- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 6: Amos Otis (`otisam01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1 (same starter in 1 later game)
+- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1 (same starter in 1 later game)
+- Slot 9: Frank White (`whitefr01`) in R1-15-G1 (same starter in 1 later game)
 
 ### Substitutes who have batted
 
 - John Mayberry (`maybejo01`), slot 5
 - Darrell Porter (`porteda02`), slot 8
+- Hal McRae (`mcraeha01`), slot 7
 
 ### Starts, in the order the games were played
 
 - Kevin Appier (`appieke01`) started R1-15-G1
+- Bret Saberhagen (`saberbr01`) started R1-15-G2
 
 ### Relievers who have appeared
 
