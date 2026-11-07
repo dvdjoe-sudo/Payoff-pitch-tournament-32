@@ -1160,7 +1160,13 @@
    ],
    "status": "complete",
    "winner": "KC",
-   "loser": "BAL"
+   "loser": "BAL",
+   "mvp": {
+    "team": "KC",
+    "player_id": "brettge01",
+    "name": "George Brett",
+    "line": "8 for 19, 5 R, 1 2B, 1 HR, 4 RBI, .421"
+   }
   },
   {
    "id": "R1-16",
