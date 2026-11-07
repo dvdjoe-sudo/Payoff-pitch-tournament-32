@@ -12,7 +12,8 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Shohei Ohtani | Los Angeles Angels | 35.0 | 18 | 9 | 5 | 3 |
-| Chuck Klein | Philadelphia Phillies | 33.0 | 20 | 5 | 5 | 3 |
+| Jimmy Rollins | Philadelphia Phillies | 34.5 | 19 | 7 | 7 | 2 |
+| Chuck Klein | Philadelphia Phillies | 33.5 | 20 | 5 | 5 | 3 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 | Honus Wagner | Pittsburgh Pirates | 31.5 | 18 | 7 | 6 | 0 |
@@ -22,7 +23,6 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Juan Gonzalez | Texas Rangers | 30.5 | 19 | 5 | 8 | 1 |
 | Mark McGwire | Oakland Athletics | 30.5 | 17 | 3 | 10 | 3 |
 | Frank Robinson | Cincinnati Reds | 30.0 | 19 | 5 | 6 | 3 |
-| Mickey Cochrane | Philadelphia Athletics | 30.0 | 17 | 8 | 3 | 2 |
 
 ## Cy Young
 
@@ -31,6 +31,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
+| Steve Carlton | Philadelphia Phillies | 25.2 | 24.1 | 2 | 20 | 9 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
 | Gaylord Perry | Texas Rangers | 14.4 | 8.0 | 1 | 5 | 0 |
-| Bob Gibson | St. Louis Cardinals | 14.0 | 9.0 | 1 | 9 | 2 |
 
 ## Reliever
 

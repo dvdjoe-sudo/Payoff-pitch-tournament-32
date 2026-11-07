@@ -4,6 +4,10 @@
  "model": "monte-carlo",
  "scale": 80.0,
  "series": {
+  "L1-01": {
+   "MIA": 0.0,
+   "PHI": 1.0
+  },
   "R1-01": {
    "MIA": 0.0,
    "NYY": 1.0
