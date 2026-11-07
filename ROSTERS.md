@@ -1346,15 +1346,15 @@ Joe Sambito moves to bullpen spot 5 and Dave Smith to spot 6, retaining their le
 
 ### Lineup slots that have batted
 
-- Slot 1: Craig Biggio (`biggicr01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 2: Yordan Alvarez (`alvaryo01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 3: Jeff Bagwell (`bagweje01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 4: José Altuve (`altuvjo01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 5: Lance Berkman (`berkmla01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 6: Alex Bregman (`bregmal01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 7: Carlos Correa (`correca01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 8: José Cruz (`cruzjo01`) in R1-16-G1; José Cruz (`cruzjo01`) in R1-16-G2; José Cruz (`cruzjo01`) in R1-16-G3; Moisés Alou (`aloumo01`) in R1-16-G4
-- Slot 9: César Cedeño (`cedence01`) in R1-16-G1 (same starter in 3 later games)
+- Slot 1: Craig Biggio (`biggicr01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 2: Yordan Alvarez (`alvaryo01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 3: Jeff Bagwell (`bagweje01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 4: José Altuve (`altuvjo01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 5: Lance Berkman (`berkmla01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 6: Alex Bregman (`bregmal01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 7: Carlos Correa (`correca01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 8: José Cruz (`cruzjo01`) in R1-16-G1; José Cruz (`cruzjo01`) in R1-16-G2; José Cruz (`cruzjo01`) in R1-16-G3; Moisés Alou (`aloumo01`) in R1-16-G4; Moisés Alou (`aloumo01`) in R1-16-G5
+- Slot 9: César Cedeño (`cedence01`) in R1-16-G1 (same starter in 4 later games)
 
 ### Starts, in the order the games were played
 
@@ -1362,6 +1362,7 @@ Joe Sambito moves to bullpen spot 5 and Dave Smith to spot 6, retaining their le
 - Roy Oswalt (`oswalro01`) started R1-16-G2
 - Mike Scott (`scottmi03`) started R1-16-G3
 - Nolan Ryan (`ryanno01`) started R1-16-G4
+- J.R. Richard (`richajr01`) started R1-16-G5
 
 ### Relievers who have appeared
 
@@ -1376,7 +1377,7 @@ Joe Sambito moves to bullpen spot 5 and Dave Smith to spot 6, retaining their le
 
 ## 17. Philadelphia Athletics (PHA)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 699.2.
+Bracket: losers. Series losses: 1. Full 26 Index: 699.2.
 
 The Full 26 Index stored for this club is a calibrated estimate. See TOURNAMENT_SEEDS.md.
 
@@ -1434,15 +1435,15 @@ Barry's original converted card stays in the historical card catalog, and the or
 
 ### Lineup slots that have batted
 
-- Slot 1: Eddie Collins (`collied01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 2: Mickey Cochrane (`cochrmi01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 3: Al Simmons (`simmoal01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 4: Jimmie Foxx (`foxxji01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 5: Bob Johnson (`johnsbo01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 6: Home Run Baker (`bakerfr01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 7: Wally Moses (`moseswa01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 8: Eddie Joost (`joosted01`) in R1-16-G1 (same starter in 3 later games)
-- Slot 9: Ferris Fain (`fainfe01`) in R1-16-G1; Ferris Fain (`fainfe01`) in R1-16-G2; Ferris Fain (`fainfe01`) in R1-16-G3; Amos Strunk (`strunam01`) in R1-16-G4
+- Slot 1: Eddie Collins (`collied01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 2: Mickey Cochrane (`cochrmi01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 3: Al Simmons (`simmoal01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 4: Jimmie Foxx (`foxxji01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 5: Bob Johnson (`johnsbo01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 6: Home Run Baker (`bakerfr01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 7: Wally Moses (`moseswa01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 8: Eddie Joost (`joosted01`) in R1-16-G1 (same starter in 4 later games)
+- Slot 9: Ferris Fain (`fainfe01`) in R1-16-G1; Ferris Fain (`fainfe01`) in R1-16-G2; Ferris Fain (`fainfe01`) in R1-16-G3; Amos Strunk (`strunam01`) in R1-16-G4; Amos Strunk (`strunam01`) in R1-16-G5
 
 ### Starts, in the order the games were played
 
@@ -1450,11 +1451,13 @@ Barry's original converted card stays in the historical card catalog, and the or
 - Eddie Plank (`planked01`) started R1-16-G2
 - Rube Waddell (`wadderu01`) started R1-16-G3
 - Chief Bender (`bendech01`) started R1-16-G4
+- Jack Coombs (`coombja01`) started R1-16-G5
 
 ### Relievers who have appeared
 
 - Joe Berry (`berryjo03`), first seen in R1-16-G2
 - Rube Walberg (`walberu01`), first seen in R1-16-G4
+- Bobby Shantz (`shantbo01`), first seen in R1-16-G5
 
 ## 18. Kansas City Royals (KC)
 

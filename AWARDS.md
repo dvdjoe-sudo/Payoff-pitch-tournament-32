@@ -22,7 +22,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Juan Gonzalez | Texas Rangers | 30.5 | 19 | 5 | 8 | 1 |
 | Mark McGwire | Oakland Athletics | 30.5 | 17 | 3 | 10 | 3 |
 | Frank Robinson | Cincinnati Reds | 30.0 | 19 | 5 | 6 | 3 |
-| Ron Santo | Chicago Cubs | 29.5 | 20 | 4 | 5 | 3 |
+| Mickey Cochrane | Philadelphia Athletics | 30.0 | 17 | 8 | 3 | 2 |
 
 ## Cy Young
 
