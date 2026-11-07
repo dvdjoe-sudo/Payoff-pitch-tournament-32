@@ -1201,7 +1201,13 @@
    ],
    "status": "complete",
    "winner": "HOU",
-   "loser": "PHA"
+   "loser": "PHA",
+   "mvp": {
+    "team": "HOU",
+    "player_id": "alvaryo01",
+    "name": "Yordan Alvarez",
+    "line": "6 for 22, 5 R, 1 2B, 3 HR, 6 RBI, .273"
+   }
   },
   {
    "id": "L1-01",
