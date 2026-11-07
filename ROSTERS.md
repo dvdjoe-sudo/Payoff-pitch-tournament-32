@@ -30,10 +30,10 @@ Reynolds (Yankees) and Burnett (Marlins) are bullpen arms in the swing and long 
 | 12 | MIN | Minnesota Twins | Official roster, plus game appearances |
 | 13 | CLE | Cleveland Guardians | Official roster, plus game appearances |
 | 14 | CWS | Chicago White Sox | Official roster, plus game appearances |
-| 15 | BAL | Baltimore Orioles | Official roster |
+| 15 | BAL | Baltimore Orioles | Official roster, plus game appearances |
 | 16 | HOU | Houston Astros | Official roster |
 | 17 | PHA | Philadelphia Athletics | Official roster |
-| 18 | KC | Kansas City Royals | Official roster |
+| 18 | KC | Kansas City Royals | Official roster, plus game appearances |
 | 19 | SEA | Seattle Mariners | Official roster, plus game appearances |
 | 20 | LAA | Los Angeles Angels | Official roster, plus game appearances |
 | 21 | NYM | New York Mets | Official roster, plus game appearances |
@@ -1253,6 +1253,28 @@ George Sisler (`sislege01`) joins Baltimore franchise bench #6 (LH first baseman
 
 The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu Miller, Dick Hall and Tippy Martinez. Their roles and slots do not change. The original Sammy Stewart converted pitcher card, archived cards for all players, previous games, scores, dice/FAC records and box scores remain historical and unchanged. Sisler's genuine frozen Hitter v0.5 playable conversion remains pending; no dice-chart ratings are invented.
 
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Bobby Grich (`grichbo01`) in R1-15-G1
+- Slot 2: Brady Anderson (`anderbr01`) in R1-15-G1
+- Slot 3: Frank Robinson (`robinfr02`) in R1-15-G1
+- Slot 4: Eddie Murray (`murraed02`) in R1-15-G1
+- Slot 5: Boog Powell (`powelbo01`) in R1-15-G1
+- Slot 6: Cal Ripken Jr. (`ripkeca01`) in R1-15-G1
+- Slot 7: Brooks Robinson (`robinbr01`) in R1-15-G1
+- Slot 8: Rick Dempsey (`dempsri01`) in R1-15-G1
+- Slot 9: Paul Blair (`blairpa01`) in R1-15-G1
+
+### Substitutes who have batted
+
+- George Sisler (`sislege01`), slot 4
+
+### Starts, in the order the games were played
+
+- Jim Palmer (`palmeji01`) started R1-15-G1
+
 ## 16. Houston Astros (HOU)
 
 Bracket: winners. Series losses: 0. Full 26 Index: 668.5.
@@ -1414,6 +1436,37 @@ Danny Tartabull (`tartada01`) becomes the **starting designated hitter batting s
 John Mayberry (`maybejo01`) joins Kansas City's bench as sixth reserve (left-handed 1B / pinch hitter), and Charlie Leibrandt (`leibrch01`) moves off the active bullpen. Mayberry's conversion and franchise peak use **only Kansas City Royals seasons 1972–1977**, excluding the rest of his career. The Royals now have **9 lineup / 6 bench / 5 rotation / 6 bullpen**, 26 unique players; Steve Mingori remains the left-handed relief specialist at RP6.
 
 These approvals are prospective only. All genuine original card bodies, including Leibrandt's existing converted pitching card and the original McRae/Tartabull cards, remain historical and unaltered. Every completed tournament game, result, box score and FAC/dice log remains unchanged. Mayberry's authentic frozen Hitter v0.5 playable conversion is pending; no guessed percentile bands, ratings or dice charts have been created.
+
+### Players in the results file
+
+### Lineup slots that have batted
+
+- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1
+- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1
+- Slot 3: George Brett (`brettge01`) in R1-15-G1
+- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1
+- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1
+- Slot 6: Amos Otis (`otisam01`) in R1-15-G1
+- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1
+- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1
+- Slot 9: Frank White (`whitefr01`) in R1-15-G1
+
+### Substitutes who have batted
+
+- John Mayberry (`maybejo01`), slot 5
+- Darrell Porter (`porteda02`), slot 8
+
+### Starts, in the order the games were played
+
+- Kevin Appier (`appieke01`) started R1-15-G1
+
+### Relievers who have appeared
+
+- Joakim Soria (`soriajo01`), first seen in R1-15-G1
+- Kelvin Herrera (`herreke01`), first seen in R1-15-G1
+- Greg Holland (`hollagr01`), first seen in R1-15-G1
+- Steve Mingori (`mingost01`), first seen in R1-15-G1
+- Dan Quisenberry (`quiseda01`), first seen in R1-15-G1
 
 ## 19. Seattle Mariners (SEA)
 
