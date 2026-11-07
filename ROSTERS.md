@@ -1203,7 +1203,7 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 
 ## 15. Baltimore Orioles (BAL)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 758.4.
+Bracket: losers. Series losses: 1. Full 26 Index: 758.4.
 
 Manager: Earl Weaver.
 
@@ -1257,15 +1257,15 @@ The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu 
 
 ### Lineup slots that have batted
 
-- Slot 1: Bobby Grich (`grichbo01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 2: Brady Anderson (`anderbr01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 3: Frank Robinson (`robinfr02`) in R1-15-G1 (same starter in 3 later games)
-- Slot 4: Eddie Murray (`murraed02`) in R1-15-G1 (same starter in 3 later games)
-- Slot 5: Boog Powell (`powelbo01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 6: Cal Ripken Jr. (`ripkeca01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 7: Brooks Robinson (`robinbr01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 8: Rick Dempsey (`dempsri01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 9: Paul Blair (`blairpa01`) in R1-15-G1 (same starter in 3 later games)
+- Slot 1: Bobby Grich (`grichbo01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 2: Brady Anderson (`anderbr01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 3: Frank Robinson (`robinfr02`) in R1-15-G1 (same starter in 4 later games)
+- Slot 4: Eddie Murray (`murraed02`) in R1-15-G1; Eddie Murray (`murraed02`) in R1-15-G2; Eddie Murray (`murraed02`) in R1-15-G3; Eddie Murray (`murraed02`) in R1-15-G4; George Sisler (`sislege01`) in R1-15-G5
+- Slot 5: Boog Powell (`powelbo01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 6: Cal Ripken Jr. (`ripkeca01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 7: Brooks Robinson (`robinbr01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 8: Rick Dempsey (`dempsri01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 9: Paul Blair (`blairpa01`) in R1-15-G1 (same starter in 4 later games)
 
 ### Substitutes who have batted
 
@@ -1278,6 +1278,7 @@ The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu 
 - Mike Mussina (`mussimi01`) started R1-15-G2
 - Dave McNally (`mcnalda01`) started R1-15-G3
 - Mike Cuellar (`cuellmi01`) started R1-15-G4
+- Mike Flanagan (`flanami01`) started R1-15-G5
 
 ### Relievers who have appeared
 
@@ -1287,6 +1288,7 @@ The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu 
 - Stu Miller (`millest01`), first seen in R1-15-G3
 - Zach Britton (`brittza01`), first seen in R1-15-G3
 - Mike Flanagan (`flanami01`), first seen in R1-15-G3
+- Gregg Olson (`olsongr01`), first seen in R1-15-G5
 
 ## 16. Houston Astros (HOU)
 
@@ -1454,15 +1456,15 @@ These approvals are prospective only. All genuine original card bodies, includin
 
 ### Lineup slots that have batted
 
-- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1 (same starter in 3 later games)
-- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 3: George Brett (`brettge01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1 (same starter in 3 later games)
-- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 6: Amos Otis (`otisam01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1 (same starter in 3 later games)
-- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1 (same starter in 3 later games)
-- Slot 9: Frank White (`whitefr01`) in R1-15-G1 (same starter in 3 later games)
+- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1 (same starter in 4 later games)
+- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 3: George Brett (`brettge01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1 (same starter in 4 later games)
+- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 6: Amos Otis (`otisam01`) in R1-15-G1; Amos Otis (`otisam01`) in R1-15-G2; Amos Otis (`otisam01`) in R1-15-G3; Amos Otis (`otisam01`) in R1-15-G4; Carlos Beltrán (`beltrca01`) in R1-15-G5
+- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1 (same starter in 4 later games)
+- Slot 9: Frank White (`whitefr01`) in R1-15-G1 (same starter in 4 later games)
 
 ### Substitutes who have batted
 
@@ -1476,6 +1478,7 @@ These approvals are prospective only. All genuine original card bodies, includin
 - Bret Saberhagen (`saberbr01`) started R1-15-G2
 - Mark Gubicza (`gubicma01`) started R1-15-G3
 - Zack Greinke (`greinza01`) started R1-15-G4
+- David Cone (`coneda01`) started R1-15-G5
 
 ### Relievers who have appeared
 
