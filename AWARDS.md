@@ -8,18 +8,18 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Lou Gehrig | New York Yankees | 77.5 | 39 | 8 | 28 | 6 |
-| Babe Ruth | New York Yankees | 58.0 | 28 | 15 | 11 | 3 |
-| Derek Jeter | New York Yankees | 56.5 | 35 | 15 | 4 | 3 |
+| Lou Gehrig | New York Yankees | 83.5 | 43 | 9 | 29 | 7 |
+| Babe Ruth | New York Yankees | 64.0 | 32 | 16 | 12 | 4 |
+| Derek Jeter | New York Yankees | 58.5 | 36 | 15 | 5 | 3 |
 | Christian Yelich | Miami Marlins | 51.5 | 27 | 11 | 8 | 3 |
+| Mickey Mantle | New York Yankees | 49.5 | 28 | 9 | 10 | 5 |
+| Joe DiMaggio | New York Yankees | 49.0 | 25 | 8 | 14 | 5 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
-| Mickey Mantle | New York Yankees | 47.5 | 27 | 8 | 10 | 5 |
-| Yogi Berra | New York Yankees | 45.0 | 24 | 8 | 9 | 4 |
+| Yogi Berra | New York Yankees | 46.0 | 25 | 8 | 9 | 4 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
 | Aaron Judge | New York Yankees | 43.0 | 19 | 13 | 7 | 2 |
+| Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
-| Joe DiMaggio | New York Yankees | 42.0 | 21 | 7 | 12 | 4 |
-| Rickey Henderson | Oakland Athletics | 41.0 | 21 | 8 | 8 | 1 |
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
@@ -30,11 +30,11 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
+| Whitey Ford | New York Yankees | 40.2 | 23.2 | 3 | 21 | 3 |
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
-| Whitey Ford | New York Yankees | 25.0 | 15.2 | 2 | 14 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
@@ -58,12 +58,12 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
+| Goose Gossage | New York Yankees | 19.8 | 2 | 4.2 | 5 | 1 |
 | Josh Hader | Milwaukee Brewers | 18.4 | 0 | 8.2 | 14 | 3 |
 | Bruce Sutter | Chicago Cubs | 18.1 | 2 | 3.2 | 2 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
+| Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
-| Goose Gossage | New York Yankees | 14.2 | 1 | 4.1 | 5 | 1 |
-| Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
