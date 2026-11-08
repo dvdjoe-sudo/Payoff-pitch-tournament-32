@@ -8,17 +8,17 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Lou Gehrig | New York Yankees | 58.0 | 30 | 5 | 22 | 4 |
+| Lou Gehrig | New York Yankees | 73.5 | 38 | 7 | 27 | 6 |
 | Babe Ruth | New York Yankees | 52.5 | 25 | 14 | 10 | 3 |
+| Derek Jeter | New York Yankees | 52.5 | 31 | 15 | 4 | 3 |
 | Christian Yelich | Miami Marlins | 51.5 | 27 | 11 | 8 | 3 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
-| Mickey Mantle | New York Yankees | 41.5 | 24 | 7 | 9 | 5 |
+| Mickey Mantle | New York Yankees | 42.0 | 24 | 7 | 9 | 5 |
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
-| Derek Jeter | New York Yankees | 40.0 | 23 | 12 | 3 | 2 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
-| Mark McGwire | Oakland Athletics | 38.0 | 21 | 4 | 12 | 4 |
+| Mark McGwire | Oakland Athletics | 38.5 | 21 | 4 | 12 | 4 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Ryan Howard | Philadelphia Phillies | 36.5 | 21 | 7 | 4 | 1 |
 | Gary Sheffield | Miami Marlins | 36.0 | 18 | 6 | 10 | 2 |
@@ -40,11 +40,11 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
 | Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
 | Bob Feller | Cleveland Guardians | 16.4 | 14.0 | 2 | 20 | 8 |
+| Lefty Gomez | New York Yankees | 16.2 | 15.1 | 1 | 22 | 7 |
 | Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
 | Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Bert Blyleven | Minnesota Twins | 15.9 | 8.0 | 1 | 8 | 0 |
 | Mark Langston | Los Angeles Angels | 15.7 | 8.0 | 2 | 7 | 3 |
-| Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 
 ## Reliever
 
@@ -56,14 +56,14 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
-| Dennis Eckersley | Oakland Athletics | 18.5 | 2 | 4.0 | 5 | 1 |
 | Josh Hader | Milwaukee Brewers | 18.4 | 0 | 8.2 | 14 | 3 |
 | Bruce Sutter | Chicago Cubs | 18.1 | 2 | 3.2 | 2 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
+| Dennis Eckersley | Oakland Athletics | 18.1 | 2 | 4.1 | 6 | 2 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
+| Goose Gossage | New York Yankees | 14.2 | 1 | 4.1 | 5 | 1 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | Bobby Jenks | Chicago White Sox | 14.0 | 2 | 2.0 | 0 | 0 |
 | Mike Marshall | Los Angeles Dodgers | 14.0 | 2 | 2.0 | 0 | 0 |
-| Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
