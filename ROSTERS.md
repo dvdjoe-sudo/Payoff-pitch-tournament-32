@@ -895,15 +895,15 @@ Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4
 
 ### Lineup slots that have batted
 
-- Slot 1: Johnny Callison (`callijo01`) in R1-11-G1; Johnny Callison (`callijo01`) in R1-11-G2; Richie Ashburn (`ashburi01`) in R1-11-G3; Richie Ashburn (`ashburi01`) in R1-11-G4; Richie Ashburn (`ashburi01`) in R1-11-G5; Richie Ashburn (`ashburi01`) in R1-11-G6; Johnny Callison (`callijo01`) in L1-01-G1; Johnny Callison (`callijo01`) in L1-01-G2
-- Slot 2: Bobby Abreu (`abreubo01`) in R1-11-G1; Bobby Abreu (`abreubo01`) in R1-11-G2; Johnny Callison (`callijo01`) in R1-11-G3; Johnny Callison (`callijo01`) in R1-11-G4; Johnny Callison (`callijo01`) in R1-11-G5; Johnny Callison (`callijo01`) in R1-11-G6; Bobby Abreu (`abreubo01`) in L1-01-G1; Bobby Abreu (`abreubo01`) in L1-01-G2
-- Slot 3: Chuck Klein (`kleinch01`) in R1-11-G1 (same starter in 7 later games)
-- Slot 4: Mike Schmidt (`schmimi01`) in R1-11-G1 (same starter in 7 later games)
-- Slot 5: Bryce Harper (`harpebr03`) in R1-11-G1; Bryce Harper (`harpebr03`) in R1-11-G2; Bryce Harper (`harpebr03`) in R1-11-G3; Bryce Harper (`harpebr03`) in R1-11-G4; Dick Allen (`allendi01`) in R1-11-G5; Bryce Harper (`harpebr03`) in R1-11-G6; Bryce Harper (`harpebr03`) in L1-01-G1; Bryce Harper (`harpebr03`) in L1-01-G2
-- Slot 6: Ryan Howard (`howarry01`) in R1-11-G1 (same starter in 7 later games)
-- Slot 7: Chase Utley (`utleych01`) in R1-11-G1 (same starter in 7 later games)
-- Slot 8: Carlos Ruiz (`ruizca01`) in R1-11-G1; Carlos Ruiz (`ruizca01`) in R1-11-G2; Darren Daulton (`daultda01`) in R1-11-G3; Darren Daulton (`daultda01`) in R1-11-G4; Darren Daulton (`daultda01`) in R1-11-G5; Darren Daulton (`daultda01`) in R1-11-G6; Carlos Ruiz (`ruizca01`) in L1-01-G1; Carlos Ruiz (`ruizca01`) in L1-01-G2
-- Slot 9: Jimmy Rollins (`rolliji01`) in R1-11-G1 (same starter in 7 later games)
+- Slot 1: Johnny Callison (`callijo01`) in R1-11-G1; Johnny Callison (`callijo01`) in R1-11-G2; Richie Ashburn (`ashburi01`) in R1-11-G3; Richie Ashburn (`ashburi01`) in R1-11-G4; Richie Ashburn (`ashburi01`) in R1-11-G5; Richie Ashburn (`ashburi01`) in R1-11-G6; Johnny Callison (`callijo01`) in L1-01-G1; Johnny Callison (`callijo01`) in L1-01-G2; Johnny Callison (`callijo01`) in L1-01-G3
+- Slot 2: Bobby Abreu (`abreubo01`) in R1-11-G1; Bobby Abreu (`abreubo01`) in R1-11-G2; Johnny Callison (`callijo01`) in R1-11-G3; Johnny Callison (`callijo01`) in R1-11-G4; Johnny Callison (`callijo01`) in R1-11-G5; Johnny Callison (`callijo01`) in R1-11-G6; Bobby Abreu (`abreubo01`) in L1-01-G1; Bobby Abreu (`abreubo01`) in L1-01-G2; Bobby Abreu (`abreubo01`) in L1-01-G3
+- Slot 3: Chuck Klein (`kleinch01`) in R1-11-G1 (same starter in 8 later games)
+- Slot 4: Mike Schmidt (`schmimi01`) in R1-11-G1 (same starter in 8 later games)
+- Slot 5: Bryce Harper (`harpebr03`) in R1-11-G1; Bryce Harper (`harpebr03`) in R1-11-G2; Bryce Harper (`harpebr03`) in R1-11-G3; Bryce Harper (`harpebr03`) in R1-11-G4; Dick Allen (`allendi01`) in R1-11-G5; Bryce Harper (`harpebr03`) in R1-11-G6; Bryce Harper (`harpebr03`) in L1-01-G1; Bryce Harper (`harpebr03`) in L1-01-G2; Bryce Harper (`harpebr03`) in L1-01-G3
+- Slot 6: Ryan Howard (`howarry01`) in R1-11-G1 (same starter in 8 later games)
+- Slot 7: Chase Utley (`utleych01`) in R1-11-G1 (same starter in 8 later games)
+- Slot 8: Carlos Ruiz (`ruizca01`) in R1-11-G1; Carlos Ruiz (`ruizca01`) in R1-11-G2; Darren Daulton (`daultda01`) in R1-11-G3; Darren Daulton (`daultda01`) in R1-11-G4; Darren Daulton (`daultda01`) in R1-11-G5; Darren Daulton (`daultda01`) in R1-11-G6; Carlos Ruiz (`ruizca01`) in L1-01-G1; Carlos Ruiz (`ruizca01`) in L1-01-G2; Carlos Ruiz (`ruizca01`) in L1-01-G3
+- Slot 9: Jimmy Rollins (`rolliji01`) in R1-11-G1 (same starter in 8 later games)
 
 ### Substitutes who have batted
 
@@ -921,6 +921,7 @@ Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4
 - Robin Roberts (`roberro01`) started R1-11-G6
 - Steve Carlton (`carltst01`) started L1-01-G1
 - Robin Roberts (`roberro01`) started L1-01-G2
+- Grover Cleveland Alexander (`alexape01`) started L1-01-G3
 
 ### Relievers who have appeared
 
@@ -928,6 +929,7 @@ Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4
 - Jonathan Papelbon (`papeljo01`), first seen in R1-11-G1
 - Ranger Suárez (`suarera01`), first seen in R1-11-G2
 - Ron Reed (`reedro01`), first seen in R1-11-G2
+- Gene Garber (`garbege01`), first seen in L1-01-G3
 
 ## 12. Minnesota Twins (MIN)
 
@@ -2646,15 +2648,15 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 
 ### Lineup slots that have batted
 
-- Slot 1: Luis Castillo (`castilu01`) in R1-01-G1 (same starter in 5 later games)
-- Slot 2: Christian Yelich (`yelicch01`) in R1-01-G1 (same starter in 5 later games)
-- Slot 3: Gary Sheffield (`sheffga01`) in R1-01-G1 (same starter in 5 later games)
-- Slot 4: Giancarlo Stanton (`stantmi03`) in R1-01-G1 (same starter in 5 later games)
-- Slot 5: Miguel Cabrera (`cabremi01`) in R1-01-G1 (same starter in 5 later games)
-- Slot 6: Hanley Ramirez (`ramirha01`) in R1-01-G1 (same starter in 5 later games)
-- Slot 7: Cliff Floyd (`floydcl01`) in R1-01-G1 (same starter in 5 later games)
-- Slot 8: Jeff Conine (`coninje01`) in R1-01-G1 (same starter in 5 later games)
-- Slot 9: J.T. Realmuto (`realmjt01`) in R1-01-G1 (same starter in 5 later games)
+- Slot 1: Luis Castillo (`castilu01`) in R1-01-G1 (same starter in 6 later games)
+- Slot 2: Christian Yelich (`yelicch01`) in R1-01-G1 (same starter in 6 later games)
+- Slot 3: Gary Sheffield (`sheffga01`) in R1-01-G1 (same starter in 6 later games)
+- Slot 4: Giancarlo Stanton (`stantmi03`) in R1-01-G1 (same starter in 6 later games)
+- Slot 5: Miguel Cabrera (`cabremi01`) in R1-01-G1 (same starter in 6 later games)
+- Slot 6: Hanley Ramirez (`ramirha01`) in R1-01-G1 (same starter in 6 later games)
+- Slot 7: Cliff Floyd (`floydcl01`) in R1-01-G1 (same starter in 6 later games)
+- Slot 8: Jeff Conine (`coninje01`) in R1-01-G1 (same starter in 6 later games)
+- Slot 9: J.T. Realmuto (`realmjt01`) in R1-01-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
 
@@ -2670,6 +2672,7 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 - Josh Beckett (`beckejo02`) started R1-01-G4
 - Josh Johnson (`johnsjo09`) started L1-01-G1
 - Sandy Alcantara (`alcansa01`) started L1-01-G2
+- Dontrelle Willis (`willido03`) started L1-01-G3
 
 ### Relievers who have appeared
 
