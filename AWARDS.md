@@ -9,20 +9,20 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
 | Lou Gehrig | New York Yankees | 58.0 | 30 | 5 | 22 | 4 |
+| Babe Ruth | New York Yankees | 52.5 | 25 | 14 | 10 | 3 |
 | Christian Yelich | Miami Marlins | 51.5 | 27 | 11 | 8 | 3 |
-| Babe Ruth | New York Yankees | 50.5 | 25 | 13 | 10 | 3 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
+| Mickey Mantle | New York Yankees | 41.5 | 24 | 7 | 9 | 5 |
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
+| Derek Jeter | New York Yankees | 40.0 | 23 | 12 | 3 | 2 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
+| Mark McGwire | Oakland Athletics | 38.0 | 21 | 4 | 12 | 4 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Ryan Howard | Philadelphia Phillies | 36.5 | 21 | 7 | 4 | 1 |
-| Derek Jeter | New York Yankees | 36.0 | 19 | 12 | 3 | 2 |
 | Gary Sheffield | Miami Marlins | 36.0 | 18 | 6 | 10 | 2 |
 | Cliff Floyd | Miami Marlins | 35.0 | 19 | 6 | 9 | 3 |
-| Shohei Ohtani | Los Angeles Angels | 35.0 | 18 | 9 | 5 | 3 |
-| Johnny Callison | Philadelphia Phillies | 34.0 | 21 | 6 | 5 | 2 |
 
 ## Cy Young
 
@@ -56,6 +56,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
+| Dennis Eckersley | Oakland Athletics | 18.5 | 2 | 4.0 | 5 | 1 |
 | Josh Hader | Milwaukee Brewers | 18.4 | 0 | 8.2 | 14 | 3 |
 | Bruce Sutter | Chicago Cubs | 18.1 | 2 | 3.2 | 2 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Bobby Jenks | Chicago White Sox | 14.0 | 2 | 2.0 | 0 | 0 |
 | Mike Marshall | Los Angeles Dodgers | 14.0 | 2 | 2.0 | 0 | 0 |
 | Jeff Zimmerman | Texas Rangers | 13.2 | 1 | 5.0 | 3 | 2 |
-| John Wetteland | Montreal Expos | 13.0 | 1 | 3.0 | 5 | 0 |
