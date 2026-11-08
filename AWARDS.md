@@ -8,18 +8,18 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
+| Christian Yelich | Miami Marlins | 51.5 | 27 | 11 | 8 | 3 |
+| Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
-| Christian Yelich | Miami Marlins | 43.5 | 23 | 10 | 5 | 3 |
-| Bryce Harper | Philadelphia Phillies | 41.0 | 21 | 8 | 9 | 4 |
-| Jimmy Rollins | Philadelphia Phillies | 41.0 | 23 | 7 | 9 | 2 |
+| Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
+| Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
-| Chuck Klein | Philadelphia Phillies | 36.5 | 22 | 6 | 5 | 3 |
+| Ryan Howard | Philadelphia Phillies | 36.5 | 21 | 7 | 4 | 1 |
+| Gary Sheffield | Miami Marlins | 36.0 | 18 | 6 | 10 | 2 |
 | Cliff Floyd | Miami Marlins | 35.0 | 19 | 6 | 9 | 3 |
 | Shohei Ohtani | Los Angeles Angels | 35.0 | 18 | 9 | 5 | 3 |
-| Ryan Howard | Philadelphia Phillies | 34.5 | 20 | 7 | 3 | 1 |
-| Gary Sheffield | Miami Marlins | 34.0 | 17 | 6 | 9 | 2 |
 | Johnny Callison | Philadelphia Phillies | 34.0 | 21 | 6 | 5 | 2 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
@@ -32,7 +32,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | --- | --- | --- | --- | --- | --- | --- |
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
-| Steve Carlton | Philadelphia Phillies | 25.2 | 24.1 | 2 | 20 | 9 |
+| Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
