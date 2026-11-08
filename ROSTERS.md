@@ -98,7 +98,6 @@ This roster text is the one previously published in the tournament rules. Positi
 
 Recorded on that roster and not yet in a box score:
 
-- Tony Lazzeri (IF/BAT)
 - Don Mattingly (1B/BAT)
 - Reggie Jackson (OF/BAT)
 - Rickey Henderson (OF6; Yankees 1985–1989)
@@ -113,20 +112,21 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 
 ### Lineup slots that have batted
 
-- Slot 1: Derek Jeter (`jeterde01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 2: Aaron Judge (`judgeaa01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 3: Babe Ruth (`ruthba01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 4: Lou Gehrig (`gehrilo01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 5: Mickey Mantle (`mantlmi01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 6: Joe DiMaggio (`dimagjo01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 7: Alex Rodriguez (`rodrial01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 8: Yogi Berra (`berrayo01`) in R1-01-G1 (same starter in 3 later games)
-- Slot 9: Willie Randolph (`randowi01`) in R1-01-G1 (same starter in 3 later games)
+- Slot 1: Derek Jeter (`jeterde01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 2: Aaron Judge (`judgeaa01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 3: Babe Ruth (`ruthba01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 4: Lou Gehrig (`gehrilo01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 5: Mickey Mantle (`mantlmi01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 6: Joe DiMaggio (`dimagjo01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 7: Alex Rodriguez (`rodrial01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 8: Yogi Berra (`berrayo01`) in R1-01-G1 (same starter in 4 later games)
+- Slot 9: Willie Randolph (`randowi01`) in R1-01-G1; Willie Randolph (`randowi01`) in R1-01-G2; Willie Randolph (`randowi01`) in R1-01-G3; Willie Randolph (`randowi01`) in R1-01-G4; Tony Lazzeri (`lazzeto01`) in W2-01-G1
 
 ### Substitutes who have batted
 
 - Bernie Williams (`willibe02`), slot 2
 - Thurman Munson (`munsoth01`), slot 8
+- Willie Randolph (`randowi01`), slot 9
 
 ### Starts, in the order the games were played
 
@@ -134,6 +134,7 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 - Red Ruffing (`ruffire01`) started R1-01-G2
 - Lefty Gomez (`gomezle01`) started R1-01-G3
 - Ron Guidry (`guidrro01`) started R1-01-G4
+- Whitey Ford (`fordwh01`) started W2-01-G1
 
 ### Relievers who have appeared
 
@@ -1890,15 +1891,15 @@ This approval does **not** resolve the separate PED eligibility discussion and d
 
 ### Lineup slots that have batted
 
-- Slot 1: Rickey Henderson (`henderi01`) in R1-11-G1 (same starter in 5 later games)
-- Slot 2: Sal Bando (`bandosa01`) in R1-11-G1; Sal Bando (`bandosa01`) in R1-11-G2; Eric Chavez (`chaveer01`) in R1-11-G3; Eric Chavez (`chaveer01`) in R1-11-G4; Eric Chavez (`chaveer01`) in R1-11-G5; Sal Bando (`bandosa01`) in R1-11-G6
-- Slot 3: Reggie Jackson (`jacksre01`) in R1-11-G1 (same starter in 5 later games)
-- Slot 4: Mark McGwire (`mcgwima01`) in R1-11-G1 (same starter in 5 later games)
-- Slot 5: José Canseco (`cansejo01`) in R1-11-G1 (same starter in 5 later games)
-- Slot 6: Miguel Tejada (`tejadmi01`) in R1-11-G1 (same starter in 5 later games)
-- Slot 7: Dwayne Murphy (`murphdw01`) in R1-11-G1 (same starter in 5 later games)
-- Slot 8: Terry Steinbach (`steinte01`) in R1-11-G1 (same starter in 5 later games)
-- Slot 9: Mark Ellis (`ellisma01`) in R1-11-G1 (same starter in 5 later games)
+- Slot 1: Rickey Henderson (`henderi01`) in R1-11-G1 (same starter in 6 later games)
+- Slot 2: Sal Bando (`bandosa01`) in R1-11-G1; Sal Bando (`bandosa01`) in R1-11-G2; Eric Chavez (`chaveer01`) in R1-11-G3; Eric Chavez (`chaveer01`) in R1-11-G4; Eric Chavez (`chaveer01`) in R1-11-G5; Sal Bando (`bandosa01`) in R1-11-G6; Sal Bando (`bandosa01`) in W2-01-G1
+- Slot 3: Reggie Jackson (`jacksre01`) in R1-11-G1 (same starter in 6 later games)
+- Slot 4: Mark McGwire (`mcgwima01`) in R1-11-G1 (same starter in 6 later games)
+- Slot 5: José Canseco (`cansejo01`) in R1-11-G1 (same starter in 6 later games)
+- Slot 6: Miguel Tejada (`tejadmi01`) in R1-11-G1 (same starter in 6 later games)
+- Slot 7: Dwayne Murphy (`murphdw01`) in R1-11-G1 (same starter in 6 later games)
+- Slot 8: Terry Steinbach (`steinte01`) in R1-11-G1 (same starter in 6 later games)
+- Slot 9: Mark Ellis (`ellisma01`) in R1-11-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
 
@@ -1914,6 +1915,7 @@ This approval does **not** resolve the separate PED eligibility discussion and d
 - Tim Hudson (`hudsoti01`) started R1-11-G4
 - Barry Zito (`zitoba01`) started R1-11-G5
 - Catfish Hunter (`hunteca01`) started R1-11-G6
+- Catfish Hunter (`hunteca01`) started W2-01-G1
 
 ### Relievers who have appeared
 

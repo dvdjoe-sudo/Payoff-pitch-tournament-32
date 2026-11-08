@@ -8,21 +8,21 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
+| Lou Gehrig | New York Yankees | 58.0 | 30 | 5 | 22 | 4 |
 | Christian Yelich | Miami Marlins | 51.5 | 27 | 11 | 8 | 3 |
+| Babe Ruth | New York Yankees | 50.5 | 25 | 13 | 10 | 3 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
-| Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Ryan Howard | Philadelphia Phillies | 36.5 | 21 | 7 | 4 | 1 |
+| Derek Jeter | New York Yankees | 36.0 | 19 | 12 | 3 | 2 |
 | Gary Sheffield | Miami Marlins | 36.0 | 18 | 6 | 10 | 2 |
 | Cliff Floyd | Miami Marlins | 35.0 | 19 | 6 | 9 | 3 |
 | Shohei Ohtani | Los Angeles Angels | 35.0 | 18 | 9 | 5 | 3 |
 | Johnny Callison | Philadelphia Phillies | 34.0 | 21 | 6 | 5 | 2 |
-| Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
-| Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 
 ## Cy Young
 
@@ -34,6 +34,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
+| Whitey Ford | New York Yankees | 25.0 | 15.2 | 2 | 14 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Bert Blyleven | Minnesota Twins | 15.9 | 8.0 | 1 | 8 | 0 |
 | Mark Langston | Los Angeles Angels | 15.7 | 8.0 | 2 | 7 | 3 |
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
-| Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
 
 ## Reliever
 
