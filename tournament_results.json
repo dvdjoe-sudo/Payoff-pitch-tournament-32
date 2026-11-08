@@ -1246,6 +1246,12 @@
    "status": "complete",
    "winner": "MIA",
    "loser": "PHI",
+   "mvp": {
+    "team": "MIA",
+    "player_id": "yelicch01",
+    "name": "Christian Yelich",
+    "line": "9 for 23, 5 R, 2 2B, 1 3B, 5 RBI, .391"
+   },
    "formation": {
     "rule": "reseed-high-vs-low",
     "pool": "Losers of the 16 opening-round series",
