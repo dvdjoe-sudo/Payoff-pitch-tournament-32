@@ -9,18 +9,18 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
 | Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
-| Christian Yelich | Miami Marlins | 40.5 | 21 | 10 | 4 | 3 |
+| Christian Yelich | Miami Marlins | 43.5 | 23 | 10 | 5 | 3 |
+| Bryce Harper | Philadelphia Phillies | 41.0 | 21 | 8 | 9 | 4 |
+| Jimmy Rollins | Philadelphia Phillies | 41.0 | 23 | 7 | 9 | 2 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
-| Jimmy Rollins | Philadelphia Phillies | 40.5 | 23 | 7 | 9 | 2 |
+| Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 | Chuck Klein | Philadelphia Phillies | 36.5 | 22 | 6 | 5 | 3 |
-| Mike Schmidt | Philadelphia Phillies | 36.5 | 20 | 7 | 7 | 2 |
 | Cliff Floyd | Miami Marlins | 35.0 | 19 | 6 | 9 | 3 |
 | Shohei Ohtani | Los Angeles Angels | 35.0 | 18 | 9 | 5 | 3 |
-| Bryce Harper | Philadelphia Phillies | 34.0 | 17 | 7 | 7 | 3 |
+| Ryan Howard | Philadelphia Phillies | 34.5 | 20 | 7 | 3 | 1 |
 | Gary Sheffield | Miami Marlins | 34.0 | 17 | 6 | 9 | 2 |
 | Johnny Callison | Philadelphia Phillies | 34.0 | 21 | 6 | 5 | 2 |
-| Ryan Howard | Philadelphia Phillies | 33.5 | 19 | 7 | 3 | 1 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
 
