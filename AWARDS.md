@@ -9,20 +9,20 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
 | Lou Gehrig | New York Yankees | 47.0 | 23 | 5 | 18 | 4 |
+| Christian Yelich | Miami Marlins | 40.5 | 21 | 10 | 4 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
-| Christian Yelich | Miami Marlins | 38.0 | 20 | 9 | 4 | 3 |
+| Jimmy Rollins | Philadelphia Phillies | 40.5 | 23 | 7 | 9 | 2 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
-| Jimmy Rollins | Philadelphia Phillies | 36.5 | 21 | 7 | 7 | 2 |
-| Chuck Klein | Philadelphia Phillies | 35.5 | 21 | 6 | 5 | 3 |
+| Chuck Klein | Philadelphia Phillies | 36.5 | 22 | 6 | 5 | 3 |
+| Mike Schmidt | Philadelphia Phillies | 36.5 | 20 | 7 | 7 | 2 |
 | Cliff Floyd | Miami Marlins | 35.0 | 19 | 6 | 9 | 3 |
 | Shohei Ohtani | Los Angeles Angels | 35.0 | 18 | 9 | 5 | 3 |
-| Mike Schmidt | Philadelphia Phillies | 34.5 | 18 | 7 | 7 | 2 |
-| Gary Sheffield | Miami Marlins | 33.5 | 17 | 6 | 9 | 2 |
+| Bryce Harper | Philadelphia Phillies | 34.0 | 17 | 7 | 7 | 3 |
+| Gary Sheffield | Miami Marlins | 34.0 | 17 | 6 | 9 | 2 |
+| Johnny Callison | Philadelphia Phillies | 34.0 | 21 | 6 | 5 | 2 |
+| Ryan Howard | Philadelphia Phillies | 33.5 | 19 | 7 | 3 | 1 |
 | Joe DiMaggio | New York Yankees | 33.0 | 17 | 5 | 10 | 4 |
 | Babe Ruth | New York Yankees | 32.5 | 14 | 9 | 7 | 2 |
-| Johnny Callison | Philadelphia Phillies | 32.0 | 20 | 6 | 4 | 2 |
-| Honus Wagner | Pittsburgh Pirates | 31.5 | 18 | 7 | 6 | 0 |
-| Derek Jeter | New York Yankees | 31.0 | 15 | 11 | 3 | 2 |
 
 ## Cy Young
 
@@ -31,6 +31,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
+| Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.2 | 24.1 | 2 | 20 | 9 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Mark Langston | Los Angeles Angels | 15.7 | 8.0 | 2 | 7 | 3 |
 | Christy Mathewson | San Francisco Giants | 15.3 | 8.0 | 1 | 14 | 2 |
 | Carl Hubbell | San Francisco Giants | 15.1 | 8.0 | 1 | 9 | 1 |
-| Gaylord Perry | Texas Rangers | 14.4 | 8.0 | 1 | 5 | 0 |
 
 ## Reliever
 
@@ -55,12 +55,12 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Willie Hernandez | Detroit Tigers | 32.0 | 2 | 10.1 | 7 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
+| Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Josh Hader | Milwaukee Brewers | 18.4 | 0 | 8.2 | 14 | 3 |
 | Bruce Sutter | Chicago Cubs | 18.1 | 2 | 3.2 | 2 | 0 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
-| Jonathan Papelbon | Philadelphia Phillies | 15.6 | 2 | 5.1 | 6 | 5 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
 | Bobby Jenks | Chicago White Sox | 14.0 | 2 | 2.0 | 0 | 0 |
