@@ -36,6 +36,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
+| Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
 | Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
 | Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Bert Blyleven | Minnesota Twins | 15.9 | 8.0 | 1 | 8 | 0 |
-| Mark Langston | Los Angeles Angels | 15.7 | 8.0 | 2 | 7 | 3 |
 
 ## Reliever
 
