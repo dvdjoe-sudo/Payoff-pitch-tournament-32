@@ -8,21 +8,21 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Lou Gehrig | New York Yankees | 76.0 | 39 | 7 | 28 | 6 |
-| Babe Ruth | New York Yankees | 54.0 | 26 | 14 | 10 | 3 |
-| Derek Jeter | New York Yankees | 53.5 | 32 | 15 | 4 | 3 |
+| Lou Gehrig | New York Yankees | 77.5 | 39 | 8 | 28 | 6 |
+| Babe Ruth | New York Yankees | 58.0 | 28 | 15 | 11 | 3 |
+| Derek Jeter | New York Yankees | 56.5 | 35 | 15 | 4 | 3 |
 | Christian Yelich | Miami Marlins | 51.5 | 27 | 11 | 8 | 3 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
-| Mickey Mantle | New York Yankees | 43.0 | 25 | 7 | 9 | 5 |
+| Mickey Mantle | New York Yankees | 47.5 | 27 | 8 | 10 | 5 |
+| Yogi Berra | New York Yankees | 45.0 | 24 | 8 | 9 | 4 |
+| Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
+| Aaron Judge | New York Yankees | 43.0 | 19 | 13 | 7 | 2 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
+| Joe DiMaggio | New York Yankees | 42.0 | 21 | 7 | 12 | 4 |
+| Rickey Henderson | Oakland Athletics | 41.0 | 21 | 8 | 8 | 1 |
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
-| Mark McGwire | Oakland Athletics | 38.5 | 21 | 4 | 12 | 4 |
-| Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
-| Aaron Judge | New York Yankees | 37.0 | 16 | 12 | 6 | 2 |
-| Joe DiMaggio | New York Yankees | 36.5 | 19 | 5 | 11 | 4 |
-| Ryan Howard | Philadelphia Phillies | 36.5 | 21 | 7 | 4 | 1 |
 
 ## Cy Young
 
@@ -55,6 +55,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Willie Hernandez | Detroit Tigers | 32.0 | 2 | 10.1 | 7 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
+| Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Josh Hader | Milwaukee Brewers | 18.4 | 0 | 8.2 | 14 | 3 |
@@ -62,8 +63,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
-| Mariano Rivera | New York Yankees | 15.3 | 2 | 3.0 | 2 | 1 |
+| Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
 | Goose Gossage | New York Yankees | 14.2 | 1 | 4.1 | 5 | 1 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
-| Bobby Jenks | Chicago White Sox | 14.0 | 2 | 2.0 | 0 | 0 |

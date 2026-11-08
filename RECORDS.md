@@ -43,3 +43,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Cleveland Guardians scored 10 against Los Angeles Angels in R1-13-G6.
 - Philadelphia Athletics scored 10 against Houston Astros in R1-16-G5.
 - Houston Astros scored 11 against Philadelphia Athletics in R1-16-G5.
+- New York Yankees scored 10 against Oakland Athletics in W2-01-G5.
