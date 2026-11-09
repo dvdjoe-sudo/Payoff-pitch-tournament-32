@@ -23,13 +23,12 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Bob Feller (Cleveland Guardians), R1-13-G1: 11 K in 8.0 IP.
 - Curt Schilling (Philadelphia Phillies), L1-01-G4: 10 K in 8.0 IP.
 - Max Scherzer (Washington Nationals), L1-02-G1: 10 K in 7.0 IP.
-- Ron Guidry (New York Yankees), R1-01-G4: 10 K in 8.0 IP.
 - Smoky Joe Wood (Boston Red Sox), R1-03-G4: 10 K in 6.2 IP.
 - Dizzy Dean (St. Louis Cardinals), R1-05-G2: 10 K in 6.0 IP.
 
 ## Games with 10 or more runs
 
-- New York Yankees scored 17 against Miami Marlins in R1-01-G4.
+- New York Yankees scored 15 against Miami Marlins in R1-01-G4.
 - Detroit Tigers scored 10 against Arizona Diamondbacks in R1-04-G6.
 - St. Louis Cardinals scored 10 against Colorado Rockies in R1-05-G4.
 - Atlanta Braves scored 11 against San Diego Padres in R1-07-G4.

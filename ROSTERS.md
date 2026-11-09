@@ -2701,6 +2701,6 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 - A.J. Ramos (`ramosaj01`), first seen in R1-01-G1
 - Tanner Scott (`scottta01`), first seen in R1-01-G1
 - Steve Cishek (`cishest01`), first seen in R1-01-G1
-- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G4
 - Anthony Bender (`bendean01`), first seen in R1-01-G4
 - Robb Nen (`nenro01`), first seen in R1-01-G4
+- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G4
