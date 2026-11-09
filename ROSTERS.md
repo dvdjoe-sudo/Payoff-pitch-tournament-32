@@ -141,11 +141,11 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 
 ### Relievers who have appeared
 
-- Goose Gossage (`gossari01`), first seen in R1-01-G1
-- David Robertson (`roberda08`), first seen in R1-01-G2
+- David Robertson (`roberda08`), first seen in R1-01-G1
 - Dave Righetti (`righeda01`), first seen in R1-01-G2
 - Mike Stanton (`stantmi02`), first seen in R1-01-G2
 - Mariano Rivera (`riverma01`), first seen in R1-01-G2
+- Goose Gossage (`gossari01`), first seen in W2-01-G2
 - Sparky Lyle (`lylesp01`), first seen in W2-01-G5
 
 ## 2. San Francisco Giants (SF)
@@ -2681,9 +2681,9 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 
 ### Substitutes who have batted
 
-- Dan Uggla (`ugglada01`), slot 1
-- Charles Johnson (`johnsch04`), slot 9
 - Charles Johnson (`johnsch04`), slot 3
+- Charles Johnson (`johnsch04`), slot 9
+- Dan Uggla (`ugglada01`), slot 1
 
 ### Starts, in the order the games were played
 
@@ -2700,10 +2700,10 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 
 ### Relievers who have appeared
 
+- A.J. Ramos (`ramosaj01`), first seen in R1-01-G1
+- Tanner Scott (`scottta01`), first seen in R1-01-G1
 - Steve Cishek (`cishest01`), first seen in R1-01-G1
-- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G1
+- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G2
 - Anthony Bender (`bendean01`), first seen in R1-01-G2
-- A.J. Ramos (`ramosaj01`), first seen in R1-01-G3
-- Tanner Scott (`scottta01`), first seen in R1-01-G3
 - Robb Nen (`nenro01`), first seen in R1-01-G3
 - A.J. Burnett (`burneaj01`), first seen in R1-01-G3
