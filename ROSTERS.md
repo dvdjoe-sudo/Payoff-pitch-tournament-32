@@ -485,9 +485,11 @@ These names are not on the active roster.
 
 ### Relievers who have appeared
 
-- Pedro Strop (`stroppe01`), first seen in R1-06-G2
 - Bruce Sutter (`suttebr01`), first seen in R1-06-G2
 - Lee Smith (`smithle02`), first seen in R1-06-G2
+- Pedro Strop (`stroppe01`), first seen in R1-06-G2
+- Sean Marshall (`marshse01`), first seen in R1-06-G2
+- Kerry Wood (`woodke02`), first seen in R1-06-G2
 - Mordecai Brown (`brownmo01`), first seen in R1-06-G5
 
 ## 7. Atlanta Braves (ATL)
@@ -2353,11 +2355,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Slot 8: Tim Wallach (`wallati01`) in R1-06-G1 (same starter in 4 later games)
 - Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1 (same starter in 4 later games)
 
-### Substitutes who have batted
-
-- Brian Schneider (`schnebr01`), slot 5
-- Mike Lansing (`lansimi01`), slot 2
-
 ### Starts, in the order the games were played
 
 - Steve Rogers (`rogerst01`) started R1-06-G1
@@ -2368,11 +2365,11 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Relievers who have appeared
 
+- Jeff Reardon (`reardje01`), first seen in R1-06-G2
+- Mel Rojas (`rojasme01`), first seen in R1-06-G2
 - John Wetteland (`wettejo01`), first seen in R1-06-G2
-- Mel Rojas (`rojasme01`), first seen in R1-06-G3
-- Jeff Reardon (`reardje01`), first seen in R1-06-G3
-- Andy McGaffigan (`mcgafan01`), first seen in R1-06-G4
-- Tim Burke (`burketi01`), first seen in R1-06-G4
+- Tim Burke (`burketi01`), first seen in R1-06-G2
+- Andy McGaffigan (`mcgafan01`), first seen in R1-06-G2
 
 ## 28. Colorado Rockies (COL)
 
