@@ -59,10 +59,10 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Goose Gossage | New York Yankees | 19.8 | 2 | 4.2 | 5 | 1 |
-| Josh Hader | Milwaukee Brewers | 18.4 | 0 | 8.2 | 14 | 3 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
+| Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |

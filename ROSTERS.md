@@ -837,9 +837,9 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Relievers who have appeared
 
-- Kenley Jansen (`janseke01`), first seen in R1-10-G1
-- Eric Gagne (`gagneer01`), first seen in R1-10-G1
 - Jim Brewer (`breweji01`), first seen in R1-10-G2
+- Kenley Jansen (`janseke01`), first seen in R1-10-G2
+- Eric Gagne (`gagneer01`), first seen in R1-10-G2
 - Ron Perranoski (`perraro01`), first seen in R1-10-G2
 - Mike Marshall (`marshmi01`), first seen in R1-10-G3
 
@@ -2024,12 +2024,12 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 
 ### Relievers who have appeared
 
-- Jeremy Jeffress (`jeffrje01`), first seen in R1-10-G1
-- Devin Williams (`willide03`), first seen in R1-10-G1
 - Dan Plesac (`plesada01`), first seen in R1-10-G1
-- Josh Hader (`haderjo01`), first seen in R1-10-G1
 - Rollie Fingers (`fingero01`), first seen in R1-10-G1
-- Ken Sanders (`sandeke01`), first seen in R1-10-G4
+- Devin Williams (`willide03`), first seen in R1-10-G1
+- Jeremy Jeffress (`jeffrje01`), first seen in R1-10-G1
+- Ken Sanders (`sandeke01`), first seen in R1-10-G1
+- Josh Hader (`haderjo01`), first seen in R1-10-G2
 
 ## 24. Texas Rangers (TEX)
 
