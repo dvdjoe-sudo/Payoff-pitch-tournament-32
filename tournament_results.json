@@ -676,7 +676,7 @@
     "team": "DET",
     "player_id": "heilmha01",
     "name": "Harry Heilmann",
-    "line": "4 for 16, 2 2B, 1 HR, 6 RBI, 3 R, .250"
+    "line": "4 for 16, 2 2B, 1 HR, 7 RBI, 3 R, .250"
    },
    "mvp_runner_up": {
     "team": "DET",
@@ -16724,7 +16724,7 @@
      "ab": 5,
      "r": 1,
      "h": 3,
-     "rbi": 6,
+     "rbi": 7,
      "bb": 0,
      "k": 0,
      "hbp": 0,
