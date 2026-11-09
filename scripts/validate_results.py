@@ -78,7 +78,25 @@ GAMES = ROOT / "games"
 # 2026-11-08, per DATED_GAMES above). The series entry and both
 # club records are unchanged. The old value was
 # e08fd76f62ce45c003bc6dedd085d75c5add3fdbc9e0681dc0d65760a6336ceb.
-FINGERPRINT = "1f5cd504819935c6a331eb36e8d928ad6c1fa890cbe0c9fc928d30bbdee4cb47"
+# Reset again 2026-11-08 under Joe's adoption ruling for R1-01
+# Game 3: his replay (New York 7, Miami 1; W Gomez complete game,
+# L Willis) replaces the booked Game 3 (New York 22, Miami 5,
+# seed 1103, W Gomez, L Willis), the disputed game of the
+# Jeter/A-Rod episode, whose rolls stream gives Jeter two
+# consecutive Top 6 plate appearances and leaves Rodriguez with
+# no legal exit; Joe's override directive failed its conditioned
+# booking on three converter walls, he ruled "Leave it 22-5, the
+# replay decides," and sent this replay the same night. The game
+# object and its detail file move with it (the replaced game's
+# 109 rolls and 20-entry manager log are preserved in the
+# Yankees records at archive/replaced/, with the dispute history
+# in its README there; the adopted game carries an empty rolls
+# array and a null manager log, prints no seed so its rng_seed
+# is 0 as in the R1-06 and R1-10 adoptions, and carries its
+# played date, 2026-11-08, per DATED_GAMES above). The series
+# entry and both club records are unchanged. The old value was
+# 1f5cd504819935c6a331eb36e8d928ad6c1fa890cbe0c9fc928d30bbdee4cb47.
+FINGERPRINT = "9b7381241aead1a979d302b8a99eab42204c789134648a962eaf72eb1829690b"
 # R1-01-G1 left ROLL_COUNTS in the 2026-11-08 adoption reset above:
 # the adopted game carries an empty rolls array, and the replaced
 # game's 72 rolls are preserved with it in the Yankees records at
@@ -108,14 +126,14 @@ TEAM_FIELDS = (
     "series_losses", "eliminated", "champion",
 )
 
-EXPECTED_TOTALS = {"H": 241, "HR": 42, "RBI": 137, "K": 296, "ER": 133, "OUTS": 832}
+EXPECTED_TOTALS = {"H": 227, "HR": 33, "RBI": 118, "K": 290, "ER": 116, "OUTS": 832}
 ROLL_COUNTS = {"R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135, "R1-03-G3": 128, "R1-03-G4": 164, "R1-03-G5": 183, "R1-03-G6": 137, "R1-03-G7": 159}
 DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-23"}
 # Per-game dates for locked games whose series is not in DATED: the
-# adopted R1-01 Games 1 and 2 carry their played date, 2026-11-08
-# (Joe's adoption rulings, 2026-11-08); the other R1-01 games keep
-# null dates.
-DATED_GAMES = {"R1-01-G1": "2026-11-08", "R1-01-G2": "2026-11-08"}
+# adopted R1-01 Games 1, 2, and 3 carry their played date,
+# 2026-11-08 (Joe's adoption rulings, 2026-11-08); the other
+# R1-01 games keep null dates.
+DATED_GAMES = {"R1-01-G1": "2026-11-08", "R1-01-G2": "2026-11-08", "R1-01-G3": "2026-11-08"}
 THREE_INNINGS = (
     "A reliever is lifted when he reaches 3 innings pitched in one appearance, "
     "unless he is the last available arm. The last available arm stays in and "
