@@ -98,6 +98,7 @@ This roster text is the one previously published in the tournament rules. Positi
 
 Recorded on that roster and not yet in a box score:
 
+- Thurman Munson (C2)
 - Don Mattingly (1B/BAT)
 - Reggie Jackson (OF/BAT)
 
@@ -121,10 +122,9 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 
 ### Substitutes who have batted
 
-- Bernie Williams (`willibe02`), slot 2
-- Thurman Munson (`munsoth01`), slot 8
-- Willie Randolph (`randowi01`), slot 9
 - Bernie Williams (`willibe02`), slot 6
+- Bernie Williams (`willibe02`), slot 2
+- Willie Randolph (`randowi01`), slot 9
 
 ### Starts, in the order the games were played
 
@@ -142,10 +142,10 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 ### Relievers who have appeared
 
 - David Robertson (`roberda08`), first seen in R1-01-G1
-- Dave Righetti (`righeda01`), first seen in R1-01-G2
-- Mike Stanton (`stantmi02`), first seen in R1-01-G2
 - Mariano Rivera (`riverma01`), first seen in R1-01-G2
 - Goose Gossage (`gossari01`), first seen in W2-01-G2
+- Dave Righetti (`righeda01`), first seen in W2-01-G5
+- Mike Stanton (`stantmi02`), first seen in W2-01-G5
 - Sparky Lyle (`lylesp01`), first seen in W2-01-G5
 
 ## 2. San Francisco Giants (SF)
@@ -2681,7 +2681,6 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 
 ### Substitutes who have batted
 
-- Charles Johnson (`johnsch04`), slot 3
 - Charles Johnson (`johnsch04`), slot 9
 - Dan Uggla (`ugglada01`), slot 1
 
@@ -2703,7 +2702,7 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 - A.J. Ramos (`ramosaj01`), first seen in R1-01-G1
 - Tanner Scott (`scottta01`), first seen in R1-01-G1
 - Steve Cishek (`cishest01`), first seen in R1-01-G1
-- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G2
-- Anthony Bender (`bendean01`), first seen in R1-01-G2
+- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G3
+- Anthony Bender (`bendean01`), first seen in R1-01-G3
 - Robb Nen (`nenro01`), first seen in R1-01-G3
 - A.J. Burnett (`burneaj01`), first seen in R1-01-G3

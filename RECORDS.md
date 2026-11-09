@@ -30,7 +30,6 @@ A start of at least 9 innings (27 outs) with 0 hits.
 
 ## Games with 10 or more runs
 
-- New York Yankees scored 11 against Miami Marlins in R1-01-G2.
 - New York Yankees scored 22 against Miami Marlins in R1-01-G3.
 - New York Yankees scored 17 against Miami Marlins in R1-01-G4.
 - Detroit Tigers scored 10 against Arizona Diamondbacks in R1-04-G6.
