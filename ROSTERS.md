@@ -123,7 +123,6 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 ### Substitutes who have batted
 
 - Bernie Williams (`willibe02`), slot 6
-- Bernie Williams (`willibe02`), slot 2
 - Willie Randolph (`randowi01`), slot 9
 
 ### Starts, in the order the games were played
@@ -2681,8 +2680,8 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 
 ### Substitutes who have batted
 
-- Charles Johnson (`johnsch04`), slot 9
 - Dan Uggla (`ugglada01`), slot 1
+- Charles Johnson (`johnsch04`), slot 9
 
 ### Starts, in the order the games were played
 
@@ -2702,7 +2701,6 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 - A.J. Ramos (`ramosaj01`), first seen in R1-01-G1
 - Tanner Scott (`scottta01`), first seen in R1-01-G1
 - Steve Cishek (`cishest01`), first seen in R1-01-G1
-- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G3
-- Anthony Bender (`bendean01`), first seen in R1-01-G3
-- Robb Nen (`nenro01`), first seen in R1-01-G3
-- A.J. Burnett (`burneaj01`), first seen in R1-01-G3
+- Antonio Alfonseca (`alfonan01`), first seen in R1-01-G4
+- Anthony Bender (`bendean01`), first seen in R1-01-G4
+- Robb Nen (`nenro01`), first seen in R1-01-G4

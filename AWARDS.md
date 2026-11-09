@@ -8,21 +8,21 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Lou Gehrig | New York Yankees | 90.0 | 46 | 13 | 28 | 7 |
-| Babe Ruth | New York Yankees | 61.5 | 32 | 16 | 10 | 4 |
-| Joe DiMaggio | New York Yankees | 54.5 | 28 | 8 | 17 | 5 |
-| Derek Jeter | New York Yankees | 49.5 | 32 | 12 | 4 | 2 |
-| Mickey Mantle | New York Yankees | 49.5 | 28 | 9 | 9 | 4 |
+| Lou Gehrig | New York Yankees | 78.5 | 41 | 13 | 21 | 6 |
+| Babe Ruth | New York Yankees | 53.5 | 30 | 15 | 6 | 3 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
-| Yogi Berra | New York Yankees | 46.0 | 25 | 7 | 10 | 4 |
+| Mickey Mantle | New York Yankees | 44.5 | 24 | 9 | 8 | 3 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
-| Christian Yelich | Miami Marlins | 43.0 | 22 | 8 | 8 | 2 |
+| Christian Yelich | Miami Marlins | 42.5 | 22 | 8 | 8 | 2 |
 | Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
+| Derek Jeter | New York Yankees | 41.5 | 29 | 8 | 4 | 2 |
+| Joe DiMaggio | New York Yankees | 41.0 | 21 | 6 | 13 | 3 |
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
 | José Canseco | Oakland Athletics | 38.0 | 23 | 7 | 5 | 3 |
+| Yogi Berra | New York Yankees | 38.0 | 21 | 5 | 9 | 3 |
 
 ## Cy Young
 
@@ -37,11 +37,11 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
+| Lefty Gomez | New York Yankees | 21.2 | 15.1 | 1 | 18 | 3 |
 | Tim Lincecum | San Francisco Giants | 19.2 | 9.0 | 1 | 16 | 0 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
 | Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
 | Bob Feller | Cleveland Guardians | 16.4 | 14.0 | 2 | 20 | 8 |
-| Lefty Gomez | New York Yankees | 16.2 | 15.1 | 1 | 22 | 7 |
 | Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
 | Jack Morris | Detroit Tigers | 16.0 | 7.2 | 1 | 9 | 0 |
 | Bert Blyleven | Minnesota Twins | 15.9 | 8.0 | 1 | 8 | 0 |
@@ -58,12 +58,12 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Robb Nen | San Francisco Giants | 22.2 | 3 | 3.0 | 3 | 0 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
+| Tanner Scott | Miami Marlins | 18.3 | 0 | 9.2 | 5 | 2 |
 | Juan Cruz | Arizona Diamondbacks | 18.1 | 0 | 11.0 | 9 | 5 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
-| Tanner Scott | Miami Marlins | 14.8 | 0 | 8.2 | 5 | 3 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
 | Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
