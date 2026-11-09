@@ -295,7 +295,7 @@ The amendment takes effect only after the completed R1-04 Detroit–Arizona seri
 - Slot 3: Al Kaline (`kalinal01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 4: Hank Greenberg (`greenha01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 5: Miguel Cabrera (`cabremi01`) in R1-04-G1 (same starter in 5 later games)
-- Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Harry Heilmann (`heilmha01`) in R1-04-G6
+- Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Bobby Veach (`veachbo01`) in R1-04-G6
 - Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 8: George Kell (`kellge01`) in R1-04-G1 (same starter in 5 later games)
 - Slot 9: Alan Trammell (`trammal01`) in R1-04-G1 (same starter in 5 later games)
@@ -2506,6 +2506,10 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Juan Cruz (`cruzju02`), first seen in R1-04-G2
 - Byung-Hyun Kim (`kimby01`), first seen in R1-04-G2
 - Andrew Chafin (`chafian01`), first seen in R1-04-G2
+- Archie Bradley (`bradlar01`), first seen in R1-04-G6
+- Brad Ziegler (`zieglbr01`), first seen in R1-04-G6
+- J.J. Putz (`putzjj01`), first seen in R1-04-G6
+- Curt Schilling (`schilcu01`), first seen in R1-04-G6
 
 ## 30. Tampa Bay Rays (TB)
 
