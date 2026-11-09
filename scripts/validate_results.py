@@ -119,7 +119,13 @@ FINGERPRINT = "81962e7a5b7457db6f43d89813d117622a47160dc30b146c5e25a443fb48fde6"
 # Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
 # The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
 FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
-FROZEN_SERIES_HASH = "7839af494aa7882786c7d5b9268e8f9826bdd8903b49c7d27f1d151ca2eb4df2"
+# Reset 2026-11-09 under Joe's ruling for the R1-01 series MVP:
+# Lou Gehrig (7 for 15, 9 R, 1 3B, 2 HR, 4 RBI, .467) is recorded
+# as the mvp of the R1-01 series entry, the only change to any
+# frozen series object; no game object, club record, or other
+# series field moves. The old value was
+# 7839af494aa7882786c7d5b9268e8f9826bdd8903b49c7d27f1d151ca2eb4df2.
+FROZEN_SERIES_HASH = "87e10cf83a3e02065b6e528acfc27a2f369fae96315a15cd3dbbfc428f5396df"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
 LOCKED_GAME_IDS = (
     "R1-01-G1", "R1-01-G2", "R1-01-G3", "R1-01-G4",

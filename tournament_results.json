@@ -497,6 +497,12 @@
    "status": "complete",
    "winner": "NYY",
    "loser": "MIA",
+   "mvp": {
+    "team": "NYY",
+    "player_id": "gehrilo01",
+    "name": "Lou Gehrig",
+    "line": "7 for 15, 9 R, 1 3B, 2 HR, 4 RBI,.467"
+   },
    "round": 1
   },
   {
