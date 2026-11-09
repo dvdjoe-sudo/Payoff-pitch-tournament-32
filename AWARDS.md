@@ -18,11 +18,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Aaron Judge | New York Yankees | 40.0 | 22 | 7 | 7 | 2 |
+| Bobby Grich | Baltimore Orioles | 39.0 | 24 | 5 | 8 | 3 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
 | Derek Jeter | New York Yankees | 38.5 | 27 | 8 | 2 | 1 |
 | José Canseco | Oakland Athletics | 38.0 | 23 | 7 | 5 | 3 |
 | Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
-| Ryan Howard | Philadelphia Phillies | 36.5 | 21 | 7 | 4 | 1 |
 
 ## Cy Young
 
