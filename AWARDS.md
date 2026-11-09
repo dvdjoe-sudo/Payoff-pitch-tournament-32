@@ -64,6 +64,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
+| Chad Cordero | Washington Nationals | 15.2 | 2 | 2.0 | 3 | 0 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
 | Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |
-| Denny McLain | Detroit Tigers | 14.1 | 1 | 6.1 | 6 | 4 |
