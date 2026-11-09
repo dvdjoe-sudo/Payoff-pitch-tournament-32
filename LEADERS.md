@@ -438,7 +438,6 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Shohei Ohtani | Los Angeles Angels | .355 | 31 |
 | José Canseco | Oakland Athletics | .353 | 51 |
 | Chipper Jones | Atlanta Braves | .353 | 17 |
-| Sammy Sosa | Chicago Cubs | .350 | 21 |
 | Lance Berkman | Houston Astros | .348 | 23 |
 | Bob Boone | Los Angeles Angels | .348 | 23 |
 | Joey Wendle | Tampa Bay Rays | .348 | 23 |
@@ -455,6 +454,7 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Ichiro Suzuki | Seattle Mariners | .333 | 15 |
 | Luke Appling | Chicago White Sox | .333 | 18 |
 | Rubén Sierra | Texas Rangers | .333 | 12 |
+| Sammy Sosa | Chicago Cubs | .333 | 21 |
 | Hank Greenberg | Detroit Tigers | .333 | 27 |
 | Nap Lajoie | Cleveland Guardians | .323 | 33 |
 | Tris Speaker | Boston Red Sox | .323 | 31 |
@@ -731,6 +731,7 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Johnny Callison | Philadelphia Phillies | .477 | 21 | 44 |
 | Mookie Betts | Los Angeles Dodgers | .476 | 10 | 21 |
 | Shohei Ohtani | Los Angeles Dodgers | .476 | 10 | 21 |
+| Tim Raines | Montreal Expos | .476 | 10 | 21 |
 | Hanley Ramirez | Miami Marlins | .474 | 18 | 38 |
 | Gary Gaetti | Minnesota Twins | .474 | 9 | 19 |
 | DJ LeMahieu | Colorado Rockies | .471 | 8 | 17 |
@@ -759,7 +760,6 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Alex Gordon | Kansas City Royals | .438 | 7 | 16 |
 | Anthony Rendon | Washington Nationals | .429 | 12 | 28 |
 | Roberto Alomar | Toronto Blue Jays | .429 | 9 | 21 |
-| Tim Raines | Montreal Expos | .429 | 9 | 21 |
 | Andruw Jones | Atlanta Braves | .429 | 6 | 14 |
 | Joe Medwick | St. Louis Cardinals | .429 | 6 | 14 |
 | Larry Walker | Colorado Rockies | .429 | 6 | 14 |

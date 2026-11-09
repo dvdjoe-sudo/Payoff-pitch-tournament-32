@@ -49,7 +49,13 @@ GAMES = ROOT / "games"
 # Perdomo G3; R1-05: Walker G1, Medwick G4, Arenado G4). No score,
 # result, or pitching line changed. The old value was
 # 70d18c865b46f9fb73c9cae8b124c6e4077b930f21a60ba67f7b87b5799a44dc.
-FINGERPRINT = "5cf9eb317919fe731906b59dffbc3745cf50171a5891cb7cb8b35a5a85dda0ae"
+# Reset 2026-11-08 under Joe's book-correction ruling (the 12 corrections
+# approved from the log-converter diagnosis): three locked lines moved
+# (R1-02 G4: Gio Gonzalez pitching HB filled null to 1 and Will Clark
+# batting GIDP 0 to 1; R1-03 G4: Smoky Joe Wood pitching HB filled null
+# to 1). The other nine corrections sit in unlocked games. The old value was
+# 5cf9eb317919fe731906b59dffbc3745cf50171a5891cb7cb8b35a5a85dda0ae.
+FINGERPRINT = "7aeb589c8e9ed96264591ba9dbd0c83efdfc2b057b7d09a9c5dfbafd1980e5ac"
 # Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
 # The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
 FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
