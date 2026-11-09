@@ -1271,15 +1271,15 @@ The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu 
 
 ### Lineup slots that have batted
 
-- Slot 1: Bobby Grich (`grichbo01`) in R1-15-G1 (same starter in 8 later games)
-- Slot 2: Brady Anderson (`anderbr01`) in R1-15-G1 (same starter in 8 later games)
-- Slot 3: Frank Robinson (`robinfr02`) in R1-15-G1 (same starter in 8 later games)
-- Slot 4: Eddie Murray (`murraed02`) in R1-15-G1; Eddie Murray (`murraed02`) in R1-15-G2; Eddie Murray (`murraed02`) in R1-15-G3; Eddie Murray (`murraed02`) in R1-15-G4; George Sisler (`sislege01`) in R1-15-G5; Eddie Murray (`murraed02`) in L1-02-G1; Eddie Murray (`murraed02`) in L1-02-G2; Eddie Murray (`murraed02`) in L1-02-G3; Eddie Murray (`murraed02`) in L1-02-G4
-- Slot 5: Boog Powell (`powelbo01`) in R1-15-G1 (same starter in 8 later games)
-- Slot 6: Cal Ripken Jr. (`ripkeca01`) in R1-15-G1 (same starter in 8 later games)
-- Slot 7: Brooks Robinson (`robinbr01`) in R1-15-G1 (same starter in 8 later games)
-- Slot 8: Rick Dempsey (`dempsri01`) in R1-15-G1 (same starter in 8 later games)
-- Slot 9: Paul Blair (`blairpa01`) in R1-15-G1 (same starter in 8 later games)
+- Slot 1: Bobby Grich (`grichbo01`) in R1-15-G1 (same starter in 9 later games)
+- Slot 2: Brady Anderson (`anderbr01`) in R1-15-G1 (same starter in 9 later games)
+- Slot 3: Frank Robinson (`robinfr02`) in R1-15-G1 (same starter in 9 later games)
+- Slot 4: Eddie Murray (`murraed02`) in R1-15-G1; Eddie Murray (`murraed02`) in R1-15-G2; Eddie Murray (`murraed02`) in R1-15-G3; Eddie Murray (`murraed02`) in R1-15-G4; George Sisler (`sislege01`) in R1-15-G5; Eddie Murray (`murraed02`) in L1-02-G1; Eddie Murray (`murraed02`) in L1-02-G2; Eddie Murray (`murraed02`) in L1-02-G3; Eddie Murray (`murraed02`) in L1-02-G4; Eddie Murray (`murraed02`) in L1-02-G5
+- Slot 5: Boog Powell (`powelbo01`) in R1-15-G1 (same starter in 9 later games)
+- Slot 6: Cal Ripken Jr. (`ripkeca01`) in R1-15-G1 (same starter in 9 later games)
+- Slot 7: Brooks Robinson (`robinbr01`) in R1-15-G1 (same starter in 9 later games)
+- Slot 8: Rick Dempsey (`dempsri01`) in R1-15-G1 (same starter in 9 later games)
+- Slot 9: Paul Blair (`blairpa01`) in R1-15-G1 (same starter in 9 later games)
 
 ### Substitutes who have batted
 
@@ -1297,6 +1297,7 @@ The six remaining relievers are Gregg Olson, Zach Britton, Félix Bautista, Stu 
 - Mike Mussina (`mussimi01`) started L1-02-G2
 - Dave McNally (`mcnalda01`) started L1-02-G3
 - Mike Cuellar (`cuellmi01`) started L1-02-G4
+- Mike Flanagan (`flanami01`) started L1-02-G5
 
 ### Relievers who have appeared
 
@@ -2561,7 +2562,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ## 31. Washington Nationals (WSH)
 
-Bracket: losers. Series losses: 1. Full 26 Index: 570.8.
+Bracket: eliminated. Series losses: 2. Full 26 Index: 570.8.
 
 ### Approved active roster amendment (2026-10-26)
 
@@ -2575,15 +2576,15 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Denard Span (`spande01`) in R1-02-G1 (same starter in 8 later games)
-- Slot 2: Trea Turner (`turnetr01`) in R1-02-G1 (same starter in 8 later games)
-- Slot 3: Juan Soto (`sotoju01`) in R1-02-G1 (same starter in 8 later games)
-- Slot 4: Bryce Harper (`harpebr03`) in R1-02-G1 (same starter in 8 later games)
-- Slot 5: Anthony Rendon (`rendoan01`) in R1-02-G1 (same starter in 8 later games)
-- Slot 6: Ryan Zimmerman (`zimmery01`) in R1-02-G1 (same starter in 8 later games)
-- Slot 7: Daniel Murphy (`murphda08`) in R1-02-G1 (same starter in 8 later games)
-- Slot 8: Nick Johnson (`johnsni01`) in R1-02-G1 (same starter in 8 later games)
-- Slot 9: Wilson Ramos (`ramoswi01`) in R1-02-G1 (same starter in 8 later games)
+- Slot 1: Denard Span (`spande01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 2: Trea Turner (`turnetr01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 3: Juan Soto (`sotoju01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 4: Bryce Harper (`harpebr03`) in R1-02-G1 (same starter in 9 later games)
+- Slot 5: Anthony Rendon (`rendoan01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 6: Ryan Zimmerman (`zimmery01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 7: Daniel Murphy (`murphda08`) in R1-02-G1 (same starter in 9 later games)
+- Slot 8: Nick Johnson (`johnsni01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 9: Wilson Ramos (`ramoswi01`) in R1-02-G1 (same starter in 9 later games)
 
 ### Starts, in the order the games were played
 
@@ -2596,6 +2597,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Stephen Strasburg (`strasst01`) started L1-02-G2
 - Jordan Zimmermann (`zimmejo02`) started L1-02-G3
 - Gio Gonzalez (`gonzagi01`) started L1-02-G4
+- Livan Hernandez (`hernali01`) started L1-02-G5
 
 ### Relievers who have appeared
 
@@ -2605,6 +2607,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Sean Doolittle (`doolise01`), first seen in L1-02-G1
 - Jon Rauch (`rauchjo01`), first seen in L1-02-G2
 - Sean Burnett (`burnese01`), first seen in L1-02-G2
+- Stephen Strasburg (`strasst01`), first seen in L1-02-G5
 
 ### Rotation carry recorded on the series
 

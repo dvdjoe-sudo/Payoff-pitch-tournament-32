@@ -13,6 +13,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
+| Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
@@ -22,7 +23,6 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
 | Derek Jeter | New York Yankees | 38.5 | 27 | 8 | 2 | 1 |
 | José Canseco | Oakland Athletics | 38.0 | 23 | 7 | 5 | 3 |
-| Jimmie Foxx | Boston Red Sox | 37.5 | 24 | 6 | 8 | 5 |
 
 ## Cy Young
 
