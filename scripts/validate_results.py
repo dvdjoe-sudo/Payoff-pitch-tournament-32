@@ -55,7 +55,22 @@ GAMES = ROOT / "games"
 # batting GIDP 0 to 1; R1-03 G4: Smoky Joe Wood pitching HB filled null
 # to 1). The other nine corrections sit in unlocked games. The old value was
 # 5cf9eb317919fe731906b59dffbc3745cf50171a5891cb7cb8b35a5a85dda0ae.
-FINGERPRINT = "7aeb589c8e9ed96264591ba9dbd0c83efdfc2b057b7d09a9c5dfbafd1980e5ac"
+# Reset 2026-11-08 under Joe's adoption ruling for R1-01 Game 1: his
+# replay (New York 8, Miami 1; W Ford, L Johnson, no save) replaces
+# the booked Game 1 (New York 6, Miami 2, seed 1101, SV Gossage).
+# The game object and its detail file move with it (the replaced
+# game's 72 rolls and manager log are preserved in the Yankees
+# records at archive/replaced/; the adopted game carries an empty
+# rolls array and a null manager log, prints no seed so its
+# rng_seed is 0 as in the R1-06 and R1-10 adoptions, and carries
+# its played date, 2026-11-08, per DATED_GAMES above). The series
+# entry and both club records are unchanged. The old value was
+# 7aeb589c8e9ed96264591ba9dbd0c83efdfc2b057b7d09a9c5dfbafd1980e5ac.
+FINGERPRINT = "e08fd76f62ce45c003bc6dedd085d75c5add3fdbc9e0681dc0d65760a6336ceb"
+# R1-01-G1 left ROLL_COUNTS in the 2026-11-08 adoption reset above:
+# the adopted game carries an empty rolls array, and the replaced
+# game's 72 rolls are preserved with it in the Yankees records at
+# archive/replaced/.
 # Hash of R1-01, R1-02, and R1-03 only. Later series may gain games.
 # The full series-array hash was ef0dbf3849d62473ee2884ced2cb575e6bf66fd4c171b9d6ed95dc2eb7ac8613.
 FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
@@ -81,9 +96,13 @@ TEAM_FIELDS = (
     "series_losses", "eliminated", "champion",
 )
 
-EXPECTED_TOTALS = {"H": 246, "HR": 49, "RBI": 148, "K": 301, "ER": 148, "OUTS": 832}
-ROLL_COUNTS = {"R1-01-G1": 72, "R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135, "R1-03-G3": 128, "R1-03-G4": 164, "R1-03-G5": 183, "R1-03-G6": 137, "R1-03-G7": 159}
+EXPECTED_TOTALS = {"H": 249, "HR": 45, "RBI": 150, "K": 300, "ER": 148, "OUTS": 832}
+ROLL_COUNTS = {"R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135, "R1-03-G3": 128, "R1-03-G4": 164, "R1-03-G5": 183, "R1-03-G6": 137, "R1-03-G7": 159}
 DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-23"}
+# Per-game dates for locked games whose series is not in DATED: the
+# adopted R1-01 Game 1 carries its played date, 2026-11-08 (Joe's
+# adoption ruling, 2026-11-08); the other R1-01 games keep null dates.
+DATED_GAMES = {"R1-01-G1": "2026-11-08"}
 THREE_INNINGS = (
     "A reliever is lifted when he reaches 3 innings pitched in one appearance, "
     "unless he is the last available arm. The last available arm stays in and "
@@ -187,7 +206,9 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         check.expect(detail["id"] == game["id"] and detail["series_id"] == game["series_id"], f"{game['id']} detail identity")
         check.expect(detail["game_in_series"] == game["game_in_series"], f"{game['id']} detail game number")
         if game["id"] in set(LOCKED_GAME_IDS):
-            if game["series_id"] in DATED:
+            if game["id"] in DATED_GAMES:
+                check.expect(game.get("date") == DATED_GAMES[game["id"]], f"{game['id']} date")
+            elif game["series_id"] in DATED:
                 check.expect(game.get("date") == DATED[game["series_id"]], f"{game['id']} date")
             else:
                 check.expect(game.get("date") is None, f"{game['id']} date should be null")
@@ -265,7 +286,7 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
     for game_id, count in ROLL_COUNTS.items():
         check.expect(len(details[game_id]["rolls"]) == count, f"{game_id} roll count")
     check.expect(details["R1-01-G2"]["manager_log"] is None, "R1-01-G2 manager log stays null")
-    check.expect(data["games"][0].get("rng_seed", data["games"][0].get("seed")) == 1101, "R1-01-G1 rng seed")
+    check.expect(data["games"][0].get("rng_seed", data["games"][0].get("seed")) == 0, "R1-01-G1 rng seed")
     check.expect(data["games"][4].get("rng_seed", data["games"][4].get("seed")) == 20261101, "R1-02-G1 rng seed")
     check.expect(data["games"][9].get("rng_seed", data["games"][9].get("seed")) == 20261201, "R1-03-G1 rng seed")
 
