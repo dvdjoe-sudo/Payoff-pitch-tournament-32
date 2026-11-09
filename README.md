@@ -11,7 +11,7 @@ Current standing (22 games played):
 - R1-01: New York Yankees 4-0 over the Miami Marlins. Complete. Played under APBA before the switch; adopted into this tournament by Joe's ruling; never to be replayed.
 - R1-02: San Francisco Giants 4-1 over the Washington Nationals. Complete. Played in Payoff Pitch on 2026-10-24.
 - R1-03: Boston Red Sox 4-3 over the Tampa Bay Rays. Complete. Played in Payoff Pitch. Game 1 was a Pedro Martinez no-hitter at Fenway. Boston advances on the winners side at 1-0. Tampa Bay drops to the losers side at 0-1 and is not eliminated. Series MVP: Roger Clemens. Runner-up: Jimmie Foxx.
-- R1-04: Detroit Tigers 4-2 over the Arizona Diamondbacks. Complete. Played in Payoff Pitch on 2026-10-25. Arizona took the first two games in Detroit, Game 2 in thirteen innings; Detroit won the last four after Joe's lineup ruling started Harry Heilmann in left field. Game 5 was played twice; the fresh re-play is the official game, and the superseded first playing is not in this archive. Detroit advances on the winners side at 1-0. Arizona drops to the losers side at 0-1 and is not eliminated. Series MVP: Harry Heilmann. Runner-up: George Kell.
+- R1-04: Detroit Tigers 4-2 over the Arizona Diamondbacks. Complete. Played in Payoff Pitch on 2026-10-25. Arizona took the first two games in Detroit, Game 2 in thirteen innings; Detroit won the last four after Joe's lineup ruling started Harry Heilmann in left field. Game 5 was played twice; the fresh re-play is the official game, and the superseded first playing is not in this archive. Detroit advances on the winners side at 1-0. Arizona drops to the losers side at 0-1 and is not eliminated. Series MVP: Bill Freehan. Runner-up: George Kell.
 
 ## Seeds
 
