@@ -548,6 +548,18 @@
     },
     "rotation_note": "Each club used its five starters in posted order (SF: Mathewson, Hubbell, Marichal, Perry, Lincecum; WSH: Scherzer, Strasburg, Zimmermann, Gio Gonzalez, Livan Hernandez), so the cycle carries to the top in each club's next series.",
     "arms": "Bullpen availability resets between rounds; no pitcher carries a restriction out of this series. Availability inside the series ran under the house outs convention and no reliever was ever capped."
+   },
+   "mvp": {
+    "team": "SF",
+    "player_id": "ottme01",
+    "name": "Mel Ott",
+    "line": "7 for 16, 2 R, 1 3B, 1 HR, 4 RBI, .438"
+   },
+   "mvp_runner_up": {
+    "team": "SF",
+    "player_id": "mayswi01",
+    "name": "Willie Mays",
+    "line": "7 for 18, 4 R, 2 2B, 5 SB, 1 RBI, .389"
    }
   },
   {
@@ -39240,7 +39252,7 @@
      "k": 0,
      "hr": 2,
      "hb": 0,
-     "bf": 17,
+     "bf": 18,
      "entry_diff": null,
      "entry_inning": 1
     },
@@ -39257,7 +39269,7 @@
      "k": 1,
      "hr": 0,
      "hb": 0,
-     "bf": 5,
+     "bf": 4,
      "entry_diff": null,
      "entry_inning": null
     },
@@ -76328,10 +76340,10 @@
      "k": 0,
      "hbp": 0,
      "sb": 0,
-     "cs": 1,
-     "sac": 0,
-     "sf": 1,
-     "gidp": 0,
+     "cs": 0,
+     "sac": 1,
+     "sf": 0,
+     "gidp": 1,
      "ibb": null
     }
    ],

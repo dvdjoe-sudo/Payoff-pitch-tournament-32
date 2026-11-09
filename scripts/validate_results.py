@@ -125,7 +125,18 @@ FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
 # frozen series object; no game object, club record, or other
 # series field moves. The old value was
 # 7839af494aa7882786c7d5b9268e8f9826bdd8903b49c7d27f1d151ca2eb4df2.
-FROZEN_SERIES_HASH = "87e10cf83a3e02065b6e528acfc27a2f369fae96315a15cd3dbbfc428f5396df"
+# Reset again 2026-11-09 under Joe's ruling for the R1-02 series
+# MVP: Mel Ott (7 for 16, 2 R, 1 3B, 1 HR, 4 RBI, .438) is recorded
+# as the mvp of the R1-02 series entry and Willie Mays (7 for 18,
+# 4 R, 2 2B, 5 SB, 1 RBI, .389) as its mvp_runner_up, the only
+# changes to any frozen series object; no game object, club
+# record, or other series field moves. (The same commit corrects
+# two non-frozen game lines outside the frozen set: Wilson Ramos's
+# L1-02-G3 batting line and the Caldwell/Fingers batters-faced
+# split in R1-10-G5; neither touches a frozen series object or a
+# locked game.) The old value was
+# 87e10cf83a3e02065b6e528acfc27a2f369fae96315a15cd3dbbfc428f5396df.
+FROZEN_SERIES_HASH = "c649c5eed50de7054ff8fef52c81d74e7c3753e11185a3d59bfae22b9768c5ae"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
 LOCKED_GAME_IDS = (
     "R1-01-G1", "R1-01-G2", "R1-01-G3", "R1-01-G4",
