@@ -616,7 +616,7 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | George Foster | Cincinnati Reds | .118 | 17 |
 | Amos Otis | Kansas City Royals | .118 | 17 |
 | Ken Griffey Jr. | Seattle Mariners | .105 | 19 |
-| Wilson Ramos | Washington Nationals | .100 | 32 |
+| Wilson Ramos | Washington Nationals | .103 | 32 |
 | Carlos Pena | Tampa Bay Rays | .095 | 21 |
 | Harry Heilmann | Detroit Tigers | .091 | 11 |
 | Carl Crawford | Tampa Bay Rays | .083 | 24 |
