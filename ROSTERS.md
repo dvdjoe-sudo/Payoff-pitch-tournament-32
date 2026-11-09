@@ -467,7 +467,7 @@ These names are not on the active roster.
 ### Lineup slots that have batted
 
 - Slot 1: Ryne Sandberg (`sandbry01`) in R1-06-G1 (same starter in 4 later games)
-- Slot 2: Mark Grace (`gracema01`) in R1-06-G1; Anthony Rizzo (`rizzoan01`) in R1-06-G2; Anthony Rizzo (`rizzoan01`) in R1-06-G3; Mark Grace (`gracema01`) in R1-06-G4; Mark Grace (`gracema01`) in R1-06-G5
+- Slot 2: Anthony Rizzo (`rizzoan01`) in R1-06-G1; Anthony Rizzo (`rizzoan01`) in R1-06-G2; Anthony Rizzo (`rizzoan01`) in R1-06-G3; Mark Grace (`gracema01`) in R1-06-G4; Mark Grace (`gracema01`) in R1-06-G5
 - Slot 3: Ron Santo (`santoro01`) in R1-06-G1 (same starter in 4 later games)
 - Slot 4: Sammy Sosa (`sosasa01`) in R1-06-G1 (same starter in 4 later games)
 - Slot 5: Billy Williams (`willibi01`) in R1-06-G1 (same starter in 4 later games)
@@ -486,9 +486,8 @@ These names are not on the active roster.
 
 ### Relievers who have appeared
 
-- Kerry Wood (`woodke02`), first seen in R1-06-G1
-- Bruce Sutter (`suttebr01`), first seen in R1-06-G1
 - Pedro Strop (`stroppe01`), first seen in R1-06-G2
+- Bruce Sutter (`suttebr01`), first seen in R1-06-G2
 - Lee Smith (`smithle02`), first seen in R1-06-G2
 - Mordecai Brown (`brownmo01`), first seen in R1-06-G5
 
@@ -2355,8 +2354,6 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Substitutes who have batted
 
-- Brian Schneider (`schnebr01`), slot 9
-- Rusty Staub (`staubru01`), slot 9
 - Brian Schneider (`schnebr01`), slot 5
 - Mike Lansing (`lansimi01`), slot 2
 
@@ -2370,11 +2367,11 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Relievers who have appeared
 
-- Tim Burke (`burketi01`), first seen in R1-06-G1
 - John Wetteland (`wettejo01`), first seen in R1-06-G2
 - Mel Rojas (`rojasme01`), first seen in R1-06-G3
 - Jeff Reardon (`reardje01`), first seen in R1-06-G3
 - Andy McGaffigan (`mcgafan01`), first seen in R1-06-G4
+- Tim Burke (`burketi01`), first seen in R1-06-G4
 
 ## 28. Colorado Rockies (COL)
 
