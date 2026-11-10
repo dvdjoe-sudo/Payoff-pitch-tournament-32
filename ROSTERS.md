@@ -163,15 +163,15 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Willie Mays (`mayswi01`) in R1-02-G1 (same starter in 7 later games)
-- Slot 2: Will Clark (`clarkwi02`) in R1-02-G1 (same starter in 7 later games)
-- Slot 3: Mel Ott (`ottme01`) in R1-02-G1 (same starter in 7 later games)
-- Slot 4: Barry Bonds (`bondsba01`) in R1-02-G1 (same starter in 7 later games)
-- Slot 5: Willie McCovey (`mccovwi01`) in R1-02-G1 (same starter in 7 later games)
-- Slot 6: Jeff Kent (`kentje01`) in R1-02-G1 (same starter in 7 later games)
-- Slot 7: Buster Posey (`poseybu01`) in R1-02-G1 (same starter in 7 later games)
-- Slot 8: Matt Williams (`willima04`) in R1-02-G1 (same starter in 7 later games)
-- Slot 9: Art Fletcher (`fletcar01`) in R1-02-G1 (same starter in 7 later games)
+- Slot 1: Willie Mays (`mayswi01`) in R1-02-G1 (same starter in 8 later games)
+- Slot 2: Will Clark (`clarkwi02`) in R1-02-G1 (same starter in 8 later games)
+- Slot 3: Mel Ott (`ottme01`) in R1-02-G1 (same starter in 8 later games)
+- Slot 4: Barry Bonds (`bondsba01`) in R1-02-G1 (same starter in 8 later games)
+- Slot 5: Willie McCovey (`mccovwi01`) in R1-02-G1 (same starter in 8 later games)
+- Slot 6: Jeff Kent (`kentje01`) in R1-02-G1 (same starter in 8 later games)
+- Slot 7: Buster Posey (`poseybu01`) in R1-02-G1 (same starter in 8 later games)
+- Slot 8: Matt Williams (`willima04`) in R1-02-G1 (same starter in 8 later games)
+- Slot 9: Art Fletcher (`fletcar01`) in R1-02-G1 (same starter in 8 later games)
 - Slot 10: Frankie Frisch (`friscfr01`) in W2-02-G3
 - Slot 11: Bob Brenly (`brenlbo01`) in W2-02-G3
 
@@ -193,6 +193,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Christy Mathewson (`mathech01`) started W2-02-G1
 - Carl Hubbell (`hubbeca01`) started W2-02-G2
 - Juan Marichal (`maricju01`) started W2-02-G3
+- Tim Lincecum (`linceti01`) started W2-02-G4
 
 ### Relievers who have appeared
 
@@ -1487,7 +1488,7 @@ Barry's original converted card stays in the historical card catalog, and the or
 
 ## 18. Kansas City Royals (KC)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 647.4.
+Bracket: losers. Series losses: 1. Full 26 Index: 647.4.
 
 Manager: Ned Yost (10 seasons).
 
@@ -1543,17 +1544,17 @@ These approvals are prospective only. All genuine original card bodies, includin
 
 ### Lineup slots that have batted
 
-- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1 (same starter in 7 later games)
-- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1; Danny Tartabull (`tartada01`) in R1-15-G2; Danny Tartabull (`tartada01`) in R1-15-G3; Danny Tartabull (`tartada01`) in R1-15-G4; Danny Tartabull (`tartada01`) in R1-15-G5; Danny Tartabull (`tartada01`) in W2-02-G1; Carlos Beltrán (`beltrca01`) in W2-02-G2; Carlos Beltrán (`beltrca01`) in W2-02-G3
-- Slot 3: George Brett (`brettge01`) in R1-15-G1 (same starter in 7 later games)
-- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1 (same starter in 7 later games)
-- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1 (same starter in 7 later games)
-- Slot 6: Amos Otis (`otisam01`) in R1-15-G1; Amos Otis (`otisam01`) in R1-15-G2; Amos Otis (`otisam01`) in R1-15-G3; Amos Otis (`otisam01`) in R1-15-G4; Carlos Beltrán (`beltrca01`) in R1-15-G5; Amos Otis (`otisam01`) in W2-02-G1; Danny Tartabull (`tartada01`) in W2-02-G2; Danny Tartabull (`tartada01`) in W2-02-G3
-- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1 (same starter in 7 later games)
-- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1 (same starter in 7 later games)
-- Slot 9: Frank White (`whitefr01`) in R1-15-G1 (same starter in 7 later games)
-- Slot 10: John Mayberry (`maybejo01`) in W2-02-G1; Hal McRae (`mcraeha01`) in W2-02-G2; John Mayberry (`maybejo01`) in W2-02-G3
-- Slot 11: Darrell Porter (`porteda02`) in W2-02-G1 (same starter in 1 later game)
+- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1 (same starter in 8 later games)
+- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1; Danny Tartabull (`tartada01`) in R1-15-G2; Danny Tartabull (`tartada01`) in R1-15-G3; Danny Tartabull (`tartada01`) in R1-15-G4; Danny Tartabull (`tartada01`) in R1-15-G5; Danny Tartabull (`tartada01`) in W2-02-G1; Carlos Beltrán (`beltrca01`) in W2-02-G2; Carlos Beltrán (`beltrca01`) in W2-02-G3; Carlos Beltrán (`beltrca01`) in W2-02-G4
+- Slot 3: George Brett (`brettge01`) in R1-15-G1 (same starter in 8 later games)
+- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1 (same starter in 8 later games)
+- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1 (same starter in 8 later games)
+- Slot 6: Amos Otis (`otisam01`) in R1-15-G1; Amos Otis (`otisam01`) in R1-15-G2; Amos Otis (`otisam01`) in R1-15-G3; Amos Otis (`otisam01`) in R1-15-G4; Carlos Beltrán (`beltrca01`) in R1-15-G5; Amos Otis (`otisam01`) in W2-02-G1; Danny Tartabull (`tartada01`) in W2-02-G2; Danny Tartabull (`tartada01`) in W2-02-G3; Danny Tartabull (`tartada01`) in W2-02-G4
+- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1 (same starter in 8 later games)
+- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1 (same starter in 8 later games)
+- Slot 9: Frank White (`whitefr01`) in R1-15-G1 (same starter in 8 later games)
+- Slot 10: John Mayberry (`maybejo01`) in W2-02-G1; Hal McRae (`mcraeha01`) in W2-02-G2; John Mayberry (`maybejo01`) in W2-02-G3; Darrell Porter (`porteda02`) in W2-02-G4
+- Slot 11: Darrell Porter (`porteda02`) in W2-02-G1; Darrell Porter (`porteda02`) in W2-02-G3; John Mayberry (`maybejo01`) in W2-02-G4
 - Slot 12: Hal McRae (`mcraeha01`) in W2-02-G1
 
 ### Substitutes who have batted
@@ -1572,6 +1573,7 @@ These approvals are prospective only. All genuine original card bodies, includin
 - Kevin Appier (`appieke01`) started W2-02-G1
 - Bret Saberhagen (`saberbr01`) started W2-02-G2
 - Mark Gubicza (`gubicma01`) started W2-02-G3
+- Zack Greinke (`greinza01`) started W2-02-G4
 
 ### Relievers who have appeared
 
