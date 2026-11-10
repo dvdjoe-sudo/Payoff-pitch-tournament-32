@@ -42,3 +42,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Philadelphia Athletics scored 10 against Houston Astros in R1-16-G5.
 - Houston Astros scored 11 against Philadelphia Athletics in R1-16-G5.
 - New York Yankees scored 10 against Oakland Athletics in W2-01-G5.
+- San Francisco Giants scored 10 against Kansas City Royals in W2-02-G3.

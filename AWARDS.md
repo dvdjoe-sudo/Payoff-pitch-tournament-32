@@ -21,8 +21,8 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Aaron Judge | New York Yankees | 40.0 | 22 | 7 | 7 | 2 |
 | Bobby Grich | Baltimore Orioles | 39.0 | 24 | 5 | 8 | 3 |
 | Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
+| Willie Mays | San Francisco Giants | 39.0 | 21 | 9 | 4 | 1 |
 | Derek Jeter | New York Yankees | 38.5 | 27 | 8 | 2 | 1 |
-| José Canseco | Oakland Athletics | 38.0 | 23 | 7 | 5 | 3 |
 
 ## Cy Young
 
@@ -52,18 +52,18 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
-| Robb Nen | San Francisco Giants | 30.9 | 4 | 5.0 | 6 | 1 |
+| Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
+| Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
+| Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
-| Kelvin Herrera | Kansas City Royals | 16.0 | 1 | 5.2 | 3 | 1 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
-| Greg Holland | Kansas City Royals | 15.3 | 0 | 6.2 | 5 | 0 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
 | Tanner Scott | Miami Marlins | 14.3 | 0 | 7.2 | 5 | 2 |
 | Juan Cruz | Arizona Diamondbacks | 14.2 | 0 | 6.2 | 6 | 1 |
