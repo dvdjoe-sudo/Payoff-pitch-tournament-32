@@ -32,6 +32,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | --- | --- | --- | --- | --- | --- | --- |
 | Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
+| Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Ron Guidry | New York Yankees | 17.9 | 16.0 | 1 | 14 | 5 |
 | Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
 | Bob Feller | Cleveland Guardians | 16.4 | 14.0 | 2 | 20 | 8 |
-| Blake Snell | Tampa Bay Rays | 16.0 | 9.0 | 1 | 8 | 0 |
 
 ## Reliever
 
@@ -52,18 +52,18 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
+| Robb Nen | San Francisco Giants | 30.9 | 4 | 5.0 | 6 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
-| Robb Nen | San Francisco Giants | 24.6 | 3 | 4.0 | 4 | 0 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
+| Kelvin Herrera | Kansas City Royals | 16.0 | 1 | 5.2 | 3 | 1 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
+| Greg Holland | Kansas City Royals | 15.3 | 0 | 6.2 | 5 | 0 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
-| Kelvin Herrera | Kansas City Royals | 14.7 | 1 | 4.2 | 1 | 0 |
 | Tanner Scott | Miami Marlins | 14.3 | 0 | 7.2 | 5 | 2 |
 | Juan Cruz | Arizona Diamondbacks | 14.2 | 0 | 6.2 | 6 | 1 |
-| Emmanuel Clase | Cleveland Guardians | 14.2 | 1 | 4.0 | 3 | 0 |

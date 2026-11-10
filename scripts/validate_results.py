@@ -499,7 +499,7 @@ def documents(check: Check) -> None:
     check.expect("LEADERS.md" in (ROOT / "LEADERBOARDS.md").read_text(encoding="utf-8"), "old leaderboard file points at the one board")
     leaders_text = (ROOT / "LEADERS.md").read_text(encoding="utf-8")
     check.expect("| Roger Clemens | Boston Red Sox | 1.12 |" in leaders_text, "Clemens ERA is 1.12")
-    check.expect("| Carl Hubbell | San Francisco Giants | 1.12 |" in leaders_text, "Hubbell ERA is 1.12")
+    check.expect("| Carl Hubbell | San Francisco Giants | 0.56 |" in leaders_text, "Hubbell ERA is 0.56")
     check.expect("TODO for Joe" in (ROOT / "ROSTERS.md").read_text(encoding="utf-8"), "roster stubs")
     html = (ROOT / "index.html").read_text(encoding="utf-8")
     script = (ROOT / "js" / "bracket.js").read_text(encoding="utf-8")
