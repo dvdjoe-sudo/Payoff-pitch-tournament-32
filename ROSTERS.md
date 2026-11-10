@@ -163,15 +163,15 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Willie Mays (`mayswi01`) in R1-02-G1 (same starter in 4 later games)
-- Slot 2: Will Clark (`clarkwi02`) in R1-02-G1 (same starter in 4 later games)
-- Slot 3: Mel Ott (`ottme01`) in R1-02-G1 (same starter in 4 later games)
-- Slot 4: Barry Bonds (`bondsba01`) in R1-02-G1 (same starter in 4 later games)
-- Slot 5: Willie McCovey (`mccovwi01`) in R1-02-G1 (same starter in 4 later games)
-- Slot 6: Jeff Kent (`kentje01`) in R1-02-G1 (same starter in 4 later games)
-- Slot 7: Buster Posey (`poseybu01`) in R1-02-G1 (same starter in 4 later games)
-- Slot 8: Matt Williams (`willima04`) in R1-02-G1 (same starter in 4 later games)
-- Slot 9: Art Fletcher (`fletcar01`) in R1-02-G1 (same starter in 4 later games)
+- Slot 1: Willie Mays (`mayswi01`) in R1-02-G1 (same starter in 5 later games)
+- Slot 2: Will Clark (`clarkwi02`) in R1-02-G1 (same starter in 5 later games)
+- Slot 3: Mel Ott (`ottme01`) in R1-02-G1 (same starter in 5 later games)
+- Slot 4: Barry Bonds (`bondsba01`) in R1-02-G1 (same starter in 5 later games)
+- Slot 5: Willie McCovey (`mccovwi01`) in R1-02-G1 (same starter in 5 later games)
+- Slot 6: Jeff Kent (`kentje01`) in R1-02-G1 (same starter in 5 later games)
+- Slot 7: Buster Posey (`poseybu01`) in R1-02-G1 (same starter in 5 later games)
+- Slot 8: Matt Williams (`willima04`) in R1-02-G1 (same starter in 5 later games)
+- Slot 9: Art Fletcher (`fletcar01`) in R1-02-G1 (same starter in 5 later games)
 
 ### Substitutes who have batted
 
@@ -188,11 +188,14 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Juan Marichal (`maricju01`) started R1-02-G3
 - Gaylord Perry (`perryga01`) started R1-02-G4
 - Tim Lincecum (`linceti01`) started R1-02-G5
+- Christy Mathewson (`mathech01`) started W2-02-G1
 
 ### Relievers who have appeared
 
 - Robb Nen (`nenro01`), first seen in R1-02-G1
 - Sergio Romo (`romose01`), first seen in R1-02-G3
+- Rod Beck (`beckro01`), first seen in W2-02-G1
+- Gary Lavelle (`lavelga01`), first seen in W2-02-G1
 
 ### Rotation carry recorded on the series
 
@@ -1536,15 +1539,18 @@ These approvals are prospective only. All genuine original card bodies, includin
 
 ### Lineup slots that have batted
 
-- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1 (same starter in 4 later games)
-- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1 (same starter in 4 later games)
-- Slot 3: George Brett (`brettge01`) in R1-15-G1 (same starter in 4 later games)
-- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1 (same starter in 4 later games)
-- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1 (same starter in 4 later games)
-- Slot 6: Amos Otis (`otisam01`) in R1-15-G1; Amos Otis (`otisam01`) in R1-15-G2; Amos Otis (`otisam01`) in R1-15-G3; Amos Otis (`otisam01`) in R1-15-G4; Carlos Beltrán (`beltrca01`) in R1-15-G5
-- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1 (same starter in 4 later games)
-- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1 (same starter in 4 later games)
-- Slot 9: Frank White (`whitefr01`) in R1-15-G1 (same starter in 4 later games)
+- Slot 1: Willie Wilson (`wilsowi02`) in R1-15-G1 (same starter in 5 later games)
+- Slot 2: Danny Tartabull (`tartada01`) in R1-15-G1 (same starter in 5 later games)
+- Slot 3: George Brett (`brettge01`) in R1-15-G1 (same starter in 5 later games)
+- Slot 4: Bobby Witt Jr. (`wittbo02`) in R1-15-G1 (same starter in 5 later games)
+- Slot 5: Mike Sweeney (`sweenmi01`) in R1-15-G1 (same starter in 5 later games)
+- Slot 6: Amos Otis (`otisam01`) in R1-15-G1; Amos Otis (`otisam01`) in R1-15-G2; Amos Otis (`otisam01`) in R1-15-G3; Amos Otis (`otisam01`) in R1-15-G4; Carlos Beltrán (`beltrca01`) in R1-15-G5; Amos Otis (`otisam01`) in W2-02-G1
+- Slot 7: Alex Gordon (`gordoal01`) in R1-15-G1 (same starter in 5 later games)
+- Slot 8: Salvador Pérez (`perezsa02`) in R1-15-G1 (same starter in 5 later games)
+- Slot 9: Frank White (`whitefr01`) in R1-15-G1 (same starter in 5 later games)
+- Slot 10: John Mayberry (`maybejo01`) in W2-02-G1
+- Slot 11: Darrell Porter (`porteda02`) in W2-02-G1
+- Slot 12: Hal McRae (`mcraeha01`) in W2-02-G1
 
 ### Substitutes who have batted
 
@@ -1559,6 +1565,7 @@ These approvals are prospective only. All genuine original card bodies, includin
 - Mark Gubicza (`gubicma01`) started R1-15-G3
 - Zack Greinke (`greinza01`) started R1-15-G4
 - David Cone (`coneda01`) started R1-15-G5
+- Kevin Appier (`appieke01`) started W2-02-G1
 
 ### Relievers who have appeared
 
