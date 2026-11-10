@@ -17,6 +17,7 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Tommy Bridges (Detroit Tigers), R1-04-G4: 13 K in 7.2 IP.
 - Jacob deGrom (New York Mets), R1-12-G3: 12 K in 6.0 IP.
 - Grover Cleveland Alexander (Philadelphia Phillies), L1-01-G3: 11 K in 7.2 IP.
+- Lefty Grove (Philadelphia Athletics), L1-03-G1: 11 K in 9.0 IP.
 - Pedro Martinez (Boston Red Sox), R1-03-G1: 11 K in 9.0 IP.
 - Pedro Martinez (Boston Red Sox), R1-03-G6: 11 K in 8.0 IP.
 - Josh Hader (Milwaukee Brewers), R1-10-G5: 11 K in 5.2 IP.

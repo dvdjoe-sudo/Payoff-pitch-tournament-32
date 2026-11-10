@@ -35,6 +35,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Tim Lincecum | San Francisco Giants | 28.1 | 16.0 | 2 | 21 | 3 |
+| Lefty Grove | Philadelphia Athletics | 26.9 | 18.0 | 2 | 16 | 4 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
 | Ron Guidry | New York Yankees | 17.9 | 16.0 | 1 | 14 | 5 |
 | Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
-| Bob Feller | Cleveland Guardians | 16.4 | 14.0 | 2 | 20 | 8 |
 
 ## Reliever
 
