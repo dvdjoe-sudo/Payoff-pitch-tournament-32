@@ -1462,15 +1462,15 @@ Barry's original converted card stays in the historical card catalog, and the or
 
 ### Lineup slots that have batted
 
-- Slot 1: Eddie Collins (`collied01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 2: Mickey Cochrane (`cochrmi01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 3: Al Simmons (`simmoal01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 4: Jimmie Foxx (`foxxji01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 5: Bob Johnson (`johnsbo01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 6: Home Run Baker (`bakerfr01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 7: Wally Moses (`moseswa01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 8: Eddie Joost (`joosted01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 9: Ferris Fain (`fainfe01`) in R1-16-G1; Ferris Fain (`fainfe01`) in R1-16-G2; Ferris Fain (`fainfe01`) in R1-16-G3; Amos Strunk (`strunam01`) in R1-16-G4; Amos Strunk (`strunam01`) in R1-16-G5; Ferris Fain (`fainfe01`) in L1-03-G1
+- Slot 1: Eddie Collins (`collied01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 2: Mickey Cochrane (`cochrmi01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 3: Al Simmons (`simmoal01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 4: Jimmie Foxx (`foxxji01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 5: Bob Johnson (`johnsbo01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 6: Home Run Baker (`bakerfr01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 7: Wally Moses (`moseswa01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 8: Eddie Joost (`joosted01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 9: Ferris Fain (`fainfe01`) in R1-16-G1; Ferris Fain (`fainfe01`) in R1-16-G2; Ferris Fain (`fainfe01`) in R1-16-G3; Amos Strunk (`strunam01`) in R1-16-G4; Amos Strunk (`strunam01`) in R1-16-G5; Ferris Fain (`fainfe01`) in L1-03-G1; Ferris Fain (`fainfe01`) in L1-03-G2
 
 ### Starts, in the order the games were played
 
@@ -1480,6 +1480,7 @@ Barry's original converted card stays in the historical card catalog, and the or
 - Chief Bender (`bendech01`) started R1-16-G4
 - Jack Coombs (`coombja01`) started R1-16-G5
 - Lefty Grove (`grovele01`) started L1-03-G1
+- Eddie Plank (`planked01`) started L1-03-G2
 
 ### Relievers who have appeared
 
@@ -2543,17 +2544,19 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Carl Crawford (`crawfca02`) in R1-03-G1 (same starter in 7 later games)
-- Slot 2: Yandy Diaz (`diazya01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 3: Evan Longoria (`longoev01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 4: Carlos Pena (`penaca01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 5: Ben Zobrist (`zobribe01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 6: Brandon Lowe (`lowebr01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 7: Jason Bartlett (`bartlja01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 8: Kevin Kiermaier (`kiermke01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 9: Toby Hall (`hallto02`) in R1-03-G1 (same starter in 7 later games)
-- Slot 10: B.J. Upton (`uptonbj01`) in L1-03-G1
-- Slot 11: Randy Arozarena (`arozara01`) in L1-03-G1
+- Slot 1: Carl Crawford (`crawfca02`) in R1-03-G1; Carl Crawford (`crawfca02`) in R1-03-G2; Carl Crawford (`crawfca02`) in R1-03-G3; Carl Crawford (`crawfca02`) in R1-03-G4; Carl Crawford (`crawfca02`) in R1-03-G5; Carl Crawford (`crawfca02`) in R1-03-G6; Carl Crawford (`crawfca02`) in R1-03-G7; Carl Crawford (`crawfca02`) in L1-03-G1; B.J. Upton (`uptonbj01`) in L1-03-G2
+- Slot 2: Yandy Diaz (`diazya01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 3: Evan Longoria (`longoev01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 4: Carlos Pena (`penaca01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 5: Ben Zobrist (`zobribe01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 6: Brandon Lowe (`lowebr01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 7: Jason Bartlett (`bartlja01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 8: Kevin Kiermaier (`kiermke01`) in R1-03-G1; Kevin Kiermaier (`kiermke01`) in R1-03-G2; Kevin Kiermaier (`kiermke01`) in R1-03-G3; Kevin Kiermaier (`kiermke01`) in R1-03-G4; Kevin Kiermaier (`kiermke01`) in R1-03-G5; Kevin Kiermaier (`kiermke01`) in R1-03-G6; Kevin Kiermaier (`kiermke01`) in R1-03-G7; Kevin Kiermaier (`kiermke01`) in L1-03-G1; Randy Arozarena (`arozara01`) in L1-03-G2
+- Slot 9: Toby Hall (`hallto02`) in R1-03-G1 (same starter in 8 later games)
+- Slot 10: B.J. Upton (`uptonbj01`) in L1-03-G1; Aubrey Huff (`huffau01`) in L1-03-G2
+- Slot 11: Randy Arozarena (`arozara01`) in L1-03-G1; Kevin Kiermaier (`kiermke01`) in L1-03-G2
+- Slot 12: Carl Crawford (`crawfca02`) in L1-03-G2
+- Slot 13: Joey Wendle (`wendljo01`) in L1-03-G2
 
 ### Substitutes who have batted
 
@@ -2573,6 +2576,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - David Price (`priceda01`) started R1-03-G6
 - James Shields (`shielja02`) started R1-03-G7
 - David Price (`priceda01`) started L1-03-G1
+- James Shields (`shielja02`) started L1-03-G2
 
 ### Relievers who have appeared
 
