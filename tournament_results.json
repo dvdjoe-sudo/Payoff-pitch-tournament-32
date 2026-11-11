@@ -1638,7 +1638,13 @@
    "feeder_labels": [
     "Reseeded pool: Winners of the 16 opening-round series. Paired highest surviving seed vs lowest.",
     "Forms when Round 1 is complete (all 16 opening series)."
-   ]
+   ],
+   "mvp": {
+    "line": "8 for 19, 6 R, 3 2B, 1 HR, 3 RBI, .421",
+    "name": "Willie Mays",
+    "player_id": "mayswi01",
+    "team": "SF"
+   }
   },
   {
    "id": "W2-03",

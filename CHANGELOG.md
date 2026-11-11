@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-11-10 — W2-02 series MVP: Willie Mays (Joe's ruling)
+
+Joe ruled Willie Mays the MVP of Winners Round 2, Series 2 (San Francisco swept Kansas City 4-0, 20 runs to 11). Mays's series line from the four booked games: 8 for 19, 6 runs, 3 doubles, 1 home run, 3 RBI, .421. The ruling is stored on the W2-02 series entry in `tournament_results.json`. No game result was changed.
+
 ## 2026-10-27 — Phillies: Johnny Callison replaces Billy Hamilton
 
 The owner requested this change.
