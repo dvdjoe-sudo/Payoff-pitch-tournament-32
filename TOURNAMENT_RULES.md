@@ -36,6 +36,10 @@ There is no home-field advantage adjustment. Home and away results are tracked, 
 
 Every club plays with the designated hitter in every series (Joe, 2026-10-26). No club plays NL-style. This settles the question the Open questions section previously carried about St. Louis; it is now closed. The ruling changes nothing already recorded: every governed series to date was played with a designated hitter, and every converted lineup carries a DH slot, so no recorded game, set file, or archive entry changes.
 
+## Play rows and the GIDP definition
+
+Play rows govern over the app's printed GIDP definition (Joe, 2026-11-10). A double play counts as it happened in the play rows, whether it came on a ground ball or a line out; the app's printed batting line counts only ground-ball double plays, so a player's row-rebuilt GIDP can exceed his printed line (Art Fletcher in W2-02 Game 1: rows 2, printed 1; Willie McCovey in W2-02 Game 2: rows 1, printed 0). When this definition is the only field where a game's rows differ from its printed lines, the rows are adopted without a separate per-game ruling. Printed lines in the book are never rewritten; the difference is noted in the game's record.
+
 ## Governance hierarchy
 
 When rules speak to the same decision, they apply in this order (Joe's rulings):

@@ -2,6 +2,10 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+## 2026-11-10 — W2-02 Game 2 play rows adopted; standing GIDP definition (Joe's ruling)
+
+Joe adopted the play rows for W2-02 Game 2 and set the standing definition the same evening: double plays count as they happened, and play rows are adopted when this GIDP definition is the only difference. The 72 native rows attach verbatim to the Game 2 record (staged payload `staged-W2-02-G2.plays.json`), with the one difference on the record: the rows rebuild Willie McCovey at 1 GIDP (bottom-of-the-6th ground-ball double play on the hit and run) while the app's printed line credits 0. The printed line is unchanged. This closes the last lines-only game in the book. No game result was changed.
+
 ## 2026-11-10 — W2-02 series MVP: Willie Mays (Joe's ruling)
 
 Joe ruled Willie Mays the MVP of Winners Round 2, Series 2 (San Francisco swept Kansas City 4-0, 20 runs to 11). Mays's series line from the four booked games: 8 for 19, 6 runs, 3 doubles, 1 home run, 3 RBI, .421. The ruling is stored on the W2-02 series entry in `tournament_results.json`. No game result was changed.
