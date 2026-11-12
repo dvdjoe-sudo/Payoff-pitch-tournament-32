@@ -11,18 +11,18 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
+| Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 | Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
 | Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Home Run Baker | Philadelphia Athletics | 43.0 | 22 | 8 | 10 | 2 |
+| Edgar Martínez | Seattle Mariners | 42.5 | 21 | 7 | 12 | 3 |
 | Jimmie Foxx | Philadelphia Athletics | 42.5 | 23 | 7 | 9 | 3 |
 | Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
 | Willie Mays | San Francisco Giants | 41.0 | 23 | 10 | 4 | 1 |
-| Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
-| Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 
 ## Cy Young
 
@@ -61,9 +61,9 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
 | Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |
-| Byung-Hyun Kim | Arizona Diamondbacks | 18.5 | 1 | 5.1 | 7 | 0 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 17.3 | 1 | 5.1 | 4 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
+| Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |

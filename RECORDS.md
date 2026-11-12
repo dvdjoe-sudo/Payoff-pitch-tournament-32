@@ -47,3 +47,5 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Tampa Bay Rays scored 10 against Philadelphia Athletics in L1-03-G5.
 - Philadelphia Athletics scored 16 against Tampa Bay Rays in L1-03-G6.
 - Seattle Mariners scored 13 against Arizona Diamondbacks in L1-04-G1.
+- Seattle Mariners scored 14 against Arizona Diamondbacks in L1-04-G4.
+- Arizona Diamondbacks scored 11 against Seattle Mariners in L1-04-G4.
