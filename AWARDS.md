@@ -10,10 +10,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | --- | --- | --- | --- | --- | --- | --- |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
+| Mickey Cochrane | Philadelphia Athletics | 49.0 | 29 | 12 | 5 | 4 |
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
-| Mickey Cochrane | Philadelphia Athletics | 45.5 | 28 | 10 | 5 | 4 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
+| Bob Johnson | Philadelphia Athletics | 43.0 | 25 | 7 | 7 | 3 |
 | Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
 | Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
@@ -21,7 +22,6 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Chuck Klein | Philadelphia Phillies | 40.5 | 25 | 7 | 5 | 3 |
 | Dale Murphy | Atlanta Braves | 40.5 | 24 | 7 | 9 | 5 |
 | Aaron Judge | New York Yankees | 40.0 | 22 | 7 | 7 | 2 |
-| Bob Johnson | Philadelphia Athletics | 40.0 | 23 | 6 | 7 | 3 |
 | Bobby Grich | Baltimore Orioles | 39.0 | 24 | 5 | 8 | 3 |
 
 ## Cy Young
@@ -55,6 +55,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
+| Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
 | Joe Berry | Philadelphia Athletics | 15.4 | 0 | 8.0 | 6 | 2 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
-| Pete Fairbanks | Tampa Bay Rays | 15.0 | 2 | 4.1 | 2 | 3 |
