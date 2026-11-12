@@ -45,3 +45,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - New York Yankees scored 10 against Oakland Athletics in W2-01-G5.
 - San Francisco Giants scored 10 against Kansas City Royals in W2-02-G3.
 - Tampa Bay Rays scored 10 against Philadelphia Athletics in L1-03-G5.
+- Philadelphia Athletics scored 16 against Tampa Bay Rays in L1-03-G6.
