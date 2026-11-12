@@ -1651,19 +1651,20 @@ All previously created player cards and previously played games, scores, box sco
 
 ### Lineup slots that have batted
 
-- Slot 1: Ichiro Suzuki (`suzukic01`) in R1-14-G1 (same starter in 5 later games)
-- Slot 2: Alex Rodriguez (`rodrial01`) in R1-14-G1 (same starter in 5 later games)
-- Slot 3: Ken Griffey Jr. (`griffke02`) in R1-14-G1 (same starter in 5 later games)
-- Slot 4: Edgar Martínez (`martied01`) in R1-14-G1 (same starter in 5 later games)
-- Slot 5: Raúl Ibañez (`ibanera01`) in R1-14-G1; Raúl Ibañez (`ibanera01`) in R1-14-G2; Raúl Ibañez (`ibanera01`) in R1-14-G3; Raúl Ibañez (`ibanera01`) in R1-14-G4; Jay Buhner (`buhneja01`) in L1-04-G1; Jay Buhner (`buhneja01`) in L1-04-G2
-- Slot 6: Cal Raleigh (`raleica01`) in R1-14-G1 (same starter in 5 later games)
-- Slot 7: John Olerud (`olerujo01`) in R1-14-G1 (same starter in 5 later games)
-- Slot 8: Bret Boone (`boonebr01`) in R1-14-G1 (same starter in 5 later games)
-- Slot 9: Kyle Seager (`seageky01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 1: Ichiro Suzuki (`suzukic01`) in R1-14-G1 (same starter in 6 later games)
+- Slot 2: Alex Rodriguez (`rodrial01`) in R1-14-G1 (same starter in 6 later games)
+- Slot 3: Ken Griffey Jr. (`griffke02`) in R1-14-G1 (same starter in 6 later games)
+- Slot 4: Edgar Martínez (`martied01`) in R1-14-G1 (same starter in 6 later games)
+- Slot 5: Raúl Ibañez (`ibanera01`) in R1-14-G1; Raúl Ibañez (`ibanera01`) in R1-14-G2; Raúl Ibañez (`ibanera01`) in R1-14-G3; Raúl Ibañez (`ibanera01`) in R1-14-G4; Jay Buhner (`buhneja01`) in L1-04-G1; Jay Buhner (`buhneja01`) in L1-04-G2; Jay Buhner (`buhneja01`) in L1-04-G3
+- Slot 6: Cal Raleigh (`raleica01`) in R1-14-G1 (same starter in 6 later games)
+- Slot 7: John Olerud (`olerujo01`) in R1-14-G1; John Olerud (`olerujo01`) in R1-14-G2; John Olerud (`olerujo01`) in R1-14-G3; John Olerud (`olerujo01`) in R1-14-G4; John Olerud (`olerujo01`) in L1-04-G1; John Olerud (`olerujo01`) in L1-04-G2; Alvin Davis (`davisal01`) in L1-04-G3
+- Slot 8: Bret Boone (`boonebr01`) in R1-14-G1 (same starter in 6 later games)
+- Slot 9: Kyle Seager (`seageky01`) in R1-14-G1; Kyle Seager (`seageky01`) in R1-14-G2; Kyle Seager (`seageky01`) in R1-14-G3; Kyle Seager (`seageky01`) in R1-14-G4; Kyle Seager (`seageky01`) in L1-04-G1; Kyle Seager (`seageky01`) in L1-04-G2; Adrián Beltré (`beltrad01`) in L1-04-G3
 
 ### Substitutes who have batted
 
 - Jay Buhner (`buhneja01`), slot 1
+- Kyle Seager (`seageky01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -1673,6 +1674,7 @@ All previously created player cards and previously played games, scores, box sco
 - Mark Langston (`langsma01`) started R1-14-G4
 - Randy Johnson (`johnsra05`) started L1-04-G1
 - Félix Hernández (`hernafe02`) started L1-04-G2
+- Jamie Moyer (`moyerja01`) started L1-04-G3
 
 ### Relievers who have appeared
 
@@ -2505,15 +2507,15 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Corbin Carroll (`carroco02`) in R1-04-G1 (same starter in 7 later games)
-- Slot 2: Paul Goldschmidt (`goldspa01`) in R1-04-G1 (same starter in 7 later games)
-- Slot 3: Ketel Marte (`marteke01`) in R1-04-G1 (same starter in 7 later games)
-- Slot 4: Luis Gonzalez (`gonzalu01`) in R1-04-G1 (same starter in 7 later games)
-- Slot 5: Christian Walker (`walkech02`) in R1-04-G1 (same starter in 7 later games)
-- Slot 6: Steve Finley (`finlest01`) in R1-04-G1 (same starter in 7 later games)
-- Slot 7: Matt Williams (`willima04`) in R1-04-G1 (same starter in 7 later games)
-- Slot 8: Gabriel Moreno (`morenga01`) in R1-04-G1 (same starter in 7 later games)
-- Slot 9: Geraldo Perdomo (`perdoge01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 1: Corbin Carroll (`carroco02`) in R1-04-G1 (same starter in 8 later games)
+- Slot 2: Paul Goldschmidt (`goldspa01`) in R1-04-G1 (same starter in 8 later games)
+- Slot 3: Ketel Marte (`marteke01`) in R1-04-G1; Ketel Marte (`marteke01`) in R1-04-G2; Ketel Marte (`marteke01`) in R1-04-G3; Ketel Marte (`marteke01`) in R1-04-G4; Ketel Marte (`marteke01`) in R1-04-G5; Ketel Marte (`marteke01`) in R1-04-G6; Ketel Marte (`marteke01`) in L1-04-G1; Ketel Marte (`marteke01`) in L1-04-G2; Craig Counsell (`counscr01`) in L1-04-G3
+- Slot 4: Luis Gonzalez (`gonzalu01`) in R1-04-G1 (same starter in 8 later games)
+- Slot 5: Christian Walker (`walkech02`) in R1-04-G1 (same starter in 8 later games)
+- Slot 6: Steve Finley (`finlest01`) in R1-04-G1 (same starter in 8 later games)
+- Slot 7: Matt Williams (`willima04`) in R1-04-G1 (same starter in 8 later games)
+- Slot 8: Gabriel Moreno (`morenga01`) in R1-04-G1 (same starter in 8 later games)
+- Slot 9: Geraldo Perdomo (`perdoge01`) in R1-04-G1 (same starter in 8 later games)
 
 ### Starts, in the order the games were played
 
@@ -2525,6 +2527,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Randy Johnson (`johnsra05`) started R1-04-G6
 - Randy Johnson (`johnsra05`) started L1-04-G1
 - Curt Schilling (`schilcu01`) started L1-04-G2
+- Brandon Webb (`webbbr01`) started L1-04-G3
 
 ### Relievers who have appeared
 

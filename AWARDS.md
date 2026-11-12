@@ -61,9 +61,9 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
 | Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |
+| Byung-Hyun Kim | Arizona Diamondbacks | 18.5 | 1 | 5.1 | 7 | 0 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
+| Jose Valverde | Arizona Diamondbacks | 17.3 | 1 | 5.1 | 4 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
-| Byung-Hyun Kim | Arizona Diamondbacks | 16.1 | 1 | 4.1 | 6 | 0 |
-| Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
