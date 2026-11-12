@@ -1392,7 +1392,19 @@
    "feeder_labels": [
     "Reseeded pool: Losers of the 16 opening-round series. Paired highest surviving seed vs lowest.",
     "Forms when Round 1 is complete (all 16 opening series)."
-   ]
+   ],
+   "mvp": {
+    "team": "PHA",
+    "player_id": "bakerfr01",
+    "name": "Home Run Baker",
+    "line": "8 for 22, 6 R, 2 2B, 1 3B, 2 HR, 6 RBI, .364"
+   },
+   "mvp_runner_up": {
+    "team": "PHA",
+    "player_id": "cochrmi01",
+    "name": "Mickey Cochrane",
+    "line": "9 for 23, 5 R, 3 HR, 6 RBI, .391"
+   }
   },
   {
    "id": "L1-04",
