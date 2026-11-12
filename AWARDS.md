@@ -42,9 +42,9 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
 | Lefty Gomez | New York Yankees | 21.2 | 15.1 | 1 | 18 | 3 |
+| Blake Snell | Tampa Bay Rays | 20.0 | 13.0 | 1 | 14 | 1 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
 | Ron Guidry | New York Yankees | 17.9 | 16.0 | 1 | 14 | 5 |
-| Tommy Bridges | Detroit Tigers | 17.3 | 7.2 | 1 | 13 | 0 |
 
 ## Reliever
 
@@ -65,5 +65,5 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
+| Pete Fairbanks | Tampa Bay Rays | 15.0 | 2 | 4.1 | 2 | 3 |
 | Tanner Scott | Miami Marlins | 14.3 | 0 | 7.2 | 5 | 2 |
-| Juan Cruz | Arizona Diamondbacks | 14.2 | 0 | 6.2 | 6 | 1 |
