@@ -12,6 +12,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
+| Mickey Cochrane | Philadelphia Athletics | 45.5 | 28 | 10 | 5 | 4 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
 | Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
@@ -22,7 +23,6 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Aaron Judge | New York Yankees | 40.0 | 22 | 7 | 7 | 2 |
 | Bob Johnson | Philadelphia Athletics | 40.0 | 23 | 6 | 7 | 3 |
 | Bobby Grich | Baltimore Orioles | 39.0 | 24 | 5 | 8 | 3 |
-| Mike Schmidt | Philadelphia Phillies | 39.0 | 21 | 8 | 7 | 2 |
 
 ## Cy Young
 
@@ -64,6 +64,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
+| Joe Berry | Philadelphia Athletics | 15.4 | 0 | 8.0 | 6 | 2 |
 | Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |
 | Pete Fairbanks | Tampa Bay Rays | 15.0 | 2 | 4.1 | 2 | 3 |
-| Tanner Scott | Miami Marlins | 14.3 | 0 | 7.2 | 5 | 2 |
