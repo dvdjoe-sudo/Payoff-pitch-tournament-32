@@ -65,5 +65,5 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
+| Byung-Hyun Kim | Arizona Diamondbacks | 16.1 | 1 | 4.1 | 6 | 0 |
 | Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
-| Rick Honeycutt | Oakland Athletics | 15.2 | 0 | 9.0 | 8 | 4 |

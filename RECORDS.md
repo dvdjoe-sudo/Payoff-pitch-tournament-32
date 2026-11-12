@@ -46,3 +46,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - San Francisco Giants scored 10 against Kansas City Royals in W2-02-G3.
 - Tampa Bay Rays scored 10 against Philadelphia Athletics in L1-03-G5.
 - Philadelphia Athletics scored 16 against Tampa Bay Rays in L1-03-G6.
+- Seattle Mariners scored 13 against Arizona Diamondbacks in L1-04-G1.
