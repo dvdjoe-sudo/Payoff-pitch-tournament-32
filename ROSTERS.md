@@ -1745,21 +1745,22 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 
 ### Lineup slots that have batted
 
-- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1; Garret Anderson (`anderga01`) in R1-13-G2; Garret Anderson (`anderga01`) in R1-13-G3; Garret Anderson (`anderga01`) in R1-13-G4; Garret Anderson (`anderga01`) in R1-13-G5; Garret Anderson (`anderga01`) in R1-13-G6; Garret Anderson (`anderga01`) in R1-13-G7; Garret Anderson (`anderga01`) in L1-05-G1; Garret Anderson (`anderga01`) in L1-05-G2; Garret Anderson (`anderga01`) in L1-05-G3; Jim Edmonds (`edmonji01`) in L1-05-G4; Jim Edmonds (`edmonji01`) in L1-05-G5; Jim Edmonds (`edmonji01`) in L1-05-G6
-- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 12 later games)
+- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1; Garret Anderson (`anderga01`) in R1-13-G2; Garret Anderson (`anderga01`) in R1-13-G3; Garret Anderson (`anderga01`) in R1-13-G4; Garret Anderson (`anderga01`) in R1-13-G5; Garret Anderson (`anderga01`) in R1-13-G6; Garret Anderson (`anderga01`) in R1-13-G7; Garret Anderson (`anderga01`) in L1-05-G1; Garret Anderson (`anderga01`) in L1-05-G2; Garret Anderson (`anderga01`) in L1-05-G3; Jim Edmonds (`edmonji01`) in L1-05-G4; Jim Edmonds (`edmonji01`) in L1-05-G5; Jim Edmonds (`edmonji01`) in L1-05-G6; Jim Edmonds (`edmonji01`) in L1-05-G7
+- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 13 later games)
 
 ### Substitutes who have batted
 
 - Mike Napoli (`napolmi01`), slot 9
 - Tim Salmon (`salmoti01`), slot 3
 - Tim Salmon (`salmoti01`), slot 10
+- Garret Anderson (`anderga01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -1776,6 +1777,7 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 - Jered Weaver (`weaveje02`) started L1-05-G4
 - Mark Langston (`langsma01`) started L1-05-G5
 - Chuck Finley (`finlech01`) started L1-05-G6
+- Nolan Ryan (`ryanno01`) started L1-05-G7
 
 ### Relievers who have appeared
 
@@ -2411,7 +2413,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ## 28. Colorado Rockies (COL)
 
-Bracket: losers. Series losses: 1. Full 26 Index: 467.4.
+Bracket: eliminated. Series losses: 2. Full 26 Index: 467.4.
 
 Manager: Bud Black.
 
@@ -2467,15 +2469,15 @@ González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 
 
 ### Lineup slots that have batted
 
-- Slot 1: Charlie Blackmon (`blackch02`) in R1-05-G1; Charlie Blackmon (`blackch02`) in R1-05-G2; Charlie Blackmon (`blackch02`) in R1-05-G3; Ellis Burks (`burksel01`) in R1-05-G4; Charlie Blackmon (`blackch02`) in L1-05-G1; Charlie Blackmon (`blackch02`) in L1-05-G2; Charlie Blackmon (`blackch02`) in L1-05-G3; Charlie Blackmon (`blackch02`) in L1-05-G4; Charlie Blackmon (`blackch02`) in L1-05-G5; Charlie Blackmon (`blackch02`) in L1-05-G6
-- Slot 2: DJ LeMahieu (`lemahdj01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 3: Todd Helton (`heltoto01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 4: Nolan Arenado (`arenano01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 5: Larry Walker (`walkela01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 6: Troy Tulowitzki (`tulowtr01`) in R1-05-G1; Troy Tulowitzki (`tulowtr01`) in R1-05-G2; Troy Tulowitzki (`tulowtr01`) in R1-05-G3; Troy Tulowitzki (`tulowtr01`) in R1-05-G4; Troy Tulowitzki (`tulowtr01`) in L1-05-G1; Troy Tulowitzki (`tulowtr01`) in L1-05-G2; Troy Tulowitzki (`tulowtr01`) in L1-05-G3; Trevor Story (`storytr01`) in L1-05-G4; Trevor Story (`storytr01`) in L1-05-G5; Trevor Story (`storytr01`) in L1-05-G6
-- Slot 7: Matt Holliday (`hollima01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 8: Elias Diaz (`diazel01`) in R1-05-G1; Elias Diaz (`diazel01`) in R1-05-G2; Yorvit Torrealba (`torreyo01`) in R1-05-G3; Yorvit Torrealba (`torreyo01`) in R1-05-G4; Elias Diaz (`diazel01`) in L1-05-G1; Elias Diaz (`diazel01`) in L1-05-G2; Elias Diaz (`diazel01`) in L1-05-G3; Yorvit Torrealba (`torreyo01`) in L1-05-G4; Yorvit Torrealba (`torreyo01`) in L1-05-G5; Yorvit Torrealba (`torreyo01`) in L1-05-G6
-- Slot 9: Andres Galarraga (`galaran01`) in R1-05-G1; Andres Galarraga (`galaran01`) in R1-05-G2; Andres Galarraga (`galaran01`) in R1-05-G3; Andres Galarraga (`galaran01`) in R1-05-G4; Andres Galarraga (`galaran01`) in L1-05-G1; Andres Galarraga (`galaran01`) in L1-05-G2; Andres Galarraga (`galaran01`) in L1-05-G3; Troy Tulowitzki (`tulowtr01`) in L1-05-G4; Troy Tulowitzki (`tulowtr01`) in L1-05-G5; Troy Tulowitzki (`tulowtr01`) in L1-05-G6
+- Slot 1: Charlie Blackmon (`blackch02`) in R1-05-G1; Charlie Blackmon (`blackch02`) in R1-05-G2; Charlie Blackmon (`blackch02`) in R1-05-G3; Ellis Burks (`burksel01`) in R1-05-G4; Charlie Blackmon (`blackch02`) in L1-05-G1; Charlie Blackmon (`blackch02`) in L1-05-G2; Charlie Blackmon (`blackch02`) in L1-05-G3; Charlie Blackmon (`blackch02`) in L1-05-G4; Charlie Blackmon (`blackch02`) in L1-05-G5; Charlie Blackmon (`blackch02`) in L1-05-G6; Charlie Blackmon (`blackch02`) in L1-05-G7
+- Slot 2: DJ LeMahieu (`lemahdj01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 3: Todd Helton (`heltoto01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 4: Nolan Arenado (`arenano01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 5: Larry Walker (`walkela01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 6: Troy Tulowitzki (`tulowtr01`) in R1-05-G1; Troy Tulowitzki (`tulowtr01`) in R1-05-G2; Troy Tulowitzki (`tulowtr01`) in R1-05-G3; Troy Tulowitzki (`tulowtr01`) in R1-05-G4; Troy Tulowitzki (`tulowtr01`) in L1-05-G1; Troy Tulowitzki (`tulowtr01`) in L1-05-G2; Troy Tulowitzki (`tulowtr01`) in L1-05-G3; Trevor Story (`storytr01`) in L1-05-G4; Trevor Story (`storytr01`) in L1-05-G5; Trevor Story (`storytr01`) in L1-05-G6; Trevor Story (`storytr01`) in L1-05-G7
+- Slot 7: Matt Holliday (`hollima01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 8: Elias Diaz (`diazel01`) in R1-05-G1; Elias Diaz (`diazel01`) in R1-05-G2; Yorvit Torrealba (`torreyo01`) in R1-05-G3; Yorvit Torrealba (`torreyo01`) in R1-05-G4; Elias Diaz (`diazel01`) in L1-05-G1; Elias Diaz (`diazel01`) in L1-05-G2; Elias Diaz (`diazel01`) in L1-05-G3; Yorvit Torrealba (`torreyo01`) in L1-05-G4; Yorvit Torrealba (`torreyo01`) in L1-05-G5; Yorvit Torrealba (`torreyo01`) in L1-05-G6; Yorvit Torrealba (`torreyo01`) in L1-05-G7
+- Slot 9: Andres Galarraga (`galaran01`) in R1-05-G1; Andres Galarraga (`galaran01`) in R1-05-G2; Andres Galarraga (`galaran01`) in R1-05-G3; Andres Galarraga (`galaran01`) in R1-05-G4; Andres Galarraga (`galaran01`) in L1-05-G1; Andres Galarraga (`galaran01`) in L1-05-G2; Andres Galarraga (`galaran01`) in L1-05-G3; Troy Tulowitzki (`tulowtr01`) in L1-05-G4; Troy Tulowitzki (`tulowtr01`) in L1-05-G5; Troy Tulowitzki (`tulowtr01`) in L1-05-G6; Troy Tulowitzki (`tulowtr01`) in L1-05-G7
 
 ### Substitutes who have batted
 
@@ -2494,6 +2496,7 @@ González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 
 - German Marquez (`marquge01`) started L1-05-G4
 - Jhoulys Chacin (`chacijh01`) started L1-05-G5
 - Kyle Freeland (`freelky01`) started L1-05-G6
+- Aaron Cook (`cookaa01`) started L1-05-G7
 
 ### Relievers who have appeared
 

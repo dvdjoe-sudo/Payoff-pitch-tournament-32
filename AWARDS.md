@@ -8,21 +8,21 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Mike Trout | Los Angeles Angels | 67.5 | 29 | 13 | 16 | 2 |
+| Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
+| Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
-| Shohei Ohtani | Los Angeles Angels | 55.5 | 30 | 13 | 8 | 3 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 | Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
+| Jim Fregosi | Los Angeles Angels | 48.0 | 28 | 10 | 8 | 2 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
 | Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Home Run Baker | Philadelphia Athletics | 43.0 | 22 | 8 | 10 | 2 |
 | Edgar Martínez | Seattle Mariners | 42.5 | 21 | 7 | 12 | 3 |
 | Jimmie Foxx | Philadelphia Athletics | 42.5 | 23 | 7 | 9 | 3 |
-| Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
 
 ## Cy Young
 
@@ -36,6 +36,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Tim Lincecum | San Francisco Giants | 28.1 | 16.0 | 2 | 21 | 3 |
+| Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
 | Lefty Gomez | New York Yankees | 21.2 | 15.1 | 1 | 18 | 3 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
-| Ron Guidry | New York Yankees | 17.9 | 16.0 | 1 | 14 | 5 |
 
 ## Reliever
 
@@ -55,15 +55,15 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
+| Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
 | Troy Percival | Los Angeles Angels | 20.2 | 0 | 10.0 | 8 | 2 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
+| Rafael Betancourt | Colorado Rockies | 18.7 | 0 | 8.2 | 11 | 2 |
 | Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
-| Francisco Rodríguez | Los Angeles Angels | 17.6 | 1 | 6.1 | 11 | 3 |
-| Rafael Betancourt | Colorado Rockies | 17.4 | 0 | 7.2 | 9 | 1 |
