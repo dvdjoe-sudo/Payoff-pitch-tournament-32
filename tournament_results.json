@@ -1450,7 +1450,19 @@
    "feeder_labels": [
     "Reseeded pool: Losers of the 16 opening-round series. Paired highest surviving seed vs lowest.",
     "Forms when Round 1 is complete (all 16 opening series)."
-   ]
+   ],
+   "mvp": {
+    "team": "SEA",
+    "player_id": "rodrial01",
+    "name": "Alex Rodriguez",
+    "line": "8 for 18, 8 R, 1 2B, 4 HR, 9 RBI, .444"
+   },
+   "mvp_runner_up": {
+    "team": "SEA",
+    "player_id": "griffke02",
+    "name": "Ken Griffey Jr.",
+    "line": "8 for 15, 6 R, 2 2B, 2 HR, 7 RBI, .533"
+   }
   },
   {
    "id": "L1-05",
