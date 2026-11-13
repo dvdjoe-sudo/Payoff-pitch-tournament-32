@@ -11,8 +11,8 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
-| Shohei Ohtani | Los Angeles Angels | 52.0 | 29 | 12 | 8 | 3 |
-| Mike Trout | Los Angeles Angels | 50.5 | 22 | 10 | 12 | 1 |
+| Shohei Ohtani | Los Angeles Angels | 55.5 | 30 | 13 | 8 | 3 |
+| Mike Trout | Los Angeles Angels | 53.0 | 22 | 11 | 12 | 1 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 | Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
@@ -59,9 +59,9 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
+| Troy Percival | Los Angeles Angels | 20.2 | 0 | 10.0 | 8 | 2 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
 | Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |
-| Troy Percival | Los Angeles Angels | 18.2 | 0 | 8.2 | 6 | 1 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
