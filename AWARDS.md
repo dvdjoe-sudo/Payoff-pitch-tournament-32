@@ -43,8 +43,8 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
 | Lefty Gomez | New York Yankees | 21.2 | 15.1 | 1 | 18 | 3 |
 | Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
+| Chuck Finley | Los Angeles Angels | 18.0 | 14.1 | 1 | 8 | 2 |
 | Ron Guidry | New York Yankees | 17.9 | 16.0 | 1 | 14 | 5 |
-| Blake Snell | Tampa Bay Rays | 17.8 | 15.0 | 1 | 17 | 4 |
 
 ## Reliever
 
