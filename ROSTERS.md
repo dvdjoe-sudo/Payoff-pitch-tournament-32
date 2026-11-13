@@ -1745,15 +1745,15 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 
 ### Lineup slots that have batted
 
-- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 9 later games)
-- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 9 later games)
+- Slot 1: Shohei Ohtani (`ohtansh01`) in R1-13-G1 (same starter in 10 later games)
+- Slot 2: Mike Trout (`troutmi01`) in R1-13-G1 (same starter in 10 later games)
+- Slot 3: Vladimir Guerrero (`guerrvl01`) in R1-13-G1 (same starter in 10 later games)
+- Slot 4: Troy Glaus (`glaustr01`) in R1-13-G1 (same starter in 10 later games)
+- Slot 5: Wally Joyner (`joynewa01`) in R1-13-G1 (same starter in 10 later games)
+- Slot 6: Garret Anderson (`anderga01`) in R1-13-G1; Garret Anderson (`anderga01`) in R1-13-G2; Garret Anderson (`anderga01`) in R1-13-G3; Garret Anderson (`anderga01`) in R1-13-G4; Garret Anderson (`anderga01`) in R1-13-G5; Garret Anderson (`anderga01`) in R1-13-G6; Garret Anderson (`anderga01`) in R1-13-G7; Garret Anderson (`anderga01`) in L1-05-G1; Garret Anderson (`anderga01`) in L1-05-G2; Garret Anderson (`anderga01`) in L1-05-G3; Jim Edmonds (`edmonji01`) in L1-05-G4
+- Slot 7: Bobby Grich (`grichbo01`) in R1-13-G1 (same starter in 10 later games)
+- Slot 8: Jim Fregosi (`fregoji01`) in R1-13-G1 (same starter in 10 later games)
+- Slot 9: Bob Boone (`boonebo01`) in R1-13-G1 (same starter in 10 later games)
 
 ### Substitutes who have batted
 
@@ -1773,6 +1773,7 @@ Existing original cards and played games, results, box scores, scoresheets, FAC 
 - Chuck Finley (`finlech01`) started L1-05-G1
 - Nolan Ryan (`ryanno01`) started L1-05-G2
 - Frank Tanana (`tananfr01`) started L1-05-G3
+- Jered Weaver (`weaveje02`) started L1-05-G4
 
 ### Relievers who have appeared
 
@@ -2464,15 +2465,15 @@ González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 
 
 ### Lineup slots that have batted
 
-- Slot 1: Charlie Blackmon (`blackch02`) in R1-05-G1; Charlie Blackmon (`blackch02`) in R1-05-G2; Charlie Blackmon (`blackch02`) in R1-05-G3; Ellis Burks (`burksel01`) in R1-05-G4; Charlie Blackmon (`blackch02`) in L1-05-G1; Charlie Blackmon (`blackch02`) in L1-05-G2; Charlie Blackmon (`blackch02`) in L1-05-G3
-- Slot 2: DJ LeMahieu (`lemahdj01`) in R1-05-G1 (same starter in 6 later games)
-- Slot 3: Todd Helton (`heltoto01`) in R1-05-G1 (same starter in 6 later games)
-- Slot 4: Nolan Arenado (`arenano01`) in R1-05-G1 (same starter in 6 later games)
-- Slot 5: Larry Walker (`walkela01`) in R1-05-G1 (same starter in 6 later games)
-- Slot 6: Troy Tulowitzki (`tulowtr01`) in R1-05-G1 (same starter in 6 later games)
-- Slot 7: Matt Holliday (`hollima01`) in R1-05-G1 (same starter in 6 later games)
-- Slot 8: Elias Diaz (`diazel01`) in R1-05-G1; Elias Diaz (`diazel01`) in R1-05-G2; Yorvit Torrealba (`torreyo01`) in R1-05-G3; Yorvit Torrealba (`torreyo01`) in R1-05-G4; Elias Diaz (`diazel01`) in L1-05-G1; Elias Diaz (`diazel01`) in L1-05-G2; Elias Diaz (`diazel01`) in L1-05-G3
-- Slot 9: Andres Galarraga (`galaran01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 1: Charlie Blackmon (`blackch02`) in R1-05-G1; Charlie Blackmon (`blackch02`) in R1-05-G2; Charlie Blackmon (`blackch02`) in R1-05-G3; Ellis Burks (`burksel01`) in R1-05-G4; Charlie Blackmon (`blackch02`) in L1-05-G1; Charlie Blackmon (`blackch02`) in L1-05-G2; Charlie Blackmon (`blackch02`) in L1-05-G3; Charlie Blackmon (`blackch02`) in L1-05-G4
+- Slot 2: DJ LeMahieu (`lemahdj01`) in R1-05-G1 (same starter in 7 later games)
+- Slot 3: Todd Helton (`heltoto01`) in R1-05-G1 (same starter in 7 later games)
+- Slot 4: Nolan Arenado (`arenano01`) in R1-05-G1 (same starter in 7 later games)
+- Slot 5: Larry Walker (`walkela01`) in R1-05-G1 (same starter in 7 later games)
+- Slot 6: Troy Tulowitzki (`tulowtr01`) in R1-05-G1; Troy Tulowitzki (`tulowtr01`) in R1-05-G2; Troy Tulowitzki (`tulowtr01`) in R1-05-G3; Troy Tulowitzki (`tulowtr01`) in R1-05-G4; Troy Tulowitzki (`tulowtr01`) in L1-05-G1; Troy Tulowitzki (`tulowtr01`) in L1-05-G2; Troy Tulowitzki (`tulowtr01`) in L1-05-G3; Trevor Story (`storytr01`) in L1-05-G4
+- Slot 7: Matt Holliday (`hollima01`) in R1-05-G1 (same starter in 7 later games)
+- Slot 8: Elias Diaz (`diazel01`) in R1-05-G1; Elias Diaz (`diazel01`) in R1-05-G2; Yorvit Torrealba (`torreyo01`) in R1-05-G3; Yorvit Torrealba (`torreyo01`) in R1-05-G4; Elias Diaz (`diazel01`) in L1-05-G1; Elias Diaz (`diazel01`) in L1-05-G2; Elias Diaz (`diazel01`) in L1-05-G3; Yorvit Torrealba (`torreyo01`) in L1-05-G4
+- Slot 9: Andres Galarraga (`galaran01`) in R1-05-G1; Andres Galarraga (`galaran01`) in R1-05-G2; Andres Galarraga (`galaran01`) in R1-05-G3; Andres Galarraga (`galaran01`) in R1-05-G4; Andres Galarraga (`galaran01`) in L1-05-G1; Andres Galarraga (`galaran01`) in L1-05-G2; Andres Galarraga (`galaran01`) in L1-05-G3; Troy Tulowitzki (`tulowtr01`) in L1-05-G4
 
 ### Substitutes who have batted
 
@@ -2488,6 +2489,7 @@ González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 
 - Ubaldo Jimenez (`jimenub01`) started L1-05-G1
 - Kyle Freeland (`freelky01`) started L1-05-G2
 - Aaron Cook (`cookaa01`) started L1-05-G3
+- German Marquez (`marquge01`) started L1-05-G4
 
 ### Relievers who have appeared
 
@@ -2497,6 +2499,7 @@ González's verified Rockies-only **Peak 162** covers **2009–2013** (Lahman): 
 - Brian Fuentes (`fuentbr01`), first seen in L1-05-G1
 - Jerry DiPoto (`dipotje01`), first seen in L1-05-G1
 - Huston Street (`streehu01`), first seen in L1-05-G3
+- Ubaldo Jimenez (`jimenub01`), first seen in L1-05-G4
 
 ### Rotation carry recorded on the series
 
