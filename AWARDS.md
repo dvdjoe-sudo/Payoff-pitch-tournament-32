@@ -15,11 +15,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
+| Shohei Ohtani | Los Angeles Angels | 48.0 | 27 | 12 | 7 | 3 |
+| Mike Trout | Los Angeles Angels | 46.0 | 19 | 10 | 11 | 1 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
-| Shohei Ohtani | Los Angeles Angels | 43.5 | 22 | 11 | 7 | 3 |
 | Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Home Run Baker | Philadelphia Athletics | 43.0 | 22 | 8 | 10 | 2 |
-| Mike Trout | Los Angeles Angels | 43.0 | 19 | 9 | 10 | 1 |
 | Edgar Martínez | Seattle Mariners | 42.5 | 21 | 7 | 12 | 3 |
 | Jimmie Foxx | Philadelphia Athletics | 42.5 | 23 | 7 | 9 | 3 |
 | Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
@@ -64,6 +64,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
 | Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
+| Troy Percival | Los Angeles Angels | 17.7 | 0 | 7.2 | 6 | 0 |
 | Jose Valverde | Arizona Diamondbacks | 17.3 | 1 | 5.1 | 4 | 0 |
 | Josh Hader | Milwaukee Brewers | 16.5 | 0 | 7.1 | 12 | 2 |
-| Andrew Bailey | Oakland Athletics | 16.0 | 0 | 7.0 | 5 | 0 |
