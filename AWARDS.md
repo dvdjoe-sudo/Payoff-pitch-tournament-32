@@ -16,13 +16,13 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
+| Shohei Ohtani | Los Angeles Angels | 43.5 | 22 | 11 | 7 | 3 |
 | Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Home Run Baker | Philadelphia Athletics | 43.0 | 22 | 8 | 10 | 2 |
+| Mike Trout | Los Angeles Angels | 43.0 | 19 | 9 | 10 | 1 |
 | Edgar Martínez | Seattle Mariners | 42.5 | 21 | 7 | 12 | 3 |
 | Jimmie Foxx | Philadelphia Athletics | 42.5 | 23 | 7 | 9 | 3 |
 | Rickey Henderson | Oakland Athletics | 42.5 | 22 | 8 | 8 | 1 |
-| Bryce Harper | Philadelphia Phillies | 42.0 | 22 | 8 | 9 | 4 |
-| Willie Mays | San Francisco Giants | 41.0 | 23 | 10 | 4 | 1 |
 
 ## Cy Young
 
