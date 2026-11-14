@@ -18,11 +18,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Jim Fregosi | Los Angeles Angels | 48.0 | 28 | 10 | 8 | 2 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
+| Geoff Jenkins | Milwaukee Brewers | 45.5 | 30 | 5 | 10 | 3 |
+| Tony Gwynn | San Diego Padres | 45.5 | 27 | 8 | 11 | 1 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
 | Cal Ripken Jr. | Baltimore Orioles | 43.0 | 22 | 6 | 12 | 2 |
 | Home Run Baker | Philadelphia Athletics | 43.0 | 22 | 8 | 10 | 2 |
-| Edgar Martínez | Seattle Mariners | 42.5 | 21 | 7 | 12 | 3 |
-| Jimmie Foxx | Philadelphia Athletics | 42.5 | 23 | 7 | 9 | 3 |
 
 ## Cy Young
 
