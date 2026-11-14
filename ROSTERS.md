@@ -2155,15 +2155,15 @@ All original historical player cards, completed games, box scores, FAC/dice logs
 
 ### Lineup slots that have batted
 
-- Slot 1: Ian Kinsler (`kinslia01`) in R1-09-G1 (same starter in 6 later games)
-- Slot 2: Ivan Rodriguez (`rodriiv01`) in R1-09-G1 (same starter in 6 later games)
-- Slot 3: Alex Rodriguez (`rodrial01`) in R1-09-G1 (same starter in 6 later games)
-- Slot 4: Frank Howard (`howarfr01`) in R1-09-G1 (same starter in 6 later games)
-- Slot 5: Josh Hamilton (`hamiljo03`) in R1-09-G1 (same starter in 6 later games)
-- Slot 6: Juan Gonzalez (`gonzaju03`) in R1-09-G1 (same starter in 6 later games)
-- Slot 7: Rafael Palmeiro (`palmera01`) in R1-09-G1 (same starter in 6 later games)
-- Slot 8: Adrian Beltre (`beltrad01`) in R1-09-G1 (same starter in 6 later games)
-- Slot 9: Corey Seager (`seageco01`) in R1-09-G1; Corey Seager (`seageco01`) in R1-09-G2; Mark Teixeira (`teixema01`) in R1-09-G3; Rubén Sierra (`sierrru01`) in R1-09-G4; Rubén Sierra (`sierrru01`) in R1-09-G5; Rubén Sierra (`sierrru01`) in R1-09-G6; Corey Seager (`seageco01`) in R1-09-G7
+- Slot 1: Ian Kinsler (`kinslia01`) in R1-09-G1 (same starter in 7 later games)
+- Slot 2: Ivan Rodriguez (`rodriiv01`) in R1-09-G1 (same starter in 7 later games)
+- Slot 3: Alex Rodriguez (`rodrial01`) in R1-09-G1 (same starter in 7 later games)
+- Slot 4: Frank Howard (`howarfr01`) in R1-09-G1 (same starter in 7 later games)
+- Slot 5: Josh Hamilton (`hamiljo03`) in R1-09-G1 (same starter in 7 later games)
+- Slot 6: Juan Gonzalez (`gonzaju03`) in R1-09-G1 (same starter in 7 later games)
+- Slot 7: Rafael Palmeiro (`palmera01`) in R1-09-G1 (same starter in 7 later games)
+- Slot 8: Adrian Beltre (`beltrad01`) in R1-09-G1 (same starter in 7 later games)
+- Slot 9: Corey Seager (`seageco01`) in R1-09-G1; Corey Seager (`seageco01`) in R1-09-G2; Mark Teixeira (`teixema01`) in R1-09-G3; Rubén Sierra (`sierrru01`) in R1-09-G4; Rubén Sierra (`sierrru01`) in R1-09-G5; Rubén Sierra (`sierrru01`) in R1-09-G6; Corey Seager (`seageco01`) in R1-09-G7; Corey Seager (`seageco01`) in L1-08-G1
 
 ### Starts, in the order the games were played
 
@@ -2174,6 +2174,7 @@ All original historical player cards, completed games, box scores, FAC/dice logs
 - Charlie Hough (`houghch01`) started R1-09-G5
 - Nolan Ryan (`ryanno01`) started R1-09-G6
 - Yu Darvish (`darviyu01`) started R1-09-G7
+- Nolan Ryan (`ryanno01`) started L1-08-G1
 
 ### Relievers who have appeared
 
@@ -2241,15 +2242,15 @@ All historical cards, prior box scores, completed games, FAC/dice logs and tourn
 
 ### Lineup slots that have batted
 
-- Slot 1: Roberto Alomar (`alomaro01`) in R1-08-G1 (same starter in 4 later games)
-- Slot 2: Tony Fernandez (`fernato01`) in R1-08-G1 (same starter in 4 later games)
-- Slot 3: Josh Donaldson (`donaljo02`) in R1-08-G1 (same starter in 4 later games)
-- Slot 4: Carlos Delgado (`delgaca01`) in R1-08-G1 (same starter in 4 later games)
-- Slot 5: Jose Bautista (`bautijo02`) in R1-08-G1; Jose Bautista (`bautijo02`) in R1-08-G2; Fred McGriff (`mcgrifr01`) in R1-08-G3; Fred McGriff (`mcgrifr01`) in R1-08-G4; Fred McGriff (`mcgrifr01`) in R1-08-G5
-- Slot 6: George Bell (`bellge02`) in R1-08-G1; George Bell (`bellge02`) in R1-08-G2; George Bell (`bellge02`) in R1-08-G3; Joe Carter (`cartejo01`) in R1-08-G4; Joe Carter (`cartejo01`) in R1-08-G5
-- Slot 7: Jesse Barfield (`barfije01`) in R1-08-G1 (same starter in 4 later games)
-- Slot 8: Devon White (`whitede03`) in R1-08-G1; Devon White (`whitede03`) in R1-08-G2; Devon White (`whitede03`) in R1-08-G3; Lloyd Moseby (`mosebll01`) in R1-08-G4; Lloyd Moseby (`mosebll01`) in R1-08-G5
-- Slot 9: Ernie Whitt (`whitter01`) in R1-08-G1 (same starter in 4 later games)
+- Slot 1: Roberto Alomar (`alomaro01`) in R1-08-G1 (same starter in 5 later games)
+- Slot 2: Tony Fernandez (`fernato01`) in R1-08-G1 (same starter in 5 later games)
+- Slot 3: Josh Donaldson (`donaljo02`) in R1-08-G1 (same starter in 5 later games)
+- Slot 4: Carlos Delgado (`delgaca01`) in R1-08-G1 (same starter in 5 later games)
+- Slot 5: Jose Bautista (`bautijo02`) in R1-08-G1; Jose Bautista (`bautijo02`) in R1-08-G2; Fred McGriff (`mcgrifr01`) in R1-08-G3; Fred McGriff (`mcgrifr01`) in R1-08-G4; Fred McGriff (`mcgrifr01`) in R1-08-G5; Jose Bautista (`bautijo02`) in L1-08-G1
+- Slot 6: George Bell (`bellge02`) in R1-08-G1; George Bell (`bellge02`) in R1-08-G2; George Bell (`bellge02`) in R1-08-G3; Joe Carter (`cartejo01`) in R1-08-G4; Joe Carter (`cartejo01`) in R1-08-G5; George Bell (`bellge02`) in L1-08-G1
+- Slot 7: Jesse Barfield (`barfije01`) in R1-08-G1 (same starter in 5 later games)
+- Slot 8: Devon White (`whitede03`) in R1-08-G1; Devon White (`whitede03`) in R1-08-G2; Devon White (`whitede03`) in R1-08-G3; Lloyd Moseby (`mosebll01`) in R1-08-G4; Lloyd Moseby (`mosebll01`) in R1-08-G5; Devon White (`whitede03`) in L1-08-G1
+- Slot 9: Ernie Whitt (`whitter01`) in R1-08-G1 (same starter in 5 later games)
 
 ### Substitutes who have batted
 
@@ -2263,6 +2264,7 @@ All historical cards, prior box scores, completed games, FAC/dice logs and tourn
 - Jimmy Key (`keyji01`) started R1-08-G3
 - Pat Hentgen (`hentgpa01`) started R1-08-G4
 - Kevin Gausman (`gausmke01`) started R1-08-G5
+- Dave Stieb (`stiebda01`) started L1-08-G1
 
 ### Relievers who have appeared
 

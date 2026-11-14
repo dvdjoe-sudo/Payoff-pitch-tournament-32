@@ -40,11 +40,11 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
-| Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
 | Steve Rogers | Montreal Expos | 23.1 | 20.1 | 2 | 12 | 7 |
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
 | Dwight Gooden | New York Mets | 22.4 | 21.1 | 1 | 18 | 6 |
+| Jacob deGrom | New York Mets | 21.4 | 12.0 | 1 | 17 | 1 |
 
 ## Reliever
 
