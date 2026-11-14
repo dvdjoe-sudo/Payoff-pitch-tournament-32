@@ -1571,7 +1571,19 @@
    "feeder_labels": [
     "Reseeded pool: Losers of the 16 opening-round series. Paired highest surviving seed vs lowest.",
     "Forms when Round 1 is complete (all 16 opening series)."
-   ]
+   ],
+   "mvp": {
+    "team": "MON",
+    "player_id": "rogerst01",
+    "name": "Steve Rogers",
+    "line": "12.1 IP, 10 H, 2 ER, 4 BB, 8 SO, 2-0, 1.46 ERA"
+   },
+   "mvp_runner_up": {
+    "team": "MON",
+    "player_id": "vidrojo01",
+    "name": "Jose Vidro",
+    "line": "7 for 24, 4 R, 2 HR, 5 RBI, .292"
+   }
   },
   {
    "id": "L1-07",
