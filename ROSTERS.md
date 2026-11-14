@@ -1848,21 +1848,22 @@ This prospective roster amendment preserves the original archive of every histor
 
 ### Lineup slots that have batted
 
-- Slot 1: Francisco Lindor (`lindofr01`) in R1-12-G1 (same starter in 4 later games)
-- Slot 2: Keith Hernandez (`hernake01`) in R1-12-G1 (same starter in 4 later games)
-- Slot 3: David Wright (`wrighda03`) in R1-12-G1 (same starter in 4 later games)
-- Slot 4: Darryl Strawberry (`strawda01`) in R1-12-G1 (same starter in 4 later games)
-- Slot 5: Mike Piazza (`piazzmi01`) in R1-12-G1 (same starter in 4 later games)
-- Slot 6: Pete Alonso (`alonspe01`) in R1-12-G1 (same starter in 4 later games)
-- Slot 7: Carlos Beltran (`beltrca01`) in R1-12-G1 (same starter in 4 later games)
-- Slot 8: Edgardo Alfonzo (`alfoned01`) in R1-12-G1 (same starter in 4 later games)
-- Slot 9: Cleon Jones (`jonescl01`) in R1-12-G1 (same starter in 4 later games)
+- Slot 1: Francisco Lindor (`lindofr01`) in R1-12-G1 (same starter in 5 later games)
+- Slot 2: Keith Hernandez (`hernake01`) in R1-12-G1 (same starter in 5 later games)
+- Slot 3: David Wright (`wrighda03`) in R1-12-G1 (same starter in 5 later games)
+- Slot 4: Darryl Strawberry (`strawda01`) in R1-12-G1 (same starter in 5 later games)
+- Slot 5: Mike Piazza (`piazzmi01`) in R1-12-G1 (same starter in 5 later games)
+- Slot 6: Pete Alonso (`alonspe01`) in R1-12-G1 (same starter in 5 later games)
+- Slot 7: Carlos Beltran (`beltrca01`) in R1-12-G1 (same starter in 5 later games)
+- Slot 8: Edgardo Alfonzo (`alfoned01`) in R1-12-G1 (same starter in 5 later games)
+- Slot 9: Cleon Jones (`jonescl01`) in R1-12-G1 (same starter in 5 later games)
 
 ### Substitutes who have batted
 
 - John Olerud (`olerujo01`), slot 2
 - John Olerud (`olerujo01`), slot 6
 - Gary Carter (`cartega01`), slot 5
+- John Olerud (`olerujo01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -1871,6 +1872,7 @@ This prospective roster amendment preserves the original archive of every histor
 - Jacob deGrom (`degroja01`) started R1-12-G3
 - Jerry Koosman (`koosmje01`) started R1-12-G4
 - Al Leiter (`leiteal01`) started R1-12-G5
+- Tom Seaver (`seaveto01`) started L1-06-G1
 
 ### Relievers who have appeared
 
@@ -2385,15 +2387,19 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Tim Raines (`raineti01`) in R1-06-G1 (same starter in 4 later games)
-- Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1 (same starter in 4 later games)
-- Slot 3: Larry Walker (`walkela01`) in R1-06-G1 (same starter in 4 later games)
-- Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1 (same starter in 4 later games)
-- Slot 5: Gary Carter (`cartega01`) in R1-06-G1; Gary Carter (`cartega01`) in R1-06-G2; Gary Carter (`cartega01`) in R1-06-G3; Andre Dawson (`dawsoan01`) in R1-06-G4; Andre Dawson (`dawsoan01`) in R1-06-G5
-- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1; Andre Dawson (`dawsoan01`) in R1-06-G2; Andre Dawson (`dawsoan01`) in R1-06-G3; Gary Carter (`cartega01`) in R1-06-G4; Gary Carter (`cartega01`) in R1-06-G5
-- Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1 (same starter in 4 later games)
-- Slot 8: Tim Wallach (`wallati01`) in R1-06-G1 (same starter in 4 later games)
-- Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1 (same starter in 4 later games)
+- Slot 1: Tim Raines (`raineti01`) in R1-06-G1 (same starter in 5 later games)
+- Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1 (same starter in 5 later games)
+- Slot 3: Larry Walker (`walkela01`) in R1-06-G1 (same starter in 5 later games)
+- Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1 (same starter in 5 later games)
+- Slot 5: Gary Carter (`cartega01`) in R1-06-G1; Gary Carter (`cartega01`) in R1-06-G2; Gary Carter (`cartega01`) in R1-06-G3; Andre Dawson (`dawsoan01`) in R1-06-G4; Andre Dawson (`dawsoan01`) in R1-06-G5; Gary Carter (`cartega01`) in L1-06-G1
+- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1; Andre Dawson (`dawsoan01`) in R1-06-G2; Andre Dawson (`dawsoan01`) in R1-06-G3; Gary Carter (`cartega01`) in R1-06-G4; Gary Carter (`cartega01`) in R1-06-G5; Andre Dawson (`dawsoan01`) in L1-06-G1
+- Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1 (same starter in 5 later games)
+- Slot 8: Tim Wallach (`wallati01`) in R1-06-G1 (same starter in 5 later games)
+- Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1 (same starter in 5 later games)
+
+### Substitutes who have batted
+
+- Rusty Staub (`staubru01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -2402,6 +2408,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Dennis Martinez (`martide01`) started R1-06-G3
 - Bryn Smith (`smithbr01`) started R1-06-G4
 - Javier Vazquez (`vazquja01`) started R1-06-G5
+- Steve Rogers (`rogerst01`) started L1-06-G1
 
 ### Relievers who have appeared
 

@@ -62,8 +62,8 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
 | Troy Percival | Los Angeles Angels | 20.2 | 0 | 10.0 | 8 | 2 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
+| Andy McGaffigan | Montreal Expos | 19.1 | 2 | 4.1 | 1 | 0 |
 | Rafael Betancourt | Colorado Rockies | 18.7 | 0 | 8.2 | 11 | 2 |
 | Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
 | Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
-| Craig Kimbrel | Atlanta Braves | 18.0 | 2 | 3.0 | 5 | 0 |
