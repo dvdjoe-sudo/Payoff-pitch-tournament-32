@@ -1632,7 +1632,19 @@
    "feeder_labels": [
     "Reseeded pool: Losers of the 16 opening-round series. Paired highest surviving seed vs lowest.",
     "Forms when Round 1 is complete (all 16 opening series)."
-   ]
+   ],
+   "mvp": {
+    "team": "SD",
+    "player_id": "caminke01",
+    "name": "Ken Caminiti",
+    "line": "12 for 33, 7 R, 1 2B, 5 HR, 11 RBI, .364"
+   },
+   "mvp_runner_up": {
+    "team": "SD",
+    "player_id": "gwynnto01",
+    "name": "Tony Gwynn",
+    "line": "17 for 35, 7 R, 2 3B, 1 HR, 9 RBI, .486"
+   }
   },
   {
    "id": "L1-08",
