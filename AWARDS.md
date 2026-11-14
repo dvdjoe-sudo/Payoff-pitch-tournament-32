@@ -43,8 +43,8 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
+| Jacob deGrom | New York Mets | 21.4 | 12.0 | 1 | 17 | 1 |
 | Lefty Gomez | New York Yankees | 21.2 | 15.1 | 1 | 18 | 3 |
-| Bucky Walters | Cincinnati Reds | 18.7 | 9.1 | 2 | 3 | 1 |
 
 ## Reliever
 
