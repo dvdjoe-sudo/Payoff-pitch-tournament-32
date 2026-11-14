@@ -2045,15 +2045,15 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 
 ### Lineup slots that have batted
 
-- Slot 1: Christian Yelich (`yelicch01`) in R1-10-G1; Christian Yelich (`yelicch01`) in R1-10-G2; Christian Yelich (`yelicch01`) in R1-10-G3; Paul Molitor (`molitpa01`) in R1-10-G4; Paul Molitor (`molitpa01`) in R1-10-G5; Christian Yelich (`yelicch01`) in L1-07-G1; Christian Yelich (`yelicch01`) in L1-07-G2; Christian Yelich (`yelicch01`) in L1-07-G3; Christian Yelich (`yelicch01`) in L1-07-G4; Christian Yelich (`yelicch01`) in L1-07-G5
-- Slot 2: Paul Molitor (`molitpa01`) in R1-10-G1; Paul Molitor (`molitpa01`) in R1-10-G2; Paul Molitor (`molitpa01`) in R1-10-G3; Robin Yount (`yountro01`) in R1-10-G4; Robin Yount (`yountro01`) in R1-10-G5; Paul Molitor (`molitpa01`) in L1-07-G1; Paul Molitor (`molitpa01`) in L1-07-G2; Paul Molitor (`molitpa01`) in L1-07-G3; Paul Molitor (`molitpa01`) in L1-07-G4; Paul Molitor (`molitpa01`) in L1-07-G5
-- Slot 3: Robin Yount (`yountro01`) in R1-10-G1; Robin Yount (`yountro01`) in R1-10-G2; Robin Yount (`yountro01`) in R1-10-G3; Christian Yelich (`yelicch01`) in R1-10-G4; Christian Yelich (`yelicch01`) in R1-10-G5; Robin Yount (`yountro01`) in L1-07-G1; Robin Yount (`yountro01`) in L1-07-G2; Robin Yount (`yountro01`) in L1-07-G3; Robin Yount (`yountro01`) in L1-07-G4; Robin Yount (`yountro01`) in L1-07-G5
-- Slot 4: Prince Fielder (`fieldpr01`) in R1-10-G1; Prince Fielder (`fieldpr01`) in R1-10-G2; Prince Fielder (`fieldpr01`) in R1-10-G3; Gorman Thomas (`thomago01`) in R1-10-G4; Gorman Thomas (`thomago01`) in R1-10-G5; Prince Fielder (`fieldpr01`) in L1-07-G1; George Scott (`scottge02`) in L1-07-G2; George Scott (`scottge02`) in L1-07-G3; George Scott (`scottge02`) in L1-07-G4; George Scott (`scottge02`) in L1-07-G5
-- Slot 5: George Scott (`scottge02`) in R1-10-G1; George Scott (`scottge02`) in R1-10-G2; George Scott (`scottge02`) in R1-10-G3; Cecil Cooper (`coopece01`) in R1-10-G4; Cecil Cooper (`coopece01`) in R1-10-G5; George Scott (`scottge02`) in L1-07-G1; Prince Fielder (`fieldpr01`) in L1-07-G2; Prince Fielder (`fieldpr01`) in L1-07-G3; Prince Fielder (`fieldpr01`) in L1-07-G4; Prince Fielder (`fieldpr01`) in L1-07-G5
-- Slot 6: William Contreras (`contrwi02`) in R1-10-G1; William Contreras (`contrwi02`) in R1-10-G2; William Contreras (`contrwi02`) in R1-10-G3; Geoff Jenkins (`jenkige01`) in R1-10-G4; Geoff Jenkins (`jenkige01`) in R1-10-G5; William Contreras (`contrwi02`) in L1-07-G1; William Contreras (`contrwi02`) in L1-07-G2; William Contreras (`contrwi02`) in L1-07-G3; William Contreras (`contrwi02`) in L1-07-G4; William Contreras (`contrwi02`) in L1-07-G5
-- Slot 7: Geoff Jenkins (`jenkige01`) in R1-10-G1; Geoff Jenkins (`jenkige01`) in R1-10-G2; Geoff Jenkins (`jenkige01`) in R1-10-G3; Ryan Braun (`braunry02`) in R1-10-G4; Ryan Braun (`braunry02`) in R1-10-G5; Geoff Jenkins (`jenkige01`) in L1-07-G1; Geoff Jenkins (`jenkige01`) in L1-07-G2; Geoff Jenkins (`jenkige01`) in L1-07-G3; Geoff Jenkins (`jenkige01`) in L1-07-G4; Geoff Jenkins (`jenkige01`) in L1-07-G5
-- Slot 8: Brice Turang (`turanbr02`) in R1-10-G1; Brice Turang (`turanbr02`) in R1-10-G2; Brice Turang (`turanbr02`) in R1-10-G3; William Contreras (`contrwi02`) in R1-10-G4; William Contreras (`contrwi02`) in R1-10-G5; Brice Turang (`turanbr02`) in L1-07-G1; Brice Turang (`turanbr02`) in L1-07-G2; Brice Turang (`turanbr02`) in L1-07-G3; Brice Turang (`turanbr02`) in L1-07-G4; Brice Turang (`turanbr02`) in L1-07-G5
-- Slot 9: Carlos Gómez (`gomezca01`) in R1-10-G1; Carlos Gómez (`gomezca01`) in R1-10-G2; Carlos Gómez (`gomezca01`) in R1-10-G3; Brice Turang (`turanbr02`) in R1-10-G4; Brice Turang (`turanbr02`) in R1-10-G5; Carlos Gómez (`gomezca01`) in L1-07-G1; Ryan Braun (`braunry02`) in L1-07-G2; Ryan Braun (`braunry02`) in L1-07-G3; Ryan Braun (`braunry02`) in L1-07-G4; Ryan Braun (`braunry02`) in L1-07-G5
+- Slot 1: Christian Yelich (`yelicch01`) in R1-10-G1; Christian Yelich (`yelicch01`) in R1-10-G2; Christian Yelich (`yelicch01`) in R1-10-G3; Paul Molitor (`molitpa01`) in R1-10-G4; Paul Molitor (`molitpa01`) in R1-10-G5; Christian Yelich (`yelicch01`) in L1-07-G1; Christian Yelich (`yelicch01`) in L1-07-G2; Christian Yelich (`yelicch01`) in L1-07-G3; Christian Yelich (`yelicch01`) in L1-07-G4; Christian Yelich (`yelicch01`) in L1-07-G5; Christian Yelich (`yelicch01`) in L1-07-G6
+- Slot 2: Paul Molitor (`molitpa01`) in R1-10-G1; Paul Molitor (`molitpa01`) in R1-10-G2; Paul Molitor (`molitpa01`) in R1-10-G3; Robin Yount (`yountro01`) in R1-10-G4; Robin Yount (`yountro01`) in R1-10-G5; Paul Molitor (`molitpa01`) in L1-07-G1; Paul Molitor (`molitpa01`) in L1-07-G2; Paul Molitor (`molitpa01`) in L1-07-G3; Paul Molitor (`molitpa01`) in L1-07-G4; Paul Molitor (`molitpa01`) in L1-07-G5; Paul Molitor (`molitpa01`) in L1-07-G6
+- Slot 3: Robin Yount (`yountro01`) in R1-10-G1; Robin Yount (`yountro01`) in R1-10-G2; Robin Yount (`yountro01`) in R1-10-G3; Christian Yelich (`yelicch01`) in R1-10-G4; Christian Yelich (`yelicch01`) in R1-10-G5; Robin Yount (`yountro01`) in L1-07-G1; Robin Yount (`yountro01`) in L1-07-G2; Robin Yount (`yountro01`) in L1-07-G3; Robin Yount (`yountro01`) in L1-07-G4; Robin Yount (`yountro01`) in L1-07-G5; Robin Yount (`yountro01`) in L1-07-G6
+- Slot 4: Prince Fielder (`fieldpr01`) in R1-10-G1; Prince Fielder (`fieldpr01`) in R1-10-G2; Prince Fielder (`fieldpr01`) in R1-10-G3; Gorman Thomas (`thomago01`) in R1-10-G4; Gorman Thomas (`thomago01`) in R1-10-G5; Prince Fielder (`fieldpr01`) in L1-07-G1; George Scott (`scottge02`) in L1-07-G2; George Scott (`scottge02`) in L1-07-G3; George Scott (`scottge02`) in L1-07-G4; George Scott (`scottge02`) in L1-07-G5; George Scott (`scottge02`) in L1-07-G6
+- Slot 5: George Scott (`scottge02`) in R1-10-G1; George Scott (`scottge02`) in R1-10-G2; George Scott (`scottge02`) in R1-10-G3; Cecil Cooper (`coopece01`) in R1-10-G4; Cecil Cooper (`coopece01`) in R1-10-G5; George Scott (`scottge02`) in L1-07-G1; Prince Fielder (`fieldpr01`) in L1-07-G2; Prince Fielder (`fieldpr01`) in L1-07-G3; Prince Fielder (`fieldpr01`) in L1-07-G4; Prince Fielder (`fieldpr01`) in L1-07-G5; Prince Fielder (`fieldpr01`) in L1-07-G6
+- Slot 6: William Contreras (`contrwi02`) in R1-10-G1; William Contreras (`contrwi02`) in R1-10-G2; William Contreras (`contrwi02`) in R1-10-G3; Geoff Jenkins (`jenkige01`) in R1-10-G4; Geoff Jenkins (`jenkige01`) in R1-10-G5; William Contreras (`contrwi02`) in L1-07-G1; William Contreras (`contrwi02`) in L1-07-G2; William Contreras (`contrwi02`) in L1-07-G3; William Contreras (`contrwi02`) in L1-07-G4; William Contreras (`contrwi02`) in L1-07-G5; William Contreras (`contrwi02`) in L1-07-G6
+- Slot 7: Geoff Jenkins (`jenkige01`) in R1-10-G1; Geoff Jenkins (`jenkige01`) in R1-10-G2; Geoff Jenkins (`jenkige01`) in R1-10-G3; Ryan Braun (`braunry02`) in R1-10-G4; Ryan Braun (`braunry02`) in R1-10-G5; Geoff Jenkins (`jenkige01`) in L1-07-G1; Geoff Jenkins (`jenkige01`) in L1-07-G2; Geoff Jenkins (`jenkige01`) in L1-07-G3; Geoff Jenkins (`jenkige01`) in L1-07-G4; Geoff Jenkins (`jenkige01`) in L1-07-G5; Geoff Jenkins (`jenkige01`) in L1-07-G6
+- Slot 8: Brice Turang (`turanbr02`) in R1-10-G1; Brice Turang (`turanbr02`) in R1-10-G2; Brice Turang (`turanbr02`) in R1-10-G3; William Contreras (`contrwi02`) in R1-10-G4; William Contreras (`contrwi02`) in R1-10-G5; Brice Turang (`turanbr02`) in L1-07-G1; Brice Turang (`turanbr02`) in L1-07-G2; Brice Turang (`turanbr02`) in L1-07-G3; Brice Turang (`turanbr02`) in L1-07-G4; Brice Turang (`turanbr02`) in L1-07-G5; Brice Turang (`turanbr02`) in L1-07-G6
+- Slot 9: Carlos Gómez (`gomezca01`) in R1-10-G1; Carlos Gómez (`gomezca01`) in R1-10-G2; Carlos Gómez (`gomezca01`) in R1-10-G3; Brice Turang (`turanbr02`) in R1-10-G4; Brice Turang (`turanbr02`) in R1-10-G5; Carlos Gómez (`gomezca01`) in L1-07-G1; Ryan Braun (`braunry02`) in L1-07-G2; Ryan Braun (`braunry02`) in L1-07-G3; Ryan Braun (`braunry02`) in L1-07-G4; Ryan Braun (`braunry02`) in L1-07-G5; Ryan Braun (`braunry02`) in L1-07-G6
 
 ### Substitutes who have batted
 
@@ -2081,6 +2081,7 @@ All historical cards, played games, box scores, results and FAC/dice logs remain
 - Brandon Woodruff (`woodrbr01`) started L1-07-G3
 - Corbin Burnes (`burneco01`) started L1-07-G4
 - Mike Caldwell (`caldwmi01`) started L1-07-G5
+- Teddy Higuera (`higuete01`) started L1-07-G6
 
 ### Relievers who have appeared
 
@@ -2329,19 +2330,20 @@ No personnel, batting-order, rotation, bench or bullpen changes were authorized:
 
 ### Lineup slots that have batted
 
-- Slot 1: Fernando Tatis Jr. (`tatisfe02`) in R1-07-G1 (same starter in 8 later games)
-- Slot 2: Tony Gwynn (`gwynnto01`) in R1-07-G1 (same starter in 8 later games)
-- Slot 3: Dave Winfield (`winfida01`) in R1-07-G1 (same starter in 8 later games)
-- Slot 4: Ken Caminiti (`caminke01`) in R1-07-G1; Ken Caminiti (`caminke01`) in R1-07-G2; Ken Caminiti (`caminke01`) in R1-07-G3; Gary Sheffield (`sheffga01`) in R1-07-G4; Ken Caminiti (`caminke01`) in L1-07-G1; Ken Caminiti (`caminke01`) in L1-07-G2; Ken Caminiti (`caminke01`) in L1-07-G3; Ken Caminiti (`caminke01`) in L1-07-G4; Ken Caminiti (`caminke01`) in L1-07-G5
-- Slot 5: Adrian Gonzalez (`gonzaad01`) in R1-07-G1 (same starter in 8 later games)
-- Slot 6: Manny Machado (`machama01`) in R1-07-G1 (same starter in 8 later games)
-- Slot 7: Gene Tenace (`tenacge01`) in R1-07-G1; Gene Tenace (`tenacge01`) in R1-07-G2; Gene Tenace (`tenacge01`) in R1-07-G3; Benito Santiago (`santibe01`) in R1-07-G4; Gene Tenace (`tenacge01`) in L1-07-G1; Gene Tenace (`tenacge01`) in L1-07-G2; Gene Tenace (`tenacge01`) in L1-07-G3; Gene Tenace (`tenacge01`) in L1-07-G4; Gene Tenace (`tenacge01`) in L1-07-G5
-- Slot 8: Steve Finley (`finlest01`) in R1-07-G1 (same starter in 8 later games)
-- Slot 9: Mark Loretta (`loretma01`) in R1-07-G1 (same starter in 8 later games)
+- Slot 1: Fernando Tatis Jr. (`tatisfe02`) in R1-07-G1 (same starter in 9 later games)
+- Slot 2: Tony Gwynn (`gwynnto01`) in R1-07-G1 (same starter in 9 later games)
+- Slot 3: Dave Winfield (`winfida01`) in R1-07-G1 (same starter in 9 later games)
+- Slot 4: Ken Caminiti (`caminke01`) in R1-07-G1; Ken Caminiti (`caminke01`) in R1-07-G2; Ken Caminiti (`caminke01`) in R1-07-G3; Gary Sheffield (`sheffga01`) in R1-07-G4; Ken Caminiti (`caminke01`) in L1-07-G1; Ken Caminiti (`caminke01`) in L1-07-G2; Ken Caminiti (`caminke01`) in L1-07-G3; Ken Caminiti (`caminke01`) in L1-07-G4; Ken Caminiti (`caminke01`) in L1-07-G5; Ken Caminiti (`caminke01`) in L1-07-G6
+- Slot 5: Adrian Gonzalez (`gonzaad01`) in R1-07-G1 (same starter in 9 later games)
+- Slot 6: Manny Machado (`machama01`) in R1-07-G1 (same starter in 9 later games)
+- Slot 7: Gene Tenace (`tenacge01`) in R1-07-G1; Gene Tenace (`tenacge01`) in R1-07-G2; Gene Tenace (`tenacge01`) in R1-07-G3; Benito Santiago (`santibe01`) in R1-07-G4; Gene Tenace (`tenacge01`) in L1-07-G1; Gene Tenace (`tenacge01`) in L1-07-G2; Gene Tenace (`tenacge01`) in L1-07-G3; Gene Tenace (`tenacge01`) in L1-07-G4; Gene Tenace (`tenacge01`) in L1-07-G5; Gene Tenace (`tenacge01`) in L1-07-G6
+- Slot 8: Steve Finley (`finlest01`) in R1-07-G1 (same starter in 9 later games)
+- Slot 9: Mark Loretta (`loretma01`) in R1-07-G1 (same starter in 9 later games)
 
 ### Substitutes who have batted
 
 - Brian Giles (`gilesbr02`), slot 10
+- Gary Sheffield (`sheffga01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -2354,6 +2356,7 @@ No personnel, batting-order, rotation, bench or bullpen changes were authorized:
 - Ed Whitson (`whitsed01`) started L1-07-G3
 - Andy Ashby (`ashbyan01`) started L1-07-G4
 - Eric Show (`shower01`) started L1-07-G5
+- Jake Peavy (`peavyja01`) started L1-07-G6
 
 ### Relievers who have appeared
 
