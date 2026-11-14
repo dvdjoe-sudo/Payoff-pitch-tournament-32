@@ -51,3 +51,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Seattle Mariners scored 14 against Arizona Diamondbacks in L1-04-G4.
 - Arizona Diamondbacks scored 11 against Seattle Mariners in L1-04-G4.
 - Los Angeles Angels scored 11 against Colorado Rockies in L1-05-G6.
+- San Diego Padres scored 11 against Milwaukee Brewers in L1-07-G1.
