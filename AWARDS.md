@@ -42,9 +42,9 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Nolan Ryan | Texas Rangers | 23.8 | 14.0 | 2 | 16 | 3 |
 | Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
+| Steve Rogers | Montreal Expos | 23.1 | 20.1 | 2 | 12 | 7 |
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
-| Jacob deGrom | New York Mets | 21.4 | 12.0 | 1 | 17 | 1 |
-| Lefty Gomez | New York Yankees | 21.2 | 15.1 | 1 | 18 | 3 |
+| Dwight Gooden | New York Mets | 22.4 | 21.1 | 1 | 18 | 6 |
 
 ## Reliever
 
@@ -53,6 +53,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
+| John Wetteland | Montreal Expos | 27.2 | 2 | 7.0 | 8 | 0 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Rafael Betancourt | Colorado Rockies | 18.7 | 0 | 8.2 | 11 | 2 |
 | Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |
 | Jonathan Papelbon | Boston Red Sox | 18.1 | 1 | 5.1 | 6 | 0 |
-| Kelvin Herrera | Kansas City Royals | 18.0 | 1 | 6.2 | 3 | 1 |
