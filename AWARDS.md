@@ -10,19 +10,19 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | --- | --- | --- | --- | --- | --- | --- |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
+| Frank Howard | Texas Rangers | 63.0 | 35 | 11 | 14 | 5 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
-| Frank Howard | Texas Rangers | 57.0 | 31 | 9 | 14 | 5 |
+| Josh Hamilton | Texas Rangers | 54.5 | 29 | 13 | 8 | 3 |
+| Josh Donaldson | Toronto Blue Jays | 54.0 | 28 | 10 | 14 | 3 |
+| Ian Kinsler | Texas Rangers | 52.5 | 28 | 12 | 6 | 2 |
 | Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 | Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
 | Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
 | Geoff Jenkins | Milwaukee Brewers | 48.5 | 32 | 5 | 11 | 3 |
 | Tony Gwynn | San Diego Padres | 48.5 | 29 | 9 | 11 | 1 |
-| Jim Fregosi | Los Angeles Angels | 48.0 | 28 | 10 | 8 | 2 |
-| Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
-| Josh Donaldson | Toronto Blue Jays | 47.5 | 25 | 9 | 12 | 3 |
 
 ## Cy Young
 
