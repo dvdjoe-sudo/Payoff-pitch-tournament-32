@@ -13,6 +13,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
+| Frank Howard | Texas Rangers | 57.0 | 31 | 9 | 14 | 5 |
 | Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 | Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
@@ -22,7 +23,6 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Jim Fregosi | Los Angeles Angels | 48.0 | 28 | 10 | 8 | 2 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
 | Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
-| Brice Turang | Milwaukee Brewers | 43.5 | 24 | 7 | 9 | 2 |
 
 ## Cy Young
 
@@ -62,8 +62,8 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Andy McGaffigan | Montreal Expos | 22.1 | 2 | 7.1 | 1 | 2 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
+| Jeff Zimmerman | Texas Rangers | 20.8 | 1 | 8.1 | 9 | 3 |
 | Troy Percival | Los Angeles Angels | 20.2 | 0 | 10.0 | 8 | 2 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
 | Rafael Betancourt | Colorado Rockies | 18.7 | 0 | 8.2 | 11 | 2 |
 | Mike Adams | San Diego Padres | 18.6 | 0 | 8.0 | 14 | 2 |
-| Greg Holland | Kansas City Royals | 18.5 | 0 | 7.2 | 8 | 0 |

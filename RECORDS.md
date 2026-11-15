@@ -55,3 +55,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Milwaukee Brewers scored 10 against San Diego Padres in L1-07-G2.
 - San Diego Padres scored 19 against Milwaukee Brewers in L1-07-G5.
 - Milwaukee Brewers scored 13 against San Diego Padres in L1-07-G5.
+- Texas Rangers scored 10 against Toronto Blue Jays in L1-08-G3.
