@@ -31,6 +31,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
+| Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
 | Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
@@ -39,7 +40,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
-| Pedro Martinez | Boston Red Sox | 25.1 | 17.0 | 1 | 22 | 3 |
 | Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
 | Steve Rogers | Montreal Expos | 23.1 | 20.1 | 2 | 12 | 7 |
 | Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
@@ -57,6 +57,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
+| Jonathan Papelbon | Boston Red Sox | 25.5 | 2 | 6.1 | 7 | 0 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Troy Percival | Los Angeles Angels | 20.2 | 0 | 10.0 | 8 | 2 |
 | Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
 | Tom Henke | Toronto Blue Jays | 19.2 | 1 | 7.0 | 8 | 2 |
-| Rafael Betancourt | Colorado Rockies | 18.7 | 0 | 8.2 | 11 | 2 |
