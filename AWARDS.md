@@ -22,7 +22,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Tony Gwynn | San Diego Padres | 48.5 | 29 | 9 | 11 | 1 |
 | Jim Fregosi | Los Angeles Angels | 48.0 | 28 | 10 | 8 | 2 |
 | Jimmy Rollins | Philadelphia Phillies | 48.0 | 27 | 8 | 11 | 3 |
-| Mark McGwire | Oakland Athletics | 44.0 | 23 | 5 | 14 | 4 |
+| Josh Donaldson | Toronto Blue Jays | 47.5 | 25 | 9 | 12 | 3 |
 
 ## Cy Young
 
