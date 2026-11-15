@@ -216,19 +216,20 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Tris Speaker (`speaktr01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 2: Dustin Pedroia (`pedrodu01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 3: Ted Williams (`willite01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 4: David Ortiz (`ortizda01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 5: Jimmie Foxx (`foxxji01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 6: Dwight Evans (`evansdw01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 7: Wade Boggs (`boggswa01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 8: Nomar Garciaparra (`garcino01`) in R1-03-G1 (same starter in 7 later games)
-- Slot 9: Carlton Fisk (`fiskca01`) in R1-03-G1 (same starter in 7 later games)
+- Slot 1: Tris Speaker (`speaktr01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 2: Dustin Pedroia (`pedrodu01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 3: Ted Williams (`willite01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 4: David Ortiz (`ortizda01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 5: Jimmie Foxx (`foxxji01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 6: Dwight Evans (`evansdw01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 7: Wade Boggs (`boggswa01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 8: Nomar Garciaparra (`garcino01`) in R1-03-G1 (same starter in 8 later games)
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-03-G1 (same starter in 8 later games)
 
 ### Substitutes who have batted
 
 - Mookie Betts (`bettsmo01`), slot 10
+- Bobby Doerr (`doerrbo01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -240,6 +241,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Pedro Martinez (`martipe02`) started R1-03-G6
 - Roger Clemens (`clemero02`) started R1-03-G7
 - Pedro Martinez (`martipe02`) started W2-03-G1
+- Roger Clemens (`clemero02`) started W2-03-G2
 
 ### Relievers who have appeared
 
@@ -1379,15 +1381,15 @@ Joe Sambito moves to bullpen spot 5 and Dave Smith to spot 6, retaining their le
 
 ### Lineup slots that have batted
 
-- Slot 1: Craig Biggio (`biggicr01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 2: Yordan Alvarez (`alvaryo01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 3: Jeff Bagwell (`bagweje01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 4: José Altuve (`altuvjo01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 5: Lance Berkman (`berkmla01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 6: Alex Bregman (`bregmal01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 7: Carlos Correa (`correca01`) in R1-16-G1 (same starter in 5 later games)
-- Slot 8: José Cruz (`cruzjo01`) in R1-16-G1; José Cruz (`cruzjo01`) in R1-16-G2; José Cruz (`cruzjo01`) in R1-16-G3; Moisés Alou (`aloumo01`) in R1-16-G4; Moisés Alou (`aloumo01`) in R1-16-G5; José Cruz (`cruzjo01`) in W2-03-G1
-- Slot 9: César Cedeño (`cedence01`) in R1-16-G1 (same starter in 5 later games)
+- Slot 1: Craig Biggio (`biggicr01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 2: Yordan Alvarez (`alvaryo01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 3: Jeff Bagwell (`bagweje01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 4: José Altuve (`altuvjo01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 5: Lance Berkman (`berkmla01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 6: Alex Bregman (`bregmal01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 7: Carlos Correa (`correca01`) in R1-16-G1 (same starter in 6 later games)
+- Slot 8: José Cruz (`cruzjo01`) in R1-16-G1; José Cruz (`cruzjo01`) in R1-16-G2; José Cruz (`cruzjo01`) in R1-16-G3; Moisés Alou (`aloumo01`) in R1-16-G4; Moisés Alou (`aloumo01`) in R1-16-G5; José Cruz (`cruzjo01`) in W2-03-G1; José Cruz (`cruzjo01`) in W2-03-G2
+- Slot 9: César Cedeño (`cedence01`) in R1-16-G1 (same starter in 6 later games)
 
 ### Starts, in the order the games were played
 
@@ -1397,6 +1399,7 @@ Joe Sambito moves to bullpen spot 5 and Dave Smith to spot 6, retaining their le
 - Nolan Ryan (`ryanno01`) started R1-16-G4
 - J.R. Richard (`richajr01`) started R1-16-G5
 - Justin Verlander (`verlaju01`) started W2-03-G1
+- Roy Oswalt (`oswalro01`) started W2-03-G2
 
 ### Relievers who have appeared
 

@@ -498,7 +498,7 @@ def documents(check: Check) -> None:
     check.expect(sample[0] == sample[1], "score graphic matches the script")
     check.expect("LEADERS.md" in (ROOT / "LEADERBOARDS.md").read_text(encoding="utf-8"), "old leaderboard file points at the one board")
     leaders_text = (ROOT / "LEADERS.md").read_text(encoding="utf-8")
-    check.expect("| Roger Clemens | Boston Red Sox | 1.12 |" in leaders_text, "Clemens ERA is 1.12")
+    check.expect("| Roger Clemens | Boston Red Sox | 2.25 |" in leaders_text, "Clemens ERA is 2.25")
     check.expect("| Carl Hubbell | San Francisco Giants | 0.56 |" in leaders_text, "Hubbell ERA is 0.56")
     check.expect("TODO for Joe" in (ROOT / "ROSTERS.md").read_text(encoding="utf-8"), "roster stubs")
     html = (ROOT / "index.html").read_text(encoding="utf-8")

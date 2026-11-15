@@ -32,7 +32,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | --- | --- | --- | --- | --- | --- | --- |
 | Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
-| Roger Clemens | Boston Red Sox | 34.7 | 16.0 | 2 | 30 | 2 |
+| Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
@@ -53,11 +53,11 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
+| Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
 | John Wetteland | Montreal Expos | 27.2 | 2 | 7.0 | 8 | 0 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
-| Jonathan Papelbon | Boston Red Sox | 25.5 | 2 | 6.1 | 7 | 0 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
