@@ -1692,7 +1692,19 @@
    "feeder_labels": [
     "Reseeded pool: Losers of the 16 opening-round series. Paired highest surviving seed vs lowest.",
     "Forms when Round 1 is complete (all 16 opening series)."
-   ]
+   ],
+   "mvp": {
+    "team": "TOR",
+    "player_id": "donaljo02",
+    "name": "Josh Donaldson",
+    "line": "12 for 30, 8 R, 4 2B, 3 HR, 11 RBI, .400"
+   },
+   "mvp_runner_up": {
+    "team": "TOR",
+    "player_id": "stiebda01",
+    "name": "Dave Stieb",
+    "line": "14.0 IP, 12 H, 7 ER, 2 BB, 11 SO, 2-0, 4.50 ERA"
+   }
   },
   {
    "id": "W2-01",
