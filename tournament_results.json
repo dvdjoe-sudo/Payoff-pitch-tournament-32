@@ -48657,7 +48657,38 @@
      }
     }
    },
-   "final_grades": {},
+   "final_grades": {
+    "Tom Kelly": {
+     "backfired": 0,
+     "by_type": {
+      "Defensive sub": {
+       "backfired": 0,
+       "count": 1,
+       "neutral": 0,
+       "paid_off": 1
+      }
+     },
+     "decisions": 1,
+     "neutral": 0,
+     "paid_off": 1,
+     "team": "MIN"
+    },
+    "Davey Johnson": {
+     "backfired": 0,
+     "by_type": {
+      "Pitching change": {
+       "backfired": 0,
+       "count": 3,
+       "neutral": 1,
+       "paid_off": 2
+      }
+     },
+     "decisions": 3,
+     "neutral": 1,
+     "paid_off": 2,
+     "team": "NYM"
+    }
+   },
    "fatigue_end_states": {},
    "game_recap": "Played by Joe and sent to the co-managed tournament games chat as three files on 2026-11-04: the paper scorecard grid photo, the app scorecard PDF, and the play-by-play text; official R1-12 Game 3 under Joe's standing rule that sending a fixture's box score makes the game count. Minnesota Twins (seed 12) vs New York Mets (seed 21), home pattern 2-2-1-1-1, Game 3 at Citi Field in New York, and Minnesota leads the series 2-1 with this win. The game was CALLED FOR HEAVY RAIN after the top of the 9th inning, an official game (the log's rare play line, p22): New York never batted in the bottom of the 9th, so New York's batting lines cover eight innings and Minnesota threw exactly eight innings; the linescore above carries New York's 9th as x, the home club not batting, exactly as the card prints it. Box score record: the three sources carry the linescore, the full batting and pitching lines, and a complete play log, and they agree on every printed number, with no run-accounting knot and no settlement. The decisions are not printed; they are derived from the play log and the run charges on the card. Bert Blyleven takes the win: he was Minnesota's only pitcher, started and finished the game by the call (8.0 IP, 3 H, 0 R, 1 BB, 8 SO), and Minnesota led from the top of the 1st on. No save is possible: Blyleven started the game, and a starter who finishes his own game earns no save. Jacob deGrom takes the loss (6.0 IP, 4 H, 1 ER, 0 BB, 12 SO, 1 HR), a hard-luck loss: the only run charged to him, and the only run of the game, is Puckett's solo home run in the Top 1. Run charges match the printed lines exactly: New York pitching allows 1 + 0 + 0 + 0 = 1 (deGrom the one, Ben\u00edtez, Wagner and D\u00edaz none), and Minnesota pitching allows 0 (Blyleven none). The duplicate test ran before the number was assigned: the two stored games in the series are Game 1 (Minnesota 6, New York 5, linescore New York 0 3 0 1 1 0 0 0 0, Minnesota 1 1 0 0 0 2 0 0 2) and Game 2 (New York 5, Minnesota 1, linescore New York 1 2 0 0 0 0 2 0 0, Minnesota 0 0 0 0 0 0 1 0 0); neither shares this game's final score or linescore, so this box score, a 1-0 Minnesota win on its own linescore, is no duplicate, and this is the third game of the series in play order, booked as Game 3. The game: with two out in the Top 1, after Carew grounded out and Mauer struck out, Puckett homered off deGrom for the game's only run, and Buxton struck out to end the inning. That was all the scoring in a game that was one long duel. deGrom struck out twelve in six innings and allowed nothing else; Minnesota's other chances were Cronin's double in the Top 3, stranded when Gaetti struck out and Carew and Mauer went down, and the Top 4, when Killebrew and Oliva singled back to back before Hrbek struck out. New York's only hits were three singles: Alfonzo in the Bottom 3 (Jones's forceout erased him), Alonso in the Bottom 5, and Wright in the Bottom 7. New York grounded into two double plays, Hernandez in the Bottom 1 behind Lindor's leadoff walk and Beltran in the Bottom 5 behind Alonso's single, and stranded two runners all game; Minnesota stranded four. After deGrom, Ben\u00edtez pitched a scoreless Top 7, Wagner a scoreless Top 8, and D\u00edaz the Top 9, walking Battey, getting Puckett on a forceout, and striking out Buxton and Killebrew, before the rain ended it with New York's last turn never coming. Home runs: one, Puckett for Minnesota (Top 1, solo, the game's only run and only RBI). Doubles: one, Cronin for Minnesota. Triples: none. Errors: none; both clubs played errorless ball, every error column zero. Hit batters: none; every pitcher's HBP column on both grids reads zero and no batter on either side was hit, so HB 0 is carried for every pitcher as card-sourced values and the hit batter check runs on real data. Wild pitches: none printed on the card. Passed balls: none. Sacrifices: none of either kind, so SH 0 and SF 0 for every batter, log-proven. Stolen bases: none; the printed SB and CS columns are 0 for both clubs. Double plays grounded into, counted from the play log: two for New York, Hernandez in the Bottom 1 and Beltran in the Bottom 5, exactly as the card extras read; Minnesota grounded into none. Substitutions: Minnesota made one. Earl Battey replaced Mauer at catcher for the Bottom 8 and walked in the Top 9, carrying the printed batting line AB 0, R 0, BB 1; the catching spot did not bat again. Byron Buxton started in left field and struck out four times; Goose Goslin did not appear. New York made one: Gary Carter replaced Piazza at catcher during the game, first batting in the Bottom 5; Piazza carries AB 1 (a Bottom 2 strikeout) and Carter AB 2, neither with a hit. Batters faced are counted from the play log and tie to the batting PA totals both ways (Minnesota 32 PA against 32 New York BF: deGrom 22, Ben\u00edtez 3, Wagner 3, D\u00edaz 4; New York 26 PA against 26 Blyleven BF). Minnesota PA is AB 31 plus BB 1; New York PA is AB 25 plus BB 1, over eight innings, with Blyleven recording 24 outs, the two double plays accounting for the extra outs. Graded decisions: none. The play-by-play text for this game is the structured play export rather than the graded prose format and carries no Decisions summary section, so no decisions are graded for this game and none are invented here; the earlier games of the series carried graded counts, this one does not. Managers: Tom Kelly (Minnesota) and Davey Johnson (New York). Venue is Citi Field. Availability compliance: Gooden (24 outs in Game 2) and Santana (20 outs in Game 2) were unavailable under the house convention and correctly did not pitch. Game 4 availability, under the house convention that reads only this game: Blyleven (24 outs) and deGrom (18 outs) are both UNAVAILABLE, and Ben\u00edtez (3 outs), Wagner (3) and D\u00edaz (3) are all free. Each club started its rotation number 3, Blyleven for Minnesota and deGrom for New York; the rotations turn to the number 4 starters for Game 4, and the series stays in New York.",
    "series_recap": "Minnesota leads the series 2-1.",
@@ -76541,7 +76572,44 @@
      }
     }
    },
-   "final_grades": {},
+   "final_grades": {
+    "Casey Stengel": {
+     "backfired": 0,
+     "by_type": {
+      "Pitching change": {
+       "backfired": 0,
+       "count": 1,
+       "neutral": 0,
+       "paid_off": 1
+      }
+     },
+     "decisions": 1,
+     "neutral": 0,
+     "paid_off": 1,
+     "team": "NYY"
+    },
+    "Dick Williams": {
+     "backfired": 0,
+     "by_type": {
+      "Defensive sub": {
+       "backfired": 0,
+       "count": 2,
+       "neutral": 0,
+       "paid_off": 2
+      },
+      "Pitching change": {
+       "backfired": 0,
+       "count": 3,
+       "neutral": 1,
+       "paid_off": 2
+      }
+     },
+     "decisions": 5,
+     "neutral": 1,
+     "paid_off": 4,
+     "team": "OAK"
+    }
+   },
    "fatigue_end_states": {},
    "game_recap": "Played by Joe and sent to the co-managed tournament games chat on 2026-11-08 as the corrected set of three files: the paper scorecard grid photo, the app scorecard PDF (the Payoff Pitch Gazette), and the scorecard CSV export carrying the linescore, the full batting and pitching lines with batters faced and wild pitches, a full fielding section, and a structured play log; official W2-01 Game 4 under Joe's standing rule that sending a fixture's box score makes the game count. An earlier send the same day carried Game 3's scorecard photo and graded play-by-play by mistake alongside a first copy of this game's PDF; those crossed files were identified before anything was booked and were not used, and the corrected set's PDF is identical to the first copy's, so the first copy served as a cross-check only. This is Winners Bracket Round 2, Series 1: the New York Yankees (seed 1) against the Oakland Athletics (seed 22), home pattern 2-2-1-1-1, Game 4 at RingCentral Coliseum in Oakland. The series entry was formed in the Game 1 booking and is not re-formed here. New York leads the series 2-1, and the loser of this series takes its first series loss, not elimination. Box score record: the three sources carry the linescore, the full batting and pitching lines, the fielding lines, and a complete play log, and they agree on every printed number, with the decisions settled here and documented, the sources governing throughout. The decisions are not printed and are derived from the play log and the run charges on the card. Tim Hudson takes the win (6.0 IP, 6 H, 1 R, 1 ER, 4 BB, 0 HBP, 5 SO, 0 HR): he left after six innings with a 3-1 lead that Oakland never lost, having completed five innings. Ron Guidry takes the loss (7.0 IP, 6 H, 3 R, 3 ER, 1 BB, 1 HBP, 6 SO, 1 HR): all three Oakland runs scored off him in the Bottom 5. Dennis Eckersley takes the save (1.0 IP, 2 H, 0 R, 0 ER, 0 BB, 3 SO, 0 HR): he pitched the full Top 9 with a 3-1 lead of two, the save on the lead-of-three-or-fewer plus at-least-one-inning prong. Oakland's other relief ran Sean Doolittle (0.2 IP, 2 H, 0 R, 0 ER, 0 BB, 1 SO, 0 HR) and Rollie Fingers (1.1 IP, 0 H, 0 R, 0 ER, 1 BB, 3 SO, 0 HR), scoreless. Mariano Rivera (1.0 IP, 0 H, 0 R, 0 ER, 0 BB, 0 SO, 0 HR) threw a scoreless Bottom 8 for New York, entering after Bando's hit by pitch put runners at first and second with nobody out and getting Jackson's double play and Olson's groundout. Run charges match the printed lines exactly: New York pitching allows 3 (Guidry 3, Rivera 0), and Oakland pitching allows 1 (Hudson 1, Doolittle 0, Fingers 0, Eckersley 0). The duplicate test ran before the number was assigned: the series' three stored games are Game 1 (New York 8, Oakland 1), Game 2 (Oakland 6, New York 5), and Game 3 (New York 6, Oakland 4 in 10 innings), all with different linescores, so this box score takes Game 4. The game: New York put pressure on Hudson all day and stranded 14 runners. In the Top 1, Jeter and Judge singled, Ruth's bunt forced Judge at second, Gehrig's forceout forced Ruth at second, and Mantle grounded out. New York's only run came in the Top 3: Randolph singled, Jeter flied out, Judge singled, Ruth walked, and Gehrig's sacrifice fly scored Randolph; Mantle struck out to end it. New York reached Hudson again in the fourth (DiMaggio's single), the sixth (DiMaggio's single and Berra's walk), the seventh off Doolittle (Judge's and Mantle's singles around Fingers's entry), and the ninth off Eckersley (Ruth's and Gehrig's singles), and scored no more. Oakland's three runs came in the Bottom 5: Canseco led off with a home run, Tejada doubled, Murphy doubled Tejada home, Steinbach flied out, and Ellis's sacrifice fly scored Murphy; Henderson's single followed and Bando grounded out. Guidry finished seven innings, allowing nothing after the fifth. Rivera's scoreless eighth kept it 3-1, and Eckersley struck out Judge to open the ninth, allowed the two singles, then struck out Mantle and DiMaggio to end the game. Oakland stranded 4. Home runs: one, Canseco (solo, Bottom 5, off Guidry). Doubles: two, Tejada and Murphy, both in the Bottom 5. Triples: none. Errors: none, an errorless game both ways. Hit batters: one, Bando by Guidry in the Bottom 8; HB 1 for Guidry and 0 for every other pitcher and HBP 1 for Bando and 0 for every other batter are carried as card-sourced values, so the hit batter check runs on real data. Wild pitches: none, the CSV printing WP 0 for all six pitchers. Passed balls: none, the fielding tables printing PB 0 for both catchers, Berra and Steinbach. Sacrifices: two sacrifice bunts (Berra in the Top 4 and Ruth in the Top 5, both fielded by Hudson) and two sacrifice flies (Gehrig in the Top 3, Ellis in the Bottom 5); Ruth's Top 1 bunt was a fielder's choice, the lead runner forced and the batter safe, an at-bat and not a sacrifice, so Ruth carries SH 1, not 2. Stolen bases: none. Caught stealing: none. Double plays grounded into: one, Jackson for Oakland in the Bottom 8, turned 5-4-3 by Rodriguez, Randolph, and Gehrig, New York's one double play; Oakland turned none. Substitutions: Oakland made two defensive substitutions: Matt Olson replaced McGwire at first base for the Top 8 and batted once, so Oakland prints ten batting lines; Eric Chavez replaced Bando at third base for the Top 9, did not bat, and recorded no fielding chance, and is carried in this recap only. New York made no batting substitution and prints nine batting lines. Plate appearances counted fresh from the printed batting lines and the play log, a runner out on the bases counting as one of the inning's outs and never an add-on: New York PA is AB 34 plus BB 5 plus SH 2 plus SF 1, which is 42, and the outs plus runs plus stranded identity agrees (27 outs plus 1 run plus 14 stranded is 42); Oakland PA is AB 28 plus BB 1 plus HBP 1 plus SF 1, which is 31, and the identity agrees (24 outs plus 3 runs plus 4 stranded is 31). Batters faced tie to those totals: New York 42 PA against 42 Oakland BF (Hudson 28, Doolittle 4, Fingers 5, Eckersley 5), as the CSV prints, and Oakland 31 PA against 31 New York BF (Guidry 29, Rivera 2). Strikeouts tie both ways: New York batting 12 against Oakland pitching 12 (Hudson 5, Doolittle 1, Fingers 3, Eckersley 3), and Oakland batting 6 against New York pitching 6 (Guidry 6, Rivera 0). Printed RBI: New York 1 for 1 (Gehrig) and Oakland 3 for 3 (Canseco 1, Murphy 1, Ellis 1); every run in the game carried an RBI. Availability: Game 3's long starts sat out as required, Gomez (19 outs in Game 3) and Stewart (17 outs) unavailable and both unused in Game 4, and every arm used was free (Game 3 outs: Gossage 5, Bailey 4, Hendriks 4, Robertson 3, Rivera 3, Doolittle 2, Eckersley 1, Fingers 1, Honeycutt 1), all under the house outs convention (under 6 outs free, 6 to 8 outs capped at 3, 9 or more outs unavailable). For Game 5, Hudson (18 outs) and Guidry (21 outs) are unavailable, and every reliever used is free (Fingers 4 outs, Eckersley 3, Rivera 3, Doolittle 2). No graded decisions are booked for this game: the corrected source set carried no graded play-by-play and no Decisions summary (no graded log was sent for Game 4), so there are no manager grades to record, following the R1-12 Game 3 precedent; the game's manager_log is null, the same as every imported game. Defensive lines were built with this booking under Joe's 2026-11-07 standing instruction: errors_by is empty in the established shape because the game was errorless, and a defense object in the established shape was added (Oakland 27 putouts and 4 assists, New York 24 putouts and 8 assists with Oakland batting only eight innings; Steinbach's 12 catcher putouts are exactly New York's 12 strikeouts, and Berra's 7 are Oakland's 6 strikeouts plus Ellis's Bottom 3 popout to the catcher, with no caught stealing to adjust either tie; wild pitches true zeros for all six pitchers as the CSV prints, and passed balls true zeros for both catchers). Managers: Casey Stengel (New York) and Dick Williams (Oakland). Venue is RingCentral Coliseum. The series is tied 2-2.",
    "series_recap": "The series is tied 2-2.",
