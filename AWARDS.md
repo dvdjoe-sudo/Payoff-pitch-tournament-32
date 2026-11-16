@@ -19,10 +19,10 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
 | Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
+| Bill Freehan | Detroit Tigers | 52.5 | 30 | 8 | 14 | 5 |
 | Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 | Carlos Delgado | Toronto Blue Jays | 49.5 | 26 | 7 | 13 | 3 |
-| Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
 
 ## Cy Young
 
@@ -54,6 +54,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | --- | --- | --- | --- | --- | --- | --- |
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
+| Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
 | John Wetteland | Montreal Expos | 27.2 | 2 | 7.0 | 8 | 0 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
@@ -61,9 +62,8 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
+| Bobby Jenks | Chicago White Sox | 22.4 | 2 | 6.0 | 1 | 0 |
 | Andy McGaffigan | Montreal Expos | 22.1 | 2 | 7.1 | 1 | 2 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
-| Willie Hernandez | Detroit Tigers | 20.5 | 1 | 9.0 | 5 | 3 |
 | Troy Percival | Los Angeles Angels | 20.2 | 0 | 10.0 | 8 | 2 |
-| Tom Henke | Toronto Blue Jays | 19.2 | 1 | 7.0 | 8 | 2 |
