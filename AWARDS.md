@@ -41,10 +41,10 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
+| Pete Alexander | Chicago Cubs | 23.6 | 18.0 | 2 | 13 | 6 |
 | Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
 | Steve Rogers | Montreal Expos | 23.1 | 20.1 | 2 | 12 | 7 |
 | Mordecai Brown | Chicago Cubs | 23.1 | 15.2 | 2 | 10 | 4 |
-| Jim Palmer | Baltimore Orioles | 23.0 | 18.0 | 2 | 10 | 5 |
 
 ## Reliever
 

@@ -505,15 +505,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Ryne Sandberg (`sandbry01`) in R1-06-G1 (same starter in 7 later games)
-- Slot 2: Anthony Rizzo (`rizzoan01`) in R1-06-G1; Anthony Rizzo (`rizzoan01`) in R1-06-G2; Anthony Rizzo (`rizzoan01`) in R1-06-G3; Mark Grace (`gracema01`) in R1-06-G4; Mark Grace (`gracema01`) in R1-06-G5; Anthony Rizzo (`rizzoan01`) in W2-06-G1; Anthony Rizzo (`rizzoan01`) in W2-06-G2; Anthony Rizzo (`rizzoan01`) in W2-06-G3
-- Slot 3: Ron Santo (`santoro01`) in R1-06-G1 (same starter in 7 later games)
-- Slot 4: Sammy Sosa (`sosasa01`) in R1-06-G1 (same starter in 7 later games)
-- Slot 5: Billy Williams (`willibi01`) in R1-06-G1 (same starter in 7 later games)
-- Slot 6: Ernie Banks (`bankser01`) in R1-06-G1 (same starter in 7 later games)
-- Slot 7: Hack Wilson (`wilsoha01`) in R1-06-G1 (same starter in 7 later games)
-- Slot 8: Gabby Hartnett (`hartnga01`) in R1-06-G1 (same starter in 7 later games)
-- Slot 9: Pete Crow-Armstrong (`crowape01`) in R1-06-G1; Pete Crow-Armstrong (`crowape01`) in R1-06-G2; Pete Crow-Armstrong (`crowape01`) in R1-06-G3; Andre Dawson (`dawsoan01`) in R1-06-G4; Andre Dawson (`dawsoan01`) in R1-06-G5; Pete Crow-Armstrong (`crowape01`) in W2-06-G1; Pete Crow-Armstrong (`crowape01`) in W2-06-G2; Pete Crow-Armstrong (`crowape01`) in W2-06-G3
+- Slot 1: Ryne Sandberg (`sandbry01`) in R1-06-G1 (same starter in 8 later games)
+- Slot 2: Anthony Rizzo (`rizzoan01`) in R1-06-G1; Anthony Rizzo (`rizzoan01`) in R1-06-G2; Anthony Rizzo (`rizzoan01`) in R1-06-G3; Mark Grace (`gracema01`) in R1-06-G4; Mark Grace (`gracema01`) in R1-06-G5; Anthony Rizzo (`rizzoan01`) in W2-06-G1; Anthony Rizzo (`rizzoan01`) in W2-06-G2; Anthony Rizzo (`rizzoan01`) in W2-06-G3; Anthony Rizzo (`rizzoan01`) in W2-06-G4
+- Slot 3: Ron Santo (`santoro01`) in R1-06-G1 (same starter in 8 later games)
+- Slot 4: Sammy Sosa (`sosasa01`) in R1-06-G1 (same starter in 8 later games)
+- Slot 5: Billy Williams (`willibi01`) in R1-06-G1 (same starter in 8 later games)
+- Slot 6: Ernie Banks (`bankser01`) in R1-06-G1 (same starter in 8 later games)
+- Slot 7: Hack Wilson (`wilsoha01`) in R1-06-G1 (same starter in 8 later games)
+- Slot 8: Gabby Hartnett (`hartnga01`) in R1-06-G1 (same starter in 8 later games)
+- Slot 9: Pete Crow-Armstrong (`crowape01`) in R1-06-G1; Pete Crow-Armstrong (`crowape01`) in R1-06-G2; Pete Crow-Armstrong (`crowape01`) in R1-06-G3; Andre Dawson (`dawsoan01`) in R1-06-G4; Andre Dawson (`dawsoan01`) in R1-06-G5; Pete Crow-Armstrong (`crowape01`) in W2-06-G1; Pete Crow-Armstrong (`crowape01`) in W2-06-G2; Pete Crow-Armstrong (`crowape01`) in W2-06-G3; Pete Crow-Armstrong (`crowape01`) in W2-06-G4
 
 ### Substitutes who have batted
 
@@ -529,6 +529,7 @@ These names are not on the active roster.
 - Fergie Jenkins (`jenkife01`) started W2-06-G1
 - Mordecai Brown (`brownmo01`) started W2-06-G2
 - Rick Reuschel (`reuscri01`) started W2-06-G3
+- Pete Alexander (`alexape01`) started W2-06-G4
 
 ### Relievers who have appeared
 
@@ -989,7 +990,7 @@ Tug McGraw, Ron Reed, Brad Lidge and Ranger Suárez move into bullpen slots 3, 4
 
 ## 12. Minnesota Twins (MIN)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 808.5.
+Bracket: losers. Series losses: 1. Full 26 Index: 808.5.
 
 Manager: Tom Kelly (1986-2001, 16).
 
@@ -1049,15 +1050,15 @@ Firpo Marberry takes bullpen slot 4, and Jhoan Duran and Taylor Rogers move to b
 
 ### Lineup slots that have batted
 
-- Slot 1: Rod Carew (`carewro01`) in R1-12-G1 (same starter in 7 later games)
-- Slot 2: Joe Mauer (`mauerjo01`) in R1-12-G1 (same starter in 7 later games)
-- Slot 3: Kirby Puckett (`puckeki01`) in R1-12-G1 (same starter in 7 later games)
-- Slot 4: Harmon Killebrew (`killeha01`) in R1-12-G1; Harmon Killebrew (`killeha01`) in R1-12-G2; Byron Buxton (`buxtoby01`) in R1-12-G3; Byron Buxton (`buxtoby01`) in R1-12-G4; Goose Goslin (`gosligo01`) in R1-12-G5; Harmon Killebrew (`killeha01`) in W2-06-G1; Harmon Killebrew (`killeha01`) in W2-06-G2; Harmon Killebrew (`killeha01`) in W2-06-G3
-- Slot 5: Goose Goslin (`gosligo01`) in R1-12-G1; Goose Goslin (`gosligo01`) in R1-12-G2; Harmon Killebrew (`killeha01`) in R1-12-G3; Harmon Killebrew (`killeha01`) in R1-12-G4; Harmon Killebrew (`killeha01`) in R1-12-G5; Goose Goslin (`gosligo01`) in W2-06-G1; Goose Goslin (`gosligo01`) in W2-06-G2; Goose Goslin (`gosligo01`) in W2-06-G3
-- Slot 6: Tony Oliva (`olivato01`) in R1-12-G1 (same starter in 7 later games)
-- Slot 7: Kent Hrbek (`hrbekke01`) in R1-12-G1 (same starter in 7 later games)
-- Slot 8: Joe Cronin (`cronijo01`) in R1-12-G1 (same starter in 7 later games)
-- Slot 9: Gary Gaetti (`gaettga01`) in R1-12-G1 (same starter in 7 later games)
+- Slot 1: Rod Carew (`carewro01`) in R1-12-G1 (same starter in 8 later games)
+- Slot 2: Joe Mauer (`mauerjo01`) in R1-12-G1 (same starter in 8 later games)
+- Slot 3: Kirby Puckett (`puckeki01`) in R1-12-G1 (same starter in 8 later games)
+- Slot 4: Harmon Killebrew (`killeha01`) in R1-12-G1; Harmon Killebrew (`killeha01`) in R1-12-G2; Byron Buxton (`buxtoby01`) in R1-12-G3; Byron Buxton (`buxtoby01`) in R1-12-G4; Goose Goslin (`gosligo01`) in R1-12-G5; Harmon Killebrew (`killeha01`) in W2-06-G1; Harmon Killebrew (`killeha01`) in W2-06-G2; Harmon Killebrew (`killeha01`) in W2-06-G3; Harmon Killebrew (`killeha01`) in W2-06-G4
+- Slot 5: Goose Goslin (`gosligo01`) in R1-12-G1; Goose Goslin (`gosligo01`) in R1-12-G2; Harmon Killebrew (`killeha01`) in R1-12-G3; Harmon Killebrew (`killeha01`) in R1-12-G4; Harmon Killebrew (`killeha01`) in R1-12-G5; Goose Goslin (`gosligo01`) in W2-06-G1; Goose Goslin (`gosligo01`) in W2-06-G2; Goose Goslin (`gosligo01`) in W2-06-G3; Goose Goslin (`gosligo01`) in W2-06-G4
+- Slot 6: Tony Oliva (`olivato01`) in R1-12-G1 (same starter in 8 later games)
+- Slot 7: Kent Hrbek (`hrbekke01`) in R1-12-G1 (same starter in 8 later games)
+- Slot 8: Joe Cronin (`cronijo01`) in R1-12-G1 (same starter in 8 later games)
+- Slot 9: Gary Gaetti (`gaettga01`) in R1-12-G1 (same starter in 8 later games)
 
 ### Substitutes who have batted
 
@@ -1077,6 +1078,7 @@ Firpo Marberry takes bullpen slot 4, and Jhoan Duran and Taylor Rogers move to b
 - Walter Johnson (`johnswa01`) started W2-06-G1
 - Johan Santana (`santajo01`) started W2-06-G2
 - Bert Blyleven (`blylebe01`) started W2-06-G3
+- Frank Viola (`violafr01`) started W2-06-G4
 
 ### Relievers who have appeared
 
@@ -1085,6 +1087,8 @@ Firpo Marberry takes bullpen slot 4, and Jhoan Duran and Taylor Rogers move to b
 - Rick Aguilera (`aguilri01`), first seen in R1-12-G4
 - Firpo Marberry (`marbefi01`), first seen in W2-06-G2
 - Jim Kaat (`kaatji01`), first seen in W2-06-G3
+- Al Worthington (`worthal01`), first seen in W2-06-G4
+- Taylor Rogers (`rogerta01`), first seen in W2-06-G4
 
 ## 13. Cleveland Guardians (CLE)
 

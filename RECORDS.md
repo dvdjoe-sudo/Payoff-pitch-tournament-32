@@ -24,6 +24,7 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Josh Hader (Milwaukee Brewers), R1-10-G5: 11 K in 5.2 IP.
 - Bob Feller (Cleveland Guardians), R1-13-G1: 11 K in 8.0 IP.
 - Smoky Joe Wood (Boston Red Sox), W2-03-G4: 11 K in 9.0 IP.
+- Pete Alexander (Chicago Cubs), W2-06-G4: 11 K in 9.0 IP.
 - Curt Schilling (Philadelphia Phillies), L1-01-G4: 10 K in 8.0 IP.
 - Max Scherzer (Washington Nationals), L1-02-G1: 10 K in 7.0 IP.
 - Smoky Joe Wood (Boston Red Sox), R1-03-G4: 10 K in 6.2 IP.
