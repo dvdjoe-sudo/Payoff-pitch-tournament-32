@@ -23,6 +23,7 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Pedro Martinez (Boston Red Sox), R1-03-G6: 11 K in 8.0 IP.
 - Josh Hader (Milwaukee Brewers), R1-10-G5: 11 K in 5.2 IP.
 - Bob Feller (Cleveland Guardians), R1-13-G1: 11 K in 8.0 IP.
+- Smoky Joe Wood (Boston Red Sox), W2-03-G4: 11 K in 9.0 IP.
 - Curt Schilling (Philadelphia Phillies), L1-01-G4: 10 K in 8.0 IP.
 - Max Scherzer (Washington Nationals), L1-02-G1: 10 K in 7.0 IP.
 - Smoky Joe Wood (Boston Red Sox), R1-03-G4: 10 K in 6.2 IP.
@@ -57,3 +58,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Milwaukee Brewers scored 13 against San Diego Padres in L1-07-G5.
 - Texas Rangers scored 10 against Toronto Blue Jays in L1-08-G3.
 - Texas Rangers scored 12 against Toronto Blue Jays in L1-08-G5.
+- Boston Red Sox scored 16 against Houston Astros in W2-03-G4.

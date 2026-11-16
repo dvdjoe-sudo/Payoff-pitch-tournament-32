@@ -16,13 +16,13 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
+| Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
+| Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
 | Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 | Carlos Delgado | Toronto Blue Jays | 49.5 | 26 | 7 | 13 | 3 |
 | Bob Johnson | Philadelphia Athletics | 49.0 | 27 | 9 | 9 | 3 |
-| Mickey Mantle | New York Yankees | 49.0 | 26 | 10 | 9 | 4 |
-| Geoff Jenkins | Milwaukee Brewers | 48.5 | 32 | 5 | 11 | 3 |
 
 ## Cy Young
 
