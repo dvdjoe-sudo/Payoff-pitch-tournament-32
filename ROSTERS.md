@@ -397,15 +397,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Ozzie Smith (`smithoz01`) in R1-05-G1 (same starter in 5 later games)
-- Slot 2: Stan Musial (`musiast01`) in R1-05-G1 (same starter in 5 later games)
-- Slot 3: Rogers Hornsby (`hornsro01`) in R1-05-G1 (same starter in 5 later games)
-- Slot 4: Albert Pujols (`pujolal01`) in R1-05-G1 (same starter in 5 later games)
-- Slot 5: Jim Edmonds (`edmonji01`) in R1-05-G1; Jim Edmonds (`edmonji01`) in R1-05-G2; Lou Brock (`brocklo01`) in R1-05-G3; Lou Brock (`brocklo01`) in R1-05-G4; Jim Edmonds (`edmonji01`) in W2-05-G1; Jim Edmonds (`edmonji01`) in W2-05-G2
-- Slot 6: Joe Medwick (`medwijo01`) in R1-05-G1 (same starter in 5 later games)
-- Slot 7: Enos Slaughter (`slaugen01`) in R1-05-G1 (same starter in 5 later games)
-- Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 5 later games)
-- Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 5 later games)
+- Slot 1: Ozzie Smith (`smithoz01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 2: Stan Musial (`musiast01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 3: Rogers Hornsby (`hornsro01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 4: Albert Pujols (`pujolal01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 5: Jim Edmonds (`edmonji01`) in R1-05-G1; Jim Edmonds (`edmonji01`) in R1-05-G2; Lou Brock (`brocklo01`) in R1-05-G3; Lou Brock (`brocklo01`) in R1-05-G4; Jim Edmonds (`edmonji01`) in W2-05-G1; Jim Edmonds (`edmonji01`) in W2-05-G2; Jim Edmonds (`edmonji01`) in W2-05-G3
+- Slot 6: Joe Medwick (`medwijo01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 7: Enos Slaughter (`slaugen01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 6 later games)
+- Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 6 later games)
 
 ### Substitutes who have batted
 
@@ -419,6 +419,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Harry Brecheen (`brechha01`) started R1-05-G4
 - Bob Gibson (`gibsobo01`) started W2-05-G1
 - Dizzy Dean (`deandi01`) started W2-05-G2
+- Adam Wainwright (`wainwad01`) started W2-05-G3
 
 ### Relievers who have appeared
 
@@ -426,6 +427,8 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Ryan Helsley (`helslry01`), first seen in R1-05-G3
 - Bruce Sutter (`suttebr01`), first seen in R1-05-G4
 - Jason Isringhausen (`isrinja01`), first seen in W2-05-G1
+- Lindy McDaniel (`mcdanli01`), first seen in W2-05-G3
+- Todd Worrell (`worreto01`), first seen in W2-05-G3
 
 ### Rotation carry recorded on the series
 
@@ -1135,15 +1138,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3; Tris Speaker (`speaktr01`) in R1-13-G4; Tris Speaker (`speaktr01`) in R1-13-G5; Tris Speaker (`speaktr01`) in R1-13-G6; Tris Speaker (`speaktr01`) in R1-13-G7; Kenny Lofton (`loftoke01`) in W2-05-G1; Kenny Lofton (`loftoke01`) in W2-05-G2
-- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 8 later games)
-- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 8 later games)
-- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 8 later games)
-- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 8 later games)
-- Slot 6: Albert Belle (`belleal01`) in R1-13-G1; Albert Belle (`belleal01`) in R1-13-G2; Albert Belle (`belleal01`) in R1-13-G3; Albert Belle (`belleal01`) in R1-13-G4; Albert Belle (`belleal01`) in R1-13-G5; Kenny Lofton (`loftoke01`) in R1-13-G6; Kenny Lofton (`loftoke01`) in R1-13-G7; Albert Belle (`belleal01`) in W2-05-G1; Albert Belle (`belleal01`) in W2-05-G2
-- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 8 later games)
-- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 8 later games)
-- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 8 later games)
+- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3; Tris Speaker (`speaktr01`) in R1-13-G4; Tris Speaker (`speaktr01`) in R1-13-G5; Tris Speaker (`speaktr01`) in R1-13-G6; Tris Speaker (`speaktr01`) in R1-13-G7; Kenny Lofton (`loftoke01`) in W2-05-G1; Kenny Lofton (`loftoke01`) in W2-05-G2; Kenny Lofton (`loftoke01`) in W2-05-G3
+- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 9 later games)
+- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 9 later games)
+- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 9 later games)
+- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 9 later games)
+- Slot 6: Albert Belle (`belleal01`) in R1-13-G1; Albert Belle (`belleal01`) in R1-13-G2; Albert Belle (`belleal01`) in R1-13-G3; Albert Belle (`belleal01`) in R1-13-G4; Albert Belle (`belleal01`) in R1-13-G5; Kenny Lofton (`loftoke01`) in R1-13-G6; Kenny Lofton (`loftoke01`) in R1-13-G7; Albert Belle (`belleal01`) in W2-05-G1; Albert Belle (`belleal01`) in W2-05-G2; Albert Belle (`belleal01`) in W2-05-G3
+- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 9 later games)
+- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 9 later games)
+- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 9 later games)
 
 ### Substitutes who have batted
 
@@ -1162,6 +1165,7 @@ These names are not on the active roster.
 - Stan Coveleski (`covelst01`) started R1-13-G7
 - Bob Feller (`fellebo01`) started W2-05-G1
 - Stan Coveleski (`covelst01`) started W2-05-G2
+- Addie Joss (`jossad01`) started W2-05-G3
 
 ### Relievers who have appeared
 
