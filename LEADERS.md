@@ -879,7 +879,6 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Miguel Tejada | Oakland Athletics | .341 | 15 | 44 |
 | Troy Glaus | Los Angeles Angels | .333 | 18 | 54 |
 | Garret Anderson | Los Angeles Angels | .333 | 13 | 39 |
-| Bobby Abreu | Philadelphia Phillies | .333 | 12 | 36 |
 | Ryan Zimmerman | Washington Nationals | .333 | 12 | 36 |
 | Fielder Jones | Chicago White Sox | .333 | 10 | 30 |
 | Jackie Robinson | Los Angeles Dodgers | .333 | 7 | 21 |
@@ -894,6 +893,7 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Larry Walker | Colorado Rockies | .308 | 12 | 39 |
 | Robin Ventura | Chicago White Sox | .308 | 8 | 26 |
 | Rabbit Maranville | Atlanta Braves | .308 | 4 | 13 |
+| Bobby Abreu | Philadelphia Phillies | .306 | 11 | 36 |
 | Bobby Witt Jr. | Kansas City Royals | .306 | 11 | 36 |
 | Tony Fernandez | Toronto Blue Jays | .304 | 14 | 46 |
 | John Olerud | Seattle Mariners | .304 | 7 | 23 |
