@@ -20,7 +20,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
 | Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
-| Dale Murphy | Atlanta Braves | 52.5 | 30 | 10 | 11 | 6 |
+| Dale Murphy | Atlanta Braves | 53.0 | 30 | 10 | 11 | 6 |
 | Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 
@@ -35,6 +35,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
+| Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
 | Tommy Bridges | Detroit Tigers | 29.5 | 17.0 | 2 | 16 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Tim Lincecum | San Francisco Giants | 28.1 | 16.0 | 2 | 21 | 3 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Pete Alexander | Chicago Cubs | 23.6 | 18.0 | 2 | 13 | 6 |
 | Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
 | Steve Rogers | Montreal Expos | 23.1 | 20.1 | 2 | 12 | 7 |
-| Mordecai Brown | Chicago Cubs | 23.1 | 15.2 | 2 | 10 | 4 |
 
 ## Reliever
 
