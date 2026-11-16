@@ -2,6 +2,16 @@
 
 Dated rulings and repo history. The rules, seeds, and bracket in force are [TOURNAMENT_RULES.md](TOURNAMENT_RULES.md), [TOURNAMENT_SEEDS.md](TOURNAMENT_SEEDS.md), and [BRACKET.md](BRACKET.md). This file is the history those pages used to carry inline.
 
+
+## 2026-11-15 — L1-01 Games 1 and 3 walk-off scoring corrected (Joe's ruling)
+
+Joe approved correcting the two non-home-run walk-off games in this series that had counted runs after the winning run scored (MLB 5.08(b) / 9.06(f): the game ends when the winning run scores, the hit is cut to the bases needed, and only that run counts).
+
+- **L1-01 Game 1**, originally booked as Miami 1, Philadelphia 3 on Abreu's walk-off double (2 RBI), is now **Philadelphia 2, Miami 1**. Abreu's hit is a single with 1 RBI; Callison, the runner on first, is left on base and is not credited with a run; Nen's line is 0.2 IP, 3 H, 1 R, 1 ER.
+- **L1-01 Game 3**, originally booked as Philadelphia 6, Miami 8 in 11 innings on Floyd's walk-off single (2 RBI), is now **Miami 7, Philadelphia 6**. Floyd's single is 1 RBI; Ramirez, the runner on second, is left on base and is not credited with a run; Garber's line is 0.1 IP, 2 H, 1 R, 1 ER.
+
+The series winner is unchanged (Miami 4, Philadelphia 2). No other game result is changed. Recaps of later games in L1-01 that cited the old official scores were updated to the corrected finals. Manager decision grades were left as originally recorded and were not recomputed. Derived pages (box scores, leaders, team stats, records, feeds, share graphics, scorecards) and tournament lines on player cards are regenerated from the corrected archive. `sw.js` cache bumped to v105.
+
 ## 2026-11-10 — W2-02 Game 2 play rows adopted; standing GIDP definition (Joe's ruling)
 
 Joe adopted the play rows for W2-02 Game 2 and set the standing definition the same evening: double plays count as they happened, and play rows are adopted when this GIDP definition is the only difference. The 72 native rows attach verbatim to the Game 2 record (staged payload `staged-W2-02-G2.plays.json`), with the one difference on the record: the rows rebuild Willie McCovey at 1 GIDP (bottom-of-the-6th ground-ball double play on the hit and run) while the app's printed line credits 0. The printed line is unchanged. This closes the last lines-only game in the book. No game result was changed.
