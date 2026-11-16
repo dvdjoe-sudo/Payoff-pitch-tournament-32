@@ -37,6 +37,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
+| Dazzy Vance | Los Angeles Dodgers | 30.9 | 20.2 | 2 | 17 | 3 |
 | Tommy Bridges | Detroit Tigers | 29.5 | 17.0 | 2 | 16 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Tim Lincecum | San Francisco Giants | 28.1 | 16.0 | 2 | 21 | 3 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
-| Pete Alexander | Chicago Cubs | 23.6 | 18.0 | 2 | 13 | 6 |
 
 ## Reliever
 

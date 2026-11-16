@@ -542,7 +542,7 @@ These names are not on the active roster.
 
 ## 7. Atlanta Braves (ATL)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 857.5.
+Bracket: losers. Series losses: 1. Full 26 Index: 857.5.
 
 Manager: Bobby Cox.
 
@@ -596,15 +596,15 @@ Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are
 
 ### Lineup slots that have batted
 
-- Slot 1: Rabbit Maranville (`maranra01`) in R1-07-G1; Rabbit Maranville (`maranra01`) in R1-07-G2; Rabbit Maranville (`maranra01`) in R1-07-G3; Chipper Jones (`jonesch06`) in R1-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G1; Rabbit Maranville (`maranra01`) in W2-07-G2; Rabbit Maranville (`maranra01`) in W2-07-G3; Rabbit Maranville (`maranra01`) in W2-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G5; Rabbit Maranville (`maranra01`) in W2-07-G6
-- Slot 2: Chipper Jones (`jonesch06`) in R1-07-G1; Chipper Jones (`jonesch06`) in R1-07-G2; Chipper Jones (`jonesch06`) in R1-07-G3; Andrelton Simmons (`simmoan01`) in R1-07-G4; Chipper Jones (`jonesch06`) in W2-07-G1; Chipper Jones (`jonesch06`) in W2-07-G2; Chipper Jones (`jonesch06`) in W2-07-G3; Chipper Jones (`jonesch06`) in W2-07-G4; Chipper Jones (`jonesch06`) in W2-07-G5; Chipper Jones (`jonesch06`) in W2-07-G6
-- Slot 3: Hank Aaron (`aaronha01`) in R1-07-G1 (same starter in 9 later games)
-- Slot 4: Eddie Mathews (`matheed01`) in R1-07-G1 (same starter in 9 later games)
-- Slot 5: Joe Torre (`torrejo01`) in R1-07-G1; Joe Torre (`torrejo01`) in R1-07-G2; Joe Torre (`torrejo01`) in R1-07-G3; Dale Murphy (`murphda05`) in R1-07-G4; Joe Torre (`torrejo01`) in W2-07-G1; Joe Torre (`torrejo01`) in W2-07-G2; Joe Torre (`torrejo01`) in W2-07-G3; Joe Torre (`torrejo01`) in W2-07-G4; Joe Torre (`torrejo01`) in W2-07-G5; Joe Torre (`torrejo01`) in W2-07-G6
-- Slot 6: Freddie Freeman (`freemfr01`) in R1-07-G1; Freddie Freeman (`freemfr01`) in R1-07-G2; Freddie Freeman (`freemfr01`) in R1-07-G3; Freddie Freeman (`freemfr01`) in R1-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G1; Freddie Freeman (`freemfr01`) in W2-07-G2; Freddie Freeman (`freemfr01`) in W2-07-G3; Dale Murphy (`murphda05`) in W2-07-G4; Dale Murphy (`murphda05`) in W2-07-G5; Dale Murphy (`murphda05`) in W2-07-G6
-- Slot 7: Dale Murphy (`murphda05`) in R1-07-G1; Dale Murphy (`murphda05`) in R1-07-G2; Dale Murphy (`murphda05`) in R1-07-G3; Andruw Jones (`jonesan01`) in R1-07-G4; Dale Murphy (`murphda05`) in W2-07-G1; Dale Murphy (`murphda05`) in W2-07-G2; Dale Murphy (`murphda05`) in W2-07-G3; Freddie Freeman (`freemfr01`) in W2-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G5; Freddie Freeman (`freemfr01`) in W2-07-G6
-- Slot 8: Andruw Jones (`jonesan01`) in R1-07-G1; Andruw Jones (`jonesan01`) in R1-07-G2; Andruw Jones (`jonesan01`) in R1-07-G3; Joe Torre (`torrejo01`) in R1-07-G4; Andruw Jones (`jonesan01`) in W2-07-G1; Andruw Jones (`jonesan01`) in W2-07-G2; Andruw Jones (`jonesan01`) in W2-07-G3; Andruw Jones (`jonesan01`) in W2-07-G4; Andruw Jones (`jonesan01`) in W2-07-G5; Andruw Jones (`jonesan01`) in W2-07-G6
-- Slot 9: Ozzie Albies (`albieoz01`) in R1-07-G1 (same starter in 9 later games)
+- Slot 1: Rabbit Maranville (`maranra01`) in R1-07-G1; Rabbit Maranville (`maranra01`) in R1-07-G2; Rabbit Maranville (`maranra01`) in R1-07-G3; Chipper Jones (`jonesch06`) in R1-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G1; Rabbit Maranville (`maranra01`) in W2-07-G2; Rabbit Maranville (`maranra01`) in W2-07-G3; Rabbit Maranville (`maranra01`) in W2-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G5; Rabbit Maranville (`maranra01`) in W2-07-G6; Rabbit Maranville (`maranra01`) in W2-07-G7
+- Slot 2: Chipper Jones (`jonesch06`) in R1-07-G1; Chipper Jones (`jonesch06`) in R1-07-G2; Chipper Jones (`jonesch06`) in R1-07-G3; Andrelton Simmons (`simmoan01`) in R1-07-G4; Chipper Jones (`jonesch06`) in W2-07-G1; Chipper Jones (`jonesch06`) in W2-07-G2; Chipper Jones (`jonesch06`) in W2-07-G3; Chipper Jones (`jonesch06`) in W2-07-G4; Chipper Jones (`jonesch06`) in W2-07-G5; Chipper Jones (`jonesch06`) in W2-07-G6; Chipper Jones (`jonesch06`) in W2-07-G7
+- Slot 3: Hank Aaron (`aaronha01`) in R1-07-G1; Hank Aaron (`aaronha01`) in R1-07-G2; Hank Aaron (`aaronha01`) in R1-07-G3; Hank Aaron (`aaronha01`) in R1-07-G4; Hank Aaron (`aaronha01`) in W2-07-G1; Hank Aaron (`aaronha01`) in W2-07-G2; Hank Aaron (`aaronha01`) in W2-07-G3; Hank Aaron (`aaronha01`) in W2-07-G4; Hank Aaron (`aaronha01`) in W2-07-G5; Hank Aaron (`aaronha01`) in W2-07-G6; Ronald Acuna Jr. (`acunaro01`) in W2-07-G7
+- Slot 4: Eddie Mathews (`matheed01`) in R1-07-G1 (same starter in 10 later games)
+- Slot 5: Joe Torre (`torrejo01`) in R1-07-G1; Joe Torre (`torrejo01`) in R1-07-G2; Joe Torre (`torrejo01`) in R1-07-G3; Dale Murphy (`murphda05`) in R1-07-G4; Joe Torre (`torrejo01`) in W2-07-G1; Joe Torre (`torrejo01`) in W2-07-G2; Joe Torre (`torrejo01`) in W2-07-G3; Joe Torre (`torrejo01`) in W2-07-G4; Joe Torre (`torrejo01`) in W2-07-G5; Joe Torre (`torrejo01`) in W2-07-G6; Joe Torre (`torrejo01`) in W2-07-G7
+- Slot 6: Freddie Freeman (`freemfr01`) in R1-07-G1; Freddie Freeman (`freemfr01`) in R1-07-G2; Freddie Freeman (`freemfr01`) in R1-07-G3; Freddie Freeman (`freemfr01`) in R1-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G1; Freddie Freeman (`freemfr01`) in W2-07-G2; Freddie Freeman (`freemfr01`) in W2-07-G3; Dale Murphy (`murphda05`) in W2-07-G4; Dale Murphy (`murphda05`) in W2-07-G5; Dale Murphy (`murphda05`) in W2-07-G6; Dale Murphy (`murphda05`) in W2-07-G7
+- Slot 7: Dale Murphy (`murphda05`) in R1-07-G1; Dale Murphy (`murphda05`) in R1-07-G2; Dale Murphy (`murphda05`) in R1-07-G3; Andruw Jones (`jonesan01`) in R1-07-G4; Dale Murphy (`murphda05`) in W2-07-G1; Dale Murphy (`murphda05`) in W2-07-G2; Dale Murphy (`murphda05`) in W2-07-G3; Freddie Freeman (`freemfr01`) in W2-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G5; Freddie Freeman (`freemfr01`) in W2-07-G6; Freddie Freeman (`freemfr01`) in W2-07-G7
+- Slot 8: Andruw Jones (`jonesan01`) in R1-07-G1; Andruw Jones (`jonesan01`) in R1-07-G2; Andruw Jones (`jonesan01`) in R1-07-G3; Joe Torre (`torrejo01`) in R1-07-G4; Andruw Jones (`jonesan01`) in W2-07-G1; Andruw Jones (`jonesan01`) in W2-07-G2; Andruw Jones (`jonesan01`) in W2-07-G3; Andruw Jones (`jonesan01`) in W2-07-G4; Andruw Jones (`jonesan01`) in W2-07-G5; Andruw Jones (`jonesan01`) in W2-07-G6; Andruw Jones (`jonesan01`) in W2-07-G7
+- Slot 9: Ozzie Albies (`albieoz01`) in R1-07-G1 (same starter in 10 later games)
 
 ### Starts, in the order the games were played
 
@@ -618,6 +618,7 @@ Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are
 - John Smoltz (`smoltjo01`) started W2-07-G4
 - Tom Glavine (`glavito02`) started W2-07-G5
 - Greg Maddux (`maddugr01`) started W2-07-G6
+- Warren Spahn (`spahnwa01`) started W2-07-G7
 
 ### Relievers who have appeared
 
@@ -627,6 +628,7 @@ Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are
 - Mike Remlinger (`remlimi01`), first seen in W2-07-G1
 - Phil Niekro (`niekrph01`), first seen in W2-07-G2
 - Gene Garber (`garbege01`), first seen in W2-07-G4
+- Kid Nichols (`nichoki01`), first seen in W2-07-G7
 
 ## 8. Pittsburgh Pirates (PIT)
 
@@ -869,15 +871,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1 (same starter in 10 later games)
-- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1; Zack Wheat (`wheatza01`) in R1-10-G2; Zack Wheat (`wheatza01`) in R1-10-G3; Pedro Guerrero (`guerrpe01`) in R1-10-G4; Pedro Guerrero (`guerrpe01`) in R1-10-G5; Zack Wheat (`wheatza01`) in W2-07-G1; Zack Wheat (`wheatza01`) in W2-07-G2; Zack Wheat (`wheatza01`) in W2-07-G3; Zack Wheat (`wheatza01`) in W2-07-G4; Zack Wheat (`wheatza01`) in W2-07-G5; Zack Wheat (`wheatza01`) in W2-07-G6
-- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1 (same starter in 10 later games)
-- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1 (same starter in 10 later games)
-- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1 (same starter in 10 later games)
-- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1; Gil Hodges (`hodgegi01`) in R1-10-G2; Gil Hodges (`hodgegi01`) in R1-10-G3; Steve Garvey (`garvest01`) in R1-10-G4; Steve Garvey (`garvest01`) in R1-10-G5; Gil Hodges (`hodgegi01`) in W2-07-G1; Gil Hodges (`hodgegi01`) in W2-07-G2; Gil Hodges (`hodgegi01`) in W2-07-G3; Steve Garvey (`garvest01`) in W2-07-G4; Steve Garvey (`garvest01`) in W2-07-G5; Steve Garvey (`garvest01`) in W2-07-G6
-- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1; Roy Campanella (`camparo01`) in R1-10-G2; Roy Campanella (`camparo01`) in R1-10-G3; Roy Campanella (`camparo01`) in R1-10-G4; Roy Campanella (`camparo01`) in R1-10-G5; Roy Campanella (`camparo01`) in W2-07-G1; Roy Campanella (`camparo01`) in W2-07-G2; Roy Campanella (`camparo01`) in W2-07-G3; Mike Piazza (`piazzmi01`) in W2-07-G4; Mike Piazza (`piazzmi01`) in W2-07-G5; Mike Piazza (`piazzmi01`) in W2-07-G6
-- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1; Ron Cey (`ceyro01`) in R1-10-G2; Ron Cey (`ceyro01`) in R1-10-G3; Ron Cey (`ceyro01`) in R1-10-G4; Ron Cey (`ceyro01`) in R1-10-G5; Ron Cey (`ceyro01`) in W2-07-G1; Ron Cey (`ceyro01`) in W2-07-G2; Ron Cey (`ceyro01`) in W2-07-G3; Max Muncy (`muncyma01`) in W2-07-G4; Max Muncy (`muncyma01`) in W2-07-G5; Max Muncy (`muncyma01`) in W2-07-G6
-- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1 (same starter in 10 later games)
+- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1 (same starter in 11 later games)
+- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1; Zack Wheat (`wheatza01`) in R1-10-G2; Zack Wheat (`wheatza01`) in R1-10-G3; Pedro Guerrero (`guerrpe01`) in R1-10-G4; Pedro Guerrero (`guerrpe01`) in R1-10-G5; Zack Wheat (`wheatza01`) in W2-07-G1; Zack Wheat (`wheatza01`) in W2-07-G2; Zack Wheat (`wheatza01`) in W2-07-G3; Zack Wheat (`wheatza01`) in W2-07-G4; Zack Wheat (`wheatza01`) in W2-07-G5; Zack Wheat (`wheatza01`) in W2-07-G6; Zack Wheat (`wheatza01`) in W2-07-G7
+- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1 (same starter in 11 later games)
+- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1 (same starter in 11 later games)
+- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1 (same starter in 11 later games)
+- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1; Gil Hodges (`hodgegi01`) in R1-10-G2; Gil Hodges (`hodgegi01`) in R1-10-G3; Steve Garvey (`garvest01`) in R1-10-G4; Steve Garvey (`garvest01`) in R1-10-G5; Gil Hodges (`hodgegi01`) in W2-07-G1; Gil Hodges (`hodgegi01`) in W2-07-G2; Gil Hodges (`hodgegi01`) in W2-07-G3; Steve Garvey (`garvest01`) in W2-07-G4; Steve Garvey (`garvest01`) in W2-07-G5; Steve Garvey (`garvest01`) in W2-07-G6; Steve Garvey (`garvest01`) in W2-07-G7
+- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1; Roy Campanella (`camparo01`) in R1-10-G2; Roy Campanella (`camparo01`) in R1-10-G3; Roy Campanella (`camparo01`) in R1-10-G4; Roy Campanella (`camparo01`) in R1-10-G5; Roy Campanella (`camparo01`) in W2-07-G1; Roy Campanella (`camparo01`) in W2-07-G2; Roy Campanella (`camparo01`) in W2-07-G3; Mike Piazza (`piazzmi01`) in W2-07-G4; Mike Piazza (`piazzmi01`) in W2-07-G5; Mike Piazza (`piazzmi01`) in W2-07-G6; Mike Piazza (`piazzmi01`) in W2-07-G7
+- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1; Ron Cey (`ceyro01`) in R1-10-G2; Ron Cey (`ceyro01`) in R1-10-G3; Ron Cey (`ceyro01`) in R1-10-G4; Ron Cey (`ceyro01`) in R1-10-G5; Ron Cey (`ceyro01`) in W2-07-G1; Ron Cey (`ceyro01`) in W2-07-G2; Ron Cey (`ceyro01`) in W2-07-G3; Max Muncy (`muncyma01`) in W2-07-G4; Max Muncy (`muncyma01`) in W2-07-G5; Max Muncy (`muncyma01`) in W2-07-G6; Max Muncy (`muncyma01`) in W2-07-G7
+- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1 (same starter in 11 later games)
 
 ### Substitutes who have batted
 
@@ -900,6 +902,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Don Drysdale (`drysddo01`) started W2-07-G4
 - Orel Hershiser (`hershor01`) started W2-07-G5
 - Sandy Koufax (`koufasa01`) started W2-07-G6
+- Dazzy Vance (`vanceda01`) started W2-07-G7
 
 ### Relievers who have appeared
 
