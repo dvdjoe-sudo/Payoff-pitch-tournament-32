@@ -53,12 +53,12 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
+| Cody Allen | Cleveland Guardians | 31.4 | 3 | 9.0 | 11 | 4 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
 | Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
 | John Wetteland | Montreal Expos | 27.2 | 2 | 7.0 | 8 | 0 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
-| Cody Allen | Cleveland Guardians | 26.2 | 3 | 7.0 | 8 | 4 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
