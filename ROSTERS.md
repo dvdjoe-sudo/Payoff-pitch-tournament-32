@@ -308,15 +308,15 @@ The amendment takes effect only after the completed R1-04 Detroit–Arizona seri
 
 ### Lineup slots that have batted
 
-- Slot 1: Ty Cobb (`cobbty01`) in R1-04-G1 (same starter in 6 later games)
-- Slot 2: Charlie Gehringer (`gehrich01`) in R1-04-G1 (same starter in 6 later games)
-- Slot 3: Al Kaline (`kalinal01`) in R1-04-G1 (same starter in 6 later games)
-- Slot 4: Hank Greenberg (`greenha01`) in R1-04-G1 (same starter in 6 later games)
-- Slot 5: Miguel Cabrera (`cabremi01`) in R1-04-G1 (same starter in 6 later games)
-- Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Bobby Veach (`veachbo01`) in R1-04-G6; Sam Crawford (`crawfsa01`) in W2-04-G1
-- Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 6 later games)
-- Slot 8: George Kell (`kellge01`) in R1-04-G1 (same starter in 6 later games)
-- Slot 9: Alan Trammell (`trammal01`) in R1-04-G1 (same starter in 6 later games)
+- Slot 1: Ty Cobb (`cobbty01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 2: Charlie Gehringer (`gehrich01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 3: Al Kaline (`kalinal01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 4: Hank Greenberg (`greenha01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 5: Miguel Cabrera (`cabremi01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Bobby Veach (`veachbo01`) in R1-04-G6; Sam Crawford (`crawfsa01`) in W2-04-G1; Sam Crawford (`crawfsa01`) in W2-04-G2
+- Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 8: George Kell (`kellge01`) in R1-04-G1 (same starter in 7 later games)
+- Slot 9: Alan Trammell (`trammal01`) in R1-04-G1 (same starter in 7 later games)
 
 ### Substitutes who have batted
 
@@ -331,6 +331,7 @@ The amendment takes effect only after the completed R1-04 Detroit–Arizona seri
 - Jack Morris (`morrija02`) started R1-04-G5
 - Hal Newhouser (`newhoha01`) started R1-04-G6
 - Hal Newhouser (`newhoha01`) started W2-04-G1
+- Justin Verlander (`verlaju01`) started W2-04-G2
 
 ### Relievers who have appeared
 
@@ -338,6 +339,9 @@ The amendment takes effect only after the completed R1-04 Detroit–Arizona seri
 - Willie Hernandez (`hernawi01`), first seen in R1-04-G1
 - Aurelio Lopez (`lopezau01`), first seen in R1-04-G2
 - Dizzy Trout (`troutdi01`), first seen in R1-04-G4
+- Mike Henneman (`hennemi01`), first seen in W2-04-G2
+- John Hiller (`hillejo01`), first seen in W2-04-G2
+- Tommy Bridges (`bridgto01`), first seen in W2-04-G2
 
 ## 5. St. Louis Cardinals (STL)
 
@@ -1211,15 +1215,19 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 
 ### Lineup slots that have batted
 
-- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1 (same starter in 4 later games)
-- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 4 later games)
-- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 4 later games)
-- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 4 later games)
-- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 4 later games)
-- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 4 later games)
-- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 4 later games)
-- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 4 later games)
-- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 4 later games)
+- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 5 later games)
+- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 5 later games)
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 5 later games)
+
+### Substitutes who have batted
+
+- Dick Allen (`allendi01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -1228,6 +1236,7 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 - Chris Sale (`salech01`) started R1-14-G3
 - Mark Buehrle (`buehrma01`) started R1-14-G4
 - Ed Walsh (`walshed01`) started W2-04-G1
+- Red Faber (`faberre01`) started W2-04-G2
 
 ### Relievers who have appeared
 
@@ -1235,6 +1244,7 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 - Dámaso Marte (`marteda01`), first seen in R1-14-G3
 - Keith Foulke (`foulkke01`), first seen in R1-14-G3
 - Eddie Cicotte (`cicoted01`), first seen in W2-04-G1
+- Hoyt Wilhelm (`wilheho01`), first seen in W2-04-G2
 
 ## 15. Baltimore Orioles (BAL)
 

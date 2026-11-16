@@ -64,6 +64,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Andy McGaffigan | Montreal Expos | 22.1 | 2 | 7.1 | 1 | 2 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
 | Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
+| Willie Hernandez | Detroit Tigers | 21.5 | 1 | 8.0 | 5 | 1 |
 | Troy Percival | Los Angeles Angels | 20.2 | 0 | 10.0 | 8 | 2 |
-| Willie Hernandez | Detroit Tigers | 20.2 | 1 | 7.1 | 5 | 1 |
 | Tom Henke | Toronto Blue Jays | 19.2 | 1 | 7.0 | 8 | 2 |
