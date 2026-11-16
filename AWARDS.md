@@ -16,11 +16,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
+| Dale Murphy | Atlanta Braves | 56.0 | 32 | 11 | 11 | 6 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
 | Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
-| Dale Murphy | Atlanta Braves | 53.0 | 30 | 10 | 11 | 6 |
 | Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 
@@ -63,7 +63,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
+| Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Bobby Jenks | Chicago White Sox | 22.4 | 2 | 6.0 | 1 | 0 |
 | Andy McGaffigan | Montreal Expos | 22.1 | 2 | 7.1 | 1 | 2 |
-| Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
