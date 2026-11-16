@@ -59,6 +59,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | John Wetteland | Montreal Expos | 27.2 | 2 | 7.0 | 8 | 0 |
 | Aroldis Chapman | Cincinnati Reds | 26.3 | 3 | 6.2 | 10 | 4 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
+| Craig Kimbrel | Atlanta Braves | 25.8 | 3 | 4.0 | 7 | 0 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Bobby Jenks | Chicago White Sox | 22.4 | 2 | 6.0 | 1 | 0 |
 | Andy McGaffigan | Montreal Expos | 22.1 | 2 | 7.1 | 1 | 2 |
 | Jonathan Papelbon | Philadelphia Phillies | 21.9 | 3 | 6.1 | 8 | 6 |
-| Joe Berry | Philadelphia Athletics | 21.5 | 0 | 10.2 | 8 | 2 |
