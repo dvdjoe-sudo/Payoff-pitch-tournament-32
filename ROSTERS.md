@@ -308,15 +308,15 @@ The amendment takes effect only after the completed R1-04 Detroit–Arizona seri
 
 ### Lineup slots that have batted
 
-- Slot 1: Ty Cobb (`cobbty01`) in R1-04-G1 (same starter in 9 later games)
-- Slot 2: Charlie Gehringer (`gehrich01`) in R1-04-G1 (same starter in 9 later games)
-- Slot 3: Al Kaline (`kalinal01`) in R1-04-G1 (same starter in 9 later games)
-- Slot 4: Hank Greenberg (`greenha01`) in R1-04-G1 (same starter in 9 later games)
-- Slot 5: Miguel Cabrera (`cabremi01`) in R1-04-G1 (same starter in 9 later games)
-- Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Bobby Veach (`veachbo01`) in R1-04-G6; Sam Crawford (`crawfsa01`) in W2-04-G1; Sam Crawford (`crawfsa01`) in W2-04-G2; Sam Crawford (`crawfsa01`) in W2-04-G3; Sam Crawford (`crawfsa01`) in W2-04-G4
-- Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 9 later games)
-- Slot 8: George Kell (`kellge01`) in R1-04-G1 (same starter in 9 later games)
-- Slot 9: Alan Trammell (`trammal01`) in R1-04-G1 (same starter in 9 later games)
+- Slot 1: Ty Cobb (`cobbty01`) in R1-04-G1 (same starter in 10 later games)
+- Slot 2: Charlie Gehringer (`gehrich01`) in R1-04-G1 (same starter in 10 later games)
+- Slot 3: Al Kaline (`kalinal01`) in R1-04-G1 (same starter in 10 later games)
+- Slot 4: Hank Greenberg (`greenha01`) in R1-04-G1 (same starter in 10 later games)
+- Slot 5: Miguel Cabrera (`cabremi01`) in R1-04-G1 (same starter in 10 later games)
+- Slot 6: Bobby Veach (`veachbo01`) in R1-04-G1; Bobby Veach (`veachbo01`) in R1-04-G2; Harry Heilmann (`heilmha01`) in R1-04-G3; Harry Heilmann (`heilmha01`) in R1-04-G4; Harry Heilmann (`heilmha01`) in R1-04-G5; Bobby Veach (`veachbo01`) in R1-04-G6; Sam Crawford (`crawfsa01`) in W2-04-G1; Sam Crawford (`crawfsa01`) in W2-04-G2; Sam Crawford (`crawfsa01`) in W2-04-G3; Sam Crawford (`crawfsa01`) in W2-04-G4; Sam Crawford (`crawfsa01`) in W2-04-G5
+- Slot 7: Bill Freehan (`freehbi01`) in R1-04-G1 (same starter in 10 later games)
+- Slot 8: George Kell (`kellge01`) in R1-04-G1 (same starter in 10 later games)
+- Slot 9: Alan Trammell (`trammal01`) in R1-04-G1 (same starter in 10 later games)
 
 ### Substitutes who have batted
 
@@ -335,6 +335,7 @@ The amendment takes effect only after the completed R1-04 Detroit–Arizona seri
 - Justin Verlander (`verlaju01`) started W2-04-G2
 - Mickey Lolich (`lolicmi01`) started W2-04-G3
 - Jack Morris (`morrija02`) started W2-04-G4
+- Tommy Bridges (`bridgto01`) started W2-04-G5
 
 ### Relievers who have appeared
 
@@ -1164,7 +1165,7 @@ These names are not on the active roster.
 
 ## 14. Chicago White Sox (CWS)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 764.1.
+Bracket: losers. Series losses: 1. Full 26 Index: 764.1.
 
 Manager: Fielder Jones.
 
@@ -1218,15 +1219,15 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 
 ### Lineup slots that have batted
 
-- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1 (same starter in 7 later games)
-- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 7 later games)
-- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 7 later games)
-- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 7 later games)
-- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 7 later games)
-- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 7 later games)
-- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 7 later games)
-- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 7 later games)
-- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 7 later games)
+- Slot 1: Fielder Jones (`jonesfi01`) in R1-14-G1; Fielder Jones (`jonesfi01`) in R1-14-G2; Fielder Jones (`jonesfi01`) in R1-14-G3; Fielder Jones (`jonesfi01`) in R1-14-G4; Fielder Jones (`jonesfi01`) in W2-04-G1; Fielder Jones (`jonesfi01`) in W2-04-G2; Fielder Jones (`jonesfi01`) in W2-04-G3; Fielder Jones (`jonesfi01`) in W2-04-G4; Chet Lemon (`lemonch01`) in W2-04-G5
+- Slot 2: Eddie Collins (`collied01`) in R1-14-G1 (same starter in 8 later games)
+- Slot 3: Frank Thomas (`thomafr04`) in R1-14-G1 (same starter in 8 later games)
+- Slot 4: Minnie Miñoso (`minosmi01`) in R1-14-G1 (same starter in 8 later games)
+- Slot 5: Joe Jackson (`jacksjo01`) in R1-14-G1 (same starter in 8 later games)
+- Slot 6: Robin Ventura (`venturo01`) in R1-14-G1 (same starter in 8 later games)
+- Slot 7: Magglio Ordóñez (`ordonma01`) in R1-14-G1 (same starter in 8 later games)
+- Slot 8: Luke Appling (`applilu01`) in R1-14-G1 (same starter in 8 later games)
+- Slot 9: Carlton Fisk (`fiskca01`) in R1-14-G1 (same starter in 8 later games)
 
 ### Substitutes who have batted
 
@@ -1243,6 +1244,7 @@ Dámaso Marte moves to relief slot 5 and Eddie Cicotte to relief slot 6, retaini
 - Red Faber (`faberre01`) started W2-04-G2
 - Chris Sale (`salech01`) started W2-04-G3
 - Ted Lyons (`lyonste01`) started W2-04-G4
+- Mark Buehrle (`buehrma01`) started W2-04-G5
 
 ### Relievers who have appeared
 

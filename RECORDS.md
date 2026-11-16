@@ -60,3 +60,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Texas Rangers scored 12 against Toronto Blue Jays in L1-08-G5.
 - Boston Red Sox scored 16 against Houston Astros in W2-03-G4.
 - Detroit Tigers scored 10 against Chicago White Sox in W2-04-G3.
+- Detroit Tigers scored 12 against Chicago White Sox in W2-04-G5.
