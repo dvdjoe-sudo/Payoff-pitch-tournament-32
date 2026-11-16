@@ -20,7 +20,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
 | Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
-| Dale Murphy | Atlanta Braves | 50.5 | 30 | 9 | 11 | 6 |
+| Dale Murphy | Atlanta Braves | 52.5 | 30 | 10 | 11 | 6 |
 | Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
 | Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
 
