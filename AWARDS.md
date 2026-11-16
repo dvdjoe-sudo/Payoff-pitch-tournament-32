@@ -12,11 +12,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
+| Dale Murphy | Atlanta Braves | 63.5 | 36 | 12 | 13 | 7 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
-| Dale Murphy | Atlanta Braves | 56.0 | 32 | 11 | 11 | 6 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
@@ -33,6 +33,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
+| Greg Maddux | Atlanta Braves | 35.6 | 20.0 | 3 | 15 | 3 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
@@ -41,10 +42,9 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Tim Lincecum | San Francisco Giants | 28.1 | 16.0 | 2 | 21 | 3 |
 | Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
+| Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Pete Alexander | Chicago Cubs | 23.6 | 18.0 | 2 | 13 | 6 |
-| Christy Mathewson | San Francisco Giants | 23.3 | 14.2 | 1 | 21 | 3 |
-| Steve Rogers | Montreal Expos | 23.1 | 20.1 | 2 | 12 | 7 |
 
 ## Reliever
 
