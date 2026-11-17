@@ -10,7 +10,6 @@ A start of at least 9 innings (27 outs) with 0 hits.
 
 ## Ten or more strikeouts
 
-- Tim Lincecum (San Francisco Giants), R1-02-G5: 16 K in 9.0 IP.
 - Roger Clemens (Boston Red Sox), R1-03-G7: 16 K in 8.2 IP.
 - Roger Clemens (Boston Red Sox), R1-03-G2: 14 K in 7.1 IP.
 - Nolan Ryan (Los Angeles Angels), L1-05-G2: 13 K in 8.0 IP.

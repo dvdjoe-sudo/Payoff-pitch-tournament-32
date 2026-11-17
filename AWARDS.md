@@ -17,8 +17,8 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
-| Willie Mays | San Francisco Giants | 58.0 | 35 | 12 | 10 | 4 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
+| Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
@@ -39,12 +39,12 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Dazzy Vance | Los Angeles Dodgers | 30.9 | 20.2 | 2 | 17 | 3 |
 | Tommy Bridges | Detroit Tigers | 29.5 | 17.0 | 2 | 16 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
-| Tim Lincecum | San Francisco Giants | 28.1 | 16.0 | 2 | 21 | 3 |
 | Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Carl Hubbell | San Francisco Giants | 25.1 | 13.0 | 2 | 9 | 0 |
+| Warren Spahn | Atlanta Braves | 23.9 | 25.0 | 2 | 15 | 10 |
 
 ## Reliever
 

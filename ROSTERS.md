@@ -2851,8 +2851,8 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Livan Hernandez (`hernali01`), first seen in R1-02-G2
 - Drew Storen (`storedr01`), first seen in R1-02-G3
 - Jon Rauch (`rauchjo01`), first seen in R1-02-G4
+- Chad Cordero (`cordech01`), first seen in R1-02-G5
 - Sean Burnett (`burnese01`), first seen in L1-02-G2
-- Chad Cordero (`cordech01`), first seen in L1-02-G2
 - Stephen Strasburg (`strasst01`), first seen in L1-02-G5
 
 ### Rotation carry recorded on the series
