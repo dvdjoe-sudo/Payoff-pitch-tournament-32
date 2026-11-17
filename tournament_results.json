@@ -553,13 +553,13 @@
     "team": "SF",
     "player_id": "ottme01",
     "name": "Mel Ott",
-    "line": "5 for 20, 4 R, 1 2B, 2 HR, 5 RBI, .250"
+    "line": "5 for 22, 3 R, 1 2B, 1 HR, 5 RBI, .227"
    },
    "mvp_runner_up": {
     "team": "SF",
     "player_id": "mayswi01",
     "name": "Willie Mays",
-    "line": "11 for 22, 6 R, 1 2B, 3 HR, 2 SB, 7 RBI, .500"
+    "line": "10 for 22, 6 R, 2 2B, 3 HR, 7 RBI, .455"
    }
   },
   {
@@ -9531,51 +9531,54 @@
    "id": "R1-02-G5",
    "series_id": "R1-02",
    "game_in_series": 5,
-   "date": "2026-10-24",
+   "date": "2026-11-16",
    "away": "WSH",
    "home": "SF",
    "teams": {
-    "SF": "San Francisco Giants",
-    "WSH": "Washington Nationals"
+    "WSH": "Washington Nationals",
+    "SF": "San Francisco Giants"
    },
    "score": {
-    "SF": 4,
-    "WSH": 0
+    "WSH": 2,
+    "SF": 3
    },
    "line": {
-    "SF": [
-     0,
-     1,
-     0,
-     1,
-     1,
-     0,
-     0,
-     1
-    ],
     "WSH": [
      0,
      0,
      0,
+     2,
      0,
      0,
      0,
      0,
      0,
      0
+    ],
+    "SF": [
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     1
     ]
    },
    "winner": "SF",
    "wls": {
     "W": {
      "team": "SF",
-     "player_id": "linceti01",
-     "name": "Tim Lincecum"
+     "player_id": "beckro01",
+     "name": "Rod Beck"
     },
     "L": {
      "team": "WSH",
-     "player_id": "hernali01",
-     "name": "Livan Hernandez"
+     "player_id": "rauchjo01",
+     "name": "Jon Rauch"
     },
     "S": null
    },
@@ -9588,9 +9591,12 @@
      "lineup_slot": 1,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 4,
+     "ab": 5,
      "r": 0,
      "h": 0,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
      "bb": 0,
      "k": 2,
@@ -9598,12 +9604,9 @@
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9612,22 +9615,22 @@
      "lineup_slot": 2,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
+     "ab": 5,
      "r": 0,
-     "h": 1,
+     "h": 2,
+     "doubles": 1,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
-     "bb": 1,
-     "k": 2,
+     "bb": 0,
+     "k": 1,
      "hbp": 0,
-     "sb": 1,
+     "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9636,9 +9639,12 @@
      "lineup_slot": 3,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
+     "ab": 4,
      "r": 0,
-     "h": 0,
+     "h": 1,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
      "bb": 1,
      "k": 2,
@@ -9646,12 +9652,9 @@
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9660,22 +9663,22 @@
      "lineup_slot": 4,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
+     "ab": 4,
      "r": 0,
-     "h": 0,
+     "h": 1,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
      "bb": 1,
-     "k": 3,
+     "k": 1,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9684,22 +9687,22 @@
      "lineup_slot": 5,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 4,
+     "ab": 5,
      "r": 0,
-     "h": 1,
+     "h": 0,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
      "bb": 0,
-     "k": 2,
+     "k": 1,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9708,22 +9711,22 @@
      "lineup_slot": 6,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
-     "r": 0,
-     "h": 0,
-     "rbi": 0,
-     "bb": 1,
-     "k": 2,
+     "ab": 5,
+     "r": 1,
+     "h": 2,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 1,
+     "rbi": 1,
+     "bb": 0,
+     "k": 1,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
-     "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "sf": 0,
+     "gidp": 1,
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9732,22 +9735,22 @@
      "lineup_slot": 7,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 2,
-     "r": 0,
-     "h": 0,
+     "ab": 4,
+     "r": 1,
+     "h": 3,
+     "doubles": 0,
+     "triples": 1,
+     "hr": 0,
      "rbi": 0,
      "bb": 0,
-     "k": 1,
+     "k": 0,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
-     "sac": 1,
-     "sf": null,
+     "sac": 0,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9758,20 +9761,20 @@
      "is_substitute": false,
      "ab": 3,
      "r": 0,
-     "h": 1,
-     "rbi": 0,
-     "bb": 0,
-     "k": 2,
-     "hbp": 0,
-     "sb": 0,
-     "cs": 1,
-     "sac": 0,
-     "sf": null,
-     "gidp": 0,
-     "ibb": null,
+     "h": 0,
      "doubles": 0,
      "triples": 0,
-     "hr": 0
+     "hr": 0,
+     "rbi": 0,
+     "bb": 1,
+     "k": 1,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": 0,
+     "gidp": 0,
+     "ibb": null
     },
     {
      "team": "WSH",
@@ -9780,22 +9783,22 @@
      "lineup_slot": 9,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
+     "ab": 4,
      "r": 0,
-     "h": 0,
+     "h": 1,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
      "bb": 0,
-     "k": 0,
+     "k": 1,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9806,20 +9809,20 @@
      "is_substitute": false,
      "ab": 4,
      "r": 1,
-     "h": 2,
+     "h": 1,
+     "doubles": 1,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
-     "bb": 0,
+     "bb": 1,
      "k": 0,
      "hbp": 0,
-     "sb": 2,
+     "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9830,20 +9833,20 @@
      "is_substitute": false,
      "ab": 4,
      "r": 0,
-     "h": 0,
-     "rbi": 1,
-     "bb": 0,
-     "k": 2,
+     "h": 2,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
+     "rbi": 2,
+     "bb": 1,
+     "k": 0,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9852,22 +9855,22 @@
      "lineup_slot": 3,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
-     "r": 1,
+     "ab": 5,
+     "r": 0,
      "h": 1,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 1,
-     "bb": 1,
-     "k": 0,
+     "bb": 0,
+     "k": 1,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 1
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9876,22 +9879,22 @@
      "lineup_slot": 4,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
+     "ab": 4,
      "r": 0,
-     "h": 0,
+     "h": 3,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
-     "bb": 1,
-     "k": 1,
+     "bb": 0,
+     "k": 0,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9901,21 +9904,21 @@
      "entry_order": 1,
      "is_substitute": false,
      "ab": 4,
-     "r": 1,
-     "h": 2,
-     "rbi": 1,
+     "r": 0,
+     "h": 0,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
+     "rbi": 0,
      "bb": 0,
      "k": 1,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 1,
-     "triples": 0,
-     "hr": 1
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9927,19 +9930,19 @@
      "ab": 4,
      "r": 0,
      "h": 0,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
      "bb": 0,
-     "k": 1,
+     "k": 2,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9948,22 +9951,22 @@
      "lineup_slot": 7,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 1,
+     "ab": 4,
      "r": 1,
-     "h": 1,
-     "rbi": 0,
-     "bb": 1,
-     "k": 0,
-     "hbp": 0,
-     "sb": 2,
-     "cs": 0,
-     "sac": 1,
-     "sf": null,
-     "gidp": 0,
-     "ibb": null,
+     "h": 2,
      "doubles": 0,
      "triples": 0,
-     "hr": 0
+     "hr": 0,
+     "rbi": 0,
+     "bb": 0,
+     "k": 0,
+     "hbp": 0,
+     "sb": 0,
+     "cs": 0,
+     "sac": 0,
+     "sf": 0,
+     "gidp": 0,
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9972,22 +9975,22 @@
      "lineup_slot": 8,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 2,
+     "ab": 4,
      "r": 0,
      "h": 0,
-     "rbi": 1,
+     "doubles": 0,
+     "triples": 0,
+     "hr": 0,
+     "rbi": 0,
      "bb": 0,
-     "k": 0,
+     "k": 3,
      "hbp": 0,
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": 1,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     },
     {
      "team": "SF",
@@ -9996,9 +9999,12 @@
      "lineup_slot": 9,
      "entry_order": 1,
      "is_substitute": false,
-     "ab": 3,
-     "r": 0,
-     "h": 0,
+     "ab": 4,
+     "r": 1,
+     "h": 3,
+     "doubles": 1,
+     "triples": 0,
+     "hr": 0,
      "rbi": 0,
      "bb": 0,
      "k": 0,
@@ -10006,12 +10012,9 @@
      "sb": 0,
      "cs": 0,
      "sac": 0,
-     "sf": null,
+     "sf": 0,
      "gidp": 0,
-     "ibb": null,
-     "doubles": 0,
-     "triples": 0,
-     "hr": 0
+     "ibb": null
     }
    ],
    "pitching": [
@@ -10020,162 +10023,325 @@
      "player_id": "hernali01",
      "name": "Livan Hernandez",
      "appearance_order": 1,
-     "outs": 21,
-     "h": 6,
-     "r": 4,
-     "er": 4,
-     "bb": 3,
-     "k": 2,
-     "bf": 30,
-     "hb": null,
+     "outs": 18,
+     "h": 7,
+     "r": 2,
+     "er": 2,
+     "bb": 1,
+     "k": 3,
+     "hr": 0,
+     "hb": 0,
+     "bf": 24,
      "entry_diff": null,
-     "entry_inning": 1,
-     "hr": 2
+     "entry_inning": 1
     },
     {
      "team": "WSH",
-     "player_id": "storedr01",
-     "name": "Drew Storen",
+     "player_id": "clippty01",
+     "name": "Tyler Clippard",
      "appearance_order": 2,
      "outs": 3,
-     "h": 0,
+     "h": 1,
      "r": 0,
      "er": 0,
      "bb": 0,
-     "k": 3,
-     "bf": 3,
-     "hb": null,
+     "k": 1,
+     "hr": 0,
+     "hb": 0,
+     "bf": 4,
      "entry_diff": null,
-     "entry_inning": 8,
-     "hr": 0
+     "entry_inning": null
+    },
+    {
+     "team": "WSH",
+     "player_id": "doolise01",
+     "name": "Sean Doolittle",
+     "appearance_order": 3,
+     "outs": 3,
+     "h": 1,
+     "r": 0,
+     "er": 0,
+     "bb": 0,
+     "k": 1,
+     "hr": 0,
+     "hb": 0,
+     "bf": 4,
+     "entry_diff": null,
+     "entry_inning": null
+    },
+    {
+     "team": "WSH",
+     "player_id": "cordech01",
+     "name": "Chad Cordero",
+     "appearance_order": 4,
+     "outs": 3,
+     "h": 1,
+     "r": 0,
+     "er": 0,
+     "bb": 0,
+     "k": 2,
+     "hr": 0,
+     "hb": 0,
+     "bf": 4,
+     "entry_diff": null,
+     "entry_inning": null
+    },
+    {
+     "team": "WSH",
+     "player_id": "rauchjo01",
+     "name": "Jon Rauch",
+     "appearance_order": 5,
+     "outs": 0,
+     "h": 2,
+     "r": 1,
+     "er": 1,
+     "bb": 1,
+     "k": 0,
+     "hr": 0,
+     "hb": 0,
+     "bf": 3,
+     "entry_diff": null,
+     "entry_inning": null
     },
     {
      "team": "SF",
      "player_id": "linceti01",
      "name": "Tim Lincecum",
      "appearance_order": 1,
-     "outs": 27,
-     "h": 3,
-     "r": 0,
-     "er": 0,
-     "bb": 4,
-     "k": 16,
-     "bf": 33,
-     "hb": null,
+     "outs": 19,
+     "h": 9,
+     "r": 2,
+     "er": 2,
+     "bb": 1,
+     "k": 7,
+     "hr": 1,
+     "hb": 0,
+     "bf": 29,
      "entry_diff": null,
-     "entry_inning": 1,
-     "hr": 0
-    }
-   ],
-   "errors_by": [
+     "entry_inning": 1
+    },
     {
      "team": "SF",
-     "player_id": "clarkwi02",
-     "name": "Will Clark",
-     "errors": 1
+     "player_id": "romose01",
+     "name": "Sergio Romo",
+     "appearance_order": 2,
+     "outs": 5,
+     "h": 1,
+     "r": 0,
+     "er": 0,
+     "bb": 0,
+     "k": 2,
+     "hr": 0,
+     "hb": 0,
+     "bf": 6,
+     "entry_diff": null,
+     "entry_inning": null
+    },
+    {
+     "team": "SF",
+     "player_id": "nenro01",
+     "name": "Robb Nen",
+     "appearance_order": 3,
+     "outs": 3,
+     "h": 0,
+     "r": 0,
+     "er": 0,
+     "bb": 0,
+     "k": 1,
+     "hr": 0,
+     "hb": 0,
+     "bf": 3,
+     "entry_diff": null,
+     "entry_inning": null
+    },
+    {
+     "team": "SF",
+     "player_id": "beckro01",
+     "name": "Rod Beck",
+     "appearance_order": 4,
+     "outs": 3,
+     "h": 0,
+     "r": 0,
+     "er": 0,
+     "bb": 2,
+     "k": 0,
+     "hr": 0,
+     "hb": 0,
+     "bf": 4,
+     "entry_diff": null,
+     "entry_inning": null
     }
    ],
+   "errors_by": [],
    "team_errors": {
-    "SF": 1,
-    "WSH": 0
+    "WSH": 0,
+    "SF": 0
+   },
+   "defense": {
+    "SF": {
+     "pb": {},
+     "players": {
+      "bondsba01": {
+       "a": 0,
+       "e": 0,
+       "name": "Barry Bonds",
+       "po": 2
+      },
+      "clarkwi02": {
+       "a": 0,
+       "e": 0,
+       "name": "Will Clark",
+       "po": 10
+      },
+      "fletcar01": {
+       "a": 4,
+       "e": 0,
+       "name": "Art Fletcher",
+       "po": 1
+      },
+      "kentje01": {
+       "a": 3,
+       "e": 0,
+       "name": "Jeff Kent",
+       "po": 1
+      },
+      "mayswi01": {
+       "a": 0,
+       "e": 0,
+       "name": "Willie Mays",
+       "po": 4
+      },
+      "ottme01": {
+       "a": 0,
+       "e": 0,
+       "name": "Mel Ott",
+       "po": 1
+      },
+      "poseybu01": {
+       "a": 1,
+       "e": 0,
+       "name": "Buster Posey",
+       "po": 9
+      },
+      "willima04": {
+       "a": 1,
+       "e": 0,
+       "name": "Matt Williams",
+       "po": 2
+      }
+     },
+     "wp": {
+      "beckro01": 1,
+      "linceti01": 1
+     }
+    },
+    "WSH": {
+     "pb": {},
+     "players": {
+      "harpebr03": {
+       "a": 0,
+       "e": 0,
+       "name": "Bryce Harper",
+       "po": 1
+      },
+      "ramoswi01": {
+       "a": 0,
+       "e": 0,
+       "name": "Wilson Ramos",
+       "po": 7
+      },
+      "rendoan01": {
+       "a": 4,
+       "e": 0,
+       "name": "Anthony Rendon",
+       "po": 1
+      },
+      "sotoju01": {
+       "a": 0,
+       "e": 0,
+       "name": "Juan Soto",
+       "po": 3
+      },
+      "spande01": {
+       "a": 1,
+       "e": 0,
+       "name": "Denard Span",
+       "po": 2
+      },
+      "turnetr01": {
+       "a": 1,
+       "e": 0,
+       "name": "Trea Turner",
+       "po": 2
+      },
+      "zimmery01": {
+       "a": 0,
+       "e": 0,
+       "name": "Ryan Zimmerman",
+       "po": 11
+      }
+     },
+     "wp": {}
+    }
    },
    "final_grades": {
     "Dave Martinez": {
-     "team": "WSH",
-     "decisions": 8,
-     "paid_off": 2,
-     "backfired": 2,
-     "neutral": 4,
+     "backfired": 3,
      "by_type": {
-      "Left pitcher in": {
-       "count": 4,
-       "paid_off": 1,
-       "backfired": 1,
-       "neutral": 2
-      },
       "Pitching change": {
-       "count": 1,
-       "paid_off": 1,
-       "backfired": 0,
-       "neutral": 0
-      },
-      "Sacrifice bunt": {
-       "count": 1,
-       "paid_off": 0,
-       "backfired": 0,
-       "neutral": 1
+       "backfired": 1,
+       "count": 4,
+       "neutral": 0,
+       "paid_off": 3
       },
       "Steal": {
+       "backfired": 2,
        "count": 2,
-       "paid_off": 0,
-       "backfired": 1,
-       "neutral": 1
+       "neutral": 0,
+       "paid_off": 0
       }
-     }
+     },
+     "decisions": 6,
+     "neutral": 0,
+     "paid_off": 3,
+     "team": "WSH"
     },
     "John McGraw": {
-     "team": "SF",
-     "decisions": 9,
-     "paid_off": 3,
-     "backfired": 5,
-     "neutral": 1,
+     "backfired": 3,
      "by_type": {
       "Hit and run": {
-       "count": 3,
-       "paid_off": 0,
        "backfired": 3,
-       "neutral": 0
+       "count": 5,
+       "neutral": 0,
+       "paid_off": 2
       },
-      "Sacrifice bunt": {
-       "count": 2,
-       "paid_off": 0,
-       "backfired": 2,
-       "neutral": 0
-      },
-      "Steal": {
-       "count": 4,
-       "paid_off": 3,
+      "Pitching change": {
        "backfired": 0,
-       "neutral": 1
+       "count": 3,
+       "neutral": 1,
+       "paid_off": 2
       }
-     }
+     },
+     "decisions": 8,
+     "neutral": 1,
+     "paid_off": 4,
+     "team": "SF"
     }
    },
-   "fatigue_end_states": {
-    "SF|linceti01": {
-     "engine_fatigued": false,
-     "book_fatigued": false,
-     "trigger": null
-    },
-    "WSH|hernali01": {
-     "engine_fatigued": true,
-     "book_fatigued": true,
-     "trigger": "starter_stamina"
-    },
-    "WSH|storedr01": {
-     "engine_fatigued": false,
-     "book_fatigued": false,
-     "trigger": null
-    }
-   },
-   "game_recap": "The San Francisco Giants beat the Washington Nationals 4-0. The go-ahead run scored in the 2nd inning. Willie McCovey led the San Francisco Giants offense with 2 hits and 1 RBI in 4 at-bats. Tim Lincecum earned the win, allowing 0 earned runs in 9.0 innings.",
-   "series_recap": "The San Francisco Giants won the series 4-1 over the Washington Nationals.",
-   "rng_seed": 20261105,
-   "scoring_plays": [
-    "Inning 2: San Francisco Giants scores; SF 1, WSH 0; charged to Livan Hernandez",
-    "Inning 4: San Francisco Giants scores; SF 2, WSH 0; charged to Livan Hernandez",
-    "Inning 5: San Francisco Giants scores; SF 3, WSH 0; charged to Livan Hernandez",
-    "Inning 8: San Francisco Giants scores; SF 4, WSH 0; charged to Livan Hernandez"
-   ],
+   "fatigue_end_states": {},
+   "game_recap": "San Francisco won the adopted replay of Game 5, 3-2 in 10 innings, and the series result is unchanged: the Giants take R1-02 four games to one. Mel Ott's single to center off Jon Rauch in the bottom of the 10th scored Willie Mays with the winning run; Mays had walked and taken third on Will Clark's hit-and-run single. Rod Beck got the win with a scoreless 10th, Zimmerman grounding into a double play after walks to Soto and Harper. Washington's runs came in the 4th: Ryan Zimmerman homered, and Daniel Murphy tripled and scored on Tim Lincecum's wild pitch during Wilson Ramos's plate appearance (Ramos singled on the play but is printed with no RBI). Zimmerman was the player of the game in the loss (2 for 5, a home run). San Francisco tied it in the 5th on Clark's two-run single. The game was errorless.",
+   "series_recap": "San Francisco wins the series 4-1.",
+   "rng_seed": 0,
+   "scoring_plays": [],
    "injuries": [],
    "n41": null,
    "caps_in": {
-    "SF": {},
-    "WSH": {}
+    "WSH": {},
+    "SF": {}
    },
    "caps_out": {
-    "SF": {},
-    "WSH": {}
+    "WSH": {},
+    "SF": {}
    },
    "detail": "games/R1-02-G5.json"
   },
