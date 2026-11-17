@@ -58,6 +58,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Cody Allen | Cleveland Guardians | 31.4 | 3 | 9.0 | 11 | 4 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
 | Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
+| Lee Smith | Chicago Cubs | 26.8 | 3 | 6.0 | 7 | 2 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
 | Craig Kimbrel | Atlanta Braves | 25.8 | 3 | 4.0 | 7 | 0 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Mark Melancon | Pittsburgh Pirates | 22.5 | 2 | 7.2 | 8 | 4 |
-| Bobby Jenks | Chicago White Sox | 22.4 | 2 | 6.0 | 1 | 0 |
