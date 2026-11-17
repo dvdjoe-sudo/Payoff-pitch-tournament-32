@@ -551,15 +551,15 @@
    },
    "mvp": {
     "team": "SF",
-    "player_id": "ottme01",
-    "name": "Mel Ott",
-    "line": "5 for 22, 3 R, 1 2B, 1 HR, 5 RBI, .227"
-   },
-   "mvp_runner_up": {
-    "team": "SF",
     "player_id": "mayswi01",
     "name": "Willie Mays",
     "line": "10 for 22, 6 R, 2 2B, 3 HR, 7 RBI, .455"
+   },
+   "mvp_runner_up": {
+    "team": "SF",
+    "player_id": "ottme01",
+    "name": "Mel Ott",
+    "line": "5 for 22, 3 R, 1 2B, 1 HR, 5 RBI, .227"
    }
   },
   {

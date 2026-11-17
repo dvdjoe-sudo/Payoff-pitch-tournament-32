@@ -341,7 +341,20 @@ FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
 # every other series field are unchanged. The old value
 # was
 # 7f7f1c75a034b7754eb09be479c032f44f5e6338b3809997d25e37bec1125bc6.
-FROZEN_SERIES_HASH = "3d3678e71fd637dc25ca8120805bb5b610e09159ed3b7819bf2fc71417aea4c2"
+# Reset 2026-11-17 under Joe's MVP re-ruling for R1-02
+# (games chat, "Mays mvp"): the R1-02 series entry's mvp and
+# mvp_runner_up objects swap places wholesale, exactly as
+# booked, with no recompute and no line edits. Willie Mays
+# ("10 for 22, 6 R, 2 2B, 3 HR, 7 RBI, .455") is now the
+# series MVP and Mel Ott ("5 for 22, 3 R, 1 2B, 1 HR, 5 RBI,
+# .227") the runner-up, superseding the ruling that kept Ott
+# through the five game adoptions of 2026-11-16. No game
+# object, club record, or other series changes; the
+# fingerprint, recomputed after the swap, still equals its
+# standing pin and is not reset, and the locked counting
+# totals do not move. The old value was
+# 3d3678e71fd637dc25ca8120805bb5b610e09159ed3b7819bf2fc71417aea4c2.
+FROZEN_SERIES_HASH = "53f52306d0d2bb689974fc4f23dc76b3e57c2ed6bb5f23ea23f71b6e7651f216"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
 LOCKED_GAME_IDS = (
     "R1-01-G1", "R1-01-G2", "R1-01-G3", "R1-01-G4",
