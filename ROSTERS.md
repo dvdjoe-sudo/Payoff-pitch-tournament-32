@@ -525,11 +525,11 @@ These names are not on the active roster.
 - Mordecai Brown (`brownmo01`) started R1-06-G2
 - Rick Reuschel (`reuscri01`) started R1-06-G3
 - Pete Alexander (`alexape01`) started R1-06-G4
+- Carlos Zambrano (`zambrca01`) started R1-06-G5
 - Fergie Jenkins (`jenkife01`) started W2-06-G1
 - Mordecai Brown (`brownmo01`) started W2-06-G2
 - Rick Reuschel (`reuscri01`) started W2-06-G3
 - Pete Alexander (`alexape01`) started W2-06-G4
-- Carlos Zambrano (`zambrca01`) started R1-06-G5
 
 ### Relievers who have appeared
 
@@ -2569,13 +2569,13 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Pedro Martinez (`martipe02`) started R1-06-G2
 - Dennis Martinez (`martide01`) started R1-06-G3
 - Bryn Smith (`smithbr01`) started R1-06-G4
+- Javier Vazquez (`vazquja01`) started R1-06-G5
 - Steve Rogers (`rogerst01`) started L1-06-G1
 - Pedro Martinez (`martipe02`) started L1-06-G2
 - Dennis Martinez (`martide01`) started L1-06-G3
 - Bryn Smith (`smithbr01`) started L1-06-G4
 - Javier Vazquez (`vazquja01`) started L1-06-G5
 - Steve Rogers (`rogerst01`) started L1-06-G6
-- Javier Vazquez (`vazquja01`) started R1-06-G5
 
 ### Relievers who have appeared
 
