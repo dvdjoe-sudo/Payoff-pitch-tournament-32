@@ -111,7 +111,30 @@ GAMES = ROOT / "games"
 # The series entry and both club records are unchanged. The old
 # value was
 # 9b7381241aead1a979d302b8a99eab42204c789134648a962eaf72eb1829690b.
-FINGERPRINT = "81962e7a5b7457db6f43d89813d117622a47160dc30b146c5e25a443fb48fde6"
+# Reset 2026-11-16 under Joe's adoption ruling for R1-02
+# Game 1: his replay (San Francisco 12, Washington 7; W
+# Mathewson, L Scherzer) replaces the booked Game 1 (San
+# Francisco 4, Washington 2, seed 20261101, W Mathewson, L
+# Scherzer, SV Nen), a locked game in a frozen series, replaced
+# by guarded manual edit under the ruling because the importer
+# cannot edit a frozen series. San Francisco won Game 1 in both
+# versions, so the series entry's result and both club records
+# are unchanged; the series runs move and the entry's two MVP
+# lines are recomputed below. The game object and its detail
+# file move with it (the replaced game's 161 rolls and
+# 307-entry manager log are preserved in the Nationals records
+# at archive/replaced/; the adopted game carries an empty rolls
+# array and a null manager log, prints no seed so its rng_seed
+# is 0 as in the R1-01, R1-06, and R1-10 adoptions, and carries
+# its played date, 2026-11-16, per DATED_GAMES below). The
+# adopted game's app grades replace the recomputed final_grades
+# the 2026-11-16 grades fill booked for this game. The pins the
+# replaced game fed move with it: the locked counting totals
+# (EXPECTED_TOTALS below), the game's seed pin, and its
+# ROLL_COUNTS entry, which leaves the dict as R1-01-G1's did.
+# The old value was
+# 81962e7a5b7457db6f43d89813d117622a47160dc30b146c5e25a443fb48fde6.
+FINGERPRINT = "aff568b878dcd9d262be5c376dd919cd6a59446b6a08d4d80a6928ae3494f34e"
 # R1-01-G1 left ROLL_COUNTS in the 2026-11-08 adoption reset above:
 # the adopted game carries an empty rolls array, and the replaced
 # game's 72 rolls are preserved with it in the Yankees records at
@@ -136,7 +159,20 @@ FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
 # split in R1-10-G5; neither touches a frozen series object or a
 # locked game.) The old value was
 # 87e10cf83a3e02065b6e528acfc27a2f369fae96315a15cd3dbbfc428f5396df.
-FROZEN_SERIES_HASH = "c649c5eed50de7054ff8fef52c81d74e7c3753e11185a3d59bfae22b9768c5ae"
+# Reset 2026-11-16 under Joe's adoption ruling for R1-02
+# Game 1 (see the fingerprint reset above): the R1-02 series
+# entry's mvp line (Mel Ott, "7 for 17, 3 R, 1 3B, 2 HR, 1 SB,
+# 7 RBI, .412", replacing "7 for 16, 2 R, 1 3B, 1 HR, 4 RBI,
+# .438") and mvp_runner_up line (Willie Mays, "10 for 20, 4 R,
+# 3 2B, 3 SB, 3 RBI, .500", replacing "7 for 18, 4 R, 2 2B,
+# 5 SB, 1 RBI, .389") are recomputed from the five games as now
+# booked, the only changes to any frozen series object; the
+# series result, both club records, and every other series
+# field are unchanged. (The recomputed Ott line also carries
+# his Game 4 stolen base, which the 2026-11-09 line omitted.)
+# The old value was
+# c649c5eed50de7054ff8fef52c81d74e7c3753e11185a3d59bfae22b9768c5ae.
+FROZEN_SERIES_HASH = "19798e84c952e77d069efa102144329ccd2fcc39215f6a81ebbc6704589bbae6"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
 LOCKED_GAME_IDS = (
     "R1-01-G1", "R1-01-G2", "R1-01-G3", "R1-01-G4",
@@ -158,13 +194,20 @@ TEAM_FIELDS = (
     "series_losses", "eliminated", "champion",
 )
 
-EXPECTED_TOTALS = {"H": 222, "HR": 30, "RBI": 110, "K": 284, "ER": 110, "OUTS": 832}
-ROLL_COUNTS = {"R1-02-G1": 161, "R1-03-G1": 148, "R1-03-G2": 135, "R1-03-G3": 128, "R1-03-G4": 164, "R1-03-G5": 183, "R1-03-G6": 137, "R1-03-G7": 159}
+EXPECTED_TOTALS = {"H": 230, "HR": 31, "RBI": 124, "K": 277, "ER": 118, "OUTS": 832}
+# R1-02-G1 left ROLL_COUNTS in the 2026-11-16 adoption reset
+# above: the adopted game carries an empty rolls array, and the
+# replaced game's 161 rolls are preserved with it in the
+# Nationals records at archive/replaced/.
+ROLL_COUNTS = {"R1-03-G1": 148, "R1-03-G2": 135, "R1-03-G3": 128, "R1-03-G4": 164, "R1-03-G5": 183, "R1-03-G6": 137, "R1-03-G7": 159}
 DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-23"}
 # Per-game dates for locked games whose series is not in DATED: the
 # adopted R1-01 Games 1, 2, 3, and 4 carry their played date,
 # 2026-11-08 (Joe's adoption rulings, 2026-11-08).
-DATED_GAMES = {"R1-01-G1": "2026-11-08", "R1-01-G2": "2026-11-08", "R1-01-G3": "2026-11-08", "R1-01-G4": "2026-11-08"}
+# The adopted R1-02 Game 1 carries its played date, 2026-11-16
+# (Joe's adoption ruling, 2026-11-16); R1-02 Games 2 to 5 keep
+# the series date in DATED above.
+DATED_GAMES = {"R1-01-G1": "2026-11-08", "R1-01-G2": "2026-11-08", "R1-01-G3": "2026-11-08", "R1-01-G4": "2026-11-08", "R1-02-G1": "2026-11-16"}
 THREE_INNINGS = (
     "A reliever is lifted when he reaches 3 innings pitched in one appearance, "
     "unless he is the last available arm. The last available arm stays in and "
@@ -349,7 +392,7 @@ def reconcile(data: dict, details: dict[str, dict], check: Check) -> None:
         check.expect(len(details[game_id]["rolls"]) == count, f"{game_id} roll count")
     check.expect(details["R1-01-G2"]["manager_log"] is None, "R1-01-G2 manager log stays null")
     check.expect(data["games"][0].get("rng_seed", data["games"][0].get("seed")) == 0, "R1-01-G1 rng seed")
-    check.expect(data["games"][4].get("rng_seed", data["games"][4].get("seed")) == 20261101, "R1-02-G1 rng seed")
+    check.expect(data["games"][4].get("rng_seed", data["games"][4].get("seed")) == 0, "R1-02-G1 rng seed")
     check.expect(data["games"][9].get("rng_seed", data["games"][9].get("seed")) == 20261201, "R1-03-G1 rng seed")
 
     series_wins: dict[str, int] = {}
