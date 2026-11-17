@@ -15,13 +15,13 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Dale Murphy | Atlanta Braves | 63.5 | 36 | 12 | 13 | 7 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
+| Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
 | Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
-| Honus Wagner | Pittsburgh Pirates | 53.0 | 30 | 13 | 9 | 1 |
 | Eric Davis | Cincinnati Reds | 51.5 | 25 | 11 | 12 | 4 |
 
 ## Cy Young
@@ -52,7 +52,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
-| Aroldis Chapman | Cincinnati Reds | 33.3 | 3 | 10.2 | 15 | 6 |
+| Aroldis Chapman | Cincinnati Reds | 34.4 | 3 | 11.0 | 16 | 6 |
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
 | Cody Allen | Cleveland Guardians | 31.4 | 3 | 9.0 | 11 | 4 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
@@ -65,5 +65,5 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
+| Mark Melancon | Pittsburgh Pirates | 22.5 | 2 | 7.2 | 8 | 4 |
 | Bobby Jenks | Chicago White Sox | 22.4 | 2 | 6.0 | 1 | 0 |
-| Andy McGaffigan | Montreal Expos | 22.1 | 2 | 7.1 | 1 | 2 |

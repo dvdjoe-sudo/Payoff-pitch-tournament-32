@@ -686,15 +686,15 @@ Grant Jackson shifts to bullpen slot 5 and Sam Leever to bullpen slot 6, preserv
 
 ### Lineup slots that have batted
 
-- Slot 1: Honus Wagner (`wagneho01`) in R1-08-G1 (same starter in 8 later games)
-- Slot 2: Andrew McCutchen (`mccutan01`) in R1-08-G1 (same starter in 8 later games)
-- Slot 3: Roberto Clemente (`clemero01`) in R1-08-G1 (same starter in 8 later games)
-- Slot 4: Barry Bonds (`bondsba01`) in R1-08-G1 (same starter in 8 later games)
-- Slot 5: Willie Stargell (`stargwi01`) in R1-08-G1 (same starter in 8 later games)
-- Slot 6: Ralph Kiner (`kinerra01`) in R1-08-G1 (same starter in 8 later games)
-- Slot 7: Manny Sanguillen (`sanguma01`) in R1-08-G1 (same starter in 8 later games)
-- Slot 8: Pie Traynor (`traynpi01`) in R1-08-G1; Pie Traynor (`traynpi01`) in R1-08-G2; Tommy Leach (`leachto01`) in R1-08-G3; Tommy Leach (`leachto01`) in R1-08-G4; Tommy Leach (`leachto01`) in R1-08-G5; Pie Traynor (`traynpi01`) in W2-08-G1; Pie Traynor (`traynpi01`) in W2-08-G2; Pie Traynor (`traynpi01`) in W2-08-G3; Pie Traynor (`traynpi01`) in W2-08-G4
-- Slot 9: Bill Mazeroski (`mazerbi01`) in R1-08-G1 (same starter in 8 later games)
+- Slot 1: Honus Wagner (`wagneho01`) in R1-08-G1 (same starter in 9 later games)
+- Slot 2: Andrew McCutchen (`mccutan01`) in R1-08-G1 (same starter in 9 later games)
+- Slot 3: Roberto Clemente (`clemero01`) in R1-08-G1 (same starter in 9 later games)
+- Slot 4: Barry Bonds (`bondsba01`) in R1-08-G1 (same starter in 9 later games)
+- Slot 5: Willie Stargell (`stargwi01`) in R1-08-G1 (same starter in 9 later games)
+- Slot 6: Ralph Kiner (`kinerra01`) in R1-08-G1 (same starter in 9 later games)
+- Slot 7: Manny Sanguillen (`sanguma01`) in R1-08-G1 (same starter in 9 later games)
+- Slot 8: Pie Traynor (`traynpi01`) in R1-08-G1; Pie Traynor (`traynpi01`) in R1-08-G2; Tommy Leach (`leachto01`) in R1-08-G3; Tommy Leach (`leachto01`) in R1-08-G4; Tommy Leach (`leachto01`) in R1-08-G5; Pie Traynor (`traynpi01`) in W2-08-G1; Pie Traynor (`traynpi01`) in W2-08-G2; Pie Traynor (`traynpi01`) in W2-08-G3; Pie Traynor (`traynpi01`) in W2-08-G4; Pie Traynor (`traynpi01`) in W2-08-G5
+- Slot 9: Bill Mazeroski (`mazerbi01`) in R1-08-G1 (same starter in 9 later games)
 
 ### Substitutes who have batted
 
@@ -716,6 +716,7 @@ Grant Jackson shifts to bullpen slot 5 and Sam Leever to bullpen slot 6, preserv
 - Wilbur Cooper (`coopewi01`) started W2-08-G2
 - Babe Adams (`adamsba01`) started W2-08-G3
 - John Candelaria (`candejo01`) started W2-08-G4
+- Bob Friend (`frienbo01`) started W2-08-G5
 
 ### Relievers who have appeared
 
@@ -728,7 +729,7 @@ Grant Jackson shifts to bullpen slot 5 and Sam Leever to bullpen slot 6, preserv
 
 ## 9. Cincinnati Reds (CIN)
 
-Bracket: winners. Series losses: 0. Full 26 Index: 814.3.
+Bracket: losers. Series losses: 1. Full 26 Index: 814.3.
 
 Manager: Sparky Anderson (9 yrs).
 
@@ -791,15 +792,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Pete Rose (`rosepe01`) in R1-09-G1 (same starter in 10 later games)
-- Slot 2: Joe Morgan (`morgajo02`) in R1-09-G1 (same starter in 10 later games)
-- Slot 3: Frank Robinson (`robinfr02`) in R1-09-G1 (same starter in 10 later games)
-- Slot 4: Johnny Bench (`benchjo01`) in R1-09-G1 (same starter in 10 later games)
-- Slot 5: Joey Votto (`vottojo01`) in R1-09-G1 (same starter in 10 later games)
-- Slot 6: George Foster (`fostege01`) in R1-09-G1; George Foster (`fostege01`) in R1-09-G2; George Foster (`fostege01`) in R1-09-G3; Vada Pinson (`pinsova01`) in R1-09-G4; Vada Pinson (`pinsova01`) in R1-09-G5; Vada Pinson (`pinsova01`) in R1-09-G6; Ted Kluszewski (`kluszte01`) in R1-09-G7; George Foster (`fostege01`) in W2-08-G1; George Foster (`fostege01`) in W2-08-G2; George Foster (`fostege01`) in W2-08-G3; George Foster (`fostege01`) in W2-08-G4
-- Slot 7: Tony Perez (`perezto01`) in R1-09-G1; Tony Perez (`perezto01`) in R1-09-G2; Tony Perez (`perezto01`) in R1-09-G3; Tony Perez (`perezto01`) in R1-09-G4; Tony Perez (`perezto01`) in R1-09-G5; Tony Perez (`perezto01`) in R1-09-G6; George Foster (`fostege01`) in R1-09-G7; Tony Perez (`perezto01`) in W2-08-G1; Tony Perez (`perezto01`) in W2-08-G2; Tony Perez (`perezto01`) in W2-08-G3; Tony Perez (`perezto01`) in W2-08-G4
-- Slot 8: Eric Davis (`daviser01`) in R1-09-G1 (same starter in 10 later games)
-- Slot 9: Barry Larkin (`larkiba01`) in R1-09-G1 (same starter in 10 later games)
+- Slot 1: Pete Rose (`rosepe01`) in R1-09-G1 (same starter in 11 later games)
+- Slot 2: Joe Morgan (`morgajo02`) in R1-09-G1 (same starter in 11 later games)
+- Slot 3: Frank Robinson (`robinfr02`) in R1-09-G1 (same starter in 11 later games)
+- Slot 4: Johnny Bench (`benchjo01`) in R1-09-G1 (same starter in 11 later games)
+- Slot 5: Joey Votto (`vottojo01`) in R1-09-G1 (same starter in 11 later games)
+- Slot 6: George Foster (`fostege01`) in R1-09-G1; George Foster (`fostege01`) in R1-09-G2; George Foster (`fostege01`) in R1-09-G3; Vada Pinson (`pinsova01`) in R1-09-G4; Vada Pinson (`pinsova01`) in R1-09-G5; Vada Pinson (`pinsova01`) in R1-09-G6; Ted Kluszewski (`kluszte01`) in R1-09-G7; George Foster (`fostege01`) in W2-08-G1; George Foster (`fostege01`) in W2-08-G2; George Foster (`fostege01`) in W2-08-G3; George Foster (`fostege01`) in W2-08-G4; George Foster (`fostege01`) in W2-08-G5
+- Slot 7: Tony Perez (`perezto01`) in R1-09-G1; Tony Perez (`perezto01`) in R1-09-G2; Tony Perez (`perezto01`) in R1-09-G3; Tony Perez (`perezto01`) in R1-09-G4; Tony Perez (`perezto01`) in R1-09-G5; Tony Perez (`perezto01`) in R1-09-G6; George Foster (`fostege01`) in R1-09-G7; Tony Perez (`perezto01`) in W2-08-G1; Tony Perez (`perezto01`) in W2-08-G2; Tony Perez (`perezto01`) in W2-08-G3; Tony Perez (`perezto01`) in W2-08-G4; Tony Perez (`perezto01`) in W2-08-G5
+- Slot 8: Eric Davis (`daviser01`) in R1-09-G1 (same starter in 11 later games)
+- Slot 9: Barry Larkin (`larkiba01`) in R1-09-G1 (same starter in 11 later games)
 
 ### Substitutes who have batted
 
@@ -820,6 +821,7 @@ These names are not on the active roster.
 - Bucky Walters (`waltebu01`) started W2-08-G2
 - Jose Rijo (`rijojo01`) started W2-08-G3
 - Dolf Luque (`luquedo01`) started W2-08-G4
+- Jim Maloney (`malonji01`) started W2-08-G5
 
 ### Relievers who have appeared
 
