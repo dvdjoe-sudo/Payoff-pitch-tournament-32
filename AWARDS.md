@@ -21,8 +21,8 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
 | Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
-| Ken Caminiti | San Diego Padres | 50.5 | 30 | 8 | 12 | 5 |
-| Alex Rodriguez | Seattle Mariners | 50.0 | 28 | 10 | 9 | 4 |
+| Honus Wagner | Pittsburgh Pirates | 53.0 | 30 | 13 | 9 | 1 |
+| Eric Davis | Cincinnati Reds | 51.5 | 25 | 11 | 12 | 4 |
 
 ## Cy Young
 
@@ -52,7 +52,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
-| Aroldis Chapman | Cincinnati Reds | 33.9 | 3 | 9.2 | 14 | 4 |
+| Aroldis Chapman | Cincinnati Reds | 33.3 | 3 | 10.2 | 15 | 6 |
 | Robb Nen | San Francisco Giants | 33.3 | 4 | 6.0 | 7 | 1 |
 | Cody Allen | Cleveland Guardians | 31.4 | 3 | 9.0 | 11 | 4 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
