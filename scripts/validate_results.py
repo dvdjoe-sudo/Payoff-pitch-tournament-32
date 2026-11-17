@@ -192,7 +192,38 @@ GAMES = ROOT / "games"
 # as in the R1-04 Game 6 and R1-06 Game 2 adoptions. The old
 # value was
 # 8460ab2af894bcd6f17e1ef5c99943a8ac9d2a6f46719084abeb0d944206a9ec.
-FINGERPRINT = "f9c2813fdc931a24dba90407158a158c37c494bb17856b26957304306e0020b9"
+# Reset 2026-11-16 under Joe's adoption ruling for R1-02
+# Game 4: his replay (San Francisco 10, Washington 8; W
+# Lavelle, L Rauch, SV Nen) replaces the booked Game 4
+# (San Francisco 4, Washington 3, seed 20261104, W Perry, L
+# Gio Gonzalez, SV Nen), a locked game in a frozen series,
+# replaced by guarded manual edit under the ruling because
+# the importer cannot edit a frozen series. San Francisco
+# won Game 4 in both versions, so the series entry's result
+# and both club records are unchanged; the series runs move
+# and the entry's two MVP lines are recomputed below. The
+# game object and its detail file move with it (the replaced
+# game's 166 rolls and 318-entry manager log are preserved
+# in the Nationals records at archive/replaced/; the adopted
+# game carries an empty rolls array and a null manager log,
+# prints no seed so its rng_seed is 0 as in the R1-01,
+# R1-06, and R1-10 adoptions, and carries its played date,
+# 2026-11-16, per DATED_GAMES below). The adopted game's app
+# grades replace the recomputed final_grades the 2026-11-16
+# grades fill booked for this game. The pins the replaced
+# game fed move with it: the locked counting totals
+# (EXPECTED_TOTALS below). One play row (seq 9, Rendon's
+# bottom-1st line-drive double play, coded DP with one out
+# recorded) rebuilds a GIDP the printed line does not carry;
+# under the standing GIDP practice the rows govern, the
+# printed line is unchanged, and the case is documented in
+# the game's official record. The replaced game's two
+# null-HB warnings retire (the adopted game prints HB 0 for
+# every pitcher, so both checks now run and pass), taking
+# the UNCHECKED warning count from 38 to 36 as in the
+# R1-04 Game 6 and R1-06 Game 2 adoptions. The old value was
+# f9c2813fdc931a24dba90407158a158c37c494bb17856b26957304306e0020b9.
+FINGERPRINT = "0ef6e359f35a90e1e3d002e166a9cb54e72f7748d86ef6225d26c5211af9d19a"
 # R1-01-G1 left ROLL_COUNTS in the 2026-11-08 adoption reset above:
 # the adopted game carries an empty rolls array, and the replaced
 # game's 72 rolls are preserved with it in the Yankees records at
@@ -252,7 +283,19 @@ FROZEN_SERIES = ("R1-01", "R1-02", "R1-03")
 # series object; the series result, both club records, and
 # every other series field are unchanged. The old value was
 # 3f7741c7f9931ffc86fcdfbea8eb118bf7043d46b17325b9c34e40670ffc5504.
-FROZEN_SERIES_HASH = "ac026d45d39c4e6a19221e0eaabb6eba4df0c2e396a7cf007e6afe06c039033a"
+# Reset 2026-11-16 under Joe's adoption ruling for R1-02
+# Game 4 (see the fingerprint reset above): the R1-02 series
+# entry's mvp line (Mel Ott, "5 for 20, 4 R, 1 2B, 2 HR,
+# 5 RBI, .250", replacing "8 for 19, 5 R, 1 3B, 2 HR, 1 SB,
+# 6 RBI, .421") and mvp_runner_up line (Willie Mays, "11 for
+# 22, 6 R, 1 2B, 3 HR, 2 SB, 7 RBI, .500", replacing "9 for
+# 20, 4 R, 1 2B, 1 HR, 2 SB, 4 RBI, .450") are recomputed
+# from the five games as now booked, the only changes to any
+# frozen series object; the series result, both club records,
+# and every other series field are unchanged. The old value
+# was
+# ac026d45d39c4e6a19221e0eaabb6eba4df0c2e396a7cf007e6afe06c039033a.
+FROZEN_SERIES_HASH = "7f7f1c75a034b7754eb09be479c032f44f5e6338b3809997d25e37bec1125bc6"
 FORMAT_HASH = "f3dda1d7ca63d1ce87e1f751e6ef7e27646cfd6e9d8df420c178db03d0475363"
 LOCKED_GAME_IDS = (
     "R1-01-G1", "R1-01-G2", "R1-01-G3", "R1-01-G4",
@@ -274,7 +317,7 @@ TEAM_FIELDS = (
     "series_losses", "eliminated", "champion",
 )
 
-EXPECTED_TOTALS = {"H": 233, "HR": 36, "RBI": 128, "K": 270, "ER": 120, "OUTS": 832}
+EXPECTED_TOTALS = {"H": 250, "HR": 40, "RBI": 138, "K": 268, "ER": 131, "OUTS": 832}
 # R1-02-G1 left ROLL_COUNTS in the 2026-11-16 adoption reset
 # above: the adopted game carries an empty rolls array, and the
 # replaced game's 161 rolls are preserved with it in the
@@ -287,11 +330,12 @@ DATED = {"R1-02": "2026-10-24", "R1-03": "2026-10-23"}
 # The adopted R1-02 Game 1 carries its played date, 2026-11-16
 # (Joe's adoption ruling, 2026-11-16), the adopted R1-02
 # Game 2 carries its played date, 2026-11-16 (Joe's adoption
-# ruling, 2026-11-16), and the adopted R1-02 Game 3 carries
-# its played date, 2026-11-16 (Joe's adoption ruling,
-# 2026-11-16); R1-02 Games 4 and 5 keep the series date in
-# DATED above.
-DATED_GAMES = {"R1-01-G1": "2026-11-08", "R1-01-G2": "2026-11-08", "R1-01-G3": "2026-11-08", "R1-01-G4": "2026-11-08", "R1-02-G1": "2026-11-16", "R1-02-G2": "2026-11-16", "R1-02-G3": "2026-11-16"}
+# ruling, 2026-11-16), the adopted R1-02 Game 3 carries its
+# played date, 2026-11-16 (Joe's adoption ruling, 2026-11-16),
+# and the adopted R1-02 Game 4 carries its played date,
+# 2026-11-16 (Joe's adoption ruling, 2026-11-16); R1-02
+# Game 5 keeps the series date in DATED above.
+DATED_GAMES = {"R1-01-G1": "2026-11-08", "R1-01-G2": "2026-11-08", "R1-01-G3": "2026-11-08", "R1-01-G4": "2026-11-08", "R1-02-G1": "2026-11-16", "R1-02-G2": "2026-11-16", "R1-02-G3": "2026-11-16", "R1-02-G4": "2026-11-16"}
 THREE_INNINGS = (
     "A reliever is lifted when he reaches 3 innings pitched in one appearance, "
     "unless he is the last available arm. The last available arm stays in and "
