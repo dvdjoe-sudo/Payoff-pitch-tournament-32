@@ -33,6 +33,7 @@ A start of at least 9 innings (27 outs) with 0 hits.
 
 - New York Yankees scored 15 against Miami Marlins in R1-01-G4.
 - San Francisco Giants scored 12 against Washington Nationals in R1-02-G1.
+- San Francisco Giants scored 10 against Washington Nationals in R1-02-G4.
 - Detroit Tigers scored 13 against Arizona Diamondbacks in R1-04-G6.
 - St. Louis Cardinals scored 10 against Colorado Rockies in R1-05-G4.
 - Atlanta Braves scored 11 against San Diego Padres in R1-07-G4.

@@ -172,7 +172,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Slot 7: Buster Posey (`poseybu01`) in R1-02-G1 (same starter in 8 later games)
 - Slot 8: Matt Williams (`willima04`) in R1-02-G1 (same starter in 8 later games)
 - Slot 9: Art Fletcher (`fletcar01`) in R1-02-G1 (same starter in 8 later games)
-- Slot 10: Frankie Frisch (`friscfr01`) in W2-02-G3
+- Slot 10: Bob Brenly (`brenlbo01`) in R1-02-G4; Frankie Frisch (`friscfr01`) in W2-02-G3
 - Slot 11: Bob Brenly (`brenlbo01`) in W2-02-G3
 
 ### Starts, in the order the games were played
@@ -190,10 +190,10 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 ### Relievers who have appeared
 
 - Hoyt Wilhelm (`wilheho01`), first seen in R1-02-G1
+- Sergio Romo (`romose01`), first seen in R1-02-G4
+- Rod Beck (`beckro01`), first seen in R1-02-G4
+- Gary Lavelle (`lavelga01`), first seen in R1-02-G4
 - Robb Nen (`nenro01`), first seen in R1-02-G4
-- Sergio Romo (`romose01`), first seen in W2-02-G1
-- Rod Beck (`beckro01`), first seen in W2-02-G1
-- Gary Lavelle (`lavelga01`), first seen in W2-02-G1
 
 ### Rotation carry recorded on the series
 
@@ -2829,6 +2829,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Slot 7: Daniel Murphy (`murphda08`) in R1-02-G1 (same starter in 9 later games)
 - Slot 8: Nick Johnson (`johnsni01`) in R1-02-G1 (same starter in 9 later games)
 - Slot 9: Wilson Ramos (`ramoswi01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 10: Jayson Werth (`werthja01`) in R1-02-G4
 
 ### Starts, in the order the games were played
 
@@ -2849,7 +2850,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Tyler Clippard (`clippty01`), first seen in R1-02-G1
 - Livan Hernandez (`hernali01`), first seen in R1-02-G2
 - Drew Storen (`storedr01`), first seen in R1-02-G3
-- Jon Rauch (`rauchjo01`), first seen in L1-02-G2
+- Jon Rauch (`rauchjo01`), first seen in R1-02-G4
 - Sean Burnett (`burnese01`), first seen in L1-02-G2
 - Chad Cordero (`cordech01`), first seen in L1-02-G2
 - Stephen Strasburg (`strasst01`), first seen in L1-02-G5

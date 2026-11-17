@@ -41,6 +41,18 @@
    "recap": "Washington won the adopted replay of Game 3, 7-4, and the series result is unchanged: the Giants still take R1-02 four games to one. Bryce Harper was the player of the game: his three-run homer in the bottom of the 5th was the decisive play, and he drove in four of Washington's seven runs. Jordan Zimmermann got the win (6.0 IP, 3 H, 2 ER, 6 SO) and Drew Storen pitched a perfect 9th for the save. Juan Marichal took the loss, charged with seven runs but only four earned: Washington's three 5th-inning runs were unearned after errors by Will Clark and Willie Mays put Span and Turner aboard ahead of Harper's homer. Wilson Ramos added a two-run homer in the 6th. Willie Mays hit a two-run homer for San Francisco in the 5th, and Matt Williams tripled home two in the 7th."
   },
   {
+   "id": "R1-02-G4",
+   "date": "2026-11-16",
+   "away": "SF",
+   "home": "WSH",
+   "away_name": "San Francisco Giants",
+   "home_name": "Washington Nationals",
+   "away_runs": 10,
+   "home_runs": 8,
+   "winner": "SF",
+   "recap": "San Francisco won the adopted replay of Game 4, 10-8, and the series result is unchanged: the Giants still take R1-02 four games to one. Willie Mays was the player of the game (2 for 5, two home runs, 3 RBI), and Matt Williams went 4 for 5, his two-run homer off Jon Rauch in the top of the 8th the decisive play. The lead changed hands all afternoon: Washington went ahead 8-7 in the 7th on back-to-back homers by Anthony Rendon and Ryan Zimmerman off Rod Beck (the blown save), but Gary Lavelle got the win with a scoreless 7th, Hoyt Wilhelm held the 8th, and Robb Nen saved it. Ryan Zimmerman went 4 for 5 in the loss. Washington's eight runs carry seven printed RBI: Daniel Murphy scored on Gaylord Perry's wild pitch in the 2nd."
+  },
+  {
    "id": "R1-06-G4",
    "date": "2026-11-16",
    "away": "CHC",
@@ -528,6 +540,12 @@
     "game": "R1-02-G1",
     "team": "SF",
     "runs": 12,
+    "opponent": "WSH"
+   },
+   {
+    "game": "R1-02-G4",
+    "team": "SF",
+    "runs": 10,
     "opponent": "WSH"
    },
    {
