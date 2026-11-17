@@ -29,6 +29,18 @@
    "recap": "San Francisco won the adopted replay of Game 2, 6-0, and the series result is unchanged: the Giants still take R1-02 four games to one. Carl Hubbell and Hoyt Wilhelm combined on a seven-hit shutout: Hubbell worked five scoreless innings for the win and Wilhelm four more for the save, stranding both of his inherited runners. Barry Bonds was the player of the game, going 2 for 3 with a home run, 3 RBI, a run, a walk, and a stolen base. The decisive play was Mel Ott's single in the bottom of the third. San Francisco scored three in the 3rd: Ott's single scored Mays, a Strasburg wild pitch scored Clark during Bonds's plate appearance, and Bonds's single scored Ott. Bonds's two-run homer in the 5th and Buster Posey's homer in the 8th finished the scoring. Stephen Strasburg took the loss. The game was errorless, and Washington never scored."
   },
   {
+   "id": "R1-02-G3",
+   "date": "2026-11-16",
+   "away": "SF",
+   "home": "WSH",
+   "away_name": "San Francisco Giants",
+   "home_name": "Washington Nationals",
+   "away_runs": 4,
+   "home_runs": 7,
+   "winner": "WSH",
+   "recap": "Washington won the adopted replay of Game 3, 7-4, and the series result is unchanged: the Giants still take R1-02 four games to one. Bryce Harper was the player of the game: his three-run homer in the bottom of the 5th was the decisive play, and he drove in four of Washington's seven runs. Jordan Zimmermann got the win (6.0 IP, 3 H, 2 ER, 6 SO) and Drew Storen pitched a perfect 9th for the save. Juan Marichal took the loss, charged with seven runs but only four earned: Washington's three 5th-inning runs were unearned after errors by Will Clark and Willie Mays put Span and Turner aboard ahead of Harper's homer. Wilson Ramos added a two-run homer in the 6th. Willie Mays hit a two-run homer for San Francisco in the 5th, and Matt Williams tripled home two in the 7th."
+  },
+  {
    "id": "R1-06-G4",
    "date": "2026-11-16",
    "away": "CHC",

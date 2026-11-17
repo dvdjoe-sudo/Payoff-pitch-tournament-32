@@ -64,6 +64,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
+| Hoyt Wilhelm | San Francisco Giants | 23.4 | 1 | 8.1 | 8 | 1 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Mark Melancon | Pittsburgh Pirates | 22.5 | 2 | 7.2 | 8 | 4 |
-| Bobby Jenks | Chicago White Sox | 22.4 | 2 | 6.0 | 1 | 0 |

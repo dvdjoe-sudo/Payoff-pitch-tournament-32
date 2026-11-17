@@ -35,7 +35,6 @@ At least 10 plate appearances.
 | Mickey Cochrane | Philadelphia Athletics | .409 | 18 | 44 | 53 |
 | Tris Speaker | Cleveland Guardians | .407 | 11 | 27 | 33 |
 | Alex Rodriguez | Seattle Mariners | .400 | 14 | 35 | 40 |
-| Mel Ott | San Francisco Giants | .400 | 14 | 35 | 39 |
 | Tony Oliva | Minnesota Twins | .400 | 12 | 30 | 35 |
 | Luke Appling | Chicago White Sox | .394 | 13 | 33 | 39 |
 | Paul Blair | Baltimore Orioles | .389 | 14 | 36 | 38 |
@@ -52,6 +51,7 @@ At least 10 plate appearances.
 | Tommy Leach | Pittsburgh Pirates | .375 | 6 | 16 | 16 |
 | Mark Loretta | San Diego Padres | .372 | 16 | 43 | 46 |
 | Mike Trout | Los Angeles Angels | .370 | 20 | 54 | 64 |
+| Barry Bonds | San Francisco Giants | .370 | 10 | 27 | 38 |
 | Sam Crawford | Detroit Tigers | .368 | 7 | 19 | 21 |
 | Jim Fregosi | Los Angeles Angels | .367 | 18 | 49 | 53 |
 | Eddie Collins | Chicago White Sox | .367 | 11 | 30 | 43 |
@@ -60,9 +60,9 @@ At least 10 plate appearances.
 | Jimmy Rollins | Philadelphia Phillies | .364 | 16 | 44 | 49 |
 | Frank Thomas | Chicago White Sox | .364 | 12 | 33 | 42 |
 | B.J. Upton | Tampa Bay Rays | .364 | 8 | 22 | 23 |
+| Mel Ott | San Francisco Giants | .361 | 13 | 36 | 39 |
 | Barry Bonds | Pittsburgh Pirates | .359 | 14 | 39 | 46 |
 | Bill Freehan | Detroit Tigers | .359 | 14 | 39 | 45 |
-| Barry Bonds | San Francisco Giants | .357 | 10 | 28 | 38 |
 | Rickey Henderson | Oakland Athletics | .354 | 17 | 48 | 56 |
 | Roberto Alomar | Toronto Blue Jays | .353 | 18 | 51 | 57 |
 | Albert Pujols | St. Louis Cardinals | .353 | 12 | 34 | 40 |
@@ -113,14 +113,12 @@ At least 10 plate appearances.
 | Fred McGriff | Toronto Blue Jays | .308 | 4 | 13 | 13 |
 | Boog Powell | Baltimore Orioles | .306 | 11 | 36 | 43 |
 | George Brett | Kansas City Royals | .306 | 11 | 36 | 39 |
-| Juan Soto | Washington Nationals | .306 | 11 | 36 | 44 |
 | Ken Caminiti | San Diego Padres | .304 | 14 | 46 | 47 |
 | Pie Traynor | Pittsburgh Pirates | .304 | 7 | 23 | 26 |
 | Yorvit Torrealba | Colorado Rockies | .304 | 7 | 23 | 23 |
 | César Cedeño | Houston Astros | .303 | 10 | 33 | 35 |
 | Kent Hrbek | Minnesota Twins | .303 | 10 | 33 | 36 |
 | Minnie Miñoso | Chicago White Sox | .303 | 10 | 33 | 40 |
-| Willie McCovey | San Francisco Giants | .303 | 10 | 33 | 35 |
 | Ernie Whitt | Toronto Blue Jays | .302 | 13 | 43 | 47 |
 | Nap Lajoie | Cleveland Guardians | .300 | 15 | 50 | 56 |
 | Freddie Freeman | Atlanta Braves | .300 | 12 | 40 | 44 |
@@ -129,6 +127,8 @@ At least 10 plate appearances.
 | Joey Wendle | Tampa Bay Rays | .296 | 8 | 27 | 30 |
 | Ivan Rodriguez | Texas Rangers | .295 | 18 | 61 | 64 |
 | Ken Griffey Jr. | Seattle Mariners | .294 | 10 | 34 | 40 |
+| Willie McCovey | San Francisco Giants | .294 | 10 | 34 | 35 |
+| Buster Posey | San Francisco Giants | .290 | 9 | 31 | 34 |
 | Frank White | Kansas City Royals | .290 | 9 | 31 | 33 |
 | Kenny Lofton | Cleveland Guardians | .290 | 9 | 31 | 35 |
 | Manny Sanguillen | Pittsburgh Pirates | .289 | 11 | 38 | 41 |
@@ -154,6 +154,7 @@ At least 10 plate appearances.
 | Lou Boudreau | Cleveland Guardians | .279 | 12 | 43 | 48 |
 | Terry Steinbach | Oakland Athletics | .279 | 12 | 43 | 49 |
 | William Contreras | Milwaukee Brewers | .279 | 12 | 43 | 44 |
+| Juan Soto | Washington Nationals | .278 | 10 | 36 | 44 |
 | Magglio Ordóñez | Chicago White Sox | .278 | 10 | 36 | 40 |
 | Alan Trammell | Detroit Tigers | .275 | 11 | 40 | 45 |
 | Andre Dawson | Montreal Expos | .275 | 11 | 40 | 43 |
@@ -176,7 +177,6 @@ At least 10 plate appearances.
 | Victor Martinez | Cleveland Guardians | .268 | 11 | 41 | 46 |
 | José Canseco | Oakland Athletics | .267 | 12 | 45 | 51 |
 | Bret Boone | Seattle Mariners | .267 | 8 | 30 | 33 |
-| Buster Posey | San Francisco Giants | .267 | 8 | 30 | 33 |
 | Gary Gaetti | Minnesota Twins | .265 | 9 | 34 | 34 |
 | Manny Ramirez | Cleveland Guardians | .265 | 9 | 34 | 43 |
 | Juan Gonzalez | Texas Rangers | .263 | 15 | 57 | 59 |
@@ -231,6 +231,7 @@ At least 10 plate appearances.
 | Mike Piazza | New York Mets | .229 | 8 | 35 | 41 |
 | Sammy Sosa | Chicago Cubs | .229 | 8 | 35 | 39 |
 | Todd Helton | Colorado Rockies | .229 | 8 | 35 | 45 |
+| Wilson Ramos | Washington Nationals | .229 | 8 | 35 | 39 |
 | Hank Greenberg | Detroit Tigers | .227 | 10 | 44 | 51 |
 | Miguel Tejada | Oakland Athletics | .227 | 10 | 44 | 47 |
 | Steve Garvey | Los Angeles Dodgers | .227 | 5 | 22 | 25 |
@@ -242,9 +243,8 @@ At least 10 plate appearances.
 | Ernie Banks | Chicago Cubs | .222 | 8 | 36 | 37 |
 | Joe Mauer | Minnesota Twins | .222 | 8 | 36 | 38 |
 | Rick Dempsey | Baltimore Orioles | .222 | 8 | 36 | 40 |
-| Will Clark | San Francisco Giants | .222 | 8 | 36 | 40 |
 | Miguel Cabrera | Detroit Tigers | .220 | 9 | 41 | 49 |
-| Matt Williams | San Francisco Giants | .219 | 7 | 32 | 34 |
+| Matt Williams | San Francisco Giants | .219 | 7 | 32 | 35 |
 | Brooks Robinson | Baltimore Orioles | .216 | 8 | 37 | 41 |
 | Bryce Harper | Washington Nationals | .216 | 8 | 37 | 44 |
 | Ron Fairly | Montreal Expos | .216 | 8 | 37 | 42 |
@@ -275,11 +275,12 @@ At least 10 plate appearances.
 | Shohei Ohtani | Los Angeles Dodgers | .196 | 9 | 46 | 51 |
 | George Foster | Cincinnati Reds | .194 | 7 | 36 | 38 |
 | Giancarlo Stanton | Miami Marlins | .194 | 7 | 36 | 41 |
+| Will Clark | San Francisco Giants | .194 | 7 | 36 | 40 |
 | Cal Raleigh | Seattle Mariners | .194 | 6 | 31 | 34 |
-| Daniel Murphy | Washington Nationals | .194 | 6 | 31 | 40 |
 | Sal Bando | Oakland Athletics | .194 | 6 | 31 | 37 |
 | Ron Cey | Los Angeles Dodgers | .192 | 5 | 26 | 29 |
 | Pee Wee Reese | Los Angeles Dodgers | .190 | 8 | 42 | 43 |
+| Daniel Murphy | Washington Nationals | .188 | 6 | 32 | 40 |
 | Robin Ventura | Chicago White Sox | .188 | 6 | 32 | 40 |
 | Jim Edmonds | Los Angeles Angels | .188 | 3 | 16 | 16 |
 | Bobby Grich | Los Angeles Angels | .186 | 8 | 43 | 55 |
@@ -289,20 +290,16 @@ At least 10 plate appearances.
 | Eddie Joost | Philadelphia Athletics | .184 | 7 | 38 | 49 |
 | Tim Wallach | Montreal Expos | .184 | 7 | 38 | 42 |
 | Paul Molitor | Milwaukee Brewers | .184 | 9 | 49 | 55 |
-| Art Fletcher | San Francisco Giants | .182 | 6 | 33 | 34 |
 | Eddie Murray | Baltimore Orioles | .182 | 6 | 33 | 36 |
 | Mike Sweeney | Kansas City Royals | .182 | 4 | 22 | 26 |
 | Christian Walker | Arizona Diamondbacks | .179 | 7 | 39 | 44 |
 | Larry Walker | Colorado Rockies | .179 | 7 | 39 | 43 |
-| Denard Span | Washington Nationals | .178 | 8 | 45 | 46 |
 | Randy Arozarena | Tampa Bay Rays | .176 | 3 | 17 | 19 |
 | Gary Carter | Montreal Expos | .175 | 7 | 40 | 43 |
 | John Olerud | Seattle Mariners | .174 | 4 | 23 | 24 |
-| Wilson Ramos | Washington Nationals | .171 | 6 | 35 | 38 |
 | Troy Tulowitzki | Colorado Rockies | .171 | 7 | 41 | 42 |
 | Albert Belle | Cleveland Guardians | .167 | 6 | 36 | 44 |
 | Bobby Witt Jr. | Kansas City Royals | .167 | 6 | 36 | 39 |
-| Ryan Zimmerman | Washington Nationals | .167 | 6 | 36 | 42 |
 | Pete Alonso | New York Mets | .167 | 5 | 30 | 32 |
 | Jim Edmonds | St. Louis Cardinals | .167 | 4 | 24 | 31 |
 | Darrell Porter | Kansas City Royals | .167 | 2 | 12 | 14 |
@@ -313,6 +310,7 @@ At least 10 plate appearances.
 | Gary Sheffield | Miami Marlins | .154 | 6 | 39 | 42 |
 | Brandon Lowe | Tampa Bay Rays | .150 | 6 | 40 | 46 |
 | Dwight Evans | Boston Red Sox | .150 | 6 | 40 | 45 |
+| Art Fletcher | San Francisco Giants | .147 | 5 | 34 | 35 |
 | Carlton Fisk | Boston Red Sox | .147 | 5 | 34 | 40 |
 | Evan Longoria | Tampa Bay Rays | .146 | 6 | 41 | 46 |
 | Carlos Gómez | Milwaukee Brewers | .143 | 2 | 14 | 16 |
@@ -321,7 +319,9 @@ At least 10 plate appearances.
 | Ben Zobrist | Tampa Bay Rays | .136 | 6 | 44 | 50 |
 | Gil Hodges | Los Angeles Dodgers | .136 | 3 | 22 | 24 |
 | Adrian Gonzalez | San Diego Padres | .135 | 5 | 37 | 46 |
+| Ryan Zimmerman | Washington Nationals | .135 | 5 | 37 | 42 |
 | Trevor Story | Colorado Rockies | .133 | 2 | 15 | 16 |
+| Denard Span | Washington Nationals | .130 | 6 | 46 | 47 |
 | Gabriel Moreno | Arizona Diamondbacks | .129 | 4 | 31 | 39 |
 | Jim Thome | Cleveland Guardians | .122 | 6 | 49 | 54 |
 | Carl Crawford | Tampa Bay Rays | .121 | 4 | 33 | 33 |
@@ -352,11 +352,11 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | --- | --- | --- | --- |
 | Roberto Clemente | Pittsburgh Pirates | .594 | 32 |
 | Jay Buhner | Seattle Mariners | .565 | 23 |
+| Barry Bonds | San Francisco Giants | .526 | 38 |
 | Ted Williams | Boston Red Sox | .520 | 50 |
 | Nomar Garciaparra | Boston Red Sox | .514 | 42 |
 | Ichiro Suzuki | Seattle Mariners | .500 | 36 |
 | Tris Speaker | Cleveland Guardians | .500 | 33 |
-| Barry Bonds | San Francisco Giants | .500 | 38 |
 | Luke Appling | Chicago White Sox | .487 | 39 |
 | Eddie Collins | Chicago White Sox | .486 | 43 |
 | Tony Oliva | Minnesota Twins | .486 | 35 |
@@ -364,7 +364,6 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Frank Thomas | Chicago White Sox | .476 | 42 |
 | Aaron Judge | New York Yankees | .467 | 45 |
 | Alex Rodriguez | Seattle Mariners | .462 | 40 |
-| Mel Ott | San Francisco Giants | .462 | 39 |
 | Elmer Valo | Philadelphia Athletics | .462 | 14 |
 | Derek Jeter | New York Yankees | .458 | 49 |
 | Lou Gehrig | New York Yankees | .458 | 48 |
@@ -382,7 +381,6 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Rickey Henderson | Oakland Athletics | .436 | 56 |
 | Barry Larkin | Cincinnati Reds | .435 | 46 |
 | Ted Kluszewski | Cincinnati Reds | .435 | 23 |
-| Juan Soto | Washington Nationals | .432 | 44 |
 | Bob Johnson | Philadelphia Athletics | .431 | 51 |
 | Cal Ripken Jr. | Baltimore Orioles | .429 | 42 |
 | Sam Crawford | Detroit Tigers | .429 | 21 |
@@ -403,8 +401,10 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Mickey Mantle | New York Yankees | .413 | 48 |
 | Carlos Beltrán | Kansas City Royals | .412 | 17 |
 | Roberto Alomar | Toronto Blue Jays | .411 | 57 |
+| Mel Ott | San Francisco Giants | .410 | 39 |
 | Nick Johnson | Washington Nationals | .410 | 40 |
 | Dale Murphy | Atlanta Braves | .409 | 44 |
+| Juan Soto | Washington Nationals | .409 | 44 |
 | Jesse Barfield | Toronto Blue Jays | .408 | 49 |
 | Steve Finley | San Diego Padres | .404 | 47 |
 | Geoff Jenkins | Milwaukee Brewers | .400 | 51 |
@@ -500,6 +500,7 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Mike Schmidt | Philadelphia Phillies | .333 | 55 |
 | Jeff Kent | San Francisco Giants | .333 | 36 |
 | Hank Greenberg | Detroit Tigers | .333 | 51 |
+| Buster Posey | San Francisco Giants | .333 | 34 |
 | Ketel Marte | Arizona Diamondbacks | .333 | 42 |
 | Bret Boone | Seattle Mariners | .333 | 33 |
 | George Scott | Milwaukee Brewers | .333 | 24 |
@@ -514,7 +515,6 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Ozzie Albies | Atlanta Braves | .325 | 40 |
 | Harmon Killebrew | Minnesota Twins | .325 | 40 |
 | Robin Ventura | Chicago White Sox | .325 | 40 |
-| Willie McCovey | San Francisco Giants | .324 | 35 |
 | Gabby Hartnett | Chicago Cubs | .324 | 34 |
 | Pete Rose | Cincinnati Reds | .321 | 56 |
 | Pie Traynor | Pittsburgh Pirates | .320 | 26 |
@@ -529,11 +529,11 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Alex Bregman | Houston Astros | .316 | 38 |
 | Danny Tartabull | Kansas City Royals | .316 | 38 |
 | Reggie Jackson | Oakland Athletics | .315 | 54 |
+| Willie McCovey | San Francisco Giants | .314 | 35 |
 | Dave Winfield | San Diego Padres | .314 | 51 |
 | Manny Machado | San Diego Padres | .313 | 48 |
 | Bryce Harper | Philadelphia Phillies | .313 | 49 |
 | Frank White | Kansas City Royals | .313 | 33 |
-| Buster Posey | San Francisco Giants | .313 | 33 |
 | Ryan Braun | Milwaukee Brewers | .313 | 32 |
 | Alan Trammell | Detroit Tigers | .310 | 45 |
 | Ozzie Smith | St. Louis Cardinals | .310 | 42 |
@@ -548,7 +548,6 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Fred McGriff | Toronto Blue Jays | .308 | 13 |
 | Mike Sweeney | Kansas City Royals | .308 | 26 |
 | Dustin Pedroia | Boston Red Sox | .306 | 49 |
-| Daniel Murphy | Washington Nationals | .306 | 40 |
 | Sal Bando | Oakland Athletics | .306 | 37 |
 | Yorvit Torrealba | Colorado Rockies | .304 | 23 |
 | Willie Randolph | New York Yankees | .303 | 33 |
@@ -557,8 +556,8 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Albert Belle | Cleveland Guardians | .302 | 44 |
 | Wally Joyner | Los Angeles Angels | .300 | 60 |
 | David Ortiz | Boston Red Sox | .300 | 50 |
-| Will Clark | San Francisco Giants | .300 | 40 |
 | Alex Gordon | Kansas City Royals | .300 | 30 |
+| Daniel Murphy | Washington Nationals | .297 | 40 |
 | William Contreras | Milwaukee Brewers | .295 | 44 |
 | Nolan Arenado | Colorado Rockies | .295 | 44 |
 | Bryce Harper | Washington Nationals | .295 | 44 |
@@ -580,7 +579,6 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Hank Aaron | Atlanta Braves | .286 | 42 |
 | Jose Vidro | Montreal Expos | .286 | 49 |
 | Andruw Jones | Atlanta Braves | .286 | 42 |
-| Ryan Zimmerman | Washington Nationals | .286 | 42 |
 | Kyle Seager | Seattle Mariners | .286 | 28 |
 | Moisés Alou | Houston Astros | .286 | 14 |
 | Darrell Porter | Kansas City Royals | .286 | 14 |
@@ -596,6 +594,7 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Ron Cey | Los Angeles Dodgers | .276 | 29 |
 | Luis Castillo | Miami Marlins | .275 | 43 |
 | Cleon Jones | New York Mets | .275 | 40 |
+| Will Clark | San Francisco Giants | .275 | 40 |
 | Paul Molitor | Milwaukee Brewers | .273 | 55 |
 | Christian Walker | Arizona Diamondbacks | .273 | 44 |
 | Bobby Grich | Los Angeles Angels | .271 | 55 |
@@ -611,10 +610,12 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Chase Utley | Philadelphia Phillies | .260 | 50 |
 | Jackie Robinson | Los Angeles Dodgers | .259 | 54 |
 | Cecil Cooper | Milwaukee Brewers | .259 | 27 |
+| Matt Williams | San Francisco Giants | .257 | 35 |
 | Cliff Floyd | Miami Marlins | .256 | 39 |
 | Larry Walker | Colorado Rockies | .256 | 43 |
 | Shohei Ohtani | Los Angeles Dodgers | .255 | 51 |
 | Brooks Robinson | Baltimore Orioles | .250 | 41 |
+| Wilson Ramos | Washington Nationals | .250 | 39 |
 | Francisco Lindor | New York Mets | .250 | 48 |
 | Carlos Gómez | Milwaukee Brewers | .250 | 16 |
 | Dwight Evans | Boston Red Sox | .244 | 45 |
@@ -623,10 +624,10 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Ben Zobrist | Tampa Bay Rays | .240 | 50 |
 | David Wright | New York Mets | .239 | 46 |
 | Evan Longoria | Tampa Bay Rays | .239 | 46 |
+| Ryan Zimmerman | Washington Nationals | .238 | 42 |
 | Joe Mauer | Minnesota Twins | .237 | 38 |
 | George Foster | Cincinnati Reds | .237 | 38 |
 | J.T. Realmuto | Miami Marlins | .235 | 34 |
-| Matt Williams | San Francisco Giants | .235 | 34 |
 | Cal Raleigh | Seattle Mariners | .235 | 34 |
 | Eric Chavez | Oakland Athletics | .235 | 17 |
 | Corbin Carroll | Arizona Diamondbacks | .234 | 47 |
@@ -650,7 +651,6 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Gabriel Moreno | Arizona Diamondbacks | .206 | 39 |
 | Jim Thome | Cleveland Guardians | .204 | 54 |
 | Andres Galarraga | Colorado Rockies | .200 | 25 |
-| Denard Span | Washington Nationals | .196 | 46 |
 | Eddie Mathews | Atlanta Braves | .196 | 46 |
 | Orlando Cabrera | Montreal Expos | .195 | 42 |
 | Pee Wee Reese | Los Angeles Dodgers | .190 | 43 |
@@ -658,12 +658,12 @@ At least 10 plate appearances. (H + BB + HBP) / (AB + BB + HBP + SF).
 | Geraldo Perdomo | Arizona Diamondbacks | .189 | 37 |
 | Jim Edmonds | Los Angeles Angels | .188 | 16 |
 | Trevor Story | Colorado Rockies | .188 | 16 |
-| Art Fletcher | San Francisco Giants | .182 | 34 |
-| Wilson Ramos | Washington Nationals | .171 | 38 |
 | Carlton Fisk | Boston Red Sox | .171 | 40 |
 | José Cruz | Houston Astros | .167 | 24 |
 | Enos Slaughter | St. Louis Cardinals | .154 | 28 |
+| Denard Span | Washington Nationals | .149 | 47 |
 | Kevin Kiermaier | Tampa Bay Rays | .148 | 29 |
+| Art Fletcher | San Francisco Giants | .147 | 35 |
 | Max Muncy | Los Angeles Dodgers | .133 | 15 |
 | Carl Crawford | Tampa Bay Rays | .121 | 33 |
 | Ferris Fain | Philadelphia Athletics | .120 | 25 |
@@ -686,10 +686,10 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | B.J. Upton | Tampa Bay Rays | .864 | 19 | 22 |
 | Honus Wagner | Pittsburgh Pirates | .850 | 34 | 40 |
 | Babe Ruth | New York Yankees | .846 | 33 | 39 |
+| Barry Bonds | San Francisco Giants | .815 | 22 | 27 |
 | Alex Rodriguez | Seattle Mariners | .800 | 28 | 35 |
 | Mickey Cochrane | Philadelphia Athletics | .795 | 35 | 44 |
 | Roy Campanella | Los Angeles Dodgers | .793 | 23 | 29 |
-| Barry Bonds | San Francisco Giants | .786 | 22 | 28 |
 | Jimmie Foxx | Boston Red Sox | .762 | 32 | 42 |
 | Frank Howard | Texas Rangers | .736 | 39 | 53 |
 | Steve Garvey | Los Angeles Dodgers | .727 | 16 | 22 |
@@ -697,12 +697,12 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Salvador Pérez | Kansas City Royals | .714 | 15 | 21 |
 | Eddie Collins | Chicago White Sox | .700 | 21 | 30 |
 | Carlos Correa | Houston Astros | .694 | 25 | 36 |
+| Willie Mays | San Francisco Giants | .692 | 27 | 39 |
 | Rogers Hornsby | St. Louis Cardinals | .688 | 22 | 32 |
 | Mickey Mantle | New York Yankees | .684 | 26 | 38 |
 | Edgar Martínez | Seattle Mariners | .677 | 21 | 31 |
 | Josh Donaldson | Toronto Blue Jays | .667 | 32 | 48 |
 | Ron Santo | Chicago Cubs | .658 | 25 | 38 |
-| Mel Ott | San Francisco Giants | .657 | 23 | 35 |
 | Geoff Jenkins | Milwaukee Brewers | .653 | 32 | 49 |
 | Ken Caminiti | San Diego Padres | .652 | 30 | 46 |
 | Freddie Freeman | Atlanta Braves | .650 | 26 | 40 |
@@ -711,9 +711,9 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Bob Johnson | Philadelphia Athletics | .643 | 27 | 42 |
 | Kirby Puckett | Minnesota Twins | .641 | 25 | 39 |
 | Tommy Leach | Pittsburgh Pirates | .625 | 10 | 16 |
-| Willie Mays | San Francisco Giants | .615 | 24 | 39 |
 | Jimmy Rollins | Philadelphia Phillies | .614 | 27 | 44 |
 | Cal Ripken Jr. | Baltimore Orioles | .611 | 22 | 36 |
+| Mel Ott | San Francisco Giants | .611 | 22 | 36 |
 | Paul Blair | Baltimore Orioles | .611 | 22 | 36 |
 | Eric Davis | Cincinnati Reds | .610 | 25 | 41 |
 | Frank Thomas | Chicago White Sox | .606 | 20 | 33 |
@@ -742,7 +742,6 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Rafael Palmeiro | Texas Rangers | .560 | 28 | 50 |
 | Joe Medwick | St. Louis Cardinals | .559 | 19 | 34 |
 | Brice Turang | Milwaukee Brewers | .558 | 24 | 43 |
-| Juan Soto | Washington Nationals | .556 | 20 | 36 |
 | Shohei Ohtani | Los Angeles Angels | .554 | 31 | 56 |
 | Al Simmons | Philadelphia Athletics | .553 | 26 | 47 |
 | Corey Seager | Texas Rangers | .541 | 20 | 37 |
@@ -756,6 +755,7 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Ken Griffey Jr. | Seattle Mariners | .529 | 18 | 34 |
 | Boog Powell | Baltimore Orioles | .528 | 19 | 36 |
 | George Brett | Kansas City Royals | .528 | 19 | 36 |
+| Juan Soto | Washington Nationals | .528 | 19 | 36 |
 | Zack Wheat | Los Angeles Dodgers | .526 | 20 | 38 |
 | Bryce Harper | Philadelphia Phillies | .524 | 22 | 42 |
 | Home Run Baker | Philadelphia Athletics | .524 | 22 | 42 |
@@ -765,7 +765,6 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Josh Hamilton | Texas Rangers | .518 | 29 | 56 |
 | César Cedeño | Houston Astros | .515 | 17 | 33 |
 | Luke Appling | Chicago White Sox | .515 | 17 | 33 |
-| Willie McCovey | San Francisco Giants | .515 | 17 | 33 |
 | Danny Tartabull | Kansas City Royals | .514 | 18 | 35 |
 | George Kell | Detroit Tigers | .512 | 21 | 41 |
 | Mark Loretta | San Diego Padres | .512 | 22 | 43 |
@@ -776,8 +775,8 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Carlos Beltran | New York Mets | .500 | 21 | 42 |
 | Shoeless Joe Jackson | Cleveland Guardians | .500 | 21 | 42 |
 | Matt Williams | Arizona Diamondbacks | .500 | 19 | 38 |
-| Will Clark | San Francisco Giants | .500 | 18 | 36 |
 | Albert Pujols | St. Louis Cardinals | .500 | 17 | 34 |
+| Willie McCovey | San Francisco Giants | .500 | 17 | 34 |
 | Yogi Berra | New York Yankees | .500 | 16 | 32 |
 | Joe Cronin | Minnesota Twins | .500 | 15 | 30 |
 | Tony Oliva | Minnesota Twins | .500 | 15 | 30 |
@@ -809,6 +808,7 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Nick Johnson | Washington Nationals | .471 | 16 | 34 |
 | Eric Chavez | Oakland Athletics | .471 | 8 | 17 |
 | Jeff Bagwell | Houston Astros | .469 | 15 | 32 |
+| Matt Williams | San Francisco Giants | .469 | 15 | 32 |
 | Lou Boudreau | Cleveland Guardians | .465 | 20 | 43 |
 | Alex Gordon | Kansas City Royals | .464 | 13 | 28 |
 | Fred McGriff | Toronto Blue Jays | .462 | 6 | 13 |
@@ -825,9 +825,9 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Carlos Pena | Tampa Bay Rays | .442 | 19 | 43 |
 | Manny Ramirez | Cleveland Guardians | .441 | 15 | 34 |
 | Mike Schmidt | Philadelphia Phillies | .438 | 21 | 48 |
-| Matt Williams | San Francisco Giants | .438 | 14 | 32 |
 | Mookie Betts | Los Angeles Dodgers | .435 | 20 | 46 |
 | Billy Williams | Chicago Cubs | .432 | 16 | 37 |
+| Bryce Harper | Washington Nationals | .432 | 16 | 37 |
 | Jeff Kent | San Francisco Giants | .429 | 15 | 35 |
 | Todd Helton | Colorado Rockies | .429 | 15 | 35 |
 | Adrian Beltre | Texas Rangers | .426 | 23 | 54 |
@@ -839,9 +839,11 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Andruw Jones | Atlanta Braves | .421 | 16 | 38 |
 | George Bell | Toronto Blue Jays | .421 | 16 | 38 |
 | Ty Cobb | Detroit Tigers | .420 | 21 | 50 |
+| Buster Posey | San Francisco Giants | .419 | 13 | 31 |
 | Cal Raleigh | Seattle Mariners | .419 | 13 | 31 |
 | Frank White | Kansas City Royals | .419 | 13 | 31 |
 | William Contreras | Milwaukee Brewers | .419 | 18 | 43 |
+| Will Clark | San Francisco Giants | .417 | 15 | 36 |
 | Elmer Valo | Philadelphia Athletics | .417 | 5 | 12 |
 | Miguel Cabrera | Detroit Tigers | .415 | 17 | 41 |
 | Tris Speaker | Boston Red Sox | .413 | 19 | 46 |
@@ -862,7 +864,6 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Wally Joyner | Los Angeles Angels | .382 | 21 | 55 |
 | Nap Lajoie | Cleveland Guardians | .380 | 19 | 50 |
 | Anthony Rendon | Washington Nationals | .378 | 14 | 37 |
-| Bryce Harper | Washington Nationals | .378 | 14 | 37 |
 | Christian Yelich | Miami Marlins | .378 | 14 | 37 |
 | Bob Boone | Los Angeles Angels | .378 | 17 | 45 |
 | Andre Dawson | Montreal Expos | .375 | 15 | 40 |
@@ -875,7 +876,6 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Frank Robinson | Baltimore Orioles | .368 | 14 | 38 |
 | Stan Musial | St. Louis Cardinals | .368 | 14 | 38 |
 | Bret Boone | Seattle Mariners | .367 | 11 | 30 |
-| Buster Posey | San Francisco Giants | .367 | 11 | 30 |
 | Mark Ellis | Oakland Athletics | .366 | 15 | 41 |
 | Troy Tulowitzki | Colorado Rockies | .366 | 15 | 41 |
 | Victor Martinez | Cleveland Guardians | .366 | 15 | 41 |
@@ -901,6 +901,7 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Jim Thome | Cleveland Guardians | .347 | 17 | 49 |
 | Steve Finley | Arizona Diamondbacks | .344 | 11 | 32 |
 | Sammy Sosa | Chicago Cubs | .343 | 12 | 35 |
+| Wilson Ramos | Washington Nationals | .343 | 12 | 35 |
 | Miguel Tejada | Oakland Athletics | .341 | 15 | 44 |
 | Troy Glaus | Los Angeles Angels | .333 | 18 | 54 |
 | Garret Anderson | Los Angeles Angels | .333 | 13 | 39 |
@@ -942,7 +943,7 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Tim Raines | Montreal Expos | .255 | 12 | 47 |
 | Chase Utley | Philadelphia Phillies | .250 | 12 | 48 |
 | Dwight Evans | Boston Red Sox | .250 | 10 | 40 |
-| Ryan Zimmerman | Washington Nationals | .250 | 9 | 36 |
+| Daniel Murphy | Washington Nationals | .250 | 8 | 32 |
 | Robin Ventura | Chicago White Sox | .250 | 8 | 32 |
 | Raúl Ibañez | Seattle Mariners | .250 | 4 | 16 |
 | Darrell Porter | Kansas City Royals | .250 | 3 | 12 |
@@ -958,17 +959,15 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Randy Arozarena | Tampa Bay Rays | .235 | 4 | 17 |
 | Paul Waner | Pittsburgh Pirates | .231 | 3 | 13 |
 | Mike Sweeney | Kansas City Royals | .227 | 5 | 22 |
-| Daniel Murphy | Washington Nationals | .226 | 7 | 31 |
 | Brandon Lowe | Tampa Bay Rays | .225 | 9 | 40 |
 | Ryan Braun | Milwaukee Brewers | .222 | 6 | 27 |
 | John Olerud | New York Mets | .222 | 2 | 9 |
 | Adrian Gonzalez | San Diego Padres | .216 | 8 | 37 |
+| Ryan Zimmerman | Washington Nationals | .216 | 8 | 37 |
 | Brady Anderson | Baltimore Orioles | .214 | 9 | 42 |
 | Carlton Fisk | Chicago White Sox | .212 | 7 | 33 |
 | Eddie Murray | Baltimore Orioles | .212 | 7 | 33 |
 | Paul Molitor | Milwaukee Brewers | .204 | 10 | 49 |
-| Denard Span | Washington Nationals | .200 | 9 | 45 |
-| Wilson Ramos | Washington Nationals | .200 | 7 | 35 |
 | Kyle Seager | Seattle Mariners | .200 | 5 | 25 |
 | John Mayberry | Kansas City Royals | .200 | 2 | 10 |
 | Sal Bando | Oakland Athletics | .194 | 6 | 31 |
@@ -976,7 +975,6 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Jim Edmonds | Los Angeles Angels | .188 | 3 | 16 |
 | Willie Randolph | New York Yankees | .185 | 5 | 27 |
 | Ben Zobrist | Tampa Bay Rays | .182 | 8 | 44 |
-| Art Fletcher | San Francisco Giants | .182 | 6 | 33 |
 | José Cruz | Houston Astros | .182 | 4 | 22 |
 | Harry Heilmann | Detroit Tigers | .182 | 2 | 11 |
 | Gary Sheffield | Miami Marlins | .179 | 7 | 39 |
@@ -984,10 +982,12 @@ At least 10 plate appearances. Total bases are H + 2B + 2×3B + 3×HR.
 | Ferris Fain | Philadelphia Athletics | .167 | 4 | 24 |
 | Elias Diaz | Colorado Rockies | .167 | 3 | 18 |
 | Geraldo Perdomo | Arizona Diamondbacks | .152 | 5 | 33 |
+| Art Fletcher | San Francisco Giants | .147 | 5 | 34 |
 | Carlos Gómez | Milwaukee Brewers | .143 | 2 | 14 |
 | Alvin Davis | Seattle Mariners | .143 | 1 | 7 |
 | Pedro Guerrero | Los Angeles Dodgers | .143 | 1 | 7 |
 | Gil Hodges | Los Angeles Dodgers | .136 | 3 | 22 |
+| Denard Span | Washington Nationals | .130 | 6 | 46 |
 | Gabriel Moreno | Arizona Diamondbacks | .129 | 4 | 31 |
 | Enos Slaughter | St. Louis Cardinals | .120 | 3 | 25 |
 | Keith Hernandez | New York Mets | .108 | 4 | 37 |
@@ -1052,11 +1052,11 @@ Top 10, ties included.
 | Dale Murphy | Atlanta Braves | 13 |
 | Barry Bonds | Pittsburgh Pirates | 12 |
 | Ken Caminiti | San Diego Padres | 12 |
-| Mel Ott | San Francisco Giants | 12 |
 | Eric Davis | Cincinnati Reds | 12 |
 | Jimmie Foxx | Boston Red Sox | 12 |
 | Cal Ripken Jr. | Baltimore Orioles | 12 |
 | Edgar Martínez | Seattle Mariners | 12 |
+| Bryce Harper | Washington Nationals | 12 |
 
 ### Runs scored
 
@@ -1085,16 +1085,16 @@ Top 10, ties included.
 | Ian Kinsler | Texas Rangers | 5 |
 | Shohei Ohtani | Los Angeles Angels | 4 |
 | Eddie Collins | Chicago White Sox | 4 |
+| Trea Turner | Washington Nationals | 4 |
 | Kenny Lofton | Cleveland Guardians | 4 |
 | Ty Cobb | Detroit Tigers | 3 |
 | Nap Lajoie | Cleveland Guardians | 3 |
 | Christian Yelich | Milwaukee Brewers | 3 |
 | Paul Goldschmidt | Arizona Diamondbacks | 3 |
 | Tim Raines | Montreal Expos | 3 |
-| Trea Turner | Washington Nationals | 3 |
+| Buster Posey | San Francisco Giants | 3 |
 | Hack Wilson | Chicago Cubs | 3 |
 | Paul Molitor | Milwaukee Brewers | 3 |
-| Buster Posey | San Francisco Giants | 3 |
 | Carlton Fisk | Chicago White Sox | 3 |
 | Enos Slaughter | St. Louis Cardinals | 3 |
 
@@ -1129,6 +1129,7 @@ At least 5 innings.
 | Jacob deGrom | New York Mets | 0.75 | 12.0 | 1 | 17 |
 | Sandy Koufax | Los Angeles Dodgers | 0.93 | 19.1 | 2 | 17 |
 | Jim Kaat | Minnesota Twins | 0.96 | 9.1 | 1 | 7 |
+| Hoyt Wilhelm | San Francisco Giants | 1.08 | 8.1 | 1 | 8 |
 | Curt Schilling | Philadelphia Phillies | 1.12 | 16.0 | 2 | 15 |
 | Devin Williams | Milwaukee Brewers | 1.17 | 7.2 | 1 | 11 |
 | Roy Face | Pittsburgh Pirates | 1.17 | 7.2 | 1 | 3 |
@@ -1144,7 +1145,6 @@ At least 5 innings.
 | Jeff Montgomery | Kansas City Royals | 1.50 | 6.0 | 1 | 3 |
 | Dave Stewart | Oakland Athletics | 1.54 | 11.2 | 2 | 7 |
 | Cy Young | Boston Red Sox | 1.56 | 17.1 | 3 | 12 |
-| Hoyt Wilhelm | San Francisco Giants | 1.59 | 5.2 | 1 | 3 |
 | Tim Lincecum | San Francisco Giants | 1.69 | 16.0 | 3 | 21 |
 | Joe Berry | Philadelphia Athletics | 1.69 | 10.2 | 2 | 8 |
 | Félix Bautista | Baltimore Orioles | 1.69 | 5.1 | 1 | 7 |
@@ -1177,6 +1177,7 @@ At least 5 innings.
 | Ron Guidry | New York Yankees | 2.81 | 16.0 | 5 | 14 |
 | Clayton Kershaw | Los Angeles Dodgers | 2.84 | 12.2 | 4 | 12 |
 | Félix Hernández | Seattle Mariners | 3.00 | 12.0 | 4 | 5 |
+| Jordan Zimmermann | Washington Nationals | 3.00 | 12.0 | 4 | 10 |
 | Pedro Martinez | Montreal Expos | 3.00 | 12.0 | 4 | 13 |
 | John Wetteland | Texas Rangers | 3.00 | 6.0 | 2 | 7 |
 | Lee Smith | Chicago Cubs | 3.00 | 6.0 | 2 | 7 |
@@ -1186,7 +1187,6 @@ At least 5 innings.
 | Nolan Ryan | Los Angeles Angels | 3.18 | 22.2 | 8 | 28 |
 | Lindy McDaniel | St. Louis Cardinals | 3.18 | 5.2 | 2 | 3 |
 | Steve Cishek | Miami Marlins | 3.18 | 5.2 | 2 | 4 |
-| Jordan Zimmermann | Washington Nationals | 3.21 | 14.0 | 5 | 10 |
 | Andrew Miller | Cleveland Guardians | 3.24 | 8.1 | 3 | 12 |
 | Pete Fairbanks | Tampa Bay Rays | 3.24 | 8.1 | 3 | 7 |
 | Corey Kluber | Cleveland Guardians | 3.27 | 11.0 | 4 | 11 |
@@ -1245,6 +1245,7 @@ At least 5 innings.
 | Mark Melancon | Pittsburgh Pirates | 4.70 | 7.2 | 4 | 8 |
 | Gaylord Perry | Texas Rangers | 4.72 | 13.1 | 7 | 11 |
 | Gio Gonzalez | Washington Nationals | 4.72 | 13.1 | 7 | 8 |
+| Drew Storen | Washington Nationals | 4.76 | 5.2 | 3 | 8 |
 | Tyler Clippard | Washington Nationals | 4.76 | 5.2 | 3 | 7 |
 | Fergie Jenkins | Texas Rangers | 4.80 | 15.0 | 8 | 13 |
 | Orel Hershiser | Los Angeles Dodgers | 4.80 | 15.0 | 8 | 14 |
@@ -1269,7 +1270,6 @@ At least 5 innings.
 | Mark Langston | Los Angeles Angels | 5.27 | 13.2 | 8 | 12 |
 | Hal Newhouser | Detroit Tigers | 5.31 | 20.1 | 12 | 21 |
 | Kid Nichols | Atlanta Braves | 5.40 | 15.0 | 9 | 15 |
-| Livan Hernandez | Washington Nationals | 5.40 | 15.0 | 9 | 6 |
 | Chris Carpenter | St. Louis Cardinals | 5.40 | 5.0 | 3 | 2 |
 | Clem Labine | Los Angeles Dodgers | 5.40 | 5.0 | 3 | 8 |
 | Josh Johnson | Miami Marlins | 5.51 | 16.1 | 10 | 18 |
@@ -1282,12 +1282,13 @@ At least 5 innings.
 | J.J. Putz | Seattle Mariners | 5.68 | 6.1 | 4 | 4 |
 | Jake McGee | Tampa Bay Rays | 5.68 | 6.1 | 4 | 5 |
 | Joakim Soria | Kansas City Royals | 5.68 | 6.1 | 4 | 7 |
-| Juan Marichal | San Francisco Giants | 5.74 | 15.2 | 10 | 17 |
 | Smoky Joe Wood | Boston Red Sox | 5.74 | 15.2 | 10 | 21 |
 | Andy Ashby | San Diego Padres | 5.79 | 14.0 | 9 | 10 |
+| Livan Hernandez | Washington Nationals | 5.82 | 17.0 | 11 | 7 |
 | Neftali Feliz | Texas Rangers | 5.87 | 7.2 | 5 | 9 |
 | Josh Beckett | Miami Marlins | 6.00 | 12.0 | 8 | 10 |
 | Al Leiter | New York Mets | 6.00 | 6.0 | 4 | 6 |
+| Juan Marichal | San Francisco Giants | 6.08 | 13.1 | 9 | 13 |
 | Johan Santana | Minnesota Twins | 6.17 | 11.2 | 8 | 9 |
 | Curt Schilling | Arizona Diamondbacks | 6.23 | 13.0 | 9 | 16 |
 | J.P. Howell | Tampa Bay Rays | 6.23 | 8.2 | 6 | 8 |
@@ -1369,6 +1370,7 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | --- | --- | --- | --- |
 | Jonathan Papelbon | Boston Red Sox | 0.41 | 7.1 |
 | Greg Holland | Kansas City Royals | 0.52 | 7.2 |
+| Drew Storen | Washington Nationals | 0.53 | 5.2 |
 | Corbin Burnes | Milwaukee Brewers | 0.56 | 10.2 |
 | Tim Burke | Montreal Expos | 0.56 | 5.1 |
 | Juan Cruz | Arizona Diamondbacks | 0.60 | 6.2 |
@@ -1400,6 +1402,7 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Devin Williams | Milwaukee Brewers | 0.91 | 7.2 |
 | Tanner Scott | Miami Marlins | 0.91 | 7.2 |
 | Whitey Ford | New York Yankees | 0.92 | 24.0 |
+| Jordan Zimmermann | Washington Nationals | 0.92 | 12.0 |
 | Carl Hubbell | San Francisco Giants | 0.92 | 13.0 |
 | Rafael Betancourt | Colorado Rockies | 0.92 | 8.2 |
 | Justin Verlander | Houston Astros | 0.93 | 9.2 |
@@ -1407,6 +1410,7 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Tommy Bridges | Detroit Tigers | 0.94 | 17.0 |
 | Clayton Kershaw | Los Angeles Dodgers | 0.95 | 12.2 |
 | Red Faber | Chicago White Sox | 0.95 | 13.2 |
+| Hoyt Wilhelm | San Francisco Giants | 0.96 | 8.1 |
 | Jim Kaat | Minnesota Twins | 0.96 | 9.1 |
 | Dazzy Vance | Los Angeles Dodgers | 0.97 | 20.2 |
 | Jack Morris | Detroit Tigers | 0.98 | 13.1 |
@@ -1425,7 +1429,6 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Mordecai Brown | Chicago Cubs | 1.04 | 15.1 |
 | Jim Palmer | Baltimore Orioles | 1.06 | 18.0 |
 | Adam Wainwright | St. Louis Cardinals | 1.06 | 11.1 |
-| Hoyt Wilhelm | San Francisco Giants | 1.06 | 5.2 |
 | Steve Cishek | Miami Marlins | 1.06 | 5.2 |
 | Zac Gallen | Arizona Diamondbacks | 1.07 | 15.0 |
 | Lefty Grove | Philadelphia Athletics | 1.07 | 24.1 |
@@ -1438,12 +1441,12 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Dave Stewart | Oakland Athletics | 1.11 | 11.2 |
 | Babe Adams | Pittsburgh Pirates | 1.12 | 17.0 |
 | Bert Blyleven | Minnesota Twins | 1.13 | 13.1 |
+| Juan Marichal | San Francisco Giants | 1.13 | 13.1 |
 | Jered Weaver | Los Angeles Angels | 1.13 | 10.2 |
 | Dave Smith | Houston Astros | 1.13 | 8.0 |
 | Gaylord Perry | San Francisco Giants | 1.13 | 8.0 |
 | Lefty Grove | Boston Red Sox | 1.13 | 5.1 |
 | Rollie Fingers | San Diego Padres | 1.13 | 5.1 |
-| Jordan Zimmermann | Washington Nationals | 1.14 | 14.0 |
 | Jhoulys Chacin | Colorado Rockies | 1.14 | 7.0 |
 | Mark Davis | San Diego Padres | 1.14 | 7.0 |
 | Tom Glavine | Atlanta Braves | 1.14 | 7.0 |
@@ -1460,7 +1463,6 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Warren Spahn | Atlanta Braves | 1.20 | 25.0 |
 | Chris Carpenter | St. Louis Cardinals | 1.20 | 5.0 |
 | J.R. Richard | Houston Astros | 1.20 | 5.0 |
-| Juan Marichal | San Francisco Giants | 1.21 | 15.2 |
 | Justin Verlander | Detroit Tigers | 1.22 | 10.2 |
 | Ed Whitson | San Diego Padres | 1.22 | 9.0 |
 | Bucky Walters | Cincinnati Reds | 1.23 | 14.2 |
@@ -1532,7 +1534,6 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Luke Gregerson | San Diego Padres | 1.50 | 6.2 |
 | Cole Hamels | Philadelphia Phillies | 1.50 | 6.0 |
 | Kid Nichols | Atlanta Braves | 1.53 | 15.0 |
-| Livan Hernandez | Washington Nationals | 1.53 | 15.0 |
 | Curt Schilling | Arizona Diamondbacks | 1.54 | 13.0 |
 | Mickey Lolich | Detroit Tigers | 1.54 | 13.0 |
 | Aurelio Lopez | Detroit Tigers | 1.57 | 7.2 |
@@ -1540,6 +1541,7 @@ At least 5 innings. (H + BB) / IP. Walks here are pitching BB. Hit batsmen are n
 | Brad Lidge | Philadelphia Phillies | 1.58 | 6.1 |
 | Josh Hader | Milwaukee Brewers | 1.58 | 12.0 |
 | Wilbur Cooper | Pittsburgh Pirates | 1.58 | 12.0 |
+| Livan Hernandez | Washington Nationals | 1.59 | 17.0 |
 | Chris Sale | Chicago White Sox | 1.59 | 11.1 |
 | Matt Belisle | Colorado Rockies | 1.59 | 5.2 |
 | Rollie Fingers | Oakland Athletics | 1.59 | 5.2 |
@@ -1706,7 +1708,6 @@ Top 10, ties included. A save is the S decision, and S can be null.
 | Andy McGaffigan | Montreal Expos | 2 | 6.2 |
 | Bobby Jenks | Chicago White Sox | 2 | 6.0 |
 | Robb Nen | San Francisco Giants | 2 | 4.0 |
-| Chad Cordero | Washington Nationals | 2 | 3.0 |
 
 ### Innings pitched
 
