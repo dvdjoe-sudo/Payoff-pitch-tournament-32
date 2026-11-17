@@ -6889,7 +6889,74 @@
     "SF": 0,
     "WSH": 2
    },
-   "final_grades": {},
+   "final_grades": {
+    "Dave Martinez": {
+     "team": "WSH",
+     "decisions": 3,
+     "paid_off": 2,
+     "backfired": 0,
+     "neutral": 1,
+     "by_type": {
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      }
+     }
+    },
+    "John McGraw": {
+     "team": "SF",
+     "decisions": 12,
+     "paid_off": 5,
+     "backfired": 6,
+     "neutral": 1,
+     "by_type": {
+      "Hit and run": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 3,
+       "neutral": 0
+      },
+      "Pinch hitter": {
+       "count": 2,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 5,
+       "paid_off": 2,
+       "backfired": 2,
+       "neutral": 1
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "SF|mathech01": {
      "engine_fatigued": false,
@@ -7497,7 +7564,50 @@
     "SF": 2,
     "WSH": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Dave Martinez": {
+     "team": "WSH",
+     "decisions": 6,
+     "paid_off": 1,
+     "backfired": 5,
+     "neutral": 0,
+     "by_type": {
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 4,
+       "paid_off": 1,
+       "backfired": 3,
+       "neutral": 0
+      }
+     }
+    },
+    "John McGraw": {
+     "team": "SF",
+     "decisions": 3,
+     "paid_off": 2,
+     "backfired": 0,
+     "neutral": 1,
+     "by_type": {
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "SF|hubbeca01": {
      "engine_fatigued": false,
@@ -8174,7 +8284,86 @@
     "SF": 0,
     "WSH": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "John McGraw": {
+     "team": "SF",
+     "decisions": 15,
+     "paid_off": 4,
+     "backfired": 6,
+     "neutral": 5,
+     "by_type": {
+      "Hit and run": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 1
+      },
+      "Left pitcher in": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pinch hitter": {
+       "count": 3,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 1
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Squeeze": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 6,
+       "paid_off": 1,
+       "backfired": 2,
+       "neutral": 3
+      }
+     }
+    },
+    "Dave Martinez": {
+     "team": "WSH",
+     "decisions": 5,
+     "paid_off": 1,
+     "backfired": 3,
+     "neutral": 1,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "SF|maricju01": {
      "engine_fatigued": true,
@@ -8789,7 +8978,74 @@
     "SF": 0,
     "WSH": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "John McGraw": {
+     "team": "SF",
+     "decisions": 10,
+     "paid_off": 3,
+     "backfired": 5,
+     "neutral": 2,
+     "by_type": {
+      "Hit and run": {
+       "count": 4,
+       "paid_off": 1,
+       "backfired": 3,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 4,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 2
+      }
+     }
+    },
+    "Dave Martinez": {
+     "team": "WSH",
+     "decisions": 10,
+     "paid_off": 5,
+     "backfired": 1,
+     "neutral": 4,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 4,
+       "paid_off": 3,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 4,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 3
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "SF|perryga01": {
      "engine_fatigued": true,
@@ -9388,7 +9644,68 @@
     "SF": 1,
     "WSH": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Dave Martinez": {
+     "team": "WSH",
+     "decisions": 8,
+     "paid_off": 2,
+     "backfired": 2,
+     "neutral": 4,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 4,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 2
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Steal": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 1
+      }
+     }
+    },
+    "John McGraw": {
+     "team": "SF",
+     "decisions": 9,
+     "paid_off": 3,
+     "backfired": 5,
+     "neutral": 1,
+     "by_type": {
+      "Hit and run": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 3,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 4,
+       "paid_off": 3,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "SF|linceti01": {
      "engine_fatigued": false,
@@ -9996,7 +10313,56 @@
     "BOS": 0,
     "TB": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Kevin Cash": {
+     "team": "TB",
+     "decisions": 5,
+     "paid_off": 3,
+     "backfired": 1,
+     "neutral": 1,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 3,
+       "paid_off": 2,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pinch hitter": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      }
+     }
+    },
+    "Terry Francona": {
+     "team": "BOS",
+     "decisions": 3,
+     "paid_off": 0,
+     "backfired": 3,
+     "neutral": 0,
+     "by_type": {
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "BOS|martipe02": {
      "engine_fatigued": false,
@@ -10646,7 +11012,68 @@
     "BOS": 0,
     "TB": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Kevin Cash": {
+     "team": "TB",
+     "decisions": 6,
+     "paid_off": 2,
+     "backfired": 2,
+     "neutral": 2,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 1
+      },
+      "Pinch hitter": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    },
+    "Terry Francona": {
+     "team": "BOS",
+     "decisions": 4,
+     "paid_off": 2,
+     "backfired": 2,
+     "neutral": 0,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "BOS|clemero02": {
      "engine_fatigued": false,
@@ -11267,7 +11694,68 @@
     "BOS": 0,
     "TB": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Terry Francona": {
+     "team": "BOS",
+     "decisions": 3,
+     "paid_off": 0,
+     "backfired": 3,
+     "neutral": 0,
+     "by_type": {
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    },
+    "Kevin Cash": {
+     "team": "TB",
+     "decisions": 7,
+     "paid_off": 4,
+     "backfired": 3,
+     "neutral": 0,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 4,
+       "paid_off": 4,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Pinch hitter": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {},
    "game_recap": "The Tampa Bay Rays beat the Boston Red Sox 1-0. The go-ahead run scored in the 9th inning. Carl Crawford led the Tampa Bay Rays offense with 2 hits and 0 RBI in 4 at-bats. Blake Snell earned the win, allowing 0 earned runs in 9.0 innings.",
    "series_recap": "After 3 games, the Boston Red Sox lead the series 2-1 over the Tampa Bay Rays.",
@@ -11888,7 +12376,80 @@
     "BOS": 0,
     "TB": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Terry Francona": {
+     "team": "BOS",
+     "decisions": 5,
+     "paid_off": 2,
+     "backfired": 2,
+     "neutral": 1,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 1
+      }
+     }
+    },
+    "Kevin Cash": {
+     "team": "TB",
+     "decisions": 12,
+     "paid_off": 4,
+     "backfired": 3,
+     "neutral": 5,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 4,
+       "paid_off": 2,
+       "backfired": 1,
+       "neutral": 1
+      },
+      "Pinch hitter": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Steal": {
+       "count": 4,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 2
+      }
+     }
+    }
+   },
    "fatigue_end_states": {},
    "game_recap": "The Tampa Bay Rays beat the Boston Red Sox 6-3. The go-ahead run scored in the 4th inning. Jason Bartlett led the Tampa Bay Rays offense with 3 hits and 3 RBI in 3 at-bats. Shane McClanahan earned the win, allowing 3 earned runs in 8.2 innings.",
    "series_recap": "After 4 games, the series between the Boston Red Sox and the Tampa Bay Rays is tied 2-2.",
@@ -12592,7 +13153,86 @@
     "TB": 0,
     "BOS": 1
    },
-   "final_grades": {},
+   "final_grades": {
+    "Kevin Cash": {
+     "team": "TB",
+     "decisions": 15,
+     "paid_off": 6,
+     "backfired": 6,
+     "neutral": 3,
+     "by_type": {
+      "Hit and run": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 6,
+       "paid_off": 2,
+       "backfired": 2,
+       "neutral": 2
+      },
+      "Pinch hitter": {
+       "count": 4,
+       "paid_off": 2,
+       "backfired": 1,
+       "neutral": 1
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    },
+    "Terry Francona": {
+     "team": "BOS",
+     "decisions": 9,
+     "paid_off": 4,
+     "backfired": 3,
+     "neutral": 2,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Sacrifice bunt": {
+       "count": 4,
+       "paid_off": 1,
+       "backfired": 2,
+       "neutral": 1
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {},
    "game_recap": "The Boston Red Sox beat the Tampa Bay Rays 6-5. Dustin Pedroia led the Boston Red Sox offense with 3 hits and 1 RBI in 5 at-bats. Jonathan Papelbon earned the win, allowing 0 earned runs in 2.2 innings.",
    "series_recap": "After 5 games, the Boston Red Sox lead the series 3-2 over the Tampa Bay Rays. The Boston Red Sox can close out the series in Game 6.",
@@ -13183,7 +13823,68 @@
     "BOS": 0,
     "TB": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Terry Francona": {
+     "team": "BOS",
+     "decisions": 5,
+     "paid_off": 2,
+     "backfired": 2,
+     "neutral": 1,
+     "by_type": {
+      "Hit and run": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 3,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    },
+    "Kevin Cash": {
+     "team": "TB",
+     "decisions": 7,
+     "paid_off": 4,
+     "backfired": 3,
+     "neutral": 0,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 3,
+       "paid_off": 3,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Pinch hitter": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {},
    "game_recap": "The Tampa Bay Rays beat the Boston Red Sox 3-1. The go-ahead run scored in the 3rd inning. Joey Wendle led the Tampa Bay Rays offense with 1 hits and 2 RBI in 4 at-bats. David Price earned the win, allowing 1 earned run in 8.0 innings.",
    "series_recap": "After 6 games, the series between the Boston Red Sox and the Tampa Bay Rays is tied 3-3.",
@@ -13804,7 +14505,62 @@
     "TB": 0,
     "BOS": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Kevin Cash": {
+     "team": "TB",
+     "decisions": 6,
+     "paid_off": 2,
+     "backfired": 3,
+     "neutral": 1,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 3,
+       "neutral": 0
+      },
+      "Pinch hitter": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 0
+      }
+     }
+    },
+    "Terry Francona": {
+     "team": "BOS",
+     "decisions": 5,
+     "paid_off": 3,
+     "backfired": 1,
+     "neutral": 1,
+     "by_type": {
+      "Hit and run": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    }
+   },
    "fatigue_end_states": {},
    "game_recap": "The Boston Red Sox beat the Tampa Bay Rays 8-1. The go-ahead run scored in the 3rd inning. Wade Boggs led the Boston Red Sox offense with 3 hits and 2 RBI in 4 at-bats. Roger Clemens earned the win, allowing 1 earned run in 8.2 innings.",
    "series_recap": "The Boston Red Sox won the series 4-3 over the Tampa Bay Rays.",
@@ -14406,7 +15162,56 @@
     "DET": 0,
     "ARI": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Bob Brenly": {
+     "team": "ARI",
+     "decisions": 7,
+     "paid_off": 3,
+     "backfired": 2,
+     "neutral": 2,
+     "by_type": {
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 4,
+       "paid_off": 1,
+       "backfired": 2,
+       "neutral": 1
+      },
+      "Steal": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    },
+    "Sparky Anderson": {
+     "team": "DET",
+     "decisions": 4,
+     "paid_off": 2,
+     "backfired": 2,
+     "neutral": 0,
+     "by_type": {
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "DET|newhoha01": {
      "engine_fatigued": false,
@@ -15098,7 +15903,80 @@
     "DET": 0,
     "ARI": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Bob Brenly": {
+     "team": "ARI",
+     "decisions": 18,
+     "paid_off": 8,
+     "backfired": 6,
+     "neutral": 4,
+     "by_type": {
+      "Hit and run": {
+       "count": 3,
+       "paid_off": 2,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 7,
+       "paid_off": 4,
+       "backfired": 2,
+       "neutral": 1
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Sacrifice bunt": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 3,
+       "neutral": 0
+      },
+      "Squeeze": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 2
+      }
+     }
+    },
+    "Sparky Anderson": {
+     "team": "DET",
+     "decisions": 6,
+     "paid_off": 2,
+     "backfired": 4,
+     "neutral": 0,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 3,
+       "paid_off": 1,
+       "backfired": 2,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "DET|verlaju01": {
      "engine_fatigued": false,
@@ -15764,7 +16642,68 @@
     "DET": 0,
     "ARI": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Sparky Anderson": {
+     "team": "DET",
+     "decisions": 6,
+     "paid_off": 2,
+     "backfired": 1,
+     "neutral": 3,
+     "by_type": {
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 4,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 2
+      }
+     }
+    },
+    "Bob Brenly": {
+     "team": "ARI",
+     "decisions": 8,
+     "paid_off": 3,
+     "backfired": 3,
+     "neutral": 2,
+     "by_type": {
+      "Hit and run": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Left pitcher in": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 1
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "DET|lolicmi01": {
      "engine_fatigued": false,
@@ -16430,7 +17369,50 @@
     "DET": 0,
     "ARI": 3
    },
-   "final_grades": {},
+   "final_grades": {
+    "Sparky Anderson": {
+     "team": "DET",
+     "decisions": 8,
+     "paid_off": 3,
+     "backfired": 4,
+     "neutral": 1,
+     "by_type": {
+      "Pitching change": {
+       "count": 3,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 3,
+       "neutral": 0
+      }
+     }
+    },
+    "Bob Brenly": {
+     "team": "ARI",
+     "decisions": 1,
+     "paid_off": 0,
+     "backfired": 1,
+     "neutral": 0,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "DET|bridgto01": {
      "engine_fatigued": false,
@@ -17047,7 +18029,56 @@
     "DET": 0,
     "ARI": 3
    },
-   "final_grades": {},
+   "final_grades": {
+    "Bob Brenly": {
+     "team": "ARI",
+     "decisions": 3,
+     "paid_off": 1,
+     "backfired": 1,
+     "neutral": 1,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    },
+    "Sparky Anderson": {
+     "team": "DET",
+     "decisions": 5,
+     "paid_off": 2,
+     "backfired": 1,
+     "neutral": 2,
+     "by_type": {
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 3,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 1
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "DET|morrija02": {
      "engine_fatigued": false,
@@ -18448,7 +19479,68 @@
     "STL": 0,
     "COL": 2
    },
-   "final_grades": {},
+   "final_grades": {
+    "Bud Black": {
+     "team": "COL",
+     "decisions": 9,
+     "paid_off": 5,
+     "backfired": 4,
+     "neutral": 0,
+     "by_type": {
+      "Hit and run": {
+       "count": 2,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 5,
+       "paid_off": 3,
+       "backfired": 2,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    },
+    "Tony La Russa": {
+     "team": "STL",
+     "decisions": 6,
+     "paid_off": 3,
+     "backfired": 1,
+     "neutral": 2,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 3,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 2
+      },
+      "Steal": {
+       "count": 2,
+       "paid_off": 2,
+       "backfired": 0,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "STL|gibsobo01": {
      "engine_fatigued": false,
@@ -19107,7 +20199,56 @@
     "STL": 0,
     "COL": 2
    },
-   "final_grades": {},
+   "final_grades": {
+    "Bud Black": {
+     "team": "COL",
+     "decisions": 6,
+     "paid_off": 2,
+     "backfired": 4,
+     "neutral": 0,
+     "by_type": {
+      "Left pitcher in": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 2,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    },
+    "Tony La Russa": {
+     "team": "STL",
+     "decisions": 3,
+     "paid_off": 0,
+     "backfired": 2,
+     "neutral": 1,
+     "by_type": {
+      "Sacrifice bunt": {
+       "count": 2,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 1
+      },
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "STL|deandi01": {
      "engine_fatigued": false,
@@ -19722,7 +20863,56 @@
     "STL": 0,
     "COL": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Tony La Russa": {
+     "team": "STL",
+     "decisions": 6,
+     "paid_off": 2,
+     "backfired": 3,
+     "neutral": 1,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Sacrifice bunt": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 3,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 1
+      }
+     }
+    },
+    "Bud Black": {
+     "team": "COL",
+     "decisions": 1,
+     "paid_off": 0,
+     "backfired": 1,
+     "neutral": 0,
+     "by_type": {
+      "Steal": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "STL|wainwad01": {
      "engine_fatigued": false,
@@ -20369,7 +21559,68 @@
     "STL": 2,
     "COL": 0
    },
-   "final_grades": {},
+   "final_grades": {
+    "Tony La Russa": {
+     "team": "STL",
+     "decisions": 7,
+     "paid_off": 3,
+     "backfired": 3,
+     "neutral": 1,
+     "by_type": {
+      "Hit and run": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 1,
+       "paid_off": 0,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      },
+      "Steal": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 1
+      }
+     }
+    },
+    "Bud Black": {
+     "team": "COL",
+     "decisions": 8,
+     "paid_off": 4,
+     "backfired": 4,
+     "neutral": 0,
+     "by_type": {
+      "Hit and run": {
+       "count": 1,
+       "paid_off": 1,
+       "backfired": 0,
+       "neutral": 0
+      },
+      "Left pitcher in": {
+       "count": 5,
+       "paid_off": 2,
+       "backfired": 3,
+       "neutral": 0
+      },
+      "Pitching change": {
+       "count": 2,
+       "paid_off": 1,
+       "backfired": 1,
+       "neutral": 0
+      }
+     }
+    }
+   },
    "fatigue_end_states": {
     "STL|brechha01": {
      "engine_fatigued": true,
