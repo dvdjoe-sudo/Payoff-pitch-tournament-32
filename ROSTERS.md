@@ -506,14 +506,14 @@ These names are not on the active roster.
 ### Lineup slots that have batted
 
 - Slot 1: Ryne Sandberg (`sandbry01`) in R1-06-G1 (same starter in 8 later games)
-- Slot 2: Anthony Rizzo (`rizzoan01`) in R1-06-G1; Anthony Rizzo (`rizzoan01`) in R1-06-G2; Anthony Rizzo (`rizzoan01`) in R1-06-G3; Anthony Rizzo (`rizzoan01`) in R1-06-G4; Mark Grace (`gracema01`) in R1-06-G5; Anthony Rizzo (`rizzoan01`) in W2-06-G1; Anthony Rizzo (`rizzoan01`) in W2-06-G2; Anthony Rizzo (`rizzoan01`) in W2-06-G3; Anthony Rizzo (`rizzoan01`) in W2-06-G4
+- Slot 2: Anthony Rizzo (`rizzoan01`) in R1-06-G1 (same starter in 8 later games)
 - Slot 3: Ron Santo (`santoro01`) in R1-06-G1 (same starter in 8 later games)
 - Slot 4: Sammy Sosa (`sosasa01`) in R1-06-G1 (same starter in 8 later games)
 - Slot 5: Billy Williams (`willibi01`) in R1-06-G1 (same starter in 8 later games)
 - Slot 6: Ernie Banks (`bankser01`) in R1-06-G1 (same starter in 8 later games)
 - Slot 7: Hack Wilson (`wilsoha01`) in R1-06-G1 (same starter in 8 later games)
 - Slot 8: Gabby Hartnett (`hartnga01`) in R1-06-G1 (same starter in 8 later games)
-- Slot 9: Pete Crow-Armstrong (`crowape01`) in R1-06-G1; Pete Crow-Armstrong (`crowape01`) in R1-06-G2; Pete Crow-Armstrong (`crowape01`) in R1-06-G3; Pete Crow-Armstrong (`crowape01`) in R1-06-G4; Andre Dawson (`dawsoan01`) in R1-06-G5; Pete Crow-Armstrong (`crowape01`) in W2-06-G1; Pete Crow-Armstrong (`crowape01`) in W2-06-G2; Pete Crow-Armstrong (`crowape01`) in W2-06-G3; Pete Crow-Armstrong (`crowape01`) in W2-06-G4
+- Slot 9: Pete Crow-Armstrong (`crowape01`) in R1-06-G1 (same starter in 8 later games)
 
 ### Substitutes who have batted
 
@@ -525,11 +525,11 @@ These names are not on the active roster.
 - Mordecai Brown (`brownmo01`) started R1-06-G2
 - Rick Reuschel (`reuscri01`) started R1-06-G3
 - Pete Alexander (`alexape01`) started R1-06-G4
-- Carlos Zambrano (`zambrca01`) started R1-06-G5
 - Fergie Jenkins (`jenkife01`) started W2-06-G1
 - Mordecai Brown (`brownmo01`) started W2-06-G2
 - Rick Reuschel (`reuscri01`) started W2-06-G3
 - Pete Alexander (`alexape01`) started W2-06-G4
+- Carlos Zambrano (`zambrca01`) started R1-06-G5
 
 ### Relievers who have appeared
 
@@ -538,7 +538,6 @@ These names are not on the active roster.
 - Pedro Strop (`stroppe01`), first seen in R1-06-G2
 - Sean Marshall (`marshse01`), first seen in R1-06-G2
 - Kerry Wood (`woodke02`), first seen in R1-06-G2
-- Mordecai Brown (`brownmo01`), first seen in R1-06-G5
 
 ## 7. Atlanta Braves (ATL)
 
@@ -2554,8 +2553,8 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1 (same starter in 10 later games)
 - Slot 3: Larry Walker (`walkela01`) in R1-06-G1 (same starter in 10 later games)
 - Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1 (same starter in 10 later games)
-- Slot 5: Gary Carter (`cartega01`) in R1-06-G1; Gary Carter (`cartega01`) in R1-06-G2; Gary Carter (`cartega01`) in R1-06-G3; Gary Carter (`cartega01`) in R1-06-G4; Andre Dawson (`dawsoan01`) in R1-06-G5; Gary Carter (`cartega01`) in L1-06-G1; Gary Carter (`cartega01`) in L1-06-G2; Gary Carter (`cartega01`) in L1-06-G3; Gary Carter (`cartega01`) in L1-06-G4; Gary Carter (`cartega01`) in L1-06-G5; Gary Carter (`cartega01`) in L1-06-G6
-- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1; Andre Dawson (`dawsoan01`) in R1-06-G2; Andre Dawson (`dawsoan01`) in R1-06-G3; Andre Dawson (`dawsoan01`) in R1-06-G4; Gary Carter (`cartega01`) in R1-06-G5; Andre Dawson (`dawsoan01`) in L1-06-G1; Andre Dawson (`dawsoan01`) in L1-06-G2; Andre Dawson (`dawsoan01`) in L1-06-G3; Andre Dawson (`dawsoan01`) in L1-06-G4; Andre Dawson (`dawsoan01`) in L1-06-G5; Andre Dawson (`dawsoan01`) in L1-06-G6
+- Slot 5: Gary Carter (`cartega01`) in R1-06-G1 (same starter in 10 later games)
+- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1 (same starter in 10 later games)
 - Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1 (same starter in 10 later games)
 - Slot 8: Tim Wallach (`wallati01`) in R1-06-G1 (same starter in 10 later games)
 - Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1 (same starter in 10 later games)
@@ -2570,13 +2569,13 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Pedro Martinez (`martipe02`) started R1-06-G2
 - Dennis Martinez (`martide01`) started R1-06-G3
 - Bryn Smith (`smithbr01`) started R1-06-G4
-- Javier Vazquez (`vazquja01`) started R1-06-G5
 - Steve Rogers (`rogerst01`) started L1-06-G1
 - Pedro Martinez (`martipe02`) started L1-06-G2
 - Dennis Martinez (`martide01`) started L1-06-G3
 - Bryn Smith (`smithbr01`) started L1-06-G4
 - Javier Vazquez (`vazquja01`) started L1-06-G5
 - Steve Rogers (`rogerst01`) started L1-06-G6
+- Javier Vazquez (`vazquja01`) started R1-06-G5
 
 ### Relievers who have appeared
 
