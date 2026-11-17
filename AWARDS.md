@@ -35,7 +35,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
 | Greg Maddux | Atlanta Braves | 35.6 | 20.0 | 3 | 15 | 3 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
-| Carl Hubbell | San Francisco Giants | 31.0 | 16.0 | 2 | 17 | 1 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
 | Dazzy Vance | Los Angeles Dodgers | 30.9 | 20.2 | 2 | 17 | 3 |
 | Tommy Bridges | Detroit Tigers | 29.5 | 17.0 | 2 | 16 | 1 |
@@ -45,6 +44,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
+| Carl Hubbell | San Francisco Giants | 25.1 | 13.0 | 2 | 9 | 0 |
 
 ## Reliever
 
@@ -59,7 +59,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
 | Lee Smith | Chicago Cubs | 26.8 | 3 | 6.0 | 7 | 2 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
-| Robb Nen | San Francisco Giants | 25.9 | 3 | 5.0 | 6 | 1 |
 | Craig Kimbrel | Atlanta Braves | 25.8 | 3 | 4.0 | 7 | 0 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
@@ -67,3 +66,4 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
 | Mark Melancon | Pittsburgh Pirates | 22.5 | 2 | 7.2 | 8 | 4 |
+| Bobby Jenks | Chicago White Sox | 22.4 | 2 | 6.0 | 1 | 0 |

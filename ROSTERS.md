@@ -196,8 +196,8 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 ### Relievers who have appeared
 
 - Hoyt Wilhelm (`wilheho01`), first seen in R1-02-G1
-- Robb Nen (`nenro01`), first seen in R1-02-G2
 - Sergio Romo (`romose01`), first seen in R1-02-G3
+- Robb Nen (`nenro01`), first seen in R1-02-G4
 - Rod Beck (`beckro01`), first seen in W2-02-G1
 - Gary Lavelle (`lavelga01`), first seen in W2-02-G1
 
@@ -2853,6 +2853,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 - Sean Doolittle (`doolise01`), first seen in R1-02-G1
 - Tyler Clippard (`clippty01`), first seen in R1-02-G1
+- Livan Hernandez (`hernali01`), first seen in R1-02-G2
 - Chad Cordero (`cordech01`), first seen in R1-02-G3
 - Drew Storen (`storedr01`), first seen in R1-02-G4
 - Jon Rauch (`rauchjo01`), first seen in L1-02-G2

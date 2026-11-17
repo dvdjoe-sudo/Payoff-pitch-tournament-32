@@ -17,6 +17,18 @@
    "recap": "San Francisco won the adopted replay of Game 1, 12-7, and the series result is unchanged: the Giants still take R1-02 four games to one. Washington jumped on Christy Mathewson for five runs in the top of the first, but the Giants answered steadily and then broke the game open late. Matt Williams was the player of the game, going 2 for 4 with a triple, a home run, 4 RBI, and 3 runs scored. The decisive play was Willie Mays's hit-and-run double in the bottom of the fifth. San Francisco's six runs in the bottom of the sixth were all unearned off Tyler Clippard after Buster Posey reached on Ryan Zimmerman's error to extend the inning. The bottom of the second run scored on Jeff Kent's groundout after Willie McCovey singled and Wilson Ramos's throwing error moved him along. Mathewson took the win despite the five-run first; Max Scherzer took the loss. Sean Doolittle stranded his one inherited runner for Washington and Hoyt Wilhelm stranded his one for San Francisco. There were no holds and no save."
   },
   {
+   "id": "R1-02-G2",
+   "date": "2026-11-16",
+   "away": "WSH",
+   "home": "SF",
+   "away_name": "Washington Nationals",
+   "home_name": "San Francisco Giants",
+   "away_runs": 0,
+   "home_runs": 6,
+   "winner": "SF",
+   "recap": "San Francisco won the adopted replay of Game 2, 6-0, and the series result is unchanged: the Giants still take R1-02 four games to one. Carl Hubbell and Hoyt Wilhelm combined on a seven-hit shutout: Hubbell worked five scoreless innings for the win and Wilhelm four more for the save, stranding both of his inherited runners. Barry Bonds was the player of the game, going 2 for 3 with a home run, 3 RBI, a run, a walk, and a stolen base. The decisive play was Mel Ott's single in the bottom of the third. San Francisco scored three in the 3rd: Ott's single scored Mays, a Strasburg wild pitch scored Clark during Bonds's plate appearance, and Bonds's single scored Ott. Bonds's two-run homer in the 5th and Buster Posey's homer in the 8th finished the scoring. Stephen Strasburg took the loss. The game was errorless, and Washington never scored."
+  },
+  {
    "id": "R1-06-G4",
    "date": "2026-11-16",
    "away": "CHC",
