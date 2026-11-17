@@ -177,8 +177,6 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Substitutes who have batted
 
-- Bob Brenly (`brenlbo01`), slot 8
-- Frankie Frisch (`friscfr01`), slot 9
 - Bob Brenly (`brenlbo01`), slot 7
 - Frankie Frisch (`friscfr01`), slot 8
 - Bobby Bonds (`bondsbo01`), slot 9
@@ -197,7 +195,8 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Relievers who have appeared
 
-- Robb Nen (`nenro01`), first seen in R1-02-G1
+- Hoyt Wilhelm (`wilheho01`), first seen in R1-02-G1
+- Robb Nen (`nenro01`), first seen in R1-02-G2
 - Sergio Romo (`romose01`), first seen in R1-02-G3
 - Rod Beck (`beckro01`), first seen in W2-02-G1
 - Gary Lavelle (`lavelga01`), first seen in W2-02-G1
@@ -2852,10 +2851,10 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Relievers who have appeared
 
-- Drew Storen (`storedr01`), first seen in R1-02-G1
+- Sean Doolittle (`doolise01`), first seen in R1-02-G1
+- Tyler Clippard (`clippty01`), first seen in R1-02-G1
 - Chad Cordero (`cordech01`), first seen in R1-02-G3
-- Tyler Clippard (`clippty01`), first seen in L1-02-G1
-- Sean Doolittle (`doolise01`), first seen in L1-02-G1
+- Drew Storen (`storedr01`), first seen in R1-02-G4
 - Jon Rauch (`rauchjo01`), first seen in L1-02-G2
 - Sean Burnett (`burnese01`), first seen in L1-02-G2
 - Stephen Strasburg (`strasst01`), first seen in L1-02-G5

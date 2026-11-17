@@ -5,6 +5,18 @@
  "end": "2026-11-22",
  "games": [
   {
+   "id": "R1-02-G1",
+   "date": "2026-11-16",
+   "away": "WSH",
+   "home": "SF",
+   "away_name": "Washington Nationals",
+   "home_name": "San Francisco Giants",
+   "away_runs": 7,
+   "home_runs": 12,
+   "winner": "SF",
+   "recap": "San Francisco won the adopted replay of Game 1, 12-7, and the series result is unchanged: the Giants still take R1-02 four games to one. Washington jumped on Christy Mathewson for five runs in the top of the first, but the Giants answered steadily and then broke the game open late. Matt Williams was the player of the game, going 2 for 4 with a triple, a home run, 4 RBI, and 3 runs scored. The decisive play was Willie Mays's hit-and-run double in the bottom of the fifth. San Francisco's six runs in the bottom of the sixth were all unearned off Tyler Clippard after Buster Posey reached on Ryan Zimmerman's error to extend the inning. The bottom of the second run scored on Jeff Kent's groundout after Willie McCovey singled and Wilson Ramos's throwing error moved him along. Mathewson took the win despite the five-run first; Max Scherzer took the loss. Sean Doolittle stranded his one inherited runner for Washington and Hoyt Wilhelm stranded his one for San Francisco. There were no holds and no save."
+  },
+  {
    "id": "R1-06-G4",
    "date": "2026-11-16",
    "away": "CHC",
@@ -369,13 +381,6 @@
     "ip": "8.2"
    },
    {
-    "game": "R1-02-G1",
-    "name": "Christy Mathewson",
-    "team": "SF",
-    "k": 14,
-    "ip": "8.0"
-   },
-   {
     "game": "R1-03-G2",
     "name": "Roger Clemens",
     "team": "BOS",
@@ -494,6 +499,12 @@
     "team": "NYY",
     "runs": 15,
     "opponent": "MIA"
+   },
+   {
+    "game": "R1-02-G1",
+    "team": "SF",
+    "runs": 12,
+    "opponent": "WSH"
    },
    {
     "game": "R1-04-G6",
