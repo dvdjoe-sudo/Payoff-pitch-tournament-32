@@ -390,15 +390,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Ozzie Smith (`smithoz01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 2: Stan Musial (`musiast01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 3: Rogers Hornsby (`hornsro01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 4: Albert Pujols (`pujolal01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 5: Jim Edmonds (`edmonji01`) in R1-05-G1; Jim Edmonds (`edmonji01`) in R1-05-G2; Lou Brock (`brocklo01`) in R1-05-G3; Lou Brock (`brocklo01`) in R1-05-G4; Jim Edmonds (`edmonji01`) in W2-05-G1; Jim Edmonds (`edmonji01`) in W2-05-G2; Jim Edmonds (`edmonji01`) in W2-05-G3; Jim Edmonds (`edmonji01`) in W2-05-G4; Jim Edmonds (`edmonji01`) in W2-05-G5; Jim Edmonds (`edmonji01`) in L2-01-G1
-- Slot 6: Joe Medwick (`medwijo01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 7: Enos Slaughter (`slaugen01`) in R1-05-G1; Enos Slaughter (`slaugen01`) in R1-05-G2; Enos Slaughter (`slaugen01`) in R1-05-G3; Enos Slaughter (`slaugen01`) in R1-05-G4; Enos Slaughter (`slaugen01`) in W2-05-G1; Enos Slaughter (`slaugen01`) in W2-05-G2; Enos Slaughter (`slaugen01`) in W2-05-G3; Mark McGwire (`mcgwima01`) in W2-05-G4; Mark McGwire (`mcgwima01`) in W2-05-G5; Mark McGwire (`mcgwima01`) in L2-01-G1
-- Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 9 later games)
-- Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 9 later games)
+- Slot 1: Ozzie Smith (`smithoz01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 2: Stan Musial (`musiast01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 3: Rogers Hornsby (`hornsro01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 4: Albert Pujols (`pujolal01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 5: Jim Edmonds (`edmonji01`) in R1-05-G1; Jim Edmonds (`edmonji01`) in R1-05-G2; Lou Brock (`brocklo01`) in R1-05-G3; Lou Brock (`brocklo01`) in R1-05-G4; Jim Edmonds (`edmonji01`) in W2-05-G1; Jim Edmonds (`edmonji01`) in W2-05-G2; Jim Edmonds (`edmonji01`) in W2-05-G3; Jim Edmonds (`edmonji01`) in W2-05-G4; Jim Edmonds (`edmonji01`) in W2-05-G5; Jim Edmonds (`edmonji01`) in L2-01-G1; Jim Edmonds (`edmonji01`) in L2-01-G2
+- Slot 6: Joe Medwick (`medwijo01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 7: Enos Slaughter (`slaugen01`) in R1-05-G1; Enos Slaughter (`slaugen01`) in R1-05-G2; Enos Slaughter (`slaugen01`) in R1-05-G3; Enos Slaughter (`slaugen01`) in R1-05-G4; Enos Slaughter (`slaugen01`) in W2-05-G1; Enos Slaughter (`slaugen01`) in W2-05-G2; Enos Slaughter (`slaugen01`) in W2-05-G3; Mark McGwire (`mcgwima01`) in W2-05-G4; Mark McGwire (`mcgwima01`) in W2-05-G5; Mark McGwire (`mcgwima01`) in L2-01-G1; Mark McGwire (`mcgwima01`) in L2-01-G2
+- Slot 8: Yadier Molina (`molinya01`) in R1-05-G1 (same starter in 10 later games)
+- Slot 9: Ken Boyer (`boyerke01`) in R1-05-G1 (same starter in 10 later games)
 
 ### Substitutes who have batted
 
@@ -417,6 +417,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Harry Brecheen (`brechha01`) started W2-05-G4
 - Chris Carpenter (`carpech01`) started W2-05-G5
 - Bob Gibson (`gibsobo01`) started L2-01-G1
+- Dizzy Dean (`deandi01`) started L2-01-G2
 
 ### Relievers who have appeared
 
@@ -2921,15 +2922,15 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 
 ### Lineup slots that have batted
 
-- Slot 1: Luis Castillo (`castilu01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 2: Christian Yelich (`yelicch01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 3: Gary Sheffield (`sheffga01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 4: Giancarlo Stanton (`stantmi03`) in R1-01-G1 (same starter in 10 later games)
-- Slot 5: Miguel Cabrera (`cabremi01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 6: Hanley Ramirez (`ramirha01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 7: Cliff Floyd (`floydcl01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 8: Jeff Conine (`coninje01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 9: J.T. Realmuto (`realmjt01`) in R1-01-G1 (same starter in 10 later games)
+- Slot 1: Luis Castillo (`castilu01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 2: Christian Yelich (`yelicch01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 3: Gary Sheffield (`sheffga01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 4: Giancarlo Stanton (`stantmi03`) in R1-01-G1 (same starter in 11 later games)
+- Slot 5: Miguel Cabrera (`cabremi01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 6: Hanley Ramirez (`ramirha01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 7: Cliff Floyd (`floydcl01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 8: Jeff Conine (`coninje01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 9: J.T. Realmuto (`realmjt01`) in R1-01-G1 (same starter in 11 later games)
 
 ### Substitutes who have batted
 
@@ -2949,6 +2950,7 @@ Owner-approved final Marlins bench completion (2026-10-27): Mike Lowell (`lowelm
 - Jose Fernandez (`fernajo02`) started L1-01-G5
 - Josh Johnson (`johnsjo09`) started L1-01-G6
 - Josh Johnson (`johnsjo09`) started L2-01-G1
+- Sandy Alcantara (`alcansa01`) started L2-01-G2
 
 ### Relievers who have appeared
 
