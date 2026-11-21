@@ -18,11 +18,11 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
+| Rogers Hornsby | St. Louis Cardinals | 57.0 | 30 | 12 | 10 | 3 |
 | Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 | Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
-| Jimmie Foxx | Boston Red Sox | 54.0 | 32 | 10 | 12 | 6 |
 
 ## Cy Young
 
@@ -65,5 +65,5 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
+| Jason Isringhausen | St. Louis Cardinals | 22.9 | 2 | 6.0 | 6 | 1 |
 | Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
-| Mark Melancon | Pittsburgh Pirates | 22.5 | 2 | 7.2 | 8 | 4 |
