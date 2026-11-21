@@ -12,13 +12,13 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
+| Rogers Hornsby | St. Louis Cardinals | 64.0 | 34 | 13 | 12 | 3 |
 | Dale Murphy | Atlanta Braves | 63.5 | 36 | 12 | 13 | 7 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
-| Rogers Hornsby | St. Louis Cardinals | 57.0 | 30 | 12 | 10 | 3 |
 | Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
@@ -58,6 +58,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
 | Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
 | Lee Smith | Chicago Cubs | 26.8 | 3 | 6.0 | 7 | 2 |
+| Ryan Helsley | St. Louis Cardinals | 26.7 | 2 | 10.0 | 3 | 3 |
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
 | Craig Kimbrel | Atlanta Braves | 25.8 | 3 | 4.0 | 7 | 0 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
@@ -66,4 +67,3 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
 | Jason Isringhausen | St. Louis Cardinals | 22.9 | 2 | 6.0 | 6 | 1 |
-| Mariano Rivera | New York Yankees | 22.7 | 3 | 4.0 | 3 | 1 |
