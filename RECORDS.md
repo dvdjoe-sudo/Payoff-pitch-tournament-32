@@ -63,3 +63,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Detroit Tigers scored 10 against Chicago White Sox in W2-04-G3.
 - Detroit Tigers scored 12 against Chicago White Sox in W2-04-G5.
 - Pittsburgh Pirates scored 10 against Cincinnati Reds in W2-08-G2.
+- St. Louis Cardinals scored 14 against Miami Marlins in L2-01-G1.

@@ -34,6 +34,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
 | Greg Maddux | Atlanta Braves | 35.6 | 20.0 | 3 | 15 | 3 |
+| Bob Gibson | St. Louis Cardinals | 33.5 | 24.1 | 2 | 19 | 4 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
 | Dazzy Vance | Los Angeles Dodgers | 30.9 | 20.2 | 2 | 17 | 3 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 | Carl Hubbell | San Francisco Giants | 25.1 | 13.0 | 2 | 9 | 0 |
-| Warren Spahn | Atlanta Braves | 23.9 | 25.0 | 2 | 15 | 10 |
 
 ## Reliever
 
