@@ -8,19 +8,19 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
+| Babe Ruth | New York Yankees | 86.5 | 48 | 17 | 18 | 7 |
 | Dale Murphy | Atlanta Braves | 82.0 | 47 | 14 | 17 | 8 |
-| Babe Ruth | New York Yankees | 72.5 | 40 | 15 | 14 | 6 |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Freddie Freeman | Atlanta Braves | 69.5 | 40 | 10 | 16 | 6 |
-| Lou Gehrig | New York Yankees | 67.0 | 35 | 13 | 15 | 5 |
+| Lou Gehrig | New York Yankees | 69.5 | 37 | 13 | 15 | 5 |
 | Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
+| Mickey Mantle | New York Yankees | 61.0 | 32 | 12 | 13 | 5 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Ozzie Smith | St. Louis Cardinals | 59.5 | 30 | 10 | 14 | 0 |
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
-| Mickey Mantle | New York Yankees | 58.0 | 31 | 12 | 11 | 5 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
 

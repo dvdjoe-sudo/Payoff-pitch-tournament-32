@@ -110,21 +110,22 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 
 ### Lineup slots that have batted
 
-- Slot 1: Derek Jeter (`jeterde01`) in R1-01-G1; Derek Jeter (`jeterde01`) in R1-01-G2; Derek Jeter (`jeterde01`) in R1-01-G3; Derek Jeter (`jeterde01`) in R1-01-G4; Derek Jeter (`jeterde01`) in W2-01-G1; Derek Jeter (`jeterde01`) in W2-01-G2; Derek Jeter (`jeterde01`) in W2-01-G3; Derek Jeter (`jeterde01`) in W2-01-G4; Derek Jeter (`jeterde01`) in W2-01-G5; Rickey Henderson (`henderi01`) in W2-01-G6; Derek Jeter (`jeterde01`) in W3-01-G1
-- Slot 2: Aaron Judge (`judgeaa01`) in R1-01-G1; Aaron Judge (`judgeaa01`) in R1-01-G2; Aaron Judge (`judgeaa01`) in R1-01-G3; Aaron Judge (`judgeaa01`) in R1-01-G4; Aaron Judge (`judgeaa01`) in W2-01-G1; Aaron Judge (`judgeaa01`) in W2-01-G2; Aaron Judge (`judgeaa01`) in W2-01-G3; Aaron Judge (`judgeaa01`) in W2-01-G4; Aaron Judge (`judgeaa01`) in W2-01-G5; Derek Jeter (`jeterde01`) in W2-01-G6; Aaron Judge (`judgeaa01`) in W3-01-G1
-- Slot 3: Babe Ruth (`ruthba01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 4: Lou Gehrig (`gehrilo01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 5: Mickey Mantle (`mantlmi01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 6: Joe DiMaggio (`dimagjo01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 7: Alex Rodriguez (`rodrial01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 8: Yogi Berra (`berrayo01`) in R1-01-G1 (same starter in 10 later games)
-- Slot 9: Willie Randolph (`randowi01`) in R1-01-G1; Willie Randolph (`randowi01`) in R1-01-G2; Willie Randolph (`randowi01`) in R1-01-G3; Willie Randolph (`randowi01`) in R1-01-G4; Tony Lazzeri (`lazzeto01`) in W2-01-G1; Tony Lazzeri (`lazzeto01`) in W2-01-G2; Willie Randolph (`randowi01`) in W2-01-G3; Willie Randolph (`randowi01`) in W2-01-G4; Willie Randolph (`randowi01`) in W2-01-G5; Willie Randolph (`randowi01`) in W2-01-G6; Willie Randolph (`randowi01`) in W3-01-G1
+- Slot 1: Derek Jeter (`jeterde01`) in R1-01-G1; Derek Jeter (`jeterde01`) in R1-01-G2; Derek Jeter (`jeterde01`) in R1-01-G3; Derek Jeter (`jeterde01`) in R1-01-G4; Derek Jeter (`jeterde01`) in W2-01-G1; Derek Jeter (`jeterde01`) in W2-01-G2; Derek Jeter (`jeterde01`) in W2-01-G3; Derek Jeter (`jeterde01`) in W2-01-G4; Derek Jeter (`jeterde01`) in W2-01-G5; Rickey Henderson (`henderi01`) in W2-01-G6; Derek Jeter (`jeterde01`) in W3-01-G1; Derek Jeter (`jeterde01`) in W3-01-G2
+- Slot 2: Aaron Judge (`judgeaa01`) in R1-01-G1; Aaron Judge (`judgeaa01`) in R1-01-G2; Aaron Judge (`judgeaa01`) in R1-01-G3; Aaron Judge (`judgeaa01`) in R1-01-G4; Aaron Judge (`judgeaa01`) in W2-01-G1; Aaron Judge (`judgeaa01`) in W2-01-G2; Aaron Judge (`judgeaa01`) in W2-01-G3; Aaron Judge (`judgeaa01`) in W2-01-G4; Aaron Judge (`judgeaa01`) in W2-01-G5; Derek Jeter (`jeterde01`) in W2-01-G6; Aaron Judge (`judgeaa01`) in W3-01-G1; Aaron Judge (`judgeaa01`) in W3-01-G2
+- Slot 3: Babe Ruth (`ruthba01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 4: Lou Gehrig (`gehrilo01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 5: Mickey Mantle (`mantlmi01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 6: Joe DiMaggio (`dimagjo01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 7: Alex Rodriguez (`rodrial01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 8: Yogi Berra (`berrayo01`) in R1-01-G1 (same starter in 11 later games)
+- Slot 9: Willie Randolph (`randowi01`) in R1-01-G1; Willie Randolph (`randowi01`) in R1-01-G2; Willie Randolph (`randowi01`) in R1-01-G3; Willie Randolph (`randowi01`) in R1-01-G4; Tony Lazzeri (`lazzeto01`) in W2-01-G1; Tony Lazzeri (`lazzeto01`) in W2-01-G2; Willie Randolph (`randowi01`) in W2-01-G3; Willie Randolph (`randowi01`) in W2-01-G4; Willie Randolph (`randowi01`) in W2-01-G5; Willie Randolph (`randowi01`) in W2-01-G6; Willie Randolph (`randowi01`) in W3-01-G1; Tony Lazzeri (`lazzeto01`) in W3-01-G2
 
 ### Substitutes who have batted
 
 - Bernie Williams (`willibe02`), slot 6
 - Willie Randolph (`randowi01`), slot 9
 - Bernie Williams (`willibe02`), slot 10
+- Willie Randolph (`randowi01`), slot 10
 
 ### Starts, in the order the games were played
 
@@ -139,6 +140,7 @@ Owner-approved final Yankees bench completion (2026-10-27): Rickey Henderson (`h
 - Andy Pettitte (`pettian01`) started W2-01-G5
 - Whitey Ford (`fordwh01`) started W2-01-G6
 - Whitey Ford (`fordwh01`) started W3-01-G1
+- Red Ruffing (`ruffire01`) started W3-01-G2
 
 ### Relievers who have appeared
 
@@ -1208,15 +1210,15 @@ These names are not on the active roster.
 
 ### Lineup slots that have batted
 
-- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3; Tris Speaker (`speaktr01`) in R1-13-G4; Tris Speaker (`speaktr01`) in R1-13-G5; Tris Speaker (`speaktr01`) in R1-13-G6; Tris Speaker (`speaktr01`) in R1-13-G7; Kenny Lofton (`loftoke01`) in W2-05-G1; Kenny Lofton (`loftoke01`) in W2-05-G2; Kenny Lofton (`loftoke01`) in W2-05-G3; Kenny Lofton (`loftoke01`) in W2-05-G4; Kenny Lofton (`loftoke01`) in W2-05-G5; Kenny Lofton (`loftoke01`) in W3-01-G1
-- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 12 later games)
-- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 6: Albert Belle (`belleal01`) in R1-13-G1; Albert Belle (`belleal01`) in R1-13-G2; Albert Belle (`belleal01`) in R1-13-G3; Albert Belle (`belleal01`) in R1-13-G4; Albert Belle (`belleal01`) in R1-13-G5; Kenny Lofton (`loftoke01`) in R1-13-G6; Kenny Lofton (`loftoke01`) in R1-13-G7; Albert Belle (`belleal01`) in W2-05-G1; Albert Belle (`belleal01`) in W2-05-G2; Albert Belle (`belleal01`) in W2-05-G3; Albert Belle (`belleal01`) in W2-05-G4; Albert Belle (`belleal01`) in W2-05-G5; Albert Belle (`belleal01`) in W3-01-G1
-- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 12 later games)
-- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 12 later games)
+- Slot 1: Kenny Lofton (`loftoke01`) in R1-13-G1; Tris Speaker (`speaktr01`) in R1-13-G2; Tris Speaker (`speaktr01`) in R1-13-G3; Tris Speaker (`speaktr01`) in R1-13-G4; Tris Speaker (`speaktr01`) in R1-13-G5; Tris Speaker (`speaktr01`) in R1-13-G6; Tris Speaker (`speaktr01`) in R1-13-G7; Kenny Lofton (`loftoke01`) in W2-05-G1; Kenny Lofton (`loftoke01`) in W2-05-G2; Kenny Lofton (`loftoke01`) in W2-05-G3; Kenny Lofton (`loftoke01`) in W2-05-G4; Kenny Lofton (`loftoke01`) in W2-05-G5; Kenny Lofton (`loftoke01`) in W3-01-G1; Tris Speaker (`speaktr01`) in W3-01-G2
+- Slot 2: Nap Lajoie (`lajoina01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 3: Jim Thome (`thomeji01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 4: Manny Ramirez (`ramirma02`) in R1-13-G1 (same starter in 13 later games)
+- Slot 5: Shoeless Joe Jackson (`jacksjo01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 6: Albert Belle (`belleal01`) in R1-13-G1; Albert Belle (`belleal01`) in R1-13-G2; Albert Belle (`belleal01`) in R1-13-G3; Albert Belle (`belleal01`) in R1-13-G4; Albert Belle (`belleal01`) in R1-13-G5; Kenny Lofton (`loftoke01`) in R1-13-G6; Kenny Lofton (`loftoke01`) in R1-13-G7; Albert Belle (`belleal01`) in W2-05-G1; Albert Belle (`belleal01`) in W2-05-G2; Albert Belle (`belleal01`) in W2-05-G3; Albert Belle (`belleal01`) in W2-05-G4; Albert Belle (`belleal01`) in W2-05-G5; Albert Belle (`belleal01`) in W3-01-G1; Albert Belle (`belleal01`) in W3-01-G2
+- Slot 7: José Ramírez (`ramirjo01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 8: Lou Boudreau (`boudrlo01`) in R1-13-G1 (same starter in 13 later games)
+- Slot 9: Victor Martinez (`martivi01`) in R1-13-G1 (same starter in 13 later games)
 
 ### Substitutes who have batted
 
@@ -1240,6 +1242,7 @@ These names are not on the active roster.
 - Corey Kluber (`klubeco01`) started W2-05-G4
 - Sam McDowell (`mcdowsa01`) started W2-05-G5
 - Bob Feller (`fellebo01`) started W3-01-G1
+- Stan Coveleski (`covelst01`) started W3-01-G2
 
 ### Relievers who have appeared
 
