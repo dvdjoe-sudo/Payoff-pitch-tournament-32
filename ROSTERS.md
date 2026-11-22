@@ -594,15 +594,15 @@ Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are
 
 ### Lineup slots that have batted
 
-- Slot 1: Rabbit Maranville (`maranra01`) in R1-07-G1; Rabbit Maranville (`maranra01`) in R1-07-G2; Rabbit Maranville (`maranra01`) in R1-07-G3; Chipper Jones (`jonesch06`) in R1-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G1; Rabbit Maranville (`maranra01`) in W2-07-G2; Rabbit Maranville (`maranra01`) in W2-07-G3; Rabbit Maranville (`maranra01`) in W2-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G5; Rabbit Maranville (`maranra01`) in W2-07-G6; Rabbit Maranville (`maranra01`) in W2-07-G7; Rabbit Maranville (`maranra01`) in L2-02-G1
-- Slot 2: Chipper Jones (`jonesch06`) in R1-07-G1; Chipper Jones (`jonesch06`) in R1-07-G2; Chipper Jones (`jonesch06`) in R1-07-G3; Andrelton Simmons (`simmoan01`) in R1-07-G4; Chipper Jones (`jonesch06`) in W2-07-G1; Chipper Jones (`jonesch06`) in W2-07-G2; Chipper Jones (`jonesch06`) in W2-07-G3; Chipper Jones (`jonesch06`) in W2-07-G4; Chipper Jones (`jonesch06`) in W2-07-G5; Chipper Jones (`jonesch06`) in W2-07-G6; Chipper Jones (`jonesch06`) in W2-07-G7; Chipper Jones (`jonesch06`) in L2-02-G1
-- Slot 3: Hank Aaron (`aaronha01`) in R1-07-G1; Hank Aaron (`aaronha01`) in R1-07-G2; Hank Aaron (`aaronha01`) in R1-07-G3; Hank Aaron (`aaronha01`) in R1-07-G4; Hank Aaron (`aaronha01`) in W2-07-G1; Hank Aaron (`aaronha01`) in W2-07-G2; Hank Aaron (`aaronha01`) in W2-07-G3; Hank Aaron (`aaronha01`) in W2-07-G4; Hank Aaron (`aaronha01`) in W2-07-G5; Hank Aaron (`aaronha01`) in W2-07-G6; Ronald Acuna Jr. (`acunaro01`) in W2-07-G7; Hank Aaron (`aaronha01`) in L2-02-G1
-- Slot 4: Eddie Mathews (`matheed01`) in R1-07-G1 (same starter in 11 later games)
-- Slot 5: Joe Torre (`torrejo01`) in R1-07-G1; Joe Torre (`torrejo01`) in R1-07-G2; Joe Torre (`torrejo01`) in R1-07-G3; Dale Murphy (`murphda05`) in R1-07-G4; Joe Torre (`torrejo01`) in W2-07-G1; Joe Torre (`torrejo01`) in W2-07-G2; Joe Torre (`torrejo01`) in W2-07-G3; Joe Torre (`torrejo01`) in W2-07-G4; Joe Torre (`torrejo01`) in W2-07-G5; Joe Torre (`torrejo01`) in W2-07-G6; Joe Torre (`torrejo01`) in W2-07-G7; Joe Torre (`torrejo01`) in L2-02-G1
-- Slot 6: Freddie Freeman (`freemfr01`) in R1-07-G1; Freddie Freeman (`freemfr01`) in R1-07-G2; Freddie Freeman (`freemfr01`) in R1-07-G3; Freddie Freeman (`freemfr01`) in R1-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G1; Freddie Freeman (`freemfr01`) in W2-07-G2; Freddie Freeman (`freemfr01`) in W2-07-G3; Dale Murphy (`murphda05`) in W2-07-G4; Dale Murphy (`murphda05`) in W2-07-G5; Dale Murphy (`murphda05`) in W2-07-G6; Dale Murphy (`murphda05`) in W2-07-G7; Freddie Freeman (`freemfr01`) in L2-02-G1
-- Slot 7: Dale Murphy (`murphda05`) in R1-07-G1; Dale Murphy (`murphda05`) in R1-07-G2; Dale Murphy (`murphda05`) in R1-07-G3; Andruw Jones (`jonesan01`) in R1-07-G4; Dale Murphy (`murphda05`) in W2-07-G1; Dale Murphy (`murphda05`) in W2-07-G2; Dale Murphy (`murphda05`) in W2-07-G3; Freddie Freeman (`freemfr01`) in W2-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G5; Freddie Freeman (`freemfr01`) in W2-07-G6; Freddie Freeman (`freemfr01`) in W2-07-G7; Dale Murphy (`murphda05`) in L2-02-G1
-- Slot 8: Andruw Jones (`jonesan01`) in R1-07-G1; Andruw Jones (`jonesan01`) in R1-07-G2; Andruw Jones (`jonesan01`) in R1-07-G3; Joe Torre (`torrejo01`) in R1-07-G4; Andruw Jones (`jonesan01`) in W2-07-G1; Andruw Jones (`jonesan01`) in W2-07-G2; Andruw Jones (`jonesan01`) in W2-07-G3; Andruw Jones (`jonesan01`) in W2-07-G4; Andruw Jones (`jonesan01`) in W2-07-G5; Andruw Jones (`jonesan01`) in W2-07-G6; Andruw Jones (`jonesan01`) in W2-07-G7; Andruw Jones (`jonesan01`) in L2-02-G1
-- Slot 9: Ozzie Albies (`albieoz01`) in R1-07-G1 (same starter in 11 later games)
+- Slot 1: Rabbit Maranville (`maranra01`) in R1-07-G1; Rabbit Maranville (`maranra01`) in R1-07-G2; Rabbit Maranville (`maranra01`) in R1-07-G3; Chipper Jones (`jonesch06`) in R1-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G1; Rabbit Maranville (`maranra01`) in W2-07-G2; Rabbit Maranville (`maranra01`) in W2-07-G3; Rabbit Maranville (`maranra01`) in W2-07-G4; Rabbit Maranville (`maranra01`) in W2-07-G5; Rabbit Maranville (`maranra01`) in W2-07-G6; Rabbit Maranville (`maranra01`) in W2-07-G7; Rabbit Maranville (`maranra01`) in L2-02-G1; Rabbit Maranville (`maranra01`) in L2-02-G2
+- Slot 2: Chipper Jones (`jonesch06`) in R1-07-G1; Chipper Jones (`jonesch06`) in R1-07-G2; Chipper Jones (`jonesch06`) in R1-07-G3; Andrelton Simmons (`simmoan01`) in R1-07-G4; Chipper Jones (`jonesch06`) in W2-07-G1; Chipper Jones (`jonesch06`) in W2-07-G2; Chipper Jones (`jonesch06`) in W2-07-G3; Chipper Jones (`jonesch06`) in W2-07-G4; Chipper Jones (`jonesch06`) in W2-07-G5; Chipper Jones (`jonesch06`) in W2-07-G6; Chipper Jones (`jonesch06`) in W2-07-G7; Chipper Jones (`jonesch06`) in L2-02-G1; Chipper Jones (`jonesch06`) in L2-02-G2
+- Slot 3: Hank Aaron (`aaronha01`) in R1-07-G1; Hank Aaron (`aaronha01`) in R1-07-G2; Hank Aaron (`aaronha01`) in R1-07-G3; Hank Aaron (`aaronha01`) in R1-07-G4; Hank Aaron (`aaronha01`) in W2-07-G1; Hank Aaron (`aaronha01`) in W2-07-G2; Hank Aaron (`aaronha01`) in W2-07-G3; Hank Aaron (`aaronha01`) in W2-07-G4; Hank Aaron (`aaronha01`) in W2-07-G5; Hank Aaron (`aaronha01`) in W2-07-G6; Ronald Acuna Jr. (`acunaro01`) in W2-07-G7; Hank Aaron (`aaronha01`) in L2-02-G1; Hank Aaron (`aaronha01`) in L2-02-G2
+- Slot 4: Eddie Mathews (`matheed01`) in R1-07-G1 (same starter in 12 later games)
+- Slot 5: Joe Torre (`torrejo01`) in R1-07-G1; Joe Torre (`torrejo01`) in R1-07-G2; Joe Torre (`torrejo01`) in R1-07-G3; Dale Murphy (`murphda05`) in R1-07-G4; Joe Torre (`torrejo01`) in W2-07-G1; Joe Torre (`torrejo01`) in W2-07-G2; Joe Torre (`torrejo01`) in W2-07-G3; Joe Torre (`torrejo01`) in W2-07-G4; Joe Torre (`torrejo01`) in W2-07-G5; Joe Torre (`torrejo01`) in W2-07-G6; Joe Torre (`torrejo01`) in W2-07-G7; Joe Torre (`torrejo01`) in L2-02-G1; Joe Torre (`torrejo01`) in L2-02-G2
+- Slot 6: Freddie Freeman (`freemfr01`) in R1-07-G1; Freddie Freeman (`freemfr01`) in R1-07-G2; Freddie Freeman (`freemfr01`) in R1-07-G3; Freddie Freeman (`freemfr01`) in R1-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G1; Freddie Freeman (`freemfr01`) in W2-07-G2; Freddie Freeman (`freemfr01`) in W2-07-G3; Dale Murphy (`murphda05`) in W2-07-G4; Dale Murphy (`murphda05`) in W2-07-G5; Dale Murphy (`murphda05`) in W2-07-G6; Dale Murphy (`murphda05`) in W2-07-G7; Freddie Freeman (`freemfr01`) in L2-02-G1; Freddie Freeman (`freemfr01`) in L2-02-G2
+- Slot 7: Dale Murphy (`murphda05`) in R1-07-G1; Dale Murphy (`murphda05`) in R1-07-G2; Dale Murphy (`murphda05`) in R1-07-G3; Andruw Jones (`jonesan01`) in R1-07-G4; Dale Murphy (`murphda05`) in W2-07-G1; Dale Murphy (`murphda05`) in W2-07-G2; Dale Murphy (`murphda05`) in W2-07-G3; Freddie Freeman (`freemfr01`) in W2-07-G4; Freddie Freeman (`freemfr01`) in W2-07-G5; Freddie Freeman (`freemfr01`) in W2-07-G6; Freddie Freeman (`freemfr01`) in W2-07-G7; Dale Murphy (`murphda05`) in L2-02-G1; Dale Murphy (`murphda05`) in L2-02-G2
+- Slot 8: Andruw Jones (`jonesan01`) in R1-07-G1; Andruw Jones (`jonesan01`) in R1-07-G2; Andruw Jones (`jonesan01`) in R1-07-G3; Joe Torre (`torrejo01`) in R1-07-G4; Andruw Jones (`jonesan01`) in W2-07-G1; Andruw Jones (`jonesan01`) in W2-07-G2; Andruw Jones (`jonesan01`) in W2-07-G3; Andruw Jones (`jonesan01`) in W2-07-G4; Andruw Jones (`jonesan01`) in W2-07-G5; Andruw Jones (`jonesan01`) in W2-07-G6; Andruw Jones (`jonesan01`) in W2-07-G7; Andruw Jones (`jonesan01`) in L2-02-G1; Ronald Acuna Jr. (`acunaro01`) in L2-02-G2
+- Slot 9: Ozzie Albies (`albieoz01`) in R1-07-G1 (same starter in 12 later games)
 
 ### Starts, in the order the games were played
 
@@ -618,6 +618,7 @@ Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are
 - Greg Maddux (`maddugr01`) started W2-07-G6
 - Warren Spahn (`spahnwa01`) started W2-07-G7
 - Greg Maddux (`maddugr01`) started L2-02-G1
+- Kid Nichols (`nichoki01`) started L2-02-G2
 
 ### Relievers who have appeared
 
@@ -628,6 +629,7 @@ Jonny Venters moves to bullpen slot 5 and Phil Niekro to slot 6; their roles are
 - Phil Niekro (`niekrph01`), first seen in W2-07-G2
 - Gene Garber (`garbege01`), first seen in W2-07-G4
 - Kid Nichols (`nichoki01`), first seen in W2-07-G7
+- Tom Glavine (`glavito02`), first seen in L2-02-G2
 
 ## 8. Pittsburgh Pirates (PIT)
 
@@ -2549,15 +2551,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Tim Raines (`raineti01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 3: Larry Walker (`walkela01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 5: Gary Carter (`cartega01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 8: Tim Wallach (`wallati01`) in R1-06-G1 (same starter in 11 later games)
-- Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1 (same starter in 11 later games)
+- Slot 1: Tim Raines (`raineti01`) in R1-06-G1 (same starter in 12 later games)
+- Slot 2: Jose Vidro (`vidrojo01`) in R1-06-G1 (same starter in 12 later games)
+- Slot 3: Larry Walker (`walkela01`) in R1-06-G1; Larry Walker (`walkela01`) in R1-06-G2; Larry Walker (`walkela01`) in R1-06-G3; Larry Walker (`walkela01`) in R1-06-G4; Larry Walker (`walkela01`) in R1-06-G5; Larry Walker (`walkela01`) in L1-06-G1; Larry Walker (`walkela01`) in L1-06-G2; Larry Walker (`walkela01`) in L1-06-G3; Larry Walker (`walkela01`) in L1-06-G4; Larry Walker (`walkela01`) in L1-06-G5; Larry Walker (`walkela01`) in L1-06-G6; Larry Walker (`walkela01`) in L2-02-G1; Rusty Staub (`staubru01`) in L2-02-G2
+- Slot 4: Vladimir Guerrero (`guerrvl01`) in R1-06-G1 (same starter in 12 later games)
+- Slot 5: Gary Carter (`cartega01`) in R1-06-G1 (same starter in 12 later games)
+- Slot 6: Andre Dawson (`dawsoan01`) in R1-06-G1 (same starter in 12 later games)
+- Slot 7: Ron Fairly (`fairlro01`) in R1-06-G1 (same starter in 12 later games)
+- Slot 8: Tim Wallach (`wallati01`) in R1-06-G1 (same starter in 12 later games)
+- Slot 9: Orlando Cabrera (`cabreor01`) in R1-06-G1 (same starter in 12 later games)
 
 ### Substitutes who have batted
 
@@ -2578,6 +2580,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Javier Vazquez (`vazquja01`) started L1-06-G5
 - Steve Rogers (`rogerst01`) started L1-06-G6
 - Steve Rogers (`rogerst01`) started L2-02-G1
+- Pedro Martinez (`martipe02`) started L2-02-G2
 
 ### Relievers who have appeared
 
@@ -2586,6 +2589,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - John Wetteland (`wettejo01`), first seen in R1-06-G2
 - Tim Burke (`burketi01`), first seen in R1-06-G2
 - Andy McGaffigan (`mcgafan01`), first seen in R1-06-G2
+- Woodie Fryman (`frymawo01`), first seen in L2-02-G2
 
 ## 28. Colorado Rockies (COL)
 

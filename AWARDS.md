@@ -10,7 +10,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | --- | --- | --- | --- | --- | --- | --- |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
-| Dale Murphy | Atlanta Braves | 67.0 | 38 | 12 | 14 | 7 |
+| Dale Murphy | Atlanta Braves | 68.0 | 39 | 12 | 14 | 7 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
