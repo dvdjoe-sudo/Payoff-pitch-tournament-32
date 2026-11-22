@@ -8,13 +8,13 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Dale Murphy | Atlanta Braves | 81.0 | 47 | 13 | 17 | 8 |
+| Dale Murphy | Atlanta Braves | 82.0 | 47 | 14 | 17 | 8 |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
+| Freddie Freeman | Atlanta Braves | 69.5 | 40 | 10 | 16 | 6 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
-| Freddie Freeman | Atlanta Braves | 64.5 | 38 | 10 | 14 | 6 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Ozzie Smith | St. Louis Cardinals | 59.5 | 30 | 10 | 14 | 0 |
@@ -31,6 +31,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Greg Maddux | Atlanta Braves | 49.9 | 36.0 | 4 | 23 | 9 |
+| Warren Spahn | Atlanta Braves | 42.9 | 41.0 | 4 | 26 | 17 |
 | Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
 | Steve Rogers | Montreal Expos | 39.8 | 34.0 | 3 | 28 | 12 |
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
@@ -38,13 +39,12 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Bob Gibson | St. Louis Cardinals | 33.5 | 24.1 | 2 | 19 | 4 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
-| Warren Spahn | Atlanta Braves | 30.9 | 33.0 | 3 | 21 | 15 |
 | Dazzy Vance | Los Angeles Dodgers | 30.9 | 20.2 | 2 | 17 | 3 |
 | Tommy Bridges | Detroit Tigers | 29.5 | 17.0 | 2 | 16 | 1 |
+| Pedro Martinez | Montreal Expos | 28.5 | 24.0 | 2 | 26 | 9 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
-| Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
 
 ## Reliever
 
@@ -53,10 +53,10 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | John Wetteland | Montreal Expos | 40.0 | 3 | 11.0 | 15 | 2 |
+| Craig Kimbrel | Atlanta Braves | 39.1 | 5 | 6.0 | 9 | 1 |
 | Aroldis Chapman | Cincinnati Reds | 34.4 | 3 | 11.0 | 16 | 6 |
-| Craig Kimbrel | Atlanta Braves | 32.8 | 4 | 5.0 | 7 | 0 |
+| Andy McGaffigan | Montreal Expos | 33.9 | 2 | 13.1 | 8 | 4 |
 | Cody Allen | Cleveland Guardians | 31.4 | 3 | 9.0 | 11 | 4 |
-| Andy McGaffigan | Montreal Expos | 29.7 | 2 | 11.2 | 6 | 4 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
 | Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
 | Lee Smith | Chicago Cubs | 26.8 | 3 | 6.0 | 7 | 2 |
