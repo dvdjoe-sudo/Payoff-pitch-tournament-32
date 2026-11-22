@@ -8,9 +8,9 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
+| Dale Murphy | Atlanta Braves | 77.0 | 44 | 13 | 16 | 8 |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
-| Dale Murphy | Atlanta Braves | 68.5 | 39 | 12 | 14 | 7 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
@@ -21,8 +21,8 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
 | Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
+| Freddie Freeman | Atlanta Braves | 55.5 | 33 | 8 | 12 | 5 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
-| Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
 
 ## Cy Young
 
@@ -52,8 +52,8 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
+| John Wetteland | Montreal Expos | 40.0 | 3 | 11.0 | 15 | 2 |
 | Aroldis Chapman | Cincinnati Reds | 34.4 | 3 | 11.0 | 16 | 6 |
-| John Wetteland | Montreal Expos | 33.0 | 2 | 10.0 | 15 | 2 |
 | Cody Allen | Cleveland Guardians | 31.4 | 3 | 9.0 | 11 | 4 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
 | Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
