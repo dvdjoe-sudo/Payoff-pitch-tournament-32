@@ -11,18 +11,18 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
+| Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
-| Rogers Hornsby | St. Louis Cardinals | 64.0 | 34 | 13 | 12 | 3 |
 | Dale Murphy | Atlanta Braves | 63.5 | 36 | 12 | 13 | 7 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
+| Ozzie Smith | St. Louis Cardinals | 59.5 | 30 | 10 | 14 | 0 |
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
 | Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
 | Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
 | Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 | Nomar Garciaparra | Boston Red Sox | 55.0 | 31 | 7 | 15 | 5 |
-| Ian Kinsler | Texas Rangers | 54.5 | 29 | 13 | 6 | 2 |
 
 ## Cy Young
 
