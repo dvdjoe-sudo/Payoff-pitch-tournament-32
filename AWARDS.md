@@ -8,7 +8,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Dale Murphy | Atlanta Braves | 80.0 | 46 | 13 | 17 | 8 |
+| Dale Murphy | Atlanta Braves | 81.0 | 47 | 13 | 17 | 8 |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
@@ -30,11 +30,11 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
+| Greg Maddux | Atlanta Braves | 49.9 | 36.0 | 4 | 23 | 9 |
 | Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
-| Greg Maddux | Atlanta Braves | 39.3 | 27.0 | 3 | 18 | 6 |
+| Steve Rogers | Montreal Expos | 39.8 | 34.0 | 3 | 28 | 12 |
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
-| Steve Rogers | Montreal Expos | 37.9 | 27.1 | 3 | 19 | 7 |
 | Bob Gibson | St. Louis Cardinals | 33.5 | 24.1 | 2 | 19 | 4 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
