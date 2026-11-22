@@ -8,9 +8,9 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
-| Babe Ruth | New York Yankees | 87.0 | 48 | 17 | 18 | 7 |
+| Babe Ruth | New York Yankees | 94.5 | 52 | 19 | 19 | 8 |
 | Dale Murphy | Atlanta Braves | 82.0 | 47 | 14 | 17 | 8 |
-| Lou Gehrig | New York Yankees | 72.0 | 38 | 14 | 15 | 5 |
+| Lou Gehrig | New York Yankees | 81.0 | 42 | 15 | 19 | 6 |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Freddie Freeman | Atlanta Braves | 69.5 | 40 | 10 | 16 | 6 |
@@ -22,7 +22,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Ozzie Smith | St. Louis Cardinals | 59.5 | 30 | 10 | 14 | 0 |
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
-| Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
+| Derek Jeter | New York Yankees | 57.5 | 35 | 14 | 6 | 1 |
 
 ## Cy Young
 
