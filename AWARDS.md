@@ -10,7 +10,7 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | --- | --- | --- | --- | --- | --- | --- |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
-| Dale Murphy | Atlanta Braves | 68.0 | 39 | 12 | 14 | 7 |
+| Dale Murphy | Atlanta Braves | 68.5 | 39 | 12 | 14 | 7 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
@@ -38,13 +38,13 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Bob Gibson | St. Louis Cardinals | 33.5 | 24.1 | 2 | 19 | 4 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
+| Warren Spahn | Atlanta Braves | 30.9 | 33.0 | 3 | 21 | 15 |
 | Dazzy Vance | Los Angeles Dodgers | 30.9 | 20.2 | 2 | 17 | 3 |
 | Tommy Bridges | Detroit Tigers | 29.5 | 17.0 | 2 | 16 | 1 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
 | Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
-| Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
 
 ## Reliever
 
@@ -66,4 +66,4 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
 | Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
-| Jason Isringhausen | St. Louis Cardinals | 22.9 | 2 | 6.0 | 6 | 1 |
+| Andy McGaffigan | Montreal Expos | 23.6 | 2 | 9.0 | 4 | 4 |
