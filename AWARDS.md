@@ -9,20 +9,20 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Player | Team | Pts | TB | R | RBI | HR |
 | --- | --- | --- | --- | --- | --- | --- |
 | Dale Murphy | Atlanta Braves | 82.0 | 47 | 14 | 17 | 8 |
+| Babe Ruth | New York Yankees | 72.5 | 40 | 15 | 14 | 6 |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
 | Freddie Freeman | Atlanta Braves | 69.5 | 40 | 10 | 16 | 6 |
-| Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
+| Lou Gehrig | New York Yankees | 67.0 | 35 | 13 | 15 | 5 |
 | Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Ozzie Smith | St. Louis Cardinals | 59.5 | 30 | 10 | 14 | 0 |
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
+| Mickey Mantle | New York Yankees | 58.0 | 31 | 12 | 11 | 5 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
-| Babe Ruth | New York Yankees | 57.5 | 33 | 13 | 8 | 5 |
 | Willie Mays | San Francisco Giants | 56.5 | 35 | 12 | 10 | 4 |
-| Josh Hamilton | Texas Rangers | 55.5 | 29 | 13 | 9 | 3 |
 
 ## Cy Young
 
@@ -32,10 +32,10 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | --- | --- | --- | --- | --- | --- | --- |
 | Greg Maddux | Atlanta Braves | 49.9 | 36.0 | 4 | 23 | 9 |
 | Warren Spahn | Atlanta Braves | 42.9 | 41.0 | 4 | 26 | 17 |
-| Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
 | Steve Rogers | Montreal Expos | 39.8 | 34.0 | 3 | 28 | 12 |
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
+| Whitey Ford | New York Yankees | 37.1 | 28.0 | 3 | 22 | 8 |
 | Bob Gibson | St. Louis Cardinals | 33.5 | 24.1 | 2 | 19 | 4 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
