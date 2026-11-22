@@ -14,6 +14,7 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Roger Clemens (Boston Red Sox), R1-03-G2: 14 K in 7.1 IP.
 - Nolan Ryan (Los Angeles Angels), L1-05-G2: 13 K in 8.0 IP.
 - Tommy Bridges (Detroit Tigers), R1-04-G4: 13 K in 7.2 IP.
+- Lefty Gomez (New York Yankees), W3-01-G3: 13 K in 9.0 IP.
 - Jacob deGrom (New York Mets), R1-12-G3: 12 K in 6.0 IP.
 - Grover Cleveland Alexander (Philadelphia Phillies), L1-01-G3: 11 K in 7.2 IP.
 - Lefty Grove (Philadelphia Athletics), L1-03-G1: 11 K in 9.0 IP.
