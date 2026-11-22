@@ -10,10 +10,10 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | --- | --- | --- | --- | --- | --- | --- |
 | Frank Howard | Texas Rangers | 71.5 | 39 | 12 | 17 | 6 |
 | Mike Trout | Los Angeles Angels | 70.5 | 31 | 13 | 16 | 2 |
+| Dale Murphy | Atlanta Braves | 67.0 | 38 | 12 | 14 | 7 |
 | Lou Gehrig | New York Yankees | 66.5 | 35 | 13 | 15 | 5 |
 | Rogers Hornsby | St. Louis Cardinals | 65.5 | 35 | 13 | 12 | 3 |
 | Bill Freehan | Detroit Tigers | 64.5 | 36 | 10 | 18 | 6 |
-| Dale Murphy | Atlanta Braves | 63.5 | 36 | 12 | 13 | 7 |
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Ozzie Smith | St. Louis Cardinals | 59.5 | 30 | 10 | 14 | 0 |
@@ -31,9 +31,10 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Player | Team | Pts | IP | W | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Whitey Ford | New York Yankees | 42.2 | 24.0 | 3 | 17 | 1 |
+| Greg Maddux | Atlanta Braves | 39.3 | 27.0 | 3 | 18 | 6 |
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
-| Greg Maddux | Atlanta Braves | 35.6 | 20.0 | 3 | 15 | 3 |
+| Steve Rogers | Montreal Expos | 37.9 | 27.1 | 3 | 19 | 7 |
 | Bob Gibson | St. Louis Cardinals | 33.5 | 24.1 | 2 | 19 | 4 |
 | Lefty Grove | Philadelphia Athletics | 31.1 | 24.1 | 3 | 23 | 10 |
 | Don Drysdale | Los Angeles Dodgers | 31.0 | 17.0 | 2 | 13 | 0 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Chuck Finley | Los Angeles Angels | 27.3 | 20.1 | 2 | 12 | 4 |
 | Sandy Koufax | Los Angeles Dodgers | 26.0 | 19.1 | 1 | 17 | 2 |
 | Steve Carlton | Philadelphia Phillies | 25.4 | 31.1 | 2 | 24 | 14 |
-| Carl Hubbell | San Francisco Giants | 25.1 | 13.0 | 2 | 9 | 0 |
 
 ## Reliever
 
@@ -53,7 +53,7 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Player | Team | Pts | SV | IP | K | ER |
 | --- | --- | --- | --- | --- | --- | --- |
 | Aroldis Chapman | Cincinnati Reds | 34.4 | 3 | 11.0 | 16 | 6 |
-| John Wetteland | Montreal Expos | 32.1 | 2 | 8.2 | 12 | 0 |
+| John Wetteland | Montreal Expos | 33.0 | 2 | 10.0 | 15 | 2 |
 | Cody Allen | Cleveland Guardians | 31.4 | 3 | 9.0 | 11 | 4 |
 | Jonathan Papelbon | Boston Red Sox | 28.3 | 2 | 7.1 | 9 | 0 |
 | Willie Hernandez | Detroit Tigers | 27.9 | 2 | 10.0 | 6 | 3 |
