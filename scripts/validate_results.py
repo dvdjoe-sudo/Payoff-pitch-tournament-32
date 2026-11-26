@@ -731,7 +731,10 @@ def documents(check: Check) -> None:
     check.expect("LEADERS.md" in (ROOT / "LEADERBOARDS.md").read_text(encoding="utf-8"), "old leaderboard file points at the one board")
     leaders_text = (ROOT / "LEADERS.md").read_text(encoding="utf-8")
     check.expect("| Roger Clemens | Boston Red Sox | 2.25 |" in leaders_text, "Clemens ERA is 2.25")
-    check.expect("| Carl Hubbell | San Francisco Giants | 0.00 |" in leaders_text, "Hubbell ERA is 0.00")
+    # Hubbell ERA pin reset 2026-11-26 for W3-02 Game 2: his first earned
+    # run of the tournament (1 ER in the 10-inning complete game, 30 outs)
+    # moves the pin 0.00 to 0.39 (69 outs, 1 ER in the tournament).
+    check.expect("| Carl Hubbell | San Francisco Giants | 0.39 |" in leaders_text, "Hubbell ERA is 0.39")
     check.expect("TODO for Joe" in (ROOT / "ROSTERS.md").read_text(encoding="utf-8"), "roster stubs")
     html = (ROOT / "index.html").read_text(encoding="utf-8")
     script = (ROOT / "js" / "bracket.js").read_text(encoding="utf-8")

@@ -34,6 +34,7 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Warren Spahn | Atlanta Braves | 42.9 | 41.0 | 4 | 26 | 17 |
 | Steve Rogers | Montreal Expos | 39.8 | 34.0 | 3 | 28 | 12 |
 | Pedro Martinez | Boston Red Sox | 38.9 | 24.0 | 2 | 31 | 4 |
+| Carl Hubbell | San Francisco Giants | 38.8 | 23.0 | 3 | 14 | 1 |
 | Roger Clemens | Boston Red Sox | 38.3 | 24.0 | 2 | 34 | 6 |
 | Whitey Ford | New York Yankees | 37.1 | 28.0 | 3 | 22 | 8 |
 | Lefty Gomez | New York Yankees | 35.0 | 24.1 | 2 | 31 | 6 |
@@ -44,7 +45,6 @@ Pitchers with at least one start. IP + 0.4×K + 5×W − 1.5×ER − 0.3×BB. IP
 | Tommy Bridges | Detroit Tigers | 29.5 | 17.0 | 2 | 16 | 1 |
 | Pedro Martinez | Montreal Expos | 28.5 | 24.0 | 2 | 26 | 9 |
 | Curt Schilling | Philadelphia Phillies | 28.4 | 16.0 | 2 | 15 | 2 |
-| Nolan Ryan | Los Angeles Angels | 27.7 | 22.2 | 2 | 28 | 8 |
 
 ## Reliever
 

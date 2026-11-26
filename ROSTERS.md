@@ -170,15 +170,15 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 
 ### Lineup slots that have batted
 
-- Slot 1: Willie Mays (`mayswi01`) in R1-02-G1 (same starter in 9 later games)
-- Slot 2: Will Clark (`clarkwi02`) in R1-02-G1 (same starter in 9 later games)
-- Slot 3: Mel Ott (`ottme01`) in R1-02-G1 (same starter in 9 later games)
-- Slot 4: Barry Bonds (`bondsba01`) in R1-02-G1 (same starter in 9 later games)
-- Slot 5: Willie McCovey (`mccovwi01`) in R1-02-G1 (same starter in 9 later games)
-- Slot 6: Jeff Kent (`kentje01`) in R1-02-G1 (same starter in 9 later games)
-- Slot 7: Buster Posey (`poseybu01`) in R1-02-G1 (same starter in 9 later games)
-- Slot 8: Matt Williams (`willima04`) in R1-02-G1 (same starter in 9 later games)
-- Slot 9: Art Fletcher (`fletcar01`) in R1-02-G1 (same starter in 9 later games)
+- Slot 1: Willie Mays (`mayswi01`) in R1-02-G1 (same starter in 10 later games)
+- Slot 2: Will Clark (`clarkwi02`) in R1-02-G1 (same starter in 10 later games)
+- Slot 3: Mel Ott (`ottme01`) in R1-02-G1 (same starter in 10 later games)
+- Slot 4: Barry Bonds (`bondsba01`) in R1-02-G1 (same starter in 10 later games)
+- Slot 5: Willie McCovey (`mccovwi01`) in R1-02-G1 (same starter in 10 later games)
+- Slot 6: Jeff Kent (`kentje01`) in R1-02-G1 (same starter in 10 later games)
+- Slot 7: Buster Posey (`poseybu01`) in R1-02-G1 (same starter in 10 later games)
+- Slot 8: Matt Williams (`willima04`) in R1-02-G1 (same starter in 10 later games)
+- Slot 9: Art Fletcher (`fletcar01`) in R1-02-G1 (same starter in 10 later games)
 - Slot 10: Bob Brenly (`brenlbo01`) in R1-02-G4; Frankie Frisch (`friscfr01`) in W2-02-G3
 - Slot 11: Bob Brenly (`brenlbo01`) in W2-02-G3
 
@@ -194,6 +194,7 @@ Positions are not in the results file. TODO for Joe: positions, manager, and any
 - Juan Marichal (`maricju01`) started W2-02-G3
 - Tim Lincecum (`linceti01`) started W2-02-G4
 - Christy Mathewson (`mathech01`) started W3-02-G1
+- Carl Hubbell (`hubbeca01`) started W3-02-G2
 
 ### Relievers who have appeared
 
@@ -904,15 +905,15 @@ Official roster provided by the tournament owner. The lines are copied from that
 
 ### Lineup slots that have batted
 
-- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1 (same starter in 12 later games)
-- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1; Zack Wheat (`wheatza01`) in R1-10-G2; Zack Wheat (`wheatza01`) in R1-10-G3; Pedro Guerrero (`guerrpe01`) in R1-10-G4; Pedro Guerrero (`guerrpe01`) in R1-10-G5; Zack Wheat (`wheatza01`) in W2-07-G1; Zack Wheat (`wheatza01`) in W2-07-G2; Zack Wheat (`wheatza01`) in W2-07-G3; Zack Wheat (`wheatza01`) in W2-07-G4; Zack Wheat (`wheatza01`) in W2-07-G5; Zack Wheat (`wheatza01`) in W2-07-G6; Zack Wheat (`wheatza01`) in W2-07-G7; Zack Wheat (`wheatza01`) in W3-02-G1
-- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1 (same starter in 12 later games)
-- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1 (same starter in 12 later games)
-- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1 (same starter in 12 later games)
-- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1; Gil Hodges (`hodgegi01`) in R1-10-G2; Gil Hodges (`hodgegi01`) in R1-10-G3; Steve Garvey (`garvest01`) in R1-10-G4; Steve Garvey (`garvest01`) in R1-10-G5; Gil Hodges (`hodgegi01`) in W2-07-G1; Gil Hodges (`hodgegi01`) in W2-07-G2; Gil Hodges (`hodgegi01`) in W2-07-G3; Steve Garvey (`garvest01`) in W2-07-G4; Steve Garvey (`garvest01`) in W2-07-G5; Steve Garvey (`garvest01`) in W2-07-G6; Steve Garvey (`garvest01`) in W2-07-G7; Gil Hodges (`hodgegi01`) in W3-02-G1
-- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1; Roy Campanella (`camparo01`) in R1-10-G2; Roy Campanella (`camparo01`) in R1-10-G3; Roy Campanella (`camparo01`) in R1-10-G4; Roy Campanella (`camparo01`) in R1-10-G5; Roy Campanella (`camparo01`) in W2-07-G1; Roy Campanella (`camparo01`) in W2-07-G2; Roy Campanella (`camparo01`) in W2-07-G3; Mike Piazza (`piazzmi01`) in W2-07-G4; Mike Piazza (`piazzmi01`) in W2-07-G5; Mike Piazza (`piazzmi01`) in W2-07-G6; Mike Piazza (`piazzmi01`) in W2-07-G7; Roy Campanella (`camparo01`) in W3-02-G1
-- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1; Ron Cey (`ceyro01`) in R1-10-G2; Ron Cey (`ceyro01`) in R1-10-G3; Ron Cey (`ceyro01`) in R1-10-G4; Ron Cey (`ceyro01`) in R1-10-G5; Ron Cey (`ceyro01`) in W2-07-G1; Ron Cey (`ceyro01`) in W2-07-G2; Ron Cey (`ceyro01`) in W2-07-G3; Max Muncy (`muncyma01`) in W2-07-G4; Max Muncy (`muncyma01`) in W2-07-G5; Max Muncy (`muncyma01`) in W2-07-G6; Max Muncy (`muncyma01`) in W2-07-G7; Ron Cey (`ceyro01`) in W3-02-G1
-- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1 (same starter in 12 later games)
+- Slot 1: Jackie Robinson (`robinja02`) in R1-10-G1 (same starter in 13 later games)
+- Slot 2: Zack Wheat (`wheatza01`) in R1-10-G1; Zack Wheat (`wheatza01`) in R1-10-G2; Zack Wheat (`wheatza01`) in R1-10-G3; Pedro Guerrero (`guerrpe01`) in R1-10-G4; Pedro Guerrero (`guerrpe01`) in R1-10-G5; Zack Wheat (`wheatza01`) in W2-07-G1; Zack Wheat (`wheatza01`) in W2-07-G2; Zack Wheat (`wheatza01`) in W2-07-G3; Zack Wheat (`wheatza01`) in W2-07-G4; Zack Wheat (`wheatza01`) in W2-07-G5; Zack Wheat (`wheatza01`) in W2-07-G6; Zack Wheat (`wheatza01`) in W2-07-G7; Zack Wheat (`wheatza01`) in W3-02-G1; Zack Wheat (`wheatza01`) in W3-02-G2
+- Slot 3: Mookie Betts (`bettsmo01`) in R1-10-G1 (same starter in 13 later games)
+- Slot 4: Shohei Ohtani (`ohtansh01`) in R1-10-G1 (same starter in 13 later games)
+- Slot 5: Duke Snider (`snidedu01`) in R1-10-G1 (same starter in 13 later games)
+- Slot 6: Gil Hodges (`hodgegi01`) in R1-10-G1; Gil Hodges (`hodgegi01`) in R1-10-G2; Gil Hodges (`hodgegi01`) in R1-10-G3; Steve Garvey (`garvest01`) in R1-10-G4; Steve Garvey (`garvest01`) in R1-10-G5; Gil Hodges (`hodgegi01`) in W2-07-G1; Gil Hodges (`hodgegi01`) in W2-07-G2; Gil Hodges (`hodgegi01`) in W2-07-G3; Steve Garvey (`garvest01`) in W2-07-G4; Steve Garvey (`garvest01`) in W2-07-G5; Steve Garvey (`garvest01`) in W2-07-G6; Steve Garvey (`garvest01`) in W2-07-G7; Gil Hodges (`hodgegi01`) in W3-02-G1; Gil Hodges (`hodgegi01`) in W3-02-G2
+- Slot 7: Roy Campanella (`camparo01`) in R1-10-G1; Roy Campanella (`camparo01`) in R1-10-G2; Roy Campanella (`camparo01`) in R1-10-G3; Roy Campanella (`camparo01`) in R1-10-G4; Roy Campanella (`camparo01`) in R1-10-G5; Roy Campanella (`camparo01`) in W2-07-G1; Roy Campanella (`camparo01`) in W2-07-G2; Roy Campanella (`camparo01`) in W2-07-G3; Mike Piazza (`piazzmi01`) in W2-07-G4; Mike Piazza (`piazzmi01`) in W2-07-G5; Mike Piazza (`piazzmi01`) in W2-07-G6; Mike Piazza (`piazzmi01`) in W2-07-G7; Roy Campanella (`camparo01`) in W3-02-G1; Mike Piazza (`piazzmi01`) in W3-02-G2
+- Slot 8: Ron Cey (`ceyro01`) in R1-10-G1; Ron Cey (`ceyro01`) in R1-10-G2; Ron Cey (`ceyro01`) in R1-10-G3; Ron Cey (`ceyro01`) in R1-10-G4; Ron Cey (`ceyro01`) in R1-10-G5; Ron Cey (`ceyro01`) in W2-07-G1; Ron Cey (`ceyro01`) in W2-07-G2; Ron Cey (`ceyro01`) in W2-07-G3; Max Muncy (`muncyma01`) in W2-07-G4; Max Muncy (`muncyma01`) in W2-07-G5; Max Muncy (`muncyma01`) in W2-07-G6; Max Muncy (`muncyma01`) in W2-07-G7; Ron Cey (`ceyro01`) in W3-02-G1; Pedro Guerrero (`guerrpe01`) in W3-02-G2
+- Slot 9: Pee Wee Reese (`reesepe01`) in R1-10-G1 (same starter in 13 later games)
 
 ### Substitutes who have batted
 
@@ -937,6 +938,7 @@ Official roster provided by the tournament owner. The lines are copied from that
 - Sandy Koufax (`koufasa01`) started W2-07-G6
 - Dazzy Vance (`vanceda01`) started W2-07-G7
 - Sandy Koufax (`koufasa01`) started W3-02-G1
+- Clayton Kershaw (`kershcl01`) started W3-02-G2
 
 ### Relievers who have appeared
 
