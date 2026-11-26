@@ -70,3 +70,4 @@ A start of at least 9 innings (27 outs) with 0 hits.
 - Atlanta Braves scored 10 against Montreal Expos in L2-02-G3.
 - Cleveland Guardians scored 10 against New York Yankees in W3-01-G1.
 - New York Yankees scored 15 against Cleveland Guardians in W3-01-G1.
+- Los Angeles Dodgers scored 13 against San Francisco Giants in W3-02-G1.

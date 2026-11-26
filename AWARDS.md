@@ -20,9 +20,9 @@ Hitters. Total bases + R + RBI + SB + 0.5×BB + 0.5×HBP − CS. Total bases = H
 | Josh Donaldson | Toronto Blue Jays | 61.0 | 32 | 11 | 16 | 4 |
 | Mickey Cochrane | Philadelphia Athletics | 60.0 | 35 | 13 | 9 | 5 |
 | Ozzie Smith | St. Louis Cardinals | 59.5 | 30 | 10 | 14 | 0 |
+| Willie Mays | San Francisco Giants | 59.5 | 35 | 13 | 10 | 4 |
 | Honus Wagner | Pittsburgh Pirates | 59.0 | 34 | 14 | 10 | 2 |
 | Shohei Ohtani | Los Angeles Angels | 58.0 | 31 | 13 | 8 | 3 |
-| Derek Jeter | New York Yankees | 57.5 | 35 | 14 | 6 | 1 |
 
 ## Cy Young
 
@@ -64,6 +64,6 @@ Pitchers with zero starts. 5×SV + 2×IP + 0.4×K − 1.5×ER.
 | Dennis Eckersley | Oakland Athletics | 26.3 | 3 | 5.1 | 9 | 2 |
 | Emmanuel Clase | Cleveland Guardians | 26.2 | 1 | 9.0 | 8 | 0 |
 | Francisco Rodríguez | Los Angeles Angels | 25.8 | 2 | 7.1 | 14 | 3 |
-| Hoyt Wilhelm | San Francisco Giants | 25.8 | 1 | 9.1 | 9 | 1 |
 | Pete Fairbanks | Tampa Bay Rays | 25.0 | 2 | 8.1 | 7 | 3 |
 | Jeff Zimmerman | Texas Rangers | 24.6 | 1 | 11.1 | 11 | 5 |
+| Mike Marshall | Los Angeles Dodgers | 24.5 | 3 | 4.1 | 2 | 0 |
